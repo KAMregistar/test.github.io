@@ -30,10 +30,10 @@
         const content = document.getElementById('content');
 
         // Extract Classes
-        const classes = data['@graph'].filter(item => item['@id'].startsWith('http://www.registar.kam.hr/Elements/c/'));
+        const classes = data['@id'].filter(item => item['@id'].startsWith('http://www.registar.kam.hr/Elements/c/'));
         
         // Extract Object Properties
-        const properties = data['@graph'].filter(item => item['@type'] === '#ObjectProperty');
+        const properties = data['@value'].filter(item => item['@type'] === '#ObjectProperty');
 
         // Add classes to the menu
         classes.forEach(cls => {
