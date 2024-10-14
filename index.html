@@ -26,45 +26,20 @@
         return response.json();
     })
     .then(data => {
-        console.log('Fetched JSON-LD data:', data);  // Inspect the structure of the fetched data
+        console.log('Fetched JSON-LD data:', data);  // Log the full structure of the fetched data
 
         const menu = document.getElementById('menu');
         const content = document.getElementById('content');
 
-        // Check if 'classes' and 'properties' arrays exist in the data
-        if (!data.classes || !data.properties) {
-            throw new Error('Expected "classes" and "properties" in the JSON-LD data.');
+        // Dynamically handle the structure based on what we find in the data
+        if (data['@id']) {
+            // Example: If data has root-level '@id', display it
+            content.innerHTML = `<h2>Ontology ID: ${data['@id']}</h2>`;
         }
 
-        const classes = data.classes;
-        const properties = data.properties;
-
-        // Add classes to the menu
-        classes.forEach(cls => {
-            const item = document.createElement('div');
-            item.classList.add('item');
-            const classID = cls['@id'].split('/').pop();  // Extract class identifier (e.g., C10001)
-            item.textContent = classID;
-            item.onclick = () => displayDetails(cls, properties);
-            menu.appendChild(item);
-        });
-
-        // Display class details and associated properties
-        function displayDetails(cls, properties) {
-            content.innerHTML = `<h2>${cls['@id'].split('/').pop()}</h2>`;
-
-            // Find properties related to the selected class
-            const relatedProperties = properties.filter(prop => prop['@value'] === cls['@id']);
-            if (relatedProperties.length > 0) {
-                content.innerHTML += '<h3>Related Properties:</h3><ul>';
-                relatedProperties.forEach(prop => {
-                    content.innerHTML += `<li>${prop['@id']}</li>`;
-                });
-                content.innerHTML += '</ul>';
-            } else {
-                content.innerHTML += '<p>No related properties found.</p>';
-            }
-        }
+        // Display other relevant details from the JSON-LD
+        content.innerHTML += '<h3>Data Preview:</h3>';
+        content.innerHTML += `<pre>${JSON.stringify(data, null, 2)}</pre>`;  // Display JSON data for debugging
     })
     .catch(error => {
         console.error('Error:', error);
