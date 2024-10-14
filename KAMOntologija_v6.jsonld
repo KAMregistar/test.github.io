@@ -1,0 +1,2881 @@
+[ {
+  "@id" : "_:genid1",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Mjesto je dio fizičkog prostora na Zemlji ili izvan nje. Mitska, legendarna, izmišljena i fikcionalizirana područja na Zemlji ili izvan nje ne smatraju se mjestima."
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+    }, {
+      "@id" : "http://www.registar.kam.hr/Element/c/#C10003"
+    }, {
+      "@id" : "http://www.registar.kam.hr/Element/c/#C10004"
+    }, {
+      "@id" : "http://www.registar.kam.hr/Element/c/#C10005"
+    } ]
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Identifikacija i opis građe koja se prikuplja, pohranjuje, obrađuje, štiti, istražuje, predstavlja i stavlja na raspolaganje korisnicima u knjižnicama, arhivima i muzejima Republike Hrvatske kao samostalnim ustanovama ili ustrojbenim jedinicama unutar ustanovâ, tvrtki i drugih pravnih osoba."
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "Trenuna inačica ontologije v.1.01"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/c/#C10001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:C10001"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@language" : "hr",
+    "@value" : ""
+  }, {
+    "@language" : "hr",
+    "@value" : "Entitet koji se identificira i opisuje u informacijskom sustavu knjižnice, arhiva ili muzeja."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "hr",
+    "@value" : "Jedinica opisa može biti jedinica građe: djelo, izraz, pojavni oblik i primjerak, agent: osoba, kolektivni agent: korporativno tijelo i obitelj, mjesto, vremenski raspon i nomen."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Jedinica opisa"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/c/#C10002",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:C10002"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Idejni sadržaj jedinice građe, koji jedinicu građe čini prepoznatljivom konceptualnom cjelinom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Djelo se može javiti u različitim verzijama ili na različitim medijima. Svojstva djela ostaju nepromijenjena bez obzira na izraz ili pojavni oblik u kojemu se djelo javlja. Djelo nastaje djelovanjem jednoga ili više agenata. Agenti mogu biti poznati ili nepoznati (neutvrđeni). Djelo može i ne mora nastati s određenom intelektualnom i/ili umjetničkom namjerom. Djelo može biti nedovršeno."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Djelo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/c/#C10003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kami:C10003"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Niz znakova određenog znakovnog sustava (riječi, rečenica, brojki, pokreta, oblika, tonova, melodija, kadrova itd.) putem kojih je realizirano i priopćeno djelo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Isti izraz djela može se javiti u različitim formatima i izdanjima, na različitim materijalnim nositeljima itd. Svojstva izraza ostaju nepromijenjena bez obzira na pojavni oblik u kojemu se izraz javlja. Djelo može postojati: u samo jednom, izvornom izrazu (npr. ulje na platnu, skulptura, ručno oblikovan uporabni predmet), u izvornom izrazu i različitim varijantama (npr. tekst u izvornom obliku i prijevodu; skladba za izvorni izvođački sastav i u drugom aranžmanu)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.registar.kam.hr/Element/c/#C10003"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Izraz"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/c/#C10004",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kampo:C10004"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Skup svih materijalnih objekata koji utjelovljuju isto djelo i nastali su ili združeni kao rezultat aktivnosti istog agenta."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Kod ručno izrađenih objekata pojavni oblik postoji samo u jednom primjerku. Objekti nastali mehaničkim umnožavanjem, posebice u procesu industrijske proizvodnje, tvore pojavni oblik koji se sastoji od više identičnih primjeraka (npr. izdanje ili proizvodna serija)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.registar.kam.hr/Element/c/#C10004"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Pojavni oblik"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/c/#C10005",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamp:C10005"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Pojedačni materijalni nositelj."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Primjerak može biti: predstavnik pojavnog oblika koji postoji u samo jednom primjerku (npr. umjetnička slika, skulptura, ručno oblikovani umjetnički ili uporabni predmet itd.), predstavnik mehanički umnoženoga skupnog ili pojedinačnog pojavnog oblika, koji postoji u više identičnih primjeraka (npr. izdanje ili proizvodne serija)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.registar.kam.hr/Element/c/#C10005"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Primjerak"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/c/#C10006",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kama:C10006"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Osoba ili skupina osoba sposobnih za voljno djelovanje i preuzimanje prava i odgovornosti, što za posljedicu ima stvaranje, preinaku, posjedovanje i druge aktivnosti povezane s jedinicom građe."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Agent može biti: osoba: odnosno pojedinačno ljudsko biće čije se postojanje može dokazati ili se opravdano pretpostavlja; kolektivni agent: odnosno skupina osoba i/ili organizacijâ koja organizirano djeluje kao cjelina pod zajedničkim imenom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.registar.kam.hr/Element/c/#C10006"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Agent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/c/#C10007",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamo:C10007"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Pojedinačno ljudsko biće čije se postojanje može dokazati ili se opravdano pretpostavlja."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.registar.kam.hr/Element/c/#C10007"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "osoba"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10006"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10008"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/c/#C10008",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamka:C10008"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Skupina osoba i/ili organizacijâ koja organizirano djeluje kao cjelina pod zajedničkim imenom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Kolektivni agent može biti: korporativno tijelo i obitelj."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.registar.kam.hr/Element/c/#C10008"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "kolektivni agent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10006"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/c/#C10009",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamkt:C10009"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Skupina osoba koje organizirano djeluju pod zajedničkim imenom, a ne predstavljaju se kao obitelj."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Korporativna tijela uključuju: korporativna tijela u užem smislu, grupe i korporativne sastanke."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.registar.kam.hr/Element/c/#C10009"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "korporativno tijelo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10008"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10010"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/c/#C10010",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamob:C10010"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "skupina od dviju ili više osoba koje su povezane zajedničkom linijom predaka, rođenjem, brakom, posvojenjem, registriranom zajednicom ili sličnim pravnim statusom ili se na neki drugi način predstavljaju kao obitelj."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.registar.kam.hr/Element/c/#C10010"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "obitelj"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10008"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/c/#C10011",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamm:C10011"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Dio fizičkog prostora na Zemlji ili izvan nje."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Mjesta mogu biti prirodna (fizičko-geografska) ili društveno-geografska područja."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.registar.kam.hr/Element/c/#C10011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Mjesto"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/c/#C10012",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:C10012"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Protok vremena koji ima mjerljivo trajanje, bez obzira kako kratko ili dugo, i može se identificirati početkom i krajem."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Vremenski raspon uključuje geološka razdoblja, povijesna razdoblja, tisućljeća, stoljeća, desetljeća, godine i njihove raspone, nadnevke, sate, minute i sekunde."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Vremenski raspon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/c/#C10013",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamn:C10013"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Veza između entiteta i oznake na koja se na njega odnosi."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Nomen povezuje bilo koji naziv (tj., kombinaciju znakova) koji se upotrebljava za upućivanje na instancu bilo kojeg entiteta koji se pronađe u bibliografskom univerzumu s tim entitetom. Svaki entitet na koji se upućuje u univerzumu govora imenovan je barem jednim nomenom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.registar.kam.hr/Element/c/#C10013"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Nomen"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/d/P20001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20001"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s nadziranim nazivom, kôdom ili drugom oznakom koja označava razinu specifičnosti opisa djela u informacijskom sustavu, uključujući položaj unutar hijerarhije djelâ koja su s njim povezana odnosom cjeline i dijela."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima razinu opisa djela"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/d/P20002",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P20002"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s kratkim nestrukturiranim tekstom koji objašnjava o čemu je ili što prikazuje jedinica građe."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima opis sadržaja djela"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/d/P20003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P20003"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s izrazom koji je naveden na kartografskoj jedinici građe, a označava položaj mjesta prikazanog na karti Zemlje ili nekog drugog nebeskog tijela, mjereno od početnog meridijana u pravcu istoka ili zapada te od ekvatora u pravcu sjevera ili juga."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima geografsku dužinu i geografsku širinu"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/d/P20004",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima napomenu o geografskoj dužini i geografskoj širini"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/d/P20311"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/d/P20005",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20005"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s izrazom koji je naveden na kartografskoj jedinici građe, a označava položaj područja neba: kutnu udaljenost mjerenu prema istoku na ekvatoru od proljetne ravnodnevice do satnog kruga nebeskog tijela, od 0 do 24 sata, te kutnu udaljenost do nebeskog tijela mjerenu sjeverno ili južno pomoću 90˚ od nebeskog ekvatora uzduž kruga tijela u satu."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima rektascenziju i deklinaciju"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/d/P20006",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20006"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s izrazom koji se javlja na kartografskoj jedinici građe, a označava jednu ili dvije točke sjecišta ekliptičnog i nebeskog ekvatora, zauzetog Suncem kad je njegova deklinacija 0˚."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima ravnodnevicu"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/d/P20007",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20007"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s  izrazom, nadziranim nazivom, kodom, identifikatorom ili drugom oznakom koja označava društvenu skupinu kojoj je djelo sadržano u jedinici građe primarno namijenjeno ili za koju se smatra prikladnim s obzirom na dob, zanimanje, stupanj obrazovanja, posebne intelektualne ili društvene potrebe i druge značajke."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima ciljanu publiku djela"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/d/P20008",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20008"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s kratkim nestrukturiranim tekstom u kojemu se navode objašnjenja, tumačenja i druge pojedinosti o društvenoj skupini za koju je djelo sadržano u jedinici građe primarno namijenjeno ili za koju se smatra prikladnim."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima napomenu o ciljanoj publici djela"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/d/P20311"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/d/P20009",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20009"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s tekstom koji identificira politički, društveni, ekonomski, kulturni, vjerski ili drugi događaj ili situaciju koja je potaknula stvaranje jedinice građe."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima povod nastanka"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/d/P20010",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20010"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s nadziranim nazivom, identifikatorom ili drugom nadziranom oznakom koja označava nagrade i priznanja dodijeljene jedinici građe, uključujući nagrade i priznanja na festivalima, izložbama, salonima, sajmovima i drugim strukovnim ili prigodnim manifestacijama."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima nagrade"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/d/P20011",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20011"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s nestrukturiranim tekstom koji sadržava pojedinosti o nagradama i priznanjima dodijeljenima djelu sadržanom u jedinici građe, uključujući nagrade i priznanja na festivalima, izložbama, salonima, sajmovima i drugim strukovnim ili prigodnim manifestacijama."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima napomenu o nagradama"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/d/P20311"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/d/P20012",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20012"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo sa strukturiranim ili nestrukturiranim tekstom u kojemu se objašnjava sadašnji i/ili planirani sustav organizacije fonda ili zbirke."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima plan sređivanja"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/d/P20013",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20013"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s tekstom koji pruža informacije o mogućem dopunjavanju arhivskog fonda."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima dopune"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/d/P20014",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20014"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s kratkim nestrukturiranim tekstom koji sadržava podatke o vrednovanju, odabiranju i izlučivanju građe iz cjeline arhivskog gradiva te o učincima tih postupaka."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima odabir, izlučivanje i rokove čuvanja"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/d/P20015",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20015"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s izrazom ili tekstom koji sadržava informacije o predviđenom vremenskom rasponu izlaženja narednog dijela serijske publikacije ili osuvremenjivanja integrirajuće publikacije."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima učestalost izlaženja ili osuvremenjivanja"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/d/P20016",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20016"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s tekstom koji sadržava pojedinosti o nastanku, recepciji i interpretaciji djela."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima povijest djela"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/d/P20017",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20017"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s jedinicom opisa."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je djelo povezano s jedinicom opisa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10003"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10004"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/d/P20018",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20018"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s djelom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je djelo povezano s djelom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/d/P20017"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/d/P20018"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/d/P20311",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20311"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s kratkim tekstom o općim svojstvima djela."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima napomenu o djelu"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10022"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/jo/P10001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P10001"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje jedinicu opisa s vrstom kojoj jedinica opisa pripada."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.kamregistar.info/Element/jo/P10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima kategoriju jedinice opisa"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/jo/P10002",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P10002"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje jedinicu opisa s entitetom koji je u odnosu s jedinicom opisa."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima srodni entitet jedinici opisa"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/jo/P10003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P10003"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje jedinicu opisa s drugom jedinicom opisa s kojom je povezana na bilo koji način."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "je jedinica opisa povezana s jedinicom opisa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10002"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10003"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/jo/P10004",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P10004"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Povezuje jedinicu opisa s djelom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.kamregistar.info/Element/jo/P10004"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je jedinica opisa povezana s djelom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10003"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/jo/P10005",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P10005"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje jedinicu opisa s izrazom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.kamregistar.info/Element/jo/P10005"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je jedinica opisa povezana s izrazom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10003"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10003"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/jo/P10006",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P10006"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje jedinicu opisa s pojavnim oblikom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.kamregistar.info/Element/jo/P10006"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je jedinica opisa povezana s pojavnim oblikom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10004"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10003"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/jo/P10007",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P10007"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje jedinicu opisa s primjerkom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.kamregistar.info/Element/jo/P10007"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je jedinica opisa povezana s primjerkom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10005"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10003"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/jo/P10008",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P10008"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje jedinicu opisa s agentom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je jedinica opisa povezana s agentom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10006"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10003"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/jo/P10009",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P10009"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje jedinicu opisa s osobom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je jedinica opisa povezana s osobom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10007"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10008"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/jo/P10010",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P10010"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje jedinicu opisa s kolektivnim agentom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je jedinica opisa povezana s kolektivnim agentom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10008"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10008"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/jo/P10011",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P10011"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje jedinicu opisa s korporativnim tijelom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je jedinica opisa povezana s korporativnim tijelom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10009"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10010"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/jo/P10012",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P10012"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje jedinicu opisa s obitelji."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je jedinica opisa povezana s obitelji"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10010"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10010"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/jo/P10013",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P10013"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje jedinicu opis s mjestom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je jedinica opisa povezana s mjestom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10003"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/m/P11003"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/jo/P10014",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P10014"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje jedinicu opisa s vremenskim rasponom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je jedinica opisa povezana s vremenskim rasponom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10003"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12002"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/jo/P10015",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P10015"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje jedinicu opisa s nomenom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima nomen za jedinicu opisa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10013"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10003"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/jo/P10016",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P10016"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Povezuje jedinicu opisa s imenom, nazivom ili drugom oznakom pomoću koje se u informacijskom sustavu identificira jedinica opisa i/ili pronalaze i okupljaju podaci o jedinici opisa."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima oznaku za jedinicu opisa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10013"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10015"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/jo/P10017",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P10017"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje jedinicu opisa s nadziranom pristupnicom koja je preuzeta iz nadziranog rječnika ili oblikovana prema određenim pravilima."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima nadziranu pristupnicu za jedinicu opisa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10013"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10016"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/jo/P10018",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P10018"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje jedinicu opisa s usvojenom pristupnicom koja unutar nekog sustava jednoznačno identificira jedinicu opisa i okuplja podatke o jedinici opisa."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima usvojenu pristupnicu za jedinicu opisa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10013"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10017"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/jo/P10019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P10019"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje jedinicu opisa s varijantnom pristupnicom koja nije odabrana za usvojenu pristupnicu."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima varijantnu pristupnicu za jedinicu opisa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10013"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10017"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/jo/P10020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P10020"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje jedinicu opisa s brojčanom ili slovno-brojčanom oznakom, namijenjenoj strojnoj ili ljudskoj uporabi, koji unutar određenog sustava jednoznačno identificira jedinicu opisa."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima identifikator za jedinicu opisa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10013"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10016"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/jo/P10021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P10021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Povezuje jedinicu opisa s izrazom, nadziranim nazivom, imenom, naslovom, identifikatorom ili drugom nadziranom oznakom koja označava temu kojom se bavi ili koju prikazuje djelo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je jedinica opisa predmet djela"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10004"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/jo/P10022",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P10022"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje jedinicu opisa s bilo kojom informacijom o jedinici opisa koja nije zabilježena uporabom specifičnih atributa i/ili odnosa."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima napomenu o jedinici opisa"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Element/jo/P10023",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamjo:P10023"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje jedinicu opisa s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između jedinice opisa i druge jedinice opisa ili više drugih jedinica opisa."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima napomenu o odnosu jedinice opisa i drugih jedinica opisa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10022"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/a/P60001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kama:P60001"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje agenta s izrazom koji označava je li agent osoba, kolektivni agent, korporativno tijelo ili obitelj."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10006"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima vrstu agenta"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10001"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20019"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s djelom koji mu je izvorno dio."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima dio djelo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/d/P20018"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/d/P20020"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20020"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s djelom kojega je izvorno dio."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je dio djela"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/d/P20018"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20021"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s djelom koje je nastalo kao prilog ili dopuna tome djelu."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je dopuna djelu"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/d/P20018"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/d/P20022"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20022",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20022"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s djelom kojega je prilog ili dopuna."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima dopunu djelo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/d/P20018"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20023",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20023"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s djelom čiji sadržaj prethodi drugom djelu."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "prethodi djelu"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/d/P20018"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/d/P20024"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20024",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20024"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s djelom čiji se sadržaj nastavlja u drugom djelu."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "slijedi djelo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/d/P20018"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20025",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20025"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s djelom koje je prerađeno u novo djelo prilagodbom drugoj vrsti publike ili promjenom oblika sadržaja, žanra, stila, narativnih elemenata i sl."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je prerađeno u djelo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/d/P20018"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/d/P20026"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20026",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20026"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo koje je prerađeno u novo djelo prilagodbom drugoj vrsti publike ili promjenom oblika sadržaja, žanra, stila, narativnih elemenata i sl. s izvornim djelom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je preradba djela"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/d/P20018"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20027",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:20027"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s djelom ili dijelom djela koje ga preuzima, citira ili oponaša."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je prisvojeno u djelu"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/d/P20018"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/d/P20028"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20028",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20028"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo ili dio djela s djelom koje ga je preuzelo, citiralo ili oponašalo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "prisvaja djelo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/d/P20018"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20029",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20029"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s djelom koje je stvoreno promjenom plana izdavanja i/ili uredničke politike."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je promijenjeno u djelo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/d/P20018"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/d/P20030"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20030",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:20030"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo koje je stvoreno promjenom plana izdavanja i/ili uredničke politike jednoga djela stvoreno s izvornim djelom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je nastalo promjenom djela"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/d/P20018"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20031",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20031"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo koje je prostorni objekt (skulptura, uporabni predmet ili sl.) oblikovan s namjerom da vjerno prenese izgled drugog prostornog objekta s izvornim djelom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je replika djela"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/d/P20018"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/d/P20032"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20032",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20032"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje izvorno djelo koje je prostorni objekt (skulptura, uporabni predmet ili sl.)  s djelom oblikovanim s namjerom da vjerno prenese izgled drugog prostornog objekta."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je replicirano u djelu"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/d/P20018"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20033",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20033"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s izrazom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je djelo povezano s izrazom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10003"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/d/P20017"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20034",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20034"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s izrazom kroz koji je realizirano."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je realizirano u izrazu"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10003"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/d/P20033"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20035",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20035"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s agentom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je djelo povezano s agentom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10006"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/d/P20017"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20036",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20036"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s osobom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je povezano s osobom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10007"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/d/P20035"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20037",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20037"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s kolektivnim agentom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je povezano s kolektivnim agentom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10008"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/d/P20035"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20038",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20038"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s korporativnim tijelom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je povezano s korporativnim tijelom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10009"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/d/P20037"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20039",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20039"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s obitelji."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je povezano s obitelji"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10010"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/d/P20027"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20040",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20040"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s agentom čije se ovlasti, funkcije i odgovornosti temelje na djelu."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  }, {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10003"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima agenta čije ovlasti proizlaze iz djela"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10006"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/d/P20035"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20041",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "P20041"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s osobom čije se ovlasti, funkcije i odgovornosti temelje na djelu."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima osobu čije ovlasti proizlaze iz djela"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10007"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/d/P20040"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/d/P20042",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20042"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s kolektivnim agentom čije se ovlasti, funkcije i odgovornosti temelje na djelu."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima kolektivnog agenta čije ovlasti proizlaze iz djela"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10008"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/d/P20040"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/i/P30001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kami:P30001"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje izraz s izrazom, nadziranim nazivom, kôdom, identifikatorom ili drugom oznakom koja označava jezik tekstualnog sadržaja jedinice građe."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10003"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima jezik sadržaja"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/i/P30002",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje izraz s kratkim nestrukturiranim tekstom u kojemu se navode pojedinosti o jeziku ili jezicima sadržaja jedinice građe."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10003"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima napomenu o jeziku sadržaja"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/i/P30003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kami:P30003"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje izraz s izrazom, nadziranim nazivom, kôdom, identifikatorom ili drugom oznakom za jezik kojim je izvorno zabilježen sadržaj jedinice građe."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10003"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima jezik izvornika"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/m/P11001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamm:P11001"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje mjesto s izrazom, nadzirani nazivom, kôdom ili drugom oznakom koja označava vrstu kojoj pripada mjesto s obzirom na svoja prirodna ili društvena obilježja."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima vrstu mjesta"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10001"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/m/P11002",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamm:P11002"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje mjesto s oznakom granicâ suvremenog ili povijesnog mjesta na Zemlji."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima geografski položaj mjesta"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/m/P11003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamm:P11003"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje mjesto s jedinicom opisa."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je mjesto povezano s jedinicom opisa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10003"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/m/P11004",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamm:P11004"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje mjesto s djelom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je mjesto povezano s djelom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/m/P11003"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/m/P11005",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamm:P11005"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje mjesto s djelom na kojemu je djelo nastalo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je mjesto nastanka djela"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/m/P11004"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/m/P11006",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamm:P11006"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje mjesto s izrazom, nadziranim nazivom, imenom, naslovom, identifikatorom ili drugom nadziranom oznakom koja označava temu kojom se bavi ili koju prikazuje djelo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je mjesto predmet djela"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/m/P11004"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/m/P11007",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamm:P11007"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje mjesto s djelom za koje mjesto se opravdano pretpostavlja da je povezano s nastankom djela."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je pretpostavljeno mjesto nastanka djela"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/m/P11004"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/m/P11008",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamm:P11008"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje mjesto s djelom za koje se mjesto pogrešno ili neistinito navodi da je povezano s nastankom djela."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je navodno mjesto nastanka djela"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/m/P11004"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/m/P11009",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je mjesto povezano s izrazom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10003"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/m/P11003"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/m/P11010",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamm:P11010"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje mjesto s realizacijom određenog izraza djela."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je mjesto nastanka izraza"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10003"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/m/P11009"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/m/P11011",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamm:P11011"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje mjesto s pojavnim oblikom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je mjesto povezano s pojavnim oblikom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10004"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/m/P11003"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/m/P11012",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamm:P11012"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje mjesto s pojavnim oblikom na kojemu je pojavni oblik objavljen."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je mjesto izdavanja pojavnog oblika"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10004"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/m/P11011"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/m/P11013",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamm:P11013"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje mjesto s pojavnim oblikom na kojemu je pojavni oblik proizveden."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je mjesto proizvodnje pojavnog oblika"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10004"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/m/P11011"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/m/P11014",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamm:P11014"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje mjesto s pojavnim oblikom na kojemu je pojavni oblik raspačavan."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je mjesto raspačavanja pojavnog oblika"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10004"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/m/P11011"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/m/P11015",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamm:P11015"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje mjesto s pojavnim oblikom na kojemu je pojavni oblik tiskan."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je mjesto tiskanja pojavnog oblika"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10004"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/m/P11011"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12001"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s izrazom, nadziranim nazivom, kôdom ili drugom oznakom koja označava vrstu kojoj vremenski raspon pripada s obzirom na svoje trajanje."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima vrstu vremenskog raspona"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10001"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12002",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "P12002"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s jedinicom opisa."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima vremenski raspon povezan s jedinicom opisa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10003"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12003"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s djelom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vremenski raspon povezan s djelom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12002"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12004",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12004"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s djelom za koji se vremenski raspon pogrešno ili neistinito navodi da je povezan s nastankom djela."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je navodno vrijeme nastanka djela"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12003"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12005",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12005"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s  djelom za koji se vremenski raspon opravdano pretpostavlja da je povezan s nastankom djela."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je pretpostavljeno vrijeme nastanka djela"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12003"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12006",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12006"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s djelom u kojemu je vremenskom rasponu djelo nastalo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vrijeme nastanka djela"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12003"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12007",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12007"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s izrazom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vremenski raspon povezan s izrazom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10003"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12002"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12008",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12008"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s izrazom za koji je vremenski raspon povezan realizacijom određenog izraza djela."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vrijeme nastanka izraza"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10003"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12007"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12009",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12009"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s pojavnim oblikom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vremenski raspon povezan s pojavnim oblikom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10004"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12002"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12010",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12010"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s pojavnim oblikom koji je u tom vremenskom rasponu izdan."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vrijeme izdavanja pojavnog oblika"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10004"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12009"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12011",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12011"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s pojavnim oblikom koji je u tom vremenskom rasponu proizveden."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vrijeme proizvodnje pojavnog oblika"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10004"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12009"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12012",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12012"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s pojavnim oblikom koji je u tom vremenskom rasponu tiskan."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vrijeme tiskanja pojavnog oblika"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10004"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12009"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12013",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12013"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s primjerkom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vremenski raspon povezan s primjerkom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10005"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12002"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12014",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12014"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s primjerkom nad kojim su izvedeni konzervatorski i/ili restauratorski postupci u tom vremenskom rasponu."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vrijeme konzervacije ili restauracije primjerka"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10005"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12013"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12015",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12015"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s primjerkom koji je u tom vremenskom rasponu nabavljen."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vrijeme nabave primjerka"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10005"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12013"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12016",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12016"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s primjerkom koji je u tom vremenskom rasponu pronađen."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vrijeme nalaska primjerka"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10005"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12013"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12017",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12017"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s agentom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vremenski raspon povezan s agentom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10006"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12002"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12018",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12018"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s osobom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vremenski raspon povezan s osobom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10007"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12017"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12019"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s osobom koja je u tom vremenskom rasponu djelovala."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vrijeme djelovanja osobe"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10007"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12018"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12020"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s osobom koja je u tom vremenskom rasponu obnašala određenu dužnost ili položaj."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vrijeme obnašanja dužnosti ili položaja osobe"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10007"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12018"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12021"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s osobom koja je u tom vremenskom rasponu rođena."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vrijeme rođenja osobe"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10007"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12018"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12022",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12022"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s osobom koja je u tom vremenskom rasponu umrla."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vrijeme smrti osobe"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10007"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12018"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12023",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12023"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s kolektivnim agentom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vremenski raspon povezan s kolektivnim agentom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10008"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12017"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12024",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12024"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s korporativnim tijelom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vremenski raspon povezan s korporativnim tijelom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10009"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12023"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12025",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12025"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s korporativnim tijelom koje je u tom vremenskom rasponu djelovalo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vrijeme djelovanja korporativnog tijela"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10009"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12024"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12026",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12026"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s korporativnim tijelom koje je u tom vremenskom rasponu osnovano."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vrijeme osnutka korporativnog tijela"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10009"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12024"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12027",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12027"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s korporativnim tijelom koje je u tom vremenskom rasponu prestalo s djelovanjem."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vrijeme završetka djelovanja korporativnog tijela"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10009"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12024"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12028",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12028"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s obitelji."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vremenski raspon povezan s obitelji"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10010"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12023"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12029",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12029"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s obitelji koja je u tom vremenskom razdoblju djelovala."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vrijeme djelovanja obitelji"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10010"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12028"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12030",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12030"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s vremenskim rasponom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vremenski raspon povezan s vremenskim rasponom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12002"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12030"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12031",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12031"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s vremenskim rasponom koji je njegov dio."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vremenska cjelina vremenskog raspona"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12030"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12032"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12032",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12032"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s vremenskim rasponom kojega je dio."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vremenski dio vremenskog raspona"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12030"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12033",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12033"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s izrazom, nadziranim nazivom, imenom, naslovom, identifikatorom ili drugom nadziranom oznakom koja označava temu kojom se bavi ili koju prikazuje djelo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vremenski raspon predmet djela"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12003"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12034",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12034"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s primjerkom koji je u tom vremenskom rasponu korišten."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je vrijeme korištenja primjerka"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10005"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12013"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12035",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12035"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s nomenom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima nomen za vremenski raspon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10013"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12006"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12036",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12036"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s imenom, nazivom ili drugom oznakom pomoću koje se u informacijskom sustavu identificira vremenski raspon i/ili pronalaze i okupljaju podaci o vremenskom rasponu."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima oznaku za vremenski raspon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10013"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12035"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12037",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12037"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s pristupnicom koja je preuzeta iz nadziranog rječnika ili oblikovana prema određenim pravilima."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima nadziranu pristupnicu za vremenski raspon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10013"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12036"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12038",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12038"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s nadziranom riječi, izrazom ili nizom riječi i/ili drugih oznaka koje unutar nekog sustava jednoznačno identificiraju vremenski raspon i okupljaju podatke o vremenskom rasponu."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima usvojenu pristupnicu za vremenski raspon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10013"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12037"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12039",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12039"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s riječi, nizom riječi i/ili drugih oznaka koje identificiraju vremenski raspon unutar određenog sustava, a nisu odabrane za usvojenu pristupnicu."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima varijantnu pristupnicu za vremenski raspon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10013"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12037"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12040",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12040"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s brojčanom ili slovno-brojčanom oznakom koja unutar određenog sustava jednoznačno identificira vremenski raspon."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima identifikator za vremenski raspon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10013"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12035"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12041",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12041"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s tekstom koji sadržava pojedinosti o vremenskom rasponu koje se smatraju značajnima, a nisu iskazane u drugim elementima opisa."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima napomenu o vremenskom rasponu"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/jo/P10022"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/Elements/vr/P12042",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamvr:P12042"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje vremenski raspon s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između vremenskog raspona i drugog vremenskog raspona ili više drugih vremenskih raspona, odnosno vremenskog raspona i druge ili više drugih jedinica opisa."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10012"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ima napomenu o odnosu vremenskog raspona i drugih jedinica opisa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.registar.kam.hr/Elements/vr/P12041"
+  } ]
+}, {
+  "@id" : "http://www.registar.kam.hr/ontologies/ont.owl/ID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.registar.kam.hr/ontologies/ont.owl/definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]
