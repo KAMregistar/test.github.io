@@ -26,14 +26,18 @@
         return response.json();
     })
     .then(data => {
+        console.log('Fetched JSON-LD data:', data);  // Inspect the structure of the fetched data
+
         const menu = document.getElementById('menu');
         const content = document.getElementById('content');
 
-        // Extract Classes
-        const classes = data['@id'].filter(item => item['@id'].startsWith('http://www.registar.kam.hr/Elements/c/'));
-        
-        // Extract Object Properties
-        const properties = data['@value'].filter(item => item['@type'] === '#ObjectProperty');
+        // Check if 'classes' and 'properties' arrays exist in the data
+        if (!data.classes || !data.properties) {
+            throw new Error('Expected "classes" and "properties" in the JSON-LD data.');
+        }
+
+        const classes = data.classes;
+        const properties = data.properties;
 
         // Add classes to the menu
         classes.forEach(cls => {
@@ -48,12 +52,13 @@
         // Display class details and associated properties
         function displayDetails(cls, properties) {
             content.innerHTML = `<h2>${cls['@id'].split('/').pop()}</h2>`;
-            
+
+            // Find properties related to the selected class
             const relatedProperties = properties.filter(prop => prop['@value'] === cls['@id']);
             if (relatedProperties.length > 0) {
                 content.innerHTML += '<h3>Related Properties:</h3><ul>';
                 relatedProperties.forEach(prop => {
-                    content.innerHTML += `<li>${prop['@value']}</li>`;
+                    content.innerHTML += `<li>${prop['@id']}</li>`;
                 });
                 content.innerHTML += '</ul>';
             } else {
@@ -62,6 +67,7 @@
         }
     })
     .catch(error => {
+        console.error('Error:', error);
         document.getElementById('content').textContent = 'Error loading data: ' + error.message;
     });
 </script>
