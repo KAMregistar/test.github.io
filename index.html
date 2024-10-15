@@ -51,7 +51,7 @@
             if (Array.isArray(types)) {
                 types.forEach(type => {
                     const readableType = type.split('#').pop();  // Get the part after the last "#"
-                    content.innerHTML += `<p>Element: ${readableType}</p>`;
+                    content.innerHTML += `<b>Element: ${readableType}</b>`;
                 });
             } else {
                 const readableType = types.split('#').pop();
