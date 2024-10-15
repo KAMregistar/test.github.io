@@ -93,7 +93,7 @@
             if (domains) {
                 domains.forEach(domainObj => {
                     if (domainObj['@id']) {
-                        content.innerHTML += `<p>Domain: ${domainObj['@id']}</p>`;
+                        content.innerHTML += `<p>Domena: ${domainObj['@id']}</p>`;
                     }
                 });
             }
@@ -102,7 +102,7 @@
             if (ranges) {
                 ranges.forEach(rangeObj => {
                     if (rangeObj['@id']) {
-                        content.innerHTML += `<p>Range: ${rangeObj['@id']}</p>`;
+                        content.innerHTML += `<p>Doseg: ${rangeObj['@id']}</p>`;
                     }
                 });
             }
@@ -112,7 +112,7 @@
             if (subPropertyOfs) {
                 subPropertyOfs.forEach(subPropertyOfObj => {
                     if (subPropertyOfObj['@id']) {
-                        content.innerHTML += `<p>SubPropertyOf: ${subPropertyOfObj['@id']}</p>`;
+                        content.innerHTML += `<p>Podsvojstvo: ${subPropertyOfObj['@id']}</p>`;
                     }
                 });
             }
