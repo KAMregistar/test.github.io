@@ -1,0 +1,3410 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.kamregistar.info/KAM_ontology_2024#"
+     xml:base="http://www.kamregistar.info/KAM_ontology_2024"
+     xmlns:ont="http://www.registar.kam.hr/ontologies/ont.owl/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.kamregistar.info/KAM_ontology_2024">
+        <rdfs:comment>Identifikacija i opis građe koja se prikuplja, pohranjuje, obrađuje, štiti, istražuje, predstavlja i stavlja na raspolaganje korisnicima u knjižnicama, arhivima i muzejima Republike Hrvatske kao samostalnim ustanovama ili ustrojbenim jedinicama unutar ustanovâ, tvrtki i drugih pravnih osoba.</rdfs:comment>
+        <owl:versionInfo>Trenuna inačica ontologije v.1.01</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.registar.kam.hr/ontologies/ont.owl/ID -->
+
+    <owl:AnnotationProperty rdf:about="http://www.registar.kam.hr/ontologies/ont.owl/ID"/>
+    
+
+
+    <!-- http://www.registar.kam.hr/ontologies/ont.owl/definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.registar.kam.hr/ontologies/ont.owl/definition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/d/P20001 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/d/P20001">
+        <ont:ID>kamd:P20001</ont:ID>
+        <ont:definition>Povezuje djelo s nadziranim nazivom, kôdom ili drugom oznakom koja označava razinu specifičnosti opisa djela u informacijskom sustavu, uključujući položaj unutar hijerarhije djelâ koja su s njim povezana odnosom cjeline i dijela.</ont:definition>
+        <rdfs:label>ima razinu opisa djela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/d/P20002 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/d/P20002">
+        <ont:ID>kamjo:P20002</ont:ID>
+        <ont:definition>Povezuje djelo s kratkim nestrukturiranim tekstom koji objašnjava o čemu je ili što prikazuje jedinica građe.</ont:definition>
+        <rdfs:label>ima opis sadržaja djela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/d/P20003 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/d/P20003">
+        <ont:ID>kamjo:P20003</ont:ID>
+        <ont:definition>Povezuje djelo s izrazom koji je naveden na kartografskoj jedinici građe, a označava položaj mjesta prikazanog na karti Zemlje ili nekog drugog nebeskog tijela, mjereno od početnog meridijana u pravcu istoka ili zapada te od ekvatora u pravcu sjevera ili juga.</ont:definition>
+        <rdfs:label>ima geografsku dužinu i geografsku širinu</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/d/P20004 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/d/P20004">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20311"/>
+        <rdfs:label>ima napomenu o geografskoj dužini i geografskoj širini</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/d/P20005 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/d/P20005">
+        <ont:ID>kamd:P20005</ont:ID>
+        <ont:definition>Povezuje djelo s izrazom koji je naveden na kartografskoj jedinici građe, a označava položaj područja neba: kutnu udaljenost mjerenu prema istoku na ekvatoru od proljetne ravnodnevice do satnog kruga nebeskog tijela, od 0 do 24 sata, te kutnu udaljenost do nebeskog tijela mjerenu sjeverno ili južno pomoću 90˚ od nebeskog ekvatora uzduž kruga tijela u satu.</ont:definition>
+        <rdfs:label>ima rektascenziju i deklinaciju</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/d/P20006 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/d/P20006">
+        <ont:ID>kamd:P20006</ont:ID>
+        <ont:definition>Povezuje djelo s izrazom koji se javlja na kartografskoj jedinici građe, a označava jednu ili dvije točke sjecišta ekliptičnog i nebeskog ekvatora, zauzetog Suncem kad je njegova deklinacija 0˚.</ont:definition>
+        <rdfs:label>ima ravnodnevicu</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/d/P20007 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/d/P20007">
+        <ont:ID>kamd:P20007</ont:ID>
+        <ont:definition>Povezuje djelo s  izrazom, nadziranim nazivom, kodom, identifikatorom ili drugom oznakom koja označava društvenu skupinu kojoj je djelo sadržano u jedinici građe primarno namijenjeno ili za koju se smatra prikladnim s obzirom na dob, zanimanje, stupanj obrazovanja, posebne intelektualne ili društvene potrebe i druge značajke.</ont:definition>
+        <rdfs:label>ima ciljanu publiku djela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/d/P20008 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/d/P20008">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20311"/>
+        <ont:ID>kamd:P20008</ont:ID>
+        <ont:definition>Povezuje djelo s kratkim nestrukturiranim tekstom u kojemu se navode objašnjenja, tumačenja i druge pojedinosti o društvenoj skupini za koju je djelo sadržano u jedinici građe primarno namijenjeno ili za koju se smatra prikladnim.</ont:definition>
+        <rdfs:label>ima napomenu o ciljanoj publici djela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/d/P20009 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/d/P20009">
+        <ont:ID>kamd:P20009</ont:ID>
+        <ont:definition>Povezuje djelo s tekstom koji identificira politički, društveni, ekonomski, kulturni, vjerski ili drugi događaj ili situaciju koja je potaknula stvaranje jedinice građe.</ont:definition>
+        <rdfs:label>ima povod nastanka</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/d/P20010 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/d/P20010">
+        <ont:ID>kamd:P20010</ont:ID>
+        <ont:definition>Povezuje djelo s nadziranim nazivom, identifikatorom ili drugom nadziranom oznakom koja označava nagrade i priznanja dodijeljene jedinici građe, uključujući nagrade i priznanja na festivalima, izložbama, salonima, sajmovima i drugim strukovnim ili prigodnim manifestacijama.</ont:definition>
+        <rdfs:label>ima nagrade</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/d/P20011 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/d/P20011">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20311"/>
+        <ont:ID>kamd:P20011</ont:ID>
+        <ont:definition>Povezuje djelo s nestrukturiranim tekstom koji sadržava pojedinosti o nagradama i priznanjima dodijeljenima djelu sadržanom u jedinici građe, uključujući nagrade i priznanja na festivalima, izložbama, salonima, sajmovima i drugim strukovnim ili prigodnim manifestacijama.</ont:definition>
+        <rdfs:label>ima napomenu o nagradama</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/d/P20012 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/d/P20012">
+        <ont:ID>kamd:P20012</ont:ID>
+        <ont:definition>Povezuje djelo sa strukturiranim ili nestrukturiranim tekstom u kojemu se objašnjava sadašnji i/ili planirani sustav organizacije fonda ili zbirke.</ont:definition>
+        <rdfs:label>ima plan sređivanja</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/d/P20013 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/d/P20013">
+        <ont:ID>kamd:P20013</ont:ID>
+        <ont:definition>Povezuje djelo s tekstom koji pruža informacije o mogućem dopunjavanju arhivskog fonda.</ont:definition>
+        <rdfs:label>ima dopune</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/d/P20014 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/d/P20014">
+        <ont:ID>kamd:P20014</ont:ID>
+        <ont:definition>Povezuje djelo s kratkim nestrukturiranim tekstom koji sadržava podatke o vrednovanju, odabiranju i izlučivanju građe iz cjeline arhivskog gradiva te o učincima tih postupaka.</ont:definition>
+        <rdfs:label>ima odabir, izlučivanje i rokove čuvanja</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/d/P20015 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/d/P20015">
+        <ont:ID>kamd:P20015</ont:ID>
+        <ont:definition>Povezuje djelo s izrazom ili tekstom koji sadržava informacije o predviđenom vremenskom rasponu izlaženja narednog dijela serijske publikacije ili osuvremenjivanja integrirajuće publikacije.</ont:definition>
+        <rdfs:label>ima učestalost izlaženja ili osuvremenjivanja</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/d/P20016 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/d/P20016">
+        <ont:ID>kamd:P20016</ont:ID>
+        <ont:definition>Povezuje djelo s tekstom koji sadržava pojedinosti o nastanku, recepciji i interpretaciji djela.</ont:definition>
+        <rdfs:label>ima povijest djela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/d/P20017 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/d/P20017">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10003"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10003"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10004"/>
+        <ont:ID>kamd:P20017</ont:ID>
+        <ont:definition>Povezuje djelo s jedinicom opisa.</ont:definition>
+        <rdfs:label>je djelo povezano s jedinicom opisa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/d/P20018 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/d/P20018">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20017"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10004"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20017"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10004"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <ont:ID>kamd:P20018</ont:ID>
+        <ont:definition>Povezuje djelo s djelom.</ont:definition>
+        <rdfs:label>je djelo povezano s djelom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/d/P20311 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/d/P20311">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10022"/>
+        <ont:ID>kamd:P20311</ont:ID>
+        <ont:definition>Povezuje djelo s kratkim tekstom o općim svojstvima djela.</ont:definition>
+        <rdfs:label>ima napomenu o djelu</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/jo/P10001 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/jo/P10001">
+        <ont:ID>kamjo:P10001</ont:ID>
+        <ont:definition>Povezuje jedinicu opisa s vrstom kojoj jedinica opisa pripada.</ont:definition>
+        <rdfs:isDefinedBy>http://www.kamregistar.info/Element/jo/P10001</rdfs:isDefinedBy>
+        <rdfs:label>ima kategoriju jedinice opisa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/jo/P10002 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/jo/P10002">
+        <ont:ID>kamjo:P10002</ont:ID>
+        <ont:definition>Povezuje jedinicu opisa s entitetom koji je u odnosu s jedinicom opisa.</ont:definition>
+        <rdfs:label>ima srodni entitet jedinici opisa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/jo/P10003 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/jo/P10003">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10002"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10002"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10003"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <ont:ID>kamjo:P10003</ont:ID>
+        <ont:definition>Povezuje jedinicu opisa s drugom jedinicom opisa s kojom je povezana na bilo koji način.</ont:definition>
+        <rdfs:label xml:lang="en">je jedinica opisa povezana s jedinicom opisa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/jo/P10004 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/jo/P10004">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10003"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10003"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamjo:P10004</ont:ID>
+        <rdfs:comment>Povezuje jedinicu opisa s djelom.</rdfs:comment>
+        <rdfs:isDefinedBy>http://www.kamregistar.info/Element/jo/P10004</rdfs:isDefinedBy>
+        <rdfs:label>je jedinica opisa povezana s djelom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/jo/P10005 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/jo/P10005">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10003"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10003"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamjo:P10005</ont:ID>
+        <ont:definition>Povezuje jedinicu opisa s izrazom.</ont:definition>
+        <rdfs:isDefinedBy>http://www.kamregistar.info/Element/jo/P10005</rdfs:isDefinedBy>
+        <rdfs:label>je jedinica opisa povezana s izrazom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/jo/P10006 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/jo/P10006">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10003"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10003"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamjo:P10006</ont:ID>
+        <ont:definition>Povezuje jedinicu opisa s pojavnim oblikom.</ont:definition>
+        <rdfs:isDefinedBy>http://www.kamregistar.info/Element/jo/P10006</rdfs:isDefinedBy>
+        <rdfs:label>je jedinica opisa povezana s pojavnim oblikom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/jo/P10007 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/jo/P10007">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10003"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10003"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamjo:P10007</ont:ID>
+        <ont:definition>Povezuje jedinicu opisa s primjerkom.</ont:definition>
+        <rdfs:isDefinedBy>http://www.kamregistar.info/Element/jo/P10007</rdfs:isDefinedBy>
+        <rdfs:label>je jedinica opisa povezana s primjerkom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/jo/P10008 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/jo/P10008">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10003"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10003"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamjo:P10008</ont:ID>
+        <ont:definition>Povezuje jedinicu opisa s agentom.</ont:definition>
+        <rdfs:label>je jedinica opisa povezana s agentom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/jo/P10009 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/jo/P10009">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10008"/>
+        <ont:ID>kamjo:P10009</ont:ID>
+        <ont:definition>Povezuje jedinicu opisa s osobom.</ont:definition>
+        <rdfs:label>je jedinica opisa povezana s osobom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/jo/P10010 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/jo/P10010">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10008"/>
+        <ont:ID>kamjo:P10010</ont:ID>
+        <ont:definition>Povezuje jedinicu opisa s kolektivnim agentom.</ont:definition>
+        <rdfs:label>je jedinica opisa povezana s kolektivnim agentom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/jo/P10011 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/jo/P10011">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10010"/>
+        <ont:ID>kamjo:P10011</ont:ID>
+        <ont:definition>Povezuje jedinicu opisa s korporativnim tijelom.</ont:definition>
+        <rdfs:label>je jedinica opisa povezana s korporativnim tijelom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/jo/P10012 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/jo/P10012">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10010"/>
+        <ont:ID>kamjo:P10012</ont:ID>
+        <ont:definition>Povezuje jedinicu opisa s obitelji.</ont:definition>
+        <rdfs:label>je jedinica opisa povezana s obitelji</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/jo/P10013 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/jo/P10013">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10003"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10003"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11003"/>
+        <ont:ID>kamjo:P10013</ont:ID>
+        <ont:definition>Povezuje jedinicu opis s mjestom.</ont:definition>
+        <rdfs:label>je jedinica opisa povezana s mjestom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/jo/P10014 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/jo/P10014">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10003"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10003"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12002"/>
+        <ont:ID>kamjo:P10014</ont:ID>
+        <ont:definition>Povezuje jedinicu opisa s vremenskim rasponom.</ont:definition>
+        <rdfs:label>je jedinica opisa povezana s vremenskim rasponom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/jo/P10015 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/jo/P10015">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10003"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10003"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamjo:P10015</ont:ID>
+        <ont:definition>Povezuje jedinicu opisa s nomenom.</ont:definition>
+        <rdfs:label>ima nomen za jedinicu opisa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/jo/P10016 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/jo/P10016">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10015"/>
+        <ont:ID>kamjo:P10016</ont:ID>
+        <rdfs:comment>Povezuje jedinicu opisa s imenom, nazivom ili drugom oznakom pomoću koje se u informacijskom sustavu identificira jedinica opisa i/ili pronalaze i okupljaju podaci o jedinici opisa.</rdfs:comment>
+        <rdfs:label>ima oznaku za jedinicu opisa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/jo/P10017 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/jo/P10017">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10016"/>
+        <ont:ID>kamjo:P10017</ont:ID>
+        <ont:definition>Povezuje jedinicu opisa s nadziranom pristupnicom koja je preuzeta iz nadziranog rječnika ili oblikovana prema određenim pravilima.</ont:definition>
+        <rdfs:label>ima nadziranu pristupnicu za jedinicu opisa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/jo/P10018 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/jo/P10018">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10017"/>
+        <ont:ID>kamjo:P10018</ont:ID>
+        <ont:definition>Povezuje jedinicu opisa s usvojenom pristupnicom koja unutar nekog sustava jednoznačno identificira jedinicu opisa i okuplja podatke o jedinici opisa.</ont:definition>
+        <rdfs:label>ima usvojenu pristupnicu za jedinicu opisa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/jo/P10019 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/jo/P10019">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10017"/>
+        <ont:ID>kamjo:P10019</ont:ID>
+        <ont:definition>Povezuje jedinicu opisa s varijantnom pristupnicom koja nije odabrana za usvojenu pristupnicu.</ont:definition>
+        <rdfs:label>ima varijantnu pristupnicu za jedinicu opisa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/jo/P10020 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/jo/P10020">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10016"/>
+        <ont:ID>kamjo:P10020</ont:ID>
+        <ont:definition>Povezuje jedinicu opisa s brojčanom ili slovno-brojčanom oznakom, namijenjenoj strojnoj ili ljudskoj uporabi, koji unutar određenog sustava jednoznačno identificira jedinicu opisa.</ont:definition>
+        <rdfs:label>ima identifikator za jedinicu opisa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/jo/P10021 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/jo/P10021">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10004"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20017"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamjo:P10021</ont:ID>
+        <rdfs:comment>Povezuje jedinicu opisa s izrazom, nadziranim nazivom, imenom, naslovom, identifikatorom ili drugom nadziranom oznakom koja označava temu kojom se bavi ili koju prikazuje djelo.</rdfs:comment>
+        <rdfs:label>je jedinica opisa predmet djela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/jo/P10022 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/jo/P10022">
+        <ont:ID>kamjo:P10022</ont:ID>
+        <ont:definition>Povezuje jedinicu opisa s bilo kojom informacijom o jedinici opisa koja nije zabilježena uporabom specifičnih atributa i/ili odnosa.</ont:definition>
+        <rdfs:label>ima napomenu o jedinici opisa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/jo/P10023 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Element/jo/P10023">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10022"/>
+        <ont:ID>kamjo:P10023</ont:ID>
+        <ont:definition>Povezuje jedinicu opisa s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između jedinice opisa i druge jedinice opisa ili više drugih jedinica opisa.</ont:definition>
+        <rdfs:label>ima napomenu o odnosu jedinice opisa i drugih jedinica opisa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/a/P60001 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/a/P60001">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10001"/>
+        <ont:ID>kama:P60001</ont:ID>
+        <ont:definition>Povezuje agenta s izrazom koji označava je li agent osoba, kolektivni agent, korporativno tijelo ili obitelj.</ont:definition>
+        <rdfs:label>ima vrstu agenta</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20019 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20019">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20020"/>
+        <ont:ID>kamd:P20019</ont:ID>
+        <ont:definition>Povezuje djelo s djelom koji mu je izvorno dio.</ont:definition>
+        <rdfs:label>ima dio djelo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20020 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20020">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamd:P20020</ont:ID>
+        <ont:definition>Povezuje djelo s djelom kojega je izvorno dio.</ont:definition>
+        <rdfs:label>je dio djela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20021 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20021">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20022"/>
+        <ont:ID>kamd:P20021</ont:ID>
+        <ont:definition>Povezuje djelo s djelom koje je nastalo kao prilog ili dopuna tome djelu.</ont:definition>
+        <rdfs:label>je dopuna djelu</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20022 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20022">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamd:P20022</ont:ID>
+        <ont:definition>Povezuje djelo s djelom kojega je prilog ili dopuna.</ont:definition>
+        <rdfs:label>ima dopunu djelo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20023 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20023">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20024"/>
+        <ont:ID>kamd:P20023</ont:ID>
+        <ont:definition>Povezuje djelo s djelom čiji sadržaj prethodi drugom djelu.</ont:definition>
+        <rdfs:label>prethodi djelu</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20024 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20024">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamd:P20024</ont:ID>
+        <ont:definition>Povezuje djelo s djelom čiji se sadržaj nastavlja u drugom djelu.</ont:definition>
+        <rdfs:label>slijedi djelo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20025 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20025">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20026"/>
+        <ont:ID>kamd:P20025</ont:ID>
+        <ont:definition>Povezuje djelo s djelom koje je prerađeno u novo djelo prilagodbom drugoj vrsti publike ili promjenom oblika sadržaja, žanra, stila, narativnih elemenata i sl.</ont:definition>
+        <rdfs:label>je prerađeno u djelo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20026 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20026">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamd:P20026</ont:ID>
+        <ont:definition>Povezuje djelo koje je prerađeno u novo djelo prilagodbom drugoj vrsti publike ili promjenom oblika sadržaja, žanra, stila, narativnih elemenata i sl. s izvornim djelom.</ont:definition>
+        <rdfs:label>je preradba djela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20027 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20027">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20028"/>
+        <ont:ID>kamd:20027</ont:ID>
+        <ont:definition>Povezuje djelo s djelom ili dijelom djela koje ga preuzima, citira ili oponaša.</ont:definition>
+        <rdfs:label>je prisvojeno u djelu</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20028 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20028">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamd:P20028</ont:ID>
+        <ont:definition>Povezuje djelo ili dio djela s djelom koje ga je preuzelo, citiralo ili oponašalo.</ont:definition>
+        <rdfs:label>prisvaja djelo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20029 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20029">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20030"/>
+        <ont:ID>kamd:P20029</ont:ID>
+        <ont:definition>Povezuje djelo s djelom koje je stvoreno promjenom plana izdavanja i/ili uredničke politike.</ont:definition>
+        <rdfs:label>je promijenjeno u djelo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20030 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20030">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamd:20030</ont:ID>
+        <ont:definition>Povezuje djelo koje je stvoreno promjenom plana izdavanja i/ili uredničke politike jednoga djela stvoreno s izvornim djelom.</ont:definition>
+        <rdfs:label>je nastalo promjenom djela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20031 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20031">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20032"/>
+        <ont:ID>kamd:P20031</ont:ID>
+        <ont:definition>Povezuje djelo koje je prostorni objekt (skulptura, uporabni predmet ili sl.) oblikovan s namjerom da vjerno prenese izgled drugog prostornog objekta s izvornim djelom.</ont:definition>
+        <rdfs:label>je replika djela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20032 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20032">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20018"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamd:P20032</ont:ID>
+        <ont:definition>Povezuje izvorno djelo koje je prostorni objekt (skulptura, uporabni predmet ili sl.)  s djelom oblikovanim s namjerom da vjerno prenese izgled drugog prostornog objekta.</ont:definition>
+        <rdfs:label>je replicirano u djelu</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20033 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20033">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20017"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10004"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamd:P20033</ont:ID>
+        <ont:definition>Povezuje djelo s izrazom.</ont:definition>
+        <rdfs:label>je djelo povezano s izrazom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20034 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20034">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20033"/>
+        <ont:ID>kamd:P20034</ont:ID>
+        <ont:definition>Povezuje djelo s izrazom kroz koji je realizirano.</ont:definition>
+        <rdfs:label>je realizirano u izrazu</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20035 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20035">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20017"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10004"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamd:P20035</ont:ID>
+        <ont:definition>Povezuje djelo s agentom.</ont:definition>
+        <rdfs:label>je djelo povezano s agentom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20036 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20036">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20035"/>
+        <ont:ID>kamd:P20036</ont:ID>
+        <ont:definition>Povezuje djelo s osobom.</ont:definition>
+        <rdfs:label>je povezano s osobom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20037 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20037">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20035"/>
+        <ont:ID>kamd:P20037</ont:ID>
+        <ont:definition>Povezuje djelo s kolektivnim agentom.</ont:definition>
+        <rdfs:label>je povezano s kolektivnim agentom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20038 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20038">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20037"/>
+        <ont:ID>kamd:P20038</ont:ID>
+        <ont:definition>Povezuje djelo s korporativnim tijelom.</ont:definition>
+        <rdfs:label>je povezano s korporativnim tijelom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20039 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20039">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20027"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20028"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamd:P20039</ont:ID>
+        <ont:definition>Povezuje djelo s obitelji.</ont:definition>
+        <rdfs:label>je povezano s obitelji</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20040 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20040">
+        <owl:equivalentProperty rdf:resource="http://www.registar.kam.hr/Elements/d/P20041"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20001"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20002"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20003"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20004"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20005"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20006"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20007"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20008"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20009"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20010"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20011"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20012"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20013"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20014"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20015"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20016"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10005"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10006"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10007"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10009"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10011"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10012"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10018"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10019"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10020"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10021"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10023"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/a/P60001"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20019"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20020"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20021"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20022"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20023"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20024"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20025"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20026"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20029"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20030"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20031"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20032"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20034"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20036"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20038"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20039"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/i/P30001"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/i/P30002"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/i/P30003"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11001"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11002"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11005"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11006"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11007"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11008"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11010"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11012"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11013"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11014"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11015"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12001"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12004"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12005"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12008"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12010"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12011"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12012"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12014"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12015"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12016"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12019"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12020"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12021"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12022"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12025"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12026"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12027"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12029"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12031"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12032"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12033"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12034"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12038"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12039"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12040"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12042"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20001"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20002"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20003"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20004"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20005"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20006"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20007"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20008"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20009"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20010"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20011"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20012"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20013"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20014"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20015"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20016"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10005"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10006"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10007"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10009"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10011"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10012"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10018"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10019"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10020"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10021"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10023"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/a/P60001"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20019"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20020"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20021"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20022"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20023"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20024"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20025"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20026"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20029"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20030"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20031"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20032"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20034"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20036"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20038"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20039"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/i/P30001"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/i/P30002"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/i/P30003"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11001"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11002"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11005"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11006"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11007"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11008"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11010"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11012"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11013"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11014"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11015"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12001"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12004"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12005"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12008"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12010"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12011"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12012"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12014"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12015"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12016"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12019"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12020"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12021"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12022"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12025"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12026"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12027"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12029"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12031"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12032"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12033"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12034"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12038"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12039"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12040"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12042"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20040"/>
+        <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20041"/>
+        <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20042"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <ont:ID>kamd:P20040</ont:ID>
+        <ont:definition>Povezuje djelo s agentom čije se ovlasti, funkcije i odgovornosti temelje na djelu.</ont:definition>
+        <rdfs:label>ima agenta čije ovlasti proizlaze iz djela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20041 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20041">
+        <owl:equivalentProperty rdf:resource="http://www.registar.kam.hr/Elements/d/P20042"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20042 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20042">
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#bottomObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#bottomObjectProperty">
+        <owl:equivalentProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20040"/>
+                <owl:equivalentProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20041"/>
+                        <owl:equivalentProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20042"/>
+                            </rdf:Description>
+                        </owl:equivalentProperty>
+                    </rdf:Description>
+                </owl:equivalentProperty>
+            </rdf:Description>
+        </owl:equivalentProperty>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20041 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20041">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20001"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20002"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20003"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20004"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20005"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20006"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20007"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20008"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20009"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20010"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20011"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20012"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20013"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20014"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20015"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20016"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10005"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10006"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10007"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10009"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10011"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10012"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10018"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10019"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10020"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10021"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10023"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/a/P60001"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20019"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20020"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20021"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20022"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20023"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20024"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20025"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20026"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20029"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20030"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20031"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20032"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20034"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20036"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20038"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20039"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/i/P30001"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/i/P30002"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/i/P30003"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11001"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11002"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11005"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11006"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11007"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11008"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11010"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11012"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11013"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11014"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11015"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12001"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12004"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12005"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12008"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12010"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12011"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12012"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12014"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12015"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12016"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12019"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12020"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12021"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12022"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12025"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12026"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12027"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12029"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12031"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12032"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12033"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12034"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12038"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12039"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12040"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12042"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20001"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20002"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20003"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20004"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20005"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20006"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20007"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20008"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20009"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20010"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20011"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20012"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20013"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20014"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20015"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20016"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10005"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10006"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10007"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10009"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10011"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10012"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10018"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10019"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10020"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10021"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10023"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/a/P60001"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20019"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20020"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20021"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20022"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20023"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20024"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20025"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20026"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20029"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20030"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20031"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20032"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20034"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20036"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20038"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20039"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/i/P30001"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/i/P30002"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/i/P30003"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11001"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11002"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11005"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11006"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11007"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11008"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11010"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11012"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11013"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11014"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11015"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12001"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12004"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12005"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12008"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12010"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12011"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12012"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12014"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12015"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12016"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12019"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12020"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12021"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12022"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12025"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12026"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12027"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12029"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12031"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12032"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12033"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12034"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12038"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12039"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12040"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12042"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20041"/>
+        <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20042"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <ont:ID>P20041</ont:ID>
+        <ont:definition>Povezuje djelo s osobom čije se ovlasti, funkcije i odgovornosti temelje na djelu.</ont:definition>
+        <rdfs:label>ima osobu čije ovlasti proizlaze iz djela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/d/P20042 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/d/P20042">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20001"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20002"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20003"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20004"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20005"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20006"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20007"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20008"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20009"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20010"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20011"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20012"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20013"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20014"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20015"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/d/P20016"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10005"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10006"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10007"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10009"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10011"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10012"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10018"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10019"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10020"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10021"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10023"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/a/P60001"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20019"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20020"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20021"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20022"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20023"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20024"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20025"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20026"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20029"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20030"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20031"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20032"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20034"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20036"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20038"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20039"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/i/P30001"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/i/P30002"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/i/P30003"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11001"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11002"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11005"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11006"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11007"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11008"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11010"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11012"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11013"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11014"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11015"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12001"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12004"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12005"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12008"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12010"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12011"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12012"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12014"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12015"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12016"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12019"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12020"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12021"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12022"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12025"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12026"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12027"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12029"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12031"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12032"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12033"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12034"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12038"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12039"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12040"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12042"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20001"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20002"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20003"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20004"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20005"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20006"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20007"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20008"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20009"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20010"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20011"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20012"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20013"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20014"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20015"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/d/P20016"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10005"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10006"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10007"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10009"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10011"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10012"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10018"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10019"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10020"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10021"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10023"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/a/P60001"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20019"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20020"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20021"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20022"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20023"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20024"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20025"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20026"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20029"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20030"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20031"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20032"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20034"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20036"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20038"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20039"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/i/P30001"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/i/P30002"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/i/P30003"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11001"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11002"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11005"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11006"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11007"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11008"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11010"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11012"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11013"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11014"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11015"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12001"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12004"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12005"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12008"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12010"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12011"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12012"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12014"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12015"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12016"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12019"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12020"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12021"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12022"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12025"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12026"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12027"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12029"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12031"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12032"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12033"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12034"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12038"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12039"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12040"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12042"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/d/P20042"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <ont:ID>kamd:P20042</ont:ID>
+        <ont:definition>Povezuje djelo s kolektivnim agentom čije se ovlasti, funkcije i odgovornosti temelje na djelu.</ont:definition>
+        <rdfs:label>ima kolektivnog agenta čije ovlasti proizlaze iz djela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/i/P30001 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/i/P30001">
+        <ont:ID>kami:P30001</ont:ID>
+        <ont:definition>Povezuje izraz s izrazom, nadziranim nazivom, kôdom, identifikatorom ili drugom oznakom koja označava jezik tekstualnog sadržaja jedinice građe.</ont:definition>
+        <rdfs:label>ima jezik sadržaja</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/i/P30002 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/i/P30002">
+        <ont:definition>Povezuje izraz s kratkim nestrukturiranim tekstom u kojemu se navode pojedinosti o jeziku ili jezicima sadržaja jedinice građe.</ont:definition>
+        <rdfs:label>ima napomenu o jeziku sadržaja</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/i/P30003 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/i/P30003">
+        <ont:ID>kami:P30003</ont:ID>
+        <ont:definition>Povezuje izraz s izrazom, nadziranim nazivom, kôdom, identifikatorom ili drugom oznakom za jezik kojim je izvorno zabilježen sadržaj jedinice građe.</ont:definition>
+        <rdfs:label>ima jezik izvornika</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/m/P11001 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/m/P11001">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10001"/>
+        <ont:ID>kamm:P11001</ont:ID>
+        <ont:definition>Povezuje mjesto s izrazom, nadzirani nazivom, kôdom ili drugom oznakom koja označava vrstu kojoj pripada mjesto s obzirom na svoja prirodna ili društvena obilježja.</ont:definition>
+        <rdfs:label>ima vrstu mjesta</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/m/P11002 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/m/P11002">
+        <ont:ID>kamm:P11002</ont:ID>
+        <ont:definition>Povezuje mjesto s oznakom granicâ suvremenog ili povijesnog mjesta na Zemlji.</ont:definition>
+        <rdfs:label>ima geografski položaj mjesta</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/m/P11003 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/m/P11003">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10003"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10003"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamm:P11003</ont:ID>
+        <ont:definition>Povezuje mjesto s jedinicom opisa.</ont:definition>
+        <rdfs:label>je mjesto povezano s jedinicom opisa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/m/P11004 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/m/P11004">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11003"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10013"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamm:P11004</ont:ID>
+        <ont:definition>Povezuje mjesto s djelom.</ont:definition>
+        <rdfs:label>je mjesto povezano s djelom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/m/P11005 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/m/P11005">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11004"/>
+        <ont:ID>kamm:P11005</ont:ID>
+        <ont:definition>Povezuje mjesto s djelom na kojemu je djelo nastalo.</ont:definition>
+        <rdfs:label>je mjesto nastanka djela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/m/P11006 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/m/P11006">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11004"/>
+        <ont:ID>kamm:P11006</ont:ID>
+        <ont:definition>Povezuje mjesto s izrazom, nadziranim nazivom, imenom, naslovom, identifikatorom ili drugom nadziranom oznakom koja označava temu kojom se bavi ili koju prikazuje djelo.</ont:definition>
+        <rdfs:label>je mjesto predmet djela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/m/P11007 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/m/P11007">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11004"/>
+        <ont:ID>kamm:P11007</ont:ID>
+        <ont:definition>Povezuje mjesto s djelom za koje mjesto se opravdano pretpostavlja da je povezano s nastankom djela.</ont:definition>
+        <rdfs:label>je pretpostavljeno mjesto nastanka djela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/m/P11008 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/m/P11008">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11004"/>
+        <ont:ID>kamm:P11008</ont:ID>
+        <ont:definition>Povezuje mjesto s djelom za koje se mjesto pogrešno ili neistinito navodi da je povezano s nastankom djela.</ont:definition>
+        <rdfs:label>je navodno mjesto nastanka djela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/m/P11009 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/m/P11009">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11003"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10013"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:label>je mjesto povezano s izrazom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/m/P11010 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/m/P11010">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11009"/>
+        <ont:ID>kamm:P11010</ont:ID>
+        <ont:definition>Povezuje mjesto s realizacijom određenog izraza djela.</ont:definition>
+        <rdfs:label>je mjesto nastanka izraza</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/m/P11011 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/m/P11011">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11003"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10013"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamm:P11011</ont:ID>
+        <ont:definition>Povezuje mjesto s pojavnim oblikom.</ont:definition>
+        <rdfs:label>je mjesto povezano s pojavnim oblikom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/m/P11012 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/m/P11012">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11011"/>
+        <ont:ID>kamm:P11012</ont:ID>
+        <ont:definition>Povezuje mjesto s pojavnim oblikom na kojemu je pojavni oblik objavljen.</ont:definition>
+        <rdfs:label>je mjesto izdavanja pojavnog oblika</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/m/P11013 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/m/P11013">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11011"/>
+        <ont:ID>kamm:P11013</ont:ID>
+        <ont:definition>Povezuje mjesto s pojavnim oblikom na kojemu je pojavni oblik proizveden.</ont:definition>
+        <rdfs:label>je mjesto proizvodnje pojavnog oblika</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/m/P11014 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/m/P11014">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11011"/>
+        <ont:ID>kamm:P11014</ont:ID>
+        <ont:definition>Povezuje mjesto s pojavnim oblikom na kojemu je pojavni oblik raspačavan.</ont:definition>
+        <rdfs:label>je mjesto raspačavanja pojavnog oblika</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/m/P11015 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/m/P11015">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/m/P11011"/>
+        <ont:ID>kamm:P11015</ont:ID>
+        <ont:definition>Povezuje mjesto s pojavnim oblikom na kojemu je pojavni oblik tiskan.</ont:definition>
+        <rdfs:label>je mjesto tiskanja pojavnog oblika</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12001 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12001">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10001"/>
+        <ont:ID>kamvr:P12001</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s izrazom, nadziranim nazivom, kôdom ili drugom oznakom koja označava vrstu kojoj vremenski raspon pripada s obzirom na svoje trajanje.</ont:definition>
+        <rdfs:label>ima vrstu vremenskog raspona</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12002 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12002">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10003"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10003"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamvr:P12002</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s jedinicom opisa.</ont:definition>
+        <rdfs:label>ima vremenski raspon povezan s jedinicom opisa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12003 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12003">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12002"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10014"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamvr:P12003</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s djelom.</ont:definition>
+        <rdfs:label>je vremenski raspon povezan s djelom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12004 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12004">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12003"/>
+        <ont:ID>kamvr:P12004</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s djelom za koji se vremenski raspon pogrešno ili neistinito navodi da je povezan s nastankom djela.</ont:definition>
+        <rdfs:label>je navodno vrijeme nastanka djela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12005 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12005">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12003"/>
+        <ont:ID>kamvr:P12005</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s  djelom za koji se vremenski raspon opravdano pretpostavlja da je povezan s nastankom djela.</ont:definition>
+        <rdfs:label>je pretpostavljeno vrijeme nastanka djela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12006 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12006">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12003"/>
+        <ont:ID>kamvr:P12006</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s djelom u kojemu je vremenskom rasponu djelo nastalo.</ont:definition>
+        <rdfs:label>je vrijeme nastanka djela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12007 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12007">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12002"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10014"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamvr:P12007</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s izrazom.</ont:definition>
+        <rdfs:label>je vremenski raspon povezan s izrazom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12008 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12008">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12007"/>
+        <ont:ID>kamvr:P12008</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s izrazom za koji je vremenski raspon povezan realizacijom određenog izraza djela.</ont:definition>
+        <rdfs:label>je vrijeme nastanka izraza</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12009 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12009">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12002"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10014"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamvr:P12009</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s pojavnim oblikom.</ont:definition>
+        <rdfs:label>je vremenski raspon povezan s pojavnim oblikom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12010 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12010">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12009"/>
+        <ont:ID>kamvr:P12010</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s pojavnim oblikom koji je u tom vremenskom rasponu izdan.</ont:definition>
+        <rdfs:label>je vrijeme izdavanja pojavnog oblika</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12011 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12011">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12009"/>
+        <ont:ID>kamvr:P12011</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s pojavnim oblikom koji je u tom vremenskom rasponu proizveden.</ont:definition>
+        <rdfs:label>je vrijeme proizvodnje pojavnog oblika</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12012 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12012">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12009"/>
+        <ont:ID>kamvr:P12012</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s pojavnim oblikom koji je u tom vremenskom rasponu tiskan.</ont:definition>
+        <rdfs:label>je vrijeme tiskanja pojavnog oblika</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12013 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12013">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12002"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10014"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamvr:P12013</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s primjerkom.</ont:definition>
+        <rdfs:label>je vremenski raspon povezan s primjerkom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12014 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12014">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12013"/>
+        <ont:ID>kamvr:P12014</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s primjerkom nad kojim su izvedeni konzervatorski i/ili restauratorski postupci u tom vremenskom rasponu.</ont:definition>
+        <rdfs:label>je vrijeme konzervacije ili restauracije primjerka</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12015 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12015">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12013"/>
+        <ont:ID>kamvr:P12015</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s primjerkom koji je u tom vremenskom rasponu nabavljen.</ont:definition>
+        <rdfs:label>je vrijeme nabave primjerka</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12016 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12016">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12013"/>
+        <ont:ID>kamvr:P12016</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s primjerkom koji je u tom vremenskom rasponu pronađen.</ont:definition>
+        <rdfs:label>je vrijeme nalaska primjerka</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12017 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12017">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12002"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10014"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamvr:P12017</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s agentom.</ont:definition>
+        <rdfs:label>je vremenski raspon povezan s agentom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12018 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12018">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12017"/>
+        <ont:ID>kamvr:P12018</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s osobom.</ont:definition>
+        <rdfs:label>je vremenski raspon povezan s osobom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12019 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12019">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12018"/>
+        <ont:ID>kamvr:P12019</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s osobom koja je u tom vremenskom rasponu djelovala.</ont:definition>
+        <rdfs:label>je vrijeme djelovanja osobe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12020 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12020">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12018"/>
+        <ont:ID>kamvr:P12020</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s osobom koja je u tom vremenskom rasponu obnašala određenu dužnost ili položaj.</ont:definition>
+        <rdfs:label>je vrijeme obnašanja dužnosti ili položaja osobe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12021 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12021">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12018"/>
+        <ont:ID>kamvr:P12021</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s osobom koja je u tom vremenskom rasponu rođena.</ont:definition>
+        <rdfs:label>je vrijeme rođenja osobe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12022 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12022">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12018"/>
+        <ont:ID>kamvr:P12022</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s osobom koja je u tom vremenskom rasponu umrla.</ont:definition>
+        <rdfs:label>je vrijeme smrti osobe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12023 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12023">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12017"/>
+        <ont:ID>kamvr:P12023</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s kolektivnim agentom.</ont:definition>
+        <rdfs:label>je vremenski raspon povezan s kolektivnim agentom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12024 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12024">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12023"/>
+        <ont:ID>kamvr:P12024</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s korporativnim tijelom.</ont:definition>
+        <rdfs:label>je vremenski raspon povezan s korporativnim tijelom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12025 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12025">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12024"/>
+        <ont:ID>kamvr:P12025</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s korporativnim tijelom koje je u tom vremenskom rasponu djelovalo.</ont:definition>
+        <rdfs:label>je vrijeme djelovanja korporativnog tijela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12026 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12026">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12024"/>
+        <ont:ID>kamvr:P12026</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s korporativnim tijelom koje je u tom vremenskom rasponu osnovano.</ont:definition>
+        <rdfs:label>je vrijeme osnutka korporativnog tijela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12027 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12027">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12024"/>
+        <ont:ID>kamvr:P12027</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s korporativnim tijelom koje je u tom vremenskom rasponu prestalo s djelovanjem.</ont:definition>
+        <rdfs:label>je vrijeme završetka djelovanja korporativnog tijela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12028 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12028">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12023"/>
+        <ont:ID>kamvr:P12028</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s obitelji.</ont:definition>
+        <rdfs:label>je vremenski raspon povezan s obitelji</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12029 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12029">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12028"/>
+        <ont:ID>kamvr:P12029</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s obitelji koja je u tom vremenskom razdoblju djelovala.</ont:definition>
+        <rdfs:label>je vrijeme djelovanja obitelji</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12030 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12030">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10014"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12002"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10014"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12002"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <ont:ID>kamvr:P12030</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s vremenskim rasponom.</ont:definition>
+        <rdfs:label>je vremenski raspon povezan s vremenskim rasponom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12031 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12031">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12030"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12030"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12032"/>
+        <ont:ID>kamvr:P12031</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s vremenskim rasponom koji je njegov dio.</ont:definition>
+        <rdfs:label>je vremenska cjelina vremenskog raspona</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12032 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12032">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12030"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12030"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <ont:ID>kamvr:P12032</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s vremenskim rasponom kojega je dio.</ont:definition>
+        <rdfs:label>je vremenski dio vremenskog raspona</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12033 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12033">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12003"/>
+        <ont:ID>kamvr:P12033</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s izrazom, nadziranim nazivom, imenom, naslovom, identifikatorom ili drugom nadziranom oznakom koja označava temu kojom se bavi ili koju prikazuje djelo.</ont:definition>
+        <rdfs:label>je vremenski raspon predmet djela</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12034 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12034">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12013"/>
+        <ont:ID>kamvr:P12034</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s primjerkom koji je u tom vremenskom rasponu korišten.</ont:definition>
+        <rdfs:label>je vrijeme korištenja primjerka</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12035 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12035">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12006"/>
+        <ont:ID>kamvr:P12035</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s nomenom.</ont:definition>
+        <rdfs:label>ima nomen za vremenski raspon</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12036 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12036">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12035"/>
+        <ont:ID>kamvr:P12036</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s imenom, nazivom ili drugom oznakom pomoću koje se u informacijskom sustavu identificira vremenski raspon i/ili pronalaze i okupljaju podaci o vremenskom rasponu.</ont:definition>
+        <rdfs:label>ima oznaku za vremenski raspon</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12037 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12037">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12036"/>
+        <ont:ID>kamvr:P12037</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s pristupnicom koja je preuzeta iz nadziranog rječnika ili oblikovana prema određenim pravilima.</ont:definition>
+        <rdfs:label>ima nadziranu pristupnicu za vremenski raspon</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12038 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12038">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12037"/>
+        <ont:ID>kamvr:P12038</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s nadziranom riječi, izrazom ili nizom riječi i/ili drugih oznaka koje unutar nekog sustava jednoznačno identificiraju vremenski raspon i okupljaju podatke o vremenskom rasponu.</ont:definition>
+        <rdfs:label>ima usvojenu pristupnicu za vremenski raspon</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12039 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12039">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12037"/>
+        <ont:ID>kamvr:P12039</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s riječi, nizom riječi i/ili drugih oznaka koje identificiraju vremenski raspon unutar određenog sustava, a nisu odabrane za usvojenu pristupnicu.</ont:definition>
+        <rdfs:label>ima varijantnu pristupnicu za vremenski raspon</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12040 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12040">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12035"/>
+        <ont:ID>kamvr:P12040</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s brojčanom ili slovno-brojčanom oznakom koja unutar određenog sustava jednoznačno identificira vremenski raspon.</ont:definition>
+        <rdfs:label>ima identifikator za vremenski raspon</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12041 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12041">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Element/jo/P10022"/>
+        <ont:ID>kamvr:P12041</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s tekstom koji sadržava pojedinosti o vremenskom rasponu koje se smatraju značajnima, a nisu iskazane u drugim elementima opisa.</ont:definition>
+        <rdfs:label>ima napomenu o vremenskom rasponu</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.registar.kam.hr/Elements/vr/P12042 -->
+
+    <owl:ObjectProperty rdf:about="http://www.registar.kam.hr/Elements/vr/P12042">
+        <rdfs:subPropertyOf rdf:resource="http://www.registar.kam.hr/Elements/vr/P12041"/>
+        <ont:ID>kamvr:P12042</ont:ID>
+        <ont:definition>Povezuje vremenski raspon s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između vremenskog raspona i drugog vremenskog raspona ili više drugih vremenskih raspona, odnosno vremenskog raspona i druge ili više drugih jedinica opisa.</ont:definition>
+        <rdfs:label>ima napomenu o odnosu vremenskog raspona i drugih jedinica opisa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/c/#C10001 -->
+
+    <owl:Class rdf:about="http://www.registar.kam.hr/Element/c/#C10001">
+        <ont:ID>kamjo:C10001</ont:ID>
+        <ont:definition xml:lang="hr">Entitet koji se identificira i opisuje u informacijskom sustavu knjižnice, arhiva ili muzeja.</ont:definition>
+        <rdfs:comment xml:lang="hr">Jedinica opisa može biti jedinica građe: djelo, izraz, pojavni oblik i primjerak, agent: osoba, kolektivni agent: korporativno tijelo i obitelj, mjesto, vremenski raspon i nomen.</rdfs:comment>
+        <rdfs:isDefinedBy>http://www.registar.kam.hr/Element/c/#C10001</rdfs:isDefinedBy>
+        <rdfs:label>Jedinica opisa</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/c/#C10002 -->
+
+    <owl:Class rdf:about="http://www.registar.kam.hr/Element/c/#C10002">
+        <rdfs:subClassOf rdf:resource="http://www.registar.kam.hr/Element/c/#C10001"/>
+        <ont:ID>kamd:C10002</ont:ID>
+        <ont:definition>Idejni sadržaj jedinice građe, koji jedinicu građe čini prepoznatljivom konceptualnom cjelinom.</ont:definition>
+        <rdfs:comment>Djelo se može javiti u različitim verzijama ili na različitim medijima. Svojstva djela ostaju nepromijenjena bez obzira na izraz ili pojavni oblik u kojemu se djelo javlja. Djelo nastaje djelovanjem jednoga ili više agenata. Agenti mogu biti poznati ili nepoznati (neutvrđeni). Djelo može i ne mora nastati s određenom intelektualnom i/ili umjetničkom namjerom. Djelo može biti nedovršeno.</rdfs:comment>
+        <rdfs:isDefinedBy>http://www.registar.kam.hr/Element/c/#C10002</rdfs:isDefinedBy>
+        <rdfs:label>Djelo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/c/#C10003 -->
+
+    <owl:Class rdf:about="http://www.registar.kam.hr/Element/c/#C10003">
+        <rdfs:subClassOf rdf:resource="http://www.registar.kam.hr/Element/c/#C10001"/>
+        <ont:ID>kami:C10003</ont:ID>
+        <ont:definition>Niz znakova određenog znakovnog sustava (riječi, rečenica, brojki, pokreta, oblika, tonova, melodija, kadrova itd.) putem kojih je realizirano i priopćeno djelo.</ont:definition>
+        <rdfs:comment>Isti izraz djela može se javiti u različitim formatima i izdanjima, na različitim materijalnim nositeljima itd. Svojstva izraza ostaju nepromijenjena bez obzira na pojavni oblik u kojemu se izraz javlja. Djelo može postojati: u samo jednom, izvornom izrazu (npr. ulje na platnu, skulptura, ručno oblikovan uporabni predmet), u izvornom izrazu i različitim varijantama (npr. tekst u izvornom obliku i prijevodu; skladba za izvorni izvođački sastav i u drugom aranžmanu).</rdfs:comment>
+        <rdfs:isDefinedBy>http://www.registar.kam.hr/Element/c/#C10003</rdfs:isDefinedBy>
+        <rdfs:label>Izraz</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/c/#C10004 -->
+
+    <owl:Class rdf:about="http://www.registar.kam.hr/Element/c/#C10004">
+        <rdfs:subClassOf rdf:resource="http://www.registar.kam.hr/Element/c/#C10001"/>
+        <ont:ID>kampo:C10004</ont:ID>
+        <ont:definition>Skup svih materijalnih objekata koji utjelovljuju isto djelo i nastali su ili združeni kao rezultat aktivnosti istog agenta.</ont:definition>
+        <rdfs:comment>Kod ručno izrađenih objekata pojavni oblik postoji samo u jednom primjerku. Objekti nastali mehaničkim umnožavanjem, posebice u procesu industrijske proizvodnje, tvore pojavni oblik koji se sastoji od više identičnih primjeraka (npr. izdanje ili proizvodna serija).</rdfs:comment>
+        <rdfs:isDefinedBy>http://www.registar.kam.hr/Element/c/#C10004</rdfs:isDefinedBy>
+        <rdfs:label>Pojavni oblik</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/c/#C10005 -->
+
+    <owl:Class rdf:about="http://www.registar.kam.hr/Element/c/#C10005">
+        <rdfs:subClassOf rdf:resource="http://www.registar.kam.hr/Element/c/#C10001"/>
+        <ont:ID>kamp:C10005</ont:ID>
+        <ont:definition>Pojedačni materijalni nositelj.</ont:definition>
+        <rdfs:comment>Primjerak može biti: predstavnik pojavnog oblika koji postoji u samo jednom primjerku (npr. umjetnička slika, skulptura, ručno oblikovani umjetnički ili uporabni predmet itd.), predstavnik mehanički umnoženoga skupnog ili pojedinačnog pojavnog oblika, koji postoji u više identičnih primjeraka (npr. izdanje ili proizvodne serija).</rdfs:comment>
+        <rdfs:isDefinedBy>http://www.registar.kam.hr/Element/c/#C10005</rdfs:isDefinedBy>
+        <rdfs:label>Primjerak</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/c/#C10006 -->
+
+    <owl:Class rdf:about="http://www.registar.kam.hr/Element/c/#C10006">
+        <rdfs:subClassOf rdf:resource="http://www.registar.kam.hr/Element/c/#C10001"/>
+        <ont:ID>kama:C10006</ont:ID>
+        <ont:definition>Osoba ili skupina osoba sposobnih za voljno djelovanje i preuzimanje prava i odgovornosti, što za posljedicu ima stvaranje, preinaku, posjedovanje i druge aktivnosti povezane s jedinicom građe.</ont:definition>
+        <rdfs:comment>Agent može biti: osoba: odnosno pojedinačno ljudsko biće čije se postojanje može dokazati ili se opravdano pretpostavlja; kolektivni agent: odnosno skupina osoba i/ili organizacijâ koja organizirano djeluje kao cjelina pod zajedničkim imenom.</rdfs:comment>
+        <rdfs:isDefinedBy>http://www.registar.kam.hr/Element/c/#C10006</rdfs:isDefinedBy>
+        <rdfs:label>Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/c/#C10007 -->
+
+    <owl:Class rdf:about="http://www.registar.kam.hr/Element/c/#C10007">
+        <rdfs:subClassOf rdf:resource="http://www.registar.kam.hr/Element/c/#C10006"/>
+        <ont:ID>kamo:C10007</ont:ID>
+        <ont:definition>Pojedinačno ljudsko biće čije se postojanje može dokazati ili se opravdano pretpostavlja.</ont:definition>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:isDefinedBy>http://www.registar.kam.hr/Element/c/#C10007</rdfs:isDefinedBy>
+        <rdfs:label>Osoba</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/c/#C10008 -->
+
+    <owl:Class rdf:about="http://www.registar.kam.hr/Element/c/#C10008">
+        <rdfs:subClassOf rdf:resource="http://www.registar.kam.hr/Element/c/#C10006"/>
+        <ont:ID>kamka:C10008</ont:ID>
+        <ont:definition>Skupina osoba i/ili organizacijâ koja organizirano djeluje kao cjelina pod zajedničkim imenom.</ont:definition>
+        <rdfs:comment>Kolektivni agent može biti: korporativno tijelo i obitelj.</rdfs:comment>
+        <rdfs:isDefinedBy>http://www.registar.kam.hr/Element/c/#C10008</rdfs:isDefinedBy>
+        <rdfs:label>Kolektivni agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/c/#C10009 -->
+
+    <owl:Class rdf:about="http://www.registar.kam.hr/Element/c/#C10009">
+        <rdfs:subClassOf rdf:resource="http://www.registar.kam.hr/Element/c/#C10008"/>
+        <ont:ID>kamkt:C10009</ont:ID>
+        <ont:definition>Skupina osoba koje organizirano djeluju pod zajedničkim imenom, a ne predstavljaju se kao obitelj.</ont:definition>
+        <rdfs:comment>Korporativna tijela uključuju: korporativna tijela u užem smislu, grupe i korporativne sastanke.</rdfs:comment>
+        <rdfs:isDefinedBy>http://www.registar.kam.hr/Element/c/#C10009</rdfs:isDefinedBy>
+        <rdfs:label>Korporativno tijelo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/c/#C10010 -->
+
+    <owl:Class rdf:about="http://www.registar.kam.hr/Element/c/#C10010">
+        <rdfs:subClassOf rdf:resource="http://www.registar.kam.hr/Element/c/#C10008"/>
+        <ont:ID>kamob:C10010</ont:ID>
+        <ont:definition>skupina od dviju ili više osoba koje su povezane zajedničkom linijom predaka, rođenjem, brakom, posvojenjem, registriranom zajednicom ili sličnim pravnim statusom ili se na neki drugi način predstavljaju kao obitelj.</ont:definition>
+        <rdfs:isDefinedBy>http://www.registar.kam.hr/Element/c/#C10010</rdfs:isDefinedBy>
+        <rdfs:label>Obitelj</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/c/#C10011 -->
+
+    <owl:Class rdf:about="http://www.registar.kam.hr/Element/c/#C10011">
+        <rdfs:subClassOf rdf:resource="http://www.registar.kam.hr/Element/c/#C10001"/>
+        <ont:ID>kamm:C10011</ont:ID>
+        <ont:definition>Dio fizičkog prostora na Zemlji ili izvan nje.</ont:definition>
+        <rdfs:comment>Mjesta mogu biti prirodna (fizičko-geografska) ili društveno-geografska područja.</rdfs:comment>
+        <rdfs:isDefinedBy>http://www.registar.kam.hr/Element/c/#C10011</rdfs:isDefinedBy>
+        <rdfs:label>Mjesto</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/c/#C10012 -->
+
+    <owl:Class rdf:about="http://www.registar.kam.hr/Element/c/#C10012">
+        <rdfs:subClassOf rdf:resource="http://www.registar.kam.hr/Element/c/#C10001"/>
+        <ont:ID>kamvr:C10012</ont:ID>
+        <ont:definition>Protok vremena koji ima mjerljivo trajanje, bez obzira kako kratko ili dugo, i može se identificirati početkom i krajem.</ont:definition>
+        <rdfs:comment>Vremenski raspon uključuje geološka razdoblja, povijesna razdoblja, tisućljeća, stoljeća, desetljeća, godine i njihove raspone, nadnevke, sate, minute i sekunde.</rdfs:comment>
+        <rdfs:isDefinedBy>http://www.registar.kam.hr/Element/c/#C10012</rdfs:isDefinedBy>
+        <rdfs:label>Vremenski raspon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.registar.kam.hr/Element/c/#C10013 -->
+
+    <owl:Class rdf:about="http://www.registar.kam.hr/Element/c/#C10013">
+        <rdfs:subClassOf rdf:resource="http://www.registar.kam.hr/Element/c/#C10001"/>
+        <ont:ID>kamn:C10013</ont:ID>
+        <ont:definition>Veza između entiteta i oznake na koja se na njega odnosi.</ont:definition>
+        <rdfs:comment>Nomen povezuje bilo koji naziv (tj., kombinaciju znakova) koji se upotrebljava za upućivanje na instancu bilo kojeg entiteta koji se pronađe u bibliografskom univerzumu s tim entitetom. Svaki entitet na koji se upućuje u univerzumu govora imenovan je barem jednim nomenom.</rdfs:comment>
+        <rdfs:isDefinedBy>http://www.registar.kam.hr/Element/c/#C10013</rdfs:isDefinedBy>
+        <rdfs:label>Nomen</rdfs:label>
+    </owl:Class>
+    <rdf:Description>
+        <rdfs:comment>Mjesto je dio fizičkog prostora na Zemlji ili izvan nje. Mitska, legendarna, izmišljena i fikcionalizirana područja na Zemlji ili izvan nje ne smatraju se mjestima.</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
