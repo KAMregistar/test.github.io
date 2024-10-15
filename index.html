@@ -11,7 +11,7 @@
             font-family: 'Poppins', Arial, sans-serif;
             font-weight: 400; /* Regular weight */
             margin: 0;
-            padding-bottom: 90px; /* Reserve space for footer */
+            padding-bottom: 60px; /* Reserve space for footer */
         }
 
         #menu-bar {
@@ -116,7 +116,7 @@
             color: white;
             text-align: center;
             padding: 10px;
-            font-size: 10px;
+            font-size: 12px;
         }
     </style>
 </head>
@@ -238,7 +238,7 @@
                     if (properties.length === 0) {
                         content.innerHTML += '<p>No properties found for this class.</p>';
                     } else {
-                        const table = `<table>
+                        let table = `<table>
                             <tr><th>CURIE</th><th>Label</th><th>Definition</th></tr>`;
                         properties.forEach(property => {
                             const curieValue = property['http://www.registar.kam.hr/ontologies/ont.owl/ID']
@@ -250,7 +250,7 @@
                             const definition = property['http://www.registar.kam.hr/ontologies/ont.owl/definition']
                                 ? property['http://www.registar.kam.hr/ontologies/ont.owl/definition'][0]['@value']
                                 : 'No definition available';
-                            content.innerHTML += `
+                            table += `
                                 <tr><td>${curieValue}</td><td>${label}</td><td>${definition}</td></tr>`;
                         });
                         content.innerHTML += table + '</table>';
