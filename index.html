@@ -10,14 +10,17 @@
         body {
             font-family: 'Poppins', Arial, sans-serif;
             font-weight: 400; /* Regular weight */
+            margin: 0;
+            padding: 0;
         }
 
+        /* Menu bar styling */
         #menu-bar {
             display: flex;
-            height: 80px;
-            justify-content: flex-start;
-            align-items: center; /* Ensures logo, title, and menu are vertically centered */
-            background-color: white; /* White background for the menu bar */
+            flex-wrap: wrap; /* Ensure wrapping for smaller screens */
+            justify-content: space-between; /* Space out items for responsiveness */
+            align-items: center;
+            background-color: white; 
             padding: 10px;
             font-size: 12px;
             border-bottom: 1px solid #333; /* Dark gray thin line at the bottom */
@@ -26,23 +29,24 @@
         .logo {
             height: 30px; /* Set the height of the logo image */
             width: auto; /* Ensure the logo maintains its aspect ratio */
-            display: inline-block;
-            margin-right: 15px; /* Space between the logo and the title */
         }
 
         #menu-bar h1 {
-            margin-right: 200px; /* Increased space between the title and menu items */
+            margin: 0;
             color: #333; /* Dark gray color for the title */
-            font-size: 14px; /* Title font size */
-            margin: 0; /* Remove default margin to align with image and menu */
+            font-size: 14px;
+            padding: 10px;
         }
 
+        /* Menu items style */
         #menu-bar > div {
-            position: relative; /* Make parent relative to dropdown */
-            margin-right: 30px; /* Increased space between the menu items */
-            color: #333; /* Dark gray color for the menu items */
-            font-size: 14px; /* Smaller font size for menu items */
+            position: relative;
+            margin-right: 10px;
+            margin-bottom: 10px; /* Allow space between items on smaller screens */
+            color: #333;
+            font-size: 14px;
             cursor: pointer;
+            display: inline-block;
         }
 
         #menu-bar > div:hover {
@@ -52,8 +56,8 @@
         .dropdown {
             display: none;
             position: absolute;
-            top: calc(100% + 1px); /* Position the dropdown 2px below the menu item */
-            left: 0; /* Align dropdown with the left edge of the parent */
+            top: calc(100% + 1px); /* Position the dropdown just below the menu item */
+            left: 0;
             background-color: #f9f9f9;
             min-width: 160px;
             border: 1px solid #ddd;
@@ -72,16 +76,16 @@
         }
 
         #menu-bar > div:hover .dropdown {
-            display: block; /* Display dropdown when parent is hovered */
+            display: block;
         }
 
         #content {
             margin-top: 20px;
             padding: 20px;
             font-family: 'Poppins', Arial, sans-serif;
-            font-weight: 400; /* Regular weight for content */
-            font-size: 12px; /* Adjust content font size */
-            color: #333; /* Content text color */
+            font-weight: 400; 
+            font-size: 12px;
+            color: #333;
         }
 
         /* Style for the table of properties */
@@ -89,6 +93,7 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            table-layout: fixed; /* For responsiveness */
         }
 
         table, th, td {
@@ -98,17 +103,38 @@
         th, td {
             padding: 8px;
             text-align: left;
+            word-wrap: break-word; /* Prevent overflowing content */
         }
 
         th {
             background-color: #f2f2f2;
         }
 
-        /* Style for the dynamically added title */
-        .dynamic-title {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 15px;
+        /* Responsive adjustments using media queries */
+        @media (max-width: 600px) {
+            #menu-bar {
+                flex-direction: column; /* Stack items vertically */
+                align-items: flex-start;
+            }
+
+            #menu-bar h1 {
+                font-size: 16px; /* Adjust font size for smaller screens */
+            }
+
+            #menu-bar > div {
+                font-size: 12px; /* Smaller font size for menu items */
+                margin-right: 0; /* Remove right margin on small screens */
+                margin-bottom: 5px;
+            }
+
+            #content {
+                font-size: 14px; /* Increase content size for better readability */
+                padding: 10px;
+            }
+
+            table, th, td {
+                font-size: 12px; /* Adjust table font size */
+            }
         }
     </style>
 </head>
@@ -116,7 +142,7 @@
 
 <div id="menu-bar">
     <img src="kam.png" alt="KAM Logo" class="logo">
-    <h1>Registar &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+    <h1>Registar</h1>
     <div>
         KLASE
         <div class="dropdown" id="klase-dropdown"></div>
@@ -214,7 +240,7 @@
             }
         });
 
-        // Restore Svojstva behavior to show class properties in table with title
+        // Svojstva behavior restored to show class properties in table with title
         Object.keys(data).forEach(key => {
             const element = data[key];
 
