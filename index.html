@@ -84,17 +84,17 @@
 
             const definitions = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'] || [];
             if (definitions.length > 0) {
-                definitions.forEach(def => content.innerHTML += `<p>Definition: ${def['@value']}</p>`);
+                definitions.forEach(def => content.innerHTML += `<p>Definicija: ${def['@value']}</p>`);
             }
 
             const domains = ontologyClass['http://www.w3.org/2000/01/rdf-schema#domain'] || [];
             if (domains.length > 0) {
-                domains.forEach(domain => content.innerHTML += `<p>Domain: ${domain['@id']}</p>`);
+                domains.forEach(domain => content.innerHTML += `<p>Domena: ${domain['@id']}</p>`);
             }
 
             const ranges = ontologyClass['http://www.w3.org/2000/01/rdf-schema#range'] || [];
             if (ranges.length > 0) {
-                ranges.forEach(range => content.innerHTML += `<p>Range: ${range['@id']}</p>`);
+                ranges.forEach(range => content.innerHTML += `<p>Doseg: ${range['@id']}</p>`);
             }
         }
 
