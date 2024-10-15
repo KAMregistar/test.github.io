@@ -7,63 +7,75 @@
     <style>
         body { font-family: Arial, sans-serif; }
 
-        /* Updated spacing between the KAM Registar title and the menu */
-        #menu-bar { 
-            display: flex; 
-            justify-content: flex-start;
-			align-items: center;			
-            background-color: #333; 
-            padding: 10px; 
-        }
-        #menu-bar > div { 
-            position: relative; 
-            margin-right: 20px; 
-            color: white; 
-            cursor: pointer; 
-        }
-        #menu-bar > div:hover { 
-            background-color: #555; 
-        }
-		.logo {
-			height: 30px;
-			vertical-align: middle; 
-			display: inline-block;
-			margin-right: 20px; /* Add space between the logo and the title */
+ /* Style for the logo, title, and menu */
+		#menu-bar {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center; /* Ensures logo, title, and menu are vertically centered */
+			background-color: #333;
+			padding: 10px;
 		}
-        #menu-bar h1 {
+
+		.logo {
+			display: inline-block;
+			margin-right: 15px; /* Space between the logo and the title */
+		}
+
+		#menu-bar h1 {
 			margin-right: 50px; /* Reduced space between title and menu */
 			color: white;
 			font-size: 18px; /* Reduced font size to fit inline */
 			margin: 0; /* Remove default margin to align with image and menu */
 		}
 
-        /* Dropdown menu styling */
-        .dropdown { 
-            display: none; 
-            position: absolute; 
-            top: 40px; 
-            background-color: #9f9f9f; 
-            min-width: 160px; 
-            border: 1px solid #ddd; 
-            z-index: 1; 
-        }
-        .dropdown div { 
-            padding: 10px; 
-            color: black; 
-            cursor: pointer; 
-            border-bottom: 1px solid #ccc; 
-        }
-        .dropdown div:hover { 
-            background-color: #f1f1f1; 
-        }
-        #menu-bar > div:hover .dropdown { 
-            display: block; 
-        }
+		#menu-bar > div {
+			position: relative; /* Make parent relative to dropdown */
+			margin-right: 20px;
+			color: white;
+			cursor: pointer;
+		}
 
-        #content { 
-            margin-top: 0px; 
-            padding: 20px; 
-        }
+		#menu-bar > div:hover {
+			background-color: #555;
+		}
+
+		/* Dropdown menu styling */
+		.dropdown {
+			display: none;
+			position: absolute;
+			top: 100%; /* Position the dropdown directly below the menu item */
+			left: 0; /* Align dropdown with left edge of parent */
+			background-color: #9f9f9f;
+			min-width: 160px;
+			border: 1px solid #ddd;
+			z-index: 1;
+		}
+
+		.dropdown div {
+			padding: 10px;
+			color: black;
+			cursor: pointer;
+			border-bottom: 1px solid #ccc;
+		}
+
+		.dropdown div:hover {
+			background-color: #f1f1f1;
+		}
+
+		#menu-bar > div:hover .dropdown {
+			display: block; /* Display dropdown when parent is hovered */
+		}
+
+		/* Ensure dropdown remains visible when moving mouse between menu item and dropdown */
+		#menu-bar > div {
+			position: relative; /* Ensure the dropdown stays connected to its parent */
+		}
+
+		#content {
+			margin-top: 0px;
+			padding: 20px;
+		}
+
     </style>
 </head>
 <body>
