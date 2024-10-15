@@ -103,6 +103,13 @@
         th {
             background-color: #f2f2f2;
         }
+
+        /* Style for the dynamically added title */
+        .dynamic-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
@@ -150,13 +157,19 @@
         function createDropdownItem(element, label, dropdownMenu, clickCallback) {
             const item = document.createElement('div');
             item.textContent = label;  // Use label for dropdown item
-            item.onclick = () => clickCallback(element);  // Execute callback on click
+            item.onclick = () => clickCallback(label, element);  // Execute callback on click
             dropdownMenu.appendChild(item);
         }
 
-        // Function to display properties in a table for a given class
-        function displayClassPropertiesByDomain(classId) {
+        // Function to display properties in a table for a given class (Svojstva)
+        function displayClassPropertiesByDomain(label, classId) {
             content.innerHTML = '';  // Clear the previous content
+
+            // Add title above content when Svojstva is clicked
+            const titleElement = document.createElement('div');
+            titleElement.className = 'dynamic-title';
+            titleElement.textContent = label; // The clicked menu item label (title)
+            content.appendChild(titleElement);
 
             // Create table structure
             const table = document.createElement('table');
@@ -174,7 +187,7 @@
             });
 
             if (properties.length === 0) {
-                content.innerHTML = '<p>No properties found for this class.</p>';
+                content.innerHTML += '<p>No properties found for this class.</p>';
             } else {
                 properties.forEach(property => {
                     const id = property['@id'] || 'Unknown ID';
@@ -196,7 +209,7 @@
             }
         }
 
-        // Function to display class details (including CURIE)
+        // Function to display class details (Klase)
         function displayClassDetails(ontologyClass) {
             content.innerHTML = '';  // Clear the previous content
 
@@ -221,7 +234,7 @@
             }
         }
 
-        // Populate the "Klase" dropdown with class details
+        // Populate the "Klase" dropdown with class details (unchanged)
         Object.keys(data).forEach(key => {
             const element = data[key];
 
@@ -243,7 +256,7 @@
 
             // Add items to "Svojstva" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayClassPropertiesByDomain(element['@id']));
+                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayClassPropertiesByDomain(dropdownLabel, element['@id']));
             }
         });
     })
