@@ -68,7 +68,7 @@
         .dropdown {
             display: none;
             position: absolute;
-            top: calc(100% + 2px); /* Position the dropdown 2px below the menu item */
+            top: calc(100% + 1px); /* Position the dropdown 2px below the menu item */
             left: 0; /* Align dropdown with the left edge of the parent */
             background-color: #f9f9f9;
             min-width: 160px;
@@ -95,10 +95,14 @@
         #menu-bar > div {
             position: relative; /* Ensure the dropdown stays connected to its parent */
         }
+		
+		.menu-items > div:hover .dropdown {
+			display: block; /* Display dropdown when parent is hovered */
+		}
 
         #content {
             margin-top: 10px;
-			font-size:10px;
+			font-size:12px;
 			font-weight: 400; 
 			color: #333;
             padding: 50px;
