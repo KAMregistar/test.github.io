@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KAM Ontology Viewer</title>
     <style>
-        #menu { float: left; width: 20%; }
-        #content { float: left; width: 75%; }
+        #menu { float: left; width: 20%; border-right: 1px solid #ccc; padding: 10px; }
+        #content { float: left; width: 75%; padding: 10px; }
         .item { cursor: pointer; padding: 5px; border-bottom: 1px solid #ccc; }
         .item:hover { background-color: #f0f0f0; }
     </style>
 </head>
 <body>
 
-<div id="menu"></div>
-<div id="content"></div>
+<div id="menu"><h2>Classes</h2></div>
+<div id="content"><h2>Details</h2></div>
 
 <script>
-    // Fetch JSON-LD data with error handling
+    // Fetch JSON-LD data and generate the menu
     fetch('KAMOntologija_v6.jsonld')
     .then(response => {
         if (!response.ok) {
@@ -29,39 +29,38 @@
         const menu = document.getElementById('menu');
         const content = document.getElementById('content');
 
-        // Extract Classes
-        const classes = data['@graph'].filter(item => item['@id'].startsWith('http://www.registar.kam.hr/Elements/c/'));
-        
-        // Extract Object Properties
-        const properties = data['@graph'].filter(item => item['@type'] === '#ObjectProperty');
-
-        // Add classes to the menu
-        classes.forEach(cls => {
+        // Create a function to render a menu item for each JSON-LD element
+        function createMenuItem(element, label) {
             const item = document.createElement('div');
             item.classList.add('item');
-            const classID = cls['@id'].split('/').pop();  // Extract class identifier (e.g., C10001)
-            item.textContent = classID;
-            item.onclick = () => displayDetails(cls, properties);
+            item.textContent = label;  // Use the label passed in
+            item.onclick = () => displayDetails(element);  // Display details on click
             menu.appendChild(item);
-        });
+        }
 
-        // Display class details and associated properties
-        function displayDetails(cls, properties) {
-            content.innerHTML = `<h2>${cls['@id'].split('/').pop()}</h2>`;
-            
-            const relatedProperties = properties.filter(prop => prop['@value'] === cls['@id']);
-            if (relatedProperties.length > 0) {
-                content.innerHTML += '<h3>Related Properties:</h3><ul>';
-                relatedProperties.forEach(prop => {
-                    content.innerHTML += `<li>${prop['@value']}</li>`;
-                });
-                content.innerHTML += '</ul>';
-            } else {
-                content.innerHTML += '<p>No related properties found.</p>';
-            }
+        // Display details of a selected element
+        function displayDetails(element) {
+            content.innerHTML = `<h2>${element['@id'] || 'Unknown ID'}</h2>`;
+            content.innerHTML += `<pre>${JSON.stringify(element, null, 2)}</pre>`;
+        }
+
+        // Iterate through the JSON-LD data and add menu items based on structure
+        // Assume there are some classes or elements to show, adjust based on actual structure
+        if (Array.isArray(data['@graph'])) {
+            data['@graph'].forEach((element, index) => {
+                const label = element['@id'] ? element['@id'].split('/').pop() : `Element ${index + 1}`;
+                createMenuItem(element, label);
+            });
+        } else {
+            // Fallback for cases where @graph is not present
+            Object.keys(data).forEach((key) => {
+                const label = key;
+                createMenuItem(data[key], label);
+            });
         }
     })
     .catch(error => {
+        console.error('Error:', error);
         document.getElementById('content').textContent = 'Error loading data: ' + error.message;
     });
 </script>
