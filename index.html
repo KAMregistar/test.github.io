@@ -6,7 +6,7 @@
     <title>KAM Ontology Viewer</title>
     <style>
         body { font-family: Arial, sans-serif; }
-        
+
         /* Updated spacing between the KAM Registar title and the menu */
         #menu-bar { 
             display: flex; 
@@ -55,21 +55,6 @@
             margin-top: 0px; 
             padding: 20px; 
         }
-        
-        /* Style for h2 heading and added margin for the image */
-        h2 {
-            font-size: 15px;
-            color: white;
-            margin-left: 10px; /* Adds space between the image and the heading */
-        }
-
-        /* Style for the image above the h2 */
-        .header-image {
-            width: 50px; /* Adjust size as needed */
-            height: auto;
-            display: inline-block;
-            vertical-align: middle;
-        }
     </style>
 </head>
 <body>
@@ -93,8 +78,6 @@
 </div>
 
 <div id="content">
-    <!-- Added the image before the h2 title -->
-    <img src="kam.jpg" alt="KAM Logo" class="header-image">
     <p>O registru</p>
 	<p>Identifikacija i opis građe koja se prikuplja, pohranjuje, obrađuje, štiti, istražuje, predstavlja i stavlja na raspolaganje korisnicima u knjižnicama, arhivima i muzejima Republike Hrvatske kao samostalnim ustanovama ili ustrojbenim jedinicama unutar ustanovâ, tvrtki i drugih pravnih osoba.</p>
 	<p>Inačica: v2.0</p>
@@ -113,6 +96,9 @@
         const content = document.getElementById('content');
         const klaseDropdown = document.getElementById('klase-dropdown');
         const svojstvaDropdown = document.getElementById('svojstva-dropdown');
+
+        // Logging for troubleshooting
+        console.log('Data fetched successfully:', data);
 
         // Helper function to create a dropdown menu item
         function createDropdownItem(element, label, dropdownMenu, clickCallback) {
@@ -148,12 +134,12 @@
 
             const domains = ontologyClass['http://www.w3.org/2000/01/rdf-schema#domain'] || [];
             if (domains.length > 0) {
-                domains.forEach(domain => content.innerHTML += `<p>Domena: ${domain['@id']}</p>`;
+                domains.forEach(domain => content.innerHTML += `<p>Domena: ${domain['@id']}</p>`);
             }
 
             const ranges = ontologyClass['http://www.w3.org/2000/01/rdf-schema#range'] || [];
             if (ranges.length > 0) {
-                ranges.forEach(range => content.innerHTML += `<p>Doseg: ${range['@id']}</p>`;
+                ranges.forEach(range => content.innerHTML += `<p>Doseg: ${range['@id']}</p>`);
             }
 
             // Extract and display the CURIE value
@@ -193,6 +179,8 @@
             const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
             const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
 
+            console.log(`Adding class to Klase dropdown: ${dropdownLabel}`);
+
             // Add items to "Klase" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
                 createDropdownItem(element, dropdownLabel, klaseDropdown, () => displayClassDetails(element));
@@ -205,6 +193,8 @@
 
             const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
             const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
+
+            console.log(`Adding class to Svojstva dropdown: ${dropdownLabel}`);
 
             // Add items to "Svojstva" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
