@@ -154,7 +154,12 @@
             dropdownMenu.appendChild(item);
         }
 
-        // Function to display properties in a table for a given class
+        // Function to extract CURIE from "@value"
+        function extractCurie(value) {
+            return value ? value : 'Unknown CURIE';
+        }
+
+        // Function to display properties in a table for a given class, using CURIE instead of ID
         function displayClassPropertiesByDomain(classId) {
             content.innerHTML = '';  // Clear the previous content
 
@@ -162,7 +167,7 @@
             const table = document.createElement('table');
             const tableHeader = `
                 <tr>
-                    <th>Property ID</th>
+                    <th>CURIE</th>
                     <th>Label</th>
                     <th>Definition</th>
                 </tr>`;
@@ -177,7 +182,9 @@
                 content.innerHTML = '<p>No properties found for this class.</p>';
             } else {
                 properties.forEach(property => {
-                    const id = property['@id'] || 'Unknown ID';
+                    const idValues = property['http://www.registar.kam.hr/ontologies/ont.owl/ID'] || [];
+                    const curieValue = idValues.length > 0 ? idValues[0]['@value'] : 'Unknown CURIE';
+
                     const labels = property['http://www.w3.org/2000/01/rdf-schema#label'];
                     const propertyLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : 'No Label';
                     const definitions = property['http://www.registar.kam.hr/ontologies/ont.owl/definition'];
@@ -185,7 +192,7 @@
 
                     const tableRow = `
                         <tr>
-                            <td>${id}</td>
+                            <td>${curieValue}</td>
                             <td>${propertyLabel}</td>
                             <td>${propertyDefinition}</td>
                         </tr>`;
@@ -218,6 +225,13 @@
             const definitions = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'] || [];
             if (definitions.length > 0) {
                 definitions.forEach(def => content.innerHTML += `<p>Definicija: ${def['@value']}</p>`);
+            }
+
+            // Extract and display the CURIE value
+            const idValues = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID'] || [];
+            if (idValues.length > 0) {
+                const curieValue = idValues[0]['@value'];
+                content.innerHTML += `<p>CURIE: ${curieValue}</p>`; // Add the CURIE row
             }
         }
 
