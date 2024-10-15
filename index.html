@@ -7,7 +7,7 @@
     <!-- Load Poppins Regular and Semi-Bold -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
- body { 
+        body { 
     font-family: 'Poppins', Arial, sans-serif;
     font-weight: 400; /* Regular weight for body content */
     margin: 0; /* Ensure no default body margin */
@@ -31,6 +31,7 @@
     display: flex;
     justify-content: flex-end; /* Align menu items to the right */
     align-items: center;
+    margin-left: auto; /* Ensures the menu stays on the right side */
 }
 
 .menu-items > div {
@@ -38,7 +39,7 @@
     color: #333; /* Dark gray color for the menu items */
     font-size: 14px; /* Smaller font size for menu items */
     cursor: pointer;
-    position: relative; /* Make this the positioning context for the dropdown */
+    position: relative; /* This ensures the dropdown is aligned to this parent */
 }
 
 .logo {
@@ -67,7 +68,7 @@
     display: none;
     position: absolute;
     top: calc(100% + 1px); /* Position the dropdown just below the menu item */
-    right: 0; /* Align the dropdown to the right edge of its parent */
+    left: 0; /* Align dropdown with the left edge of the parent */
     background-color: #f9f9f9;
     min-width: 160px;
     border: 1px solid #ddd;
@@ -85,8 +86,9 @@
     background-color: #f1f1f1; /* Light background color for hover effect */
 }
 
+/* Display the dropdown on hover */
 .menu-items > div:hover .dropdown {
-    display: block; /* Display dropdown when parent is hovered */
+    display: block; /* Show the dropdown when the parent is hovered */
 }
 
 /* Ensure the content starts under the navbar and is aligned to the left */
@@ -99,7 +101,8 @@
     text-align: left; /* Align text to the left */
     position: relative;
 }
-</style>
+
+    </style>
 </head>
 <body>
 
@@ -110,11 +113,17 @@
     <div class="menu-items">
         <div>
             KLASE
-            <div class="dropdown" id="klase-dropdown"></div>
+            <div class="dropdown" id="klase-dropdown">
+                <div>Item 1</div>
+                <div>Item 2</div>
+            </div>
         </div>
         <div>
             SVOJSTVA
-            <div class="dropdown" id="svojstva-dropdown"></div>
+            <div class="dropdown" id="svojstva-dropdown">
+                <div>Item A</div>
+                <div>Item B</div>
+            </div>
         </div>
         <div>
             PREFIKSI
