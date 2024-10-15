@@ -1,4 +1,5 @@
-[ {
+{
+"@graph": [ {
   "@id" : "_:genid1",
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Mjesto je dio fizičkog prostora na Zemlji ili izvan nje. Mitska, legendarna, izmišljena i fikcionalizirana područja na Zemlji ili izvan nje ne smatraju se mjestima."
