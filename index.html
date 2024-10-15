@@ -10,7 +10,8 @@
         /* Updated spacing between the KAM Registar title and the menu */
         #menu-bar { 
             display: flex; 
-            justify-content: flex-start; 
+            justify-content: flex-start;
+			align-items: center;			
             background-color: #333; 
             padding: 10px; 
         }
@@ -29,10 +30,12 @@
 			display: inline-block;
 			margin-right: 20px; /* Add space between the logo and the title */
 		}
-        #menu-bar h1 { 
-            margin-right: 150px; /* Increased space between the title and the menu */
-            color: white; 
-        }
+        #menu-bar h1 {
+			margin-right: 50px; /* Reduced space between title and menu */
+			color: white;
+			font-size: 18px; /* Reduced font size to fit inline */
+			margin: 0; /* Remove default margin to align with image and menu */
+		}
 
         /* Dropdown menu styling */
         .dropdown { 
@@ -59,7 +62,7 @@
 
         #content { 
             margin-top: 0px; 
-            //padding: 20px; 
+            padding: 20px; 
         }
     </style>
 </head>
