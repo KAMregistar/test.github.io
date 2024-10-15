@@ -103,13 +103,6 @@
         th {
             background-color: #f2f2f2;
         }
-
-        /* Style for the dynamically added title */
-        .dynamic-title {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
     </style>
 </head>
 <body>
@@ -157,19 +150,13 @@
         function createDropdownItem(element, label, dropdownMenu, clickCallback) {
             const item = document.createElement('div');
             item.textContent = label;  // Use label for dropdown item
-            item.onclick = () => clickCallback(label, element);  // Execute callback on click
+            item.onclick = () => clickCallback(element);  // Execute callback on click
             dropdownMenu.appendChild(item);
         }
 
         // Function to display properties in a table for a given class
-        function displayClassPropertiesByDomain(label, classId) {
+        function displayClassPropertiesByDomain(classId) {
             content.innerHTML = '';  // Clear the previous content
-
-            // Add title above content
-            const titleElement = document.createElement('div');
-            titleElement.className = 'dynamic-title';
-            titleElement.textContent = label; // The clicked menu item label
-            content.appendChild(titleElement);
 
             // Create table structure
             const table = document.createElement('table');
@@ -187,7 +174,7 @@
             });
 
             if (properties.length === 0) {
-                content.innerHTML += '<p>No properties found for this class.</p>';
+                content.innerHTML = '<p>No properties found for this class.</p>';
             } else {
                 properties.forEach(property => {
                     const id = property['@id'] || 'Unknown ID';
@@ -243,7 +230,7 @@
 
             // Add items to "Klase" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                createDropdownItem(element, dropdownLabel, klaseDropdown, displayClassDetails);
+                createDropdownItem(element, dropdownLabel, klaseDropdown, () => displayClassDetails(element));
             }
         });
 
@@ -256,7 +243,7 @@
 
             // Add items to "Svojstva" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                createDropdownItem(element, dropdownLabel, svojstvaDropdown, displayClassPropertiesByDomain);
+                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayClassPropertiesByDomain(element['@id']));
             }
         });
     })
