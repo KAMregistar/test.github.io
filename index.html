@@ -211,7 +211,52 @@
             content.appendChild(table);
         }
 
-        // Function to display all prefixes in a table
+        // Function to display class properties in Svojstva menu
+        function displayClassPropertiesByDomain(classId, title) {
+            content.innerHTML = `<h2>${title}</h2>`;  // Display the title at the top
+
+            // Create table structure for displaying properties
+            const table = document.createElement('table');
+            const tableHeader = `
+                <tr>
+                    <th>CURIE</th>
+                    <th>Label</th>
+                    <th>Definition</th>
+                </tr>`;
+            table.innerHTML = tableHeader;
+
+            const properties = Object.values(data).filter(item => {
+                const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
+                return domains && domains.some(domain => domain['@id'] === classId);
+            });
+
+            if (properties.length === 0) {
+                content.innerHTML += '<p>No properties found for this class.</p>';
+            } else {
+                properties.forEach(property => {
+                    const idValues = property['http://www.registar.kam.hr/ontologies/ont.owl/ID'] || [];
+                    const curie = idValues.length > 0 ? idValues[0]['@value'] : 'Unknown CURIE';
+
+                    const labels = property['http://www.w3.org/2000/01/rdf-schema#label'];
+                    const propertyLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : 'No Label';
+
+                    const definitions = property['http://www.registar.kam.hr/ontologies/ont.owl/definition'];
+                    const propertyDefinition = definitions && definitions[0] && definitions[0]['@value'] ? definitions[0]['@value'] : 'No Definition';
+
+                    const tableRow = `
+                        <tr>
+                            <td>${curie}</td>
+                            <td>${propertyLabel}</td>
+                            <td>${propertyDefinition}</td>
+                        </tr>`;
+                    table.innerHTML += tableRow;
+                });
+
+                content.appendChild(table);  // Append the table to the content
+            }
+        }
+
+        // Function to display all prefixes in a table (only for classes)
         function displayPrefixes() {
             content.innerHTML = '';  // Clear content
 
@@ -220,34 +265,42 @@
             const tableHeader = `
                 <tr>
                     <th>Prefix</th>
-                    <th>Class/Property Name</th>
+                    <th>Class Name</th>
                     <th>Namespace</th>
                 </tr>`;
             table.innerHTML = tableHeader;
 
-            // Iterate through the data to extract CURIE and other details
+            const uniquePrefixes = new Set();
+
+            // Iterate through the data to extract CURIE and other details for classes only
             Object.keys(data).forEach(key => {
                 const element = data[key];
 
-                const id = element['@id'] || 'Unknown ID';
-                const namespace = id.substring(0, id.lastIndexOf('/') + 1); // Namespace is everything before the last "/"
-                const idValues = element['http://www.registar.kam.hr/ontologies/ont.owl/ID'] || [];
-                const curie = idValues.length > 0 ? idValues[0]['@value'] : null;
+                if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+                    const id = element['@id'] || 'Unknown ID';
+                    const namespace = id.substring(0, id.lastIndexOf('/') + 1); // Namespace is everything before the last "/"
+                    const idValues = element['http://www.registar.kam.hr/ontologies/ont.owl/ID'] || [];
+                    const curie = idValues.length > 0 ? idValues[0]['@value'] : null;
 
-                // Extract the prefix from the CURIE (before the colon)
-                if (curie) {
-                    const prefix = curie.split(':')[0];
-                    const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
-                    const className = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : 'No Label';
+                    // Extract the prefix from the CURIE (before the colon)
+                    if (curie) {
+                        const prefix = curie.split(':')[0];
+                        if (!uniquePrefixes.has(prefix)) {
+                            uniquePrefixes.add(prefix);
 
-                    // Append row to the table
-                    const tableRow = `
-                        <tr>
-                            <td>${prefix}</td>
-                            <td>${className}</td>
-                            <td>${namespace}</td>
-                        </tr>`;
-                    table.innerHTML += tableRow;
+                            const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
+                            const className = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : 'No Label';
+
+                            // Append row to the table
+                            const tableRow = `
+                                <tr>
+                                    <td>${prefix}</td>
+                                    <td>${className}</td>
+                                    <td>${namespace}</td>
+                                </tr>`;
+                            table.innerHTML += tableRow;
+                        }
+                    }
                 }
             });
 
@@ -264,6 +317,19 @@
             // Add items to "Klase" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
                 createDropdownItem(element, dropdownLabel, klaseDropdown, () => displayClassDetails(element));
+            }
+        });
+
+        // Populate "Svojstva" dropdown with class names (shows properties on click)
+        Object.keys(data).forEach(key => {
+            const element = data[key];
+
+            const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
+            const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
+
+            // Add items to "Svojstva" dropdown for classes
+            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayClassPropertiesByDomain(element['@id'], dropdownLabel));
             }
         });
 
