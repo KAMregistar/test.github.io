@@ -84,40 +84,24 @@
 
             const definitions = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'] || [];
             if (definitions.length > 0) {
-                definitions.forEach(def => content.innerHTML += `<p>Definicija: ${def['@value']}</p>`);
+                definitions.forEach(def => content.innerHTML += `<p>Definition: ${def['@value']}</p>`);
             }
 
             const domains = ontologyClass['http://www.w3.org/2000/01/rdf-schema#domain'] || [];
             if (domains.length > 0) {
-                domains.forEach(domain => content.innerHTML += `<p>Domena: ${domain['@id']}</p>`);
+                domains.forEach(domain => content.innerHTML += `<p>Domain: ${domain['@id']}</p>`);
             }
 
             const ranges = ontologyClass['http://www.w3.org/2000/01/rdf-schema#range'] || [];
             if (ranges.length > 0) {
-                ranges.forEach(range => content.innerHTML += `<p>Doseg: ${range['@id']}</p>`);
+                ranges.forEach(range => content.innerHTML += `<p>Range: ${range['@id']}</p>`);
             }
-        }
 
-        // Function to display properties related to a selected class by "domain"
-        function displayClassPropertiesByDomain(classId) {
-            content.innerHTML = '';  // Clear the previous content
-
-            const properties = Object.values(data).filter(item => {
-                const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
-                return domains && domains.some(domain => domain['@id'] === classId);
-            });
-
-            if (properties.length === 0) {
-                content.innerHTML = '<p>No properties found for this class.</p>';
-            } else {
-                properties.forEach(property => {
-                    const labels = property['http://www.w3.org/2000/01/rdf-schema#label'];
-                    const propertyLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : property['@id'];
-                    const propertyDiv = document.createElement('div');
-                    propertyDiv.textContent = propertyLabel;
-                    propertyDiv.onclick = () => displayClassDetails(property);
-                    content.appendChild(propertyDiv);
-                });
+            // Extract and display the CURIE value
+            const idValues = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID'] || [];
+            if (idValues.length > 0) {
+                const curieValue = idValues[0]['@value'];
+                content.innerHTML += `<p><strong>CURIE:</strong> ${curieValue}</p>`;
             }
         }
 
@@ -134,16 +118,16 @@
             }
         });
 
-        // Populate "Svojstva" dropdown with class names (instead of properties)
+        // Populate "Svojstva" dropdown with class names (same as original behavior)
         Object.keys(data).forEach(key => {
             const element = data[key];
 
             const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
             const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
 
-            // Add items to "Svojstva" dropdown for classes (same as original behavior)
+            // Add items to "Svojstva" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayClassPropertiesByDomain(element['@id']));
+                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayClassDetails(element));
             }
         });
     })
