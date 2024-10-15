@@ -103,6 +103,26 @@
         th {
             background-color: #f2f2f2;
         }
+
+        /* Style for the table in Klase */
+        .klase-table {
+            width: 50%; /* Set table width to 50% of the screen */
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-spacing: 0; /* Remove cell spacing */
+        }
+
+        .klase-table td {
+            border-bottom: 1px solid #333; /* Only bottom border is visible */
+            border-top: 0; /* Hide top border */
+            border-left: 0; /* Hide left border */
+            border-right: 0; /* Hide right border */
+            padding: 8px;
+        }
+
+        .klase-table td:first-child {
+            font-weight: bold; /* Bold for the first column */
+        }
     </style>
 </head>
 <body>
@@ -150,7 +170,7 @@
         function createDropdownItem(element, label, dropdownMenu, clickCallback) {
             const item = document.createElement('div');
             item.textContent = label;  // Use label for dropdown item
-            item.onclick = () => clickCallback(label, element);  // Execute callback on click
+            item.onclick = () => clickCallback(element);  // Execute callback on click
             dropdownMenu.appendChild(item);
         }
 
@@ -159,13 +179,40 @@
             return value ? value : 'Unknown CURIE';
         }
 
-        // Function to display properties in a table for a given class, using CURIE instead of ID
-        function displayClassPropertiesByDomain(title, classId) {
+        // Function to display class details in a table for Klase menu
+        function displayClassDetails(ontologyClass) {
             content.innerHTML = '';  // Clear the previous content
 
-            // Add the title above the table
-            const titleElement = `<h2>${title}</h2>`;
-            content.innerHTML += titleElement;
+            const title = ontologyClass['http://www.w3.org/2000/01/rdf-schema#label']
+                ? ontologyClass['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+                : 'Unknown Class';
+
+            const id = ontologyClass['@id'] || 'Unknown ID';
+            const namespace = id.substring(0, id.lastIndexOf('/') + 1);  // Everything before the last "/"
+            const identifier = id.split('/').pop();  // The last part after the "/"
+            const types = ontologyClass['@type'] || [];
+            const definitions = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'] || [];
+            const idValues = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID'] || [];
+            const curieValue = idValues.length > 0 ? idValues[0]['@value'] : 'Unknown CURIE';
+
+            // Create a table with only the bottom line visible
+            const table = document.createElement('table');
+            table.className = 'klase-table';
+
+            table.innerHTML = `
+                <tr><td>Title</td><td>${title}</td></tr>
+                <tr><td>ID</td><td>${identifier}</td></tr>
+                <tr><td>Namespace</td><td>${namespace}</td></tr>
+                <tr><td>Element</td><td>${types.map(type => type.split('#').pop()).join(', ')}</td></tr>
+                <tr><td>Definition</td><td>${definitions.length > 0 ? definitions[0]['@value'] : 'No Definition'}</td></tr>
+                <tr><td>CURIE</td><td>${curieValue}</td></tr>`;
+
+            content.appendChild(table);
+        }
+
+        // Function to display properties in a table for Svojstva menu
+        function displayClassPropertiesByDomain(classId) {
+            content.innerHTML = '';  // Clear the previous content
 
             // Create table structure
             const table = document.createElement('table');
@@ -207,38 +254,6 @@
             }
         }
 
-        // Function to display class details (including CURIE)
-        function displayClassDetails(ontologyClass) {
-            content.innerHTML = '';  // Clear the previous content
-
-            const title = ontologyClass['http://www.w3.org/2000/01/rdf-schema#label']
-                ? ontologyClass['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
-                : 'Unknown Class';
-
-            content.innerHTML += `<h2>${title}</h2>`;
-
-            const id = ontologyClass['@id'] || 'Unknown ID';
-            const namespace = id.substring(0, id.lastIndexOf('/') + 1);  // Everything before the last "/"
-            const identifier = id.split('/').pop();  // The last part after the "/"
-            content.innerHTML += `<p>ID: ${identifier}</p>`;
-            content.innerHTML += `<p>Imenski prostor: ${namespace}</p>`;
-
-            const types = ontologyClass['@type'] || [];
-            content.innerHTML += `<p>Element: ${types.map(type => type.split('#').pop()).join(', ')}</p>`;
-
-            const definitions = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'] || [];
-            if (definitions.length > 0) {
-                definitions.forEach(def => content.innerHTML += `<p>Definicija: ${def['@value']}</p>`);
-            }
-
-            // Extract and display the CURIE value
-            const idValues = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID'] || [];
-            if (idValues.length > 0) {
-                const curieValue = idValues[0]['@value'];
-                content.innerHTML += `<p>CURIE: ${curieValue}</p>`; // Add the CURIE row
-            }
-        }
-
         // Populate the "Klase" dropdown with class details
         Object.keys(data).forEach(key => {
             const element = data[key];
@@ -261,7 +276,7 @@
 
             // Add items to "Svojstva" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayClassPropertiesByDomain(dropdownLabel, element['@id']));
+                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayClassPropertiesByDomain(element['@id']));
             }
         });
     })
