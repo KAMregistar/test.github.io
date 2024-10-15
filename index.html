@@ -25,6 +25,7 @@
 		.menu-items {
 			display: flex;
 			justify-content: flex-end; /* Align menu items to the right */
+			align-items: center;
 		}
 
 		.menu-items > div {
@@ -115,7 +116,9 @@
 <div id="menu-bar">
     <img src="kam.png" alt="KAM Logo" class="logo">
     <h2>REGISTAR&nbsp;&nbsp;</h2>
-    <div>
+	<div class="flex-space"></div> <!-- This pushes menu items to the right -->
+    <div class="menu-items">
+	<div>
         KLASE
         <div class="dropdown" id="klase-dropdown"></div>
     </div>
