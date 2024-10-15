@@ -18,7 +18,7 @@
         #menu-bar {
             display: flex;
             flex-wrap: wrap; /* Ensure wrapping for smaller screens */
-            /*justify-content: space-between;*/ /* Space out items for responsiveness */
+            justify-content: space-between; /* Space out items for responsiveness */
             align-items: center;
             background-color: white; 
             padding: 10px;
@@ -240,7 +240,7 @@
             }
         });
 
-        // Svojstva behavior restored to show class properties in table with title
+        // Svojstva: Populate the dropdown with class names and display properties
         Object.keys(data).forEach(key => {
             const element = data[key];
 
