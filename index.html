@@ -9,7 +9,9 @@
     <style>
         body {
             font-family: 'Poppins', Arial, sans-serif;
-            font-weight: 200; /* Regular weight */
+            font-weight: 400; /* Regular weight */
+            margin: 0;
+            padding-bottom: 120px; /* Reserve space for footer */
         }
 
         #menu-bar {
@@ -33,7 +35,7 @@
         #menu-bar h1 {
             margin-right: 200px; /* Increased space between the title and menu items */
             color: #333; /* Dark gray color for the title */
-            font-size: 16px; /* Title font size */
+            font-size: 14px; /* Title font size */
             margin: 0; /* Remove default margin to align with image and menu */
         }
 
@@ -123,6 +125,32 @@
         .klase-table td:first-child {
             font-weight: bold; /* Bold for the first column */
         }
+
+        /* Footer table styles */
+        #footer-table {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f2f2f2;
+            border-top: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        #footer-table table {
+            width: 100%;
+            text-align: center;
+        }
+
+        #footer-table td {
+            padding: 10px;
+            vertical-align: middle;
+        }
+
+        #footer-table img {
+            height: 50px; /* Adjust the height of the logo in the footer */
+            width: auto; /* Maintain aspect ratio */
+        }
     </style>
 </head>
 <body>
@@ -150,6 +178,25 @@
     <p>O registru</p>
     <p>Identifikacija i opis građe koja se prikuplja, pohranjuje, obrađuje, štiti, istražuje, predstavlja i stavlja na raspolaganje korisnicima u knjižnicama, arhivima i muzejima Republike Hrvatske kao samostalnim ustanovama ili ustrojbenim jedinicama unutar ustanovâ, tvrtki i drugih pravnih osoba.</p>
     <p>Inačica: v2.0</p>
+</div>
+
+<!-- Footer table at the bottom of the page -->
+<div id="footer-table">
+    <table>
+        <tr>
+            <td>
+                KAM registar je licenciran prema međunarodnoj licenci Creative Commons Attribution 4.0.
+                Na temelju rada na <a href="https://www.kam.hr/pravilnik/">https://www.kam.hr/pravilnik/</a>.
+            </td>
+            <td>
+                <img src="kam.png" alt="KAM Logo">
+            </td>
+            <td>
+                Nacionalna i sveučilišna knjižnica u Zagrebu. Sva prava pridržana. <br>
+                Hrvatske bratske zajednice 4, 10000 Zagreb, Hrvatska | Tel. +385 1 616 4021
+            </td>
+        </tr>
+    </table>
 </div>
 
 <script>
@@ -190,156 +237,4 @@
 
             const id = ontologyClass['@id'] || 'Unknown ID';
             const namespace = id.substring(0, id.lastIndexOf('/') + 1);  // Everything before the last "/"
-            const identifier = id.split('/').pop();  // The last part after the "/"
-            const types = ontologyClass['@type'] || [];
-            const definitions = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'] || [];
-            const idValues = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID'] || [];
-            const curieValue = idValues.length > 0 ? idValues[0]['@value'] : 'Unknown CURIE';
-
-            // Create a table with only the bottom line visible
-            const table = document.createElement('table');
-            table.className = 'klase-table';
-
-            table.innerHTML = `
-                <tr><td>Naziv</td><td>${title}</td></tr>
-                <tr><td>ID</td><td>${identifier}</td></tr>
-                <tr><td>Imenski prostor</td><td>${namespace}</td></tr>
-                <tr><td>Element</td><td>${types.map(type => type.split('#').pop()).join(', ')}</td></tr>
-                <tr><td>Definicija</td><td>${definitions.length > 0 ? definitions[0]['@value'] : 'No Definition Available'}</td></tr>
-                <tr><td>CURIE</td><td>${curieValue}</td></tr>`;
-
-            content.appendChild(table);
-        }
-
-        // Function to display class properties in Svojstva menu
-        function displayClassPropertiesByDomain(classId, title) {
-            content.innerHTML = `<h2>${title}</h2>`;  // Display the title at the top
-
-            // Create table structure for displaying properties
-            const table = document.createElement('table');
-            const tableHeader = `
-                <tr>
-                    <th>CURIE</th>
-                    <th>Naziv</th>
-                    <th>Definicija</th>
-                </tr>`;
-            table.innerHTML = tableHeader;
-
-            const properties = Object.values(data).filter(item => {
-                const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
-                return domains && domains.some(domain => domain['@id'] === classId);
-            });
-
-            if (properties.length === 0) {
-                content.innerHTML += '<p>No properties found for this class.</p>';
-            } else {
-                properties.forEach(property => {
-                    const idValues = property['http://www.registar.kam.hr/ontologies/ont.owl/ID'] || [];
-                    const curie = idValues.length > 0 ? idValues[0]['@value'] : 'Unknown CURIE';
-
-                    const labels = property['http://www.w3.org/2000/01/rdf-schema#label'];
-                    const propertyLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : 'No Label';
-
-                    const definitions = property['http://www.registar.kam.hr/ontologies/ont.owl/definition'];
-                    const propertyDefinition = definitions && definitions[0] && definitions[0]['@value'] ? definitions[0]['@value'] : 'No Definition';
-
-                    const tableRow = `
-                        <tr>
-                            <td>${curie}</td>
-                            <td>${propertyLabel}</td>
-                            <td>${propertyDefinition}</td>
-                        </tr>`;
-                    table.innerHTML += tableRow;
-                });
-
-                content.appendChild(table);  // Append the table to the content
-            }
-        }
-
-        // Function to display all prefixes in a table (only for classes)
-        function displayPrefixes() {
-            content.innerHTML = '';  // Clear content
-
-            // Create table structure
-            const table = document.createElement('table');
-            const tableHeader = `
-                <tr>
-                    <th>Prefiks</th>
-                    <th>Naziv</th>
-                    <th>Imenski prostor</th>
-                </tr>`;
-            table.innerHTML = tableHeader;
-
-            const uniquePrefixes = new Set();
-
-            // Iterate through the data to extract CURIE and other details for classes only
-            Object.keys(data).forEach(key => {
-                const element = data[key];
-
-                if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                    const id = element['@id'] || 'Unknown ID';
-                    const namespace = id.substring(0, id.lastIndexOf('/') + 1); // Namespace is everything before the last "/"
-                    const idValues = element['http://www.registar.kam.hr/ontologies/ont.owl/ID'] || [];
-                    const curie = idValues.length > 0 ? idValues[0]['@value'] : null;
-
-                    // Extract the prefix from the CURIE (before the colon)
-                    if (curie) {
-                        const prefix = curie.split(':')[0];
-                        if (!uniquePrefixes.has(prefix)) {
-                            uniquePrefixes.add(prefix);
-
-                            const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
-                            const className = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : 'No Label';
-
-                            // Append row to the table
-                            const tableRow = `
-                                <tr>
-                                    <td>${prefix}:</td>
-                                    <td>${className}</td>
-                                    <td>${namespace}</td>
-                                </tr>`;
-                            table.innerHTML += tableRow;
-                        }
-                    }
-                }
-            });
-
-            content.appendChild(table);  // Append the table to the content
-        }
-
-        // Populate the "Klase" dropdown with class details
-        Object.keys(data).forEach(key => {
-            const element = data[key];
-
-            const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
-            const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
-
-            // Add items to "Klase" dropdown for classes
-            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                createDropdownItem(element, dropdownLabel, klaseDropdown, () => displayClassDetails(element));
-            }
-        });
-
-        // Populate "Svojstva" dropdown with class names (shows properties on click)
-        Object.keys(data).forEach(key => {
-            const element = data[key];
-
-            const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
-            const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
-
-            // Add items to "Svojstva" dropdown for classes
-            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayClassPropertiesByDomain(element['@id'], dropdownLabel));
-            }
-        });
-
-        // Display prefixes when "Prefiksi" is clicked
-        prefiksi.addEventListener('click', displayPrefixes);
-    })
-    .catch(error => {
-        console.error('Error fetching JSON-LD:', error);
-    });
-</script>
-
-</body>
-</html>
+            const identifier =
