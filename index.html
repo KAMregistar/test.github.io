@@ -210,14 +210,8 @@
         }
 
         // Function to display class details (including CURIE)
-        function displayClassDetails(label, ontologyClass) {
+        function displayClassDetails(ontologyClass) {
             content.innerHTML = '';  // Clear the previous content
-
-            // Add title above content
-            const titleElement = document.createElement('div');
-            titleElement.className = 'dynamic-title';
-            titleElement.textContent = label; // The clicked menu item label
-            content.appendChild(titleElement);
 
             const title = ontologyClass['http://www.w3.org/2000/01/rdf-schema#label']
                 ? ontologyClass['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
