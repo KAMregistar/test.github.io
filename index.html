@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ontology Viewer</title>
+    <title>KAM Ontology Viewer</title>
     <style>
         #menu { float: left; width: 20%; }
         #content { float: left; width: 75%; }
@@ -17,46 +17,43 @@
 <div id="content"></div>
 
 <script>
-    // Fetch JSON-LD file
-    fetch('kamregistar.json')
+    // Fetch JSON-LD data
+    fetch('KAMOntologija_v6.jsonld')
     .then(response => response.json())
     .then(data => {
         const menu = document.getElementById('menu');
         const content = document.getElementById('content');
+
+        // Extract Classes
+        const classes = data['@graph'].filter(item => item['@id'].startsWith('http://www.registar.kam.hr/Elements/c/'));
         
-        // Parse classes and properties
-        const classes = data['@graph'].filter(item => item['@type'] === 'rdfs:Class');
-        const properties = data['@graph'].filter(item => item['@type'] === 'rdf:Property');
-        
-        // Populate menu with classes and properties
-        const classHeader = document.createElement('h3');
-        classHeader.textContent = 'Classes';
-        menu.appendChild(classHeader);
-        
+        // Extract Object Properties
+        const properties = data['@graph'].filter(item => item['@type'] === '#ObjectProperty');
+
+        // Add classes to the menu
         classes.forEach(cls => {
             const item = document.createElement('div');
             item.classList.add('item');
-            item.textContent = cls['rdfs:label'] || cls['@id'];
-            item.onclick = () => displayDetails(cls);
+            const classID = cls['@id'].split('/').pop();  // Extract class identifier (e.g., C10001)
+            item.textContent = classID;
+            item.onclick = () => displayDetails(cls, properties);
             menu.appendChild(item);
         });
 
-        const propHeader = document.createElement('h3');
-        propHeader.textContent = 'Properties';
-        menu.appendChild(propHeader);
-
-        properties.forEach(prop => {
-            const item = document.createElement('div');
-            item.classList.add('item');
-            item.textContent = prop['rdfs:label'] || prop['@id'];
-            item.onclick = () => displayDetails(prop);
-            menu.appendChild(item);
-        });
-        
-        // Function to display details of selected class or property
-        function displayDetails(entity) {
-            content.innerHTML = `<h2>${entity['rdfs:label'] || entity['@id']}</h2>`;
-            content.innerHTML += `<p>${entity['rdfs:comment'] || 'No description available.'}</p>`;
+        // Display class details and associated properties
+        function displayDetails(cls, properties) {
+            content.innerHTML = `<h2>${cls['@id'].split('/').pop()}</h2>`;
+            
+            const relatedProperties = properties.filter(prop => prop['@value'] === cls['@id']);
+            if (relatedProperties.length > 0) {
+                content.innerHTML += '<h3>Related Properties:</h3><ul>';
+                relatedProperties.forEach(prop => {
+                    content.innerHTML += `<li>${prop['@value']}</li>`;
+                });
+                content.innerHTML += '</ul>';
+            } else {
+                content.innerHTML += '<p>No related properties found.</p>';
+            }
         }
     });
 </script>
