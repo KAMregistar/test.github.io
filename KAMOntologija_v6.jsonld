@@ -5,7 +5,7 @@
     "@value" : "Mjesto je dio fizičkog prostora na Zemlji ili izvan nje. Mitska, legendarna, izmišljena i fikcionalizirana područja na Zemlji ili izvan nje ne smatraju se mjestima."
   } ]
 }, {
-  "@id" : "Disjunktne klase",
+  "@id" : "_:genid2",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
