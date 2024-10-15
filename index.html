@@ -121,7 +121,7 @@
             }
         }
 
-        // Populate the "Klase" dropdown
+        // Populate the "Klase" dropdown with class details
         Object.keys(data).forEach(key => {
             const element = data[key];
 
@@ -134,15 +134,15 @@
             }
         });
 
-        // Populate "Svojstva" dropdown with properties
+        // Populate "Svojstva" dropdown with class names (instead of properties)
         Object.keys(data).forEach(key => {
             const element = data[key];
 
             const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
             const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
 
-            // Add items to "Svojstva" dropdown for properties
-            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#ObjectProperty')) {
+            // Add items to "Svojstva" dropdown for classes (same as original behavior)
+            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
                 createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayClassPropertiesByDomain(element['@id']));
             }
         });
