@@ -63,11 +63,11 @@
             if (Array.isArray(types)) {
                 types.forEach(type => {
                     const readableType = type.split('#').pop();  // Get the part after the last "#"
-                    content.innerHTML += `<p>Type: ${readableType}</p>`;
+                    content.innerHTML += `<p>Element: ${readableType}</p>`;
                 });
             } else {
                 const readableType = types.split('#').pop();
-                content.innerHTML += `<p>Type: ${readableType}</p>`;
+                content.innerHTML += `<p>Element: ${readableType}</p>`;
             }
 
             // Extract and display the "ID" value and prefix
@@ -75,7 +75,7 @@
             if (idValues) {
                 idValues.forEach(valueObj => {
                     if (valueObj['@value']) {
-                        content.innerHTML += `<p>ID: ${valueObj['@value']}</p>`;
+                        content.innerHTML += `<p>CURIE: ${valueObj['@value']}</p>`;
                         const prefix = valueObj['@value'].split(':')[0];  // Extract prefix (letters before the colon)
                         content.innerHTML += `<p>Prefiks: ${prefix}</p>`;
                     }
@@ -87,7 +87,7 @@
             if (definitions) {
                 definitions.forEach(defObj => {
                     if (defObj['@value']) {
-                        content.innerHTML += `<p>Definition: "${defObj['@value']}"</p>`;
+                        content.innerHTML += `<p>Definicija: "${defObj['@value']}"</p>`;
                     }
                 });
             }
@@ -97,7 +97,7 @@
             if (domains) {
                 domains.forEach(domainObj => {
                     if (domainObj['@id']) {
-                        content.innerHTML += `<p>Domain: ${domainObj['@id']}</p>`;
+                        content.innerHTML += `<p>Domena: ${domainObj['@id']}</p>`;
                     }
                 });
             }
@@ -106,7 +106,7 @@
             if (ranges) {
                 ranges.forEach(rangeObj => {
                     if (rangeObj['@id']) {
-                        content.innerHTML += `<p>Range: ${rangeObj['@id']}</p>`;
+                        content.innerHTML += `<p>Doseg: ${rangeObj['@id']}</p>`;
                     }
                 });
             }
@@ -116,7 +116,7 @@
             if (subPropertyOfs) {
                 subPropertyOfs.forEach(subPropertyOfObj => {
                     if (subPropertyOfObj['@id']) {
-                        content.innerHTML += `<p>SubPropertyOf: ${subPropertyOfObj['@id']}</p>`;
+                        content.innerHTML += `<p>Podsvojstvo: ${subPropertyOfObj['@id']}</p>`;
                     }
                 });
             }
