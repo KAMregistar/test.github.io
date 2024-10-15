@@ -34,9 +34,6 @@
   } ],
   "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
     "@language" : "hr",
-    "@value" : ""
-  }, {
-    "@language" : "hr",
     "@value" : "Entitet koji se identificira i opisuje u informacijskom sustavu knjižnice, arhiva ili muzeja."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
