@@ -220,8 +220,8 @@
             const tableHeader = `
                 <tr>
                     <th>CURIE</th>
-                    <th>Label</th>
-                    <th>Definition</th>
+                    <th>Naziv</th>
+                    <th>Definicija</th>
                 </tr>`;
             table.innerHTML = tableHeader;
 
@@ -264,9 +264,9 @@
             const table = document.createElement('table');
             const tableHeader = `
                 <tr>
-                    <th>Prefix</th>
-                    <th>Class Name</th>
-                    <th>Namespace</th>
+                    <th>Prefiks</th>
+                    <th>Naziv</th>
+                    <th>Imenski prostor</th>
                 </tr>`;
             table.innerHTML = tableHeader;
 
@@ -294,7 +294,7 @@
                             // Append row to the table
                             const tableRow = `
                                 <tr>
-                                    <td>${prefix}</td>
+                                    <td>${prefix}:</td>
                                     <td>${className}</td>
                                     <td>${namespace}</td>
                                 </tr>`;
