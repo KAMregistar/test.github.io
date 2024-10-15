@@ -203,9 +203,9 @@
             table.innerHTML = `
                 <tr><td>Title</td><td>${title}</td></tr>
                 <tr><td>ID</td><td>${identifier}</td></tr>
-                <tr><td>Namespace</td><td>${namespace}</td></tr>
+                <tr><td>Imenski prostor</td><td>${namespace}</td></tr>
                 <tr><td>Element</td><td>${types.map(type => type.split('#').pop()).join(', ')}</td></tr>
-                <tr><td>Definition</td><td>${definitions.length > 0 ? definitions[0]['@value'] : 'No Definition Available'}</td></tr>
+                <tr><td>Definicija</td><td>${definitions.length > 0 ? definitions[0]['@value'] : 'No Definition Available'}</td></tr>
                 <tr><td>CURIE</td><td>${curieValue}</td></tr>`;
 
             content.appendChild(table);
