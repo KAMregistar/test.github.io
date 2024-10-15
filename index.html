@@ -162,9 +162,9 @@
             const table = document.createElement('table');
             const tableHeader = `
                 <tr>
-                    <th>Property ID</th>
-                    <th>Label</th>
-                    <th>Definition</th>
+                    <th>ID</th>
+                    <th>Naziv</th>
+                    <th>Definicija</th>
                 </tr>`;
             table.innerHTML = tableHeader;
 
@@ -177,7 +177,7 @@
                 content.innerHTML = '<p>No properties found for this class.</p>';
             } else {
                 properties.forEach(property => {
-                    const id = property['@id'] || 'Unknown ID';
+                    const value = property['@value'] || 'Unknown ID';
                     const labels = property['http://www.w3.org/2000/01/rdf-schema#label'];
                     const propertyLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : 'No Label';
                     const definitions = property['http://www.registar.kam.hr/ontologies/ont.owl/definition'];
@@ -185,7 +185,7 @@
 
                     const tableRow = `
                         <tr>
-                            <td>${id}</td>
+                            <td>${value}</td>
                             <td>${propertyLabel}</td>
                             <td>${propertyDefinition}</td>
                         </tr>`;
