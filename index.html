@@ -42,20 +42,29 @@
         function displayDetails(element) {
             content.innerHTML = '';  // Clear the previous content
 
+            // Extract the label for the title on the right side
+            let title = 'Unknown Title';  // Default title if no label is found
+            const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
+            if (labels && labels[0] && labels[0]['@value']) {
+                title = labels[0]['@value'];
+            }
+
+            content.innerHTML += `<h2>${title}</h2>`;  // Set label as the title
+
             // Extract and display @id
             const id = element['@id'] || 'Unknown ID';
-            content.innerHTML += `<h2>ID: ${id}</h2>`;
+            content.innerHTML += `<p>ID: ${id}</p>`;
 
             // Extract and display @type
             const types = element['@type'] || [];
             if (Array.isArray(types)) {
                 types.forEach(type => {
                     const readableType = type.split('#').pop();  // Get the part after the last "#"
-                    content.innerHTML += `<b>Element: ${readableType}</b>`;
+                    content.innerHTML += `<p>Type: ${readableType}</p>`;
                 });
             } else {
                 const readableType = types.split('#').pop();
-                content.innerHTML += `<p>Element: ${readableType}</p>`;
+                content.innerHTML += `<p>Type: ${readableType}</p>`;
             }
 
             // Extract and display the "ID" value and prefix
@@ -75,17 +84,7 @@
             if (definitions) {
                 definitions.forEach(defObj => {
                     if (defObj['@value']) {
-                        content.innerHTML += `<p>Definicija: "${defObj['@value']}"</p>`;
-                    }
-                });
-            }
-
-            // Extract and display the "label"
-            const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
-            if (labels) {
-                labels.forEach(labelObj => {
-                    if (labelObj['@value']) {
-                        content.innerHTML += `<p>Oznaka: "${labelObj['@value']}"</p>`;
+                        content.innerHTML += `<p>Definition: "${defObj['@value']}"</p>`;
                     }
                 });
             }
@@ -95,7 +94,7 @@
             if (domains) {
                 domains.forEach(domainObj => {
                     if (domainObj['@id']) {
-                        content.innerHTML += `<p>Domena: ${domainObj['@id']}</p>`;
+                        content.innerHTML += `<p>Domain: ${domainObj['@id']}</p>`;
                     }
                 });
             }
@@ -104,7 +103,7 @@
             if (ranges) {
                 ranges.forEach(rangeObj => {
                     if (rangeObj['@id']) {
-                        content.innerHTML += `<p>Doseg: ${rangeObj['@id']}</p>`;
+                        content.innerHTML += `<p>Range: ${rangeObj['@id']}</p>`;
                     }
                 });
             }
@@ -114,7 +113,7 @@
             if (subPropertyOfs) {
                 subPropertyOfs.forEach(subPropertyOfObj => {
                     if (subPropertyOfObj['@id']) {
-                        content.innerHTML += `<p>Podsvojstvo: ${subPropertyOfObj['@id']}</p>`;
+                        content.innerHTML += `<p>SubPropertyOf: ${subPropertyOfObj['@id']}</p>`;
                     }
                 });
             }
@@ -124,9 +123,10 @@
         Object.keys(data).forEach(key => {
             const element = data[key];
 
-            // Use @id or key as the label for the menu item
-            const label = element['@id'] ? element['@id'].split('/').pop() : key;
-            createMenuItem(element, label);
+            // Use label or @id as the label for the menu item
+            const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
+            const menuLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
+            createMenuItem(element, menuLabel);
         });
     })
     .catch(error => {
