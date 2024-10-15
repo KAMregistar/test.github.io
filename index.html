@@ -63,87 +63,38 @@
             dropdownMenu.appendChild(item);
         }
 
-        // Function to display the details of a clicked property
-        function displayPropertyDetails(property) {
+        // Function to display class details
+        function displayClassDetails(ontologyClass) {
             content.innerHTML = '';  // Clear the previous content
 
-            // Extract the label for the title
-            let title = 'Unknown Title';  // Default title if no label is found
-            const labels = property['http://www.w3.org/2000/01/rdf-schema#label'];
-            if (labels && labels[0] && labels[0]['@value']) {
-                title = labels[0]['@value'];
-            }
+            const title = ontologyClass['http://www.w3.org/2000/01/rdf-schema#label']
+                ? ontologyClass['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+                : 'Unknown Class';
 
-            content.innerHTML += `<h2>${title}</h2>`;  // Set label as the title
+            content.innerHTML += `<h2>${title}</h2>`;
 
-            // Extract and display the "Imenski prostor" and "ID" by splitting the @id
-            const id = property['@id'] || 'Unknown ID';
+            const id = ontologyClass['@id'] || 'Unknown ID';
             const namespace = id.substring(0, id.lastIndexOf('/') + 1);  // Everything before the last "/"
             const identifier = id.split('/').pop();  // The last part after the "/"
-            content.innerHTML += `<p>Imenski prostor: ${namespace}</p>`;
             content.innerHTML += `<p>ID: ${identifier}</p>`;
+            content.innerHTML += `<p>Namespace: ${namespace}</p>`;
 
-            // Extract and display @type
-            const types = property['@type'] || [];
-            if (Array.isArray(types)) {
-                types.forEach(type => {
-                    const readableType = type.split('#').pop();  // Get the part after the last "#"
-                    content.innerHTML += `<p>Type: ${readableType}</p>`;
-                });
-            } else {
-                const readableType = types.split('#').pop();
-                content.innerHTML += `<p>Type: ${readableType}</p>`;
+            const types = ontologyClass['@type'] || [];
+            content.innerHTML += `<p>Type: ${types.map(type => type.split('#').pop()).join(', ')}</p>`;
+
+            const definitions = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'] || [];
+            if (definitions.length > 0) {
+                definitions.forEach(def => content.innerHTML += `<p>Definition: ${def['@value']}</p>`);
             }
 
-            // Extract and display the "ID" value and prefix
-            const idValues = property['http://www.registar.kam.hr/ontologies/ont.owl/ID'];
-            if (idValues) {
-                idValues.forEach(valueObj => {
-                    if (valueObj['@value']) {
-                        content.innerHTML += `<p>ID: ${valueObj['@value']}</p>`;
-                        const prefix = valueObj['@value'].split(':')[0];  // Extract prefix (letters before the colon)
-                        content.innerHTML += `<p>Prefiks: ${prefix}</p>`;
-                    }
-                });
+            const domains = ontologyClass['http://www.w3.org/2000/01/rdf-schema#domain'] || [];
+            if (domains.length > 0) {
+                domains.forEach(domain => content.innerHTML += `<p>Domain: ${domain['@id']}</p>`);
             }
 
-            // Extract and display the "definition"
-            const definitions = property['http://www.registar.kam.hr/ontologies/ont.owl/definition'];
-            if (definitions) {
-                definitions.forEach(defObj => {
-                    if (defObj['@value']) {
-                        content.innerHTML += `<p>Definition: "${defObj['@value']}"</p>`;
-                    }
-                });
-            }
-
-            // Extract and display the "domain" and "range"
-            const domains = property['http://www.w3.org/2000/01/rdf-schema#domain'];
-            if (domains) {
-                domains.forEach(domainObj => {
-                    if (domainObj['@id']) {
-                        content.innerHTML += `<p>Domain: ${domainObj['@id']}</p>`;
-                    }
-                });
-            }
-
-            const ranges = property['http://www.w3.org/2000/01/rdf-schema#range'];
-            if (ranges) {
-                ranges.forEach(rangeObj => {
-                    if (rangeObj['@id']) {
-                        content.innerHTML += `<p>Range: ${rangeObj['@id']}</p>`;
-                    }
-                });
-            }
-
-            // Extract and display the "subPropertyOf"
-            const subPropertyOfs = property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'];
-            if (subPropertyOfs) {
-                subPropertyOfs.forEach(subPropertyOfObj => {
-                    if (subPropertyOfObj['@id']) {
-                        content.innerHTML += `<p>SubPropertyOf: ${subPropertyOfObj['@id']}</p>`;
-                    }
-                });
+            const ranges = ontologyClass['http://www.w3.org/2000/01/rdf-schema#range'] || [];
+            if (ranges.length > 0) {
+                ranges.forEach(range => content.innerHTML += `<p>Range: ${range['@id']}</p>`);
             }
         }
 
@@ -164,7 +115,7 @@
                     const propertyLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : property['@id'];
                     const propertyDiv = document.createElement('div');
                     propertyDiv.textContent = propertyLabel;
-                    propertyDiv.onclick = () => displayPropertyDetails(property);
+                    propertyDiv.onclick = () => displayClassDetails(property);
                     content.appendChild(propertyDiv);
                 });
             }
@@ -174,26 +125,24 @@
         Object.keys(data).forEach(key => {
             const element = data[key];
 
-            // Use label or @id as the label for the dropdown items
             const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
             const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
 
-            // Add items to "Klase" dropdown based on @type (Class)
+            // Add items to "Klase" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                createDropdownItem(element, dropdownLabel, klaseDropdown, () => displayClassPropertiesByDomain(element['@id']));
+                createDropdownItem(element, dropdownLabel, klaseDropdown, () => displayClassDetails(element));
             }
         });
 
-        // Populate "Svojstva" dropdown with class names
+        // Populate "Svojstva" dropdown with properties
         Object.keys(data).forEach(key => {
             const element = data[key];
 
-            // Use label or @id as the label for the dropdown items
             const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
             const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
 
-            // Add class names to "Svojstva" dropdown, and on click, display properties with this class as domain
-            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+            // Add items to "Svojstva" dropdown for properties
+            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#ObjectProperty')) {
                 createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayClassPropertiesByDomain(element['@id']));
             }
         });
