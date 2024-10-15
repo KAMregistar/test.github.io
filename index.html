@@ -51,11 +51,11 @@
             if (Array.isArray(types)) {
                 types.forEach(type => {
                     const readableType = type.split('#').pop();  // Get the part after the last "#"
-                    content.innerHTML += `<p>Type: ${readableType}</p>`;
+                    content.innerHTML += `<p>Element: ${readableType}</p>`;
                 });
             } else {
                 const readableType = types.split('#').pop();
-                content.innerHTML += `<p>Type: ${readableType}</p>`;
+                content.innerHTML += `<p>Element: ${readableType}</p>`;
             }
 
             // Extract and display the "ID" value
@@ -73,7 +73,7 @@
             if (definitions) {
                 definitions.forEach(defObj => {
                     if (defObj['@value']) {
-                        content.innerHTML += `<p>Definition: "${defObj['@value']}"</p>`;
+                        content.innerHTML += `<p>Definicija: "${defObj['@value']}"</p>`;
                     }
                 });
             }
@@ -83,7 +83,7 @@
             if (labels) {
                 labels.forEach(labelObj => {
                     if (labelObj['@value']) {
-                        content.innerHTML += `<p>Label: "${labelObj['@value']}"</p>`;
+                        content.innerHTML += `<p>Oznaka: "${labelObj['@value']}"</p>`;
                     }
                 });
             }
