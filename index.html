@@ -18,7 +18,7 @@
 
 <script>
     // Fetch JSON-LD data and generate the menu
-    fetch('KAMOntologija_v6.jsonld')  // Replace with your JSON-LD file
+    fetch('KAMOntologija_v6.jsonld')  // Replace with your JSON-LD file path
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -38,14 +38,40 @@
             menu.appendChild(item);
         }
 
-        // Function to display the details of a clicked item
+        // Function to display the details of a clicked item in a human-readable format
         function displayDetails(element) {
-            content.innerHTML = `<h2>${element['@id'] || 'Unknown ID'}</h2>`;
-            content.innerHTML += `<pre>${JSON.stringify(element, null, 2)}</pre>`;  // Display the element details as formatted JSON
+            content.innerHTML = '';  // Clear the previous content
+
+            // Extract and display @id
+            const id = element['@id'] || 'Unknown ID';
+            content.innerHTML += `<h2>ID: ${id}</h2>`;
+
+            // Extract and display @type
+            const types = element['@type'] || [];
+            if (Array.isArray(types)) {
+                types.forEach(type => {
+                    const readableType = type.split('#').pop();  // Get the part after the last "#"
+                    content.innerHTML += `<p>Type: ${readableType}</p>`;
+                });
+            } else {
+                const readableType = types.split('#').pop();
+                content.innerHTML += `<p>Type: ${readableType}</p>`;
+            }
+
+            // Extract and display other properties like "http://www.registar.kam.hr/ontologies/ont.owl/ID"
+            Object.keys(element).forEach(key => {
+                if (key.startsWith('http://www.registar.kam.hr/ontologies/ont.owl/ID')) {
+                    const values = element[key];
+                    values.forEach(valueObj => {
+                        if (valueObj['@value']) {
+                            content.innerHTML += `<p>Value: ${valueObj['@value']}</p>`;
+                        }
+                    });
+                }
+            });
         }
 
-        // Iterate through the JSON-LD data object
-        // Assuming data is an object containing various properties, each one can be rendered as a menu item
+        // Iterate through the JSON-LD data object and populate the menu
         Object.keys(data).forEach(key => {
             const element = data[key];
 
