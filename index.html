@@ -138,7 +138,7 @@
         SVOJSTVA
         <div class="dropdown" id="svojstva-dropdown"></div>
     </div>
-    <div>
+    <div id="prefiksi"> 
         PREFIKSI
     </div>
     <div>
@@ -165,12 +165,13 @@
         const content = document.getElementById('content');
         const klaseDropdown = document.getElementById('klase-dropdown');
         const svojstvaDropdown = document.getElementById('svojstva-dropdown');
+        const prefiksi = document.getElementById('prefiksi');
 
         // Helper function to create a dropdown menu item
         function createDropdownItem(element, label, dropdownMenu, clickCallback) {
             const item = document.createElement('div');
             item.textContent = label;  // Use label for dropdown item
-            item.onclick = () => clickCallback(label, element);  // Execute callback on click
+            item.onclick = () => clickCallback(element);  // Execute callback on click
             dropdownMenu.appendChild(item);
         }
 
@@ -204,58 +205,53 @@
                 <tr><td>ID</td><td>${identifier}</td></tr>
                 <tr><td>Namespace</td><td>${namespace}</td></tr>
                 <tr><td>Element</td><td>${types.map(type => type.split('#').pop()).join(', ')}</td></tr>
-                <tr><td>Definition</td><td>${definitions.length > 0 ? definitions[0]['@value'] : 'No Definition'}</td></tr>
+                <tr><td>Definition</td><td>${definitions.length > 0 ? definitions[0]['@value'] : 'No Definition Available'}</td></tr>
                 <tr><td>CURIE</td><td>${curieValue}</td></tr>`;
 
             content.appendChild(table);
         }
 
-        // Function to display properties in a table for Svojstva menu
-        function displayClassPropertiesByDomain(title, classId) {
-            content.innerHTML = '';  // Clear the previous content
-
-            // Add the title above the table
-            const titleElement = `<h2>${title}</h2>`;
-            content.innerHTML = titleElement;
+        // Function to display all prefixes in a table
+        function displayPrefixes() {
+            content.innerHTML = '';  // Clear content
 
             // Create table structure
             const table = document.createElement('table');
             const tableHeader = `
                 <tr>
-                    <th>CURIE</th>
-                    <th>Label</th>
-                    <th>Definition</th>
+                    <th>Prefix</th>
+                    <th>Class/Property Name</th>
+                    <th>Namespace</th>
                 </tr>`;
             table.innerHTML = tableHeader;
 
-            const properties = Object.values(data).filter(item => {
-                const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
-                return domains && domains.some(domain => domain['@id'] === classId);
-            });
+            // Iterate through the data to extract CURIE and other details
+            Object.keys(data).forEach(key => {
+                const element = data[key];
 
-            if (properties.length === 0) {
-                content.innerHTML += '<p>No properties found for this class.</p>';
-            } else {
-                properties.forEach(property => {
-                    const idValues = property['http://www.registar.kam.hr/ontologies/ont.owl/ID'] || [];
-                    const curieValue = idValues.length > 0 ? idValues[0]['@value'] : 'Unknown CURIE';
+                const id = element['@id'] || 'Unknown ID';
+                const namespace = id.substring(0, id.lastIndexOf('/') + 1); // Namespace is everything before the last "/"
+                const idValues = element['http://www.registar.kam.hr/ontologies/ont.owl/ID'] || [];
+                const curie = idValues.length > 0 ? idValues[0]['@value'] : null;
 
-                    const labels = property['http://www.w3.org/2000/01/rdf-schema#label'];
-                    const propertyLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : 'No Label';
-                    const definitions = property['http://www.registar.kam.hr/ontologies/ont.owl/definition'];
-                    const propertyDefinition = definitions && definitions[0] && definitions[0]['@value'] ? definitions[0]['@value'] : 'No Definition';
+                // Extract the prefix from the CURIE (before the colon)
+                if (curie) {
+                    const prefix = curie.split(':')[0];
+                    const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
+                    const className = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : 'No Label';
 
+                    // Append row to the table
                     const tableRow = `
                         <tr>
-                            <td>${curieValue}</td>
-                            <td>${propertyLabel}</td>
-                            <td>${propertyDefinition}</td>
+                            <td>${prefix}</td>
+                            <td>${className}</td>
+                            <td>${namespace}</td>
                         </tr>`;
                     table.innerHTML += tableRow;
-                });
+                }
+            });
 
-                content.appendChild(table);  // Append the table to the content
-            }
+            content.appendChild(table);  // Append the table to the content
         }
 
         // Populate the "Klase" dropdown with class details
@@ -271,18 +267,8 @@
             }
         });
 
-        // Populate "Svojstva" dropdown with class names (shows properties on click)
-        Object.keys(data).forEach(key => {
-            const element = data[key];
-
-            const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
-            const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
-
-            // Add items to "Svojstva" dropdown for classes
-            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayClassPropertiesByDomain(dropdownLabel, element['@id']));
-            }
-        });
+        // Display prefixes when "Prefiksi" is clicked
+        prefiksi.addEventListener('click', displayPrefixes);
     })
     .catch(error => {
         console.error('Error fetching JSON-LD:', error);
