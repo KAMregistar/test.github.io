@@ -13,12 +13,12 @@
 </head>
 <body>
 
-<div id="menu"><h2>Classes</h2></div>
+<div id="menu"><h2>Elements</h2></div>
 <div id="content"><h2>Details</h2></div>
 
 <script>
     // Fetch JSON-LD data and generate the menu
-    fetch('KAMOntologija_v6.jsonld')
+    fetch('KAMOntologija_v6.jsonld')  // Replace with your JSON-LD file
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -29,35 +29,30 @@
         const menu = document.getElementById('menu');
         const content = document.getElementById('content');
 
-        // Create a function to render a menu item for each JSON-LD element
+        // Helper function to create a menu item
         function createMenuItem(element, label) {
             const item = document.createElement('div');
             item.classList.add('item');
-            item.textContent = label;  // Use the label passed in
+            item.textContent = label;  // Use label to display as menu item
             item.onclick = () => displayDetails(element);  // Display details on click
             menu.appendChild(item);
         }
 
-        // Display details of a selected element
+        // Function to display the details of a clicked item
         function displayDetails(element) {
             content.innerHTML = `<h2>${element['@id'] || 'Unknown ID'}</h2>`;
-            content.innerHTML += `<pre>${JSON.stringify(element, null, 2)}</pre>`;
+            content.innerHTML += `<pre>${JSON.stringify(element, null, 2)}</pre>`;  // Display the element details as formatted JSON
         }
 
-        // Iterate through the JSON-LD data and add menu items based on structure
-        // Assume there are some classes or elements to show, adjust based on actual structure
-        if (Array.isArray(data['@graph'])) {
-            data['@graph'].forEach((element, index) => {
-                const label = element['@id'] ? element['@id'].split('/').pop() : `Element ${index + 1}`;
-                createMenuItem(element, label);
-            });
-        } else {
-            // Fallback for cases where @graph is not present
-            Object.keys(data).forEach((key) => {
-                const label = key;
-                createMenuItem(data[key], label);
-            });
-        }
+        // Iterate through the JSON-LD data object
+        // Assuming data is an object containing various properties, each one can be rendered as a menu item
+        Object.keys(data).forEach(key => {
+            const element = data[key];
+
+            // Use @id or key as the label for the menu item
+            const label = element['@id'] ? element['@id'].split('/').pop() : key;
+            createMenuItem(element, label);
+        });
     })
     .catch(error => {
         console.error('Error:', error);
