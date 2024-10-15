@@ -1,10 +1,11 @@
 {
 "@graph": [ {
-  "@id" : "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "@id" : "_:genid1",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Mjesto je dio fizičkog prostora na Zemlji ili izvan nje. Mitska, legendarna, izmišljena i fikcionalizirana područja na Zemlji ili izvan nje ne smatraju se mjestima."
   } ]
 }, {
-  "@id" : "_:genid2",
+  "@id" : "Disjunktne klase",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
