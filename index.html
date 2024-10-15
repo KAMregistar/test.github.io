@@ -4,103 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KAM Ontology Viewer</title>
-    <!-- Load Poppins Regular and Semi-Bold -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts import for Poppins Semi-Bold -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
     <style>
-        body { 
-    font-family: 'Poppins', Arial, sans-serif;
-    font-weight: 400; /* Regular weight for body content */
-    margin: 0; /* Ensure no default body margin */
-}
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            font-weight: 600; /* Semi-Bold weight */
+        }
 
-/* Navbar specific font weight: Poppins Semi-Bold */
-#menu-bar {
-    display: flex;
-    height: 70px;
-    justify-content: flex-start;
-    align-items: center; /* Ensures logo, title, and menu are vertically centered */
-    background-color: white; /* White background for the menu bar */
-    padding: 10px;
-    border-bottom: 1px solid #333; /* Dark gray thin line at the bottom */
-    font-weight: 600; /* Semi-Bold weight for the navbar */
-    position: relative;
-    z-index: 10; /* Ensure the navbar stays on top */
-}
+        /* Style for the logo, title, and menu */
+        #menu-bar {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center; /* Ensures logo, title, and menu are vertically centered */
+            background-color: white; /* White background for the menu bar */
+            padding: 10px;
+            border-bottom: 1px solid #333; /* Dark gray thin line at the bottom */
+        }
 
-.menu-items {
-    display: flex;
-    justify-content: flex-end; /* Align menu items to the right */
-    align-items: center;
-    margin-left: auto; /* Ensures the menu stays on the right side */
-}
+        .logo {
+            height: 30px; /* Set the height of the logo image */
+            width: auto; /* Ensure the logo maintains its aspect ratio */
+            display: inline-block;
+            margin-right: 15px; /* Space between the logo and the title */
+        }
 
-.menu-items > div {
-    margin-left: 30px; /* Increased space between the menu items */
-    color: #333; /* Dark gray color for the menu items */
-    font-size: 14px; /* Smaller font size for menu items */
-    cursor: pointer;
-    position: relative; /* This ensures the dropdown is aligned to this parent */
-}
+        #menu-bar h1 {
+            margin-right: 200px; /* Increased space between the title and menu items */
+            color: #333; /* Dark gray color for the title */
+            font-size: 18px; /* Title font size */
+            margin: 0; /* Remove default margin to align with image and menu */
+        }
 
-.logo {
-    height: 35px; /* Set the height of the logo image */
-    width: auto; /* Ensure the logo maintains its aspect ratio */
-    display: inline-block;
-    margin-right: 15px; /* Space between the logo and the title */
-}
+        /* Reduce the font size and increase space for the menu items */
+        #menu-bar > div {
+            position: relative; /* Make parent relative to dropdown */
+            margin-right: 30px; /* Increased space between the menu items */
+            color: #333; /* Dark gray color for the menu items */
+            font-size: 14px; /* Smaller font size for menu items */
+            cursor: pointer;
+        }
 
-#menu-bar h2 {
-    color: #333; /* Dark gray color for the title */
-    font-size: 12px; /* Reduced font size to fit inline */
-    margin: 0; /* Remove default margin to align with the image and menu */
-}
+        #menu-bar > div:hover {
+            background-color: #eee; /* Light background color on hover */
+        }
 
-.flex-space {
-    flex-grow: 1; /* This pushes the menu items away from the title */
-}
+        /* Dropdown menu styling */
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: calc(100% + 2px); /* Position the dropdown 2px below the menu item */
+            left: 0; /* Align dropdown with the left edge of the parent */
+            background-color: #f9f9f9;
+            min-width: 160px;
+            border: 1px solid #ddd;
+            z-index: 1;
+        }
 
-#menu-bar > div:hover {
-    background-color: #eee; /* Light background color on hover */
-}
+        .dropdown div {
+            padding: 10px;
+            color: #333; /* Dark gray color for dropdown items */
+            cursor: pointer;
+            border-bottom: 1px solid #ccc;
+        }
 
-/* Dropdown menu styling */
-.dropdown {
-    display: none;
-    position: absolute;
-    top: calc(100% + 1px); /* Position the dropdown just below the menu item */
-    left: 0; /* Align dropdown with the left edge of the parent */
-    background-color: #f9f9f9;
-    min-width: 160px;
-    border: 1px solid #ddd;
-    z-index: 1;
-}
+        .dropdown div:hover {
+            background-color: #f1f1f1; /* Light background color for hover effect */
+        }
 
-.dropdown div {
-    padding: 10px;
-    color: #333; /* Dark gray color for dropdown items */
-    cursor: pointer;
-    border-bottom: 1px solid #ccc;
-}
+        #menu-bar > div:hover .dropdown {
+            display: block; /* Display dropdown when parent is hovered */
+        }
 
-.dropdown div:hover {
-    background-color: #f1f1f1; /* Light background color for hover effect */
-}
+        /* Ensure dropdown remains visible when moving mouse between menu item and dropdown */
+        #menu-bar > div {
+            position: relative; /* Ensure the dropdown stays connected to its parent */
+        }
 
-/* Display the dropdown on hover */
-.menu-items > div:hover .dropdown {
-    display: block; /* Show the dropdown when the parent is hovered */
-}
-
-/* Ensure the content starts under the navbar and is aligned to the left */
-#content {
-    margin-top: 80px; /* Add margin-top to move the content below the navbar */
-    padding: 20px;
-    font-weight: 400; /* Regular weight for content */
-    font-size: 12px;
-    color: #333;
-    text-align: left; /* Align text to the left */
-    position: relative;
-}
+        #content {
+            margin-top: 0px;
+            padding: 20px;
+        }
 
     </style>
 </head>
@@ -108,28 +92,20 @@
 
 <div id="menu-bar">
     <img src="kam.png" alt="KAM Logo" class="logo">
-    <h2>REGISTAR&nbsp;&nbsp;</h2>
-    <div class="flex-space"></div> <!-- This pushes menu items to the right -->
-    <div class="menu-items">
-        <div>
-            KLASE
-            <div class="dropdown" id="klase-dropdown">
-            </div>
-        </div>
-        <div>
-            SVOJSTVA
-            <div class="dropdown" id="svojstva-dropdown">
-            </div>
-        </div>
-        <div>
-            PREFIKSI
-        </div>
-        <div>
-            PREUZIMANJA
-        </div>
-        <div>
-            POMOĆ
-        </div>
+    <h1>KAM Registar</h1>
+    <div>
+        Klase
+        <div class="dropdown" id="klase-dropdown"></div>
+    </div>
+    <div>
+        Svojstva
+        <div class="dropdown" id="svojstva-dropdown"></div>
+    </div>
+    <div>
+        Prefiksi
+    </div>
+    <div>
+        Pomoć
     </div>
 </div>
 
@@ -152,9 +128,6 @@
         const content = document.getElementById('content');
         const klaseDropdown = document.getElementById('klase-dropdown');
         const svojstvaDropdown = document.getElementById('svojstva-dropdown');
-
-        // Logging for troubleshooting
-        console.log('Data fetched successfully:', data);
 
         // Helper function to create a dropdown menu item
         function createDropdownItem(element, label, dropdownMenu, clickCallback) {
@@ -190,7 +163,7 @@
 
             const domains = ontologyClass['http://www.w3.org/2000/01/rdf-schema#domain'] || [];
             if (domains.length > 0) {
-                domains.forEach(domain => content.innerHTML += `<p>Domena: ${domain['@id']}</p>`;
+                domains.forEach(domain => content.innerHTML += `<p>Domena: ${domain['@id']}</p>`);
             }
 
             const ranges = ontologyClass['http://www.w3.org/2000/01/rdf-schema#range'] || [];
@@ -235,8 +208,6 @@
             const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
             const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
 
-            console.log(`Adding class to Klase dropdown: ${dropdownLabel}`);
-
             // Add items to "Klase" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
                 createDropdownItem(element, dropdownLabel, klaseDropdown, () => displayClassDetails(element));
@@ -249,8 +220,6 @@
 
             const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
             const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
-
-            console.log(`Adding class to Svojstva dropdown: ${dropdownLabel}`);
 
             // Add items to "Svojstva" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
