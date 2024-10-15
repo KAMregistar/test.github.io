@@ -105,6 +105,29 @@
             }
         }
 
+        // Function to display properties related to a selected class by "domain"
+        function displayClassPropertiesByDomain(classId) {
+            content.innerHTML = '';  // Clear the previous content
+
+            const properties = Object.values(data).filter(item => {
+                const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
+                return domains && domains.some(domain => domain['@id'] === classId);
+            });
+
+            if (properties.length === 0) {
+                content.innerHTML = '<p>No properties found for this class.</p>';
+            } else {
+                properties.forEach(property => {
+                    const labels = property['http://www.w3.org/2000/01/rdf-schema#label'];
+                    const propertyLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : property['@id'];
+                    const propertyDiv = document.createElement('div');
+                    propertyDiv.textContent = propertyLabel;
+                    propertyDiv.onclick = () => displayClassDetails(property);
+                    content.appendChild(propertyDiv);
+                });
+            }
+        }
+
         // Populate the "Klase" dropdown with class details
         Object.keys(data).forEach(key => {
             const element = data[key];
@@ -118,16 +141,16 @@
             }
         });
 
-        // Populate "Svojstva" dropdown with class names (same as original behavior)
+        // Populate "Svojstva" dropdown with properties based on class domain
         Object.keys(data).forEach(key => {
             const element = data[key];
 
             const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
             const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
 
-            // Add items to "Svojstva" dropdown for classes
-            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayClassDetails(element));
+            // Add properties to "Svojstva" dropdown based on ObjectProperty type
+            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#ObjectProperty')) {
+                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayClassPropertiesByDomain(element['@id']));
             }
         });
     })
