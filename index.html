@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KAM Ontology Viewer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <!-- Load Poppins Regular and Semi-Bold -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body { 
+        body {
             font-family: 'Poppins', Arial, sans-serif;
-            font-weight: 600; /* This ensures the font is semi-bold */ 
-            margin: 0; /* Ensure no default body margin */
+            font-weight: 400; 
+            margin: 0; 
         }
 
-        /* Style for the logo, title, and menu */
+        /* Navbar specific font weight: Poppins Semi-Bold */
         #menu-bar {
             display: flex;
             height: 70px;
@@ -21,6 +22,7 @@
             background-color: white; /* White background for the menu bar */
             padding: 10px;
             border-bottom: 1px solid #333; /* Dark gray thin line at the bottom */
+            font-weight: 600; /* Semi-Bold weight for the navbar */
             position: relative;
             z-index: 10; /* Ensure the navbar stays on top */
         }
@@ -90,8 +92,8 @@
         #content {
             margin-top: 80px; /* Add margin-top to move the content below the navbar */
             padding: 20px;
+            font-weight: 400; /* Regular weight for content */
             font-size: 12px;
-            font-weight: 400;
             color: #333;
             text-align: left; /* Align text to the left */
             position: relative;
@@ -182,7 +184,7 @@
 
             const domains = ontologyClass['http://www.w3.org/2000/01/rdf-schema#domain'] || [];
             if (domains.length > 0) {
-                domains.forEach(domain => content.innerHTML += `<p>Domena: ${domain['@id']}</p>`);
+                domains.forEach(domain => content.innerHTML += `<p>Domena: ${domain['@id']}</p>`;
             }
 
             const ranges = ontologyClass['http://www.w3.org/2000/01/rdf-schema#range'] || [];
