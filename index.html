@@ -58,12 +58,14 @@
                 content.innerHTML += `<p>Element: ${readableType}</p>`;
             }
 
-            // Extract and display the "ID" value
+            // Extract and display the "ID" value and prefix
             const idValues = element['http://www.registar.kam.hr/ontologies/ont.owl/ID'];
             if (idValues) {
                 idValues.forEach(valueObj => {
                     if (valueObj['@value']) {
                         content.innerHTML += `<p>ID: ${valueObj['@value']}</p>`;
+                        const prefix = valueObj['@value'].split(':')[0];  // Extract prefix (letters before the colon)
+                        content.innerHTML += `<p>Prefiks: ${prefix}</p>`;
                     }
                 });
             }
