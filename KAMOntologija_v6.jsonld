@@ -170,7 +170,7 @@
     "@value" : "http://www.registar.kam.hr/Element/c/#C10007"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "osoba"
+    "@value" : "Osoba"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.registar.kam.hr/Element/c/#C10006"
@@ -194,7 +194,7 @@
     "@value" : "http://www.registar.kam.hr/Element/c/#C10008"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "kolektivni agent"
+    "@value" : "Kolektivni agent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.registar.kam.hr/Element/c/#C10006"
@@ -215,7 +215,7 @@
     "@value" : "http://www.registar.kam.hr/Element/c/#C10009"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "korporativno tijelo"
+    "@value" : "Korporativno tijelo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.registar.kam.hr/Element/c/#C10008"
@@ -236,7 +236,7 @@
     "@value" : "http://www.registar.kam.hr/Element/c/#C10010"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "obitelj"
+    "@value" : "Obitelj"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.registar.kam.hr/Element/c/#C10008"
