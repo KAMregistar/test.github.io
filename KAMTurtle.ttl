@@ -1,0 +1,1426 @@
+@prefix : <http://www.registar.kam.hr/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.registar.kam.hr/> .
+
+<http://www.registar.kam.hr/> rdf:type owl:Ontology ;
+                               rdfs:comment "Identifikacija i opis građe koja se prikuplja, pohranjuje, obrađuje, štiti, istražuje, predstavlja i stavlja na raspolaganje korisnicima u knjižnicama, arhivima i muzejima Republike Hrvatske kao samostalnim ustanovama ili ustrojbenim jedinicama unutar ustanovâ, tvrtki i drugih pravnih osoba." ;
+                               owl:versionInfo "Trenuna inačica ontologije v.1.01" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.registar.kam.hr/ontologies/ont.owl/ID
+<http://www.registar.kam.hr/ontologies/ont.owl/ID> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.registar.kam.hr/ontologies/ont.owl/definition
+<http://www.registar.kam.hr/ontologies/ont.owl/definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#domain
+rdfs:domain rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#range
+rdfs:range rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#subPropertyOf
+rdfs:subPropertyOf rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.registar.kam.hr/Element/d/P20001
+<http://www.registar.kam.hr/Element/d/P20001> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20001" ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s nadziranim nazivom, kôdom ili drugom oznakom koja označava razinu specifičnosti opisa djela u informacijskom sustavu, uključujući položaj unutar hijerarhije djelâ koja su s njim povezana odnosom cjeline i dijela." ;
+                                              rdfs:label "ima razinu opisa djela" .
+
+
+###  http://www.registar.kam.hr/Element/d/P20002
+<http://www.registar.kam.hr/Element/d/P20002> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P20002" ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s kratkim nestrukturiranim tekstom koji objašnjava o čemu je ili što prikazuje jedinica građe." ;
+                                              rdfs:label "ima opis sadržaja djela" .
+
+
+###  http://www.registar.kam.hr/Element/d/P20003
+<http://www.registar.kam.hr/Element/d/P20003> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P20003" ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s izrazom koji je naveden na kartografskoj jedinici građe, a označava položaj mjesta prikazanog na karti Zemlje ili nekog drugog nebeskog tijela, mjereno od početnog meridijana u pravcu istoka ili zapada te od ekvatora u pravcu sjevera ili juga." ;
+                                              rdfs:label "ima geografsku dužinu i geografsku širinu" .
+
+
+###  http://www.registar.kam.hr/Element/d/P20004
+<http://www.registar.kam.hr/Element/d/P20004> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <http://www.registar.kam.hr/Element/d/P20311> ;
+                                              rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                              rdfs:label "ima napomenu o geografskoj dužini i geografskoj širini" .
+
+
+###  http://www.registar.kam.hr/Element/d/P20005
+<http://www.registar.kam.hr/Element/d/P20005> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20005" ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s izrazom koji je naveden na kartografskoj jedinici građe, a označava položaj područja neba: kutnu udaljenost mjerenu prema istoku na ekvatoru od proljetne ravnodnevice do satnog kruga nebeskog tijela, od 0 do 24 sata, te kutnu udaljenost do nebeskog tijela mjerenu sjeverno ili južno pomoću 90˚ od nebeskog ekvatora uzduž kruga tijela u satu." ;
+                                              rdfs:label "ima rektascenziju i deklinaciju" .
+
+
+###  http://www.registar.kam.hr/Element/d/P20006
+<http://www.registar.kam.hr/Element/d/P20006> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20006" ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s izrazom koji se javlja na kartografskoj jedinici građe, a označava jednu ili dvije točke sjecišta ekliptičnog i nebeskog ekvatora, zauzetog Suncem kad je njegova deklinacija 0˚." ;
+                                              rdfs:label "ima ravnodnevicu" .
+
+
+###  http://www.registar.kam.hr/Element/d/P20007
+<http://www.registar.kam.hr/Element/d/P20007> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20007" ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s  izrazom, nadziranim nazivom, kodom, identifikatorom ili drugom oznakom koja označava društvenu skupinu kojoj je djelo sadržano u jedinici građe primarno namijenjeno ili za koju se smatra prikladnim s obzirom na dob, zanimanje, stupanj obrazovanja, posebne intelektualne ili društvene potrebe i druge značajke." ;
+                                              rdfs:label "ima ciljanu publiku djela" .
+
+
+###  http://www.registar.kam.hr/Element/d/P20008
+<http://www.registar.kam.hr/Element/d/P20008> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <http://www.registar.kam.hr/Element/d/P20311> ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20008" ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s kratkim nestrukturiranim tekstom u kojemu se navode objašnjenja, tumačenja i druge pojedinosti o društvenoj skupini za koju je djelo sadržano u jedinici građe primarno namijenjeno ili za koju se smatra prikladnim." ;
+                                              rdfs:label "ima napomenu o ciljanoj publici djela" .
+
+
+###  http://www.registar.kam.hr/Element/d/P20009
+<http://www.registar.kam.hr/Element/d/P20009> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20009" ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s tekstom koji identificira politički, društveni, ekonomski, kulturni, vjerski ili drugi događaj ili situaciju koja je potaknula stvaranje jedinice građe." ;
+                                              rdfs:label "ima povod nastanka" .
+
+
+###  http://www.registar.kam.hr/Element/d/P20010
+<http://www.registar.kam.hr/Element/d/P20010> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20010" ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s nadziranim nazivom, identifikatorom ili drugom nadziranom oznakom koja označava nagrade i priznanja dodijeljene jedinici građe, uključujući nagrade i priznanja na festivalima, izložbama, salonima, sajmovima i drugim strukovnim ili prigodnim manifestacijama." ;
+                                              rdfs:label "ima nagrade" .
+
+
+###  http://www.registar.kam.hr/Element/d/P20011
+<http://www.registar.kam.hr/Element/d/P20011> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <http://www.registar.kam.hr/Element/d/P20311> ;
+                                              rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20011" ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s nestrukturiranim tekstom koji sadržava pojedinosti o nagradama i priznanjima dodijeljenima djelu sadržanom u jedinici građe, uključujući nagrade i priznanja na festivalima, izložbama, salonima, sajmovima i drugim strukovnim ili prigodnim manifestacijama." ;
+                                              rdfs:label "ima napomenu o nagradama" .
+
+
+###  http://www.registar.kam.hr/Element/d/P20012
+<http://www.registar.kam.hr/Element/d/P20012> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20012" ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo sa strukturiranim ili nestrukturiranim tekstom u kojemu se objašnjava sadašnji i/ili planirani sustav organizacije fonda ili zbirke." ;
+                                              rdfs:label "ima plan sređivanja" .
+
+
+###  http://www.registar.kam.hr/Element/d/P20013
+<http://www.registar.kam.hr/Element/d/P20013> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20013" ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s tekstom koji pruža informacije o mogućem dopunjavanju arhivskog fonda." ;
+                                              rdfs:label "ima dopune" .
+
+
+###  http://www.registar.kam.hr/Element/d/P20014
+<http://www.registar.kam.hr/Element/d/P20014> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20014" ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s kratkim nestrukturiranim tekstom koji sadržava podatke o vrednovanju, odabiranju i izlučivanju građe iz cjeline arhivskog gradiva te o učincima tih postupaka." ;
+                                              rdfs:label "ima odabir, izlučivanje i rokove čuvanja" .
+
+
+###  http://www.registar.kam.hr/Element/d/P20015
+<http://www.registar.kam.hr/Element/d/P20015> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20015" ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s izrazom ili tekstom koji sadržava informacije o predviđenom vremenskom rasponu izlaženja narednog dijela serijske publikacije ili osuvremenjivanja integrirajuće publikacije." ;
+                                              rdfs:label "ima učestalost izlaženja ili osuvremenjivanja" .
+
+
+###  http://www.registar.kam.hr/Element/d/P20016
+<http://www.registar.kam.hr/Element/d/P20016> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20016" ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s tekstom koji sadržava pojedinosti o nastanku, recepciji i interpretaciji djela." ;
+                                              rdfs:label "ima povijest djela" .
+
+
+###  http://www.registar.kam.hr/Element/d/P20017
+<http://www.registar.kam.hr/Element/d/P20017> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10003> ;
+                                              owl:inverseOf <http://www.registar.kam.hr/Element/jo/P10004> ;
+                                              rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                              rdfs:range <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20017" ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s jedinicom opisa." ;
+                                              rdfs:label "je djelo povezano s jedinicom opisa" .
+
+
+###  http://www.registar.kam.hr/Element/d/P20018
+<http://www.registar.kam.hr/Element/d/P20018> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <http://www.registar.kam.hr/Element/d/P20017> ;
+                                              owl:inverseOf <http://www.registar.kam.hr/Element/d/P20018> ;
+                                              rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                              rdfs:range <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20018" ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s djelom." ;
+                                              rdfs:label "je djelo povezano s djelom" .
+
+
+###  http://www.registar.kam.hr/Element/d/P20311
+<http://www.registar.kam.hr/Element/d/P20311> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10022> ;
+                                              rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20311" ;
+                                              <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s kratkim tekstom o općim svojstvima djela." ;
+                                              rdfs:label "ima napomenu o djelu" .
+
+
+###  http://www.registar.kam.hr/Element/jo/P10001
+<http://www.registar.kam.hr/Element/jo/P10001> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P10001" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje jedinicu opisa s vrstom kojoj jedinica opisa pripada." ;
+                                               rdfs:isDefinedBy "http://www.kamregistar.info/Element/jo/P10001" ;
+                                               rdfs:label "ima kategoriju jedinice opisa" .
+
+
+###  http://www.registar.kam.hr/Element/jo/P10002
+<http://www.registar.kam.hr/Element/jo/P10002> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P10002" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje jedinicu opisa s entitetom koji je u odnosu s jedinicom opisa." ;
+                                               rdfs:label "ima srodni entitet jedinici opisa" .
+
+
+###  http://www.registar.kam.hr/Element/jo/P10003
+<http://www.registar.kam.hr/Element/jo/P10003> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10002> ;
+                                               owl:inverseOf <http://www.registar.kam.hr/Element/jo/P10003> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P10003" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje jedinicu opisa s drugom jedinicom opisa s kojom je povezana na bilo koji način." ;
+                                               rdfs:label "je jedinica opisa povezana s jedinicom opisa"@en .
+
+
+###  http://www.registar.kam.hr/Element/jo/P10004
+<http://www.registar.kam.hr/Element/jo/P10004> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10003> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P10004" ;
+                                               rdfs:comment "Povezuje jedinicu opisa s djelom." ;
+                                               rdfs:isDefinedBy "http://www.kamregistar.info/Element/jo/P10004" ;
+                                               rdfs:label "je jedinica opisa povezana s djelom" .
+
+
+###  http://www.registar.kam.hr/Element/jo/P10005
+<http://www.registar.kam.hr/Element/jo/P10005> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10003> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10003> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P10005" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje jedinicu opisa s izrazom." ;
+                                               rdfs:isDefinedBy "http://www.kamregistar.info/Element/jo/P10005" ;
+                                               rdfs:label "je jedinica opisa povezana s izrazom" .
+
+
+###  http://www.registar.kam.hr/Element/jo/P10006
+<http://www.registar.kam.hr/Element/jo/P10006> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10003> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10004> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P10006" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje jedinicu opisa s pojavnim oblikom." ;
+                                               rdfs:isDefinedBy "http://www.kamregistar.info/Element/jo/P10006" ;
+                                               rdfs:label "je jedinica opisa povezana s pojavnim oblikom" .
+
+
+###  http://www.registar.kam.hr/Element/jo/P10007
+<http://www.registar.kam.hr/Element/jo/P10007> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10003> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10005> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P10007" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje jedinicu opisa s primjerkom." ;
+                                               rdfs:isDefinedBy "http://www.kamregistar.info/Element/jo/P10007" ;
+                                               rdfs:label "je jedinica opisa povezana s primjerkom" .
+
+
+###  http://www.registar.kam.hr/Element/jo/P10008
+<http://www.registar.kam.hr/Element/jo/P10008> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10003> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10006> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P10008" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje jedinicu opisa s agentom." ;
+                                               rdfs:label "je jedinica opisa povezana s agentom" .
+
+
+###  http://www.registar.kam.hr/Element/jo/P10009
+<http://www.registar.kam.hr/Element/jo/P10009> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10008> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10007> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P10009" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje jedinicu opisa s osobom." ;
+                                               rdfs:label "je jedinica opisa povezana s osobom" .
+
+
+###  http://www.registar.kam.hr/Element/jo/P10010
+<http://www.registar.kam.hr/Element/jo/P10010> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10008> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10008> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P10010" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje jedinicu opisa s kolektivnim agentom." ;
+                                               rdfs:label "je jedinica opisa povezana s kolektivnim agentom" .
+
+
+###  http://www.registar.kam.hr/Element/jo/P10011
+<http://www.registar.kam.hr/Element/jo/P10011> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10010> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10009> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P10011" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje jedinicu opisa s korporativnim tijelom." ;
+                                               rdfs:label "je jedinica opisa povezana s korporativnim tijelom" .
+
+
+###  http://www.registar.kam.hr/Element/jo/P10012
+<http://www.registar.kam.hr/Element/jo/P10012> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10010> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10010> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P10012" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje jedinicu opisa s obitelji." ;
+                                               rdfs:label "je jedinica opisa povezana s obitelji" .
+
+
+###  http://www.registar.kam.hr/Element/jo/P10013
+<http://www.registar.kam.hr/Element/jo/P10013> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10003> ;
+                                               owl:inverseOf <http://www.registar.kam.hr/Elements/m/P11003> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10011> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P10013" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje jedinicu opis s mjestom." ;
+                                               rdfs:label "je jedinica opisa povezana s mjestom" .
+
+
+###  http://www.registar.kam.hr/Element/jo/P10014
+<http://www.registar.kam.hr/Element/jo/P10014> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10003> ;
+                                               owl:inverseOf <http://www.registar.kam.hr/Elements/vr/P12002> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P10014" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje jedinicu opisa s vremenskim rasponom." ;
+                                               rdfs:label "je jedinica opisa povezana s vremenskim rasponom" .
+
+
+###  http://www.registar.kam.hr/Element/jo/P10015
+<http://www.registar.kam.hr/Element/jo/P10015> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10003> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10013> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P10015" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje jedinicu opisa s nomenom." ;
+                                               rdfs:label "ima nomen za jedinicu opisa" .
+
+
+###  http://www.registar.kam.hr/Element/jo/P10016
+<http://www.registar.kam.hr/Element/jo/P10016> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10015> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10013> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P10016" ;
+                                               rdfs:comment "Povezuje jedinicu opisa s imenom, nazivom ili drugom oznakom pomoću koje se u informacijskom sustavu identificira jedinica opisa i/ili pronalaze i okupljaju podaci o jedinici opisa." ;
+                                               rdfs:label "ima oznaku za jedinicu opisa" .
+
+
+###  http://www.registar.kam.hr/Element/jo/P10017
+<http://www.registar.kam.hr/Element/jo/P10017> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10016> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10013> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P10017" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje jedinicu opisa s nadziranom pristupnicom koja je preuzeta iz nadziranog rječnika ili oblikovana prema određenim pravilima." ;
+                                               rdfs:label "ima nadziranu pristupnicu za jedinicu opisa" .
+
+
+###  http://www.registar.kam.hr/Element/jo/P10018
+<http://www.registar.kam.hr/Element/jo/P10018> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10017> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10013> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P10018" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje jedinicu opisa s usvojenom pristupnicom koja unutar nekog sustava jednoznačno identificira jedinicu opisa i okuplja podatke o jedinici opisa." ;
+                                               rdfs:label "ima usvojenu pristupnicu za jedinicu opisa" .
+
+
+###  http://www.registar.kam.hr/Element/jo/P10019
+<http://www.registar.kam.hr/Element/jo/P10019> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10017> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10013> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P10019" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje jedinicu opisa s varijantnom pristupnicom koja nije odabrana za usvojenu pristupnicu." ;
+                                               rdfs:label "ima varijantnu pristupnicu za jedinicu opisa" .
+
+
+###  http://www.registar.kam.hr/Element/jo/P10020
+<http://www.registar.kam.hr/Element/jo/P10020> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10016> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10013> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P10020" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje jedinicu opisa s brojčanom ili slovno-brojčanom oznakom, namijenjenoj strojnoj ili ljudskoj uporabi, koji unutar određenog sustava jednoznačno identificira jedinicu opisa." ;
+                                               rdfs:label "ima identifikator za jedinicu opisa" .
+
+
+###  http://www.registar.kam.hr/Element/jo/P10021
+<http://www.registar.kam.hr/Element/jo/P10021> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10004> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P10021" ;
+                                               rdfs:comment "Povezuje jedinicu opisa s izrazom, nadziranim nazivom, imenom, naslovom, identifikatorom ili drugom nadziranom oznakom koja označava temu kojom se bavi ili koju prikazuje djelo." ;
+                                               rdfs:label "je jedinica opisa predmet djela" .
+
+
+###  http://www.registar.kam.hr/Element/jo/P10022
+<http://www.registar.kam.hr/Element/jo/P10022> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P10022" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje jedinicu opisa s bilo kojom informacijom o jedinici opisa koja nije zabilježena uporabom specifičnih atributa i/ili odnosa." ;
+                                               rdfs:label "ima napomenu o jedinici opisa" .
+
+
+###  http://www.registar.kam.hr/Element/jo/P10023
+<http://www.registar.kam.hr/Element/jo/P10023> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10022> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:P10023" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje jedinicu opisa s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između jedinice opisa i druge jedinice opisa ili više drugih jedinica opisa." ;
+                                               rdfs:label "ima napomenu o odnosu jedinice opisa i drugih jedinica opisa" .
+
+
+###  http://www.registar.kam.hr/Elements/a/P60001
+<http://www.registar.kam.hr/Elements/a/P60001> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10001> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10006> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kama:P60001" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje agenta s izrazom koji označava je li agent osoba, kolektivni agent, korporativno tijelo ili obitelj." ;
+                                               rdfs:label "ima vrstu agenta" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20019
+<http://www.registar.kam.hr/Elements/d/P20019> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/d/P20018> ;
+                                               owl:inverseOf <http://www.registar.kam.hr/Elements/d/P20020> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20019" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s djelom koji mu je izvorno dio." ;
+                                               rdfs:label "ima dio djelo" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20020
+<http://www.registar.kam.hr/Elements/d/P20020> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/d/P20018> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20020" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s djelom kojega je izvorno dio." ;
+                                               rdfs:label "je dio djela" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20021
+<http://www.registar.kam.hr/Elements/d/P20021> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/d/P20018> ;
+                                               owl:inverseOf <http://www.registar.kam.hr/Elements/d/P20022> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20021" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s djelom koje je nastalo kao prilog ili dopuna tome djelu." ;
+                                               rdfs:label "je dopuna djelu" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20022
+<http://www.registar.kam.hr/Elements/d/P20022> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/d/P20018> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20022" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s djelom kojega je prilog ili dopuna." ;
+                                               rdfs:label "ima dopunu djelo" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20023
+<http://www.registar.kam.hr/Elements/d/P20023> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/d/P20018> ;
+                                               owl:inverseOf <http://www.registar.kam.hr/Elements/d/P20024> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20023" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s djelom čiji sadržaj prethodi drugom djelu." ;
+                                               rdfs:label "prethodi djelu" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20024
+<http://www.registar.kam.hr/Elements/d/P20024> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/d/P20018> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20024" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s djelom čiji se sadržaj nastavlja u drugom djelu." ;
+                                               rdfs:label "slijedi djelo" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20025
+<http://www.registar.kam.hr/Elements/d/P20025> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/d/P20018> ;
+                                               owl:inverseOf <http://www.registar.kam.hr/Elements/d/P20026> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20025" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s djelom koje je prerađeno u novo djelo prilagodbom drugoj vrsti publike ili promjenom oblika sadržaja, žanra, stila, narativnih elemenata i sl." ;
+                                               rdfs:label "je prerađeno u djelo" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20026
+<http://www.registar.kam.hr/Elements/d/P20026> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/d/P20018> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20026" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo koje je prerađeno u novo djelo prilagodbom drugoj vrsti publike ili promjenom oblika sadržaja, žanra, stila, narativnih elemenata i sl. s izvornim djelom." ;
+                                               rdfs:label "je preradba djela" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20027
+<http://www.registar.kam.hr/Elements/d/P20027> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/d/P20018> ;
+                                               owl:inverseOf <http://www.registar.kam.hr/Elements/d/P20028> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:20027" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s djelom ili dijelom djela koje ga preuzima, citira ili oponaša." ;
+                                               rdfs:label "je prisvojeno u djelu" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20028
+<http://www.registar.kam.hr/Elements/d/P20028> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/d/P20018> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20028" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo ili dio djela s djelom koje ga je preuzelo, citiralo ili oponašalo." ;
+                                               rdfs:label "prisvaja djelo" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20029
+<http://www.registar.kam.hr/Elements/d/P20029> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/d/P20018> ;
+                                               owl:inverseOf <http://www.registar.kam.hr/Elements/d/P20030> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20029" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s djelom koje je stvoreno promjenom plana izdavanja i/ili uredničke politike." ;
+                                               rdfs:label "je promijenjeno u djelo" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20030
+<http://www.registar.kam.hr/Elements/d/P20030> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/d/P20018> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:20030" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo koje je stvoreno promjenom plana izdavanja i/ili uredničke politike jednoga djela stvoreno s izvornim djelom." ;
+                                               rdfs:label "je nastalo promjenom djela" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20031
+<http://www.registar.kam.hr/Elements/d/P20031> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/d/P20018> ;
+                                               owl:inverseOf <http://www.registar.kam.hr/Elements/d/P20032> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20031" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo koje je prostorni objekt (skulptura, uporabni predmet ili sl.) oblikovan s namjerom da vjerno prenese izgled drugog prostornog objekta s izvornim djelom." ;
+                                               rdfs:label "je replika djela" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20032
+<http://www.registar.kam.hr/Elements/d/P20032> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/d/P20018> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20032" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje izvorno djelo koje je prostorni objekt (skulptura, uporabni predmet ili sl.)  s djelom oblikovanim s namjerom da vjerno prenese izgled drugog prostornog objekta." ;
+                                               rdfs:label "je replicirano u djelu" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20033
+<http://www.registar.kam.hr/Elements/d/P20033> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/d/P20017> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10003> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20033" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s izrazom." ;
+                                               rdfs:label "je djelo povezano s izrazom" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20034
+<http://www.registar.kam.hr/Elements/d/P20034> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/d/P20033> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10003> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20034" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s izrazom kroz koji je realizirano." ;
+                                               rdfs:label "je realizirano u izrazu" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20035
+<http://www.registar.kam.hr/Elements/d/P20035> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/d/P20017> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10006> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20035" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s agentom." ;
+                                               rdfs:label "je djelo povezano s agentom" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20036
+<http://www.registar.kam.hr/Elements/d/P20036> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/d/P20035> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10007> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20036" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s osobom." ;
+                                               rdfs:label "je povezano s osobom" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20037
+<http://www.registar.kam.hr/Elements/d/P20037> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/d/P20035> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10008> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20037" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s kolektivnim agentom." ;
+                                               rdfs:label "je povezano s kolektivnim agentom" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20038
+<http://www.registar.kam.hr/Elements/d/P20038> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/d/P20037> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10009> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20038" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s korporativnim tijelom." ;
+                                               rdfs:label "je povezano s korporativnim tijelom" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20039
+<http://www.registar.kam.hr/Elements/d/P20039> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/d/P20027> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10010> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20039" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s obitelji." ;
+                                               rdfs:label "je povezano s obitelji" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20040
+<http://www.registar.kam.hr/Elements/d/P20040> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/d/P20035> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ,
+                                                           <http://www.registar.kam.hr/Element/c/#C10003> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10006> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20040" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s agentom čije se ovlasti, funkcije i odgovornosti temelje na djelu." ;
+                                               rdfs:label "ima agenta čije ovlasti proizlaze iz djela" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20041
+<http://www.registar.kam.hr/Elements/d/P20041> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/d/P20040> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10007> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "P20041" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s osobom čije se ovlasti, funkcije i odgovornosti temelje na djelu." ;
+                                               rdfs:label "ima osobu čije ovlasti proizlaze iz djela" .
+
+
+###  http://www.registar.kam.hr/Elements/d/P20042
+<http://www.registar.kam.hr/Elements/d/P20042> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/d/P20040> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10008> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:P20042" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje djelo s kolektivnim agentom čije se ovlasti, funkcije i odgovornosti temelje na djelu." ;
+                                               rdfs:label "ima kolektivnog agenta čije ovlasti proizlaze iz djela" .
+
+
+###  http://www.registar.kam.hr/Elements/i/P30001
+<http://www.registar.kam.hr/Elements/i/P30001> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10003> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kami:P30001" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje izraz s izrazom, nadziranim nazivom, kôdom, identifikatorom ili drugom oznakom koja označava jezik tekstualnog sadržaja jedinice građe." ;
+                                               rdfs:label "ima jezik sadržaja" .
+
+
+###  http://www.registar.kam.hr/Elements/i/P30002
+<http://www.registar.kam.hr/Elements/i/P30002> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10003> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje izraz s kratkim nestrukturiranim tekstom u kojemu se navode pojedinosti o jeziku ili jezicima sadržaja jedinice građe." ;
+                                               rdfs:label "ima napomenu o jeziku sadržaja" .
+
+
+###  http://www.registar.kam.hr/Elements/i/P30003
+<http://www.registar.kam.hr/Elements/i/P30003> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10003> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kami:P30003" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje izraz s izrazom, nadziranim nazivom, kôdom, identifikatorom ili drugom oznakom za jezik kojim je izvorno zabilježen sadržaj jedinice građe." ;
+                                               rdfs:label "ima jezik izvornika" .
+
+
+###  http://www.registar.kam.hr/Elements/m/P11001
+<http://www.registar.kam.hr/Elements/m/P11001> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10001> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10011> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamm:P11001" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje mjesto s izrazom, nadzirani nazivom, kôdom ili drugom oznakom koja označava vrstu kojoj pripada mjesto s obzirom na svoja prirodna ili društvena obilježja." ;
+                                               rdfs:label "ima vrstu mjesta" .
+
+
+###  http://www.registar.kam.hr/Elements/m/P11002
+<http://www.registar.kam.hr/Elements/m/P11002> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10011> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamm:P11002" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje mjesto s oznakom granicâ suvremenog ili povijesnog mjesta na Zemlji." ;
+                                               rdfs:label "ima geografski položaj mjesta" .
+
+
+###  http://www.registar.kam.hr/Elements/m/P11003
+<http://www.registar.kam.hr/Elements/m/P11003> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10003> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10011> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamm:P11003" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje mjesto s jedinicom opisa." ;
+                                               rdfs:label "je mjesto povezano s jedinicom opisa" .
+
+
+###  http://www.registar.kam.hr/Elements/m/P11004
+<http://www.registar.kam.hr/Elements/m/P11004> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/m/P11003> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10011> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamm:P11004" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje mjesto s djelom." ;
+                                               rdfs:label "je mjesto povezano s djelom" .
+
+
+###  http://www.registar.kam.hr/Elements/m/P11005
+<http://www.registar.kam.hr/Elements/m/P11005> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/m/P11004> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10011> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamm:P11005" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje mjesto s djelom na kojemu je djelo nastalo." ;
+                                               rdfs:label "je mjesto nastanka djela" .
+
+
+###  http://www.registar.kam.hr/Elements/m/P11006
+<http://www.registar.kam.hr/Elements/m/P11006> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/m/P11004> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10011> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamm:P11006" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje mjesto s izrazom, nadziranim nazivom, imenom, naslovom, identifikatorom ili drugom nadziranom oznakom koja označava temu kojom se bavi ili koju prikazuje djelo." ;
+                                               rdfs:label "je mjesto predmet djela" .
+
+
+###  http://www.registar.kam.hr/Elements/m/P11007
+<http://www.registar.kam.hr/Elements/m/P11007> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/m/P11004> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10011> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamm:P11007" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje mjesto s djelom za koje mjesto se opravdano pretpostavlja da je povezano s nastankom djela." ;
+                                               rdfs:label "je pretpostavljeno mjesto nastanka djela" .
+
+
+###  http://www.registar.kam.hr/Elements/m/P11008
+<http://www.registar.kam.hr/Elements/m/P11008> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/m/P11004> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10011> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamm:P11008" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje mjesto s djelom za koje se mjesto pogrešno ili neistinito navodi da je povezano s nastankom djela." ;
+                                               rdfs:label "je navodno mjesto nastanka djela" .
+
+
+###  http://www.registar.kam.hr/Elements/m/P11009
+<http://www.registar.kam.hr/Elements/m/P11009> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/m/P11003> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10011> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10003> ;
+                                               rdfs:label "je mjesto povezano s izrazom" .
+
+
+###  http://www.registar.kam.hr/Elements/m/P11010
+<http://www.registar.kam.hr/Elements/m/P11010> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/m/P11009> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10011> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10003> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamm:P11010" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje mjesto s realizacijom određenog izraza djela." ;
+                                               rdfs:label "je mjesto nastanka izraza" .
+
+
+###  http://www.registar.kam.hr/Elements/m/P11011
+<http://www.registar.kam.hr/Elements/m/P11011> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/m/P11003> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10011> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10004> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamm:P11011" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje mjesto s pojavnim oblikom." ;
+                                               rdfs:label "je mjesto povezano s pojavnim oblikom" .
+
+
+###  http://www.registar.kam.hr/Elements/m/P11012
+<http://www.registar.kam.hr/Elements/m/P11012> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/m/P11011> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10011> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10004> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamm:P11012" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje mjesto s pojavnim oblikom na kojemu je pojavni oblik objavljen." ;
+                                               rdfs:label "je mjesto izdavanja pojavnog oblika" .
+
+
+###  http://www.registar.kam.hr/Elements/m/P11013
+<http://www.registar.kam.hr/Elements/m/P11013> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/m/P11011> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10011> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10004> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamm:P11013" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje mjesto s pojavnim oblikom na kojemu je pojavni oblik proizveden." ;
+                                               rdfs:label "je mjesto proizvodnje pojavnog oblika" .
+
+
+###  http://www.registar.kam.hr/Elements/m/P11014
+<http://www.registar.kam.hr/Elements/m/P11014> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/m/P11011> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10011> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10004> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamm:P11014" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje mjesto s pojavnim oblikom na kojemu je pojavni oblik raspačavan." ;
+                                               rdfs:label "je mjesto raspačavanja pojavnog oblika" .
+
+
+###  http://www.registar.kam.hr/Elements/m/P11015
+<http://www.registar.kam.hr/Elements/m/P11015> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/m/P11011> ;
+                                               rdfs:domain <http://www.registar.kam.hr/Element/c/#C10011> ;
+                                               rdfs:range <http://www.registar.kam.hr/Element/c/#C10004> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamm:P11015" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje mjesto s pojavnim oblikom na kojemu je pojavni oblik tiskan." ;
+                                               rdfs:label "je mjesto tiskanja pojavnog oblika" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12001
+<http://www.registar.kam.hr/Elements/vr/P12001> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10001> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12001" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s izrazom, nadziranim nazivom, kôdom ili drugom oznakom koja označava vrstu kojoj vremenski raspon pripada s obzirom na svoje trajanje." ;
+                                                rdfs:label "ima vrstu vremenskog raspona" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12002
+<http://www.registar.kam.hr/Elements/vr/P12002> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10003> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "P12002" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s jedinicom opisa." ;
+                                                rdfs:label "ima vremenski raspon povezan s jedinicom opisa" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12003
+<http://www.registar.kam.hr/Elements/vr/P12003> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12002> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12003" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s djelom." ;
+                                                rdfs:label "je vremenski raspon povezan s djelom" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12004
+<http://www.registar.kam.hr/Elements/vr/P12004> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12003> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12004" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s djelom za koji se vremenski raspon pogrešno ili neistinito navodi da je povezan s nastankom djela." ;
+                                                rdfs:label "je navodno vrijeme nastanka djela" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12005
+<http://www.registar.kam.hr/Elements/vr/P12005> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12003> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12005" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s  djelom za koji se vremenski raspon opravdano pretpostavlja da je povezan s nastankom djela." ;
+                                                rdfs:label "je pretpostavljeno vrijeme nastanka djela" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12006
+<http://www.registar.kam.hr/Elements/vr/P12006> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12003> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12006" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s djelom u kojemu je vremenskom rasponu djelo nastalo." ;
+                                                rdfs:label "je vrijeme nastanka djela" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12007
+<http://www.registar.kam.hr/Elements/vr/P12007> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12002> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10003> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12007" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s izrazom." ;
+                                                rdfs:label "je vremenski raspon povezan s izrazom" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12008
+<http://www.registar.kam.hr/Elements/vr/P12008> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12007> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10003> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12008" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s izrazom za koji je vremenski raspon povezan realizacijom određenog izraza djela." ;
+                                                rdfs:label "je vrijeme nastanka izraza" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12009
+<http://www.registar.kam.hr/Elements/vr/P12009> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12002> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10004> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12009" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s pojavnim oblikom." ;
+                                                rdfs:label "je vremenski raspon povezan s pojavnim oblikom" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12010
+<http://www.registar.kam.hr/Elements/vr/P12010> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12009> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10004> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12010" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s pojavnim oblikom koji je u tom vremenskom rasponu izdan." ;
+                                                rdfs:label "je vrijeme izdavanja pojavnog oblika" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12011
+<http://www.registar.kam.hr/Elements/vr/P12011> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12009> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10004> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12011" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s pojavnim oblikom koji je u tom vremenskom rasponu proizveden." ;
+                                                rdfs:label "je vrijeme proizvodnje pojavnog oblika" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12012
+<http://www.registar.kam.hr/Elements/vr/P12012> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12009> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10004> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12012" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s pojavnim oblikom koji je u tom vremenskom rasponu tiskan." ;
+                                                rdfs:label "je vrijeme tiskanja pojavnog oblika" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12013
+<http://www.registar.kam.hr/Elements/vr/P12013> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12002> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10005> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12013" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s primjerkom." ;
+                                                rdfs:label "je vremenski raspon povezan s primjerkom" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12014
+<http://www.registar.kam.hr/Elements/vr/P12014> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12013> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10005> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12014" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s primjerkom nad kojim su izvedeni konzervatorski i/ili restauratorski postupci u tom vremenskom rasponu." ;
+                                                rdfs:label "je vrijeme konzervacije ili restauracije primjerka" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12015
+<http://www.registar.kam.hr/Elements/vr/P12015> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12013> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10005> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12015" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s primjerkom koji je u tom vremenskom rasponu nabavljen." ;
+                                                rdfs:label "je vrijeme nabave primjerka" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12016
+<http://www.registar.kam.hr/Elements/vr/P12016> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12013> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10005> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12016" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s primjerkom koji je u tom vremenskom rasponu pronađen." ;
+                                                rdfs:label "je vrijeme nalaska primjerka" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12017
+<http://www.registar.kam.hr/Elements/vr/P12017> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12002> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10006> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12017" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s agentom." ;
+                                                rdfs:label "je vremenski raspon povezan s agentom" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12018
+<http://www.registar.kam.hr/Elements/vr/P12018> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12017> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10007> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12018" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s osobom." ;
+                                                rdfs:label "je vremenski raspon povezan s osobom" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12019
+<http://www.registar.kam.hr/Elements/vr/P12019> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12018> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10007> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12019" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s osobom koja je u tom vremenskom rasponu djelovala." ;
+                                                rdfs:label "je vrijeme djelovanja osobe" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12020
+<http://www.registar.kam.hr/Elements/vr/P12020> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12018> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10007> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12020" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s osobom koja je u tom vremenskom rasponu obnašala određenu dužnost ili položaj." ;
+                                                rdfs:label "je vrijeme obnašanja dužnosti ili položaja osobe" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12021
+<http://www.registar.kam.hr/Elements/vr/P12021> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12018> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10007> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12021" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s osobom koja je u tom vremenskom rasponu rođena." ;
+                                                rdfs:label "je vrijeme rođenja osobe" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12022
+<http://www.registar.kam.hr/Elements/vr/P12022> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12018> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10007> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12022" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s osobom koja je u tom vremenskom rasponu umrla." ;
+                                                rdfs:label "je vrijeme smrti osobe" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12023
+<http://www.registar.kam.hr/Elements/vr/P12023> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12017> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10008> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12023" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s kolektivnim agentom." ;
+                                                rdfs:label "je vremenski raspon povezan s kolektivnim agentom" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12024
+<http://www.registar.kam.hr/Elements/vr/P12024> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12023> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10009> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12024" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s korporativnim tijelom." ;
+                                                rdfs:label "je vremenski raspon povezan s korporativnim tijelom" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12025
+<http://www.registar.kam.hr/Elements/vr/P12025> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12024> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10009> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12025" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s korporativnim tijelom koje je u tom vremenskom rasponu djelovalo." ;
+                                                rdfs:label "je vrijeme djelovanja korporativnog tijela" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12026
+<http://www.registar.kam.hr/Elements/vr/P12026> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12024> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10009> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12026" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s korporativnim tijelom koje je u tom vremenskom rasponu osnovano." ;
+                                                rdfs:label "je vrijeme osnutka korporativnog tijela" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12027
+<http://www.registar.kam.hr/Elements/vr/P12027> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12024> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10009> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12027" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s korporativnim tijelom koje je u tom vremenskom rasponu prestalo s djelovanjem." ;
+                                                rdfs:label "je vrijeme završetka djelovanja korporativnog tijela" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12028
+<http://www.registar.kam.hr/Elements/vr/P12028> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12023> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10010> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12028" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s obitelji." ;
+                                                rdfs:label "je vremenski raspon povezan s obitelji" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12029
+<http://www.registar.kam.hr/Elements/vr/P12029> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12028> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10010> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12029" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s obitelji koja je u tom vremenskom razdoblju djelovala." ;
+                                                rdfs:label "je vrijeme djelovanja obitelji" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12030
+<http://www.registar.kam.hr/Elements/vr/P12030> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12002> ;
+                                                owl:inverseOf <http://www.registar.kam.hr/Elements/vr/P12030> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12030" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s vremenskim rasponom." ;
+                                                rdfs:label "je vremenski raspon povezan s vremenskim rasponom" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12031
+<http://www.registar.kam.hr/Elements/vr/P12031> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12030> ;
+                                                owl:inverseOf <http://www.registar.kam.hr/Elements/vr/P12032> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12031" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s vremenskim rasponom koji je njegov dio." ;
+                                                rdfs:label "je vremenska cjelina vremenskog raspona" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12032
+<http://www.registar.kam.hr/Elements/vr/P12032> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12030> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12032" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s vremenskim rasponom kojega je dio." ;
+                                                rdfs:label "je vremenski dio vremenskog raspona" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12033
+<http://www.registar.kam.hr/Elements/vr/P12033> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12003> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10002> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12033" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s izrazom, nadziranim nazivom, imenom, naslovom, identifikatorom ili drugom nadziranom oznakom koja označava temu kojom se bavi ili koju prikazuje djelo." ;
+                                                rdfs:label "je vremenski raspon predmet djela" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12034
+<http://www.registar.kam.hr/Elements/vr/P12034> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12013> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10005> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12034" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s primjerkom koji je u tom vremenskom rasponu korišten." ;
+                                                rdfs:label "je vrijeme korištenja primjerka" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12035
+<http://www.registar.kam.hr/Elements/vr/P12035> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12006> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10013> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12035" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s nomenom." ;
+                                                rdfs:label "ima nomen za vremenski raspon" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12036
+<http://www.registar.kam.hr/Elements/vr/P12036> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12035> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10013> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12036" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s imenom, nazivom ili drugom oznakom pomoću koje se u informacijskom sustavu identificira vremenski raspon i/ili pronalaze i okupljaju podaci o vremenskom rasponu." ;
+                                                rdfs:label "ima oznaku za vremenski raspon" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12037
+<http://www.registar.kam.hr/Elements/vr/P12037> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12036> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10013> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12037" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s pristupnicom koja je preuzeta iz nadziranog rječnika ili oblikovana prema određenim pravilima." ;
+                                                rdfs:label "ima nadziranu pristupnicu za vremenski raspon" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12038
+<http://www.registar.kam.hr/Elements/vr/P12038> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12037> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10013> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12038" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s nadziranom riječi, izrazom ili nizom riječi i/ili drugih oznaka koje unutar nekog sustava jednoznačno identificiraju vremenski raspon i okupljaju podatke o vremenskom rasponu." ;
+                                                rdfs:label "ima usvojenu pristupnicu za vremenski raspon" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12039
+<http://www.registar.kam.hr/Elements/vr/P12039> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12037> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10013> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12039" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s riječi, nizom riječi i/ili drugih oznaka koje identificiraju vremenski raspon unutar određenog sustava, a nisu odabrane za usvojenu pristupnicu." ;
+                                                rdfs:label "ima varijantnu pristupnicu za vremenski raspon" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12040
+<http://www.registar.kam.hr/Elements/vr/P12040> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12035> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                rdfs:range <http://www.registar.kam.hr/Element/c/#C10013> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12040" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s brojčanom ili slovno-brojčanom oznakom koja unutar određenog sustava jednoznačno identificira vremenski raspon." ;
+                                                rdfs:label "ima identifikator za vremenski raspon" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12041
+<http://www.registar.kam.hr/Elements/vr/P12041> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Element/jo/P10022> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12041" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s tekstom koji sadržava pojedinosti o vremenskom rasponu koje se smatraju značajnima, a nisu iskazane u drugim elementima opisa." ;
+                                                rdfs:label "ima napomenu o vremenskom rasponu" .
+
+
+###  http://www.registar.kam.hr/Elements/vr/P12042
+<http://www.registar.kam.hr/Elements/vr/P12042> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.registar.kam.hr/Elements/vr/P12041> ;
+                                                rdfs:domain <http://www.registar.kam.hr/Element/c/#C10012> ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:P12042" ;
+                                                <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Povezuje vremenski raspon s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između vremenskog raspona i drugog vremenskog raspona ili više drugih vremenskih raspona, odnosno vremenskog raspona i druge ili više drugih jedinica opisa." ;
+                                                rdfs:label "ima napomenu o odnosu vremenskog raspona i drugih jedinica opisa" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.registar.kam.hr/Element/c/#C10001
+<http://www.registar.kam.hr/Element/c/#C10001> rdf:type owl:Class ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamjo:C10001" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> ""@hr ,
+                                                                                                          "Entitet koji se identificira i opisuje u informacijskom sustavu knjižnice, arhiva ili muzeja."@hr ;
+                                               rdfs:comment "Jedinica opisa može biti jedinica građe: djelo, izraz, pojavni oblik i primjerak, agent: osoba, kolektivni agent: korporativno tijelo i obitelj, mjesto, vremenski raspon i nomen."@hr ;
+                                               rdfs:isDefinedBy "http://www.registar.kam.hr/Element/c/#C10001" ;
+                                               rdfs:label "Jedinica opisa" .
+
+
+###  http://www.registar.kam.hr/Element/c/#C10002
+<http://www.registar.kam.hr/Element/c/#C10002> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamd:C10002" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Idejni sadržaj jedinice građe, koji jedinicu građe čini prepoznatljivom konceptualnom cjelinom." ;
+                                               rdfs:comment "Djelo se može javiti u različitim verzijama ili na različitim medijima. Svojstva djela ostaju nepromijenjena bez obzira na izraz ili pojavni oblik u kojemu se djelo javlja. Djelo nastaje djelovanjem jednoga ili više agenata. Agenti mogu biti poznati ili nepoznati (neutvrđeni). Djelo može i ne mora nastati s određenom intelektualnom i/ili umjetničkom namjerom. Djelo može biti nedovršeno." ;
+                                               rdfs:isDefinedBy "http://www.registar.kam.hr/Element/c/#C10002" ;
+                                               rdfs:label "Djelo" .
+
+
+###  http://www.registar.kam.hr/Element/c/#C10003
+<http://www.registar.kam.hr/Element/c/#C10003> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kami:C10003" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Niz znakova određenog znakovnog sustava (riječi, rečenica, brojki, pokreta, oblika, tonova, melodija, kadrova itd.) putem kojih je realizirano i priopćeno djelo." ;
+                                               rdfs:comment "Isti izraz djela može se javiti u različitim formatima i izdanjima, na različitim materijalnim nositeljima itd. Svojstva izraza ostaju nepromijenjena bez obzira na pojavni oblik u kojemu se izraz javlja. Djelo može postojati: u samo jednom, izvornom izrazu (npr. ulje na platnu, skulptura, ručno oblikovan uporabni predmet), u izvornom izrazu i različitim varijantama (npr. tekst u izvornom obliku i prijevodu; skladba za izvorni izvođački sastav i u drugom aranžmanu)." ;
+                                               rdfs:isDefinedBy "http://www.registar.kam.hr/Element/c/#C10003" ;
+                                               rdfs:label "Izraz" .
+
+
+###  http://www.registar.kam.hr/Element/c/#C10004
+<http://www.registar.kam.hr/Element/c/#C10004> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kampo:C10004" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Skup svih materijalnih objekata koji utjelovljuju isto djelo i nastali su ili združeni kao rezultat aktivnosti istog agenta." ;
+                                               rdfs:comment "Kod ručno izrađenih objekata pojavni oblik postoji samo u jednom primjerku. Objekti nastali mehaničkim umnožavanjem, posebice u procesu industrijske proizvodnje, tvore pojavni oblik koji se sastoji od više identičnih primjeraka (npr. izdanje ili proizvodna serija)." ;
+                                               rdfs:isDefinedBy "http://www.registar.kam.hr/Element/c/#C10004" ;
+                                               rdfs:label "Pojavni oblik" .
+
+
+###  http://www.registar.kam.hr/Element/c/#C10005
+<http://www.registar.kam.hr/Element/c/#C10005> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamp:C10005" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Pojedačni materijalni nositelj." ;
+                                               rdfs:comment "Primjerak može biti: predstavnik pojavnog oblika koji postoji u samo jednom primjerku (npr. umjetnička slika, skulptura, ručno oblikovani umjetnički ili uporabni predmet itd.), predstavnik mehanički umnoženoga skupnog ili pojedinačnog pojavnog oblika, koji postoji u više identičnih primjeraka (npr. izdanje ili proizvodne serija)." ;
+                                               rdfs:isDefinedBy "http://www.registar.kam.hr/Element/c/#C10005" ;
+                                               rdfs:label "Primjerak" .
+
+
+###  http://www.registar.kam.hr/Element/c/#C10006
+<http://www.registar.kam.hr/Element/c/#C10006> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kama:C10006" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Osoba ili skupina osoba sposobnih za voljno djelovanje i preuzimanje prava i odgovornosti, što za posljedicu ima stvaranje, preinaku, posjedovanje i druge aktivnosti povezane s jedinicom građe." ;
+                                               rdfs:comment "Agent može biti: osoba: odnosno pojedinačno ljudsko biće čije se postojanje može dokazati ili se opravdano pretpostavlja; kolektivni agent: odnosno skupina osoba i/ili organizacijâ koja organizirano djeluje kao cjelina pod zajedničkim imenom." ;
+                                               rdfs:isDefinedBy "http://www.registar.kam.hr/Element/c/#C10006" ;
+                                               rdfs:label "Agent" .
+
+
+###  http://www.registar.kam.hr/Element/c/#C10007
+<http://www.registar.kam.hr/Element/c/#C10007> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.registar.kam.hr/Element/c/#C10006> ;
+                                               owl:disjointWith <http://www.registar.kam.hr/Element/c/#C10008> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamo:C10007" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Pojedinačno ljudsko biće čije se postojanje može dokazati ili se opravdano pretpostavlja." ;
+                                               rdfs:comment "" ;
+                                               rdfs:isDefinedBy "http://www.registar.kam.hr/Element/c/#C10007" ;
+                                               rdfs:label "osoba" .
+
+
+###  http://www.registar.kam.hr/Element/c/#C10008
+<http://www.registar.kam.hr/Element/c/#C10008> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.registar.kam.hr/Element/c/#C10006> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamka:C10008" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Skupina osoba i/ili organizacijâ koja organizirano djeluje kao cjelina pod zajedničkim imenom." ;
+                                               rdfs:comment "Kolektivni agent može biti: korporativno tijelo i obitelj." ;
+                                               rdfs:isDefinedBy "http://www.registar.kam.hr/Element/c/#C10008" ;
+                                               rdfs:label "kolektivni agent" .
+
+
+###  http://www.registar.kam.hr/Element/c/#C10009
+<http://www.registar.kam.hr/Element/c/#C10009> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.registar.kam.hr/Element/c/#C10008> ;
+                                               owl:disjointWith <http://www.registar.kam.hr/Element/c/#C10010> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamkt:C10009" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Skupina osoba koje organizirano djeluju pod zajedničkim imenom, a ne predstavljaju se kao obitelj." ;
+                                               rdfs:comment "Korporativna tijela uključuju: korporativna tijela u užem smislu, grupe i korporativne sastanke." ;
+                                               rdfs:isDefinedBy "http://www.registar.kam.hr/Element/c/#C10009" ;
+                                               rdfs:label "korporativno tijelo" .
+
+
+###  http://www.registar.kam.hr/Element/c/#C10010
+<http://www.registar.kam.hr/Element/c/#C10010> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.registar.kam.hr/Element/c/#C10008> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamob:C10010" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "skupina od dviju ili više osoba koje su povezane zajedničkom linijom predaka, rođenjem, brakom, posvojenjem, registriranom zajednicom ili sličnim pravnim statusom ili se na neki drugi način predstavljaju kao obitelj." ;
+                                               rdfs:isDefinedBy "http://www.registar.kam.hr/Element/c/#C10010" ;
+                                               rdfs:label "obitelj" .
+
+
+###  http://www.registar.kam.hr/Element/c/#C10011
+<http://www.registar.kam.hr/Element/c/#C10011> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamm:C10011" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Dio fizičkog prostora na Zemlji ili izvan nje." ;
+                                               rdfs:comment "Mjesta mogu biti prirodna (fizičko-geografska) ili društveno-geografska područja." ;
+                                               rdfs:isDefinedBy "http://www.registar.kam.hr/Element/c/#C10011" ;
+                                               rdfs:label "Mjesto" .
+
+
+###  http://www.registar.kam.hr/Element/c/#C10012
+<http://www.registar.kam.hr/Element/c/#C10012> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamvr:C10012" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Protok vremena koji ima mjerljivo trajanje, bez obzira kako kratko ili dugo, i može se identificirati početkom i krajem." ;
+                                               rdfs:comment "Vremenski raspon uključuje geološka razdoblja, povijesna razdoblja, tisućljeća, stoljeća, desetljeća, godine i njihove raspone, nadnevke, sate, minute i sekunde." ;
+                                               rdfs:isDefinedBy "http://www.registar.kam.hr/Element/c/#C10012" ;
+                                               rdfs:label "Vremenski raspon" .
+
+
+###  http://www.registar.kam.hr/Element/c/#C10013
+<http://www.registar.kam.hr/Element/c/#C10013> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.registar.kam.hr/Element/c/#C10001> ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/ID> "kamn:C10013" ;
+                                               <http://www.registar.kam.hr/ontologies/ont.owl/definition> "Veza između entiteta i oznake na koja se na njega odnosi." ;
+                                               rdfs:comment "Nomen povezuje bilo koji naziv (tj., kombinaciju znakova) koji se upotrebljava za upućivanje na instancu bilo kojeg entiteta koji se pronađe u bibliografskom univerzumu s tim entitetom. Svaki entitet na koji se upućuje u univerzumu govora imenovan je barem jednim nomenom." ;
+                                               rdfs:isDefinedBy "http://www.registar.kam.hr/Element/c/#C10013" ;
+                                               rdfs:label "Nomen" .
+
+
+[ rdfs:comment "Mjesto je dio fizičkog prostora na Zemlji ili izvan nje. Mitska, legendarna, izmišljena i fikcionalizirana područja na Zemlji ili izvan nje ne smatraju se mjestima."
+] .
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+   owl:members ( <http://www.registar.kam.hr/Element/c/#C10002>
+                 <http://www.registar.kam.hr/Element/c/#C10003>
+                 <http://www.registar.kam.hr/Element/c/#C10004>
+                 <http://www.registar.kam.hr/Element/c/#C10005>
+               )
+ ] .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
