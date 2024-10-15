@@ -196,6 +196,31 @@
             }
         }
 
+        // Function to display class details (including CURIE)
+        function displayClassDetails(ontologyClass) {
+            content.innerHTML = '';  // Clear the previous content
+
+            const title = ontologyClass['http://www.w3.org/2000/01/rdf-schema#label']
+                ? ontologyClass['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+                : 'Unknown Class';
+
+            content.innerHTML += `<h2>${title}</h2>`;
+
+            const id = ontologyClass['@id'] || 'Unknown ID';
+            const namespace = id.substring(0, id.lastIndexOf('/') + 1);  // Everything before the last "/"
+            const identifier = id.split('/').pop();  // The last part after the "/"
+            content.innerHTML += `<p>ID: ${identifier}</p>`;
+            content.innerHTML += `<p>Imenski prostor: ${namespace}</p>`;
+
+            const types = ontologyClass['@type'] || [];
+            content.innerHTML += `<p>Element: ${types.map(type => type.split('#').pop()).join(', ')}</p>`;
+
+            const definitions = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'] || [];
+            if (definitions.length > 0) {
+                definitions.forEach(def => content.innerHTML += `<p>Definicija: ${def['@value']}</p>`);
+            }
+        }
+
         // Populate the "Klase" dropdown with class details
         Object.keys(data).forEach(key => {
             const element = data[key];
@@ -205,7 +230,7 @@
 
             // Add items to "Klase" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                createDropdownItem(element, dropdownLabel, klaseDropdown, () => displayClassPropertiesByDomain(element['@id']));
+                createDropdownItem(element, dropdownLabel, klaseDropdown, () => displayClassDetails(element));
             }
         });
 
