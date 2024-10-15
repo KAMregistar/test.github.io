@@ -170,7 +170,7 @@
         function createDropdownItem(element, label, dropdownMenu, clickCallback) {
             const item = document.createElement('div');
             item.textContent = label;  // Use label for dropdown item
-            item.onclick = () => clickCallback(element);  // Execute callback on click
+            item.onclick = () => clickCallback(label, element);  // Execute callback on click
             dropdownMenu.appendChild(item);
         }
 
@@ -211,8 +211,12 @@
         }
 
         // Function to display properties in a table for Svojstva menu
-        function displayClassPropertiesByDomain(classId) {
+        function displayClassPropertiesByDomain(title, classId) {
             content.innerHTML = '';  // Clear the previous content
+
+            // Add the title above the table
+            const titleElement = `<h2>${title}</h2>`;
+            content.innerHTML = titleElement;
 
             // Create table structure
             const table = document.createElement('table');
@@ -230,7 +234,7 @@
             });
 
             if (properties.length === 0) {
-                content.innerHTML = '<p>No properties found for this class.</p>';
+                content.innerHTML += '<p>No properties found for this class.</p>';
             } else {
                 properties.forEach(property => {
                     const idValues = property['http://www.registar.kam.hr/ontologies/ont.owl/ID'] || [];
@@ -276,7 +280,7 @@
 
             // Add items to "Svojstva" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayClassPropertiesByDomain(element['@id']));
+                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayClassPropertiesByDomain(dropdownLabel, element['@id']));
             }
         });
     })
