@@ -51,9 +51,12 @@
 
             content.innerHTML += `<h2>${title}</h2>`;  // Set label as the title
 
-            // Extract and display @id
+            // Extract and display the "Imenski prostor" and "ID" by splitting the @id
             const id = element['@id'] || 'Unknown ID';
-            content.innerHTML += `<p>ID: ${id}</p>`;
+            const namespace = id.substring(0, id.lastIndexOf('/') + 1);  // Everything before the last "/"
+            const identifier = id.split('/').pop();  // The last part after the "/"
+            content.innerHTML += `<p>Imenski prostor: ${namespace}</p>`;
+            content.innerHTML += `<p>ID: ${identifier}</p>`;
 
             // Extract and display @type
             const types = element['@type'] || [];
