@@ -9,17 +9,17 @@
     <style>
         body {
             font-family: 'Poppins', Arial, sans-serif;
-            font-weight: 400; /* Semi-Bold weight */
+            font-weight: 400; /* Regular weight */
         }
 
         #menu-bar {
             display: flex;
-			height: 80px;
+            height: 80px;
             justify-content: flex-start;
             align-items: center; /* Ensures logo, title, and menu are vertically centered */
             background-color: white; /* White background for the menu bar */
             padding: 10px;
-			font-size: 12px;
+            font-size: 12px;
             border-bottom: 1px solid #333; /* Dark gray thin line at the bottom */
         }
 
@@ -37,7 +37,6 @@
             margin: 0; /* Remove default margin to align with image and menu */
         }
 
-        /* Reduce the font size and increase space for the menu items */
         #menu-bar > div {
             position: relative; /* Make parent relative to dropdown */
             margin-right: 30px; /* Increased space between the menu items */
@@ -50,7 +49,6 @@
             background-color: #eee; /* Light background color on hover */
         }
 
-        /* Dropdown menu styling */
         .dropdown {
             display: none;
             position: absolute;
@@ -77,20 +75,34 @@
             display: block; /* Display dropdown when parent is hovered */
         }
 
-        /* Ensure dropdown remains visible when moving mouse between menu item and dropdown */
-        #menu-bar > div {
-            position: relative; /* Ensure the dropdown stays connected to its parent */
-        }
-
         #content {
-			margin-top: 0px;
-			padding: 20px;
-			font-family: 'Poppins', Arial, sans-serif;
-			font-weight: 400; /* Regular weight for content */
-			font-size: 12px; /* Adjust content font size */
-			color: #333; /* Content text color */
+            margin-top: 20px;
+            padding: 20px;
+            font-family: 'Poppins', Arial, sans-serif;
+            font-weight: 400; /* Regular weight for content */
+            font-size: 12px; /* Adjust content font size */
+            color: #333; /* Content text color */
         }
 
+        /* Style for the table of properties */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
     </style>
 </head>
 <body>
@@ -142,51 +154,19 @@
             dropdownMenu.appendChild(item);
         }
 
-        // Function to display class details (including CURIE)
-        function displayClassDetails(ontologyClass) {
-            content.innerHTML = '';  // Clear the previous content
-
-            const title = ontologyClass['http://www.w3.org/2000/01/rdf-schema#label']
-                ? ontologyClass['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
-                : 'Unknown Class';
-
-            content.innerHTML += `<h2>${title}</h2>`;
-
-            const id = ontologyClass['@id'] || 'Unknown ID';
-            const namespace = id.substring(0, id.lastIndexOf('/') + 1);  // Everything before the last "/"
-            const identifier = id.split('/').pop();  // The last part after the "/"
-            content.innerHTML += `<p>ID: ${identifier}</p>`;
-            content.innerHTML += `<p>Imenski prostor: ${namespace}</p>`;
-
-            const types = ontologyClass['@type'] || [];
-            content.innerHTML += `<p>Element: ${types.map(type => type.split('#').pop()).join(', ')}</p>`;
-
-            const definitions = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'] || [];
-            if (definitions.length > 0) {
-                definitions.forEach(def => content.innerHTML += `<p>Definicija: ${def['@value']}</p>`);
-            }
-
-            const domains = ontologyClass['http://www.w3.org/2000/01/rdf-schema#domain'] || [];
-            if (domains.length > 0) {
-                domains.forEach(domain => content.innerHTML += `<p>Domena: ${domain['@id']}</p>`);
-            }
-
-            const ranges = ontologyClass['http://www.w3.org/2000/01/rdf-schema#range'] || [];
-            if (ranges.length > 0) {
-                ranges.forEach(range => content.innerHTML += `<p>Doseg: ${range['@id']}</p>`);
-            }
-
-            // Extract and display the CURIE value
-            const idValues = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID'] || [];
-            if (idValues.length > 0) {
-                const curieValue = idValues[0]['@value'];
-                content.innerHTML += `<p><strong>CURIE:</strong> ${curieValue}</p>`;
-            }
-        }
-
-        // Function to display properties related to a selected class by "domain"
+        // Function to display properties in a table for a given class
         function displayClassPropertiesByDomain(classId) {
             content.innerHTML = '';  // Clear the previous content
+
+            // Create table structure
+            const table = document.createElement('table');
+            const tableHeader = `
+                <tr>
+                    <th>Property ID</th>
+                    <th>Label</th>
+                    <th>Definition</th>
+                </tr>`;
+            table.innerHTML = tableHeader;
 
             const properties = Object.values(data).filter(item => {
                 const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
@@ -197,12 +177,22 @@
                 content.innerHTML = '<p>No properties found for this class.</p>';
             } else {
                 properties.forEach(property => {
+                    const id = property['@id'] || 'Unknown ID';
                     const labels = property['http://www.w3.org/2000/01/rdf-schema#label'];
-                    const propertyLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : property['@id'];
-                    const propertyDiv = document.createElement('div');
-                    propertyDiv.textContent = propertyLabel;
-                    content.appendChild(propertyDiv);
+                    const propertyLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : 'No Label';
+                    const definitions = property['http://www.registar.kam.hr/ontologies/ont.owl/definition'];
+                    const propertyDefinition = definitions && definitions[0] && definitions[0]['@value'] ? definitions[0]['@value'] : 'No Definition';
+
+                    const tableRow = `
+                        <tr>
+                            <td>${id}</td>
+                            <td>${propertyLabel}</td>
+                            <td>${propertyDefinition}</td>
+                        </tr>`;
+                    table.innerHTML += tableRow;
                 });
+
+                content.appendChild(table);  // Append the table to the content
             }
         }
 
@@ -215,7 +205,7 @@
 
             // Add items to "Klase" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                createDropdownItem(element, dropdownLabel, klaseDropdown, () => displayClassDetails(element));
+                createDropdownItem(element, dropdownLabel, klaseDropdown, () => displayClassPropertiesByDomain(element['@id']));
             }
         });
 
