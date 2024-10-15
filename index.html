@@ -170,14 +170,14 @@
 
             const properties = Object.values(data).filter(item => {
                 const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
-                return domains && domains.some(domain => domain['@value'] === classId);
+                return domains && domains.some(domain => domain['@id'] === classId);
             });
 
             if (properties.length === 0) {
                 content.innerHTML = '<p>No properties found for this class.</p>';
             } else {
                 properties.forEach(property => {
-                    const value = property['@value'] || 'Unknown ID';
+                    const id = property['@id'] || 'Unknown ID';
                     const labels = property['http://www.w3.org/2000/01/rdf-schema#label'];
                     const propertyLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : 'No Label';
                     const definitions = property['http://www.registar.kam.hr/ontologies/ont.owl/definition'];
@@ -185,7 +185,7 @@
 
                     const tableRow = `
                         <tr>
-                            <td>${value}</td>
+                            <td>${id}</td>
                             <td>${propertyLabel}</td>
                             <td>${propertyDefinition}</td>
                         </tr>`;
