@@ -2880,3 +2880,4 @@
   "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 } ]
+}
