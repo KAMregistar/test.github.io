@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KAM Ontology Viewer</title>
+    <title>Ontology Viewer</title>
     <style>
         #menu { float: left; width: 20%; }
         #content { float: left; width: 75%; }
@@ -17,33 +17,47 @@
 <div id="content"></div>
 
 <script>
-    // Fetch JSON-LD data with error handling
-    fetch('KAMOntologija_v6.jsonld')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
+    // Fetch JSON-LD file
+    fetch('kamregistar.json')
+    .then(response => response.json())
     .then(data => {
-        console.log('Fetched JSON-LD data:', data);  // Log the full structure of the fetched data
-
         const menu = document.getElementById('menu');
         const content = document.getElementById('content');
+        
+        // Parse classes and properties
+        const classes = data['@graph'].filter(item => item['@type'] === 'rdfs:Class');
+        const properties = data['@graph'].filter(item => item['@type'] === 'rdf:Property');
+        
+        // Populate menu with classes and properties
+        const classHeader = document.createElement('h3');
+        classHeader.textContent = 'Classes';
+        menu.appendChild(classHeader);
+        
+        classes.forEach(cls => {
+            const item = document.createElement('div');
+            item.classList.add('item');
+            item.textContent = cls['rdfs:label'] || cls['@id'];
+            item.onclick = () => displayDetails(cls);
+            menu.appendChild(item);
+        });
 
-        // Dynamically handle the structure based on what we find in the data
-        if (data['@id']) {
-            // Example: If data has root-level '@id', display it
-            content.innerHTML = `<h2>Ontology ID: ${data['@id']}</h2>`;
+        const propHeader = document.createElement('h3');
+        propHeader.textContent = 'Properties';
+        menu.appendChild(propHeader);
+
+        properties.forEach(prop => {
+            const item = document.createElement('div');
+            item.classList.add('item');
+            item.textContent = prop['rdfs:label'] || prop['@id'];
+            item.onclick = () => displayDetails(prop);
+            menu.appendChild(item);
+        });
+        
+        // Function to display details of selected class or property
+        function displayDetails(entity) {
+            content.innerHTML = `<h2>${entity['rdfs:label'] || entity['@id']}</h2>`;
+            content.innerHTML += `<p>${entity['rdfs:comment'] || 'No description available.'}</p>`;
         }
-
-        // Display other relevant details from the JSON-LD
-        content.innerHTML += '<h3>Data Preview:</h3>';
-        content.innerHTML += `<pre>${JSON.stringify(data, null, 2)}</pre>`;  // Display JSON data for debugging
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        document.getElementById('content').textContent = 'Error loading data: ' + error.message;
     });
 </script>
 
