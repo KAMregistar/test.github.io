@@ -63,7 +63,7 @@
             dropdownMenu.appendChild(item);
         }
 
-        // Function to display class details
+        // Function to display class details (including CURIE)
         function displayClassDetails(ontologyClass) {
             content.innerHTML = '';  // Clear the previous content
 
@@ -122,7 +122,6 @@
                     const propertyLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : property['@id'];
                     const propertyDiv = document.createElement('div');
                     propertyDiv.textContent = propertyLabel;
-                    propertyDiv.onclick = () => displayClassDetails(property);
                     content.appendChild(propertyDiv);
                 });
             }
@@ -141,15 +140,15 @@
             }
         });
 
-        // Populate "Svojstva" dropdown with properties based on class domain
+        // Populate "Svojstva" dropdown with class names (shows properties on click)
         Object.keys(data).forEach(key => {
             const element = data[key];
 
             const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
             const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
 
-            // Add properties to "Svojstva" dropdown based on ObjectProperty type
-            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#ObjectProperty')) {
+            // Add items to "Svojstva" dropdown for classes
+            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
                 createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayClassPropertiesByDomain(element['@id']));
             }
         });
