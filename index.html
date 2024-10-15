@@ -209,4 +209,14 @@
 
             // Add items to "Svojstva" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-               
+                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayClassPropertiesByDomain(element['@id']));
+            }
+        });
+    })
+    .catch(error => {
+        console.error('Error fetching JSON-LD:', error);
+    });
+</script>
+
+</body>
+</html>
