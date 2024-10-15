@@ -58,17 +58,64 @@
                 content.innerHTML += `<p>Type: ${readableType}</p>`;
             }
 
-            // Extract and display other properties like "http://www.registar.kam.hr/ontologies/ont.owl/ID"
-            Object.keys(element).forEach(key => {
-                if (key.startsWith('http://www.registar.kam.hr/ontologies/ont.owl/ID')) {
-                    const values = element[key];
-                    values.forEach(valueObj => {
-                        if (valueObj['@value']) {
-                            content.innerHTML += `<p>Value: ${valueObj['@value']}</p>`;
-                        }
-                    });
-                }
-            });
+            // Extract and display the "ID" value
+            const idValues = element['http://www.registar.kam.hr/ontologies/ont.owl/ID'];
+            if (idValues) {
+                idValues.forEach(valueObj => {
+                    if (valueObj['@value']) {
+                        content.innerHTML += `<p>ID: ${valueObj['@value']}</p>`;
+                    }
+                });
+            }
+
+            // Extract and display the "definition"
+            const definitions = element['http://www.registar.kam.hr/ontologies/ont.owl/definition'];
+            if (definitions) {
+                definitions.forEach(defObj => {
+                    if (defObj['@value']) {
+                        content.innerHTML += `<p>Definition: "${defObj['@value']}"</p>`;
+                    }
+                });
+            }
+
+            // Extract and display the "label"
+            const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
+            if (labels) {
+                labels.forEach(labelObj => {
+                    if (labelObj['@value']) {
+                        content.innerHTML += `<p>Label: "${labelObj['@value']}"</p>`;
+                    }
+                });
+            }
+
+            // Extract and display the "domain" and "range"
+            const domains = element['http://www.w3.org/2000/01/rdf-schema#domain'];
+            if (domains) {
+                domains.forEach(domainObj => {
+                    if (domainObj['@id']) {
+                        content.innerHTML += `<p>Domain: ${domainObj['@id']}</p>`;
+                    }
+                });
+            }
+
+            const ranges = element['http://www.w3.org/2000/01/rdf-schema#range'];
+            if (ranges) {
+                ranges.forEach(rangeObj => {
+                    if (rangeObj['@id']) {
+                        content.innerHTML += `<p>Range: ${rangeObj['@id']}</p>`;
+                    }
+                });
+            }
+
+            // Extract and display the "subPropertyOf"
+            const subPropertyOfs = element['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'];
+            if (subPropertyOfs) {
+                subPropertyOfs.forEach(subPropertyOfObj => {
+                    if (subPropertyOfObj['@id']) {
+                        content.innerHTML += `<p>SubPropertyOf: ${subPropertyOfObj['@id']}</p>`;
+                    }
+                });
+            }
         }
 
         // Iterate through the JSON-LD data object and populate the menu
