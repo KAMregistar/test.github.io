@@ -2003,7 +2003,7 @@
   "@id" : "http://www.registar.kam.hr/Elements/vr/P12002",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
-    "@value" : "P12002"
+    "@value" : "kamvr:P12002"
   } ],
   "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
     "@value" : "Povezuje vremenski raspon s jedinicom opisa."
