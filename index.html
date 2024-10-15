@@ -17,9 +17,14 @@
 <div id="content"></div>
 
 <script>
-    // Fetch JSON-LD data
+    // Fetch JSON-LD data with error handling
     fetch('KAMOntologija_v6.jsonld')
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
     .then(data => {
         const menu = document.getElementById('menu');
         const content = document.getElementById('content');
@@ -55,6 +60,9 @@
                 content.innerHTML += '<p>No related properties found.</p>';
             }
         }
+    })
+    .catch(error => {
+        document.getElementById('content').textContent = 'Error loading data: ' + error.message;
     });
 </script>
 
