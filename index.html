@@ -170,7 +170,7 @@
 
             const properties = Object.values(data).filter(item => {
                 const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
-                return domains && domains.some(domain => domain['@id'] === classId);
+                return domains && domains.some(domain => domain['@value'] === classId);
             });
 
             if (properties.length === 0) {
