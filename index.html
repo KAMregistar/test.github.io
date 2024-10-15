@@ -5,16 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KAM Ontology Viewer</title>
     <style>
-        #menu { float: left; width: 20%; border-right: 1px solid #ccc; padding: 10px; }
-        #content { float: left; width: 75%; padding: 10px; }
-        .item { cursor: pointer; padding: 5px; border-bottom: 1px solid #ccc; }
-        .item:hover { background-color: #f0f0f0; }
+        body { font-family: Arial, sans-serif; }
+        #menu-bar { display: flex; justify-content: flex-start; background-color: #333; padding: 10px; }
+        #menu-bar > div { position: relative; margin-right: 20px; color: white; cursor: pointer; }
+        #menu-bar > div:hover { background-color: #555; }
+        #menu-bar h1 { margin-right: 50px; color: white; }
+
+        /* Dropdown menu styling */
+        .dropdown { display: none; position: absolute; top: 40px; background-color: #f9f9f9; min-width: 160px; border: 1px solid #ddd; z-index: 1; }
+        .dropdown div { padding: 10px; color: black; cursor: pointer; border-bottom: 1px solid #ccc; }
+        .dropdown div:hover { background-color: #f1f1f1; }
+        #menu-bar > div:hover .dropdown { display: block; }
+
+        #content { margin-top: 60px; padding: 20px; }
     </style>
 </head>
 <body>
 
-<div id="menu"><h2>Elements</h2></div>
-<div id="content"><h2>Details</h2></div>
+<div id="menu-bar">
+    <h1>KAM Registar</h1>
+    <div>
+        Klase
+        <div class="dropdown" id="klase-dropdown"></div>
+    </div>
+    <div>
+        Svojstva
+        <div class="dropdown" id="svojstva-dropdown"></div>
+    </div>
+    <div>
+        Pomoć
+    </div>
+</div>
+
+<div id="content">
+    <h2>Details</h2>
+</div>
 
 <script>
     // Fetch JSON-LD data and generate the menu
@@ -26,19 +51,19 @@
         return response.json();
     })
     .then(data => {
-        const menu = document.getElementById('menu');
         const content = document.getElementById('content');
+        const klaseDropdown = document.getElementById('klase-dropdown');
+        const svojstvaDropdown = document.getElementById('svojstva-dropdown');
 
-        // Helper function to create a menu item
-        function createMenuItem(element, label) {
+        // Helper function to create a dropdown menu item
+        function createDropdownItem(element, label, dropdownMenu) {
             const item = document.createElement('div');
-            item.classList.add('item');
-            item.textContent = label;  // Use label to display as menu item
+            item.textContent = label;  // Use label for dropdown item
             item.onclick = () => displayDetails(element);  // Display details on click
-            menu.appendChild(item);
+            dropdownMenu.appendChild(item);
         }
 
-        // Function to display the details of a clicked item in a human-readable format
+        // Function to display the details of a clicked item
         function displayDetails(element) {
             content.innerHTML = '';  // Clear the previous content
 
@@ -63,11 +88,11 @@
             if (Array.isArray(types)) {
                 types.forEach(type => {
                     const readableType = type.split('#').pop();  // Get the part after the last "#"
-                    content.innerHTML += `<p>Element: ${readableType}</p>`;
+                    content.innerHTML += `<p>Type: ${readableType}</p>`;
                 });
             } else {
                 const readableType = types.split('#').pop();
-                content.innerHTML += `<p>Element: ${readableType}</p>`;
+                content.innerHTML += `<p>Type: ${readableType}</p>`;
             }
 
             // Extract and display the "ID" value and prefix
@@ -75,7 +100,7 @@
             if (idValues) {
                 idValues.forEach(valueObj => {
                     if (valueObj['@value']) {
-                        content.innerHTML += `<p>CURIE: ${valueObj['@value']}</p>`;
+                        content.innerHTML += `<p>ID: ${valueObj['@value']}</p>`;
                         const prefix = valueObj['@value'].split(':')[0];  // Extract prefix (letters before the colon)
                         content.innerHTML += `<p>Prefiks: ${prefix}</p>`;
                     }
@@ -87,7 +112,7 @@
             if (definitions) {
                 definitions.forEach(defObj => {
                     if (defObj['@value']) {
-                        content.innerHTML += `<p>Definicija: "${defObj['@value']}"</p>`;
+                        content.innerHTML += `<p>Definition: "${defObj['@value']}"</p>`;
                     }
                 });
             }
@@ -97,7 +122,7 @@
             if (domains) {
                 domains.forEach(domainObj => {
                     if (domainObj['@id']) {
-                        content.innerHTML += `<p>Domena: ${domainObj['@id']}</p>`;
+                        content.innerHTML += `<p>Domain: ${domainObj['@id']}</p>`;
                     }
                 });
             }
@@ -106,7 +131,7 @@
             if (ranges) {
                 ranges.forEach(rangeObj => {
                     if (rangeObj['@id']) {
-                        content.innerHTML += `<p>Doseg: ${rangeObj['@id']}</p>`;
+                        content.innerHTML += `<p>Range: ${rangeObj['@id']}</p>`;
                     }
                 });
             }
@@ -116,20 +141,26 @@
             if (subPropertyOfs) {
                 subPropertyOfs.forEach(subPropertyOfObj => {
                     if (subPropertyOfObj['@id']) {
-                        content.innerHTML += `<p>Podsvojstvo: ${subPropertyOfObj['@id']}</p>`;
+                        content.innerHTML += `<p>SubPropertyOf: ${subPropertyOfObj['@id']}</p>`;
                     }
                 });
             }
         }
 
-        // Iterate through the JSON-LD data object and populate the menu
+        // Iterate through the JSON-LD data object and populate the dropdowns
         Object.keys(data).forEach(key => {
             const element = data[key];
 
-            // Use label or @id as the label for the menu item
+            // Use label or @id as the label for the dropdown items
             const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
-            const menuLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
-            createMenuItem(element, menuLabel);
+            const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
+
+            // Add items to appropriate dropdown based on @type (Class or Property)
+            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+                createDropdownItem(element, dropdownLabel, klaseDropdown);
+            } else if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#ObjectProperty')) {
+                createDropdownItem(element, dropdownLabel, svojstvaDropdown);
+            }
         });
     })
     .catch(error => {
