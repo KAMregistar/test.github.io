@@ -55923,7 +55923,4453 @@
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.registar.kam.hr/Elements/vr/P12041"
   } ]
-}, {
+}, 
+{
+        "@id": "http://www.registar.kam.hr/Elements/n/P13001",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13001"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s vrstom kojoj pripada taj nomen."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima kategoriju nomena"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13002",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13002"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kombinacijom znakova koja tvori ime povezano s entitetom putem tog nomena."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima nomenski niz"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13003",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13003"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen sa shemom u kojoj je taj nomen uspostavljen."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima shemu"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13004",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13004"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s klasom korisnika za koju se nomen smatra prikladnim ili prioritetnim."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima ciljanu publiku"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13005",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13005"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s informacijama o kontekstu (kontekstima) u kojem agent koristi nomen putem kojeg se upućuje na njega."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima kontekst uporabe"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13006",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13006"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s izvorom u kojem se nalazi dokaz o uporabi entiteta nomen."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima referentni izvor"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13007",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13007"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s jezikom na kojem je nomen iskazan."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima jezik"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13008",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13008"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s pismom na kojem je nomen zabilježen."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima pismo"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13009",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13009"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s pravilom, sustavom ili standardom korištenim za stvaranje nomena koji je izveden na temelju drugog, različitog nomena na drugom, različitom pismu."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima konverziju pisma"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13010",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13010"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s jedinicom opisa."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nomen povezan s jedinicom opisa"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13011",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13011"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje imene, naziv ili drugu oznaku pomoću koje se u informacijskom sustavu identificira i/ili pronalaze i okupljaju podaci o jedinici opisa s jedinicom opisa."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je oznaka za jedinicu opisa"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13012",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13012"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nadziranu pristupnicu koja je preuzeta iz nadziranog rječnika ili oblikovana prema određenim pravilima s jedinicom opisa."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nadzirana pristupnicua za jedinicu opisa"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13013",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13013"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje usvojenu pristupnicu koja unutar nekog sustava jednoznačno identificira jedinicu opisa i okuplja podatke o jedinici opisa s jedinicom opisa."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je usvojena pristupnica za jedinicu opisa"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13014",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13014"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje varijantnu pristupnicu koja nije odabrana za usvojenu pristupnicu s jedinicom opisa."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je varijantna pristupnica za jedinicu opisa"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13015",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13015"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje brojčanu ili slovno-brojčanu oznaku, namijenjenoj strojnoj ili ljudskoj uporabi, koja unutar određenog sustava jednoznačno identificira jedinicu opisa s jedinicom opisa."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je identifikator za jedinicu opisa"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13016",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13016"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s bilo kojom informacijom o nomenu koja nije zabilježena uporabom specifičnih atributa i/ili odnosa."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o nomenu"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13017",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13017"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim tekstom u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o jedinici opisa (identifikator jedinice opisa, nadziranim pristupnicama za jedinicu opisa) i/ili izvorima iz kojih su identifikacijski podaci preuzeti."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o identifikaciji jedinice opisa"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13018",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13018"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između nomena i druge jedinice opisa ili više drugih kamjo:C10001."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o odnosu nomena i drugih jedinica opisa"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13019",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13019"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nomen povezan s djelom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13020",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13020"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje oznaku s djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je oznaka za djelo"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13021",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13021"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nadziranu riječ ili niz riječi i/ili drugih oznaka, koja unutar nekog sustava jednoznačno identificira djelo i okuplja podatke o djelu s djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nadzirana pristupnica za djelo"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13022",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13022"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje usvojenu riječ ili niz riječi i/ili drugih oznaka, koja unutar nekog sustava jednoznačno identificira djelo i okuplja podatke o djelu s djelom. "
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je usvojena pristupnica za djelo"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13023",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13023"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ ili niz riječi ili znakova koji identificiraju djelo unutar određenog sustava, a nisu odabrani za usvojenu pristupnicu s djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je varijantna pristupnica za djelo"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13024",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13024"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje naslov djela s djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je naslov djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13025",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13025"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ ili niz riječi i/ili znakova kojima se daje prednost u imenovanju djela unutar određenog sustava s djelom. "
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je usvojeni naslov djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13026",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13026"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, izraz ili drugu oznaku koja označava kojoj vrsti naslova pripada usvojeni naslov djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je vrsta usvojenog naslova djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13027",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13027"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ ili niz riječi ili znakova koji imenuju djelo unutar nekog sustava, a nisu odabrani za usvojeni naslov djela s djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je varijantni naslov djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13028",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13028"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, izraz ili drugu oznaku koja označava kojoj vrsti naslova pripada varijantni naslov djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je vrsta varijantnog naslova djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13029",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13029"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, brojku ili niz riječi, brojki ili drugih znakova, koji služi razlikovanju djelâ koja imaju isti naslov ili razlikovanju djela od drugih kamjo:C10001 čije je ime jednako ili slično njegovom naslovu."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je dodatno obilježje djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13030",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13030"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje naslov u standardiziranom obliku koji je serijskom djelu dodijelio nadležni nacionalni ured za ISSN (International standard serial number, Međunarodni standardni broj serijske publikacije) s djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je ključni naslov"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13031",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13031"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje brojčanu ili slovno-brojčanu oznaku koja unutar određenog sustava jednoznačno identificira djelo sadržano u jedinici građe s djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je identifikator djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13032",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13032"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje brojke, slova, kratice ili druge oznake koje označavaju prvi ili najraniji dostupni te posljednji uzastopni dio objavljenoga serijskog djela (godište, svezak, broj itd.) i/ili vrijeme njihova nastanka.  "
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je brojčana i kronološka oznaka serijskog djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13033",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13033"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s bilo kojom informacijom o nomenu djela koja nije zabilježena uporabom specifičnih atributa i/ili odnosa."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o nomenu djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13034",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13034"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim tekstom u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o djelu (identifikator djelu, usvojeni naslov djela, varijantni naslov djela) i/ili izvorima iz kojih su identifikacijski podaci preuzeti."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o identifikaciji djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13035",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13035"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između nomena i djela ili više drugih djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o odnosu nomena i djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13036",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13036"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s izrazom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nomen povezan s izrazom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13037",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13037"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje oznaku s izrazom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je oznaka za izraz"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13038",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13038"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nadziranu riječ ili niz riječi i/ili drugih oznaka, koja unutar nekog sustava jednoznačno identificira izraz i okuplja podatke o izrazu s izrazom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nadzirana pristupnica za izraz"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13039",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13039"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje usvojenu riječ ili niz riječi i/ili drugih oznaka, koja unutar nekog sustava jednoznačno identificira izraz i okuplja podatke o izrazu s izrazom. "
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je usvojena pristupnica za izraz"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13040",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13040"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ ili niz riječi ili znakova koji identificiraju djelo unutar određenog sustava, a nisu odabrani za usvojenu pristupnicu s izrazom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je varijantna pristupnica za izraz"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13041",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13041"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, brojku ili niz riječi, brojki ili drugih znakova, koji služi razlikovanju izraza koja imaju isti naslov ili razlikovanju izraza od drugih kamjo:C10001 čije je ime jednako ili slično njegovom naslovu."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je dodatno obilježje izraza"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13042",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13042"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje brojčanu ili slovno-brojčanu oznaku koja unutar određenog sustava jednoznačno identificira izraz sadržano u jedinici građe."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je identifikator izraza"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13043",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13043"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s bilo kojom informacijom o nomenu izraza koja nije zabilježena uporabom specifičnih atributa i/ili odnosa."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o nomenu izraza"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13044",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13044"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim tekstom u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o izrazu (identifikator izraza, usvojeni naslov izraza, varijantni naslov izraza) i/ili izvorima iz kojih su identifikacijski podaci preuzeti."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o identifikaciji izraza"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13045",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13045"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između nomena i izraza ili više drugih izraza."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o odnosu nomena i izraza"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13046",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13046"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nomen povezan s pojavnim oblikom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13047",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13047"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje oznaku s pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je oznaka za pojavni oblik"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13048",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13048"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nadziranu riječ ili niz riječi i/ili drugih oznaka, koja unutar nekog sustava jednoznačno identificira pojavni oblik i okuplja podatke o pojavnom obliku s pojavnim obliikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nadzirana pristupnica za pojavni oblik"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13049",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13049"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje usvojenu riječ ili niz riječi i/ili drugih oznaka, koja unutar nekog sustava jednoznačno identificira pojavni oblik i okuplja podatke o pojavnom obliku s pojavnim oblikom. "
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je usvojena pristupnica za pojavni oblik"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13050",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13050"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ ili niz riječi ili znakova koji identificiraju pojavni oblik unutar određenog sustava, a nisu odabrani za usvojenu pristupnicu s pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je varijantna pristupnica za pojavni oblik"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13051",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13051"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje naslov djela s pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je naslov pojavnog oblika"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13052",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13052"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ ili niz riječi i/ili znakova kojima se daje prednost u imenovanju pojavnog oblika unutar određenog sustava s pojavnim oblikom. "
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je usvojeni naslov pojavnog oblika"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13053",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13053"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ ili niz riječi ili znakova koji imenuju pojavni oblik unutar nekog sustava, a nisu odabrani za usvojeni naslov pojavnog oblika s pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je varijantni naslov pojavnog oblika"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13054",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13054"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, brojku ili niz riječi, brojki ili drugih znakova, koji služi razlikovanju pojavnih oblika koja imaju isti naslov ili razlikovanju pojavnog oblika od drugih jedinica opisa čije je ime jednako ili slično njegovom naslovu."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je dodatno obilježje naslova pojavnog oblika"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13055",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13055"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje skraćeni oblik stvarnog naslova koji je serijskoj jedinici građe u svrhu identifikacije i/ili indeksiranja dodijelio nadležni nacionalni ured za ISSN, služba za indeksiranje ili neka druga agencija s pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je skraćeni naslov "
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13056",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13056"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje brojčanu ili slovno-brojčanu oznaku koja unutar određenog sustava jednoznačno identificira pojavni oblik sadržan u jedinici građe s pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je identifikator pojavnog oblika"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13057",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13057"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s bilo kojom informacijom o nomenu pojavnog oblika koja nije zabilježena uporabom specifičnih atributa i/ili odnosa."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o nomenu pojavnog oblika"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13058",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13058"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim tekstom u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o pojavnom obliku (identifikator pojavnog oblika, usvojeni naslov pojavnog oblika, varijantni naslov pojavnog oblika) i/ili izvorima iz kojih su identifikacijski podaci preuzeti."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o identifikaciji pojavnog oblika"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13059",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13059"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između nomena i pojavnih oblika ili više drugih pojavnih oblika."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o odnosu nomena i pojavnog oblika"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13060",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13060"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nomen povezan s primjerkom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13061",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13061"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje oznaku s primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je oznaka za primjerak"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13062",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13062"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nadziranu riječ ili niz riječi i/ili drugih oznaka, koja unutar nekog sustava jednoznačno identificira primjerak i okuplja podatke o primjerku s primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nadzirana pristupnica za primjerak"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13063",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13063"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje usvojenu riječ ili niz riječi i/ili drugih oznaka, koja unutar nekog sustava jednoznačno identificira primjerak i okuplja podatke o primjerku s primjerkom. "
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je usvojena pristupnica za primjerak"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13064",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13064"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ ili niz riječi ili znakova koji identificiraju primjerak unutar određenog sustava, a nisu odabrani za usvojenu pristupnicu s primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je varijantna pristupnica za primjerak"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13065",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13065"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje brojčanu ili slovno-brojčanu oznaku koja unutar određenog sustava jednoznačno identificira primjerak s primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je identifikator primjerka"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13066",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13066"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječi, znakove ili skupove riječi ili znakova koji se javljaju na primjerku, a nisu dio njegova izvornog oblikovanja, proizvodnje ili objavljivanja, već su ih tijekom vremena dodali posjednici, vlasnici, korisnici i drugi agenti s primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je dodani natpis i oznaka za primjerak"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13067",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13067"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s bilo kojom informacijom o nomenu primjerka koja nije zabilježena uporabom specifičnih atributa i/ili odnosa."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o nomenu primjerka"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13068",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13068"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim tekstom u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o primjerku (identifikator primjerka, usvojeni naslov primjerka, varijantni naslov primjerka) i/ili izvorima iz kojih su identifikacijski podaci preuzeti."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o identifikaciji identifikaciji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13069",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13069"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između nomena i primjeraka ili više drugih primjeraka."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o odnosu nomena i primjerka"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13070",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13070"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nomen povezan s agentom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13071",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13071"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje oznaku s agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je oznaka za agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13072",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13072"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nadziranu riječ ili niz riječi i/ili drugih oznaka, koja unutar nekog sustava jednoznačno identificira agenta i okuplja podatke o agentu s agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nadzirana pristupnica za agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13073",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13073"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje usvojenu riječ ili niz riječi i/ili drugih oznaka, koja unutar nekog sustava jednoznačno identificira agenta i okuplja podatke o agentu s agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je usvojena pristupnica za agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13074",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13074"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ ili niz riječi ili znakova koji identificiraju agenta unutar određenog sustava, a nisu odabrani za usvojenu pristupnicu s agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je varijantna pristupnica za agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13075",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13075"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, brojku ili niz riječi, brojki ili drugih znakova, koji služi razlikovanju agenata čije je ime jednako ili slično s agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je dodatno obilježje agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13076",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13076"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje brojčanu ili slovno-brojčanu oznaku koja unutar određenog sustava jednoznačno identificira agenta s agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je identifikator agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13077",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13077"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s bilo kojom informacijom o nomenu agenta koja nije zabilježena uporabom specifičnih atributa i/ili odnosa."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o nomenu agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13078",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13078"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim tekstom u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o agentu i/ili izvorima iz kojih su identifikacijski podaci preuzeti."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o identifikaciji agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13079",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13079"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između nomena i agenta ili više drugih agenata."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o odnosu nomena i agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13080",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13080"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s osobom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nomen povezan s osobom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13081",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13081"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje oznaku s osobom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je oznaka za osobu"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13082",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13082"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje brojčanu ili slovno-brojčanu oznaku ili skup znakova koji jednoznačno identificira osobu unutar određenog sustava s osobom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je identifikator osobe"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13083",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13083"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nadziranu pristupnicu za osobu s osobom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nadzirana pristupnica za osobu"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13084",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13084"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, izraz ili skup znakova koji jednoznačno i dosljedno imenuje osobu unutar određenog sustava s osobom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je usvojena pristupnica za osobu"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13085",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13085"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, izreku ili skup znakova koji identificiraju osobu unutar određenog sustava, a nisu odabrani za usvojeno ime osobe s osobom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je varijantna pristupnica za osobu"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13086",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13086"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje ime osobe s osobom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je ime osobe"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13087",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13087"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, izraz ili skup znakova koji dosljedno imenuje osobu unutar određenog sustava s osobom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je usvojeno ime osobe"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13088",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13088"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s riječi ili izrazom koji označava kategoriju kojoj pripada usvojeno ime osobe."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je vrsta usvojenog imena osobe"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13089",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13089"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, izreku ili skup znakova koji imenuju osobu unutar određenog sustava, a nisu odabrani za usvojeni oblik imena osobe s osobom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je varijantno ime osobe"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13090",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13090"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s riječi ili izrazom koji označava kategoriju kojoj pripada varijantno ime osobe."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je vrsta varijantnog imena osobe"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13091",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13091"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje oznaku položaja koji osoba zauzima unutar društvene ili vjerske zajednice s osobom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je titula osobe"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13092",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13092"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, izreku ili skup znakova koji razlikuje osobu od drugih osoba s istim oblikom imena s osobom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je dodatno obilježje osobe"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13093",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13093"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s bilo kojom informacijom o nomenu osobe koja nije zabilježena uporabom specifičnih atributa i/ili odnosa."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o nomenu osobe"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13094",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13094"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim tekstom u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o osobi i/ili izvorima iz kojih su identifikacijski podaci preuzeti."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o identifikaciji osobe"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13095",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13095"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između nomena i osobe ili više drugih osoba."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o odnosu nomena i osobe"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13096",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13096"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kolektivnim agentom koji je dodijelio taj nomen."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nomen koji je dodijelio kolektivni agent"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13097",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13097"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kolektivnim agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nomen povezan s kolektivnim agentom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13098",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13098"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje oznaku s kolektivnim agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je oznaka za kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13099",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13099"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nadziranu riječ ili niz riječi i/ili drugih oznaka, koja unutar nekog sustava jednoznačno identificira kolektivnog agenta i okuplja podatke o kolektivnom agentu s kolektivnim agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nadzirana pristupnica za kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13100",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13100"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje usvojenu riječ ili niz riječi i/ili drugih oznaka, koja unutar nekog sustava jednoznačno identificira kolektivnog agenta i okuplja podatke o kolektivnom agentu s kolektivnim agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je usvojena pristupnica za kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13101",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13101"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ ili niz riječi ili znakova koji identificiraju kolektivnog agenta unutar određenog sustava, a nisu odabrani za usvojenu pristupnicu s koklektivnim agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je varijantna pristupnica za kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13102",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13102"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, brojku ili niz riječi, brojki ili drugih znakova, koji služi razlikovanju kolektivnih agenata čije je ime jednako ili slično s kolektivnim agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je dodatno obilježje kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13103",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13103"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje brojčanu ili slovno-brojčanu oznaku koja unutar određenog sustava jednoznačno identificira kolektivnog agenta s kolektivnim agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je identifikator kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13104",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13104"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s bilo kojom informacijom o nomenu kolektivnog agenta koja nije zabilježena uporabom specifičnih atributa i/ili odnosa."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o nomenu kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13105",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13105"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim tekstom u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o kolektivnom agentu i/ili izvorima iz kojih su identifikacijski podaci preuzeti."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o identifikaciji kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13106",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13106"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između nomena i kolektivnog agenta ili više drugih kolektivnih agenata."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o odnosu nomena i kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13107",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13107"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s korporativnim tijelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nomen povezan s korporativnim tijelom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13108",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13108"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje korporativno tijelo s oznakom za to korporativno tijelo."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je oznaka za korporativno tijelo"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13109",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13109"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nadziranu riječ ili niz riječi i/ili drugih oznaka, koja unutar nekog sustava jednoznačno identificira korporativno tijelo i okuplja podatke o korporativnom tijelu s korporativnim tijelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nadzirana pristupnica za korporativno tijelo"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13110",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13110"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, znak ili niz riječi ili znakova koji dosljedno imenuje korporativno tijelo unutar određenog sustava s korporativnim tijelom. "
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je usvojena pristupnica za korporativno tijelo"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13111",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13111"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, znak ili niz riječi ili znakova koji imenuju korporativno tijelo unutar određenog sustava, a nisu odabrani za usvojeni oblik imena korporativnog tijela s korporativnim tijelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je varijantna pristupnica za korporativno tijelo"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13112",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13112"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje ime korporativnog tijela s korporativnim tijelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je ime korporativnog tijela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13113",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13113"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ ili niz riječi ili znakova koji jednoznačno i dosljedno imenuje korporativno tijelo unutar određenog sustava s korporativnim tijelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je usvojeno ime korporativnog tijela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13114",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13114"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s riječi ili izrazom koji označava kategoriju kojoj pripada usvojeno ime korporativnog tijela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je vrsta usvojenog imena korporativnog tijela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13115",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13115"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, znak ili niz riječi ili znakova koji identificiraju korporativno tijelo unutar određenog sustava, a nisu odabrani za usvojeno ime korporativnog tijela s korporativnim tijelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je varijantno ime korporativnog tijela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13116",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13116"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s riječi ili izrazom koji označava kategoriju kojoj pripada varijantno ime korporativnog tijela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je vrsta varijantnog imena korporativnog tijela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13117",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13117"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, znak ili niz riječi ili znakova koji razlikuje korporativno tijelo od drugih korporativnih tijela s istim usvojenim ili varijantnim oblikom imena s korporativnim tijelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je dodatno obilježje korporativnog tijela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13118",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13118"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje brojčanu ili slovno-brojčanu oznaku ili niz znakova koji jednoznačno identificira korporativno tijelo unutar određenog sustava s korporativnim tijelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je identifikator korporativnog tijela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13119",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13119"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomenom s korporativnim tijelom koji je dodijelilo taj nomen."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nomen koji je dodijelilo korporativno tijelo"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13120",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13120"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s bilo kojom informacijom o nomenu korporativnog tijela koja nije zabilježena uporabom specifičnih atributa i/ili odnosa."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o nomenu korporativnom tijelu"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13121",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13121"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim tekstom u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o korporativnom tijelu i/ili izvorima iz kojih su identifikacijski podaci preuzeti."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o identifikaciji korporativnog tijela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13122",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13122"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između nomena i korporativnog tijela ili više drugih korporativnih tijela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o odnosu nomena i korporativnog tijela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13123",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13123"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s obitelji."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nomen povezan s obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13124",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13124"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje oznaku s obitelji."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je oznaka za obitelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13125",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13125"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nadziranu riječ ili niz riječi i/ili drugih oznaka, koja unutar nekog sustava jednoznačno identificira obitelj i okuplja podatke o obitelji s obitelji."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nadzirana pristupnica za obitelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13126",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13126"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, znaku ili niz riječi ili znakova koji dosljedno imenuje obitelj unutar određenog sustava s obitelji. "
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je usvojena pristupnica za obitelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13127",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13127"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, znak ili niz riječi ili znakova koji imenuju obitelj unutar određenog sustava, a nisu odabrani za usvojeni oblik imena obitelji s obitelji."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je varijantna pristupnica za obitelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13128",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13128"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje ime s obitelji."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je ime obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13129",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13129"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ ili niz riječi ili znakova koji jednoznačno i dosljedno imenuje obitelj unutar određenog sustava s obitelji."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je usvojeno ime obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13130",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13130"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s riječi ili izrazom koji označava kategoriju kojoj pripada usvojeno ime obitelji."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je vrsta usvojenog imena obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13131",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13131"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, znak ili niz riječi ili znakova koji identificiraju obitelj unutar određenog sustava, a nisu odabrani za usvojeno ime obitelji s obitelji."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je varijantno ime obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13132",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13132"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s riječi ili izrazom koji označava kategoriju kojoj pripada varijantno ime obitelji."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je vrsta varijantnog imena obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13133",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13133"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje brojčanu ili slovno-brojčanu oznaku ili niz znakova koji jednoznačno identificira obitelj unutar određenog sustava s obitelji."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je identifikator obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13134",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13134"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s bilo kojom informacijom o nomenu obitelji koja nije zabilježena uporabom specifičnih atributa i/ili odnosa."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o nomenu obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13135",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13135"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim tekstom u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o obitelji i/ili izvorima iz kojih su identifikacijski podaci preuzeti."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o identifikaciji obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13136",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13136"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između nomena i obitelji ili više drugih obitelji."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o odnosu nomena i obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13137",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13137"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s mjestom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nomen za mjesto"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13138",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13138"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje ime, naziv ili drugu oznaku pomoću koje se u informacijskom sustavu identificira mjesto i/ili pronalaze i okupljaju podaci o mjestu s mjestom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je oznaka za mjesto"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13139",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13139"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje pristupnicu koja je preuzeta iz nadziranog rječnika ili oblikovana prema određenim pravilima s mjestom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nadzirana pristupnica za mjesto"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13140",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13140"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, izrazm ili skup znakova koji unutar nekog sustava jednoznačno identificira mjesto i okuplja podatke o mjestu s mjestom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je usvojena pristupnica za mjesto"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13141",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13141"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, izreku ili skup znakova koji imenuju mjesto unutar određenog sustava, a nisu odabrani za usvojenu pristupnicu s mjestom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je varijantna pristupnica za mjesto"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13142",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13142"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje brojčanu ili slovno-brojčanu oznaku koja unutar određenog sustava jednoznačno identificira mjesto s mjestom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je identifikator mjesta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13143",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13143"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, izraz ili skup znakova kojima se imenuje mjesto unutar određenog sustava s mjestom. "
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je ime mjesta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13144",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13144"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, izraz ili skup znakova kojima se daje prednost u imenovanju mjesta unutar određenog sustava s mjestom. "
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je usvojeno ime mjesta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13145",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13145"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s riječi ili izrazom koji označava kategoriju kojoj pripada usvojeno ime mjesta."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je vrsta usvojenog imena mjesta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13146",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13146"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, izreku ili skup znakova koji identificiraju mjesto unutar određenog sustava, a nisu odabrani za usvojeno ime mjesta s mjestom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je varijantno ime mjesta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13147",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13147"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s riječi ili izrazom koji označava kategoriju kojoj pripada varijantno ime mjesta."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je vrsta varijantnog imena mjesta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13148",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13148"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, izraz ili skup znakova koji razlikuju mjesto od drugih mjesta istog imena s mjestom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je dodatno obilježje mjesta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13149",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13149"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s bilo kojom informacijom o nomenu mjesta koja nije zabilježena uporabom specifičnih atributa i/ili odnosa."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o nomenu mjesta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13150",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13150"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim tekstom u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o mjestu i/ili izvorima iz kojih su identifikacijski podaci preuzeti."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o identifikaciji mjesta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13151",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13151"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između nomena i mjesta ili više drugih mjesta."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o odnosu nomena i mjesta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13152",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13152"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s vremenskim rasponom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nomen za vremenski raspon"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13153",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13153"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje ime, naziv ili drugu oznaku pomoću koje se u informacijskom sustavu identificira vremenski raspon i/ili pronalaze i okupljaju podaci o vremenskom rasponu s vremenskim rasponom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je oznaka za vremenski raspon"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13154",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13154"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje pristupnicu koja je preuzeta iz nadziranog rječnika ili oblikovana prema određenim pravilima s vremenskim rasponom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nadzirana pristupnica za vremenski raspon"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13155",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13155"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nadziranu riječ, izraz ili niz riječi i/ili drugih oznaka koje unutar nekog sustava jednoznačno identificiraju vremenski raspon i okupljaju podatke o vremenskom rasponu s vremenskim rasponom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je usvojena pristupnica za vremenski raspon"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13156",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13156"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, niz riječi i/ili drugih oznaka koje identificiraju vremenski raspon unutar određenog sustava, a nisu odabrane za usvojenu pristupnicu s vremenskim rasponom. "
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je varijantna pristupnica za vremenski raspon"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13157",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13157"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje brojčanu ili slovno-brojčanu oznaku koja unutar određenog sustava jednoznačno identificira vremenski raspon s vremenskim rasponom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je identifikator za vremenski raspon"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13158",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13158"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s bilo kojom informacijom o nomenu vremenskog raspona koja nije zabilježena uporabom specifičnih atributa i/ili odnosa."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o nomenu vremenskog raspona"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13159",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13159"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim tekstom u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o vremenskom rasponu i/ili izvorima iz kojih su identifikacijski podaci preuzeti."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o identifikaciji vremenskog raspona"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13160",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13160"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između nomena i vremenskog raspona ili više drugih vremenskih raspona."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o odnosu nomena i vremenskog raspona"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13161",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13161"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje ime agenta s agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je ime agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13162",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13162"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ ili niz riječi ili znakova koji jednoznačno i dosljedno imenuje agenta unutar određenog sustava s agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je usvojeno ime agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13163",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13163"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, znak ili niz riječi ili znakova koji identificiraju agenta unutar određenog sustava, a nisu odabrani za usvojeno ime agenta s agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je varijantno ime agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13164",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13164"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje ime kolektivnog agenta s kolektivnim agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je ime kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13165",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13165"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ ili niz riječi ili znakova koji jednoznačno i dosljedno imenuje kolektivnog agenta unutar određenog sustava s koklektivnim agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je usvojeno ime kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13166",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13166"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje riječ, znak ili niz riječi ili znakova koji identificiraju kolektivnog agenta unutar određenog sustava, a nisu odabrani za usvojeno ime kolektivnog agenta s kolektivnim agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je varijantno ime kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13167",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13167"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s riječi ili izrazom koji označava kategoriju kojoj pripada usvojeno ime agenta."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je vrsta usvojenog imena agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13168",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13168"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s riječi ili izrazom koji označava kategoriju kojoj pripada varijantno ime agenta."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je vrsta varijantnog imena agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13169",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13169"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s riječi ili izrazom koji označava kategoriju kojoj pripada usvojeno ime kolektivnog agenta."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je vrsta usvojenog imena kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13170",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13170"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s riječi ili izrazom koji označava kategoriju kojoj pripada varijantno ime kolektivnog agenta."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je vrsta varijantnog imena kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/n/P13171",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamn:P13171"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje nomen s djelom koje o njemu govori ili ga prikazuje."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10013"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nomen predmet djela"
+            }
+        ]
+    },{
   "@id" : "http://www.registar.kam.hr/ontologies/ont.owl/ID",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
