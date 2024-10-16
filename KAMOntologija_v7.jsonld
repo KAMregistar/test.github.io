@@ -28715,9 +28715,7 @@
                 "@value": "je primjerak združen s primjerkom"
             }
         ]
-    },
-[
-    {
+    }, {
         "@id": "http://www.registar.kam.hr/Elements/a/P60001",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
