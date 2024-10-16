@@ -1690,34 +1690,19 @@
 }, 
 {
     "@id": "http://www.registar.kam.hr/Elements/m/P11001",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
-      {
+    "@type": [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+    "http://www.registar.kam.hr/ontologies/ont.owl/ID": [ {
         "@value": "kamm:P11001"
-      }
-    ],
-    "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
-      {
+      } ],
+    "http://www.registar.kam.hr/ontologies/ont.owl/definition": [ {
         "@value": "Povezuje mjesto s izrazom, nadzirani nazivom, kôdom ili drugom oznakom koja označava vrstu kojoj pripada mjesto s obzirom na svoja prirodna ili društvena obilježja."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
+      } ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [ {
         "@id": "http://www.registar.kam.hr/Element/c/#C10011"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
+      } ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [ {
         "@value": "ima vrstu mjesta"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "kamjo:P10001"
-      }
-    ]
+      } ]
   },
   {
     "@id": "http://www.registar.kam.hr/Elements/m/P11002",
