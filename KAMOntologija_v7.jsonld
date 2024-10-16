@@ -16802,7 +16802,7 @@
             }
         ]
     }, {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40001",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40001",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -16828,7 +16828,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40002",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40002",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -16854,7 +16854,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40003",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40003",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -16880,7 +16880,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40004",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40004",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -16906,7 +16906,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40005",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40005",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -16932,7 +16932,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40006",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40006",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -16958,7 +16958,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40007",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40007",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -16984,7 +16984,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40008",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40008",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17010,7 +17010,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40009",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40009",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17036,7 +17036,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40010",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40010",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17062,7 +17062,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40011",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40011",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17088,7 +17088,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40012",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40012",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17114,7 +17114,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40013",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40013",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17140,7 +17140,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40014",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40014",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17166,7 +17166,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40015",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40015",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17192,7 +17192,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40016",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40016",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17218,7 +17218,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40017",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40017",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17244,7 +17244,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40018",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40018",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17270,7 +17270,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40019",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40019",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17296,7 +17296,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40020",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40020",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17322,7 +17322,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40021",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40021",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17348,7 +17348,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40022",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40022",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17374,7 +17374,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40023",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40023",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17400,7 +17400,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40024",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40024",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17426,7 +17426,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40025",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40025",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17452,7 +17452,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40026",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40026",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17478,7 +17478,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40027",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40027",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17504,7 +17504,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40028",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40028",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17530,7 +17530,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40029",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40029",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17556,7 +17556,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40030",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40030",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17582,7 +17582,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40031",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40031",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17608,7 +17608,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40032",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40032",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17634,7 +17634,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40033",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40033",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17660,7 +17660,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40034",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40034",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17686,7 +17686,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P400035",
+        "@id": "http://www.registar.kam.hr/Elements/po/P400035",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17712,7 +17712,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40036",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40036",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17738,7 +17738,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40037",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40037",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17764,7 +17764,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40038",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40038",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17790,7 +17790,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40039",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40039",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17816,7 +17816,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40040",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40040",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17842,7 +17842,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40041",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40041",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17868,7 +17868,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40042",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40042",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17894,7 +17894,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40043",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40043",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17920,7 +17920,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40044",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40044",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17946,7 +17946,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40045",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40045",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17972,7 +17972,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40046",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40046",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -17998,7 +17998,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40047",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40047",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18024,7 +18024,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40048",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40048",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18050,7 +18050,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40049",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40049",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18076,7 +18076,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40050",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40050",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18102,7 +18102,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40051",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40051",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18128,7 +18128,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40052",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40052",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18154,7 +18154,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40053",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40053",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18180,7 +18180,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40054",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40054",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18206,7 +18206,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40055",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40055",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18232,7 +18232,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40056",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40056",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18258,7 +18258,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40057",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40057",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18284,7 +18284,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40058",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40058",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18310,7 +18310,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40059",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40059",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18336,7 +18336,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40060",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40060",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18362,7 +18362,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40061",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40061",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18388,7 +18388,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40062",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40062",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18414,7 +18414,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40063",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40063",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18440,7 +18440,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40064",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40064",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18466,7 +18466,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40065",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40065",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18492,7 +18492,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40066",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40066",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18518,7 +18518,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40067",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40067",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18544,7 +18544,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40068",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40068",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18570,7 +18570,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40069",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40069",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18596,7 +18596,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40070",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40070",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18622,7 +18622,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40071",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40071",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18648,7 +18648,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40072",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40072",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18674,7 +18674,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40073",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40073",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18700,7 +18700,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40074",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40074",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18726,7 +18726,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40075",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40075",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18752,7 +18752,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40076",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40076",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18778,7 +18778,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40077",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40077",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18804,7 +18804,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40078",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40078",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18830,7 +18830,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40079",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40079",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18856,7 +18856,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40080",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40080",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18882,7 +18882,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40081",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40081",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18908,7 +18908,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40082",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40082",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18934,7 +18934,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40083",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40083",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18960,7 +18960,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40084",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40084",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -18986,7 +18986,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40085",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40085",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19012,7 +19012,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40086",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40086",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19038,7 +19038,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40087",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40087",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19064,7 +19064,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40088",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40088",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19090,7 +19090,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40089",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40089",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19116,7 +19116,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40090",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40090",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19142,7 +19142,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40091",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40091",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19168,7 +19168,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40092",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40092",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19194,7 +19194,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40093",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40093",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19220,7 +19220,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40094",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40094",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19246,7 +19246,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40095",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40095",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19272,7 +19272,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40096",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40096",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19298,7 +19298,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40097",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40097",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19324,7 +19324,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40098",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40098",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19350,7 +19350,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40099",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40099",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19376,7 +19376,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40100",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40100",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19402,7 +19402,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40101",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40101",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19428,7 +19428,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40102",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40102",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19454,7 +19454,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40103",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40103",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19480,7 +19480,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40104",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40104",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19506,7 +19506,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40105",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40105",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19532,7 +19532,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40106",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40106",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19558,7 +19558,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40107",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40107",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19584,7 +19584,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40108",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40108",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19610,7 +19610,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40109",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40109",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19636,7 +19636,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40110",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40110",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19662,7 +19662,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40111",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40111",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19688,7 +19688,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40112",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40112",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19714,7 +19714,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40113",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40113",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19740,7 +19740,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40114",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40114",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19766,7 +19766,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40115",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40115",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19792,7 +19792,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40116",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40116",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19818,7 +19818,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40117",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40117",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19844,7 +19844,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40118",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40118",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19870,7 +19870,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40119",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40119",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19896,7 +19896,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40120",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40120",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19922,7 +19922,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40121",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40121",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19948,7 +19948,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40122",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40122",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -19974,7 +19974,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40123",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40123",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20000,7 +20000,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40124",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40124",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20026,7 +20026,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40125",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40125",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20052,7 +20052,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40126",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40126",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20078,7 +20078,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40127",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40127",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20104,7 +20104,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40128",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40128",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20130,7 +20130,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40129",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40129",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20156,7 +20156,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40130",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40130",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20182,7 +20182,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40131",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40131",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20208,7 +20208,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40132",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40132",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20234,7 +20234,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40133",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40133",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20260,7 +20260,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40134",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40134",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20286,7 +20286,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40135",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40135",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20312,7 +20312,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40136",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40136",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20338,7 +20338,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40137",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40137",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20364,7 +20364,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40138",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40138",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20390,7 +20390,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40139",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40139",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20416,7 +20416,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40140",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40140",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20442,7 +20442,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40141",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40141",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20468,7 +20468,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40142",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40142",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20494,7 +20494,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40143",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40143",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20520,7 +20520,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40144",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40144",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20546,7 +20546,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40145",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40145",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20572,7 +20572,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40146",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40146",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20598,7 +20598,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40147",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40147",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20624,7 +20624,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40148",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40148",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20650,7 +20650,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40149",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40149",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20676,7 +20676,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40150",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40150",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20702,7 +20702,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40151",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40151",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20728,7 +20728,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40152",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40152",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20754,7 +20754,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40153",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40153",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20780,7 +20780,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40154",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40154",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20806,7 +20806,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40155",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40155",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20832,7 +20832,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40156",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40156",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20858,7 +20858,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40157",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40157",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20884,7 +20884,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40158",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40158",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20910,7 +20910,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40159",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40159",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20936,7 +20936,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40160",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40160",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20962,7 +20962,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40161",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40161",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -20988,7 +20988,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40162",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40162",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21014,7 +21014,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40163",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40163",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21040,7 +21040,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40164",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40164",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21066,7 +21066,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40165",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40165",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21092,7 +21092,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40166",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40166",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21118,7 +21118,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40167",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40167",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21144,7 +21144,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40168",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40168",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21170,7 +21170,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40169",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40169",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21196,7 +21196,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40170",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40170",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21222,7 +21222,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40171",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40171",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21248,7 +21248,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40172",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40172",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21274,7 +21274,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40173",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40173",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21300,7 +21300,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40174",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40174",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21326,7 +21326,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40175",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40175",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21352,7 +21352,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40176",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40176",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21378,7 +21378,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40177",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40177",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21404,7 +21404,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40178",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40178",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21430,7 +21430,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40179",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40179",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21456,7 +21456,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40180",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40180",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21482,7 +21482,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40181",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40181",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21508,7 +21508,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40182",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40182",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21534,7 +21534,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40183",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40183",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21560,7 +21560,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40184",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40184",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21586,7 +21586,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40185",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40185",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21612,7 +21612,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40186",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40186",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21638,7 +21638,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40187",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40187",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21664,7 +21664,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40188",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40188",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21690,7 +21690,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40189",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40189",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21716,7 +21716,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40190",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40190",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21742,7 +21742,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40191",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40191",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21768,7 +21768,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40192",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40192",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21794,7 +21794,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40193",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40193",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21820,7 +21820,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40194",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40194",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21846,7 +21846,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40195",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40195",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21872,7 +21872,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40196",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40196",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21898,7 +21898,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40197",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40197",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21924,7 +21924,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40198",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40198",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21950,7 +21950,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40199",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40199",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -21976,7 +21976,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40200",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40200",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22002,7 +22002,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40201",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40201",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22028,7 +22028,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40202",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40202",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22054,7 +22054,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40203",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40203",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22080,7 +22080,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40204",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40204",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22106,7 +22106,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40205",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40205",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22132,7 +22132,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40206",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40206",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22158,7 +22158,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40207",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40207",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22184,7 +22184,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40208",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40208",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22210,7 +22210,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40209",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40209",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22236,7 +22236,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40210",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40210",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22262,7 +22262,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40211",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40211",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22288,7 +22288,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40212",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40212",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22314,7 +22314,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40213",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40213",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22340,7 +22340,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40214",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40214",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22366,7 +22366,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40215",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40215",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22392,7 +22392,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40216",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40216",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22418,7 +22418,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40217",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40217",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22444,7 +22444,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40218",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40218",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22470,7 +22470,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40219",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40219",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22496,7 +22496,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40220",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40220",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22522,7 +22522,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40221",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40221",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22548,7 +22548,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40222",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40222",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22574,7 +22574,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40223",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40223",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22600,7 +22600,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40224",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40224",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22626,7 +22626,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40225",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40225",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22652,7 +22652,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40226",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40226",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22678,7 +22678,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40227",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40227",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22704,7 +22704,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40228",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40228",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22730,7 +22730,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40229",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40229",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22756,7 +22756,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40230",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40230",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22782,7 +22782,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40231",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40231",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22808,7 +22808,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40232",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40232",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22834,7 +22834,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40233",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40233",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22860,7 +22860,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40234",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40234",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22886,7 +22886,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40235",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40235",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22912,7 +22912,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40236",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40236",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22938,7 +22938,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40237",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40237",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22964,7 +22964,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40238",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40238",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -22990,7 +22990,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40239",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40239",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23016,7 +23016,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40240",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40240",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23042,7 +23042,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40241",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40241",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23068,7 +23068,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40242",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40242",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23094,7 +23094,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40243",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40243",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23120,7 +23120,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40244",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40244",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23146,7 +23146,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40245",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40245",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23172,7 +23172,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40246",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40246",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23198,7 +23198,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40247",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40247",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23224,7 +23224,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40248",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40248",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23250,7 +23250,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40249",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40249",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23276,7 +23276,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40250",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40250",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23302,7 +23302,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40251",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40251",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23328,7 +23328,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40252",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40252",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23354,7 +23354,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40253",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40253",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23380,7 +23380,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40254",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40254",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23406,7 +23406,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40255",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40255",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23432,7 +23432,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40256",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40256",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23458,7 +23458,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40257",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40257",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23484,7 +23484,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40258",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40258",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23510,7 +23510,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40259",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40259",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23536,7 +23536,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40260",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40260",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23562,7 +23562,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40261",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40261",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23588,7 +23588,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40262",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40262",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23614,7 +23614,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40263",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40263",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23640,7 +23640,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40264",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40264",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23666,7 +23666,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40265",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40265",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23692,7 +23692,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40266",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40266",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23718,7 +23718,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40267",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40267",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23744,7 +23744,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40268",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40268",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23770,7 +23770,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40269",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40269",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23796,7 +23796,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40270",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40270",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23822,7 +23822,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40271",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40271",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23848,7 +23848,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40272",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40272",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23874,7 +23874,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40273",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40273",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23900,7 +23900,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40274",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40274",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23926,7 +23926,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40275",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40275",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23952,7 +23952,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40276",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40276",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -23978,7 +23978,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40277",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40277",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24004,7 +24004,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40278",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40278",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24030,7 +24030,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40279",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40279",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24056,7 +24056,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40280",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40280",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24082,7 +24082,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40281",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40281",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24108,7 +24108,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40282",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40282",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24134,7 +24134,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40283",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40283",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24160,7 +24160,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40284",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40284",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24186,7 +24186,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40285",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40285",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24212,7 +24212,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40286",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40286",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24238,7 +24238,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40287",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40287",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24264,7 +24264,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40288",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40288",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24290,7 +24290,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40289",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40289",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24316,7 +24316,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40290",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40290",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24342,7 +24342,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40291",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40291",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24368,7 +24368,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40292",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40292",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24394,7 +24394,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40293",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40293",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24420,7 +24420,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40294",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40294",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24446,7 +24446,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40295",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40295",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24472,7 +24472,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40296",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40296",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24498,7 +24498,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40297",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40297",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24524,7 +24524,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40298",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40298",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24550,7 +24550,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40299",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40299",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24576,7 +24576,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40300",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40300",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24602,7 +24602,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40301",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40301",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24628,7 +24628,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40302",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40302",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24654,7 +24654,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40303",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40303",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24680,7 +24680,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40304",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40304",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24706,7 +24706,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40305",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40305",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24732,7 +24732,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40306",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40306",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24758,7 +24758,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40307",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40307",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24784,7 +24784,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40308",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40308",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24810,7 +24810,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40309",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40309",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24836,7 +24836,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40310",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40310",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24862,7 +24862,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40311",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40311",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24888,7 +24888,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40312",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40312",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24914,7 +24914,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40313",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40313",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24940,7 +24940,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40314",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40314",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24966,7 +24966,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40315",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40315",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -24992,7 +24992,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40316",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40316",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -25018,7 +25018,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40317",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40317",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -25044,7 +25044,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40318",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40318",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -25070,7 +25070,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40319",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40319",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -25096,7 +25096,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40320",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40320",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -25122,7 +25122,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40321",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40321",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -25148,7 +25148,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40322",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40322",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -25174,7 +25174,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40323",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40323",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -25200,7 +25200,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40324",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40324",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -25226,7 +25226,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40325",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40325",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
@@ -25252,7 +25252,7 @@
         ]
     },
     {
-        "@id": "http://www.registar.kam.hr/Elements/i/P40326",
+        "@id": "http://www.registar.kam.hr/Elements/po/P40326",
         "@type": [
             "http://www.w3.org/2002/07/owl#ObjectProperty"
         ],
