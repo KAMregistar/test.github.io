@@ -1687,7 +1687,7 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "ima jezik izvornika"
   } ]
-},  
+}, 
 {
     "@id": "http://www.registar.kam.hr/Elements/m/P11001",
     "@type": [
@@ -3299,7 +3299,7 @@
         "@id": "kamm:P11051"
       }
     ]
-  },
+  }
 {
   "@id" : "http://www.registar.kam.hr/Elements/vr/P12001",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
