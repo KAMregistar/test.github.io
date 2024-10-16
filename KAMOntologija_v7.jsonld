@@ -1729,7 +1729,7 @@
                 "@value": "ima geografski položaj mjesta"
             }
         ]
-    }
+    },
 {
   "@id" : "http://www.registar.kam.hr/Elements/vr/P12001",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
