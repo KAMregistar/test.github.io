@@ -349,6 +349,12 @@
 }, {
   "@id" : "http://www.registar.kam.hr/Element/d/P20004",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamd:P20004"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje djelo s kratkim nestrukturiranim tekstom u kojemu se navode objašnjenja i druge pojedinosti o geografskoj dužini i geografskoj širini prikaza na jedinici građe."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.registar.kam.hr/Element/c/#C10002"
   } ],
