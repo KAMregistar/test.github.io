@@ -40154,8 +40154,4244 @@
                 "@value": "ima kategoriju osobe"
             }
         ]
+    }, {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80001",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80001"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s izrazom koji označava je li kolektivni agent korporativno tijelo ili obitelj."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima vrstu kolektivnog agenta"
+            }
+        ]
     },
-{
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80002",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80002"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": NaN
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolektivni agent povezan s jedinicom opisa"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80003",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80003"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agentaa s djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolektivni agent povezan s djelom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80004",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80004"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s izrazom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolektivni agent povezan s izrazom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80005",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80005"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolektivni agent povezan s pojavnim oblikom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80006",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80006"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolektivni agent povezan s primjerkom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80007",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80007"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivni agent s nomenom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima nomen povezan s kolektivnim agentom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80008",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80008"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s mjestom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolektivni agent povezan s mjestom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80009",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80009"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s vremenskim rasponom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolektivni agent povezan s vremenskim rasponom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80010",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80010"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolektivni agent povezan s agentom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80011",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80011"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s kolektivnim agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolektivni agent povezan s kolektivnim agentom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80012",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80012"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivni agent s korporativnim tijelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolektivni agent povezan s korporativnim tijelom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80013",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80013"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivni agent s obitelji."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolektivni agent povezan s obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80014",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80014"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta čije se ovlasti, funkcije i odgovornosti temelje na djelu s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolektivni agent čije ovlasti proizlaze iz djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80015",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80015"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta čija je stvaralačka uloga u nastanku djela pogrešna, lažna ili izmišljena s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolektivni agent navodni stvaratelj djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80016",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80016"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji nad djelom uživa imovinska autorska prava ili pravo industrijskog vlasništva (patent, oznaka izvornosti itd.) s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolektivni agent nositelj prava intelektualnog vlasništva djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80017",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80017"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji se opravdano smatra stvarateljem djela, ali njegova stvaralačka uloga nije pouzdano utvrđena ili dokazana s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolektivni agent pretpostavljeni stvaratelj djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80018",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80018"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s djelom kojeg je stvorio."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolektivni agent stvaratelj djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80019",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80019"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje agent koji u pisanom ili usmenom obliku odgovara na pitanja koja mu postavlja voditelj intervjua s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolektivni agent koji daje intervju"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80020",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80020"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za projekt građevine ili drugog prostornog kompleksa, uključujući koordinaciju projektnog tima s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je arhitekt"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80021",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80021"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za planiranje i oblikovanje krajobraza s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je krajobrazni arhitekt"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80022",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80022"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za koncepciju izložbe, uključujući istraživački rad, izradu scenarija izložbe, koordinaciju stručnjaka i stručnih timova itd. s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je autor izložbe"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80023",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80023"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je autor performansa s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je autor performansa"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80024",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80024"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za djelo izraženo u tekstualnom obliku s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je autor teksta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80025",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80025"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je osmislio tekst reklame s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je copywriter"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80026",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80026"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je poslao tekstualnu poruku (pismo, poruku elektroničke pošte, poruku putem mobilne aplikacije itd.) s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je korespondent"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80027",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80027"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za tekst libreta glazbeno-scenskog djela (opere, operete itd.) ili oratorija s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je libretist"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80028",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80028"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je osmislio književno djelo s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je pisac"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80029",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80029"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za ideju i sinopsis i/ili scenarij radijskog ili televizijskog programa, stripa, video igre ili drugog narativnog djela iskazanog u slikovnom obliku, osim filma s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je scenarist"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80030",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80030"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za tekst pjesme s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je tekstopisac"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80032",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80032"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za funkcionalno i/ili vizualno oblikovanje industrijskog predmeta (industrijski dizajner) ili komunikacijsku formu (grafički dizajner), uključujući koordinaciju projektnog tima s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je dizajner"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80035",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80035"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za koncepciju i provedbu istraživanja s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je istraživač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80038",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80038"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za osmišljavanje i razvoj nove vrste predmeta ili tehnološkog postupka s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je izumitelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80039",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80039"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je stvorio kartu, atlas ili drugi kartografski prikaz u analognom ili digitalnom obliku s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kartograf"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80040",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80040"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je osmislio ples ili drugi oblik izvedbene umjetnosti koji se temelji na pokretima tijela s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je koreograf"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80041",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80041"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je osmislio djelo likovne umjetnosti s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je likovni umjetnik"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80043",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80043"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je osmislio fotografiju ili djelo sastavljeno od fotografija (fotografski album, fotomonografiju itd.) s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je fotograf"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80044",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80044"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je osmislio djelo grafičke umjetnosti s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je grafičar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80045",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80045"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je osmislio i oblikovao trodimenzionalno likovno djelo, uključujući kipove, reljefe i arhitektonsku plastiku s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kipar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80046",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80046"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je osmislio i oblikovao medalju, plaketu, novčić ili drugo djelo sitne, najčešće metalne plastike s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "kampo:P40102"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80047",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80047"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je stvorio slikarsko djelo s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je slikar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80048",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80048"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji upravlja znanstvenim ili razvojnim projektom i odgovoran je za sve aspekte projekta s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nositelj projekta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80052",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80052"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je stvorio kôd računalnog programa ili aplikacije s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je programer"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80057",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80057"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je skladao samostalno glazbeno djelo s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je skladatelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80058",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80058"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta čije je djelovanje dovelo do nastanka, prikupljanja i/ili čuvanja arhivskog fonda ili njegovog dijela s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je stvaratelj arhivskog gradiva"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80059",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80059"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za plan prikupljanja građe u zbirci s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je stvaratelj zbirke"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80060",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80060"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivni agent koji je sklopio ugovor s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je ugovorna stranka"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80061",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80061"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za planiranje funkcije i prostorne organizacije grada ili dijela grada, uključujući planove, računalne simulacije i sl. koji prikazuju izgled i namjenu gradskog prostora s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je urbanist"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80063",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80063"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta tj. upravno-teritorijalnu jedinicu čije je zakonodavno tijelo donijelo zakon ili drugi opći pravni akt s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je zakonodavac"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80064",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80064"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je potaknuo, nadahnuo, podržao i/ili odobrio djelo, ali nije imao izravnu stvaralačku ulogu u njegovu nastanku s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je sudionik u nastanku djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80065",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80065"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je primio tekstualnu poruku (pismo, poruku elektroničke pošte, poruku putem mobilne aplikacije itd.) s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je adresat"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80066",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80066"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta kojem je djelo formalno ili neformalno posvećeno s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolektivni agent kojem je djelo posvećeno"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P20257",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamd:P20257"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je odobrio završni rad ili disertaciju na temelju koje se dodijeljuje akademski stupanj s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je akademska ustanova"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80069",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80069"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji u vlastito ime pokreće, organizira i financijski podupire izdavanje djela (najčešće serijske jedinice građe) s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je izdavač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80071",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80071"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta  koji je naručio i platio stvaranje djela s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je naručitelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80073",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80073"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je pokrenuo izdavanje neomeđene jedinice građe (časopisa, novina, bloga, nakladničke cjeline itd.); izdavanje može i ne mora sâm organizirati i/ili financijski podupirati s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je osnivač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80074",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80074"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je financijski podržao (ali nije nužno sam naručio, pokrenuo ili utemeljio) stvaranje djela ili organizirani događaj (istraživanje, konferenciju, izložbu itd.) koji je doveo do nastanka djela s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je pokrovitelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80075",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80075"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je sudjelovao u stvaranju djela svojim stručnim znanjem ili iskustvom u određenom području djelovanja s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je savjetnik"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80076",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80076"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je izmijenio izvorni sadržaj jedinice građe (tekst, kompoziciju, slijed sekvenci itd.) kako bi bio u skladu s određenim političkim ili religijskim svjetonazorom s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je cenzor"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80077",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80077"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta čije se djelo navodi ili citira u sadržaju jedinice građe s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je citirani autor"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80078",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80078"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je na temelju osnovne zamisli skladatelja razradio instrumentalne i/ili vokalne dionice glazbenog djela za određeni izvođački sastav ili preradio glazbeno djelo drugog skladatelja za drugi izvođački sastav ili tonalitet s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je glazbeni aranžer"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80079",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80079"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji nastupa u izvedbi djela s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je izvođač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80080",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80080"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji izvodi instrumentalno, vokalno ili vokalno-instrumentalno glazbeno djelo s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je glazbenik"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80083",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80083"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji svira glazbeni instrument u izvedbi glazbenog djela s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je instrumentalist"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80084",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80084"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji izvodi vokalno glazbeno djelo ili vokalnu dionicu glazbenog djela s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je pjevač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80086",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80086"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji tumači ulogu u dramskoj ili glazbeno-scenskoj predstavi, filmu ili drugom obliku izvedbene umjetnosti s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je glumac"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80094",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80094"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji pleše u glazbeno-scenskoj predstavi ili drugom obliku izvedbene umjetnosti s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je plesač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80101",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80101"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je sudjelovao u realizaciji djela stručnim doprinosom u određenom području djelovanja s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je suradnik u realizaciji izraza"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80102",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80102"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za stvaranje privida kretanja niza statičnih slika ili predmeta u filmu, videu, računalnoj igri ili sl. s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je animator"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80103",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80103"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za stvaranje računalnih vizualizacija koje  prikazuju građevinu, tehničku tvorevinu ili drugi objekt u stanju dovršenosti s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je autor računalnih vizualizacija"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80104",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80104"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji koordinira i nadzire snimanje scena u filmu, videu, televizijskom programu ili drugom obliku pokretnih slika s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je direktor fotografije"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80105",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80105"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za odabir, dizajn i raspored elemenata interijera građevine s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je dizajner interijera"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80106",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80106"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za tehničke aspekte proizvodnje zvuka tijekom snimanja, miksanja i izvedbe glazbenih i zvučnih sadržaja s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je inženjer zvuka"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80107",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80107"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji kolorira crteže, grafike, fotografije i druge izraze likovnih djela drugih umjetnika s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolorist"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80108",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80108"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za dizajn i izradu kostima za film, televizijski program, kazališnu predstavu ili drugi oblik izvedbene umjetnosti s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kostimograf"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80109",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80109"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji oblikuje elemente rasvjete za potrebe snimanja filma ili televizijskog programa, dramske ili glazbeno-scenske izvedbe itd. s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je majstor rasvjete"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80110",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80110"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji oblikuje specijalne slikovne i zvučne efekte tijekom snimanja ili u post-produkciji filma i drugih sadržaja u audiovizualnom mediju s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je majstor specijalnih efekata"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80111",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80111"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za dizajn i izradu maski i drugih prostetičkih pomagala za film, televizijski program, kazališnu predstavu ili drugi oblik izvedbene umjetnosti s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je masker"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80112",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80112"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji odabire i uređuje snimljeni slikovni ili zvučni materijal i povezuje ga u cjelinu, uključujući sinkronizaciju slike i zvuka, montažu zvuka, posebne efekte itd. s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je montažer"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80113",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80113"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji piše dijaloge likova u skladu sa sinopsisom ili scenarijem radijskog ili televizijskog programa, stripa, video igre ili drugog narativnog djela iskazanog u slikovnom obliku s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je pisac dijaloga"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80114",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80114"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji programira kôd za neki interaktivni multimedijski sadržaj (video igru, elektroničku knjigu itd.) s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je programer-suradnik"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80115",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80115"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta aodgovornog za nadzor nad sinkronizacijom jezika filma, televizijskog programa, djela videoumjetnosti i sl. na drugi jezik s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je redatelj sinkronizacije"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80116",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80116"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za originalni ili adaptirani filmski scenarij, uključujući specifikaciju tijeka radnje, ambijenata, likova, njihovih postupaka i dijaloga s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je scenarist filma"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80117",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80117"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za dizajn i izradu elemenata ambijenta u filmu, televizijskom programu, kazališnoj predstavi ili drugom obliku izvedbene umjetnosti s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je scenograf"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80118",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80118"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je skladao popratnu glazbu za film, televizijski program, kazališnu predstavu, video igru itd. s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je skladatelj glazbe"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80119",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80119"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji kamerom snima film, video ili drugu vrstu pokretnih slika s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je snimatelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80120",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80120"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za izračun nosivosti građevne konstrukcije s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je statičar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80121",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80121"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji šminka izvođače za potrebe snimanja filma, televizijskog programa, kazališne predstave ili drugog oblika izvedbene umjetnosti s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je šminker"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80122",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80122"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za izradu detaljnih tehničkih crteža koji  prikazuju građevinu, tehničku tvorevinu ili drugi objekt u stanju dovršenosti s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je tehnički crtač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80123",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80123"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji snima zvučne sadržaje u studijskom prostoru ili na terenu ili sudjeluje u tonskoj realizaciji radijskoga ili televizijskog programa s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je tonski snimatelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80126",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80126"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je sudjelovao u procesu ručne ili manufakturne izrade pojavnog oblika ili njegovih dijelova s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je izrađivač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80127",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80127"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je obojio tekstil od kojega se sastoji odjevni, uporabni ili neki drugi predmet s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je bojadisar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80128",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80128"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je izradio metalne konstrukcijske ili ukrasne elemente na građevini ili dijelovima građevine, uključujući metalne ograde, namještaj, kvake itd. s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je bravar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80129",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80129"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je obradio površinu dragog kamena s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je brusač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80130",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80130"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je obradio metalni predmet tehnikom cizeliranja s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je cizeler"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80131",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80131"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je nanio emajl na površinu metalnog, keramičkog ili staklenog predmeta s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je emajler"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80132",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80132"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je ukrasio drveni predmet umecima od metala, drva, slonovače ili drugih materijala s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je intarzist"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80133",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80133"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je izradio kalup za oblikovanje keramike i stakla ili lijevanje rastaljenog metala i/ili izradio predmet iz kalupa s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kalupar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80134",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80134"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je izradio predmet ili dio predmeta od keramike s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je keramičar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80135",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80135"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je ugradio, oblikovao i/ili ukrasio kameni predmet, uključujući dijelove arhitekonske plastike s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je klesar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80136",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80136"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je iskovao uporabni predmet ili dio predmeta od željeza s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kovač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80137",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80137"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je izradio metalni predmet ili dio predmeta tehnikom tiještenja s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kovinopojasar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80138",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80138"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je izradio odjevni ili drugi predmet ili dio predmeta od tekstila s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je krojač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80139",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80139"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je nanio sloj laka na površinu namještaja ili drugog predmeta, uključujući izradu raznih motiva s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je lakirer"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80140",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80140"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je oblikovao predmet lijevanjem tekućeg metala, stakla ili drugog materijala u kalup s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je ljevač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80141",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80141"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je oblikovao predmet modeliranjem pripremljene smjese s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je modeler"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80142",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80142"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je ispisao ili prepisao tekst rukopisa s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je pisar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80143",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80143"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je nanio pozlatu na predmet od drva, metala, keramike, porculana, stakla, kože ili drugog materijala s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je pozlatar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80144",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80144"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je oblikovao ili ukrasio predmet ili dio drvenog predmeta urezivanjem raznih oblika s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je rezbar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80145",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80145"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je oblikovao stakleni predmet upuhivanjem zraka u masu rastaljenog stakla, uključujući dodatno oblikovanje hvataljkama, škarama i valjanjem s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je staklopuhač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80146",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80146"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je izradio drveni predmet ili građevni element, uključujući namještaj, oplate, obloge i građevnu stolariju s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je stolar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80147",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80147"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je izradio tekstilne presvlake za namještaj s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je tapetar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80148",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80148"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je izradio tekstil ili drugi materijal tehnikom prepletanja niti s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je tkalac"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80149",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80149"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je izradio ili ukrasio okvir za sliku, ogledalo ili drugi predmet s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je uokvirivač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80150",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80150"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je izradio satni mehanizam s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je urar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80151",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80151"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je izradio predmet ili dio predmeta tehnikom vitraja s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je vizažist"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80152",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80152"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je organizacijski, financijski i pravno odgovoran za objavljivanje pojavnog oblika s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nakladnik"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80153",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80153"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je osmislio reklamnu kampanju i/ili koordinirao oglašavanje pojavnog oblika u masovnim medijima s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je oglašivač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80154",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80154"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je organizirao, financirao i/ili sudjelovao u procesu serijske proizvodnje pojavnog oblika ili njegovih dijelova s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je proizvođač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80155",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80155"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je proizveo papir tiskanog ili rukopisnog sveska, lista ili skupa listova s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je proizvođač papira"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80156",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80156"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je proizveo pojavni oblik otiskom teksta ili slike na papir ili drugu podlogu s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je tiskar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80157",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80157"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je sudjelovao u prijenosu sadržaja putem televizije, radija, interneta itd. s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je prenositelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80158",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80158"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji nudi na prodaju primjerke serijski proizvedenoga pojavnog oblika s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je prodavač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80159",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80159"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji nudi na prodaju knjige i druge publikacije s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je knjižar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80160",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80160"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji ima isključivo pravo prodaje ili dijeljenja primjeraka pojavnog oblika na određenom tržištu s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je raspačavatelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80161",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80161"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji sudjeluje u pripremi određenog izdanja za objavljivanje s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je suradnik na izdanju"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80162",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80162"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je dopunio izdanje teksta drugog  kolektivnog agenta predgovorom, pogovorom, objašnjenjima, komentarima itd. s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je autor dodanog teksta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80163",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80163"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za grafičko oblikovanje izdanja, uključujući prijelom i pripremu za tisak s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je grafički urednik"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80164",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80164"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je oblikovao slikovne prikaze uz određeno izdanje teksta s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je ilustrator"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80165",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80165"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je oblikovao slova tiskanog teksta, uključujući slaganje tiskarskog sloga od pomičnih slova s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je tipograf"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80166",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80166"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta čija je intervencija dovela do razlikovanja primjerka od drugih primjeraka istog pojavnog oblika s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolektivni agent koji je preinačio primjerak"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80167",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80167"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je ručno dodao primjerku tekstualne, slikovne ili druge bilješke s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je anotator"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80168",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80168"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je ukrasio primjerak iluminacijama s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je iluminator"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80169",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80169"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je uvezao knjigu s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je knjigoveža"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80171",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80171"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je modificirao primjerak kako bi zaustavio njegovo propadanje i vratio ga u stanje najbliže onome kakvo je bilo u određenom razdoblju njegove prošlosti s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je restaurator"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80172",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80172"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivng agenta koji je oblikovao i ukrasio početna slova (inicijale) teksta u rukopisima i prvim tiskanim knjigama s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je rubrikator"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80173",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80173"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta odgovornog za inventarizaciju i/ili stručnu obradu primjerka, uključujući unos podataka o primjerku u informacijski sustav s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolektivni agent koji je stručno obradio primjerak"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80174",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80174"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je identificirao vrstu kojoj pripada primjerak prirodoslovne građe s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je determinator"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80175",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80175"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je posredovao pri aukcijskoj kupnji primjerka s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je aukcionist"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80176",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80176"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji posjeduje i/ili skrbi o primjerku s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je posjednik"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80177",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80177"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji nad primjerkom uživa ili je uživao vlasnička prava s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je vlasnik"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80178",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80178"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je darovao primjerak sadašnjem vlasniku s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je darovatelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80179",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80179"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je primjerak u svom vlasništvu povjerio na skrb i upravljanje sadašnjem imatelju s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je deponent"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80180",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80180"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je prodao primjerak sadašnjem vlasniku s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je prodavatelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80181",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80181"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je izradio preparat  prirodoslovnog objekta s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je preparator"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80182",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80182"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je procijenio vrijednost primjerka s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je procjenitelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80183",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80183"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta koji je prikupio primjerak terenskim istraživanjem s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je sakupljač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80184",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80184"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s nomenom koji je dodijelio taj kolektivni agent."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolektivni agent koji je dodijelioo nomen za kolektivni agent"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80185",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80185"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s oznakom za taj kolektivni agent."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima oznaku za kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80186",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80186"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s nadziranom riječi ili nizom riječi i/ili drugih oznaka, koja unutar nekog sustava jednoznačno identificira kolektivni agent i okuplja podatke o kolektivnom agentu."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima nadziranu pristupnicu za kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80187",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80187"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s usvojenom riječi ili nizom riječi i/ili drugih oznaka, koja unutar nekog sustava jednoznačno identificira kolektivnog agenta i okuplja podatke o kolektivnom agentu."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima usvojenu pristupnicu za kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80188",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80188"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s riječi ili nizom riječi ili znakova koji identificiraju kolektivnog agenta unutar određenog sustava, a nisu odabrani za usvojenu pristupnicu."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima varijantnu pristupnicu za kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80189",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80189"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s riječi, brojkom ili nizom riječi, brojki ili drugih znakova, koji služi razlikovanju kolektivnih agenata čije je ime jednako ili slično."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima dodatno obilježje kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80190",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80190"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s brojčanom ili slovno-brojčanom oznakom koja unutar određenog sustava jednoznačno identificira kolektivnog agenta."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima identifikator kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80191",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80191"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s kratkim tekstom u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o kolektivnom agentu i/ili izvorima iz kojih su identifikacijski podaci preuzeti."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o identifikaciji kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80192",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80192"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s bilo kojom informacijom o kolektivnom agentu koja nije zabilježena uporabom specifičnih atributa i/ili odnosa."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o kolektivnom agentu"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80193",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80193"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između kolektivnog  agenta i drugog kolektivnog agenta ili više drugih kolektivnih agenata, odnosno kolektivnog agenta i druge ili više drugih jedinica opisa."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o odnosu kolektivnog agenta i drugih jedinica opisa"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80194",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80194"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s izrazom, nadziranim nazivom, imenom, naslovom, identifikatorom ili drugom nadziranom oznakom koja označava temu kojom se bavi ili koju prikazuje djelo.\n"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolektivni agent predmet djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80195",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80195"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s imenom za kolektivnog agenta."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima ime kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80196",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80196"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s riječi ili nizom riječi ili znakova koji jednoznačno i dosljedno imenuje kolektivnog agenta unutar određenog sustava."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima usvojeno ime kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80197",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80197"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s riječi, znakom ili nizom riječi ili znakova koji identificiraju kolektivnog agenta unutar određenog sustava, a nisu odabrani za usvojeno ime kolektivnog agenta."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima varijantno ime kolektivnog agenta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80198",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80198"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s osobom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolektivni agent povezan s osobom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ka/P80199",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamka:P80199"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje kolektivnog agenta s korporativnim tijelom koji je njegov član."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10008"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima za člana korporativno tijelo"
+            }
+        ]
+    },{
     "@id": "http://www.registar.kam.hr/Elements/m/P11001",
     "@type": [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
     "http://www.registar.kam.hr/ontologies/ont.owl/ID": [ {
