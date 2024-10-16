@@ -1101,24 +1101,6 @@
     "@id" : "http://www.registar.kam.hr/Element/jo/P10022"
   } ]
 }, {
-  "@id" : "http://www.registar.kam.hr/Elements/a/P60001",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
-    "@value" : "kama:P60001"
-  } ],
-  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
-    "@value" : "Povezuje agenta s izrazom koji označava je li agent osoba, kolektivni agent, korporativno tijelo ili obitelj."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.registar.kam.hr/Element/c/#C10006"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "ima vrstu agenta"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.registar.kam.hr/Element/jo/P10001"
-  } ]
-}, {
   "@id" : "http://www.registar.kam.hr/Elements/d/P20019",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
@@ -28734,7 +28716,6 @@
             }
         ]
     },
-[
     {
         "@id": "http://www.registar.kam.hr/Elements/a/P60001",
         "@type": [
