@@ -40194,7 +40194,7 @@
         ],
         "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
             {
-                "@value": NaN
+                "@value": null
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#domain": [
