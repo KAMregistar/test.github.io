@@ -1703,7 +1703,34 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [ {
         "@value": "ima vrstu mjesta"
       } ]
-  },{
+  },
+{
+        "@id": "http://www.registar.kam.hr/Elements/m/P11002",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamm:P11002"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje mjesto s oznakom granicâ suvremenog ili povijesnog mjesta na Zemlji."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10011"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima geografski položaj mjesta"
+            }
+        ]
+    }
+{
   "@id" : "http://www.registar.kam.hr/Elements/vr/P12001",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
