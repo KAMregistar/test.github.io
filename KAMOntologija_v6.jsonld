@@ -1988,6 +1988,21 @@
     "@id" : "http://www.registar.kam.hr/Elements/m/P11011"
   } ]
 }, {
+  "@id" : "http://www.registar.kam.hr/Elements/m/P11016",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
+    "@value" : "kamm:P11016"
+  } ],
+  "http://www.registar.kam.hr/ontologies/ont.owl/definition" : [ {
+    "@value" : "Povezuje mjesto s primjerkom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.registar.kam.hr/Element/c/#C10011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "je mjesto povezano s primjerkom"
+  } ]
+}, {
   "@id" : "http://www.registar.kam.hr/Elements/vr/P12001",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.registar.kam.hr/ontologies/ont.owl/ID" : [ {
