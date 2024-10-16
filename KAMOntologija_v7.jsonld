@@ -44391,7 +44391,7 @@
                 "@value": "ima za člana korporativno tijelo"
             }
         ]
-    },{
+    }, {
     "@id": "http://www.registar.kam.hr/Elements/m/P11001",
     "@type": [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
     "http://www.registar.kam.hr/ontologies/ont.owl/ID": [ {
