@@ -49309,6 +49309,4400 @@
         ]
     },
 {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10001",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10001"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s izrazom, nadziranim nazivom, kôdom ili drugom oznakom koja označava vrstu kojoj pripada obitelj."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima vrstu obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10002",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10002"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s izrazom, nadziranim nazivom, identifikatorom ili drugom oznakom za područje ljudskog znanja ili aktivnosti kojim se obitelj bavi i/ili unutar kojega obnaša određenu funkciju."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima funkciju ili djelatnost obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10003",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10003"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s kratkim nestrukturiranim tekstom u kojemu se navode objašnjenja i druge pojedinosti o funkciji koju obitelj obavlja ili je obavljala, odnosno području ljudskog znanja ili aktivnosti kojim se bavi(la)."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o funkciji ili djelatnosti obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10005",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10005"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s strukturiranim ili nestrukturiranim tekstom u kojemu se objašnjava porijeklo, razvoj i grananje obitelji."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima genealogiju obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10006",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10006"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s izrazom, nadziranim nazivom, kôdom, identifikatorom ili drugom oznakom koja označava jezik kojim se obitelj služi(la) u svom javnom djelovanju."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima jezik obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10007",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10007"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s kratakim nestrukturiranim tekstom koji opisuje najznačajnije događaje vezane uz djelovanje obitelji. "
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima povijest obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10008",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10008"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelji s kratakim nestrukturiranim tekstom koji sadržava pojedinosti o obitelji koje se smatraju značajnima, a nisu iskazane u drugim elementima opisa."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10009",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10009"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s jedinicom opisa."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj povezana s jedinicom opisa"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10010",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10010"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj povezana s djelom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10011",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10011"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s izrazom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj povezana s izrazom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10012",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10012"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj povezana s pojavnim oblikom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10013",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10013"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj povezana s primjerkom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10014",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10014"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj čije se ovlasti, funkcije i odgovornosti temelje na djelu s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj čije ovlasti proizlaze iz djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10015",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10015"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj čija je stvaralačka uloga u nastanku djela pogrešna, lažna ili izmišljena s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj navodni stvaratelj djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10016",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10016"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja nad djelom uživa imovinska autorska prava ili pravo industrijskog vlasništva (patent, oznaka izvornosti itd.) s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj nositelj prava intelektualnog vlasništva djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10017",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10017"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koju se opravdano smatra stvarateljem djela, ali njena stvaralačka uloga nije pouzdano utvrđena ili dokazana s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj pretpostavljeni stvaratelj djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10018",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10018"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s djelom kojega je stvorila."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj stvaratelj djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10019",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10019"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja u pisanom ili usmenom obliku odgovara na pitanja koja mu postavlja voditelj intervjua s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj koja daje intervju"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10020",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10020"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za projekt građevine ili drugog prostornog kompleksa, uključujući koordinaciju projektnog tima s tim djelom"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je arhitekt"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10021",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10021"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za planiranje i oblikovanje krajobraza s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je krajobrazni arhitekt"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10022",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10022"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za koncepciju izložbe, uključujući istraživački rad, izradu scenarija izložbe, koordinaciju stručnjaka i stručnih timova itd. s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je autor izložbe"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10023",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10023"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je autor performansa s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je autor performansa"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10024",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10024"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za djelo izraženo u tekstualnom obliku s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je autor teksta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10025",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10025"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je osmislila tekst reklame s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je copywriter"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10026",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10026"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je osmislila i poslala tekstualnu poruku (pismo, poruku elektroničke pošte itd.) s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je korespondent"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10027",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10027"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za tekst libreta glazbeno-scenskog djela (opere, operete itd.) ili oratorija s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je libretist"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10028",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10028"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je osmislila tekst djela s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je pisac"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10029",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10029"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za ideju i sinopsis i/ili scenarij radijskog ili televizijskog programa, stripa, video igre ili drugog narativnog djela iskazanog u slikovnom obliku, osim filma s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je scenarist"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10030",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10030"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za tekst pjesme s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je tekstopisac"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10032",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10032"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za funkcionalno i/ili vizualno oblikovanje industrijskog predmeta (industrijski dizajner) ili komunikacijsku formu (grafički dizajner), uključujući koordinaciju projektnog tima s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je dizajner"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10035",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10035"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za koncepciju i provedbu istraživanja s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je istraživač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10038",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10038"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za osmišljavanje i razvoj nove vrste predmeta ili tehnološkog postupka s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je izumitelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10039",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10039"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je stvorila kartu, atlas ili drugi kartografski prikaz u analognom ili digitalnom obliku s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kartograf"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10040",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10040"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je osmislila ples ili drugi oblik izvedbene umjetnosti koji se temelji na pokretima tijela s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je koreograf"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10041",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10041"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je osmislila djelo likovne umjetnosti s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je likovni umjetnik"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10043",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10043"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je osmislila fotografiju ili djelo sastavljeno od fotografija (fotografski album, fotomonografiju itd.) s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je fotograf"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10044",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10044"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je osmislila djelo grafičke umjetnosti s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je grafičar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10046",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10046"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je osmislila i oblikovala trodimenzionalno likovno djelo, uključujući kipove, reljefe i arhitektonsku plastiku s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kipar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10047",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10047"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je osmislila i oblikovala medalju, plaketu, novčić ili drugo djelo sitne, najčešće metalne plastike s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je medaljer"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10048",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10048"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je stvorila slikarsko djelo s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je slikar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10049",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10049"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja upravlja znanstvenim ili razvojnim projektom i odgovorna je za sve aspekte projekta s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nositelj projekta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10058",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10058"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj čije je djelovanje dovelo do nastanka, prikupljanja i/ili čuvanja arhivskog fonda ili njegovog dijela s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je stvaratelj arhivskog gradiva"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10059",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10059"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za plan prikupljanja građe u zbirci s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je stvaratelj zbirke"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10060",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10060"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je sklopila ugovor s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je ugovorna stranka"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10063",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10063"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je potaknula, nadahnula, podržala i/ili odobrila djelo, ali nije imala izravnu stvaralačku ulogu u njegovu nastanku s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je sudionik u nastanku djela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10064",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10064"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je primila tekstualnu poruku (pismo, poruku elektroničke pošte, poruku putem mobilne aplikacije itd.) s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je adresat"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10065",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10065"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj kojoj je djelo formalno ili neformalno posvećeno s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj kojoj je djelo posvećeno"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10067",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10067"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja u vlastito ime pokreće, organizira i financijski podupire izdavanje djela (najčešće serijske jedinice građe) s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je izdavač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10069",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10069"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je naručila i platila stvaranje djela s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je naručitelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10071",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10071"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je pokrenula izdavanje neomeđene jedinice građe (časopisa, novina, bloga, nakladničke cjeline itd.); izdavanje može i ne mora sâma organizirati i/ili financijski podupirati s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je osnivač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10072",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10072"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je financijski podržala (ali nije nužno sama naručila, pokrenula ili utemeljila) stvaranje djela ili organizirani događaj (istraživanje, konferenciju, izložbu itd.) koji je doveo do nastanka djela s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je pokrovitelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10073",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10073"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je sudjelovala u stvaranju djela svojim stručnim znanjem ili iskustvom u određenom području djelovanja s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je savjetnik"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10074",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10074"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je izmijenila izvorni sadržaj jedinice građe (tekst, kompoziciju, slijed sekvenci itd.) kako bi bio u skladu s određenim političkim ili religijskim svjetonazorom s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je cenzor"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10075",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10075"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj čije se djelo navodi ili citira u sadržaju jedinice građe s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je citirani autor"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10076",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10076"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je na temelju osnovne zamisli skladatelja razradila instrumentalne i/ili vokalne dionice glazbenog djela za određeni izvođački sastav ili preradila glazbeno djelo drugog skladatelja za drugi izvođački sastav ili tonalitet s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je glazbeni aranžer"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10077",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10077"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja nastupa u izvedbi djela s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je izvođač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10078",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10078"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja izvodi instrumentalno, vokalno ili vokalno-instrumentalno glazbeno djelo s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je glazbenik"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10081",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10081"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja svira glazbeni instrument u izvedbi glazbenog djela s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je instrumentalist"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10082",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10082"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja izvodi vokalno glazbeno djelo ili vokalnu dionicu glazbenog djela s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je pjevač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10084",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10084"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja tumači ulogu u dramskoj ili glazbeno-scenskoj predstavi, filmu ili drugom obliku izvedbene umjetnosti s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je glumac"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10092",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10092"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja pleše u glazbeno-scenskoj predstavi ili drugom obliku izvedbene umjetnosti s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je plesač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10099",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10099"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je sudjelovala u realizaciji djela stručnim doprinosom u određenom području djelovanja s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je suradnik u realizaciji izraza"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10100",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10100"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za stvaranje privida kretanja niza statičnih slika ili predmeta u filmu, videu, računalnoj igri ili sl. s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je animator"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10101",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10101"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za stvaranje računalnih vizualizacija koje  prikazuju građevinu, tehničku tvorevinu ili drugi objekt u stanju dovršenosti s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je autor računalnih vizualizacija"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10102",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10102"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja koordinira i nadzire snimanje scena u filmu, videu, televizijskom programu ili drugom obliku pokretnih slika s tim djelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je direktor fotografije"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10103",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10103"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za odabir, dizajn i raspored elemenata interijera građevine s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je dizajner interijera"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10104",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10104"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za tehničke aspekte proizvodnje zvuka tijekom snimanja, miksanja i izvedbe glazbenih i zvučnih sadržaja s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je inženjer zvuka"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10105",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10105"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja kolorira crteže, grafike, fotografije i druge izraze likovnih djela drugih umjetnika s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kolorist"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10106",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10106"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za dizajn i izradu kostima za film, televizijski program, kazališnu predstavu ili drugi oblik izvedbene umjetnosti s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kostimograf"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10107",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10107"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja oblikuje elemente rasvjete za potrebe snimanja filma ili televizijskog programa, dramske ili glazbeno-scenske izvedbe itd. s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je majstor rasvjete"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10108",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10108"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja oblikuje specijalne slikovne i zvučne efekte tijekom snimanja ili u post-produkciji filma i drugih sadržaja u audiovizualnom mediju s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je majstor specijalnih efekata"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10109",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10109"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za dizajn i izradu maski i drugih prostetičkih pomagala za film, televizijski program, kazališnu predstavu ili drugi oblik izvedbene umjetnosti s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je masker"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10110",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10110"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja odabire i uređuje snimljeni slikovni ili zvučni materijal i povezuje ga u cjelinu, uključujući sinkronizaciju slike i zvuka, montažu zvuka, posebne efekte itd. s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je montažer"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10111",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10111"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja piše dijaloge likova u skladu sa sinopsisom ili scenarijem radijskog ili televizijskog programa, stripa, video igre ili drugog narativnog djela iskazanog u slikovnom obliku s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je pisac dijaloga"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10112",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10112"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja programira kôd za neki interaktivni multimedijski sadržaj (video igru, elektroničku knjigu itd.) s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je programer-suradnik"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10113",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10113"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za nadzor nad sinkronizacijom jezika filma, televizijskog programa, djela videoumjetnosti i sl. na drugi jezik s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je redatelj sinkronizacije"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10114",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10114"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za originalni ili adaptirani filmski scenarij, uključujući specifikaciju tijeka radnje, ambijenata, likova, njihovih postupaka i dijaloga s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je scenarist filma"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10115",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10115"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za dizajn i izradu elemenata ambijenta u filmu, televizijskom programu, kazališnoj predstavi ili drugom obliku izvedbene umjetnosti s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je scenograf"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10116",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10116"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je skladala popratnu glazbu za film, televizijski program, kazališnu predstavu, video igru itd. s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je skladatelj glazbe"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10117",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10117"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja kamerom snima film, video ili drugu vrstu pokretnih slika s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je snimatelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10118",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10118"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za izračun nosivosti građevne konstrukcije s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je statičar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10119",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10119"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja šminka izvođače za potrebe snimanja filma, televizijskog programa, kazališne predstave ili drugog oblika izvedbene umjetnosti s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je šminker"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10120",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10120"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za izradu detaljnih tehničkih crteža koji  prikazuju građevinu, tehničku tvorevinu ili drugi objekt u stanju dovršenosti s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je tehnički crtač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10121",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10121"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja snima zvučne sadržaje u studijskom prostoru ili na terenu ili sudjeluje u tonskoj realizaciji radijskoga ili televizijskog programa s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je tonski snimatelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10124",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10124"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je sudjelovala u procesu ručne ili manufakturne izrade pojavnog oblika ili njegovih dijelova s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je izrađivač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10125",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10125"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je obojila tekstil od kojega se sastoji odjevni, uporabni ili neki drugi predmet s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je bojadisar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10126",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10126"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je izradila metalne konstrukcijske ili ukrasne elemente na građevini ili dijelovima građevine, uključujući metalne ograde, namještaj, kvake itd. s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je bravar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10127",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10127"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je obradila površinu dragog kamena s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je brusač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10128",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10128"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je obradila metalni predmet tehnikom cizeliranja s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je cizeler"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10129",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10129"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je nanijela emajl na površinu metalnog, keramičkog ili staklenog predmeta s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je emajler"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10130",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10130"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je ukrasila drveni predmet umecima od metala, drva, slonovače ili drugih materijala s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je intarzist"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10131",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10131"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je izradila kalup za oblikovanje keramike i stakla ili lijevanje rastaljenog metala i/ili izradio predmet iz kalupa s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kalupar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10132",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10132"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koji je izradio predmet ili dio predmeta od keramike s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je keramičar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10133",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10133"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je ugradila, oblikovala i/ili ukrasila kameni predmet, uključujući dijelove arhitekonske plastike s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je klesar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10134",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10134"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je iskovala uporabni predmet ili dio predmeta od željeza s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kovač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10135",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10135"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je izradila metalni predmet ili dio predmeta tehnikom tiještenja s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je kovinopojasar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10136",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10136"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je izradila odjevni ili drugi predmet ili dio predmeta od tekstila s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je krojač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10137",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10137"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je nanijela sloj laka na površinu namještaja ili drugog predmeta, uključujući izradu raznih motiva s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je lakirer"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10138",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10138"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je oblikovala predmet lijevanjem tekućeg metala, stakla ili drugog materijala u kalup s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je ljevač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10139",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10139"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je oblikovala predmet modeliranjem pripremljene smjese s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je modeler"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10140",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10140"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je ispisala ili prepisala tekst rukopisa s izrazom tog djela."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je pisar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10141",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10141"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je nanijela pozlatu na predmet od drva, metala, keramike, porculana, stakla, kože ili drugog materijala s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je pozlatar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10142",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10142"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je oblikovala ili ukrasila predmet ili dio drvenog predmeta urezivanjem raznih oblika s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je rezbar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10143",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10143"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je oblikovala stakleni predmet upuhivanjem zraka u masu rastaljenog stakla, uključujući dodatno oblikovanje hvataljkama, škarama i valjanjem s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je staklopuhač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10144",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10144"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je izradila drveni predmet ili građevni element, uključujući namještaj, oplate, obloge i građevnu stolariju s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je stolar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10145",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10145"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je izradila tekstilne presvlake za namještaj s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je tapetar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10146",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10146"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je izradila tekstil ili drugi materijal tehnikom prepletanja niti s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je tkalac"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10147",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10147"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je izradila ili ukrasila okvir za sliku, ogledalo ili drugi predmet s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je uokvirivač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10148",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10148"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je izradila satni mehanizam s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je urar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10149",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10149"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je izradila predmet ili dio predmeta tehnikom vitraja s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je vizažist"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10150",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10150"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je organizacijski, financijski i pravno odgovorna za objavljivanje pojavnog oblika s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je nakladnik"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10151",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10151"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je osmislila reklamnu kampanju i/ili koordinirala oglašavanje pojavnog oblika u masovnim medijima s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je oglašivač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10152",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10152"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je organizirala, financirala i/ili sudjelovala u procesu serijske proizvodnje pojavnog oblika ili njegovih dijelova s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je proizvođač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10153",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10153"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je proizvela papir tiskanog ili rukopisnog sveska, lista ili skupa listova s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je proizvođač papira"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10154",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10154"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je proizvela pojavni oblik otiskom teksta ili slike na papir ili drugu podlogu s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je tiskar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10155",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10155"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je sudjelovala u prijenosu sadržaja putem televizije, radija, interneta itd. s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je prenositelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10156",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10156"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja nudi na prodaju primjerke serijski proizvedenoga pojavnog oblika s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je prodavač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10157",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10157"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja nudi na prodaju knjige i druge publikacije s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je knjižar"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10158",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10158"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja ima isključivo pravo prodaje ili dijeljenja primjeraka pojavnog oblika na određenom tržištu s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je raspačavatelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10159",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10159"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja sudjeluje u pripremi određenog izdanja za objavljivanje s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je suradnik na izdanju"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10160",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10160"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je dopunila izdanje teksta druge obitelji predgovorom, pogovorom, objašnjenjima, komentarima itd. s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je autor dodanog teksta"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10161",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10161"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za grafičko oblikovanje izdanja, uključujući prijelom i pripremu za tisak s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je grafički urednik"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10162",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10162"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je oblikovala slikovne prikaze uz određeno izdanje teksta s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je ilustrator"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10163",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10163"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je oblikovala slova tiskanog teksta, uključujući slaganje tiskarskog sloga od pomičnih slova s tim pojavnim oblikom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je tipograf"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10164",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10164"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj čija je intervencija dovela do razlikovanja primjerka od drugih primjeraka istog pojavnog oblika s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj koja je preinačila primjerak"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10165",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10165"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je ručno dodala primjerku tekstualne, slikovne ili druge bilješke s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je anotator"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10166",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10166"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je ukrasila primjerak iluminacijama s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je iluminator"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10167",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10167"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je uvezala knjigu s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je knjigoveža"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10168",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10168"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je modificirala primjerak kako bi zaustavila njegovo propadanje i vratila ga u stanje najbliže onome kakvo je bilo u određenom razdoblju njegove prošlosti s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je restaurator"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10169",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10169"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelji koja je oblikovala i ukrasila početna slova (inicijale) teksta u rukopisima i prvim tiskanim knjigama s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je rubrikator"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10170",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10170"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj odgovornu za inventarizaciju i/ili stručnu obradu primjerka, uključujući unos podataka o primjerku u informacijski sustav s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj koja je stručno obradila primjerak"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10171",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10171"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je identificirala vrstu kojoj pripada primjerak prirodoslovne građe s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je determinator"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10172",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10172"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje osobu koja je posredovala pri aukcijskoj kupnji primjerka s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je aukcionist"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10173",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10173"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja posjeduje i/ili skrbi o primjerku s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je posjednik"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10174",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10174"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja nad primjerkom uživa ili je uživao vlasnička prava s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je vlasnik"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10175",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10175"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je darovala primjerak sadašnjem vlasniku s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je darovatelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10176",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10176"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je primjerak u svom vlasništvu povjerila na skrb i upravljanje sadašnjem imatelju s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je deponent"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10177",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10177"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je prodala primjerak sadašnjem vlasniku s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je prodavatelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10178",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10178"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je izradila preparat primjerka prirodoslovne građe s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je preparator"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10179",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10179"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je procijenila vrijednost primjerka s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je procjenitelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10180",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10180"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj koja je prikupila primjerak terenskim istraživanjem s tim primjerkom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je sakupljač"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10181",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10181"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s mjestom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj povezana s mjestom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10182",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10182"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s mjestom povezanim s privatnom i/ili profesionalnom poviješću obitelji."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima mjesto djelovanja obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10183",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10183"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s mjesto u vlasništvu obitelji."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima posjed obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10184",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10184"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s vremenskim rasponom"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj povezana s vremenskim rasponom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10185",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10185"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s vremenskim rasponom u kojemu je obitelj djelovala."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima vrijeme djelovanja obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10186",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10186"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj povezana s agentom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10187",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10187"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s osobom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj povezana s osobom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10188",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10188"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s osobom koja joj pripada rodbinskim, bračnim ili drugim vezama."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj kojoj je osoba član"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10189",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10189"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s kolektivnim agentom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj povezana s kolektivnim agentom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10190",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10190"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s korporativnim tijelom."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj povezana s korporativnim tijelom"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10191",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10191"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s korporativnim tijelom koje je osnovala."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je osnivač korporativnog tijela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10192",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10192"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s korporativnim tijelom koje je vlasnik."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je vlasnik korporativnog tijela"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10193",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10193"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s obitelji."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj povezana s obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10194",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10194"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s obitelji od koje je genealoški potekla."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je potomak"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10195",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10195"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s obitelj od koje je genealoški potekla."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je predak"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10196",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10196"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s nomenom za tu obitelj."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj povezana s nomenom za obitelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10197",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10197"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s oznakom za tu obitelj."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima oznaku za obitelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10198",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10198"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s nadziranom riječi ili nizom riječi i/ili drugih oznaka, koja unutar nekog sustava jednoznačno identificira obitelj i okuplja podatke o obitelji."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima nadziranu pristupnicu za obitelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10199",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10199"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s riječi, znakom ili nizom riječi ili znakova koji dosljedno imenuje obitelj unutar određenog sustava. "
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima usvojenu pristupnicu za obitelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10200",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10200"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s riječi, znakom ili nizom riječi ili znakova koji imenuju obitelj unutar određenog sustava, a nisu odabrani za usvojeni oblik imena obitelji."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima varijantnu pristupnicu za obitelj"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10201",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10201"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s imenom za obitelj."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima ime obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10202",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10202"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s riječi ili nizom riječi ili znakova koji jednoznačno i dosljedno imenuje obitelj unutar određenog sustava."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima usvojeno ime obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10203",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10203"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s riječi, znakom ili nizom riječi ili znakova koji identificiraju obitelj unutar određenog sustava, a nisu odabrani za usvojeno ime obitelji."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima varijantno ime obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10204",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10204"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s riječi, znakom ili nizom riječi ili znakova koji razlikuje obitelj od drugih obitelji s istim usvojenim ili varijantnim oblikom imena."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima dodatno obilježje obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10205",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10205"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s brojčanom ili slovno-brojčanom oznakom ili nizom znakova koji jednoznačno identificira obitelj unutar određenog sustava."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima identifikator obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10206",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10206"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s kratkim tekstom u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o obitelji i/ili izvorima iz kojih su identifikacijski podaci preuzeti."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o identifikaciji obitelji"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10207",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10207"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između obitelji i i druge obitelj ili više drugih obitelji, odnosno obitelji i druge ili više drugih jedinica opisa."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ima napomenu o odnosu obitelji i drugih jedinica opisa"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.registar.kam.hr/Elements/ob/P10208",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/ID": [
+            {
+                "@value": "kamob:P10208"
+            }
+        ],
+        "http://www.registar.kam.hr/ontologies/ont.owl/definition": [
+            {
+                "@value": "Povezuje obitelj s izrazom, nadziranim nazivom, imenom, naslovom, identifikatorom ili drugom nadziranom oznakom koja označava temu kojom se bavi ili koju prikazuje djelo.\n"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#domain": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/c/#C10010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "je obitelj predmet djela"
+            }
+        ]
+    },
+{
     "@id": "http://www.registar.kam.hr/Elements/m/P11001",
     "@type": [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
     "http://www.registar.kam.hr/ontologies/ont.owl/ID": [ {
