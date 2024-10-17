@@ -12,119 +12,6 @@
 
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <style>
-        body {
-            font-family: 'Poppins', 'Rubik', Arial, sans-serif;
-            font-weight: 400;
-            margin: 0;
-            padding-left: 90px;
-            padding-right: 90px;
-            padding-bottom: 150px;
-        }
-
-        #menu-bar {
-            display: flex;
-            height: 80px;
-            justify-content: flex-start;
-            align-items: center;
-            background-color: white;
-            padding: 10px;
-            font-size: 12px;
-            border-bottom: 1px solid #333;
-        }
-
-        .logo {
-            height: 30px;
-            width: auto;
-            display: inline-block;
-            margin-right: 15px;
-        }
-
-        #menu-bar h1 {
-            margin-right: 200px;
-            color: #333;
-            font-size: 14px;
-            margin: 0;
-        }
-
-        #menu-bar > div {
-            position: relative;
-            margin-right: 30px;
-            color: #333;
-            font-size: 14px;
-            cursor: pointer;
-        }
-
-        #menu-bar > div:hover {
-            background-color: #eee;
-        }
-
-        .dropdown {
-            display: none;
-            position: absolute;
-            top: calc(100% + 1px);
-            left: 0;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            border: 1px solid #ddd;
-            z-index: 1;
-        }
-
-        .dropdown div {
-            padding: 10px;
-            color: #333;
-            cursor: pointer;
-            border-bottom: 1px solid #ccc;
-        }
-
-        .dropdown div:hover {
-            background-color: #f1f1f1;
-        }
-
-        #menu-bar > div:hover .dropdown {
-            display: block;
-        }
-
-        #content {
-            margin-top: 20px;
-            padding: 20px;
-            font-family: 'Rubik', Arial, sans-serif;
-            font-weight: 200;
-            font-size: 14px;
-            color: #333;
-        }
-
-        table {
-            width: 90%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        #footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            font-size: 10px;
-        }
-    </style>
 </head>
 <body>
 
@@ -149,7 +36,16 @@
 
 <div id="content">
     <p>O registru</p>
-    <p>Dobro došli na internetske stranice ontologije <strong>Pravilnika za opis i pristup građi u knjižnicama, arhivima i muzejima (ontologije KAM)</strong></p>
+    	    <p>Dobro došli na internetske stranice ontologije Pravilnika za opis i pristup građi u knjižnicama, arhivima i muzejima (ontologije KAM)
+
+<br><br>Ontologija KAM je „formalna reprezentacija” (Grubner, 1993) ovih domena. Na ontologiju KAM se mogu osloniti razni informacijski sustavi i aplikacije koji onda dijele zajedničko značenje opisanih entiteta, čime se može osigurati njihova interoperabilnost i mogućnost automatskog zaključivanja o pojedinačnim entitetima ovih domena. Ovo je svrha izrade i korištenja ontologije KAM.
+
+<br><br>Odabirom stranice Klase možete pregledavati klase ontologije KAM te identifikatore odabrane klase i njezino značenje. 
+
+<br><br>Odabirom stranice Svojstva možete pregledati sva svojstva koja pripadaju određenoj klasi (domena svojstva) te nakon toga odabrati pojedino svojstvo i vidjeti njegovo značenje. 
+
+<br><br>Odabirom stranice Prefiksi možete pregledati skraćenice koje se koriste u ontologiji KAM, kako bi unos informacija bio ekonomičniji te kako bi aplikacije i informacijski sustavi brže obrađivali datoteke s opisima knjižnične, arhivske i muzejske građe.
+</p>
     <p>Inačica: v2.0</p>
 </div>
 
@@ -238,6 +134,29 @@
                 });
                 table += '</tbody></table>';
                 content.innerHTML += table;
+
+
+
+// Add the first table with download links
+                const formattedClassName = className.toLowerCase().replace(/\s+/g, '_'); // Handle spaces
+                content.innerHTML += `
+                <table id="downloadTable">
+                    <tr>
+                        <td>Preuzimanja:</td>
+                        <td><a href="ontology_elements_${formattedClassName}.jsonld" download>JSON_LD</a></td>
+                        <td><a href="ontology_elements_${formattedClassName}.csv" download>CSV</a></td>
+                        <td><a href="ontology_elements_${formattedClassName}.rdf" download>RDF/XML</a></td>
+                    </tr>
+                </table>`;
+
+                // Add the second table with the last modified date
+                const lastModified = new Date(document.lastModified).toLocaleDateString();
+                content.innerHTML += `
+                <table id="lastModifiedTable">
+                    <tr>
+                        <td>Posljednja izmjena: ${lastModified}</td>
+                    </tr>
+                </table>`;
 
                 // Initialize DataTables after the table is appended to the DOM
                 $(document).ready(function() {
