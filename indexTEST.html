@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KAM Ontology Viewer</title>
     <!-- Google Fonts import for Poppins Semi-Bold -->
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <style>
         body {
@@ -146,16 +146,6 @@
 
 <div id="content">
     <p>O registru</p>
-	    <p>Dobro došli na internetske stranice ontologije <strong>Pravilnika za opis i pristup građi u knjižnicama, arhivima i muzejima (ontologije KAM)</strong>
-
-<br><br>Ontologija KAM je „formalna reprezentacija” (Grubner, 1993) ovih domena. Na ontologiju KAM se mogu osloniti razni informacijski sustavi i aplikacije koji onda dijele zajedničko značenje opisanih entiteta, čime se može osigurati njihova interoperabilnost i mogućnost automatskog zaključivanja o pojedinačnim entitetima ovih domena. Ovo je svrha izrade i korištenja ontologije KAM.
-
-<br><br>Odabirom stranice <strong>Klase</strong> možete pregledavati klase ontologije KAM te identifikatore odabrane klase i njezino značenje. 
-
-<br><br>Odabirom stranice <strong>Svojstva</strong> možete pregledati sva svojstva koja pripadaju određenoj klasi (domena svojstva) te nakon toga odabrati pojedino svojstvo i vidjeti njegovo značenje. 
-
-<br><br>Odabirom stranice <strong>Prefiksi</strong> možete pregledati skraćenice koje se koriste u ontologiji KAM, kako bi unos informacija bio ekonomičniji te kako bi aplikacije i informacijski sustavi brže obrađivali datoteke s opisima knjižnične, arhivske i muzejske građe.
-</p>
 </div>
 
 <!-- Footer with black background and white text -->
@@ -211,20 +201,14 @@
             }
         }
 
-        // Helper function to extract CURIE from @id using JSON-LD data
-        function extractCurieFromId(idValue, data) {
-            const foundElement = Object.values(data).find(item => item['@id'] === idValue);
-            if (foundElement && foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID']) {
-                return foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'];
-            }
-            return 'Unknown CURIE';
-        }
-
         // Function to extract CURIE for Range, subPropertyOf, and inverseOf
         function getCurieForProperty(propertyField, data) {
             if (propertyField && propertyField[0] && propertyField[0]['@id']) {
                 const idValue = propertyField[0]['@id'];
-                return extractCurieFromId(idValue, data); // Call helper function to extract CURIE
+                const foundElement = Object.values(data).find(item => item['@id'] === idValue);
+                if (foundElement && foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID']) {
+                    return foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'];
+                }
             }
             return ''; // Return empty if not found
         }
