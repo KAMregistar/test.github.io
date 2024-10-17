@@ -10,6 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
 
@@ -65,6 +66,45 @@
             dropdownMenu.appendChild(item);
         }
 
+        // Function to display class details for Klase
+        function displayClassDetails(ontologyClass) {
+            content.innerHTML = '';  // Clear the previous content
+
+            const title = ontologyClass['http://www.w3.org/2000/01/rdf-schema#label']
+                ? ontologyClass['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+                : 'Unknown Class';
+
+            content.innerHTML = `<h2>${title}</h2>`;
+            let table = `<table id="klaseTable" class="display">
+                            <thead>
+                                <tr><th>ID</th><th>Label</th><th>Type</th><th>Definition</th><th>CURIE</th></tr>
+                            </thead><tbody>`;
+            const id = ontologyClass['@id'] || 'Unknown ID';
+            const label = title || 'Unknown Label';
+            const type = ontologyClass['@type'] ? ontologyClass['@type'].join(', ') : 'Unknown Type';
+            const definition = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'] 
+                ? ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'][0]['@value'] 
+                : 'No definition available';
+            const curieValue = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+                ? ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
+                : 'Unknown CURIE';
+
+            table += `<tr>
+                        <td>${id}</td>
+                        <td>${label}</td>
+                        <td>${type}</td>
+                        <td>${definition}</td>
+                        <td>${curieValue}</td>
+                    </tr>`;
+            table += '</tbody></table>';
+            content.innerHTML += table;
+
+            // Initialize DataTables after the table is appended to the DOM
+            $(document).ready(function() {
+                $('#klaseTable').DataTable();
+            });
+        }
+
         // Function to extract CURIE for Range, subPropertyOf, and inverseOf
         function getCurieForProperty(propertyField, data) {
             if (propertyField && propertyField[0] && propertyField[0]['@id']) {
@@ -77,7 +117,7 @@
             return ''; // Return empty if not found
         }
 
-        // Display properties for selected class under Svojstva
+        // Function to display properties for Svojstva
         function displayPropertiesForClass(classId, data) {
             const properties = Object.values(data).filter(item => {
                 const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
@@ -114,7 +154,7 @@
                 table += '</tbody></table>';
                 content.innerHTML += table;
 
-                // Initialize DataTables after the table is appended to the DOM
+                // Initialize DataTables for the Svojstva table
                 $(document).ready(function() {
                     $('#myTable').DataTable();
                 });
@@ -127,7 +167,6 @@
             const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
             const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
 
-            // Add items to "Klase" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
                 createDropdownItem(element, dropdownLabel, klaseDropdown, () => displayClassDetails(element));
             }
@@ -139,33 +178,27 @@
             const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
             const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
 
-            // Add items to "Svojstva" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
                 createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayPropertiesForClass(element['@id'], data));
             }
         });
 
-        // Prefiksi section - Populate and display unique prefixes
+        // Prefiksi dropdown functionality
         prefiksi.addEventListener('click', () => {
-            const uniquePrefixes = new Set(); // Set to store unique prefixes
+            const uniquePrefixes = new Set();
             content.innerHTML = '<h2>Prefiksi</h2>';
-            let table = `<table id="prefixTable" class="display">
-                            <thead>
-                                <tr><th>Prefix</th><th>Class Name</th><th>Namespace</th></tr>
-                            </thead>
-                            <tbody>`;
-            
+            let table = `<table id="prefixTable" class="display"><thead><tr><th>Prefix</th><th>Class Name</th><th>Namespace</th></tr></thead><tbody>`;
             Object.keys(data).forEach(key => {
                 const element = data[key];
+
                 if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
                     const id = element['@id'] || 'Unknown ID';
                     const namespace = id.substring(0, id.lastIndexOf('/') + 1);
                     const curieValue = element['http://www.registar.kam.hr/ontologies/ont.owl/ID']
                         ? element['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
                         : null;
-
                     if (curieValue) {
-                        const prefix = curieValue.split(':')[0]; // Extract prefix before ":"
+                        const prefix = curieValue.split(':')[0];
                         if (!uniquePrefixes.has(prefix)) {
                             uniquePrefixes.add(prefix);
                             const className = element['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value'];

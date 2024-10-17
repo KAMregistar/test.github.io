@@ -1,8 +1,7 @@
-body {
+        body {
             font-family: 'Poppins', 'Rubik', Arial, sans-serif;
-            font-weight: 400; /* Regular weight */
             margin: 0;
-            padding-left:90px;
+            padding-left: 90px;
             padding-right: 90px;
             padding-bottom: 150px; /* Reserve space for footer */
         }
@@ -11,44 +10,44 @@ body {
             display: flex;
             height: 80px;
             justify-content: flex-start;
-            align-items: center; /* Ensures logo, title, and menu are vertically centered */
-            background-color: white; /* White background for the menu bar */
+            align-items: center;
+            background-color: white;
             padding: 10px;
             font-size: 12px;
-            border-bottom: 1px solid #333; /* Dark gray thin line at the bottom */
+            border-bottom: 1px solid #333;
         }
 
         .logo {
-            height: 30px; /* Set the height of the logo image */
-            width: auto; /* Ensure the logo maintains its aspect ratio */
-            display: inline-block;
-            margin-right: 15px; /* Space between the logo and the title */
+            height: 30px;
+            width: auto;
+            margin-right: 15px;
         }
 
         #menu-bar h1 {
-            margin-right: 200px; /* Increased space between the title and menu items */
-            color: #333; /* Dark gray color for the title */
-            font-size: 14px; /* Title font size */
-            margin: 0; /* Remove default margin to align with image and menu */
+            margin-right: auto; /* Ensures the title and menu are spaced apart */
+            color: #333;
+            font-size: 14px;
+            margin: 0;
+            padding-right: 100px; /* Increase padding for better spacing */
         }
 
         #menu-bar > div {
-            position: relative; /* Make parent relative to dropdown */
-            margin-right: 30px; /* Increased space between the menu items */
-            color: #333; /* Dark gray color for the menu items */
-            font-size: 14px; /* Smaller font size for menu items */
+            position: relative;
+            margin-right: 30px;
+            color: #333;
+            font-size: 14px;
             cursor: pointer;
         }
 
         #menu-bar > div:hover {
-            background-color: #eee; /* Light background color on hover */
+            background-color: #eee;
         }
 
         .dropdown {
             display: none;
             position: absolute;
-            top: calc(100% + 1px); /* Position the dropdown 2px below the menu item */
-            left: 0; /* Align dropdown with the left edge of the parent */
+            top: calc(100% + 1px);
+            left: 0;
             background-color: #f9f9f9;
             min-width: 160px;
             border: 1px solid #ddd;
@@ -57,29 +56,28 @@ body {
 
         .dropdown div {
             padding: 10px;
-            color: #333; /* Dark gray color for dropdown items */
+            color: #333;
             cursor: pointer;
             border-bottom: 1px solid #ccc;
         }
 
         .dropdown div:hover {
-            background-color: #f1f1f1; /* Light background color for hover effect */
+            background-color: #f1f1f1;
         }
 
         #menu-bar > div:hover .dropdown {
-            display: block; /* Display dropdown when parent is hovered */
+            display: block;
         }
 
         #content {
             margin-top: 20px;
             padding: 20px;
             font-family: 'Rubik', Arial, sans-serif;
-            font-weight: 200; /* Regular weight for content */
-            font-size: 14px; /* Adjust content font size */
-            color: #333; /* Content text color */
+            font-weight: 200;
+            font-size: 14px;
+            color: #333;
         }
 
-        /* Footer styles */
         #footer {
             position: fixed;
             bottom: 0;
