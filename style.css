@@ -86,7 +86,7 @@
         }
 
         table, th, td {
-            border: 1px solid #ddd;
+            border: 0px solid #ddd;
         }
 
         th, td {
