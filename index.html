@@ -34,11 +34,9 @@
             margin-right: 15px; /* Space between the logo and the title */
         }
 
-        #menu-bar h1 {
-            margin-right: 200px; /* Increased space between the title and menu items */
-            color: #333; /* Dark gray color for the title */
-            font-size: 14px; /* Title font size */
-            margin: 0; /* Remove default margin to align with image and menu */
+        #menu-bar h1 a {
+            text-decoration: none;
+            color: inherit;
         }
 
         #menu-bar > div {
@@ -126,9 +124,7 @@
 
 <div id="menu-bar">
     <img src="kam.png" alt="KAM Logo" class="logo">
-    <h1>
-    <a href="index.html" style="text-decoration: none; color: inherit;">Registar &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-</h1>
+    <h1><a href="index.html">Registar</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
     <div>
         KLASE
         <div class="dropdown" id="klase-dropdown"></div>
@@ -179,21 +175,17 @@
             dropdownMenu.appendChild(item);
         }
 
-        // Function to extract CURIE from @id or @value
-        function extractCurie(idOrValue) {
-            if (!idOrValue) return '';
-            const lastSlashIndex = idOrValue.lastIndexOf('/');
-            const fragment = idOrValue.substring(lastSlashIndex + 1).replace('#', ''); // Remove the hash symbol
-            
-            // Extract the prefix from the idOrValue
-            const prefix = idOrValue.includes('#') 
-                ? idOrValue.split('#')[0].split('/').pop()  // Extract part before # and after last /
-                : idOrValue.split('/').slice(-2, -1)[0]; // Extract second last part if no #
+        // Function to extract CURIE from "@value"
+        function extractCurie(value) {
+            return value ? value : 'Unknown CURIE';
+        }
 
-            // Add a semicolon before "C" or "P"
-            const curieSuffix = fragment.replace(/([a-z]+)([CP])/g, '$1;$2');
-            
-            return `${prefix}:${curieSuffix}`;
+        // Function to extract prefix and ID for subPropertyOf, inverseOf, and Range
+        function extractPrefixAndId(url, typePrefix = 'kam') {
+            if (!url || !url.includes('http://')) return '';
+            const id = url.split('/').pop();
+            const prefix = url.match(/\/([a-z]{2})\//);
+            return prefix ? `${typePrefix}${prefix[1]};${id}` : `${typePrefix}:${id}`;
         }
 
         // Function to display class details in a table for Klase menu
@@ -237,13 +229,14 @@
         // Display properties when "Svojstva" is clicked
         Object.keys(data).forEach(key => {
             const element = data[key];
+
             const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
             const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
 
             // Add items to "Svojstva" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
                 createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => {
-                    // Display properties related to the clicked class
+                    // Display properties related to the class
                     const properties = Object.values(data).filter(item => {
                         const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
                         return domains && domains.some(domain => domain['@id'] === element['@id']);
@@ -264,25 +257,17 @@
                                 : 'Unknown Label';
 
                             const subPropertyOf = property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf']
-                                ? extractCurie(property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'][0]['@id'])
+                                ? extractPrefixAndId(property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'][0]['@id'])
                                 : '';
-
                             const inverseOf = property['http://www.w3.org/2002/07/owl#inverseOf']
-                                ? extractCurie(property['http://www.w3.org/2002/07/owl#inverseOf'][0]['@id'])
+                                ? extractPrefixAndId(property['http://www.w3.org/2002/07/owl#inverseOf'][0]['@id'])
                                 : '';
-
                             const range = property['http://www.w3.org/2000/01/rdf-schema#range']
-                                ? extractCurie(property['http://www.w3.org/2000/01/rdf-schema#range'][0]['@id']).replace('#', '')
+                                ? extractPrefixAndId(property['http://www.w3.org/2000/01/rdf-schema#range'][0]['@id'])
                                 : '';
 
                             table += `
-                                <tr>
-                                    <td>${curieValue}</td>
-                                    <td>${label}</td>
-                                    <td>${subPropertyOf}</td>
-                                    <td>${inverseOf}</td>
-                                    <td>${range}</td>
-                                </tr>`;
+                                <tr><td>${curieValue}</td><td>${label}</td><td>${subPropertyOf}</td><td>${inverseOf}</td><td>${range}</td></tr>`;
                         });
                         content.innerHTML += table + '</table>';
                     }
