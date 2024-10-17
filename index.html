@@ -6,7 +6,7 @@
     <title>KAM Ontology Viewer</title>
     <!-- Google Fonts import for Poppins Semi-Bold -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', 'Rubik', Arial, sans-serif;
@@ -146,17 +146,6 @@
 
 <div id="content">
     <p>O registru</p>
-    <p>Dobro došli na internetske stranice ontologije <strong>Pravilnika za opis i pristup građi u knjižnicama, arhivima i muzejima (ontologije KAM)</strong>
-
-<br><br>Ontologija KAM je „formalna reprezentacija” (Grubner, 1993) ovih domena. Na ontologiju KAM se mogu osloniti razni informacijski sustavi i aplikacije koji onda dijele zajedničko značenje opisanih entiteta, čime se može osigurati njihova interoperabilnost i mogućnost automatskog zaključivanja o pojedinačnim entitetima ovih domena. Ovo je svrha izrade i korištenja ontologije KAM.
-
-<br><br>Odabirom stranice <strong>Klase</strong> možete pregledavati klase ontologije KAM te identifikatore odabrane klase i njezino značenje. 
-
-<br><br>Odabirom stranice <strong>Svojstva</strong> možete pregledati sva svojstva koja pripadaju određenoj klasi (domena svojstva) te nakon toga odabrati pojedino svojstvo i vidjeti njegovo značenje. 
-
-<br><br>Odabirom stranice <strong>Prefiksi</strong> možete pregledati skraćenice koje se koriste u ontologiji KAM, kako bi unos informacija bio ekonomičniji te kako bi aplikacije i informacijski sustavi brže obrađivali datoteke s opisima knjižnične, arhivske i muzejske građe.
-</p>
-    <p>Inačica: v2.0</p>
 </div>
 
 <!-- Footer with black background and white text -->
@@ -187,32 +176,55 @@
             dropdownMenu.appendChild(item);
         }
 
-        // Helper function to extract CURIE from @id using JSON-LD data
-        function extractCurieFromId(idValue, data) {
-            const foundElement = Object.values(data).find(item => item['@id'] === idValue);
-            if (foundElement && foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID']) {
-                return foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'];
+        // Function to display class details for Klase menu
+        function displayClassDetails(ontologyClass) {
+            content.innerHTML = '';  // Clear the previous content
+
+            const title = ontologyClass['http://www.w3.org/2000/01/rdf-schema#label']
+                ? ontologyClass['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+                : 'Unknown Class';
+
+            content.innerHTML += `<h2>${title}</h2>`;
+
+            const id = ontologyClass['@id'] || 'Unknown ID';
+            const namespace = id.substring(0, id.lastIndexOf('/') + 1);  // Everything before the last "/"
+            const identifier = id.split('/').pop();  // The last part after the "/"
+            content.innerHTML += `<p>ID: ${identifier}</p>`;
+            content.innerHTML += `<p>Imenski prostor: ${namespace}</p>`;
+
+            const types = ontologyClass['@type'] || [];
+            content.innerHTML += `<p>Element: ${types.map(type => type.split('#').pop()).join(', ')}</p>`;
+
+            const definitions = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'] || [];
+            if (definitions.length > 0) {
+                definitions.forEach(def => content.innerHTML += `<p>Definicija: ${def['@value']}</p>`);
             }
-            return 'Unknown CURIE';
         }
 
         // Function to extract CURIE for Range, subPropertyOf, and inverseOf
         function getCurieForProperty(propertyField, data) {
             if (propertyField && propertyField[0] && propertyField[0]['@id']) {
                 const idValue = propertyField[0]['@id'];
-                return extractCurieFromId(idValue, data); // Call helper function to extract CURIE
+                const foundElement = Object.values(data).find(item => item['@id'] === idValue);
+                if (foundElement && foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID']) {
+                    return foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'];
+                }
             }
             return ''; // Return empty if not found
         }
 
         // When displaying the table for the Svojstva section
-        function displayPropertiesForClass(classId, data) {
+        function displayPropertiesForClass(classElement, data) {
+            const className = classElement['http://www.w3.org/2000/01/rdf-schema#label']
+                ? classElement['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+                : 'Unknown Class';
+
             const properties = Object.values(data).filter(item => {
                 const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
-                return domains && domains.some(domain => domain['@id'] === classId);
+                return domains && domains.some(domain => domain['@id'] === classElement['@id']);
             });
 
-            content.innerHTML = `<h2>Properties for Class</h2>`;
+            content.innerHTML = `<h2>Properties for ${className}</h2>`;
             if (properties.length === 0) {
                 content.innerHTML += '<p>No properties found for this class.</p>';
             } else {
@@ -253,19 +265,15 @@
             }
         });
 
-        // Display properties when "Svojstva" is clicked
+        // Populate "Svojstva" dropdown with class names
         Object.keys(data).forEach(key => {
             const element = data[key];
-
             const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
             const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
 
             // Add items to "Svojstva" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => {
-                    // Display properties related to the class
-                    displayPropertiesForClass(element['@id'], data);
-                });
+                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayPropertiesForClass(element, data));
             }
         });
 
