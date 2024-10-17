@@ -6,7 +6,7 @@
     <title>KAM Ontology Viewer</title>
     <!-- Google Fonts import for Poppins Semi-Bold -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', 'Rubik', Arial, sans-serif;
@@ -224,13 +224,17 @@
         }
 
         // When displaying the table for the Svojstva section
-        function displayPropertiesForClass(classId, data) {
+        function displayPropertiesForClass(classElement, data) {
+            const className = classElement['http://www.w3.org/2000/01/rdf-schema#label']
+                ? classElement['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+                : 'Unknown Class';
+
             const properties = Object.values(data).filter(item => {
                 const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
-                return domains && domains.some(domain => domain['@id'] === classId);
+                return domains && domains.some(domain => domain['@id'] === classElement['@id']);
             });
 
-            content.innerHTML = `<h2>Properties for Class</h2>`;
+            content.innerHTML = `<h2>Svojstva za: ${className}</h2>`;
             if (properties.length === 0) {
                 content.innerHTML += '<p>No properties found for this class.</p>';
             } else {
@@ -279,7 +283,7 @@
 
             // Add items to "Svojstva" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayPropertiesForClass(element['@id'], data));
+                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayPropertiesForClass(element, data));
             }
         });
 
