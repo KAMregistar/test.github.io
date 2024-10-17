@@ -239,6 +239,37 @@
                 table += '</tbody></table>';
                 content.innerHTML += table;
 
+
+
+// Add the first table with download links
+                const formattedClassName = className.toLowerCase().replace(/\s+/g, '_'); // Handle spaces
+                content.innerHTML += `
+                <table id="downloadTable">
+                    <tr>
+                        <td>Preuzimanja:</td>
+                        <td><a href="ontology_elements_${formattedClassName}.jsonld" download>JSON_LD</a></td>
+                        <td><a href="ontology_elements_${formattedClassName}.csv" download>CSV</a></td>
+                        <td><a href="ontology_elements_${formattedClassName}.rdf" download>RDF/XML</a></td>
+                    </tr>
+                </table>`;
+
+                // Add the second table with the last modified date
+                const lastModified = new Date(document.lastModified).toLocaleDateString();
+                content.innerHTML += `
+                <table id="lastModifiedTable">
+                    <tr>
+                        <td>Posljednja izmjena: ${lastModified}</td>
+                    </tr>
+                </table>`;
+
+                // Initialize DataTables after the table is appended to the DOM
+                $(document).ready(function() {
+                    $('#myTable').DataTable();
+                });
+
+
+
+
                 // Initialize DataTables after the table is appended to the DOM
                 $(document).ready(function() {
                     $('#myTable').DataTable();
