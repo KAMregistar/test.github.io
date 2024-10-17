@@ -130,9 +130,9 @@ fetch('KAMOntologija_v8.jsonld')  // Replace with your JSON-LD file path
                             </thead>
                             <tbody>
                                 <tr><td>ID</td><td>${identifier}</td></tr>
-                                <tr><td>Label</td><td>${title}</td></tr>
+                                <tr><td>Naziv svojstva</td><td>${title}</td></tr>
                                 <tr><td>Type</td><td>${types.map(type => type.split('#').pop()).join(', ')}</td></tr>
-                                <tr><td>Definition</td><td>${definition}</td></tr>
+                                <tr><td>Definicija</td><td>${definition}</td></tr>
                                 <tr><td>CURIE</td><td>${createCurieLink(curieValue)}</td></tr>
                             </tbody>
                         </table>`;
@@ -157,7 +157,7 @@ fetch('KAMOntologija_v8.jsonld')  // Replace with your JSON-LD file path
             } else {
                 let table = `<table id="propertiesTable" class="display">
                                 <thead>
-                                    <tr><th>CURIE</th><th>Label</th><th>subPropertyOf</th><th>inverseOf</th><th>Range</th></tr>
+                                    <tr><th>CURIE</th><th>Naziv svojstva</th><th>Podsvojstvo od</th><th>Obrnuto od</th><th>Doseg</th></tr>
                                 </thead><tbody>`;
                 properties.forEach(property => {
                     const curieValue = property['http://www.registar.kam.hr/ontologies/ont.owl/ID']
@@ -216,7 +216,7 @@ fetch('KAMOntologija_v8.jsonld')  // Replace with your JSON-LD file path
         prefiksi.addEventListener('click', () => {
             const uniquePrefixes = new Set();
             content.innerHTML = '<h2>Prefiksi</h2>';
-            let table = `<table id="prefixTable" class="display"><thead><tr><th>Prefix</th><th>Class Name</th><th>Namespace</th></tr></thead><tbody>`;
+            let table = `<table id="prefixTable" class="display"><thead><tr><th>Prefiks</th><th>Naziv klase</th><th>Imenski prostor</th></tr></thead><tbody>`;
             Object.keys(data).forEach(key => {
                 const element = data[key];
 
