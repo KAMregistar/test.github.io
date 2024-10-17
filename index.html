@@ -185,7 +185,7 @@
             if (!url || !url.includes('http://')) return '';
             const id = url.split('/').pop();
             const prefix = url.match(/\/([a-z]{2})\//);
-            return prefix ? `${typePrefix}${prefix[1]};${id}` : `${typePrefix}:${id}`;
+            return prefix ? `${typePrefix}${prefix[1]}:${id}` : `${typePrefix}:${id}`;
         }
 
         // Function to display class details in a table for Klase menu
