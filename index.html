@@ -11,120 +11,6 @@
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="style.css">
-
-    <style>
-        body {
-            font-family: 'Poppins', 'Rubik', Arial, sans-serif;
-            font-weight: 400;
-            margin: 0;
-            padding-left: 90px;
-            padding-right: 90px;
-            padding-bottom: 150px;
-        }
-
-        #menu-bar {
-            display: flex;
-            height: 80px;
-            justify-content: flex-start;
-            align-items: center;
-            background-color: white;
-            padding: 10px;
-            font-size: 12px;
-            border-bottom: 1px solid #333;
-        }
-
-        .logo {
-            height: 30px;
-            width: auto;
-            display: inline-block;
-            margin-right: 15px;
-        }
-
-        #menu-bar h1 {
-            margin-right: 200px;
-            color: #333;
-            font-size: 14px;
-            margin: 0;
-        }
-
-        #menu-bar > div {
-            position: relative;
-            margin-right: 30px;
-            color: #333;
-            font-size: 14px;
-            cursor: pointer;
-        }
-
-        #menu-bar > div:hover {
-            background-color: #eee;
-        }
-
-        .dropdown {
-            display: none;
-            position: absolute;
-            top: calc(100% + 1px);
-            left: 0;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            border: 1px solid #ddd;
-            z-index: 1;
-        }
-
-        .dropdown div {
-            padding: 10px;
-            color: #333;
-            cursor: pointer;
-            border-bottom: 1px solid #ccc;
-        }
-
-        .dropdown div:hover {
-            background-color: #f1f1f1;
-        }
-
-        #menu-bar > div:hover .dropdown {
-            display: block;
-        }
-
-        #content {
-            margin-top: 20px;
-            padding: 20px;
-            font-family: 'Rubik', Arial, sans-serif;
-            font-weight: 200;
-            font-size: 14px;
-            color: #333;
-        }
-
-        table {
-            width: 90%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        #footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            font-size: 10px;
-        }
-    </style>
 </head>
 <body>
 
@@ -180,6 +66,14 @@
             dropdownMenu.appendChild(item);
         }
 
+        // Function to make CURIE clickable
+        function createCurieLink(curie) {
+            if (!curie) return ''; // Return empty if curie is not available
+            const prefix = curie.split(':')[0].replace('kam', ''); // Extract prefix and remove 'kam'
+            const id = curie.split(':')[1]; // Get the ID after the colon
+            return `<a href="http://www.registar.kam.hr/Element/${prefix}/${id}" target="_blank">${curie}</a>`;
+        }
+
         // Function to extract CURIE for Range, subPropertyOf, and inverseOf
         function getCurieForProperty(propertyField, data) {
             if (propertyField && propertyField[0] && propertyField[0]['@id']) {
@@ -221,11 +115,11 @@
                     const range = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#range'], data);
 
                     table += `<tr>
-                        <td>${curieValue}</td>
+                        <td>${createCurieLink(curieValue)}</td>
                         <td>${label}</td>
-                        <td>${subPropertyOf}</td>
-                        <td>${inverseOf}</td>
-                        <td>${range}</td>
+                        <td>${createCurieLink(subPropertyOf)}</td>
+                        <td>${createCurieLink(inverseOf)}</td>
+                        <td>${createCurieLink(range)}</td>
                     </tr>`;
                 });
                 table += '</tbody></table>';
@@ -236,47 +130,6 @@
                     $('#myTable').DataTable();
                 });
             }
-        }
-
-        // Function to display class details in a table for Klase
-        function displayClassDetails(ontologyClass) {
-            content.innerHTML = '';  // Clear the previous content
-
-            const title = ontologyClass['http://www.w3.org/2000/01/rdf-schema#label']
-                ? ontologyClass['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
-                : 'Unknown Class';
-
-            const id = ontologyClass['@id'] || 'Unknown ID';
-            const namespace = id.substring(0, id.lastIndexOf('/') + 1);
-            const identifier = id.split('/').pop();
-            const curieValue = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID']
-                ? ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
-                : '';
-
-            const definition = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition']
-                ? ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'][0]['@value']
-                : 'No definition available';
-
-            const type = ontologyClass['@type'].map(type => type.split('#').pop()).join(', ');
-
-            // Create the transposed table
-            let table = `<table id="myClassTable" class="display">
-                            <thead><tr><th>Property</th><th>Value</th></tr></thead>
-                            <tbody>
-                                <tr><td>ID</td><td>${identifier}</td></tr>
-                                <tr><td>Label</td><td>${title}</td></tr>
-                                <tr><td>Type</td><td>${type}</td></tr>
-                                <tr><td>Definition</td><td>${definition}</td></tr>
-                                <tr><td>CURIE</td><td>${curieValue}</td></tr>
-                            </tbody>
-                        </table>`;
-            
-            content.innerHTML += table;
-
-            // Initialize DataTables for class details
-            $(document).ready(function() {
-                $('#myClassTable').DataTable();
-            });
         }
 
         // Populate the "Klase" dropdown with class details
