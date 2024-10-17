@@ -183,7 +183,11 @@
             const lastSlashIndex = idOrValue.lastIndexOf('/');
             const fragment = idOrValue.substring(lastSlashIndex + 1).replace('#', ''); // Remove the hash symbol
             
-            let prefix = 'kam'; // default prefix to 'kam'
+            // Extract the prefix from the idOrValue
+            const prefix = idOrValue.includes('#') 
+                ? idOrValue.split('#')[0].split('/').pop()  // Extract part before # and after last /
+                : idOrValue.split('/').slice(-2, -1)[0]; // Extract second last part if no #
+
             // Add a semicolon before "C" or "P"
             const curieSuffix = fragment.replace(/([a-z]+)([CP])/g, '$1;$2');
             
