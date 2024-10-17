@@ -177,9 +177,12 @@
             dropdownMenu.appendChild(item);
         }
 
-        // Function to extract CURIE from "@value"
-        function extractCurie(value) {
-            return value ? value : 'Unknown CURIE';
+        // Function to extract CURIE from a URL
+        function extractCurie(url) {
+            if (!url) return '';
+            const curieSuffix = url.split('/').pop().substring(1); // Get the last 9 characters (skipping '#')
+            const prefix = 'kam' + url.split('/')[4]; // Extract 'jo', 'd', 'i' etc.
+            return `${prefix}:${curieSuffix}`;
         }
 
         // Function to display class details in a table for Klase menu
@@ -252,16 +255,16 @@
                                 : '';  // Leave empty if not available
 
                             const subPropertyOf = property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf']
-                                ? property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'][0]['@id']
-                                : '';  // Leave empty if not available
+                                ? extractCurie(property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'][0]['@id'])
+                                : '';  // Extract CURIE or leave empty if not available
 
                             const inverseOf = property['http://www.w3.org/2002/07/owl#inverseOf']
-                                ? property['http://www.w3.org/2002/07/owl#inverseOf'][0]['@id']
-                                : '';  // Leave empty if not available
+                                ? extractCurie(property['http://www.w3.org/2002/07/owl#inverseOf'][0]['@id'])
+                                : '';  // Extract CURIE or leave empty if not available
 
                             const range = property['http://www.w3.org/2000/01/rdf-schema#range']
-                                ? property['http://www.w3.org/2000/01/rdf-schema#range'][0]['@id']
-                                : '';  // Leave empty if not available
+                                ? extractCurie(property['http://www.w3.org/2000/01/rdf-schema#range'][0]['@id'])
+                                : '';  // Extract CURIE or leave empty if not available
 
                             table += `
                                 <tr>
