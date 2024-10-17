@@ -11,7 +11,7 @@
             font-family: 'Poppins', Arial, sans-serif;
             font-weight: 400; /* Regular weight */
             margin: 0;
-            padding-left:90px;
+            padding-left: 90px;
             padding-right: 90px;
             padding-bottom: 150px; /* Reserve space for footer */
         }
@@ -223,17 +223,16 @@
             }
         });
 
-        // Display properties when "Svojstva" is clicked
+        // Populate the "Svojstva" dropdown with class names
         Object.keys(data).forEach(key => {
             const element = data[key];
-
             const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
             const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
 
-            // Add items to "Svojstva" dropdown for properties
-            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#ObjectProperty')) {
+            // Add items to "Svojstva" dropdown for classes
+            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
                 createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => {
-                    // Display properties related to the class
+                    // Display properties related to the clicked class
                     const properties = Object.values(data).filter(item => {
                         const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
                         return domains && domains.some(domain => domain['@id'] === element['@id']);
