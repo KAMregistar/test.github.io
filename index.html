@@ -143,7 +143,16 @@
 
 <div id="content">
     <p>O registru</p>
-    <p>Identifikacija i opis građe koja se prikuplja, pohranjuje, obrađuje, štiti, istražuje, predstavlja i stavlja na raspolaganje korisnicima u knjižnicama, arhivima i muzejima Republike Hrvatske kao samostalnim ustanovama ili ustrojbenim jedinicama unutar ustanovâ, tvrtki i drugih pravnih osoba.</p>
+    <p>Dobro došli na internetske stranice ontologije Pravilnika za opis i pristup građi u knjižnicama, arhivima i muzejima (ontologije KAM)
+
+Ontologija KAM je „formalna reprezentacija” (Grubner, 1993) ovih domena. Na ontologiju KAM se mogu osloniti razni informacijski sustavi i aplikacije koji onda dijele zajedničko značenje opisanih entiteta, čime se može osigurati njihova interoperabilnost i mogućnost automatskog zaključivanja o pojedinačnim entitetima ovih domena. Ovo je svrha izrade i korištenja ontologije KAM.
+
+Odabirom stranice Klase možete pregledavati klase ontologije KAM te identifikatore odabrane klase i njezino značenje. 
+
+Odabirom stranice Svojstva možete pregledati sva svojstva koja pripadaju određenoj klasi (domena svojstva) te nakon toga odabrati pojedino svojstvo i vidjeti njegovo značenje. 
+
+Odabirom stranice Prefiksi možete pregledati skraćenice koje se koriste u ontologiji KAM, kako bi unos informacija bio ekonomičniji te kako bi aplikacije i informacijski sustavi brže obrađivali datoteke s opisima knjižnične, arhivske i muzejske građe.
+</p>
     <p>Inačica: v2.0</p>
 </div>
 
@@ -175,17 +184,18 @@
             dropdownMenu.appendChild(item);
         }
 
-        // Function to extract CURIE from "@value"
-        function extractCurie(value) {
-            return value ? value : 'Unknown CURIE';
-        }
-
-        // Function to extract prefix and ID for subPropertyOf, inverseOf, and Range
-        function extractPrefixAndId(url, typePrefix = 'kam') {
-            if (!url || !url.includes('http://')) return '';
-            const id = url.split('/').pop();
-            const prefix = url.match(/\/([a-z]{2})\//);
-            return prefix ? `${typePrefix}${prefix[1]}:${id}` : `${typePrefix}:${id}`;
+        // Function to extract CURIE by finding the corresponding ObjectProperty
+        function extractCurieFromId(idUrl) {
+            // Loop through data to find the ObjectProperty with a matching @id
+            for (let key in data) {
+                const element = data[key];
+                if (element['@id'] === idUrl && element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#ObjectProperty')) {
+                    return element['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+                        ? element['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
+                        : 'Unknown CURIE';
+                }
+            }
+            return ''; // Return an empty string if no match is found
         }
 
         // Function to display class details in a table for Klase menu
@@ -257,13 +267,13 @@
                                 : 'Unknown Label';
 
                             const subPropertyOf = property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf']
-                                ? extractPrefixAndId(property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'][0]['@id'])
+                                ? extractCurieFromId(property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'][0]['@id'])
                                 : '';
                             const inverseOf = property['http://www.w3.org/2002/07/owl#inverseOf']
-                                ? extractPrefixAndId(property['http://www.w3.org/2002/07/owl#inverseOf'][0]['@id'])
+                                ? extractCurieFromId(property['http://www.w3.org/2002/07/owl#inverseOf'][0]['@id'])
                                 : '';
                             const range = property['http://www.w3.org/2000/01/rdf-schema#range']
-                                ? extractPrefixAndId(property['http://www.w3.org/2000/01/rdf-schema#range'][0]['@id'])
+                                ? extractCurieFromId(property['http://www.w3.org/2000/01/rdf-schema#range'][0]['@id'])
                                 : '';
 
                             table += `
@@ -307,6 +317,7 @@
         console.error('Error fetching JSON-LD:', error);
     });
 </script>
+
 
 </body>
 </html>
