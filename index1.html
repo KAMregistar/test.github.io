@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAM Ontology Viewer</title>
+    <!-- Google Fonts import for Poppins Semi-Bold -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            font-weight: 400; /* Regular weight */
+            margin: 0;
+			padding-left:90px;
+			padding-right: 90px;
+            padding-bottom: 150px; /* Reserve space for footer */
+        }
+
+        #menu-bar {
+            display: flex;
+            height: 80px;
+            justify-content: flex-start;
+            align-items: center; /* Ensures logo, title, and menu are vertically centered */
+            background-color: white; /* White background for the menu bar */
+            padding: 10px;
+            font-size: 12px;
+            border-bottom: 1px solid #333; /* Dark gray thin line at the bottom */
+        }
+
+        .logo {
+            height: 30px; /* Set the height of the logo image */
+            width: auto; /* Ensure the logo maintains its aspect ratio */
+            display: inline-block;
+            margin-right: 15px; /* Space between the logo and the title */
+        }
+
+        #menu-bar h1 {
+            margin-right: 200px; /* Increased space between the title and menu items */
+            color: #333; /* Dark gray color for the title */
+            font-size: 14px; /* Title font size */
+            margin: 0; /* Remove default margin to align with image and menu */
+        }
+
+        #menu-bar > div {
+            position: relative; /* Make parent relative to dropdown */
+            margin-right: 30px; /* Increased space between the menu items */
+            color: #333; /* Dark gray color for the menu items */
+            font-size: 14px; /* Smaller font size for menu items */
+            cursor: pointer;
+        }
+
+        #menu-bar > div:hover {
+            background-color: #eee; /* Light background color on hover */
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: calc(100% + 1px); /* Position the dropdown 2px below the menu item */
+            left: 0; /* Align dropdown with the left edge of the parent */
+            background-color: #f9f9f9;
+            min-width: 160px;
+            border: 1px solid #ddd;
+            z-index: 1;
+        }
+
+        .dropdown div {
+            padding: 10px;
+            color: #333; /* Dark gray color for dropdown items */
+            cursor: pointer;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .dropdown div:hover {
+            background-color: #f1f1f1; /* Light background color for hover effect */
+        }
+
+        #menu-bar > div:hover .dropdown {
+            display: block; /* Display dropdown when parent is hovered */
+        }
+
+        #content {
+            margin-top: 20px;
+            padding: 20px;
+            font-family: 'Poppins', Arial, sans-serif;
+            font-weight: 400; /* Regular weight for content */
+            font-size: 12px; /* Adjust content font size */
+            color: #333; /* Content text color */
+        }
+
+        /* Style for the table of properties */
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Footer styles */
+        #footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="menu-bar">
+    <img src="kam.png" alt="KAM Logo" class="logo">
+    <h1>Registar &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+    <div>
+        KLASE
+        <div class="dropdown" id="klase-dropdown"></div>
+    </div>
+    <div>
+        SVOJSTVA
+        <div class="dropdown" id="svojstva-dropdown"></div>
+    </div>
+    <div id="prefiksi"> 
+        PREFIKSI
+    </div>
+    <div>
+        Pomoć
+    </div>
+</div>
+
+<div id="content">
+    <p>O registru</p>
+    <p>Identifikacija i opis građe koja se prikuplja, pohranjuje, obrađuje, štiti, istražuje, predstavlja i stavlja na raspolaganje korisnicima u knjižnicama, arhivima i muzejima Republike Hrvatske kao samostalnim ustanovama ili ustrojbenim jedinicama unutar ustanovâ, tvrtki i drugih pravnih osoba.</p>
+    <p>Inačica: v2.0</p>
+</div>
+
+<!-- Footer with black background and white text -->
+<div id="footer">
+    © 2024 Nacionalna i sveučilišna knjižnica u Zagrebu. Sva prava pridržana. | Hrvatske bratske zajednice 4, 10000 Zagreb, Hrvatska | Tel. +385 1 616 4021
+</div>
+
+<script>
+    // Fetch JSON-LD data and generate the menu
+    fetch('KAMOntologija_v8.jsonld')  // Replace with your JSON-LD file path
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        const content = document.getElementById('content');
+        const klaseDropdown = document.getElementById('klase-dropdown');
+        const svojstvaDropdown = document.getElementById('svojstva-dropdown');
+        const prefiksi = document.getElementById('prefiksi');
+
+        // Helper function to create a dropdown menu item
+        function createDropdownItem(element, label, dropdownMenu, clickCallback) {
+            const item = document.createElement('div');
+            item.textContent = label;  // Use label for dropdown item
+            item.onclick = () => clickCallback(element);  // Execute callback on click
+            dropdownMenu.appendChild(item);
+        }
+
+        // Function to extract CURIE from "@value"
+        function extractCurie(value) {
+            return value ? value : 'Unknown CURIE';
+        }
+
+        // Function to display class details in a table for Klase menu
+        function displayClassDetails(ontologyClass) {
+            content.innerHTML = '';  // Clear the previous content
+
+            const title = ontologyClass['http://www.w3.org/2000/01/rdf-schema#label']
+                ? ontologyClass['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+                : 'Unknown Class';
+
+            const id = ontologyClass['@id'] || 'Unknown ID';
+            const namespace = id.substring(0, id.lastIndexOf('/') + 1);  // Everything before the last "/"
+            const identifier = id.split('/').pop();  // The last part after the "/"
+
+            const curieValue = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+                ? ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
+                : 'Unknown CURIE';
+
+            content.innerHTML += `<h2>${title}</h2>`;
+            content.innerHTML += `<table class="klase-table">
+                                    <tr><td>ID:</td><td>${identifier}</td></tr>
+                                    <tr><td>Imenski prostor:</td><td>${namespace}</td></tr>
+                                    <tr><td>Element:</td><td>${ontologyClass['@type'].map(type => type.split('#').pop()).join(', ')}</td></tr>
+                                    <tr><td>Definicija:</td><td>${ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'] ? ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'][0]['@value'] : 'No definition available'}</td></tr>
+                                    <tr><td>CURIE:</td><td>${curieValue}</td></tr>
+                                </table>`;
+        }
+
+        // Populate the "Klase" dropdown with class details
+        Object.keys(data).forEach(key => {
+            const element = data[key];
+            const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
+            const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
+
+            // Add items to "Klase" dropdown for classes
+            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+                createDropdownItem(element, dropdownLabel, klaseDropdown, () => displayClassDetails(element));
+            }
+        });
+
+        // Display properties when "Svojstva" is clicked
+        Object.keys(data).forEach(key => {
+            const element = data[key];
+
+            const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
+            const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
+
+            // Add items to "Svojstva" dropdown for classes
+            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => {
+                    // Display properties related to the class
+                    const properties = Object.values(data).filter(item => {
+                        const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
+                        return domains && domains.some(domain => domain['@id'] === element['@id']);
+                    });
+
+                    content.innerHTML = `<h2>${dropdownLabel}</h2>`;
+                    if (properties.length === 0) {
+                        content.innerHTML += '<p>No properties found for this class.</p>';
+                    } else {
+                        let table = `<table>
+                            <tr><th>CURIE</th><th>Label</th><th>Definition</th></tr>`;
+                        properties.forEach(property => {
+                            const curieValue = property['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+                                ? property['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
+                                : 'Unknown CURIE';
+                            const label = property['http://www.w3.org/2000/01/rdf-schema#label']
+                                ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+                                : 'Unknown Label';
+                            const definition = property['http://www.registar.kam.hr/ontologies/ont.owl/definition']
+                                ? property['http://www.registar.kam.hr/ontologies/ont.owl/definition'][0]['@value']
+                                : 'No definition available';
+                            table += `
+                                <tr><td>${curieValue}</td><td>${label}</td><td>${definition}</td></tr>`;
+                        });
+                        content.innerHTML += table + '</table>';
+                    }
+                });
+            }
+        });
+
+        // Display prefixes when "Prefiksi" is clicked
+        prefiksi.addEventListener('click', () => {
+            const uniquePrefixes = new Set();
+            content.innerHTML = '<h2>Prefiksi</h2>';
+            let table = `<table><tr><th>Prefix</th><th>Class Name</th><th>Namespace</th></tr>`;
+            Object.keys(data).forEach(key => {
+                const element = data[key];
+
+                if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+                    const id = element['@id'] || 'Unknown ID';
+                    const namespace = id.substring(0, id.lastIndexOf('/') + 1);
+                    const curieValue = element['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+                        ? element['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
+                        : null;
+                    if (curieValue) {
+                        const prefix = curieValue.split(':')[0];
+                        if (!uniquePrefixes.has(prefix)) {
+                            uniquePrefixes.add(prefix);
+                            const className = element['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value'];
+                            table += `<tr><td>${prefix}</td><td>${className}</td><td>${namespace}</td></tr>`;
+                        }
+                    }
+                }
+            });
+            table += '</table>';
+            content.innerHTML += table;
+        });
+    })
+    .catch(error => {
+        console.error('Error fetching JSON-LD:', error);
+    });
+</script>
+
+</body>
+</html>
