@@ -88,7 +88,7 @@
             return ''; // Return empty if not found
         }
 
- // Function to display class details for "Klase"
+// Function to display class details for "Klase" with DataTables
 function displayClassDetails(ontologyClass) {
     content.innerHTML = '';  // Clear previous content
 
@@ -110,18 +110,33 @@ function displayClassDetails(ontologyClass) {
         ? ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'][0]['@value']
         : 'No definition available';
 
-    // Display class details in a table format
-    content.innerHTML += `<h2>${title}</h2>`;
-    content.innerHTML += `
-        <table>
-            <tr><td><strong>ID:</strong></td><td>${idValue}</td></tr>
-            <tr><td><strong>Label:</strong></td><td>${title}</td></tr>
-            <tr><td><strong>Type:</strong></td><td>${typeValue}</td></tr>
-            <tr><td><strong>Definition:</strong></td><td>${definitionValue}</td></tr>
-            <tr><td><strong>CURIE:</strong></td><td>${curieValue}</td></tr>
+    // Create a DataTable structure
+    let table = `
+        <table id="classDetailsTable" class="display">
+            <thead>
+                <tr>
+                    <th>Field</th><th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>ID</strong></td><td>${idValue}</td></tr>
+                <tr><td><strong>Label</strong></td><td>${title}</td></tr>
+                <tr><td><strong>Type</strong></td><td>${typeValue}</td></tr>
+                <tr><td><strong>Definition</strong></td><td>${definitionValue}</td></tr>
+                <tr><td><strong>CURIE</strong></td><td>${curieValue}</td></tr>
+            </tbody>
         </table>
     `;
+
+    content.innerHTML = `<h2>${title}</h2>`;
+    content.innerHTML += table;
+
+    // Initialize DataTables after the table is appended to the DOM
+    $(document).ready(function() {
+        $('#classDetailsTable').DataTable();
+    });
 }
+
 
 
         // Function to display properties for a class in "Svojstva"
