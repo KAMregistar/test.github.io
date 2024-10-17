@@ -1,0 +1,58 @@
+// Display properties when "Svojstva" is clicked
+Object.keys(data).forEach(key => {
+    const element = data[key];
+
+    const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
+    const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
+
+    // Add items to "Svojstva" dropdown for classes
+    if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+        createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => {
+            // Display properties related to the class
+            const properties = Object.values(data).filter(item => {
+                const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
+                return domains && domains.some(domain => domain['@id'] === element['@id']);
+            });
+
+            content.innerHTML = `<h2>${dropdownLabel}</h2>`;
+            if (properties.length === 0) {
+                content.innerHTML += '<p>No properties found for this class.</p>';
+            } else {
+                let table = `<table>
+                    <tr><th>CURIE</th><th>Label</th><th>subPropertyOf</th><th>inverseOf</th><th>Range</th></tr>`;
+                
+                properties.forEach(property => {
+                    const curieValue = property['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+                        ? property['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
+                        : '';  // Leave empty if not available
+
+                    const label = property['http://www.w3.org/2000/01/rdf-schema#label']
+                        ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+                        : '';  // Leave empty if not available
+
+                    const subPropertyOf = property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf']
+                        ? property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'][0]['@id']
+                        : '';  // Leave empty if not available
+
+                    const inverseOf = property['http://www.w3.org/2002/07/owl#inverseOf']
+                        ? property['http://www.w3.org/2002/07/owl#inverseOf'][0]['@id']
+                        : '';  // Leave empty if not available
+
+                    const range = property['http://www.w3.org/2000/01/rdf-schema#range']
+                        ? property['http://www.w3.org/2000/01/rdf-schema#range'][0]['@id']
+                        : '';  // Leave empty if not available
+
+                    table += `
+                        <tr>
+                            <td>${curieValue}</td>
+                            <td>${label}</td>
+                            <td>${subPropertyOf}</td>
+                            <td>${inverseOf}</td>
+                            <td>${range}</td>
+                        </tr>`;
+                });
+                content.innerHTML += table + '</table>';
+            }
+        });
+    }
+});
