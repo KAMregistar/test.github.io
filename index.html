@@ -157,7 +157,10 @@
 						<td>${lastModified}</td>
                     </tr>
                 </table>`;
-
+                // Initialize DataTables after the table is appended to the DOM
+                $(document).ready(function() {
+                    $('#lastModifiedTable').DataTable();
+                });
                 // Initialize DataTables after the table is appended to the DOM
                 $(document).ready(function() {
                     $('#myTable').DataTable();
