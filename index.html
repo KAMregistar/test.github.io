@@ -188,7 +188,7 @@
             content.innerHTML += `<table id="classDetailsTable" class="display">
                                     <tr><td>ID:</td><td>${identifier}</td></tr>
                                     <tr><td>Imenski prostor:</td><td>${namespace}</td></tr>
-                                    <tr><td>Element:</td><td>${ontologyClass['@type'].map(type => type.split('#').pop()).join(', ')}</td></tr>
+                                    <tr><td>Element:</td><td>${ontologyClass['@type'].map(type => type.split('#').pop()).join(', ')} (Klasa)</td></tr>
                                     <tr><td>Definicija:</td><td>${ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'] ? ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'][0]['@value'] : 'No definition available'}</td></tr>
                                     <tr><td>CURIE:</td><td>${createCurieLink(curieValue)}</td></tr>
                                 </table>`;
