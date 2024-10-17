@@ -106,15 +106,15 @@ fetch('KAMOntologija_v8.jsonld')  // Replace with your JSON-LD file path
 
             const title = ontologyClass['http://www.w3.org/2000/01/rdf-schema#label']
                 ? ontologyClass['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
-                : 'Unknown Class';
+                : '';
 
-            const id = ontologyClass['@id'] || 'Unknown ID';
+            const id = ontologyClass['@id'] || '';
             const namespace = id.substring(0, id.lastIndexOf('/') + 1);  // Everything before the last "/"
             const identifier = id.split('/').pop();  // The last part after the "/"
 
             const curieValue = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID']
                 ? ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
-                : 'Unknown CURIE';
+                : '';
 
             const definition = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition']
                 ? ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'][0]['@value']
@@ -221,7 +221,7 @@ fetch('KAMOntologija_v8.jsonld')  // Replace with your JSON-LD file path
                 const element = data[key];
 
                 if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                    const id = element['@id'] || 'Unknown ID';
+                    const id = element['@id'] || '';
                     const namespace = id.substring(0, id.lastIndexOf('/') + 1);
                     const curieValue = element['http://www.registar.kam.hr/ontologies/ont.owl/ID']
                         ? element['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
