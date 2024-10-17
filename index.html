@@ -226,7 +226,6 @@
         // Display properties when "Svojstva" is clicked
         Object.keys(data).forEach(key => {
             const element = data[key];
-
             const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
             const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
 
