@@ -224,7 +224,7 @@
                 return domains && domains.some(domain => domain['@id'] === classElement['@id']);
             });
 
-            content.innerHTML = `<h2>Properties for ${className}</h2>`;
+            content.innerHTML = `<h2>Svojstva za: ${className}</h2>`;
             if (properties.length === 0) {
                 content.innerHTML += '<p>No properties found for this class.</p>';
             } else {
