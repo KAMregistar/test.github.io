@@ -186,6 +186,31 @@
             dropdownMenu.appendChild(item);
         }
 
+        // Function to display class details for Klase menu
+        function displayClassDetails(ontologyClass) {
+            content.innerHTML = '';  // Clear the previous content
+
+            const title = ontologyClass['http://www.w3.org/2000/01/rdf-schema#label']
+                ? ontologyClass['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+                : 'Unknown Class';
+
+            content.innerHTML += `<h2>${title}</h2>`;
+
+            const id = ontologyClass['@id'] || 'Unknown ID';
+            const namespace = id.substring(0, id.lastIndexOf('/') + 1);  // Everything before the last "/"
+            const identifier = id.split('/').pop();  // The last part after the "/"
+            content.innerHTML += `<p>ID: ${identifier}</p>`;
+            content.innerHTML += `<p>Imenski prostor: ${namespace}</p>`;
+
+            const types = ontologyClass['@type'] || [];
+            content.innerHTML += `<p>Element: ${types.map(type => type.split('#').pop()).join(', ')}</p>`;
+
+            const definitions = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'] || [];
+            if (definitions.length > 0) {
+                definitions.forEach(def => content.innerHTML += `<p>Definicija: ${def['@value']}</p>`);
+            }
+        }
+
         // Helper function to extract CURIE from @id using JSON-LD data
         function extractCurieFromId(idValue, data) {
             const foundElement = Object.values(data).find(item => item['@id'] === idValue);
@@ -204,19 +229,18 @@
             return ''; // Return empty if not found
         }
 
-        // Display properties for Svojstva (and set correct class name)
+        // When displaying the table for the Svojstva section
         function displayPropertiesForClass(classElement, data) {
             const className = classElement['http://www.w3.org/2000/01/rdf-schema#label']
                 ? classElement['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
                 : 'Unknown Class';
-            
-            const classId = classElement['@id'];
+
             const properties = Object.values(data).filter(item => {
                 const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
-                return domains && domains.some(domain => domain['@id'] === classId);
+                return domains && domains.some(domain => domain['@id'] === classElement['@id']);
             });
 
-            content.innerHTML = `<h2>${className}</h2>`;
+            content.innerHTML = `<h2>Properties for ${className}</h2>`;
             if (properties.length === 0) {
                 content.innerHTML += '<p>No properties found for this class.</p>';
             } else {
