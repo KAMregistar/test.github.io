@@ -151,7 +151,7 @@ fetch('KAMOntologija_v8.jsonld')  // Replace with your JSON-LD file path
                 return domains && domains.some(domain => domain['@id'] === classId);
             });
 
-            content.innerHTML = `<h2>Svojstva za klasu ${className}</h2>`;
+            content.innerHTML = `<h2>Svojstva za klasu ${classId}</h2>`;
             if (properties.length === 0) {
                 content.innerHTML += '<p>No properties found for this class.</p>';
             } else {
