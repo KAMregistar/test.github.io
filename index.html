@@ -151,7 +151,11 @@ fetch('KAMOntologija_v8.jsonld')  // Replace with your JSON-LD file path
                 return domains && domains.some(domain => domain['@id'] === classId);
             });
 
-            content.innerHTML = `<h2>Svojstva za klasu ${classLabel}</h2>`;
+const classLabel = data[classId]['http://www.w3.org/2000/01/rdf-schema#label']
+    ? data[classId]['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+    : '';
+
+content.innerHTML = `<h2>Properties for Class: ${classLabel}</h2>`;
             if (properties.length === 0) {
                 content.innerHTML += '<p>No properties found for this class.</p>';
             } else {
