@@ -151,12 +151,7 @@ fetch('KAMOntologija_v8.jsonld')  // Replace with your JSON-LD file path
                 return domains && domains.some(domain => domain['@id'] === classId);
             });
 
-// Extract the class label to display in the title
-const classLabel = element['http://www.w3.org/2000/01/rdf-schema#label']
-    ? element['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
-    : 'Unknown Class';
 
-// Set the title with the actual class name
 content.innerHTML = `<h2>Properties for Class: ${classLabel}</h2>`;
             if (properties.length === 0) {
                 content.innerHTML += '<p>No properties found for this class.</p>';
