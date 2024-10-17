@@ -206,6 +206,48 @@ function displayClassDetails(ontologyClass) {
 
     })
 	
+	// Add event listener for the "Prefiksi" menu item
+prefiksi.addEventListener('click', () => {
+    const uniquePrefixes = new Set(); // Use a Set to store unique prefixes
+    content.innerHTML = '<h2>Prefiksi</h2>';
+    
+    let table = `<table id="prefixTable" class="display">
+                    <thead>
+                        <tr><th>Prefix</th><th>Class Name</th><th>Namespace</th></tr>
+                    </thead>
+                    <tbody>`;
+
+    Object.keys(data).forEach(key => {
+        const element = data[key];
+
+        if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+            const id = element['@id'] || 'Unknown ID';
+            const namespace = id.substring(0, id.lastIndexOf('/') + 1);
+            const curieValue = element['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+                ? element['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
+                : null;
+
+            if (curieValue) {
+                const prefix = curieValue.split(':')[0]; // Extract prefix before ":"
+                if (!uniquePrefixes.has(prefix)) {
+                    uniquePrefixes.add(prefix);
+                    const className = element['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value'];
+                    table += `<tr><td>${prefix}</td><td>${className}</td><td>${namespace}</td></tr>`;
+                }
+            }
+        }
+    });
+
+    table += '</tbody></table>';
+    content.innerHTML += table;
+
+    // Initialize DataTables after the table is appended to the DOM
+    $(document).ready(function() {
+        $('#prefixTable').DataTable();
+    });
+});
+
+	
     .catch(error => {
         console.error('Error fetching JSON-LD:', error);
     });
