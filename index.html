@@ -88,23 +88,41 @@
             return ''; // Return empty if not found
         }
 
-        // Function to display class details for "Klase"
-        function displayClassDetails(ontologyClass) {
-            content.innerHTML = '';  // Clear previous content
+ // Function to display class details for "Klase"
+function displayClassDetails(ontologyClass) {
+    content.innerHTML = '';  // Clear previous content
 
-            const title = ontologyClass['http://www.w3.org/2000/01/rdf-schema#label']
-                ? ontologyClass['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
-                : 'Unknown Class';
+    const title = ontologyClass['http://www.w3.org/2000/01/rdf-schema#label']
+        ? ontologyClass['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+        : 'Unknown Class';
 
-            const curieValue = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID']
-                ? ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
-                : 'Unknown CURIE';
+    const idValue = ontologyClass['@id'] || 'Unknown ID';
 
-            content.innerHTML += `<h2>${title}</h2>`;
-            content.innerHTML += `<table>
-                                    <tr><td>ID:</td><td>${curieValue}</td></tr>
-                                  </table>`;
-        }
+    const curieValue = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+        ? ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
+        : 'Unknown CURIE';
+
+    const typeValue = ontologyClass['@type']
+        ? ontologyClass['@type'].map(type => type.split('#').pop()).join(', ')
+        : 'Unknown Type';
+
+    const definitionValue = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition']
+        ? ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'][0]['@value']
+        : 'No definition available';
+
+    // Display class details in a table format
+    content.innerHTML += `<h2>${title}</h2>`;
+    content.innerHTML += `
+        <table>
+            <tr><td><strong>ID:</strong></td><td>${idValue}</td></tr>
+            <tr><td><strong>Label:</strong></td><td>${title}</td></tr>
+            <tr><td><strong>Type:</strong></td><td>${typeValue}</td></tr>
+            <tr><td><strong>Definition:</strong></td><td>${definitionValue}</td></tr>
+            <tr><td><strong>CURIE:</strong></td><td>${curieValue}</td></tr>
+        </table>
+    `;
+}
+
 
         // Function to display properties for a class in "Svojstva"
         function displayPropertiesForClass(classId, data) {
