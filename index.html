@@ -180,10 +180,14 @@
         // Function to extract CURIE from @id or @value
         function extractCurie(idOrValue) {
             if (!idOrValue) return '';
-            const parts = idOrValue.split('/');
-            const lastPart = parts[parts.length - 1];
-            const prefix = lastPart.substring(0, lastPart.search(/[CP]/)); // Find index of C or P
-            return `${prefix}:${lastPart}`;
+            const lastSlashIndex = idOrValue.lastIndexOf('/');
+            const fragment = idOrValue.substring(lastSlashIndex + 1);
+            let prefix = idOrValue.substring(idOrValue.indexOf('//') + 2, lastSlashIndex).split('.')[0]; // Extracts the 'kam'
+            
+            // Insert a semicolon between letters and capital letter (C/P)
+            const curieSuffix = fragment.replace(/([a-z]+)([CP])/g, '$1;$2');
+            
+            return `${prefix}:${curieSuffix}`;
         }
 
         // Function to display class details in a table for Klase menu
