@@ -36,8 +36,16 @@
 
 <div id="content">
     <p>O registru</p>
-    <p>Dobro došli na internetske stranice ontologije <strong>Pravilnika za opis i pristup građi u knjižnicama, arhivima i muzejima (ontologije KAM)</strong></p>
-    <p>Ontologija KAM je „formalna reprezentacija” ovih domena...</p>
+	    <p>Dobro došli na internetske stranice ontologije Pravilnika za opis i pristup građi u knjižnicama, arhivima i muzejima (ontologije KAM)
+
+<br><br>Ontologija KAM je „formalna reprezentacija” (Grubner, 1993) ovih domena. Na ontologiju KAM se mogu osloniti razni informacijski sustavi i aplikacije koji onda dijele zajedničko značenje opisanih entiteta, čime se može osigurati njihova interoperabilnost i mogućnost automatskog zaključivanja o pojedinačnim entitetima ovih domena. Ovo je svrha izrade i korištenja ontologije KAM.
+
+<br><br>Odabirom stranice Klase možete pregledavati klase ontologije KAM te identifikatore odabrane klase i njezino značenje. 
+
+<br><br>Odabirom stranice Svojstva možete pregledati sva svojstva koja pripadaju određenoj klasi (domena svojstva) te nakon toga odabrati pojedino svojstvo i vidjeti njegovo značenje. 
+
+<br><br>Odabirom stranice Prefiksi možete pregledati skraćenice koje se koriste u ontologiji KAM, kako bi unos informacija bio ekonomičniji te kako bi aplikacije i informacijski sustavi brže obrađivali datoteke s opisima knjižnične, arhivske i muzejske građe.
+</p>
 </div>
 
 <!-- Footer with black background and white text -->
@@ -154,10 +162,10 @@ fetch('KAMOntologija_v8.jsonld')  // Replace with your JSON-LD file path
                 properties.forEach(property => {
                     const curieValue = property['http://www.registar.kam.hr/ontologies/ont.owl/ID']
                         ? property['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
-                        : 'Unknown CURIE';
+                        : '';
                     const label = property['http://www.w3.org/2000/01/rdf-schema#label']
                         ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
-                        : 'Unknown Label';
+                        : '';
                     const subPropertyOf = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'], data);
                     const inverseOf = getCurieForProperty(property['http://www.w3.org/2002/07/owl#inverseOf'], data);
                     const range = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#range'], data);
