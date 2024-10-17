@@ -177,15 +177,15 @@
             dropdownMenu.appendChild(item);
         }
 
-        // Function to extract CURIE from a URL
-        function extractCurie(url) {
-            if (!url) return '';
-            const curieSuffix = url.split('/').pop().substring(1); // Get the last part after '#'
-            const prefix = 'kam' + url.split('/')[4]; // Extract 'jo', 'd', 'i' etc.
-            return `${prefix}:${curieSuffix}`;
+        // Function to extract CURIE from @id or @value
+        function extractCurie(idOrValue) {
+            if (!idOrValue) return '';
+            const parts = idOrValue.split('/');
+            const lastPart = parts[parts.length - 1];
+            return lastPart.startsWith('P') || lastPart.startsWith('C') ? 'kam' + lastPart : lastPart;
         }
 
-        // Function to display class details in the Klase dropdown
+        // Function to display class details in a table for Klase menu
         function displayClassDetails(ontologyClass) {
             content.innerHTML = '';  // Clear the previous content
 
@@ -223,9 +223,10 @@
             }
         });
 
-        // Populate the "Svojstva" dropdown with class names
+        // Display properties when "Svojstva" is clicked
         Object.keys(data).forEach(key => {
             const element = data[key];
+
             const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
             const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
 
