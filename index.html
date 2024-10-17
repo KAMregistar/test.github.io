@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 
- <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 <body>
@@ -36,15 +36,15 @@
 
 <div id="content">
     <p>O registru</p>
-	    <p>Dobro došli na internetske stranice ontologije <strong>Pravilnika za opis i pristup građi u knjižnicama, arhivima i muzejima (ontologije KAM)</strong>
+	    <p>Dobro došli na internetske stranice ontologije Pravilnika za opis i pristup građi u knjižnicama, arhivima i muzejima (ontologije KAM)
 
 <br><br>Ontologija KAM je „formalna reprezentacija” (Grubner, 1993) ovih domena. Na ontologiju KAM se mogu osloniti razni informacijski sustavi i aplikacije koji onda dijele zajedničko značenje opisanih entiteta, čime se može osigurati njihova interoperabilnost i mogućnost automatskog zaključivanja o pojedinačnim entitetima ovih domena. Ovo je svrha izrade i korištenja ontologije KAM.
 
-<br><br>Odabirom stranice <strong>Klase</strong> možete pregledavati klase ontologije KAM te identifikatore odabrane klase i njezino značenje. 
+<br><br>Odabirom stranice Klase možete pregledavati klase ontologije KAM te identifikatore odabrane klase i njezino značenje. 
 
-<br><br>Odabirom stranice <strong>Svojstva</strong> možete pregledati sva svojstva koja pripadaju određenoj klasi (domena svojstva) te nakon toga odabrati pojedino svojstvo i vidjeti njegovo značenje. 
+<br><br>Odabirom stranice Svojstva možete pregledati sva svojstva koja pripadaju određenoj klasi (domena svojstva) te nakon toga odabrati pojedino svojstvo i vidjeti njegovo značenje. 
 
-<br><br>Odabirom stranice <strong>Prefiksi</strong> možete pregledati skraćenice koje se koriste u ontologiji KAM, kako bi unos informacija bio ekonomičniji te kako bi aplikacije i informacijski sustavi brže obrađivali datoteke s opisima knjižnične, arhivske i muzejske građe.
+<br><br>Odabirom stranice Prefiksi možete pregledati skraćenice koje se koriste u ontologiji KAM, kako bi unos informacija bio ekonomičniji te kako bi aplikacije i informacijski sustavi brže obrađivali datoteke s opisima knjižnične, arhivske i muzejske građe.
 </p>
 </div>
 
@@ -76,7 +76,7 @@
             dropdownMenu.appendChild(item);
         }
 
-        // Function to extract CURIE for Range, subPropertyOf, and inverseOf
+        // Helper function to extract CURIE for Range, subPropertyOf, and inverseOf
         function getCurieForProperty(propertyField, data) {
             if (propertyField && propertyField[0] && propertyField[0]['@id']) {
                 const idValue = propertyField[0]['@id'];
@@ -88,7 +88,25 @@
             return ''; // Return empty if not found
         }
 
-        // When displaying the table for the Svojstva section
+        // Function to display class details for "Klase"
+        function displayClassDetails(ontologyClass) {
+            content.innerHTML = '';  // Clear previous content
+
+            const title = ontologyClass['http://www.w3.org/2000/01/rdf-schema#label']
+                ? ontologyClass['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+                : 'Unknown Class';
+
+            const curieValue = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+                ? ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
+                : 'Unknown CURIE';
+
+            content.innerHTML += `<h2>${title}</h2>`;
+            content.innerHTML += `<table>
+                                    <tr><td>ID:</td><td>${curieValue}</td></tr>
+                                  </table>`;
+        }
+
+        // Function to display properties for a class in "Svojstva"
         function displayPropertiesForClass(classId, data) {
             const properties = Object.values(data).filter(item => {
                 const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
