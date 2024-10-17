@@ -78,7 +78,7 @@ fetch('KAMOntologija_v8.jsonld')  // Replace with your JSON-LD file path
 
         // Function to create clickable CURIE links
         function createCurieLink(curieValue) {
-            if (!curieValue || curieValue === 'Unknown CURIE') return 'Unknown CURIE';
+            if (!curieValue || curieValue === 'Unknown CURIE') return '';
 
             const parts = curieValue.split(":");
             const prefix = parts[0].replace("kam", ""); // Remove 'kam' from prefix
