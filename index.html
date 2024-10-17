@@ -11,8 +11,8 @@
             font-family: 'Poppins', Arial, sans-serif;
             font-weight: 400; /* Regular weight */
             margin: 0;
-			padding-left:90px;
-			padding-right: 90px;
+            padding-left:90px;
+            padding-right: 90px;
             padding-bottom: 150px; /* Reserve space for footer */
         }
 
@@ -180,35 +180,56 @@
         // Function to extract CURIE from a URL
         function extractCurie(url) {
             if (!url) return '';
-            const curieSuffix = url.split('/').pop().substring(1); // Get the last 9 characters (skipping '#')
+            const curieSuffix = url.split('/').pop().substring(1); // Get the last part after '#'
             const prefix = 'kam' + url.split('/')[4]; // Extract 'jo', 'd', 'i' etc.
             return `${prefix}:${curieSuffix}`;
         }
 
-        // Function to display class details in a table for Klase menu
-        function displayClassDetails(ontologyClass) {
-            content.innerHTML = '';  // Clear the previous content
+        // Function to display properties in a table for the Svojstva menu
+        function displayPropertiesForClass(ontologyClass) {
+            content.innerHTML = `<h2>${ontologyClass['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']}</h2>`;
+            const properties = Object.values(data).filter(item => {
+                const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
+                return domains && domains.some(domain => domain['@id'] === ontologyClass['@id']);
+            });
 
-            const title = ontologyClass['http://www.w3.org/2000/01/rdf-schema#label']
-                ? ontologyClass['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
-                : 'Unknown Class';
+            if (properties.length === 0) {
+                content.innerHTML += '<p>No properties found for this class.</p>';
+            } else {
+                let table = `<table>
+                                <tr><th>CURIE</th><th>Label</th><th>subPropertyOf</th><th>inverseOf</th><th>Range</th></tr>`;
+                properties.forEach(property => {
+                    const curieValue = property['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+                        ? property['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
+                        : '';  // Leave empty if not available
 
-            const id = ontologyClass['@id'] || 'Unknown ID';
-            const namespace = id.substring(0, id.lastIndexOf('/') + 1);  // Everything before the last "/"
-            const identifier = id.split('/').pop();  // The last part after the "/"
+                    const label = property['http://www.w3.org/2000/01/rdf-schema#label']
+                        ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+                        : '';  // Leave empty if not available
 
-            const curieValue = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID']
-                ? ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
-                : 'Unknown CURIE';
+                    const subPropertyOf = property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf']
+                        ? extractCurie(property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'][0]['@id'])
+                        : '';  // Extract CURIE or leave empty if not available
 
-            content.innerHTML += `<h2>${title}</h2>`;
-            content.innerHTML += `<table class="klase-table">
-                                    <tr><td>ID:</td><td>${identifier}</td></tr>
-                                    <tr><td>Imenski prostor:</td><td>${namespace}</td></tr>
-                                    <tr><td>Element:</td><td>${ontologyClass['@type'].map(type => type.split('#').pop()).join(', ')}</td></tr>
-                                    <tr><td>Definicija:</td><td>${ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'] ? ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'][0]['@value'] : 'No definition available'}</td></tr>
-                                    <tr><td>CURIE:</td><td>${curieValue}</td></tr>
-                                </table>`;
+                    const inverseOf = property['http://www.w3.org/2002/07/owl#inverseOf']
+                        ? extractCurie(property['http://www.w3.org/2002/07/owl#inverseOf'][0]['@id'])
+                        : '';  // Extract CURIE or leave empty if not available
+
+                    const range = property['http://www.w3.org/2000/01/rdf-schema#range']
+                        ? extractCurie(property['http://www.w3.org/2000/01/rdf-schema#range'][0]['@id'])
+                        : '';  // Extract CURIE or leave empty if not available
+
+                    table += `
+                        <tr>
+                            <td>${curieValue}</td>
+                            <td>${label}</td>
+                            <td>${subPropertyOf}</td>
+                            <td>${inverseOf}</td>
+                            <td>${range}</td>
+                        </tr>`;
+                });
+                content.innerHTML += table + '</table>';
+            }
         }
 
         // Populate the "Klase" dropdown with class details
@@ -219,65 +240,7 @@
 
             // Add items to "Klase" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                createDropdownItem(element, dropdownLabel, klaseDropdown, () => displayClassDetails(element));
-            }
-        });
-
-        // Display properties when "Svojstva" is clicked
-        Object.keys(data).forEach(key => {
-            const element = data[key];
-
-            const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
-            const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
-
-            // Add items to "Svojstva" dropdown for classes
-            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => {
-                    // Display properties related to the class
-                    const properties = Object.values(data).filter(item => {
-                        const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
-                        return domains && domains.some(domain => domain['@id'] === element['@id']);
-                    });
-
-                    content.innerHTML = `<h2>${dropdownLabel}</h2>`;
-                    if (properties.length === 0) {
-                        content.innerHTML += '<p>No properties found for this class.</p>';
-                    } else {
-                        let table = `<table>
-                            <tr><th>CURIE</th><th>Label</th><th>subPropertyOf</th><th>inverseOf</th><th>Range</th></tr>`;
-                        properties.forEach(property => {
-                            const curieValue = property['http://www.registar.kam.hr/ontologies/ont.owl/ID']
-                                ? property['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
-                                : '';  // Leave empty if not available
-
-                            const label = property['http://www.w3.org/2000/01/rdf-schema#label']
-                                ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
-                                : '';  // Leave empty if not available
-
-                            const subPropertyOf = property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf']
-                                ? extractCurie(property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'][0]['@id'])
-                                : '';  // Extract CURIE or leave empty if not available
-
-                            const inverseOf = property['http://www.w3.org/2002/07/owl#inverseOf']
-                                ? extractCurie(property['http://www.w3.org/2002/07/owl#inverseOf'][0]['@id'])
-                                : '';  // Extract CURIE or leave empty if not available
-
-                            const range = property['http://www.w3.org/2000/01/rdf-schema#range']
-                                ? extractCurie(property['http://www.w3.org/2000/01/rdf-schema#range'][0]['@id'])
-                                : '';  // Extract CURIE or leave empty if not available
-
-                            table += `
-                                <tr>
-                                    <td>${curieValue}</td>
-                                    <td>${label}</td>
-                                    <td>${subPropertyOf}</td>
-                                    <td>${inverseOf}</td>
-                                    <td>${range}</td>
-                                </tr>`;
-                        });
-                        content.innerHTML += table + '</table>';
-                    }
-                });
+                createDropdownItem(element, dropdownLabel, klaseDropdown, () => displayPropertiesForClass(element));
             }
         });
 
