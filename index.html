@@ -136,7 +136,7 @@ function displayPropertiesForClass(classId, data, className) {
 
         // Add the two additional tables
         content.innerHTML += generateDownloadLinks(className);
-        content.innerHTML += getLastModifiedDate();
+
     }
 }
 
@@ -157,12 +157,6 @@ function generateDownloadLinks(className) {
 					<td><a href="${ttlLink}" download>TTL</a> (text/turtle)</td>
                 </tr>
             </table>`;
-}
-
-// Function to get the last modified date of the page
-function getLastModifiedDate() {
-    const lastModified = document.lastModified;
-    return `<table><tr><td>Posljednja izmjena: ${lastModified}</td></tr></table>`;
 }
 
 // Populate "Klase" dropdown
