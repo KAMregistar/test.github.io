@@ -140,24 +140,37 @@ function displayPropertiesForClass(classId, data, className) {
     }
 }
 
-// Function to generate the download links table
 function generateDownloadLinks(className) {
     const formattedClassName = className.toLowerCase().replace(/\s+/g, '_');
     const jsonLdLink = `ontology_elements_${formattedClassName}.jsonld`;
     const csvLink = `ontology_elements_${formattedClassName}.csv`;
     const rdfXmlLink = `ontology_elements_${formattedClassName}.rdf`;
     const ttlLink = `ontology_elements_${formattedClassName}.ttl`;
-	
-    return `<table>
-                <tr>
-                    <td>Preuzimanja:</td>
-                    <td><a href="${jsonLdLink}" download>JSON_LD</a> (application/json+ld)</td>
-                    <td><a href="${csvLink}" download>CSV</a> (text/csv)</td>
-                    <td><a href="${rdfXmlLink}" download>RDF/XML</a> (application/rdf+xml)</td>
-					<td><a href="${ttlLink}" download>TTL</a> (text/turtle)</td>
-                </tr>
-            </table>`;
+
+    return `
+        <table id="downloadTable" class="display">
+            <thead>
+                <tr><th>Preuzimanja</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><a href="${jsonLdLink}" download>JSON_LD</a> (application/json+ld)</td></tr>
+                <tr><td><a href="${csvLink}" download>CSV</a> (text/csv)</td></tr>
+                <tr><td><a href="${rdfXmlLink}" download>RDF/XML</a> (application/rdf+xml)</td></tr>
+                <tr><td><a href="${ttlLink}" download>TTL</a> (text/turtle)</td></tr>
+            </tbody>
+        </table>
+    `;
 }
+
+// After the table is appended, initialize it with DataTables (if needed)
+$(document).ready(function() {
+    $('#downloadTable').DataTable({
+        paging: false,  // No pagination needed
+        searching: false,  // Disable searching
+        info: false  // Disable table info
+    });
+});
+
 
 // Populate "Klase" dropdown
 function populateKlaseDropdown(data) {
