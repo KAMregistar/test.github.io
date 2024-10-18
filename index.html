@@ -33,24 +33,19 @@
 
 <div id="content">
     <p>O registru</p>
-    <p>Dobro došli na internetske stranice ontologije <strong>Pravilnika za opis i pristup građi u knjižnicama, arhivima i muzejima (ontologije KAM)</strong>
-    <br><br>Ontologija KAM je „formalna reprezentacija” (Grubner, 1993) ovih domena...
-    </p>
+    <p>Dobro došli na internetske stranice ontologije <strong>Pravilnika za opis i pristup građi u knjižnicama, arhivima i muzejima (ontologije KAM)</strong></p>
+    <p>Ontologija KAM je „formalna reprezentacija” (Grubner, 1993) ovih domena...</p>
 </div>
 
+<!-- Footer with black background and white text -->
 <div id="footer">
     © 2024 Nacionalna i sveučilišna knjižnica u Zagrebu. Sva prava pridržana. | Hrvatske bratske zajednice 4, 10000 Zagreb, Hrvatska | Tel. +385 1 616 4021
 </div>
 
 <script>
     // Fetch JSON-LD data and generate the menu
-    fetch('KAMOntologija_v8.jsonld')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
+    fetch('KAMOntologija_v8.jsonld')  // Replace with your JSON-LD file path
+    .then(response => response.json())
     .then(data => {
         const content = document.getElementById('content');
         const klaseDropdown = document.getElementById('klase-dropdown');
@@ -60,20 +55,9 @@
         // Helper function to create a dropdown menu item
         function createDropdownItem(element, label, dropdownMenu, clickCallback) {
             const item = document.createElement('div');
-            item.textContent = label;
-            item.onclick = () => clickCallback(element);
+            item.textContent = label;  // Use label for dropdown item
+            item.onclick = () => clickCallback(element);  // Execute callback on click
             dropdownMenu.appendChild(item);
-        }
-
-        // Helper function to create clickable CURIE link
-        function createCurieLink(curieValue, propertyData) {
-            return `<a href="property.html?curie=${encodeURIComponent(curieValue)}" class="curie-link" target="_blank">${curieValue}</a>`;
-        }
-
-        // When CURIE is clicked, store the relevant property details
-        function handleCurieClick(curieValue, propertyData) {
-            localStorage.setItem('clickedCurie', JSON.stringify(propertyData)); // Store the property data in localStorage
-            window.open(`property.html?curie=${curieValue}`, '_blank'); // Open the new page
         }
 
         // Function to extract CURIE for Range, subPropertyOf, and inverseOf
@@ -85,50 +69,7 @@
                     return foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'];
                 }
             }
-            return '';
-        }
-
-        // When displaying the table for the Svojstva section
-        function displayPropertiesForClass(classId, data, className) {
-            const properties = Object.values(data).filter(item => {
-                const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
-                return domains && domains.some(domain => domain['@id'] === classId);
-            });
-
-            content.innerHTML = `<h2>Properties for Class ${className}</h2>`;
-            if (properties.length === 0) {
-                content.innerHTML += '<p>No properties found for this class.</p>';
-            } else {
-                let table = `<table id="myTable" class="display">
-                    <thead>
-                        <tr><th>CURIE</th><th>Label</th><th>subPropertyOf</th><th>inverseOf</th><th>Range</th></tr>
-                    </thead><tbody>`;
-                properties.forEach(property => {
-                    const curieValue = property['http://www.registar.kam.hr/ontologies/ont.owl/ID']
-                        ? createCurieLink(property['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'], property)
-                        : '';
-                    const label = property['http://www.w3.org/2000/01/rdf-schema#label']
-                        ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
-                        : 'Unknown Label';
-                    const subPropertyOf = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'], data);
-                    const inverseOf = getCurieForProperty(property['http://www.w3.org/2002/07/owl#inverseOf'], data);
-                    const range = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#range'], data);
-
-                    table += `<tr>
-                        <td>${curieValue}</td>
-                        <td>${label}</td>
-                        <td>${subPropertyOf}</td>
-                        <td>${inverseOf}</td>
-                        <td>${range}</td>
-                    </tr>`;
-                });
-                table += '</tbody></table>';
-                content.innerHTML += table;
-
-                $(document).ready(function() {
-                    $('#myTable').DataTable();
-                });
-            }
+            return ''; // Return empty if not found
         }
 
         // Populate the "Klase" dropdown with class details
@@ -137,22 +78,25 @@
             const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
             const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
 
+            // Add items to "Klase" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
                 createDropdownItem(element, dropdownLabel, klaseDropdown, () => displayClassDetails(element));
             }
         });
 
+        // Populate "Svojstva" dropdown with class names
         Object.keys(data).forEach(key => {
             const element = data[key];
             const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
             const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
 
+            // Add items to "Svojstva" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayPropertiesForClass(element['@id'], data, dropdownLabel));
+                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayPropertiesForClass(element['@id'], data));
             }
         });
 
-        // Handle Prefiksi
+        // Handle Prefiksi click event
         prefiksi.addEventListener('click', () => {
             const uniquePrefixes = new Set();
             content.innerHTML = '<h2>Prefiksi</h2>';
@@ -179,7 +123,6 @@
             table += '</table>';
             content.innerHTML += table;
         });
-
     })
     .catch(error => {
         console.error('Error fetching JSON-LD:', error);
