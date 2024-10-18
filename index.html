@@ -96,14 +96,14 @@ function displayPropertiesForClass(classId, data, className) {
     });
 
     const content = document.getElementById('content');
-    content.innerHTML = `<h2>Properties for Class: ${className}</h2>`;
+    content.innerHTML = `<h2>Svojstva za klasu: ${className}</h2>`;
 
     if (properties.length === 0) {
         content.innerHTML += '<p>No properties found for this class.</p>';
     } else {
         let table = `<table id="myTable" class="display">
             <thead>
-                <tr><th>CURIE</th><th>Label</th><th>subPropertyOf</th><th>inverseOf</th><th>Range</th></tr>
+                <tr><th>CURIE</th><th>Naziv svojstva</th><th>Podsvojstvo od</th><th>Obrnuto od</th><th>Doseg</th></tr>
             </thead><tbody>`;
 
         properties.forEach(property => {
@@ -211,9 +211,9 @@ function displayClassDetails(ontologyClass) {
                         <tr><th>Property</th><th>Value</th></tr>
                     </thead><tbody>
                         <tr><td>ID</td><td>${id}</td></tr>
-                        <tr><td>Label</td><td>${title}</td></tr>
-                        <tr><td>Type</td><td>${types.map(type => type.split('#').pop()).join(', ')}</td></tr>
-                        <tr><td>Definition</td><td>${definition}</td></tr>
+                        <tr><td>Naziv svojstva</td><td>${title}</td></tr>
+                        <tr><td>Element</td><td>${types.map(type => type.split('#').pop()).join(', ')}</td></tr>
+                        <tr><td>Definicija</td><td>${definition}</td></tr>
                         <tr><td>CURIE</td><td>${createCurieLink(curieValue)}</td></tr>
                     </tbody>
                 </table>`;
@@ -250,7 +250,7 @@ function populatePrefiksi(data) {
         const uniquePrefixes = new Set();
         const content = document.getElementById('content');
         content.innerHTML = '<h2>Prefiksi</h2>';
-        let table = `<table><tr><th>Prefix</th><th>Class Name</th><th>Namespace</th></tr>`;
+        let table = `<table><tr><th>Prefix</th><th>Naziv klase</th><th>Imenski prostor</th></tr>`;
         Object.keys(data).forEach(key => {
             const element = data[key];
 
