@@ -35,9 +35,17 @@
 
 <div id="content">
     <p>O registru</p>
-    <p>Dobro došli na internetske stranice ontologije <strong>Pravilnika za opis i pristup građi u knjižnicama, arhivima i muzejima (ontologije KAM)</strong></p>
+	<p>Dobro došli na internetske stranice ontologije Pravilnika za opis i pristup građi u knjižnicama, arhivima i muzejima (ontologije KAM)
+	<br><br>Ontologija KAM je formalni prikaz entiteta (klasa) te njihovih atibuta i odnosa (svojstava) definiranih unutar domene Pravilnika za opis i pristup građi u knjižnicama, arhivima i muzejima.Na ontologiju KAM se mogu osloniti razni informacijski sustavi i aplikacije koji onda dijele zajedničko značenje opisanih entiteta, čime se može osigurati njihova interoperabilnost i mogućnost automatskog zaključivanja o pojedinačnim entitetima ovih domena. Ovo je svrha izrade i korištenja ontologije KAM.
+	<br><br>Odabirom stranice Klase možete pregledavati klase ontologije KAM te identifikatore odabrane klase i njezino značenje. 
+	<br><br>Odabirom stranice Svojstva možete pregledati sva svojstva koja pripadaju određenoj klasi (domena svojstva) te nakon toga odabrati pojedino svojstvo i vidjeti njegovo značenje. 
+	<br><br>Odabirom stranice Prefiksi možete pregledati skraćenice koje se koriste u ontologiji KAM, kako bi unos informacija bio ekonomičniji te kako bi aplikacije i informacijski sustavi brže obrađivali datoteke s opisima knjižnične, arhivske i muzejske građe.
+	</p>
+
     <p>Inačica: v2.0</p>
-</div>
+	
+</div>const content = document.getElementById('content');
+content.innerHTML += getLastModifiedDate();
 
 <!-- Footer with black background and white text -->
 <div id="footer">
@@ -126,13 +134,15 @@ function generateDownloadLinks(className) {
     const jsonLdLink = `ontology_elements_${formattedClassName}.jsonld`;
     const csvLink = `ontology_elements_${formattedClassName}.csv`;
     const rdfXmlLink = `ontology_elements_${formattedClassName}.rdf`;
-
+    const ttlLink = `ontology_elements_${formattedClassName}.ttl`;
+	
     return `<table>
                 <tr>
                     <td>Preuzimanja:</td>
-                    <td><a href="${jsonLdLink}" download>JSON_LD</a></td>
-                    <td><a href="${csvLink}" download>CSV</a></td>
-                    <td><a href="${rdfXmlLink}" download>RDF/XML</a></td>
+                    <td><a href="${jsonLdLink}" download>JSON_LD</a> (application/json+ld)</td>
+                    <td><a href="${csvLink}" download>CSV</a> (text/csv)</td>
+                    <td><a href="${rdfXmlLink}" download>RDF/XML</a> (application/rdf+xml)</td>
+					<td><a href="${ttlLink}" download>TTL</a> (text/turtle)</td>
                 </tr>
             </table>`;
 }
