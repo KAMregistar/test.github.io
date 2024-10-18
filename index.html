@@ -114,13 +114,15 @@ function generateDownloadLinks(className) {
     const jsonLdLink = `ontology_elements_${formattedClassName}.jsonld`;
     const csvLink = `ontology_elements_${formattedClassName}.csv`;
     const rdfXmlLink = `ontology_elements_${formattedClassName}.rdf`;
+	const ttlLink = `ontology_elements_${formattedClassName}.ttl`;
 
     return `<table>
                 <tr>
                     <td>Preuzimanja:</td>
-                    <td><a href="${jsonLdLink}" download>JSON_LD</a></td>
-                    <td><a href="${csvLink}" download>CSV</a></td>
-                    <td><a href="${rdfXmlLink}" download>RDF/XML</a></td>
+                    <td><a href="${jsonLdLink}" download>JSON_LD</a> (application/json+ld)</td>
+                    <td><a href="${csvLink}" download>CSV</a> (text/csv)</td>
+                    <td><a href="${rdfXmlLink}" download>RDF/XML</a> (application/rdf+xml)</td>
+					<td><a href="${rdfXmlLink}" download>TTL</a> (text/turtle)</td>
                 </tr>
             </table>`;
 }
