@@ -78,6 +78,13 @@
             font-size: 14px;
             color: #333;
         }
+		
+		#last-modified{
+			font-family: 'Rubik', Arial, sans-serif;
+            font-weight: 200;
+            font-size: 14px;
+            color: #333;
+		}
 
         table {
             width: 60%;

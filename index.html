@@ -44,8 +44,9 @@
 
     <p>Inačica: v2.0</p>
 	
-</div>const content = document.getElementById('content');
-content.innerHTML += getLastModifiedDate();
+</div>
+
+<div id="last-modified"></div>
 
 <!-- Footer with black background and white text -->
 <div id="footer">
@@ -53,6 +54,17 @@ content.innerHTML += getLastModifiedDate();
 </div>
 
 <script>
+
+// Function to display the last modified time on the page
+function displayLastModified() {
+    const lastModified = document.lastModified;
+    document.getElementById('last-modified').innerHTML = `<p>Last modified: ${lastModified}</p>`;
+}
+
+// Call the function when the page loads
+displayLastModified();
+
+
 // Helper function to extract CURIE for Range, subPropertyOf, and inverseOf
 function getCurieForProperty(propertyField, data) {
     if (propertyField && propertyField[0] && propertyField[0]['@id']) {
