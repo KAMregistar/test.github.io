@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KAM Ontology Viewer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Rubik:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <!-- Include DataTables CSS and JS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"/>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
@@ -34,7 +35,7 @@
 <div id="content">
     <p>O registru</p>
     <p>Dobro došli na internetske stranice ontologije <strong>Pravilnika za opis i pristup građi u knjižnicama, arhivima i muzejima (ontologije KAM)</strong></p>
-    <p>Ontologija KAM je „formalna reprezentacija” (Grubner, 1993) ovih domena...</p>
+    <p>Inačica: v2.0</p>
 </div>
 
 <!-- Footer with black background and white text -->
@@ -43,175 +44,118 @@
 </div>
 
 <script>
-    // Fetch JSON-LD data and generate the menu
-    fetch('KAMOntologija_v8.jsonld')  // Replace with your JSON-LD file path
+// Helper function to extract CURIE for Range, subPropertyOf, and inverseOf
+function getCurieForProperty(propertyField, data) {
+    if (propertyField && propertyField[0] && propertyField[0]['@id']) {
+        const idValue = propertyField[0]['@id'];
+        const foundElement = Object.values(data).find(item => item['@id'] === idValue);
+        if (foundElement && foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID']) {
+            return foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'];
+        }
+    }
+    return ''; // Return empty if not found
+}
+
+// Function to display properties for a class when "Svojstva" menu item is clicked
+function displayPropertiesForClass(classId, data, className) {
+    const properties = Object.values(data).filter(item => {
+        const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
+        return domains && domains.some(domain => domain['@id'] === classId);
+    });
+
+    const content = document.getElementById('content');
+    content.innerHTML = `<h2>Properties for Class: ${className}</h2>`;
+
+    if (properties.length === 0) {
+        content.innerHTML += '<p>No properties found for this class.</p>';
+    } else {
+        let table = `<table id="myTable" class="display">
+            <thead>
+                <tr><th>CURIE</th><th>Label</th><th>subPropertyOf</th><th>inverseOf</th><th>Range</th></tr>
+            </thead><tbody>`;
+
+        properties.forEach(property => {
+            const curieValue = property['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+                ? property['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
+                : ''; // Suppress if no CURIE
+            const label = property['http://www.w3.org/2000/01/rdf-schema#label']
+                ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+                : 'Unknown Label';
+            const subPropertyOf = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'], data);
+            const inverseOf = getCurieForProperty(property['http://www.w3.org/2002/07/owl#inverseOf'], data);
+            const range = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#range'], data);
+
+            table += `<tr>
+                <td>${curieValue}</td>
+                <td>${label}</td>
+                <td>${subPropertyOf}</td>
+                <td>${inverseOf}</td>
+                <td>${range}</td>
+            </tr>`;
+        });
+
+        table += '</tbody></table>';
+        content.innerHTML += table;
+
+        // Initialize DataTable after table is inserted
+        $(document).ready(function() {
+            $('#myTable').DataTable();
+        });
+
+        // Add the two additional tables
+        content.innerHTML += generateDownloadLinks(className);
+        content.innerHTML += getLastModifiedDate();
+    }
+}
+
+// Function to generate the download links table
+function generateDownloadLinks(className) {
+    const formattedClassName = className.toLowerCase().replace(/\s+/g, '_');
+    const jsonLdLink = `ontology_elements_${formattedClassName}.jsonld`;
+    const csvLink = `ontology_elements_${formattedClassName}.csv`;
+    const rdfXmlLink = `ontology_elements_${formattedClassName}.rdf`;
+
+    return `<table>
+                <tr>
+                    <td>Preuzimanja:</td>
+                    <td><a href="${jsonLdLink}" download>JSON_LD</a></td>
+                    <td><a href="${csvLink}" download>CSV</a></td>
+                    <td><a href="${rdfXmlLink}" download>RDF/XML</a></td>
+                </tr>
+            </table>`;
+}
+
+// Function to get the last modified date of the page
+function getLastModifiedDate() {
+    const lastModified = document.lastModified;
+    return `<table><tr><td>Posljednja izmjena: ${lastModified}</td></tr></table>`;
+}
+
+// Populate "Svojstva" dropdown and handle click events
+function populateSvojstvaDropdown(data) {
+    const svojstvaDropdown = document.getElementById('svojstva-dropdown');
+    Object.keys(data).forEach(key => {
+        const element = data[key];
+        const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
+        const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
+
+        if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+            const item = document.createElement('div');
+            item.textContent = dropdownLabel;
+            item.onclick = () => displayPropertiesForClass(element['@id'], data, dropdownLabel);
+            svojstvaDropdown.appendChild(item);
+        }
+    });
+}
+
+// Fetch ontology data and populate menus
+fetch('KAMOntologija_v8.jsonld')
     .then(response => response.json())
     .then(data => {
-        localStorage.setItem('ontologyData', JSON.stringify(data)); // Store the data in localStorage
-        const content = document.getElementById('content');
-        const klaseDropdown = document.getElementById('klase-dropdown');
-        const svojstvaDropdown = document.getElementById('svojstva-dropdown');
-        const prefiksi = document.getElementById('prefiksi');
-
-        // Helper function to create a dropdown menu item
-        function createDropdownItem(element, label, dropdownMenu, clickCallback) {
-            const item = document.createElement('div');
-            item.textContent = label;  // Use label for dropdown item
-            item.onclick = () => clickCallback(element);  // Execute callback on click
-            dropdownMenu.appendChild(item);
-        }
-
-        // Function to extract CURIE for Range, subPropertyOf, and inverseOf
-        function getCurieForProperty(propertyField, data) {
-            if (propertyField && propertyField[0] && propertyField[0]['@id']) {
-                const idValue = propertyField[0]['@id'];
-                const foundElement = Object.values(data).find(item => item['@id'] === idValue);
-                if (foundElement && foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID']) {
-                    return foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'];
-                }
-            }
-            return ''; // Return empty if not found
-        }
-
-        // Function to make CURIE clickable and link to a new page
-        function makeCurieClickable(curie) {
-            if (curie) {
-                const baseUrl = "property.html?curie=" + encodeURIComponent(curie);
-                return `<a href="${baseUrl}" target="_blank">${curie}</a>`;
-            }
-            return curie;
-        }
-
-        // Populate the "Klase" dropdown with class details
-        Object.keys(data).forEach(key => {
-            const element = data[key];
-            const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
-            const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
-
-            // Add items to "Klase" dropdown for classes
-            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                createDropdownItem(element, dropdownLabel, klaseDropdown, () => displayClassDetails(element));
-            }
-        });
-
-        // Populate "Svojstva" dropdown with class names
-        Object.keys(data).forEach(key => {
-            const element = data[key];
-            const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
-            const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
-
-            // Add items to "Svojstva" dropdown for classes
-            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayPropertiesForClass(element['@id'], data, dropdownLabel));
-            }
-        });
-
-        // Handle Prefiksi click event
-        prefiksi.addEventListener('click', () => {
-            const uniquePrefixes = new Set();
-            content.innerHTML = '<h2>Prefiksi</h2>';
-            let table = `<table><tr><th>Prefix</th><th>Class Name</th><th>Namespace</th></tr>`;
-            Object.keys(data).forEach(key => {
-                const element = data[key];
-
-                if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                    const id = element['@id'] || 'Unknown ID';
-                    const namespace = id.substring(0, id.lastIndexOf('/') + 1);
-                    const curieValue = element['http://www.registar.kam.hr/ontologies/ont.owl/ID']
-                        ? element['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
-                        : null;
-                    if (curieValue) {
-                        const prefix = curieValue.split(':')[0];
-                        if (!uniquePrefixes.has(prefix)) {
-                            uniquePrefixes.add(prefix);
-                            const className = element['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value'];
-                            table += `<tr><td>${prefix}</td><td>${className}</td><td>${namespace}</td></tr>`;
-                        }
-                    }
-                }
-            });
-            table += '</table>';
-            content.innerHTML += table;
-        });
-
-        // Display class details for Klase
-        function displayClassDetails(ontologyClass) {
-            content.innerHTML = '';  // Clear the previous content
-
-            const title = ontologyClass['http://www.w3.org/2000/01/rdf-schema#label']
-                ? ontologyClass['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
-                : 'Unknown Class';
-
-            const id = ontologyClass['@id'] || 'Unknown ID';
-            const namespace = id.substring(0, id.lastIndexOf('/') + 1);  // Everything before the last "/"
-            const identifier = id.split('/').pop();  // The last part after the "/"
-
-            const curieValue = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID']
-                ? ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
-                : '';
-
-            content.innerHTML += `<h2>${title}</h2>`;
-            let table = `<table id="myTable" class="display">
-                <thead><tr><th>Property</th><th>Value</th></tr></thead>
-                <tbody>
-                <tr><td>ID</td><td>${identifier}</td></tr>
-                <tr><td>Imenski prostor</td><td>${namespace}</td></tr>
-                <tr><td>Element</td><td>${ontologyClass['@type'].map(type => type.split('#').pop()).join(', ')}</td></tr>
-                <tr><td>Definicija</td><td>${ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'] ? ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'][0]['@value'] : 'No definition available'}</td></tr>
-                <tr><td>CURIE</td><td>${makeCurieClickable(curieValue)}</td></tr>
-                </tbody></table>`;
-
-            content.innerHTML += table;
-
-            $(document).ready(function() {
-                $('#myTable').DataTable();
-            });
-        }
-
-        // Display properties for the selected class
-        function displayPropertiesForClass(classId, data, className) {
-            const properties = Object.values(data).filter(item => {
-                const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
-                return domains && domains.some(domain => domain['@id'] === classId);
-            });
-
-            content.innerHTML = `<h2>Properties for Class: ${className}</h2>`;
-            if (properties.length === 0) {
-                content.innerHTML += '<p>No properties found for this class.</p>';
-            } else {
-                let table = `<table id="myTable" class="display">
-                    <thead><tr><th>CURIE</th><th>Label</th><th>subPropertyOf</th><th>inverseOf</th><th>Range</th></tr></thead><tbody>`;
-                properties.forEach(property => {
-                    const curieValue = property['http://www.registar.kam.hr/ontologies/ont.owl/ID']
-                        ? makeCurieClickable(property['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'])
-                        : '';
-                    const label = property['http://www.w3.org/2000/01/rdf-schema#label']
-                        ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
-                        : 'Unknown Label';
-                    const subPropertyOf = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'], data);
-                    const inverseOf = getCurieForProperty(property['http://www.w3.org/2002/07/owl#inverseOf'], data);
-                    const range = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#range'], data);
-
-                    table += `<tr>
-                        <td>${curieValue}</td>
-                        <td>${label}</td>
-                        <td>${subPropertyOf}</td>
-                        <td>${inverseOf}</td>
-                        <td>${range}</td>
-                    </tr>`;
-                });
-                table += '</tbody></table>';
-                content.innerHTML += table;
-
-                $(document).ready(function() {
-                    $('#myTable').DataTable();
-                });
-            }
-        }
+        populateSvojstvaDropdown(data);
     })
-    .catch(error => {
-        console.error('Error fetching JSON-LD:', error);
-    });
+    .catch(error => console.error('Error fetching JSON-LD:', error));
+
 </script>
 
 </body>
