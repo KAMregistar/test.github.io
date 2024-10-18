@@ -114,8 +114,8 @@ Object.keys(ontologyData).forEach(key => {
     // Add items to "Klase" dropdown for classes
     if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
         createDropdownItem(element, dropdownLabel, klaseDropdown, () => {
-            // Redirect to index.html and handle Klase there
-            window.location.href = `index.html#${element['@id']}`;
+            // Display class details instead of redirecting
+            displayPropertiesForClass(element['@id'], ontologyData);
         });
     }
 });
@@ -127,11 +127,11 @@ Object.keys(ontologyData).forEach(key => {
     const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
     const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
 
-    // Add items to "Svojstva" dropdown for properties
+    // Add items to "Svojstva" dropdown for classes
     if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
         createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => {
-            // Redirect to index.html and handle Svojstva there
-            window.location.href = `index.html#${element['@id']}`;
+            // Display properties related to the class on the same page
+            displayPropertiesForClass(element['@id'], ontologyData);
         });
     }
 });
@@ -166,6 +166,47 @@ prefiksi.addEventListener('click', () => {
     content.innerHTML += table;
 });
 
+// Function to display properties for class
+function displayPropertiesForClass(classId, data) {
+    const content = document.getElementById('content');
+    const properties = Object.values(data).filter(item => {
+        const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
+        return domains && domains.some(domain => domain['@id'] === classId);
+    });
+
+    content.innerHTML = `<h2>Properties for Class</h2>`;
+    if (properties.length === 0) {
+        content.innerHTML += '<p>No properties found for this class.</p>';
+    } else {
+        let table = `<table id="propertiesTable" class="display">
+            <thead><tr><th>CURIE</th><th>Label</th><th>subPropertyOf</th><th>inverseOf</th><th>Range</th></tr></thead><tbody>`;
+        properties.forEach(property => {
+            const curieValue = property['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+                ? property['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
+                : 'Unknown CURIE';
+            const label = property['http://www.w3.org/2000/01/rdf-schema#label']
+                ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+                : 'Unknown Label';
+            const subPropertyOf = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'], data);
+            const inverseOf = getCurieForProperty(property['http://www.w3.org/2002/07/owl#inverseOf'], data);
+            const range = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#range'], data);
+
+            table += `<tr>
+                <td>${curieValue}</td>
+                <td>${label}</td>
+                <td>${subPropertyOf}</td>
+                <td>${inverseOf}</td>
+                <td>${range}</td>
+            </tr>`;
+        });
+        table += '</tbody></table>';
+        content.innerHTML += table;
+
+        $(document).ready(function() {
+            $('#propertiesTable').DataTable();
+        });
+    }
+}
 </script>
 
 </body>
