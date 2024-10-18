@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KAM Ontology Viewer</title>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <!-- Google Fonts import for Poppins and Rubik -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Rubik:wght@300&display=swap" rel="stylesheet">
     <!-- Include DataTables CSS and JS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"/>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -114,15 +115,13 @@ function generateDownloadLinks(className) {
     const jsonLdLink = `ontology_elements_${formattedClassName}.jsonld`;
     const csvLink = `ontology_elements_${formattedClassName}.csv`;
     const rdfXmlLink = `ontology_elements_${formattedClassName}.rdf`;
-	const ttlLink = `ontology_elements_${formattedClassName}.ttl`;
 
     return `<table>
                 <tr>
                     <td>Preuzimanja:</td>
-                    <td><a href="${jsonLdLink}" download>JSON_LD</a> (application/json+ld)</td>
-                    <td><a href="${csvLink}" download>CSV</a> (text/csv)</td>
-                    <td><a href="${rdfXmlLink}" download>RDF/XML</a> (application/rdf+xml)</td>
-					<td><a href="${rdfXmlLink}" download>TTL</a> (text/turtle)</td>
+                    <td><a href="${jsonLdLink}" download>JSON_LD</a></td>
+                    <td><a href="${csvLink}" download>CSV</a></td>
+                    <td><a href="${rdfXmlLink}" download>RDF/XML</a></td>
                 </tr>
             </table>`;
 }
@@ -133,7 +132,62 @@ function getLastModifiedDate() {
     return `<table><tr><td>Posljednja izmjena: ${lastModified}</td></tr></table>`;
 }
 
-// Populate "Svojstva" dropdown and handle click events
+// Populate "Klase" dropdown
+function populateKlaseDropdown(data) {
+    const klaseDropdown = document.getElementById('klase-dropdown');
+    Object.keys(data).forEach(key => {
+        const element = data[key];
+        const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
+        const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
+
+        if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+            const item = document.createElement('div');
+            item.textContent = dropdownLabel;
+            item.onclick = () => displayClassDetails(element);
+            klaseDropdown.appendChild(item);
+        }
+    });
+}
+
+// Function to display class details in a transposed table
+function displayClassDetails(ontologyClass) {
+    const content = document.getElementById('content');
+    content.innerHTML = '';  // Clear the previous content
+
+    const title = ontologyClass['http://www.w3.org/2000/01/rdf-schema#label']
+        ? ontologyClass['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+        : 'Unknown Class';
+    const id = ontologyClass['@id'] || 'Unknown ID';
+    const curieValue = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+        ? ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
+        : 'Unknown CURIE';
+    const definition = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition']
+        ? ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'][0]['@value']
+        : 'No Definition';
+    const types = ontologyClass['@type'] || [];
+
+    // Create transposed table with 2 columns
+    let table = `<table id="myClassTable" class="display">
+                    <thead>
+                        <tr><th>Field</th><th>Value</th></tr>
+                    </thead><tbody>
+                        <tr><td>ID</td><td>${id}</td></tr>
+                        <tr><td>Label</td><td>${title}</td></tr>
+                        <tr><td>Type</td><td>${types.map(type => type.split('#').pop()).join(', ')}</td></tr>
+                        <tr><td>Definition</td><td>${definition}</td></tr>
+                        <tr><td>CURIE</td><td>${curieValue}</td></tr>
+                    </tbody>
+                </table>`;
+
+    content.innerHTML += table;
+
+    // Initialize DataTable after table is inserted
+    $(document).ready(function() {
+        $('#myClassTable').DataTable();
+    });
+}
+
+// Populate "Svojstva" dropdown with class names
 function populateSvojstvaDropdown(data) {
     const svojstvaDropdown = document.getElementById('svojstva-dropdown');
     Object.keys(data).forEach(key => {
@@ -150,11 +204,53 @@ function populateSvojstvaDropdown(data) {
     });
 }
 
-// Fetch ontology data and populate menus
-fetch('KAMOntologija_v8.jsonld')
-    .then(response => response.json())
+// Populate "Prefiksi" when clicked
+function populatePrefiksi(data) {
+    const prefiksi = document.getElementById('prefiksi');
+    prefiksi.addEventListener('click', () => {
+        const uniquePrefixes = new Set();
+        const content = document.getElementById('content');
+        content.innerHTML = '<h2>Prefiksi</h2>';
+        let table = `<table><thead><tr><th>Prefix</th><th>Class Name</th><th>Namespace</th></tr></thead><tbody>`;
+
+        Object.keys(data).forEach(key => {
+            const element = data[key];
+            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+                const id = element['@id'] || 'Unknown ID';
+                const namespace = id.substring(0, id.lastIndexOf('/') + 1);
+                const curieValue = element['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+                    ? element['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
+                    : null;
+                if (curieValue) {
+                    const prefix = curieValue.split(':')[0];
+                    if (!uniquePrefixes.has(prefix)) {
+                        uniquePrefixes.add(prefix);
+                        const className = element['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value'];
+                        table += `<tr><td>${prefix}</td><td>${className}</td><td>${namespace}</td></tr>`;
+                    }
+                }
+            }
+        });
+        table += '</tbody></table>';
+        content.innerHTML += table;
+
+        // Initialize DataTable after table is inserted
+        $(document).ready(function() {
+            $('#myTable').DataTable();
+        });
+    });
+}
+
+// Fetch JSON-LD data and initialize the menu
+fetch('KAMOntologija_v8.jsonld')  // Replace with your JSON-LD file path
+    .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.json();
+    })
     .then(data => {
+        populateKlaseDropdown(data);
         populateSvojstvaDropdown(data);
+        populatePrefiksi(data);
     })
     .catch(error => console.error('Error fetching JSON-LD:', error));
 
