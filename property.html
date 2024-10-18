@@ -15,6 +15,20 @@
 <div id="menu-bar">
     <img src="kam.png" alt="KAM Logo" class="logo">
     <h1><a href="index.html" style="text-decoration:none; color:inherit;">Registar</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+    <div>
+        KLASE
+        <div class="dropdown" id="klase-dropdown"></div>
+    </div>
+    <div>
+        SVOJSTVA
+        <div class="dropdown" id="svojstva-dropdown"></div>
+    </div>
+    <div id="prefiksi"> 
+        PREFIKSI
+    </div>
+    <div>
+        Pomoć
+    </div>
 </div>
 
 <div id="content">
@@ -35,7 +49,7 @@
         return urlParams.get(param);
     }
 
-    // Function to display property details
+    // Function to display property details in a table format
     function displayPropertyDetails(propertyData) {
         const propertyDetails = document.getElementById('property-details');
 
@@ -44,15 +58,15 @@
             return;
         }
 
-        // Create a table to display property details
+        // Create a transposed table to display property details with 2 columns
         let table = `<table id="propertyTable" class="display">
             <thead><tr><th>Field</th><th>Value</th></tr></thead><tbody>`;
         
         table += `<tr><td>ID</td><td>${propertyData['@id']}</td></tr>`;
         table += `<tr><td>Label</td><td>${propertyData['http://www.w3.org/2000/01/rdf-schema#label'] ? propertyData['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value'] : 'Unknown Label'}</td></tr>`;
-        table += `<tr><td>Definition</td><td>${propertyData['http://www.registar.kam.hr/ontologies/ont.owl/definition'] ? propertyData['http://www.registar.kam.hr/ontologies/ont.owl/definition'][0]['@value'] : 'No definition available'}</td></tr>`;
         table += `<tr><td>Type</td><td>${propertyData['@type'] ? propertyData['@type'].join(', ') : 'Unknown Type'}</td></tr>`;
-        table += `<tr><td>CURIE</td><td>${propertyData['http://www.registar.kam.hr/ontologies/ont.owl/ID'] ? propertyData['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'] : 'Unknown CURIE'}</td></tr>`;
+        table += `<tr><td>Definition</td><td>${propertyData['http://www.registar.kam.hr/ontologies/ont.owl/definition'] ? propertyData['http://www.registar.kam.hr/ontologies/ont.owl/definition'][0]['@value'] : 'No definition available'}</td></tr>`;
+        table += `<tr><td>CURIE</td><td>${propertyData['http://www.registar.kam.hr/ontologies/ont.owl/ID'] ? propertyData['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'] : ''}</td></tr>`;
         
         table += '</tbody></table>';
         propertyDetails.innerHTML = table;
@@ -63,6 +77,82 @@
         });
     }
 
+    // Function to load menu options (Klase, Svojstva, Prefiksi)
+    function loadMenu(data) {
+        const klaseDropdown = document.getElementById('klase-dropdown');
+        const svojstvaDropdown = document.getElementById('svojstva-dropdown');
+        const prefiksi = document.getElementById('prefiksi');
+
+        // Helper function to create a dropdown menu item
+        function createDropdownItem(element, label, dropdownMenu, clickCallback) {
+            const item = document.createElement('div');
+            item.textContent = label;  // Use label for dropdown item
+            item.onclick = () => clickCallback(element);  // Execute callback on click
+            dropdownMenu.appendChild(item);
+        }
+
+        // Populate the "Klase" dropdown with class details
+        Object.keys(data).forEach(key => {
+            const element = data[key];
+            const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
+            const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
+
+            // Add items to "Klase" dropdown for classes
+            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+                createDropdownItem(element, dropdownLabel, klaseDropdown, () => displayClassDetails(element));
+            }
+        });
+
+        // Populate "Svojstva" dropdown with class names
+        Object.keys(data).forEach(key => {
+            const element = data[key];
+            const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
+            const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
+
+            // Add items to "Svojstva" dropdown for classes
+            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayPropertiesForClass(element['@id'], data));
+            }
+        });
+
+        // Handle Prefiksi click event
+        prefiksi.addEventListener('click', () => {
+            const uniquePrefixes = new Set();
+            const content = document.getElementById('content');
+            content.innerHTML = '<h2>Prefiksi</h2>';
+            let table = `<table><tr><th>Prefix</th><th>Class Name</th><th>Namespace</th></tr>`;
+            Object.keys(data).forEach(key => {
+                const element = data[key];
+
+                if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+                    const id = element['@id'] || 'Unknown ID';
+                    const namespace = id.substring(0, id.lastIndexOf('/') + 1);
+                    const curieValue = element['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+                        ? element['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
+                        : null;
+                    if (curieValue) {
+                        const prefix = curieValue.split(':')[0];
+                        if (!uniquePrefixes.has(prefix)) {
+                            uniquePrefixes.add(prefix);
+                            const className = element['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value'];
+                            table += `<tr><td>${prefix}</td><td>${className}</td><td>${namespace}</td></tr>`;
+                        }
+                    }
+                }
+            });
+            table += '</table>';
+            content.innerHTML += table;
+        });
+    }
+
+    // Fetch JSON-LD data and populate the menu
+    fetch('KAMOntologija_v8.jsonld')  // Replace with your JSON-LD file path
+        .then(response => response.json())
+        .then(data => {
+            loadMenu(data);  // Populate the menu
+        })
+        .catch(error => console.error('Error fetching JSON-LD:', error));
+
     // Fetch the CURIE parameter from the URL
     const curie = getUrlParameter('curie');
 
@@ -71,7 +161,6 @@
 
     // Display the property details on the page
     displayPropertyDetails(propertyData);
-
 </script>
 
 </body>
