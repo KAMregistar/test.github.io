@@ -57,7 +57,34 @@ const ontologyData = JSON.parse(localStorage.getItem('ontologyData'));
 const urlParams = new URLSearchParams(window.location.search);
 const curie = urlParams.get('curie');
 
-// Display the details of the property on the page (optional for property.html)
+// Function to generate download links
+function generateDownloadLinks(curie) {
+    const className = curie.split(':')[1].toLowerCase().replace(/ /g, '_');
+    const jsonLdLink = `ontology_elements_${className}.jsonld`;
+    const csvLink = `ontology_elements_${className}.csv`;
+    const rdfXmlLink = `ontology_elements_${className}.rdf`;
+
+    const table1 = `
+        <table>
+            <tr>
+                <td>Preuzimanja:</td>
+                <td><a href="${jsonLdLink}" download>JSON_LD</a></td>
+                <td><a href="${csvLink}" download>CSV</a></td>
+                <td><a href="${rdfXmlLink}" download>RDF/XML</a></td>
+            </tr>
+        </table>
+    `;
+    return table1;
+}
+
+// Function to get the last modified date
+function getLastModifiedDate() {
+    const lastModified = document.lastModified;
+    const table2 = `<table><tr><td>Posljednja izmjena: ${lastModified}</td></tr></table>`;
+    return table2;
+}
+
+// Display the details of the property on the page
 function displayPropertyDetails(curie, data) {
     const content = document.getElementById('content');
     const property = Object.values(data).find(item => {
@@ -93,6 +120,13 @@ function displayPropertyDetails(curie, data) {
             </tbody></table>`;
         
         content.innerHTML += table;
+
+        // Add the two additional tables
+        const downloadTable = generateDownloadLinks(curie);
+        const modifiedTable = getLastModifiedDate();
+
+        content.innerHTML += downloadTable;
+        content.innerHTML += modifiedTable;
 
         $(document).ready(function() {
             $('#propertyTable').DataTable();
