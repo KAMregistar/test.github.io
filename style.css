@@ -117,3 +117,23 @@
             padding: 10px;
             font-size: 10px;
         }
+		    .download-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    .download-table th, .download-table td {
+        padding: 8px;
+        text-align: left;
+    }
+
+    /* Border below the first row */
+    .download-table thead tr {
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Border below the last row */
+    .download-table tbody tr:last-child {
+        border-bottom: 1px solid #ddd;
+    }
