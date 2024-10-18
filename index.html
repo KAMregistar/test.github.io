@@ -47,6 +47,7 @@
     fetch('KAMOntologija_v8.jsonld')  // Replace with your JSON-LD file path
     .then(response => response.json())
     .then(data => {
+        localStorage.setItem('ontologyData', JSON.stringify(data)); // Store the data in localStorage
         const content = document.getElementById('content');
         const klaseDropdown = document.getElementById('klase-dropdown');
         const svojstvaDropdown = document.getElementById('svojstva-dropdown');
@@ -72,6 +73,15 @@
             return ''; // Return empty if not found
         }
 
+        // Function to make CURIE clickable and link to a new page
+        function makeCurieClickable(curie) {
+            if (curie) {
+                const baseUrl = "property.html?curie=" + encodeURIComponent(curie);
+                return `<a href="${baseUrl}" target="_blank">${curie}</a>`;
+            }
+            return curie;
+        }
+
         // Populate the "Klase" dropdown with class details
         Object.keys(data).forEach(key => {
             const element = data[key];
@@ -92,7 +102,7 @@
 
             // Add items to "Svojstva" dropdown for classes
             if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayPropertiesForClass(element['@id'], data));
+                createDropdownItem(element, dropdownLabel, svojstvaDropdown, () => displayPropertiesForClass(element['@id'], data, dropdownLabel));
             }
         });
 
@@ -123,6 +133,81 @@
             table += '</table>';
             content.innerHTML += table;
         });
+
+        // Display class details for Klase
+        function displayClassDetails(ontologyClass) {
+            content.innerHTML = '';  // Clear the previous content
+
+            const title = ontologyClass['http://www.w3.org/2000/01/rdf-schema#label']
+                ? ontologyClass['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+                : 'Unknown Class';
+
+            const id = ontologyClass['@id'] || 'Unknown ID';
+            const namespace = id.substring(0, id.lastIndexOf('/') + 1);  // Everything before the last "/"
+            const identifier = id.split('/').pop();  // The last part after the "/"
+
+            const curieValue = ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+                ? ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
+                : '';
+
+            content.innerHTML += `<h2>${title}</h2>`;
+            let table = `<table id="myTable" class="display">
+                <thead><tr><th>Property</th><th>Value</th></tr></thead>
+                <tbody>
+                <tr><td>ID</td><td>${identifier}</td></tr>
+                <tr><td>Imenski prostor</td><td>${namespace}</td></tr>
+                <tr><td>Element</td><td>${ontologyClass['@type'].map(type => type.split('#').pop()).join(', ')}</td></tr>
+                <tr><td>Definicija</td><td>${ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'] ? ontologyClass['http://www.registar.kam.hr/ontologies/ont.owl/definition'][0]['@value'] : 'No definition available'}</td></tr>
+                <tr><td>CURIE</td><td>${makeCurieClickable(curieValue)}</td></tr>
+                </tbody></table>`;
+
+            content.innerHTML += table;
+
+            $(document).ready(function() {
+                $('#myTable').DataTable();
+            });
+        }
+
+        // Display properties for the selected class
+        function displayPropertiesForClass(classId, data, className) {
+            const properties = Object.values(data).filter(item => {
+                const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
+                return domains && domains.some(domain => domain['@id'] === classId);
+            });
+
+            content.innerHTML = `<h2>Properties for Class: ${className}</h2>`;
+            if (properties.length === 0) {
+                content.innerHTML += '<p>No properties found for this class.</p>';
+            } else {
+                let table = `<table id="myTable" class="display">
+                    <thead><tr><th>CURIE</th><th>Label</th><th>subPropertyOf</th><th>inverseOf</th><th>Range</th></tr></thead><tbody>`;
+                properties.forEach(property => {
+                    const curieValue = property['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+                        ? makeCurieClickable(property['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'])
+                        : '';
+                    const label = property['http://www.w3.org/2000/01/rdf-schema#label']
+                        ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+                        : 'Unknown Label';
+                    const subPropertyOf = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'], data);
+                    const inverseOf = getCurieForProperty(property['http://www.w3.org/2002/07/owl#inverseOf'], data);
+                    const range = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#range'], data);
+
+                    table += `<tr>
+                        <td>${curieValue}</td>
+                        <td>${label}</td>
+                        <td>${subPropertyOf}</td>
+                        <td>${inverseOf}</td>
+                        <td>${range}</td>
+                    </tr>`;
+                });
+                table += '</tbody></table>';
+                content.innerHTML += table;
+
+                $(document).ready(function() {
+                    $('#myTable').DataTable();
+                });
+            }
+        }
     })
     .catch(error => {
         console.error('Error fetching JSON-LD:', error);
