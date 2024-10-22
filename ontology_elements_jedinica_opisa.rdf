@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#">
+
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P10001">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kategoriju jedinice opisa</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P10002">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima srodni entitet jedinici opisa</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P10003">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je jedinica opisa povezana s jedinicom opisa</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P10004">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je jedinica opisa povezana s djelom</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P10005">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je jedinica opisa povezana s izrazom</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P10006">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je jedinica opisa povezana s pojavnim oblikom</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P10007">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je jedinica opisa povezana s primjerkom</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P10008">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je jedinica opisa povezana s agentom</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P10009">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je jedinica opisa povezana s osobom</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P10010">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je jedinica opisa povezana s kolektivnim agentom</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P10011">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je jedinica opisa povezana s korporativnim tijelom</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P10012">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je jedinica opisa povezana s obitelji</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P10013">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je jedinica opisa povezana s mjestom</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P10014">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je jedinica opisa povezana s vremenskim rasponom</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P10015">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima nomen za jedinicu opisa</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P10016">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima oznaku za jedinicu opisa</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P10017">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima nadziranu pristupnicu za jedinicu opisa</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P10018">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima usvojenu pristupnicu za jedinicu opisa</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P10019">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima varijantnu pristupnicu za jedinicu opisa</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P10020">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima identifikator za jedinicu opisa</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P10021">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je jedinica opisa predmet djela</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P10022">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima napomenu o jedinici opisa</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P10023">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima napomenu o odnosu jedinice opisa i drugih jedinica opisa</rdfs:label>
+    </rdf:Description>
+    </rdf:RDF>

@@ -1,0 +1,73 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<http://www.registar.kam.hr/Elements/n/P10001> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima kategoriju jedinice opisa" .
+
+<http://www.registar.kam.hr/Elements/n/P10002> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima srodni entitet jedinici opisa" .
+
+<http://www.registar.kam.hr/Elements/n/P10003> rdf:type owl:ObjectProperty ;
+  rdfs:label "je jedinica opisa povezana s jedinicom opisa" .
+
+<http://www.registar.kam.hr/Elements/n/P10004> rdf:type owl:ObjectProperty ;
+  rdfs:label "je jedinica opisa povezana s djelom" .
+
+<http://www.registar.kam.hr/Elements/n/P10005> rdf:type owl:ObjectProperty ;
+  rdfs:label "je jedinica opisa povezana s izrazom" .
+
+<http://www.registar.kam.hr/Elements/n/P10006> rdf:type owl:ObjectProperty ;
+  rdfs:label "je jedinica opisa povezana s pojavnim oblikom" .
+
+<http://www.registar.kam.hr/Elements/n/P10007> rdf:type owl:ObjectProperty ;
+  rdfs:label "je jedinica opisa povezana s primjerkom" .
+
+<http://www.registar.kam.hr/Elements/n/P10008> rdf:type owl:ObjectProperty ;
+  rdfs:label "je jedinica opisa povezana s agentom" .
+
+<http://www.registar.kam.hr/Elements/n/P10009> rdf:type owl:ObjectProperty ;
+  rdfs:label "je jedinica opisa povezana s osobom" .
+
+<http://www.registar.kam.hr/Elements/n/P10010> rdf:type owl:ObjectProperty ;
+  rdfs:label "je jedinica opisa povezana s kolektivnim agentom" .
+
+<http://www.registar.kam.hr/Elements/n/P10011> rdf:type owl:ObjectProperty ;
+  rdfs:label "je jedinica opisa povezana s korporativnim tijelom" .
+
+<http://www.registar.kam.hr/Elements/n/P10012> rdf:type owl:ObjectProperty ;
+  rdfs:label "je jedinica opisa povezana s obitelji" .
+
+<http://www.registar.kam.hr/Elements/n/P10013> rdf:type owl:ObjectProperty ;
+  rdfs:label "je jedinica opisa povezana s mjestom" .
+
+<http://www.registar.kam.hr/Elements/n/P10014> rdf:type owl:ObjectProperty ;
+  rdfs:label "je jedinica opisa povezana s vremenskim rasponom" .
+
+<http://www.registar.kam.hr/Elements/n/P10015> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima nomen za jedinicu opisa" .
+
+<http://www.registar.kam.hr/Elements/n/P10016> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima oznaku za jedinicu opisa" .
+
+<http://www.registar.kam.hr/Elements/n/P10017> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima nadziranu pristupnicu za jedinicu opisa" .
+
+<http://www.registar.kam.hr/Elements/n/P10018> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima usvojenu pristupnicu za jedinicu opisa" .
+
+<http://www.registar.kam.hr/Elements/n/P10019> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima varijantnu pristupnicu za jedinicu opisa" .
+
+<http://www.registar.kam.hr/Elements/n/P10020> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima identifikator za jedinicu opisa" .
+
+<http://www.registar.kam.hr/Elements/n/P10021> rdf:type owl:ObjectProperty ;
+  rdfs:label "je jedinica opisa predmet djela" .
+
+<http://www.registar.kam.hr/Elements/n/P10022> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima napomenu o jedinici opisa" .
+
+<http://www.registar.kam.hr/Elements/n/P10023> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima napomenu o odnosu jedinice opisa i drugih jedinica opisa" .
+

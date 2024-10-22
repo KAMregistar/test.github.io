@@ -1,0 +1,25 @@
+CURIE,Label,Domain,Definition,subPropertyOf,Range,inverseOf
+kamjo:P10001,ima kategoriju jedinice opisa,kamjo:C10001,Povezuje jedinicu opisa s vrstom kojoj jedinica opisa pripada.,,,
+kamjo:P10002,ima srodni entitet jedinici opisa,kamjo:C10001,Povezuje jedinicu opisa s entitetom koji je u odnosu s jedinicom opisa.,,,
+kamjo:P10003,je jedinica opisa povezana s jedinicom opisa,kamjo:C10001,Povezuje jedinicu opisa s drugom jedinicom opisa s kojom je povezana na bilo koji način.,kamjo:P10002,kamjo:C10001,kamjo:P10003
+kamjo:P10004,je jedinica opisa povezana s djelom,kamjo:C10001,Povezuje jedinicu opisa s djelom.,kamjo:P10003,kamd:C10002,kamd:P20017
+kamjo:P10005,je jedinica opisa povezana s izrazom,kamjo:C10001,Povezuje jedinicu opisa s izrazom.,kamjo:P10003,kami:C10003,kami:P30020
+kamjo:P10006,je jedinica opisa povezana s pojavnim oblikom,kamjo:C10001,Povezuje jedinicu opisa s pojavnim oblikom.,kamjo:P10003,kampo:C10004,kampo:P40082
+kamjo:P10007,je jedinica opisa povezana s primjerkom,kamjo:C10001,Povezuje jedinicu opisa s primjerkom.,kamjo:P10003,kamp:C10005,kamp:P50014
+kamjo:P10008,je jedinica opisa povezana s agentom,kamjo:C10001,Povezuje jedinicu opisa s agentom.,kamjo:P10003,kama:C10006,kama:P60002
+kamjo:P10009,je jedinica opisa povezana s osobom,kamjo:C10001,Povezuje jedinicu opisa s osobom.,kamjo:P10008,kamo:C10007,kamo:P70001
+kamjo:P10010,je jedinica opisa povezana s kolektivnim agentom,kamjo:C10001,Povezuje jedinicu opisa s kolektivnim agentom.,kamjo:P10008,kamka:C10008,kamka:P80002
+kamjo:P10011,je jedinica opisa povezana s korporativnim tijelom,kamjo:C10001,Povezuje jedinicu opisa s korporativnim tijelom.,kamjo:P10010,kamkt:C10009,kamkt:P90009
+kamjo:P10012,je jedinica opisa povezana s obitelji,kamjo:C10001,Povezuje jedinicu opisa s obitelji.,kamjo:P10010,kamob:C10010,kamob:P10009
+kamjo:P10013,je jedinica opisa povezana s mjestom,kamjo:C10001,Povezuje jedinicu opisa s mjestom.,kamjo:P10003,kamm:C10011,kamm:P11003
+kamjo:P10014,je jedinica opisa povezana s vremenskim rasponom,kamjo:C10001,Povezuje jedinicu opisa s vremenskim rasponom.,kamjo:P10003,kamvr:C10012,kamvr:P12002
+kamjo:P10015,ima nomen za jedinicu opisa,kamjo:C10001,Povezuje jedinicu opisa s nomenom.,kamjo:P10003,kamn:C10013,kamn:P13010
+kamjo:P10016,ima oznaku za jedinicu opisa,kamjo:C10001,"Povezuje jedinicu opisa s imenom, nazivom ili drugom oznakom pomoću koje se u informacijskom sustavu identificira jedinica opisa i/ili pronalaze i okupljaju podaci o jedinici opisa.",kamjo:P10015,kamn:C10013,kamn:P13011
+kamjo:P10017,ima nadziranu pristupnicu za jedinicu opisa,kamjo:C10001,Povezuje jedinicu opisa s nadziranom pristupnicom koja je preuzeta iz nadziranog rječnika ili oblikovana prema određenim pravilima.,kamjo:P10016,kamn:C10013,kamn:P13012
+kamjo:P10018,ima usvojenu pristupnicu za jedinicu opisa,kamjo:C10001,Povezuje jedinicu opisa s usvojenom pristupnicom koja unutar nekog sustava jednoznačno identificira jedinicu opisa i okuplja podatke o jedinici opisa.,kamjo:P10017,kamn:C10013,kamn:P13013
+kamjo:P10019,ima varijantnu pristupnicu za jedinicu opisa,kamjo:C10001,Povezuje jedinicu opisa s varijantnom pristupnicom koja nije odabrana za usvojenu pristupnicu.,kamjo:P10017,kamn:C10013,kamn:P13014
+kamjo:P10020,ima identifikator za jedinicu opisa,kamjo:C10001,"Povezuje jedinicu opisa s brojčanom ili slovno-brojčanom oznakom, namijenjenoj strojnoj ili ljudskoj uporabi, koji unutar određenog sustava jednoznačno identificira jedinicu opisa.",kamjo:P10016,kamn:C10013,kamn:P13015
+kamjo:P10021,je jedinica opisa predmet djela,kamjo:C10001,"Povezuje jedinicu opisa s izrazom, nadziranim nazivom, imenom, naslovom, identifikatorom ili drugom nadziranom oznakom koja označava temu kojom se bavi ili koju prikazuje djelo.
+",kamjo:P10004,kamd:C10002,kamd:P20323
+kamjo:P10022,ima napomenu o jedinici opisa,kamjo:C10001,Povezuje jedinicu opisa s bilo kojom informacijom o jedinici opisa koja nije zabilježena uporabom specifičnih atributa i/ili odnosa.,,,
+kamjo:P10023,ima napomenu o odnosu jedinice opisa i drugih jedinica opisa,kamjo:C10001,Povezuje jedinicu opisa s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između jedinice opisa i druge jedinice opisa ili više drugih jedinica opisa.,kamjo:P10022,,
