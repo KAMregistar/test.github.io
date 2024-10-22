@@ -1,0 +1,135 @@
+CURIE,Label,Domain,Definition,subPropertyOf,Range,inverseOf
+kamp:P50001,ima identifikator primjerka,kamp:C10005,Povezuje primjerak s brojčanom ili slovno-brojčanom oznakom koja unutar određenog sustava jednoznačno identificira primjerak jedinice građe.,kamp:P50118,kamn:C10013,kamn:P13065
+kamp:P50002,ima usvojenu pristupnicu za primjerak,kamp:C10005,"Povezuje primjerak s nadziranom riječi, izrazom ili nizom riječi i/ili drugih oznaka, koji unutar nekog sustava jednoznačno identificira primjerak i okuplja podatke o njemu. ",kamp:P50119,kamn:C10013,kamn:P13063
+kamp:P50003,ima napomenu o identifikaciji primjerka,kamp:C10005,Povezuje primjerak s kratkim tekstom u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o primjerku i/ili izvorima iz kojih su identifikacijski podaci preuzeti.,kamp:P50122,,
+kamp:P50004,ima dostupnost primjerka,kamp:C10005,Povezuje primjerak s izrazom koji označava uvjete pod kojima ustanova omogućuje korisnicima pristup primjerku jedinice građe.,,,
+kamp:P50005,ima izvorno okruženje,kamp:C10005,Povezuje primjerak s tekstom koji opisuje smještaj i položaj jedinice građe u okruženju kojemu je izvorno bila namijenjena.,,,
+kamp:P50006,ima dodane natpise i oznake,kamp:C10005,"Povezuje primjerak s riječima, znakovima ili skupovima riječi ili znakova koji se javljaju na jedinici građe, a nisu dio njezina izvornog oblikovanja, proizvodnje ili objavljivanja, već su ih tijekom vremena dodali posjednici, vlasnici, korisnici i drugi agenti.",,,
+kamp:P50007,ima napomenu o dodanim natpisima i oznakama,kamp:C10005,Povezuje primjerak s tekstom u kojemu se navode objašnjenja i druge pojedinosti o dodanim natpisima i oznakama na jedinici građe.,kamp:P50122,,
+kamp:P50008,ima izložbe,kamp:C10005,Povezuje primjerak s riječi ili tekstom koji identificira povremene izložbe na kojima je jedinica građe izlagana prije i nakon pohrane u ustanovi u kojoj se trenutno nalazi. ,,,
+kamp:P50009,ima način nabave,kamp:C10005,"Povezuje primjerak s riječi, znakom ili nizom riječi ili znakova koji označava neposredan način na koji je jedinica građe dospjela u ustanovu u kojoj je pohranjena.",,,
+kamp:P50010,ima napomenu o nabavi,kamp:C10005,"Povezuje primjerak s tekstom u kojemu se navode objašnjenja i druge pojedinosti o neposrednoj nabavi jedinice građe, uključujući način, izvor, mjesto i vrijeme nabave.
+",kamp:P50122,,
+kamp:P50011,ima stanje primjerka,kamp:C10005,"Povezuje primjerak s izrazom ili tekstom u kojemu se navode informacije o fizičkom stanju primjerka jedinice građe, uključujući opće stanje, oštećenja, ranije provedene postupke zaštite, dijelove koji nedostaju i druga svojstva koja proizlaze iz životnog ciklusa primjerka i/ili razlikuju primjerak od drugih primjeraka istoga pojavnog oblika. ",,,
+kamp:P50012,ima konzervaciju i restauraciju,kamp:C10005,"Povezuje primjerak s tekstom koji sadržava informacije o konzervatorskim i restauratorskim postupcima provedenima nad jedinicom građe, uključujući mjesto, vrijeme i agente odgovorne za konzervaciju i restauraciju.",,,
+kamp:P50013,ima povijest primjerka,kamp:C10005,"Povezuje primjerak s tekstom koji sadržava informacije o povijesti primjerka koje nisu odgovarajuće iskazane u drugim elementima podataka, uključujući vlasništvo nad primjerkom, preinake primjerka, povijest čuvanja itd.",,,
+kamp:P50014,je primjerak povezan s jedinicom opisa,kamp:C10005,Povezuje primjerak s jedinicom opisa.,kamjo:P10003,kamjo:C10001,kamjo:P10007
+kamp:P50016,je primjerak povezan s djelom,kamp:C10005,Povezuje primjerak s djelom.,kamp:P50014,kamd:C10002,kamd:P20332
+kamp:P50017,je primjerak predmet djela,kamp:C10005,"Povezuje primjerak s izrazom, nadziranim nazivom, imenom, naslovom, identifikatorom ili drugom nadziranom oznakom koja označava temu kojom se bavi ili koju prikazuje djelo.",kamp:P50016,kamd:C10002,kamd:P20320
+kamp:P50018,je primjerak povezan s pojavnim oblikom,kamp:C10005,Povezuje primjerak s pojavnim oblikom.,kamp:P50014,kampo:C10004,kampo:P40092
+kamp:P50019,oprimjeruje pojavni oblik,kamp:C10005,Povezuje primjerak koji ima obilježja određenog pojavnog oblika s tim pojavnim oblikom.,kamp:P50018,kampo:C10004,kampo:P40093
+kamp:P50020,ima reprodukciju pojavni oblik,kamp:C10005,Povezuje primjerak s pojavnim oblikom koji je strojno proizveden ili umnožen s namjerom da u istom ili drugom mediju vjerno prenese izgled i sadržaj određenog primjerka jedinice građe koji je unikatan ili se smatra unikatnim zbog svoje provenijencije ili specifičnih obilježja.,kamp:P50018,kampo:C10004,kampo:P40094
+kamp:P50021,je primjerak povezan s primjerkom,kamp:C10005,Povezuje primjerak s primjerkom.,kamp:P50014,kamp:C10005,kamp:P50021
+kamp:P50022,je primjerak združen s primjerkom,kamp:C10005,Povezuje primjerak koji je povezan u fizičku cjelinu s drugim primjerkom iste ili druge jedinice građe na način koji nije bio dijelom izvornog plana njihove izrade ili proizvodnje.,kamp:P50021,kamp:C10005,kamp:P50135
+kamp:P50023,je dopuna primjerku,kamp:C10005,Povezuje primjerak koji je fizički fragment i koji pripada istom primjerku kao i drugi fragment u istoj ili drugoj ustanovi ili zbirci. ,kamp:P50021,kamp:C10005,kamp:P50024
+kamp:P50024,je dopuna primjerku,kamp:C10005,Povezuje primjerak koji je fizički fragment i koji pripada istom primjerku kao i drugi fragment u istoj ili drugoj ustanovi ili zbirci. ,kamp:P50021,kamp:C10005,kamp:P50023
+kamp:P50025,je primjerak povezan s agentom,kamp:C10005,"Povezuje primjerak s agentom koji je ga prikupio, posjedovao, obradio i/ili izmijenio.",kamp:P50014,kama:C10006,kama:P60006
+kamp:P50026,je primjerak povezan s osobom,kamp:C10005,"Povezuje primjerak s osobom koja ga je prikupila, posjedovala, obradila i/ili izmijenila.",kamp:P50025,kamo:C10007,kamo:P70022
+kamp:P50027,je primjerak povezan s kolektivnim agentom,kamp:C10005,"Povezuje primjerak s kolektivnim agentom koji je ga prikupio, posjedovao, obradio i/ili izmijenio.",kamp:P50025,kamka:C10008,kamka:P80006
+kamp:P50028,je primjerak povezan s korporativnim tijelom,kamp:C10005,"Povezuje primjerak s korporativnim tijelom koje ga je prikupilo, posjedovalo, obradilo i/ili izmijenilo.",kamp:P50027,kamkt:C10009,kamkt:P90013
+kamp:P50029,je primjerak povezan s obitelji,kamp:C10005,"Povezuje primjerak s obitelji koja ga je prikupila, posjedovala, obradila i/ili izmijenila.",kamp:P50027,kamob:C10010,kamob:P10013
+kamp:P50030,je primjerak povezan s mjestom,kamp:C10005,Povezuje primjerak s mjestom.,kamp:P50014,kamm:C10011,kamm:P11016
+kamp:P50031,je primjerak povezan s vremenskim rasponom,kamp:C10005,Povezuje primjerak s vremenskim rasponom.,kamp:P50014,kamvr:C10012,kamvr:P12013
+kamp:P50033,ima agenta koji je preinačio primjerak,kamp:C10005,"Povezuje primjerak s agentom čijom je intervencijom primjerak stekao posebna obilježja, uključujući ona po kojima se razlikuje od drugih primjeraka istog pojavnog oblika",kamp:P50025,kama:C10006,kama:P60164
+kamp:P50034,ima osobu koja je preinačila primjerak,kamp:C10005,"Povezuje primjerak s osobom čijom je intervencijom primjerak stekao posebna obilježja, uključujući ona po kojima se razlikuje od drugih primjeraka istog pojavnog oblika",kamp:P50026,kamo:C10007,kamo:P70173
+kamp:P50035,ima kolektivni agent koji je preinačio primjerak,kamp:C10005,"Povezuje primjerak s kolektivnim agentom čijom je intervencijom primjerak stekao posebna obilježja, uključujući ona po kojima se razlikuje od drugih primjeraka istog pojavnog oblika",kamp:P50027,kamka:C10008,kamka:P80166
+kamp:P50036,ima korporativno tijelo koje je preinačilo primjerak,kamp:C10005,"Povezuje primjerak s korporativnim tijelom čijom je intervencijom primjerak stekao posebna obilježja, uključujući ona po kojima se razlikuje od drugih primjeraka istog pojavnog oblika",kamp:P50028,kamkt:C10009,kamkt:P90165
+kamp:P50037,ima obitelj koja je preinačila primjerak,kamp:C10005,"Povezuje primjerak s obitelji čijom je intervencijom primjerak stekao posebna obilježja, uključujući ona po kojima se razlikuje od drugih primjeraka istog pojavnog oblika",kamp:P50029,kamob:C10010,kamob:P10164
+kamp:P50038,ima agenta anotatora,kamp:C10005,"Povezuje primjerak s agentom koji je na primjerak tiskanog sveska ručno dodao tekstualne, slikovne ili druge bilješke.",kamp:P50033,kama:C10006,kama:P60165
+kamp:P50039,ima osobu anotatora,kamp:C10005,"Povezuje primjerak s osobom koja je na primjerak tiskanog sveska ručno dodala tekstualne, slikovne ili druge bilješke .",kamp:P50034,kamo:C10007,kamo:P70174
+kamp:P50040,ima kolektivnog agenta anotatora,kamp:C10005,"Povezuje primjerak s kolektivnim agentom koji je na primjerak tiskanog sveska ručno dodao tekstualne, slikovne ili druge bilješke.",kamp:P50035,kamka:C10008,kamka:P80167
+kamp:P50041,ima korporativno tijelo anotatora,kamp:C10005,"Povezuje primjerak s korporativnim tijelom koje je na primjerak tiskanog sveska ručno dodao tekstualne, slikovne ili druge bilješke.",kamp:P50036,kamkt:C10009,kamkt:P90166
+kamp:P50042,ima obitelj anotatora,kamp:C10005,"Povezuje primjerak s obitelji koja je na primjerak tiskanog sveska ručno dodala tekstualne, slikovne ili druge bilješke.",kamp:P50037,kamob:C10010,kamob:P10165
+kamp:P50043,ima agenta iluminatora,kamp:C10005,Povezuje primjerak s agentom koji je ukrasio primjerak tiskanog ili rukopisnog sveska iluminacijamaa.,kamp:P50033,kama:C10006,kama:P60166
+kamp:P50044,ima osobu iluminatora,kamp:C10005,Povezuje primjerak s osobom koja je ukrasila primjerak tiskanog ili rukopisnog sveska iluminacijama.,kamp:P50034,kamo:C10007,kamo:P70175
+kamp:P50045,ima kolektivnog agenta iluminatora,kamp:C10005,Povezuje primjerak s kolektivnim agentom koji je ukrasio primjerak tiskanog ili rukopisnog sveska iluminacijama.,kamp:P50035,kamka:C10008,kamka:P80168
+kamp:P50046,ima korporativno tijelo iluminatora,kamp:C10005,Povezuje primjerak s korporativnim tijelom koje je ukrasilo primjerak tiskanog ili rukopisnog sveska iluminacijama.,kamp:P50036,kamkt:C10009,kamkt:P90167
+kamp:P50047,ima obitelj iluminatora,kamp:C10005,Povezuje primjerak s obitelji koja je ukrasila primjerak tiskanog ili rukopisnog sveska iluminacijama.,kamp:P50037,kamob:C10010,kamob:P10166
+kamp:P50048,ima agenta knjigovežu,kamp:C10005,Povezuje primjerak s agentom koji je uvezao tiskani ili rukopisni svezak.,kamp:P50033,kama:C10006,kama:P60167
+kamp:P50049,ima osobu knjigovežu,kamp:C10005,Povezuje primjerak s osobom koja je uvezala tiskani ili rukopisni svezak.,kamp:P50034,kamo:C10007,kamo:P70176
+kamp:P50050,ima kolektivnog agenta knjigovežu,kamp:C10005,Povezuje primjerak s kolektivnim agentom koji je uvezao tiskani ili rukopisni svezak.,kamp:P50035,kamka:C10008,kamka:P80169
+kamp:P50051,ima korporativno tijelo knjigovežu,kamp:C10005,Povezuje primjerak s korporativnim tijelom koje je uvezalo tiskani ili rukopisni svezak.,kamp:P50036,kamkt:C10009,kamkt:P90168
+kamp:P50052,ima obitelj knjigovežu,kamp:C10005,Povezuje primjerak s obitelji koja je uvezala tiskani ili rukopisni svezak.,kamp:P50037,kamob:C10010,kamob:P10167
+kamp:P50053,ima agenta preparatora,kamp:C10005,Povezuje primjerak s agentom koji je izradio preparat  prirodoslovnog objekta.,kamp:P50025,kama:C10006,kama:P60178
+kamp:P50054,ima osobu preparatora,kamp:C10005,Povezuje primjerak s osobom koja je izradila preparat  prirodoslovnog objekta.,kamp:P50026,kamo:C10007,kamo:P70187
+kamp:P50055,ima kolektivnog agenta preparatora,kamp:C10005,Povezuje primjerak s korporativnim agentom koji je izradio preparat  prirodoslovnog objekta.,kamp:P50027,kamka:C10008,kamka:P80181
+kamp:P50056,ima korporativno tijelo preparatora,kamp:C10005,Povezuje primjerak s korporativnim tijelom koje je izradilo preparat  prirodoslovnog objekta.,kamp:P50028,kamkt:C10009,kamkt:P90179
+kamp:P50057,ima obitelj preparatora,kamp:C10005,Povezuje primjerak s obitelji koja je izradila preparat  prirodoslovnog objekta.,kamp:P50029,kamob:C10010,kamob:P10178
+kamp:P50058,ima agenta restauratora,kamp:C10005,Povezuje primjerak s agentom koji je preinačio primjerak kako bi zaustavio njegovo propadanje i vratio ga u stanje najbliže onome kakvo je bilo u određenom razdoblju njegove prošlosti.,kamp:P50033,kama:C10006,kama:P60168
+kamp:P50059,ima osobu restauratora,kamp:C10005,Povezuje primjerak s osobom koja je preinačila primjerak kako bi zaustavila njegovo propadanje i vratila ga u stanje najbliže onome kakvo je bilo u određenom razdoblju njegove prošlosti.,kamp:P50034,kamo:C10007,kamo:P70177
+kamp:P50060,ima kolektivnog agenta restauratora,kamp:C10005,Povezuje primjerak s kolektivnim agentom koji je preinačio primjerak kako bi zaustavio njegovo propadanje i vratio ga u stanje najbliže onome kakvo je bilo u određenom razdoblju njegove prošlosti.,kamp:P50035,kamka:C10008,kamka:P80171
+kamp:P50061,ima korporativno tijelo restauratora,kamp:C10005,Povezuje primjerak s korporativnim tijelom koje je preinačilo primjerak kako bi zaustavilo njegovo propadanje i vratilo ga u stanje najbliže onome kakvo je bilo u određenom razdoblju njegove prošlosti.,kamp:P50036,kamkt:C10009,kamkt:P90169
+kamp:P50062,ima obitelj restauratora,kamp:C10005,Povezuje primjerak s obitelji koja je preinačila primjerak kako bi zaustavila njegovo propadanje i vratila ga u stanje najbliže onome kakvo je bilo u određenom razdoblju njegove prošlosti.,kamp:P50037,kamob:C10010,kamob:P10168
+kamp:P50063,ima agenta rubrikatora,kamp:C10005,Povezuje primjerak s agentom koji je oblikovao i ukrasio početna slova (inicijale) teksta u rukopisima i prvim tiskanim knjigama.,kamp:P50033,kama:C10006,kama:P60169
+kamp:P50064,ima osobu rubrikatora,kamp:C10005,Povezuje primjerak s osobom koja je oblikovala i ukrasila početna slova (inicijale) teksta u rukopisima i prvim tiskanim knjigama.,kamp:P50034,kamo:C10007,kamo:P70178
+kamp:P50065,ima kolektivnog agenta rubrikatora,kamp:C10005,Povezuje primjerak s kolektivnim agentom koji je oblikovao i ukrasio početna slova (inicijale) teksta u rukopisima i prvim tiskanim knjigama.,kamp:P50035,kamka:C10008,kamka:P80172
+kamp:P50066,ima korporativno tijelo rubrikatora,kamp:C10005,Povezuje primjerak s korporativnim tijelom koje je oblikovalo i ukrasilo početna slova (inicijale) teksta u rukopisima i prvim tiskanim knjigama.,kamp:P50036,kamkt:C10009,kamkt:P90170
+kamp:P50067,ima agenta koji je stručno obradio primjerak,kamp:C10005,"Povezuje primjerak s agentom koji je odgovoran za inventarizaciju i/ili stručnu obradu primjerka, uključujući unos podataka o primjerku u informacijski sustav.",kamp:P50025,kama:C10006,kama:P60170
+kamp:P50068,ima osobu koja je stručno obradila primjerak,kamp:C10005,"Povezuje primjerak s osobom koja je odgovorna za inventarizaciju i/ili stručnu obradu primjerka, uključujući unos podataka o primjerku u informacijski sustav.",kamp:P50026,kamo:C10007,kamo:P70179
+kamp:P50069,ima kolektivnog agenta koji je stručno obradio primjerak,kamp:C10005,"Povezuje primjerak s korporativnim agentom koji je odgovoran za inventarizaciju i/ili stručnu obradu primjerka, uključujući unos podataka o primjerku u informacijski sustav.",kamp:P50027,kamka:C10008,kamka:P80173
+kamp:P50070,ima korporativno tijelo koje je stručno obradilo primjerak,kamp:C10005,"Povezuje primjerak s korporativnim tijelom koje je odgovorno za inventarizaciju i/ili stručnu obradu primjerka, uključujući unos podataka o primjerku u informacijski sustav.",kamp:P50028,kamkt:C10009,kamkt:P90171
+kamp:P50071,ima obitelj koja je stručno obradila primjerak,kamp:C10005,"Povezuje primjerak s obitelji koja je odgovorna za inventarizaciju i/ili stručnu obradu primjerka, uključujući unos podataka o primjerku u informacijski sustav.",kamp:P50029,kamob:C10010,kamob:P10170
+kamp:P50072,ima agenta determinatora,kamp:C10005,Povezuje primjerak s agentom koji je identificirao vrstu kojoj pripada prirodloslovni objekt.,kamp:P50025,kama:C10006,kama:P60171
+kamp:P50073,ima osobu determinatora,kamp:C10005,Povezuje primjerak s osobom koja je identificirala vrstu kojoj pripada prirodloslovni objekt.,kamp:P50026,kamo:C10007,kamo:P70180
+kamp:P50074,ima kolektivnog agenta determinatora,kamp:C10005,Povezuje primjerak s kolektivnim agentom koji je identificirao vrstu kojoj pripada prirodloslovni objekt.,kamp:P50027,kamka:C10008,kamka:P80174
+kamp:P50075,ima korporativno tijelo determinatora,kamp:C10005,Povezuje primjerak s korporativnim tijelom koje je identificiralo vrstu kojoj pripada prirodloslovni objekt.,kamp:P50028,kamkt:C10009,kamkt:P90172
+kamp:P50076,ima obitelj determinatora,kamp:C10005,Povezuje primjerak s obitelji koja je identificirala vrstu kojoj pripada prirodloslovni objekt.,kamp:P50029,kamob:C10010,kamob:P10171
+kamp:P50077,ima agenta aukcionista,kamp:C10005,Povezuje primjerak s agentom koji je posredovao pri aukcijskoj kupnji primjerka.,kamp:P50025,kama:C10006,kama:P60172
+kamp:P50078,ima osobu aukcionista,kamp:C10005,Povezuje primjerak s osobom koja je posredovala pri aukcijskoj kupnji primjerka.,kamp:P50026,kamo:C10007,kamo:P70181
+kamp:P50079,ima kolektivnog agenta aukcionista,kamp:C10005,Povezuje primjerak s kolektivnim agentom koji je posredovao pri aukcijskoj kupnji primjerka.,kamp:P50027,kamka:C10008,kamka:P80175
+kamp:P50080,ima korporativno tijelo aukcionista,kamp:C10005,Povezuje primjerak s kolektivnim tijelom kojieje posredovalo pri aukcijskoj kupnji primjerka.,kamp:P50028,kamkt:C10009,kamkt:P90173
+kamp:P50081,ima obitelj aukcionista,kamp:C10005,Povezuje primjerak s obitelji koja je posredovala pri aukcijskoj kupnji primjerka.,kamp:P50029,kamob:C10010,kamob:P10172
+kamp:P50082,ima agenta posjednika,kamp:C10005,Povezuje primjerak s agentom koji posjeduje primjerak i/ili skrbi o primjerku.,kamp:P50025,kama:C10006,kama:P60173
+kamp:P50083,ima osobu posjednika,kamp:C10005,Povezuje primjerak s osobom koja posjeduje primjerak i/ili skrbi o primjerku.,kamp:P50026,kamo:C10007,kamo:P70182
+kamp:P50084,ima kolektivnog agenta posjednika,kamp:C10005,Povezuje primjerak s kolektivnim agentom koji posjeduje primjerak i/ili skrbi o primjerku.,kamp:P50027,kamka:C10008,kamka:P80176
+kamp:P50085,ima korporativno tijelo posjednika,kamp:C10005,Povezuje primjerak s korporativnim tijelom koje posjeduje primjerak i/ili skrbi o primjerku.,kamp:P50028,kamkt:C10009,kamkt:P90174
+kamp:P50086,ima obitelj posjednika,kamp:C10005,Povezuje primjerak s osobom koja posjeduje primjerak i/ili skrbi o primjerku.,kamp:P50029,kamob:C10010,kamob:P10173
+kamp:P50087,ima agenta vlasnika,kamp:C10005,Povezuje primjerak s agentom koji nad primjerkom uživa ili je uživao vlasnička prava.,kamp:P50082,kama:C10006,kama:P60174
+kamp:P50088,ima osobu vlasnika,kamp:C10005,Povezuje primjerak s osobom koja nad primjerkom uživa ili je uživala vlasnička prava.,kamp:P50083,kamo:C10007,kamo:P70183
+kamp:P50089,ima kolektivnog agenta vlasnika,kamp:C10005,Povezuje primjerak s kolektivnim agentom koji nad primjerkom uživa ili je uživao vlasnička prava.,kamp:P50084,kamka:C10008,kamka:P80177
+kamp:P50090,ima korporativno tijelo vlasnika,kamp:C10005,Povezuje primjerak s korporativnim tijelom koje nad primjerkom uživa ili je uživalo vlasnička prava.,kamp:P50085,kamkt:C10009,kamkt:P90175
+kamp:P50091,ima obitelj vlasnika,kamp:C10005,Povezuje primjerak s obitelji koja nad primjerkom uživa ili je uživala vlasnička prava.,kamp:P50086,kamob:C10010,kamob:P10174
+kamp:P50092,ima agenta darovatelja,kamp:C10005,Povezuje primjerak s agentom koji je darovao primjerak sadašnjem vlasniku.,kamp:P50082,kama:C10006,kama:P60175
+kamp:P50093,ima osobu darovatelja,kamp:C10005,Povezuje primjerak s osobom koja je darovala primjerak sadašnjem vlasniku.,kamp:P50083,kamo:C10007,kamo:P70184
+kamp:P50094,ima kolektivnog agenta darovatelja,kamp:C10005,Povezuje primjerak s  kolektivnim agentom koji je darovao primjerak sadašnjem vlasniku.,kamp:P50084,kamka:C10008,kamka:P80178
+kamp:P50095,ima korporativno tijelo darovatelja,kamp:C10005,Povezuje primjerak s korporativnim tijelom koje je darovalo primjerak sadašnjem vlasniku.,kamp:P50085,kamkt:C10009,kamkt:P90176
+kamp:P50096,ima obitelj darovatelja,kamp:C10005,Povezuje primjerak s obitelji koja je darovala primjerak sadašnjem vlasniku.,kamp:P50086,kamob:C10010,kamob:P10175
+kamp:P50097,ima agenta deponenta,kamp:C10005,Povezuje primjerak s agentom koji je primjerak u svom vlasništvu povjerio na skrb i upravljanje sadašnjem posjedniku.,kamp:P50082,kama:C10006,kama:P60176
+kamp:P50098,ima osobu deponenta,kamp:C10005,Povezuje primjerak s osobom koja je primjerak u svom vlasništvu povjerila na skrb i upravljanje sadašnjem posjedniku.,kamp:P50083,kamo:C10007,kamo:P70185
+kamp:P50099,ima kolektivnog agenta deponenta,kamp:C10005,Povezuje primjerak s kolektivnim agentom koji je primjerak u svom vlasništvu povjerio na skrb i upravljanje sadašnjem posjedniku.,kamp:P50084,kamka:C10008,kamka:P80179
+kamp:P50100,ima korporativno tijelo deponenta,kamp:C10005,Povezuje primjerak s korporativnim tijelom koje je primjerak u svom vlasništvu povjerilo na skrb i upravljanje sadašnjem posjedniku.,kamp:P50085,kamkt:C10009,kamkt:P90177
+kamp:P50101,ima obitelj deponenta,kamp:C10005,Povezuje primjerak s obitelji koja je primjerak u svom vlasništvu povjerila na skrb i upravljanje sadašnjem posjedniku.,kamp:P50086,kamob:C10010,kamob:P10176
+kamp:P50102,ima agenta prodavatelja,kamp:C10005,Povezuje primjerak s agentom koji je prodao primjerak sadašnjem vlasniku.,kamp:P50082,kama:C10006,kama:P60177
+kamp:P50103,ima osobu prodavatelja,kamp:C10005,Povezuje primjerak s osobom koja je prodala primjerak sadašnjem vlasniku.,kamp:P50083,kamo:C10007,kamo:P70186
+kamp:P50104,ima kolektivnog agenta prodavatelja,kamp:C10005,Povezuje primjerak s kolektivnim agentom koji je prodao primjerak sadašnjem vlasniku.,kamp:P50084,kamka:C10008,kamka:P80180
+kamp:P50105,ima korporativno tijelo prodavatelja,kamp:C10005,Povezuje primjerak s korporativnim tijelom koje je prodalo primjerak sadašnjem vlasniku.,kamp:P50085,kamkt:C10009,kamkt:P90178
+kamp:P50106,ima obitelj prodavatelja,kamp:C10005,Povezuje primjerak s obitelji koja je prodala primjerak sadašnjem vlasniku.,kamp:P50068,kamob:C10010,kamob:P10177
+kamp:P50107,ima agenta procjenitelja,kamp:C10005,Povezuje primjerak s agentom koji je procijenio vrijednost primjerka.,kamp:P50025,kama:C10006,kama:P60179
+kamp:P50108,ima osobu procjenitelja,kamp:C10005,Povezuje primjerak s osobom koja je procijenila vrijednost primjerka.,kamp:P50026,kamo:C10007,kamo:P70188
+kamp:P50109,ima kolektivnog agenta procjenitelja,kamp:C10005,Povezuje primjerak s kolektivnim agentom koji je procijenio vrijednost primjerka.,kamp:P50027,kamka:C10008,kamka:P80182
+kamp:P50110,ima korporativno tijelo procjenitelja,kamp:C10005,Povezuje primjerak s agentom koji je procijenio vrijednost primjerka.,kamp:P50028,kamkt:C10009,kamkt:P90180
+kamp:P50111,ima obitelj procjenitelja,kamp:C10005,Povezuje primjerak s obitelji koja je procijenila vrijednost primjerka.,kamp:P50029,kamob:C10010,kamob:P10179
+kamp:P50112,ima agenta sakupljača,kamp:C10005,Povezuje primjerak s agentom koji je prikupio primjerak terenskim istraživanjem.,kamp:P50025,kama:C10006,kama:P60180
+kamp:P50113,ima osobu sakupljača,kamp:C10005,Povezuje primjerak s osobom koja je prikupila primjerak terenskim istraživanjem.,kamp:P50026,kamo:C10007,kamo:P70189
+kamp:P50114,ima kolektivnog agenta sakupljača,kamp:C10005,Povezuje primjerak s kolektivnim agentom koji je prikupio primjerak terenskim istraživanjem.,kamp:P50027,kamka:C10008,kamka:P80183
+kamp:P50115,ima korporativno tijelo sakupljača,kamp:C10005,Povezuje primjerak s korporativnim tijelom koje je prikupilo primjerak terenskim istraživanjem.,kamp:P50028,kamkt:C10009,kamkt:P90181
+kamp:P50116,ima obitelj sakupljača,kamp:C10005,Povezuje primjerak s obitelji koja je prikupila primjerak terenskim istraživanjem.,kamp:P50029,kamob:C10010,kamob:P10180
+kamp:P50117,je primjerak povezan s nomenom,kamp:C10005,Povezuje primjerak s nomenom.,kamp:P50014,kamn:C10013,kamn:P13060
+kamp:P50118,ima oznaku za primjerak,kamp:C10005,Povezuje primjerak s ozbakom za primjerak.,kamp:P50117,kamn:C10013,kamn:P13061
+kamp:P50119,ima nadziranu pristupnicu za primjerak,kamp:C10005,Povezuje primjerak s nadziranom pristupnicom za primjerak.,kamp:P50118,kamn:C10013,kamn:P13062
+kamp:P50120,ima varijantnu pristupnicu za primjerak,kamp:C10005,Povezuje primjerak s varijantnom pristupnicom za primjerak.,kamp:P50119,kamn:C10013,kamn:P13064
+kamp:P50121,ima obitelj rubrikatora,kamp:C10005,Povezuje primjerak s obitelji koja je oblikovala i ukrasila početna slova (inicijale) teksta u rukopisima i prvim tiskanim knjigama.,kamp:P50037,kamob:C10010,kamob:P10169
+kamp:P50122,ima napomenu o primjerku,kamp:C10005,Povezuje primjerak s tekstom koji sadržava pojedinosti o primjerku.,kamjo:P10022,,
+kamp:P50123,ima napomenu o odnosu primjerka i drugih jedinica opisa,kamp:C10005,"Povezuje primjerak s tekstom koji sadržava pojedinosti o odnosu između primjerka i drugog primjeraka ili više drugih primjeraka, odnosno primjerka i druge ili više drugih jedinica opisa.",kamp:P50122,,
+kamp:P50124,ima mjesto izlaganja,kamp:C10005,Povezuje primjerak s mjestom na kojemu je primjerak  izlagan.,kamp:P50030,kamm:C10011,kamm:P11018
+kamp:P50125,ima mjesto konzervacije ili restauracijie,kamp:C10005,Povezuje primjerak s mjestom na kojemu su na primjerku izvedeni konzervatorski i/ili restauratorski postupci.,kamp:P50030,kamm:C10011,kamm:P11017
+kamp:P50126,ima mjesto korištenja,kamp:C10005,Povezuje primjerak s mjestom na kojemu je primjerak korišten.,kamp:P50030,kamm:C10011,kamm:P11022
+kamp:P50127,ima mjesto nabave,kamp:C10005,Povezuje primjerak s mjestom na kojemu je primjerak nabavljen.,kamp:P50030,kamm:C10011,kamm:P11019
+kamp:P50128,ima mjesto nalaza,kamp:C10005,Povezuje primjerak s mjestom na kojemu je primjerak pronađen.,kamp:P50030,kamm:C10011,kamm:P11020
+kamp:P50129,ima mjesto pohrane,kamp:C10005,Povezuje primjerak s mjestom na kojemu je primjerak pohranjen.,kamp:P50030,kamm:C10011,kamm:P11021
+kamp:P50130,ima vrijeme konzervacije ili restauracije,kamp:C10005,Povezuje primjerak s vremenskim rasponom u kojemu su na primjerku izvedeni konzervatorski i/ili restauratorski postupci.,kamp:P50031,kamvr:C10012,kamvr:P12014
+kamp:P50131,ima vrijeme korištenja,kamp:C10005,Povezuje primjerak s vremenskim rasponom u kojemu je primjerak korišten.,kamp:P50031,kamvr:C10012,kamvr:P12034
+kamp:P50132,ima vrijeme nabave,kamp:C10005,Povezuje primjerak s vremenskim rasponom u kojemu je primjerak nabavljen.,kamp:P50031,kamvr:C10012,kamvr:P12015
+kamp:P50133,ima vrijeme nalaza,kamp:C10005,Povezuje primjerak s vremenskim rasponom u kojemu je primjerak pronađen.,kamp:P50031,kamvr:C10012,kamvr:P12016
+kamp:P50134,ima kategoriju primjerka,kamp:C10005,Povezuje priomjerak s vrstom kojoj primjerak pripada.,kamjo:P10001,,
+kamp:P50135,je primjerak združen s primjerkom,kamp:C10005,Povezuje primjerak koji je povezan u fizičku cjelinu s drugim primjerkom iste ili druge jedinice građe na način koji nije bio dijelom izvornog plana njihove izrade ili proizvodnje.,kamp:P50021,kamp:C10005,kamp:P50022
