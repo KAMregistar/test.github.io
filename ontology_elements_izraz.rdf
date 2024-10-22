@@ -1,0 +1,1265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#">
+
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30001">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima jezik sadržaja</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30002">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima napomenu o jeziku sadržaja</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30003">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima jezik izvornika</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30004">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima napomenu o jeziku izvornika</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30005">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima pismo sadržaja</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30006">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima napomenu o pismu sadržaja</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30007">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima pismo izvornika</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30008">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima napomenu o pismu izvornika</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30009">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima zvučni sadržaj</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30010">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima trajanje</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30011">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima napomenu o trajanju</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30012">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima glazbeni format</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30013">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima izvođački sastav</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30014">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima mjerilo</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30015">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima napomenu o mjerilu</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30016">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kartografsku projekciju</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30017">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima ciljanu publiku izraza</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30018">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima napomenu o ciljanoj publici</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30019">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima uvjete objavljivanja, umnožavanja ili prikazivanja</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30020">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je izraz povezan s jedinica opisa</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30021">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je izraz povezan s djelom</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30022">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je realizacija djela</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30023">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je izraz povezan s izrazom</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30024">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je agregirao izraz</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30025">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je agregiran u izrazu</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30026">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima dio izraz</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30027">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je dio izraza</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30028">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je izveden iz izraza</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30029">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima izvedenicu izraz</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30030">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je izraz povezan s pojavnim oblikom</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30031">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je izraz postvaren u pojavnom obliku</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30032">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je izraz povezan s agentom</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30033">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je izraz povezan s osobom</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30034">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je izraz povezan s kolektivnim agentom</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30035">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je izraz povezan s korporativnim tijelom</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30036">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je izraz povezan s obitelji</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30037">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta cenzora</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30038">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu cenzora</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30039">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta cenzora</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30040">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo cenzora</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30041">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj cenzora</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30042">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta citiranog autora</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30043">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu citiranog autora</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30044">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta citiranog autora</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30045">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo citiranog autora</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30046">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj citiranog autora</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30047">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta glazbenog aranžera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30048">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu glazbenog aranžera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30049">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta glazbenog aranžera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30050">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo glazbenog aranžera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30051">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu glazbenog aranžera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30052">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta izvođača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30053">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu izvođača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30054">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta izvođača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30055">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo izvođača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30056">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj izvođača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30057">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta glazbenika</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30058">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu glazbenika</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30059">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta glazbenika</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30060">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo glazbenika</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30061">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj glazbenika</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30062">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta dirigenta</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30063">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu dirigenta</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30064">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta DJ-a</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30065">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu DJ-a</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30066">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta instrumentalista</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30067">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu instrumentalisa</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30068">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta instrumentalista</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30069">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo instrumentalista</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30070">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj instrumentalista</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30071">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta pjevača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30072">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu pjevača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30073">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta pjevača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30074">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo pjevača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30075">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj pjevača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30076">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta voditelja zbora</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30077">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu voditelja zbora</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30078">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta glumca</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30079">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu glumca</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30080">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta glumca</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30081">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo glumca</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30082">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj glumca</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30083">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta glasovnog glumca</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30084">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu glasovnog glumca</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30085">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta kazivača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30086">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu kazivača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30087">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta komentatora</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30088">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu komentatora</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30089">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta lutkara</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30090">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu lutkara</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30091">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta moderatora</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30092">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu moderatora</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30093">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta panelista</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30094">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu panelista</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30095">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta pantomimičara</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30096">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu pantomimičara</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30097">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta plesača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30098">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu plesača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30099">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta plesača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30100">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo plesača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30101">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj plesača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30102">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta pripovjedača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30103">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu pripovjedača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30104">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta spikera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30105">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu spikera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30106">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta voditelja</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30107">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu voditelja</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30108">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta lektora</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30109">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu lektora</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30110">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta prevoditelja</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30111">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu prevoditelja</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30112">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta sažimatelja</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30113">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu sažimatelja</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30114">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta suradnika u realizaciji</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30115">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu suradnika u realizaciji</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30116">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta suradnika u realizaciji</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30117">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo suradnika u realizaciji</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30118">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj suradnika u realizaciji</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30119">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta animatora</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30120">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu animatora</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30121">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta animatora</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30122">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo animatora</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30123">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj animatora</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30124">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta autora računalnih vizualizacija</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30125">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu autora računalnih vizualizacija</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30126">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta autora računalnih vizualizacija</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30127">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo autora računalnih vizualizacija</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30128">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj autora računalnih vizualizacija</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30129">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta direktora fotografije</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30130">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu direktora fotografije</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30131">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta direktora fotografije</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30132">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo direktora fotografije</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30133">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj direktora fotografije</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30134">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta dizajnera interiera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30135">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu dizajnera interiera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30136">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta dizajnera interiera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30137">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo dizajnera interiera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30138">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj dizajnera interiera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30139">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta inženjera zvuka</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30140">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu inženjera zvuka</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30141">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta inženjera zvuka</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30142">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo inženjera zvuka</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30143">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj inženjera zvuka</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30144">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta kolorista</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30145">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu kolorista</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30146">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta kolorista</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30147">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo kolorista</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30148">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj kolorista</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30149">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta kostimografa</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30150">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu kostimografa</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30151">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta kostimografa</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30152">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo kostimografa</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30153">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj kostimografa</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30154">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta majstora rasvjete</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30155">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu majstora rasvjete</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30156">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta majstora rasvjete</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30157">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo majstora rasvjete</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30158">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj majstora rasvjete</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30159">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta majstora specijalnih efekata</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30160">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu majstora specijalnih efekata</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30161">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta majstora specijalnih efekata</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30162">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo majstora specijalnih efekata</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30163">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj majstora specijalnih efekata</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30164">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta maskera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30165">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu maskera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30166">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta maskera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30167">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo maskera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30168">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj maskera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30169">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta montažera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30170">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu montažera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30171">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta montažera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30172">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo montažera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30173">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj montažera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30174">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta pisca dijaloga</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30175">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu pisca dijaloga</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30176">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta pisca dijaloga</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30177">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo pisca dijaloga</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30178">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj pisca dijaloga</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30179">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta programera-suradnika</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30180">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu programera-suradnika</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30181">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta programera-suradnika</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30182">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo programera-suradnika</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30183">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj programera-suradnika</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30184">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta redatelja sinkronizacije</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30185">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu redatelja sinkronizacije</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30186">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta redatelja sinkronizacije</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30187">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo redatelja sinkronizacije</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30188">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj redatelja sinkronizacije</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30189">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta scenarista filma</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30190">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu scenarista filma</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30191">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta scenarista filma</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30192">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo scenarista filma</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30193">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj scenarista filma</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30194">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta scenografa</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30195">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu scenografa</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30196">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta scenografa</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30197">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo scenografa</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30198">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj scenografa</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30199">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta skladatelja glazbe</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30200">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu skladatelja glazbe</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30201">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta skladatelja glazbe</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30202">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo skladatelja glazbe</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30203">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj skladatelja glazbe</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30204">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta snimatelja</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30205">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu snimatelja</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30206">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta snimatelja</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30207">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo snimatelja</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30208">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj snimatelja</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30209">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta statičara</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30210">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu statičara</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30211">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta statičara</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30212">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo statičara</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30213">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj statičara</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30214">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta šminkera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30215">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu šminkera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30216">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta šminkera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30217">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo šminkera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30218">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj šminkera</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30219">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta tehničkog crtača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30220">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu tehničkog crtača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30221">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta tehničkog crtača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30222">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo tehničkog crtača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30223">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj tehničkog crtača</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30224">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta tonskog snimatelja</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30225">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu tonskog snimatelja</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30226">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima kolektivnog agenta tonskog snimatelja</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30227">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima korporativno tijelo tonskog snimatelja</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30228">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima obitelj tonskog snimatelja</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30229">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta urednika</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30230">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu  urednika</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30231">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima agenta zapisničara</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30232">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima osobu zapisničara</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30233">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je izraz povezan s mjestom</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30234">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima mjesto nastanka izraza</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30235">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je izraz povezan s vremenskim rasponom</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30236">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima vrijeme nastanka izraza</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30237">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je izraz povezan s nomenom za izraz</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30238">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima oznaku za izraz</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30239">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima nadziranu pristupnicu za izraz</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30240">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima usvojenu pristupnicu za izraz</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30241">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima varijantnu pristupnicu za izraz</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30242">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima dodatno obilježje izraza</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30243">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima identifikator izraza</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30244">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima napomenu o identifikaciji izraza</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30245">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima napomenu o izrazu</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30246">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima napomenu o odnosu izraza i drugih jedinica opisa</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30247">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima oblik sadržaja izraza</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30248">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima ključne riječi</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30249">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima stil, pravac ili razdoblje</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30250">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>ima napomenu o stilu, pravcu ili razdoblju</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30251">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je izraz predmet djela</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.registar.kam.hr/Elements/n/P30252">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label>je kategorija izraza</rdfs:label>
+    </rdf:Description>
+    </rdf:RDF>
