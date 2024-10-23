@@ -1,0 +1,160 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<http://www.registar.kam.hr/Elements/n/P11001> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima vrstu mjesta" .
+
+<http://www.registar.kam.hr/Elements/n/P11002> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima geografski položaj mjesta" .
+
+<http://www.registar.kam.hr/Elements/n/P11003> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto povezano s jedinicom opisa" .
+
+<http://www.registar.kam.hr/Elements/n/P11004> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto povezano s djelom" .
+
+<http://www.registar.kam.hr/Elements/n/P11005> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto nastanka djela" .
+
+<http://www.registar.kam.hr/Elements/n/P11006> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto predmet djela" .
+
+<http://www.registar.kam.hr/Elements/n/P11007> rdf:type owl:ObjectProperty ;
+  rdfs:label "je pretpostavljeno mjesto nastanka djela" .
+
+<http://www.registar.kam.hr/Elements/n/P11008> rdf:type owl:ObjectProperty ;
+  rdfs:label "je navodno mjesto nastanka djela" .
+
+<http://www.registar.kam.hr/Elements/n/P11009> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto povezano s izrazom" .
+
+<http://www.registar.kam.hr/Elements/n/P11010> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto nastanka izraza" .
+
+<http://www.registar.kam.hr/Elements/n/P11011> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto povezano s pojavnim oblikom" .
+
+<http://www.registar.kam.hr/Elements/n/P11012> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto izdavanja pojavnog oblika" .
+
+<http://www.registar.kam.hr/Elements/n/P11013> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto proizvodnje pojavnog oblika" .
+
+<http://www.registar.kam.hr/Elements/n/P11014> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto raspačavanja pojavnog oblika" .
+
+<http://www.registar.kam.hr/Elements/n/P11015> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto tiskanja pojavnog oblika" .
+
+<http://www.registar.kam.hr/Elements/n/P11016> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto povezano s primjerkom" .
+
+<http://www.registar.kam.hr/Elements/n/P11017> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto konzervacije ili restauracije primjerka" .
+
+<http://www.registar.kam.hr/Elements/n/P11018> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto izlaganja primjerka" .
+
+<http://www.registar.kam.hr/Elements/n/P11019> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto nabave primjerka" .
+
+<http://www.registar.kam.hr/Elements/n/P11020> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto nalaska primjerka" .
+
+<http://www.registar.kam.hr/Elements/n/P11021> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto pohrane primjerka" .
+
+<http://www.registar.kam.hr/Elements/n/P11022> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto korištenja primjerka" .
+
+<http://www.registar.kam.hr/Elements/n/P11023> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto povezano s agentom" .
+
+<http://www.registar.kam.hr/Elements/n/P11024> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto povezano s osobom" .
+
+<http://www.registar.kam.hr/Elements/n/P11025> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto djelovanja osobe" .
+
+<http://www.registar.kam.hr/Elements/n/P11026> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto rođenja osobe" .
+
+<http://www.registar.kam.hr/Elements/n/P11027> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto sahrane osobe" .
+
+<http://www.registar.kam.hr/Elements/n/P11028> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto smrti osobe" .
+
+<http://www.registar.kam.hr/Elements/n/P11029> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto u posjedu osobe" .
+
+<http://www.registar.kam.hr/Elements/n/P11030> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto povezano s kolektivnim agentom" .
+
+<http://www.registar.kam.hr/Elements/n/P11031> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto povezano s korporativnim tijelom" .
+
+<http://www.registar.kam.hr/Elements/n/P11032> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto u posjedu korporativnog tijela" .
+
+<http://www.registar.kam.hr/Elements/n/P11033> rdf:type owl:ObjectProperty ;
+  rdfs:label "je sjedište korporativnog tijela" .
+
+<http://www.registar.kam.hr/Elements/n/P11034> rdf:type owl:ObjectProperty ;
+  rdfs:label "je upravno-teritorijalno područje korporativnog tijela" .
+
+<http://www.registar.kam.hr/Elements/n/P11035> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto povezano s obitelji" .
+
+<http://www.registar.kam.hr/Elements/n/P11036> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto djelovanja obitelji" .
+
+<http://www.registar.kam.hr/Elements/n/P11037> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto u posjedu obitelji" .
+
+<http://www.registar.kam.hr/Elements/n/P11038> rdf:type owl:ObjectProperty ;
+  rdfs:label "je mjesto povezano s mjestom" .
+
+<http://www.registar.kam.hr/Elements/n/P11039> rdf:type owl:ObjectProperty ;
+  rdfs:label "je teritorijalna cjelina mjesta" .
+
+<http://www.registar.kam.hr/Elements/n/P11040> rdf:type owl:ObjectProperty ;
+  rdfs:label "je teritorijalni dio mjesta" .
+
+<http://www.registar.kam.hr/Elements/n/P11041> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima nomen za mjesto" .
+
+<http://www.registar.kam.hr/Elements/n/P11042> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima oznaku za mjesto" .
+
+<http://www.registar.kam.hr/Elements/n/P11043> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima nadziranu pristupnicu za mjesto" .
+
+<http://www.registar.kam.hr/Elements/n/P11044> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima usvojenu pristupnicu za mjesto" .
+
+<http://www.registar.kam.hr/Elements/n/P11045> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima varijantnu pristupnicu za mjesto" .
+
+<http://www.registar.kam.hr/Elements/n/P11046> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima identifikator mjesta" .
+
+<http://www.registar.kam.hr/Elements/n/P11047> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima ime mjesta" .
+
+<http://www.registar.kam.hr/Elements/n/P11048> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima usvojeno ime mjesta" .
+
+<http://www.registar.kam.hr/Elements/n/P11049> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima varijantno ime mjesta" .
+
+<http://www.registar.kam.hr/Elements/n/P11050> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima dodatno obilježje mjesta" .
+
+<http://www.registar.kam.hr/Elements/n/P11051> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima napomenu o mjestu" .
+
+<http://www.registar.kam.hr/Elements/n/P11052> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima napomenu o odnosu mjesta i drugih jedinica opisa" .
+

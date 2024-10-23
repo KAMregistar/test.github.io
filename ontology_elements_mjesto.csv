@@ -1,0 +1,54 @@
+CURIE,Label,Domain,Definition,subPropertyOf,Range,inverseOf
+kamm:P11001,ima vrstu mjesta,kamm:C10011,"Povezuje mjesto s izrazom, nadzirani nazivom, kôdom ili drugom oznakom koja označava vrstu kojoj pripada mjesto s obzirom na svoja prirodna ili društvena obilježja.",kamjo:P10001,,
+kamm:P11002,ima geografski položaj mjesta,kamm:C10011,Povezuje mjesto s oznakom granicâ suvremenog ili povijesnog mjesta na Zemlji.,,,
+kamm:P11003,je mjesto povezano s jedinicom opisa,kamm:C10011,Povezuje mjesto s jedinicom opisa.,kamjo:P10003,kamjo:C10001,kamjo:P10013
+kamm:P11004,je mjesto povezano s djelom,kamm:C10011,Povezuje mjesto s djelom.,kamm:P11003,kamd:C10002,kamd:P20290
+kamm:P11005,je mjesto nastanka djela,kamm:C10011,Povezuje mjesto s djelom na kojemu je djelo nastalo.,kamm:P11004,kamd:C10002,kamd:P20291
+kamm:P11006,je mjesto predmet djela,kamm:C10011,"Povezuje mjesto s izrazom, nadziranim nazivom, imenom, naslovom, identifikatorom ili drugom nadziranom oznakom koja označava temu kojom se bavi ili koju prikazuje djelo.
+",kamm:P11004,kamd:C10002,kamd:P20321
+kamm:P11007,je pretpostavljeno mjesto nastanka djela,kamm:C10011,Povezuje mjesto s djelom za koje mjesto se opravdano pretpostavlja da je povezano s nastankom djela . ,kamm:P11004,kamd:C10002,kamd:P20293
+kamm:P11008,je navodno mjesto nastanka djela,kamm:C10011,Povezuje mjesto s djelom za koje se mjesto pogrešno ili neistinito navodi da je povezano s nastankom djela. ,kamm:P11004,kamd:C10002,kamd:P20292
+kamm:P11009,je mjesto povezano s izrazom,kamm:C10011,Povezuje mjesto s izrazom.,kamm:P11003,kami:C10003,kami:P30233
+kamm:P11010,je mjesto nastanka izraza,kamm:C10011,Povezuje mjesto s realizacijom određenog izraza djela.,kamm:P11009,kami:C10003,kami:P30234
+kamm:P11011,je mjesto povezano s pojavnim oblikom,kamm:C10011,Povezuje mjesto s pojavnim oblikom.,kamm:P11003,kampo:C10004,kampo:P40300
+kamm:P11012,je mjesto izdavanja pojavnog oblika,kamm:C10011,Povezuje mjesto s pojavnim oblikom na kojemu je pojavni oblik objavljen.,kamm:P11011,kampo:C10004,kampo:P40301
+kamm:P11013,je mjesto proizvodnje pojavnog oblika,kamm:C10011,Povezuje mjesto s pojavnim oblikom na kojemu je pojavni oblik proizveden.,kamm:P11011,kampo:C10004,kampo:P40302
+kamm:P11014,je mjesto raspačavanja pojavnog oblika,kamm:C10011,Povezuje mjesto s pojavnim oblikom na kojemu je pojavni oblik raspačavan.,kamm:P11011,kampo:C10004,kampo:P40303
+kamm:P11015,je mjesto tiskanja pojavnog oblika,kamm:C10011,Povezuje mjesto s pojavnim oblikom na kojemu je pojavni oblik tiskan.,kamm:P11011,kampo:C10004,kampo:P40304
+kamm:P11016,je mjesto povezano s primjerkom,kamm:C10011,Povezuje mjesto s primjerkom.,kamm:P11003,kamp:C10005,kamp:P50030
+kamm:P11017,je mjesto konzervacije ili restauracije primjerka,kamm:C10011,Povezuje mjesto s primjerkom nad kojim su izvedeni konzervatorski i/ili restauratorski postupci na tom mjestu.,kamm:P11016,kamp:C10005,kamp:P50125
+kamm:P11018,je mjesto izlaganja primjerka,kamm:C10011,Povezuje mjesto s primjerkom koji je na tom mjestu bio izlagan.,kamm:P11016,kamp:C10005,kamp:P50124
+kamm:P11019,je mjesto nabave primjerka,kamm:C10011,Povezuje mjesto s primjerkom koji je na tom mjestu nabavljen.,kamm:P11016,kamp:C10005,kamp:P50127
+kamm:P11020,je mjesto nalaska primjerka,kamm:C10011,Povezuje mjesto s primjerkom koji je na tom mjestu pronađen.,kamm:P11016,kamp:C10005,kamp:P50128
+kamm:P11021,je mjesto pohrane primjerka,kamm:C10011,Povezuje mjesto s primjerkom koji je na tom mjestu pohranjen.,kamm:P11016,kamp:C10005,kamp:P50129
+kamm:P11022,je mjesto korištenja primjerka,kamm:C10011,Povezuje mjesto s primjerkom koji je na tom mjestu korišten.,kamm:P11016,kamp:C10005,kamp:P50126
+kamm:P11023,je mjesto povezano s agentom,kamm:C10011,Povezuje mjesto s agentom.,kamm:P11003,kama:C10006,kama:P60010
+kamm:P11024,je mjesto povezano s osobom,kamm:C10011,Povezuje mjesto s osobom.,kamm:P11023,kamo:C10007,kamo:P70190
+kamm:P11025,je mjesto djelovanja osobe,kamm:C10011,Povezuje mjesto s osobom na kojem je mjestu osoba djelovala.,kamm:P11024,kamo:C10007,kamo:P70191
+kamm:P11026,je mjesto rođenja osobe,kamm:C10011,Povezuje mjesto s osobom na kojem je mjestu osoba rođena.,kamm:P11024,kamo:C10007,kamo:P70192
+kamm:P11027,je mjesto sahrane osobe,kamm:C10011,Povezuje mjesto s osobom na kojem je mjestu osoba sahranjena.,kamm:P11024,kamo:C10007,kamo:P70193
+kamm:P11028,je mjesto smrti osobe,kamm:C10011,Povezuje mjesto s osobom na kojem je mjestu osoba umrla.,kamm:P11024,kamo:C10007,kamo:P70194
+kamm:P11029,je mjesto u posjedu osobe,kamm:C10011,Povezuje mjesto s osobom u čijem je vlasništvu to mjesto.,kamm:P11024,kamo:C10007,kamo:P70195
+kamm:P11030,je mjesto povezano s kolektivnim agentom,kamm:C10011,Povezuje mjesto s kolektivnim agentom.,kamm:P11023,kamka:C10008,kamka:P80008
+kamm:P11031,je mjesto povezano s korporativnim tijelom,kamm:C10011,Povezuje mjesto s korporativnim tijelom.,kamm:P11030,kamkt:C10009,kamkt:P90182
+kamm:P11032,je mjesto u posjedu korporativnog tijela,kamm:C10011,Povezuje mjesto s korporativnim tijelom u čijem je vlasništvu to mjesto.,kamm:P11031,kamkt:C10009,kamkt:P90183
+kamm:P11033,je sjedište korporativnog tijela,kamm:C10011,Povezuje mjesto s korporativnim tijelom koje u tom mjestu ima sjedište.,kamm:P11031,kamkt:C10009,kamkt:P90184
+kamm:P11034,je upravno-teritorijalno područje korporativnog tijela,kamm:C10011,Povezuje mjesto s korporativnim tijelom koje je nadležno nad određenom upravno-teritorijalnom jedinicom.,kamm:P11031,kamkt:C10009,kamkt:P90185
+kamm:P11035,je mjesto povezano s obitelji,kamm:C10011,Povezuje mjesto s obitelji.,kamm:P11030,kamob:C10010,kamob:P10181
+kamm:P11036,je mjesto djelovanja obitelji,kamm:C10011,Povezuje mjesto s obitelji koja je s tim mjestom povezana privatnom i/ili profesionalnom poviješću.,kamm:P11035,kamob:C10010,kamob:P10182
+kamm:P11037,je mjesto u posjedu obitelji,kamm:C10011,Povezuje mjesto s obitelji čije je to mjesto vlasništvo.,kamm:P11035,kamob:C10010,kamob:P10183
+kamm:P11038,je mjesto povezano s mjestom,kamm:C10011,Povezuje mjesto s mjestom.,kamm:P11003,kamm:C10011,kamm:P11038
+kamm:P11039,je teritorijalna cjelina mjesta,kamm:C10011,Povezuje mjesto s mjestom koje obuhvaća. ,kamm:P11038,kamm:C10011,kamm:P11040
+kamm:P11040,je teritorijalni dio mjesta,kamm:C10011,Povezuje mjesto s mjestom kojemu je dio.,kamm:P11038,kamm:C10011,kamm:P11039
+kamm:P11041,ima nomen za mjesto,kamm:C10011,Povezuje mjesto s nomenom.,kamm:P11003,kamn:C10013,kamn:P13137
+kamm:P11042,ima oznaku za mjesto,kamm:C10011,"Povezuje mjesto s imenom, nazivom ili drugom oznakom pomoću koje se u informacijskom sustavu identificira mjesto i/ili pronalaze i okupljaju podaci o mjestu.",kamm:P11041,kamn:C10013,kamn:P13138
+kamm:P11043,ima nadziranu pristupnicu za mjesto,kamm:C10011,Povezuje mjesto s pristupnicom koja je preuzeta iz nadziranog rječnika ili oblikovana prema određenim pravilima.,kamm:P11042,kamn:C10013,kamn:P13139
+kamm:P11044,ima usvojenu pristupnicu za mjesto,kamm:C10011,"Povezuje mjesto s  riječi, izrazom ili skupom znakova koji unutar nekog sustava jednoznačno identificira mjesto i okuplja podatke o mjestu.",kamm:P11043,kamn:C10013,kamn:P13140
+kamm:P11045,ima varijantnu pristupnicu za mjesto,kamm:C10011,"Povezuje mjesto s riječi, izrekom ili skupom znakova koji imenuju mjesto unutar određenog sustava, a nisu odabrani za usvojenu pristupnicu.",kamm:P11043,kamn:C10013,kamn:P13141
+kamm:P11046,ima identifikator mjesta,kamm:C10011,Povezuje mjesto s brojčanom ili slovno-brojčanom oznakom koja unutar određenog sustava jednoznačno identificira mjesto.,kamm:P11042,kamn:C10013,kamn:P13142
+kamm:P11047,ima ime mjesta,kamm:C10011,"Povezuje mjesto s riječi, izrazom ili skupom znakova kojima se imenuje mjesto unutar određenog sustava. ",kamm:P11042,kamn:C10013,kamn:P13144
+kamm:P11048,ima usvojeno ime mjesta,kamm:C10011,"Povezuje mjesto s riječi, izrazom ili skupom znakova kojima se daje prednost u imenovanju mjesta unutar određenog sustava. ",kamm:P11047,kamn:C10013,kamn:P13144
+kamm:P11049,ima varijantno ime mjesta,kamm:C10011,"Povezuje mjesto s riječi, izrekom ili skupom znakova koji identificiraju mjesto unutar određenog sustava, a nisu odabrani za usvojeno ime mjesta.",kamm:P11047,kamn:C10013,kamn:P13146
+kamm:P11050,ima dodatno obilježje mjesta,kamm:C10011,"Povezuje mjesto s riječi, izrazom ili skupom znakova koji razlikuju mjesto od drugih mjesta ili drugih jedinica opisa istog imena.",,,
+kamm:P11051,ima napomenu o mjestu,kamm:C10011,"Povezuje mjesto s tekstom u kojemu se navode pojedinosti o mjestu koje se smatraju značajnima, a nisu iskazane u drugim elementima opisa.",kamjo:P10022,,
+kamm:P11052,ima napomenu o odnosu mjesta i drugih jedinica opisa,kamm:C10011,"Povezuje mjesto s tekstom  koji sadržava pojedinosti o odnosu između mjesta i drugog mjesta ili više drugih mjesta, odnosno mjesta i druge ili više drugih jedinica opisa.",kamm:P11051,,
