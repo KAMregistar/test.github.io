@@ -2,402 +2,402 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-<http://www.registar.kam.hr/Elements/n/P50001> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50001> rdf:type owl:ObjectProperty ;
   rdfs:label "ima identifikator primjerka" .
 
-<http://www.registar.kam.hr/Elements/n/P50002> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50002> rdf:type owl:ObjectProperty ;
   rdfs:label "ima usvojenu pristupnicu za primjerak" .
 
-<http://www.registar.kam.hr/Elements/n/P50003> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50003> rdf:type owl:ObjectProperty ;
   rdfs:label "ima napomenu o identifikaciji primjerka" .
 
-<http://www.registar.kam.hr/Elements/n/P50004> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50004> rdf:type owl:ObjectProperty ;
   rdfs:label "ima dostupnost primjerka" .
 
-<http://www.registar.kam.hr/Elements/n/P50005> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50005> rdf:type owl:ObjectProperty ;
   rdfs:label "ima izvorno okruženje" .
 
-<http://www.registar.kam.hr/Elements/n/P50006> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50006> rdf:type owl:ObjectProperty ;
   rdfs:label "ima dodane natpise i oznake" .
 
-<http://www.registar.kam.hr/Elements/n/P50007> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50007> rdf:type owl:ObjectProperty ;
   rdfs:label "ima napomenu o dodanim natpisima i oznakama" .
 
-<http://www.registar.kam.hr/Elements/n/P50008> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50008> rdf:type owl:ObjectProperty ;
   rdfs:label "ima izložbe" .
 
-<http://www.registar.kam.hr/Elements/n/P50009> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50009> rdf:type owl:ObjectProperty ;
   rdfs:label "ima način nabave" .
 
-<http://www.registar.kam.hr/Elements/n/P50010> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50010> rdf:type owl:ObjectProperty ;
   rdfs:label "ima napomenu o nabavi" .
 
-<http://www.registar.kam.hr/Elements/n/P50011> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50011> rdf:type owl:ObjectProperty ;
   rdfs:label "ima stanje primjerka" .
 
-<http://www.registar.kam.hr/Elements/n/P50012> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50012> rdf:type owl:ObjectProperty ;
   rdfs:label "ima konzervaciju i restauraciju" .
 
-<http://www.registar.kam.hr/Elements/n/P50013> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50013> rdf:type owl:ObjectProperty ;
   rdfs:label "ima povijest primjerka" .
 
-<http://www.registar.kam.hr/Elements/n/P50014> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50014> rdf:type owl:ObjectProperty ;
   rdfs:label "je primjerak povezan s jedinicom opisa" .
 
-<http://www.registar.kam.hr/Elements/n/P50016> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50016> rdf:type owl:ObjectProperty ;
   rdfs:label "je primjerak povezan s djelom" .
 
-<http://www.registar.kam.hr/Elements/n/P50017> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50017> rdf:type owl:ObjectProperty ;
   rdfs:label "je primjerak predmet djela" .
 
-<http://www.registar.kam.hr/Elements/n/P50018> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50018> rdf:type owl:ObjectProperty ;
   rdfs:label "je primjerak povezan s pojavnim oblikom" .
 
-<http://www.registar.kam.hr/Elements/n/P50019> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50019> rdf:type owl:ObjectProperty ;
   rdfs:label "oprimjeruje pojavni oblik" .
 
-<http://www.registar.kam.hr/Elements/n/P50020> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50020> rdf:type owl:ObjectProperty ;
   rdfs:label "ima reprodukciju pojavni oblik" .
 
-<http://www.registar.kam.hr/Elements/n/P50021> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50021> rdf:type owl:ObjectProperty ;
   rdfs:label "je primjerak povezan s primjerkom" .
 
-<http://www.registar.kam.hr/Elements/n/P50022> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50022> rdf:type owl:ObjectProperty ;
   rdfs:label "je primjerak združen s primjerkom" .
 
-<http://www.registar.kam.hr/Elements/n/P50023> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50023> rdf:type owl:ObjectProperty ;
   rdfs:label "je dopuna primjerku" .
 
-<http://www.registar.kam.hr/Elements/n/P50024> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50024> rdf:type owl:ObjectProperty ;
   rdfs:label "je dopuna primjerku" .
 
-<http://www.registar.kam.hr/Elements/n/P50025> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50025> rdf:type owl:ObjectProperty ;
   rdfs:label "je primjerak povezan s agentom" .
 
-<http://www.registar.kam.hr/Elements/n/P50026> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50026> rdf:type owl:ObjectProperty ;
   rdfs:label "je primjerak povezan s osobom" .
 
-<http://www.registar.kam.hr/Elements/n/P50027> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50027> rdf:type owl:ObjectProperty ;
   rdfs:label "je primjerak povezan s kolektivnim agentom" .
 
-<http://www.registar.kam.hr/Elements/n/P50028> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50028> rdf:type owl:ObjectProperty ;
   rdfs:label "je primjerak povezan s korporativnim tijelom" .
 
-<http://www.registar.kam.hr/Elements/n/P50029> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50029> rdf:type owl:ObjectProperty ;
   rdfs:label "je primjerak povezan s obitelji" .
 
-<http://www.registar.kam.hr/Elements/n/P50030> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50030> rdf:type owl:ObjectProperty ;
   rdfs:label "je primjerak povezan s mjestom" .
 
-<http://www.registar.kam.hr/Elements/n/P50031> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50031> rdf:type owl:ObjectProperty ;
   rdfs:label "je primjerak povezan s vremenskim rasponom" .
 
-<http://www.registar.kam.hr/Elements/n/P50033> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50033> rdf:type owl:ObjectProperty ;
   rdfs:label "ima agenta koji je preinačio primjerak" .
 
-<http://www.registar.kam.hr/Elements/n/P50034> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50034> rdf:type owl:ObjectProperty ;
   rdfs:label "ima osobu koja je preinačila primjerak" .
 
-<http://www.registar.kam.hr/Elements/n/P50035> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50035> rdf:type owl:ObjectProperty ;
   rdfs:label "ima kolektivni agent koji je preinačio primjerak" .
 
-<http://www.registar.kam.hr/Elements/n/P50036> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50036> rdf:type owl:ObjectProperty ;
   rdfs:label "ima korporativno tijelo koje je preinačilo primjerak" .
 
-<http://www.registar.kam.hr/Elements/n/P50037> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50037> rdf:type owl:ObjectProperty ;
   rdfs:label "ima obitelj koja je preinačila primjerak" .
 
-<http://www.registar.kam.hr/Elements/n/P50038> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50038> rdf:type owl:ObjectProperty ;
   rdfs:label "ima agenta anotatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50039> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50039> rdf:type owl:ObjectProperty ;
   rdfs:label "ima osobu anotatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50040> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50040> rdf:type owl:ObjectProperty ;
   rdfs:label "ima kolektivnog agenta anotatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50041> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50041> rdf:type owl:ObjectProperty ;
   rdfs:label "ima korporativno tijelo anotatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50042> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50042> rdf:type owl:ObjectProperty ;
   rdfs:label "ima obitelj anotatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50043> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50043> rdf:type owl:ObjectProperty ;
   rdfs:label "ima agenta iluminatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50044> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50044> rdf:type owl:ObjectProperty ;
   rdfs:label "ima osobu iluminatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50045> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50045> rdf:type owl:ObjectProperty ;
   rdfs:label "ima kolektivnog agenta iluminatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50046> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50046> rdf:type owl:ObjectProperty ;
   rdfs:label "ima korporativno tijelo iluminatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50047> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50047> rdf:type owl:ObjectProperty ;
   rdfs:label "ima obitelj iluminatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50048> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50048> rdf:type owl:ObjectProperty ;
   rdfs:label "ima agenta knjigovežu" .
 
-<http://www.registar.kam.hr/Elements/n/P50049> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50049> rdf:type owl:ObjectProperty ;
   rdfs:label "ima osobu knjigovežu" .
 
-<http://www.registar.kam.hr/Elements/n/P50050> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50050> rdf:type owl:ObjectProperty ;
   rdfs:label "ima kolektivnog agenta knjigovežu" .
 
-<http://www.registar.kam.hr/Elements/n/P50051> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50051> rdf:type owl:ObjectProperty ;
   rdfs:label "ima korporativno tijelo knjigovežu" .
 
-<http://www.registar.kam.hr/Elements/n/P50052> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50052> rdf:type owl:ObjectProperty ;
   rdfs:label "ima obitelj knjigovežu" .
 
-<http://www.registar.kam.hr/Elements/n/P50053> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50053> rdf:type owl:ObjectProperty ;
   rdfs:label "ima agenta preparatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50054> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50054> rdf:type owl:ObjectProperty ;
   rdfs:label "ima osobu preparatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50055> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50055> rdf:type owl:ObjectProperty ;
   rdfs:label "ima kolektivnog agenta preparatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50056> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50056> rdf:type owl:ObjectProperty ;
   rdfs:label "ima korporativno tijelo preparatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50057> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50057> rdf:type owl:ObjectProperty ;
   rdfs:label "ima obitelj preparatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50058> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50058> rdf:type owl:ObjectProperty ;
   rdfs:label "ima agenta restauratora" .
 
-<http://www.registar.kam.hr/Elements/n/P50059> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50059> rdf:type owl:ObjectProperty ;
   rdfs:label "ima osobu restauratora" .
 
-<http://www.registar.kam.hr/Elements/n/P50060> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50060> rdf:type owl:ObjectProperty ;
   rdfs:label "ima kolektivnog agenta restauratora" .
 
-<http://www.registar.kam.hr/Elements/n/P50061> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50061> rdf:type owl:ObjectProperty ;
   rdfs:label "ima korporativno tijelo restauratora" .
 
-<http://www.registar.kam.hr/Elements/n/P50062> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50062> rdf:type owl:ObjectProperty ;
   rdfs:label "ima obitelj restauratora" .
 
-<http://www.registar.kam.hr/Elements/n/P50063> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50063> rdf:type owl:ObjectProperty ;
   rdfs:label "ima agenta rubrikatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50064> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50064> rdf:type owl:ObjectProperty ;
   rdfs:label "ima osobu rubrikatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50065> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50065> rdf:type owl:ObjectProperty ;
   rdfs:label "ima kolektivnog agenta rubrikatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50066> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50066> rdf:type owl:ObjectProperty ;
   rdfs:label "ima korporativno tijelo rubrikatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50067> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50067> rdf:type owl:ObjectProperty ;
   rdfs:label "ima agenta koji je stručno obradio primjerak" .
 
-<http://www.registar.kam.hr/Elements/n/P50068> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50068> rdf:type owl:ObjectProperty ;
   rdfs:label "ima osobu koja je stručno obradila primjerak" .
 
-<http://www.registar.kam.hr/Elements/n/P50069> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50069> rdf:type owl:ObjectProperty ;
   rdfs:label "ima kolektivnog agenta koji je stručno obradio primjerak" .
 
-<http://www.registar.kam.hr/Elements/n/P50070> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50070> rdf:type owl:ObjectProperty ;
   rdfs:label "ima korporativno tijelo koje je stručno obradilo primjerak" .
 
-<http://www.registar.kam.hr/Elements/n/P50071> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50071> rdf:type owl:ObjectProperty ;
   rdfs:label "ima obitelj koja je stručno obradila primjerak" .
 
-<http://www.registar.kam.hr/Elements/n/P50072> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50072> rdf:type owl:ObjectProperty ;
   rdfs:label "ima agenta determinatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50073> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50073> rdf:type owl:ObjectProperty ;
   rdfs:label "ima osobu determinatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50074> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50074> rdf:type owl:ObjectProperty ;
   rdfs:label "ima kolektivnog agenta determinatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50075> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50075> rdf:type owl:ObjectProperty ;
   rdfs:label "ima korporativno tijelo determinatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50076> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50076> rdf:type owl:ObjectProperty ;
   rdfs:label "ima obitelj determinatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50077> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50077> rdf:type owl:ObjectProperty ;
   rdfs:label "ima agenta aukcionista" .
 
-<http://www.registar.kam.hr/Elements/n/P50078> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50078> rdf:type owl:ObjectProperty ;
   rdfs:label "ima osobu aukcionista" .
 
-<http://www.registar.kam.hr/Elements/n/P50079> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50079> rdf:type owl:ObjectProperty ;
   rdfs:label "ima kolektivnog agenta aukcionista" .
 
-<http://www.registar.kam.hr/Elements/n/P50080> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50080> rdf:type owl:ObjectProperty ;
   rdfs:label "ima korporativno tijelo aukcionista" .
 
-<http://www.registar.kam.hr/Elements/n/P50081> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50081> rdf:type owl:ObjectProperty ;
   rdfs:label "ima obitelj aukcionista" .
 
-<http://www.registar.kam.hr/Elements/n/P50082> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50082> rdf:type owl:ObjectProperty ;
   rdfs:label "ima agenta posjednika" .
 
-<http://www.registar.kam.hr/Elements/n/P50083> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50083> rdf:type owl:ObjectProperty ;
   rdfs:label "ima osobu posjednika" .
 
-<http://www.registar.kam.hr/Elements/n/P50084> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50084> rdf:type owl:ObjectProperty ;
   rdfs:label "ima kolektivnog agenta posjednika" .
 
-<http://www.registar.kam.hr/Elements/n/P50085> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50085> rdf:type owl:ObjectProperty ;
   rdfs:label "ima korporativno tijelo posjednika" .
 
-<http://www.registar.kam.hr/Elements/n/P50086> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50086> rdf:type owl:ObjectProperty ;
   rdfs:label "ima obitelj posjednika" .
 
-<http://www.registar.kam.hr/Elements/n/P50087> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50087> rdf:type owl:ObjectProperty ;
   rdfs:label "ima agenta vlasnika" .
 
-<http://www.registar.kam.hr/Elements/n/P50088> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50088> rdf:type owl:ObjectProperty ;
   rdfs:label "ima osobu vlasnika" .
 
-<http://www.registar.kam.hr/Elements/n/P50089> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50089> rdf:type owl:ObjectProperty ;
   rdfs:label "ima kolektivnog agenta vlasnika" .
 
-<http://www.registar.kam.hr/Elements/n/P50090> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50090> rdf:type owl:ObjectProperty ;
   rdfs:label "ima korporativno tijelo vlasnika" .
 
-<http://www.registar.kam.hr/Elements/n/P50091> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50091> rdf:type owl:ObjectProperty ;
   rdfs:label "ima obitelj vlasnika" .
 
-<http://www.registar.kam.hr/Elements/n/P50092> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50092> rdf:type owl:ObjectProperty ;
   rdfs:label "ima agenta darovatelja" .
 
-<http://www.registar.kam.hr/Elements/n/P50093> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50093> rdf:type owl:ObjectProperty ;
   rdfs:label "ima osobu darovatelja" .
 
-<http://www.registar.kam.hr/Elements/n/P50094> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50094> rdf:type owl:ObjectProperty ;
   rdfs:label "ima kolektivnog agenta darovatelja" .
 
-<http://www.registar.kam.hr/Elements/n/P50095> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50095> rdf:type owl:ObjectProperty ;
   rdfs:label "ima korporativno tijelo darovatelja" .
 
-<http://www.registar.kam.hr/Elements/n/P50096> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50096> rdf:type owl:ObjectProperty ;
   rdfs:label "ima obitelj darovatelja" .
 
-<http://www.registar.kam.hr/Elements/n/P50097> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50097> rdf:type owl:ObjectProperty ;
   rdfs:label "ima agenta deponenta" .
 
-<http://www.registar.kam.hr/Elements/n/P50098> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50098> rdf:type owl:ObjectProperty ;
   rdfs:label "ima osobu deponenta" .
 
-<http://www.registar.kam.hr/Elements/n/P50099> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50099> rdf:type owl:ObjectProperty ;
   rdfs:label "ima kolektivnog agenta deponenta" .
 
-<http://www.registar.kam.hr/Elements/n/P50100> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50100> rdf:type owl:ObjectProperty ;
   rdfs:label "ima korporativno tijelo deponenta" .
 
-<http://www.registar.kam.hr/Elements/n/P50101> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50101> rdf:type owl:ObjectProperty ;
   rdfs:label "ima obitelj deponenta" .
 
-<http://www.registar.kam.hr/Elements/n/P50102> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50102> rdf:type owl:ObjectProperty ;
   rdfs:label "ima agenta prodavatelja" .
 
-<http://www.registar.kam.hr/Elements/n/P50103> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50103> rdf:type owl:ObjectProperty ;
   rdfs:label "ima osobu prodavatelja" .
 
-<http://www.registar.kam.hr/Elements/n/P50104> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50104> rdf:type owl:ObjectProperty ;
   rdfs:label "ima kolektivnog agenta prodavatelja" .
 
-<http://www.registar.kam.hr/Elements/n/P50105> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50105> rdf:type owl:ObjectProperty ;
   rdfs:label "ima korporativno tijelo prodavatelja" .
 
-<http://www.registar.kam.hr/Elements/n/P50106> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50106> rdf:type owl:ObjectProperty ;
   rdfs:label "ima obitelj prodavatelja" .
 
-<http://www.registar.kam.hr/Elements/n/P50107> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50107> rdf:type owl:ObjectProperty ;
   rdfs:label "ima agenta procjenitelja" .
 
-<http://www.registar.kam.hr/Elements/n/P50108> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50108> rdf:type owl:ObjectProperty ;
   rdfs:label "ima osobu procjenitelja" .
 
-<http://www.registar.kam.hr/Elements/n/P50109> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50109> rdf:type owl:ObjectProperty ;
   rdfs:label "ima kolektivnog agenta procjenitelja" .
 
-<http://www.registar.kam.hr/Elements/n/P50110> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50110> rdf:type owl:ObjectProperty ;
   rdfs:label "ima korporativno tijelo procjenitelja" .
 
-<http://www.registar.kam.hr/Elements/n/P50111> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50111> rdf:type owl:ObjectProperty ;
   rdfs:label "ima obitelj procjenitelja" .
 
-<http://www.registar.kam.hr/Elements/n/P50112> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50112> rdf:type owl:ObjectProperty ;
   rdfs:label "ima agenta sakupljača" .
 
-<http://www.registar.kam.hr/Elements/n/P50113> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50113> rdf:type owl:ObjectProperty ;
   rdfs:label "ima osobu sakupljača" .
 
-<http://www.registar.kam.hr/Elements/n/P50114> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50114> rdf:type owl:ObjectProperty ;
   rdfs:label "ima kolektivnog agenta sakupljača" .
 
-<http://www.registar.kam.hr/Elements/n/P50115> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50115> rdf:type owl:ObjectProperty ;
   rdfs:label "ima korporativno tijelo sakupljača" .
 
-<http://www.registar.kam.hr/Elements/n/P50116> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50116> rdf:type owl:ObjectProperty ;
   rdfs:label "ima obitelj sakupljača" .
 
-<http://www.registar.kam.hr/Elements/n/P50117> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50117> rdf:type owl:ObjectProperty ;
   rdfs:label "je primjerak povezan s nomenom" .
 
-<http://www.registar.kam.hr/Elements/n/P50118> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50118> rdf:type owl:ObjectProperty ;
   rdfs:label "ima oznaku za primjerak" .
 
-<http://www.registar.kam.hr/Elements/n/P50119> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50119> rdf:type owl:ObjectProperty ;
   rdfs:label "ima nadziranu pristupnicu za primjerak" .
 
-<http://www.registar.kam.hr/Elements/n/P50120> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50120> rdf:type owl:ObjectProperty ;
   rdfs:label "ima varijantnu pristupnicu za primjerak" .
 
-<http://www.registar.kam.hr/Elements/n/P50121> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50121> rdf:type owl:ObjectProperty ;
   rdfs:label "ima obitelj rubrikatora" .
 
-<http://www.registar.kam.hr/Elements/n/P50122> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50122> rdf:type owl:ObjectProperty ;
   rdfs:label "ima napomenu o primjerku" .
 
-<http://www.registar.kam.hr/Elements/n/P50123> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50123> rdf:type owl:ObjectProperty ;
   rdfs:label "ima napomenu o odnosu primjerka i drugih jedinica opisa" .
 
-<http://www.registar.kam.hr/Elements/n/P50124> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50124> rdf:type owl:ObjectProperty ;
   rdfs:label "ima mjesto izlaganja" .
 
-<http://www.registar.kam.hr/Elements/n/P50125> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50125> rdf:type owl:ObjectProperty ;
   rdfs:label "ima mjesto konzervacije ili restauracijie" .
 
-<http://www.registar.kam.hr/Elements/n/P50126> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50126> rdf:type owl:ObjectProperty ;
   rdfs:label "ima mjesto korištenja" .
 
-<http://www.registar.kam.hr/Elements/n/P50127> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50127> rdf:type owl:ObjectProperty ;
   rdfs:label "ima mjesto nabave" .
 
-<http://www.registar.kam.hr/Elements/n/P50128> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50128> rdf:type owl:ObjectProperty ;
   rdfs:label "ima mjesto nalaza" .
 
-<http://www.registar.kam.hr/Elements/n/P50129> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50129> rdf:type owl:ObjectProperty ;
   rdfs:label "ima mjesto pohrane" .
 
-<http://www.registar.kam.hr/Elements/n/P50130> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50130> rdf:type owl:ObjectProperty ;
   rdfs:label "ima vrijeme konzervacije ili restauracije" .
 
-<http://www.registar.kam.hr/Elements/n/P50131> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50131> rdf:type owl:ObjectProperty ;
   rdfs:label "ima vrijeme korištenja" .
 
-<http://www.registar.kam.hr/Elements/n/P50132> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50132> rdf:type owl:ObjectProperty ;
   rdfs:label "ima vrijeme nabave" .
 
-<http://www.registar.kam.hr/Elements/n/P50133> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50133> rdf:type owl:ObjectProperty ;
   rdfs:label "ima vrijeme nalaza" .
 
-<http://www.registar.kam.hr/Elements/n/P50134> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50134> rdf:type owl:ObjectProperty ;
   rdfs:label "ima kategoriju primjerka" .
 
-<http://www.registar.kam.hr/Elements/n/P50135> rdf:type owl:ObjectProperty ;
+<http://www.registar.kam.hr/Elements/po/P50135> rdf:type owl:ObjectProperty ;
   rdfs:label "je primjerak združen s primjerkom" .
 
