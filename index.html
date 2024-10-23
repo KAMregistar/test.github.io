@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KAM Ontology Viewer</title>
+    <title>Ontologija KAM</title>
     <!-- Google Fonts import for Poppins and Rubik -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Rubik:wght@300&display=swap" rel="stylesheet">
     <!-- Include DataTables CSS and JS -->
@@ -276,7 +276,7 @@ function populatePrefiksi(data) {
 }
 
 // Fetch JSON-LD data and initialize the menu
-fetch('KAMOntologija_v8.jsonld')  // Replace with your JSON-LD file path
+fetch('KAMOntologija_v9.jsonld')  // Replace with your JSON-LD file path
     .then(response => {
         if (!response.ok) throw new Error('Network response was not ok');
         return response.json();
