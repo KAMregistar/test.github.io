@@ -1,0 +1,130 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<http://www.registar.kam.hr/Elements/n/P12001> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima vrstu vremenskog raspona" .
+
+<http://www.registar.kam.hr/Elements/n/P12002> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima vremenski raspon povezan s jedinicom opisa" .
+
+<http://www.registar.kam.hr/Elements/n/P12003> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vremenski raspon povezan s djelom" .
+
+<http://www.registar.kam.hr/Elements/n/P12004> rdf:type owl:ObjectProperty ;
+  rdfs:label "je navodno vrijeme nastanka djela" .
+
+<http://www.registar.kam.hr/Elements/n/P12005> rdf:type owl:ObjectProperty ;
+  rdfs:label "je pretpostavljeno vrijeme nastanka djela" .
+
+<http://www.registar.kam.hr/Elements/n/P12006> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vrijeme nastanka djela" .
+
+<http://www.registar.kam.hr/Elements/n/P12007> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vremenski raspon povezan s izrazom" .
+
+<http://www.registar.kam.hr/Elements/n/P12008> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vrijeme nastanka izraza" .
+
+<http://www.registar.kam.hr/Elements/n/P12009> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vremenski raspon povezan s pojavnim oblikom" .
+
+<http://www.registar.kam.hr/Elements/n/P12010> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vrijeme izdavanja pojavnog oblika" .
+
+<http://www.registar.kam.hr/Elements/n/P12011> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vrijeme proizvodnje pojavnog oblika" .
+
+<http://www.registar.kam.hr/Elements/n/P12012> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vrijeme tiskanja pojavnog oblika" .
+
+<http://www.registar.kam.hr/Elements/n/P12013> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vremenski raspon povezan s primjerkom" .
+
+<http://www.registar.kam.hr/Elements/n/P12014> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vrijeme konzervacije ili restauracije primjerka" .
+
+<http://www.registar.kam.hr/Elements/n/P12015> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vrijeme nabave primjerka" .
+
+<http://www.registar.kam.hr/Elements/n/P12016> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vrijeme nalaska primjerka" .
+
+<http://www.registar.kam.hr/Elements/n/P12017> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vremenski raspon povezan s agentom" .
+
+<http://www.registar.kam.hr/Elements/n/P12018> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vremenski raspon povezan s osobom" .
+
+<http://www.registar.kam.hr/Elements/n/P12019> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vrijeme djelovanja osobe" .
+
+<http://www.registar.kam.hr/Elements/n/P12020> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vrijeme obnašanja dužnosti ili položaja osobe" .
+
+<http://www.registar.kam.hr/Elements/n/P12021> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vrijeme rođenja osobe" .
+
+<http://www.registar.kam.hr/Elements/n/P12022> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vrijeme smrti osobe" .
+
+<http://www.registar.kam.hr/Elements/n/P12023> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vremenski raspon povezan s kolektivnim agentom" .
+
+<http://www.registar.kam.hr/Elements/n/P12024> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vremenski raspon povezan s korporativnim tijelom" .
+
+<http://www.registar.kam.hr/Elements/n/P12025> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vrijeme djelovanja korporativnog tijela" .
+
+<http://www.registar.kam.hr/Elements/n/P12026> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vrijeme osnutka korporativnog tijela" .
+
+<http://www.registar.kam.hr/Elements/n/P12027> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vrijeme završetka djelovanja korporativnog tijela" .
+
+<http://www.registar.kam.hr/Elements/n/P12028> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vremenski raspon povezan s obitelji" .
+
+<http://www.registar.kam.hr/Elements/n/P12029> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vrijeme djelovanja obitelji" .
+
+<http://www.registar.kam.hr/Elements/n/P12030> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vremenski raspon povezan s vremenskim rasponom" .
+
+<http://www.registar.kam.hr/Elements/n/P12031> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vremenska cjelina vremenskog raspona" .
+
+<http://www.registar.kam.hr/Elements/n/P12032> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vremenski dio vremenskog raspona" .
+
+<http://www.registar.kam.hr/Elements/n/P12033> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vremenski raspon predmet djela" .
+
+<http://www.registar.kam.hr/Elements/n/P12034> rdf:type owl:ObjectProperty ;
+  rdfs:label "je vrijeme korištenja primjerka" .
+
+<http://www.registar.kam.hr/Elements/n/P12035> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima nomen za vremenski raspon" .
+
+<http://www.registar.kam.hr/Elements/n/P12036> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima oznaku za vremenski raspon" .
+
+<http://www.registar.kam.hr/Elements/n/P12037> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima nadziranu pristupnicu za vremenski raspon" .
+
+<http://www.registar.kam.hr/Elements/n/P12038> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima usvojenu pristupnicu za vremenski raspon" .
+
+<http://www.registar.kam.hr/Elements/n/P12039> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima varijantnu pristupnicu za vremenski raspon" .
+
+<http://www.registar.kam.hr/Elements/n/P12040> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima identifikator za vremenski raspon" .
+
+<http://www.registar.kam.hr/Elements/n/P12041> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima napomenu o vremenskom rasponu" .
+
+<http://www.registar.kam.hr/Elements/n/P12042> rdf:type owl:ObjectProperty ;
+  rdfs:label "ima napomenu o odnosu vremenskog raspona i drugih jedinica opisa" .
+

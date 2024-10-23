@@ -23,6 +23,11 @@
             {
                 "@value": "ima kategoriju nomena"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P10001"
+            }
         ]
     },
     {
@@ -257,6 +262,21 @@
             {
                 "@value": "je nomen povezan s jedinicom opisa"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P10003"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10001"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P10015"
+            }
         ]
     },
     {
@@ -282,6 +302,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je oznaka za jedinicu opisa"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10001"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P10016"
             }
         ]
     },
@@ -309,6 +344,21 @@
             {
                 "@value": "je nadzirana pristupnicua za jedinicu opisa"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13011"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10001"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P10017"
+            }
         ]
     },
     {
@@ -334,6 +384,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je usvojena pristupnica za jedinicu opisa"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13012"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10001"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P10018"
             }
         ]
     },
@@ -361,6 +426,21 @@
             {
                 "@value": "je varijantna pristupnica za jedinicu opisa"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13012"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10001"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P10019"
+            }
         ]
     },
     {
@@ -386,6 +466,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je identifikator za jedinicu opisa"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13011"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10001"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P10020"
             }
         ]
     },
@@ -413,6 +508,11 @@
             {
                 "@value": "ima napomenu o nomenu"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P10022"
+            }
         ]
     },
     {
@@ -438,6 +538,11 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "ima napomenu o identifikaciji jedinice opisa"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13016"
             }
         ]
     },
@@ -465,6 +570,11 @@
             {
                 "@value": "ima napomenu o odnosu nomena i drugih jedinica opisa"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13016"
+            }
         ]
     },
     {
@@ -490,6 +600,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je nomen povezan s djelom"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10002"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P20298"
             }
         ]
     },
@@ -517,6 +642,21 @@
             {
                 "@value": "je oznaka za djelo"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13019"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10002"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P20299"
+            }
         ]
     },
     {
@@ -542,6 +682,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je nadzirana pristupnica za djelo"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13020"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10002"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P20300"
             }
         ]
     },
@@ -569,6 +724,21 @@
             {
                 "@value": "je usvojena pristupnica za djelo"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13021"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10002"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P20301"
+            }
         ]
     },
     {
@@ -594,6 +764,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je varijantna pristupnica za djelo"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13021"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10002"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P20302"
             }
         ]
     },
@@ -621,6 +806,21 @@
             {
                 "@value": "je naslov djela"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13020"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10002"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P20303"
+            }
         ]
     },
     {
@@ -646,6 +846,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je usvojeni naslov djela"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13024"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10002"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P20304"
             }
         ]
     },
@@ -698,6 +913,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je varijantni naslov djela"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13024"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10002"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P20305"
             }
         ]
     },
@@ -777,6 +1007,21 @@
             {
                 "@value": "je ključni naslov"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13020"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10002"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P20308"
+            }
         ]
     },
     {
@@ -802,6 +1047,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je identifikator djela"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13020"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10002"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P20309"
             }
         ]
     },
@@ -855,6 +1115,11 @@
             {
                 "@value": "ima napomenu o nomenu djela"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13016"
+            }
         ]
     },
     {
@@ -880,6 +1145,11 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "ima napomenu o identifikaciji djela"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13033"
             }
         ]
     },
@@ -907,6 +1177,11 @@
             {
                 "@value": "ima napomenu o odnosu nomena i djela"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13033"
+            }
         ]
     },
     {
@@ -932,6 +1207,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je nomen povezan s izrazom"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10003"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P30237"
             }
         ]
     },
@@ -959,6 +1249,21 @@
             {
                 "@value": "je oznaka za izraz"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13036"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10003"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P30238"
+            }
         ]
     },
     {
@@ -984,6 +1289,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je nadzirana pristupnica za izraz"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13037"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10003"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P30239"
             }
         ]
     },
@@ -1011,6 +1331,21 @@
             {
                 "@value": "je usvojena pristupnica za izraz"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13038"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10003"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P30240"
+            }
         ]
     },
     {
@@ -1036,6 +1371,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je varijantna pristupnica za izraz"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13038"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10003"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P30240"
             }
         ]
     },
@@ -1089,6 +1439,21 @@
             {
                 "@value": "je identifikator izraza"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13037"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10003"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P30243"
+            }
         ]
     },
     {
@@ -1114,6 +1479,11 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "ima napomenu o nomenu izraza"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13016"
             }
         ]
     },
@@ -1141,6 +1511,11 @@
             {
                 "@value": "ima napomenu o identifikaciji izraza"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13043"
+            }
         ]
     },
     {
@@ -1166,6 +1541,11 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "ima napomenu o odnosu nomena i izraza"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13043"
             }
         ]
     },
@@ -1193,6 +1573,21 @@
             {
                 "@value": "je nomen povezan s pojavnim oblikom"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10004"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P40309"
+            }
         ]
     },
     {
@@ -1218,6 +1613,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je oznaka za pojavni oblik"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13046"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10004"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P40310"
             }
         ]
     },
@@ -1245,6 +1655,21 @@
             {
                 "@value": "je nadzirana pristupnica za pojavni oblik"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13047"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10004"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P40311"
+            }
         ]
     },
     {
@@ -1270,6 +1695,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je usvojena pristupnica za pojavni oblik"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13048"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10004"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P40312"
             }
         ]
     },
@@ -1297,6 +1737,21 @@
             {
                 "@value": "je varijantna pristupnica za pojavni oblik"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13048"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10004"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P40313"
+            }
         ]
     },
     {
@@ -1322,6 +1777,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je naslov pojavnog oblika"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13047"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10004"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P40314"
             }
         ]
     },
@@ -1349,6 +1819,21 @@
             {
                 "@value": "je usvojeni naslov pojavnog oblika"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13051"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10004"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P40315"
+            }
         ]
     },
     {
@@ -1374,6 +1859,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je varijantni naslov pojavnog oblika"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13051"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10004"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P40316"
             }
         ]
     },
@@ -1453,6 +1953,21 @@
             {
                 "@value": "je identifikator pojavnog oblika"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13047"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10004"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P40319"
+            }
         ]
     },
     {
@@ -1478,6 +1993,11 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "ima napomenu o nomenu pojavnog oblika"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13016"
             }
         ]
     },
@@ -1505,6 +2025,11 @@
             {
                 "@value": "ima napomenu o identifikaciji pojavnog oblika"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13057"
+            }
         ]
     },
     {
@@ -1530,6 +2055,11 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "ima napomenu o odnosu nomena i pojavnog oblika"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13057"
             }
         ]
     },
@@ -1557,6 +2087,21 @@
             {
                 "@value": "je nomen povezan s primjerkom"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10005"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P50117"
+            }
         ]
     },
     {
@@ -1582,6 +2127,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je oznaka za primjerak"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13060"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10005"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P50118"
             }
         ]
     },
@@ -1609,6 +2169,21 @@
             {
                 "@value": "je nadzirana pristupnica za primjerak"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13061"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10005"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P50119"
+            }
         ]
     },
     {
@@ -1634,6 +2209,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je usvojena pristupnica za primjerak"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13062"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10005"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P50002"
             }
         ]
     },
@@ -1661,6 +2251,21 @@
             {
                 "@value": "je varijantna pristupnica za primjerak"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13062"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10005"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P50120"
+            }
         ]
     },
     {
@@ -1686,6 +2291,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je identifikator primjerka"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13061"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10005"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P50001"
             }
         ]
     },
@@ -1739,6 +2359,11 @@
             {
                 "@value": "ima napomenu o nomenu primjerka"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13016"
+            }
         ]
     },
     {
@@ -1764,6 +2389,11 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "ima napomenu o identifikaciji identifikaciji"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13067"
             }
         ]
     },
@@ -1791,6 +2421,11 @@
             {
                 "@value": "ima napomenu o odnosu nomena i primjerka"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13067"
+            }
         ]
     },
     {
@@ -1816,6 +2451,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je nomen povezan s agentom"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10006"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P60183"
             }
         ]
     },
@@ -1843,6 +2493,21 @@
             {
                 "@value": "je oznaka za agenta"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13070"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10006"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P60184"
+            }
         ]
     },
     {
@@ -1868,6 +2533,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je nadzirana pristupnica za agenta"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13071"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10006"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P60185"
             }
         ]
     },
@@ -1895,6 +2575,21 @@
             {
                 "@value": "je usvojena pristupnica za agenta"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13072"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10006"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P60186"
+            }
         ]
     },
     {
@@ -1920,6 +2615,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je varijantna pristupnica za agenta"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13072"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10006"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P60187"
             }
         ]
     },
@@ -1973,6 +2683,21 @@
             {
                 "@value": "je identifikator agenta"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13071"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10006"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P60189"
+            }
         ]
     },
     {
@@ -1998,6 +2723,11 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "ima napomenu o nomenu agenta"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13016"
             }
         ]
     },
@@ -2025,6 +2755,11 @@
             {
                 "@value": "ima napomenu o identifikaciji agenta"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13077"
+            }
         ]
     },
     {
@@ -2050,6 +2785,11 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "ima napomenu o odnosu nomena i agenta"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13077"
             }
         ]
     },
@@ -2077,6 +2817,21 @@
             {
                 "@value": "je nomen povezan s osobom"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10007"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P70002"
+            }
         ]
     },
     {
@@ -2102,6 +2857,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je oznaka za osobu"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13080"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10007"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P70003"
             }
         ]
     },
@@ -2129,6 +2899,21 @@
             {
                 "@value": "je identifikator osobe"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13081"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10007"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P70004"
+            }
         ]
     },
     {
@@ -2154,6 +2939,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je nadzirana pristupnica za osobu"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13081"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10007"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P70005"
             }
         ]
     },
@@ -2181,6 +2981,21 @@
             {
                 "@value": "je usvojena pristupnica za osobu"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13083"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10007"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P70006"
+            }
         ]
     },
     {
@@ -2206,6 +3021,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je varijantna pristupnica za osobu"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13083"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10007"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P70007"
             }
         ]
     },
@@ -2233,6 +3063,21 @@
             {
                 "@value": "je ime osobe"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13081"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10007"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P70008"
+            }
         ]
     },
     {
@@ -2258,6 +3103,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je usvojeno ime osobe"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13086"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10007"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P70009"
             }
         ]
     },
@@ -2310,6 +3170,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je varijantno ime osobe"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13086"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10007"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P70010"
             }
         ]
     },
@@ -2415,6 +3290,11 @@
             {
                 "@value": "ima napomenu o nomenu osobe"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13016"
+            }
         ]
     },
     {
@@ -2440,6 +3320,11 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "ima napomenu o identifikaciji osobe"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13093"
             }
         ]
     },
@@ -2467,6 +3352,11 @@
             {
                 "@value": "ima napomenu o odnosu nomena i osobe"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13093"
+            }
         ]
     },
     {
@@ -2492,6 +3382,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je nomen koji je dodijelio kolektivni agent"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13097"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10008"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P80184"
             }
         ]
     },
@@ -2519,6 +3424,21 @@
             {
                 "@value": "je nomen povezan s kolektivnim agentom"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10008"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P80007"
+            }
         ]
     },
     {
@@ -2544,6 +3464,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je oznaka za kolektivnog agenta"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13097"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10008"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P80185"
             }
         ]
     },
@@ -2571,6 +3506,21 @@
             {
                 "@value": "je nadzirana pristupnica za kolektivnog agenta"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13098"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10008"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P80186"
+            }
         ]
     },
     {
@@ -2597,6 +3547,21 @@
             {
                 "@value": "je usvojena pristupnica za kolektivnog agenta"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13099"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10008"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P80187"
+            }
         ]
     },
     {
@@ -2622,6 +3587,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je varijantna pristupnica za kolektivnog agenta"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13099"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10008"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P80188"
             }
         ]
     },
@@ -2675,6 +3655,21 @@
             {
                 "@value": "je identifikator kolektivnog agenta"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13098"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10008"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P80190"
+            }
         ]
     },
     {
@@ -2700,6 +3695,11 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "ima napomenu o nomenu kolektivnog agenta"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13016"
             }
         ]
     },
@@ -2727,6 +3727,11 @@
             {
                 "@value": "ima napomenu o identifikaciji kolektivnog agenta"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13104"
+            }
         ]
     },
     {
@@ -2752,6 +3757,11 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "ima napomenu o odnosu nomena i kolektivnog agenta"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13104"
             }
         ]
     },
@@ -2779,6 +3789,21 @@
             {
                 "@value": "je nomen povezan s korporativnim tijelom"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10009"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P90210"
+            }
         ]
     },
     {
@@ -2804,6 +3829,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je oznaka za korporativno tijelo"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13107"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10009"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P90211"
             }
         ]
     },
@@ -2831,6 +3871,21 @@
             {
                 "@value": "je nadzirana pristupnica za korporativno tijelo"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13108"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10009"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P90212"
+            }
         ]
     },
     {
@@ -2856,6 +3911,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je usvojena pristupnica za korporativno tijelo"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13109"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10009"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P90213"
             }
         ]
     },
@@ -2883,6 +3953,21 @@
             {
                 "@value": "je varijantna pristupnica za korporativno tijelo"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13109"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10009"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P90214"
+            }
         ]
     },
     {
@@ -2909,6 +3994,21 @@
             {
                 "@value": "je ime korporativnog tijela"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13108"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10009"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P90215"
+            }
         ]
     },
     {
@@ -2934,6 +4034,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je usvojeno ime korporativnog tijela"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13112"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10009"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P90216"
             }
         ]
     },
@@ -2986,6 +4101,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je varijantno ime korporativnog tijela"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13112"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10009"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P90217"
             }
         ]
     },
@@ -3065,6 +4195,21 @@
             {
                 "@value": "je identifikator korporativnog tijela"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13108"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10009"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P90219"
+            }
         ]
     },
     {
@@ -3090,6 +4235,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je nomen koji je dodijelilo korporativno tijelo"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13107"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10009"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P90220"
             }
         ]
     },
@@ -3117,6 +4277,11 @@
             {
                 "@value": "ima napomenu o nomenu korporativnom tijelu"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13016"
+            }
         ]
     },
     {
@@ -3142,6 +4307,11 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "ima napomenu o identifikaciji korporativnog tijela"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13120"
             }
         ]
     },
@@ -3169,6 +4339,11 @@
             {
                 "@value": "ima napomenu o odnosu nomena i korporativnog tijela"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13120"
+            }
         ]
     },
     {
@@ -3194,6 +4369,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je nomen povezan s obitelji"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10010"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P10196"
             }
         ]
     },
@@ -3221,6 +4411,21 @@
             {
                 "@value": "je oznaka za obitelj"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13123"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10010"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P10197"
+            }
         ]
     },
     {
@@ -3246,6 +4451,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je nadzirana pristupnica za obitelj"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13124"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10010"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P10198"
             }
         ]
     },
@@ -3273,6 +4493,21 @@
             {
                 "@value": "je usvojena pristupnica za obitelj"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13125"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10010"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P10199"
+            }
         ]
     },
     {
@@ -3298,6 +4533,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je varijantna pristupnica za obitelj"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13125"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10010"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P10200"
             }
         ]
     },
@@ -3325,6 +4575,21 @@
             {
                 "@value": "je ime obitelji"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13124"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10010"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P10201"
+            }
         ]
     },
     {
@@ -3350,6 +4615,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je usvojeno ime obitelji"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13128"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10010"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P10202"
             }
         ]
     },
@@ -3403,6 +4683,21 @@
             {
                 "@value": "je varijantno ime obitelji"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13128"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10010"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P10203"
+            }
         ]
     },
     {
@@ -3455,6 +4750,21 @@
             {
                 "@value": "je identifikator obitelji"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13124"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10010"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P10205"
+            }
         ]
     },
     {
@@ -3480,6 +4790,11 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "ima napomenu o nomenu obitelji"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13016"
             }
         ]
     },
@@ -3507,6 +4822,11 @@
             {
                 "@value": "ima napomenu o identifikaciji obitelji"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13134"
+            }
         ]
     },
     {
@@ -3532,6 +4852,11 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "ima napomenu o odnosu nomena i obitelji"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13134"
             }
         ]
     },
@@ -3559,6 +4884,21 @@
             {
                 "@value": "je nomen za mjesto"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10011"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P11041"
+            }
         ]
     },
     {
@@ -3584,6 +4924,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je oznaka za mjesto"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13137"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10011"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P11042"
             }
         ]
     },
@@ -3611,6 +4966,21 @@
             {
                 "@value": "je nadzirana pristupnica za mjesto"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13138"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10011"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P11043"
+            }
         ]
     },
     {
@@ -3636,6 +5006,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je usvojena pristupnica za mjesto"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13139"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10011"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P11044"
             }
         ]
     },
@@ -3663,6 +5048,21 @@
             {
                 "@value": "je varijantna pristupnica za mjesto"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13139"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10011"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P11045"
+            }
         ]
     },
     {
@@ -3688,6 +5088,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je identifikator mjesta"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13138"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10011"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P11046"
             }
         ]
     },
@@ -3715,6 +5130,21 @@
             {
                 "@value": "je ime mjesta"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13138"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10011"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P11047"
+            }
         ]
     },
     {
@@ -3740,6 +5170,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je usvojeno ime mjesta"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13139"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10011"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P11048"
             }
         ]
     },
@@ -3792,6 +5237,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je varijantno ime mjesta"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13139"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10011"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P11049"
             }
         ]
     },
@@ -3871,6 +5331,11 @@
             {
                 "@value": "ima napomenu o nomenu mjesta"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13016"
+            }
         ]
     },
     {
@@ -3896,6 +5361,11 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "ima napomenu o identifikaciji mjesta"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13149"
             }
         ]
     },
@@ -3923,6 +5393,11 @@
             {
                 "@value": "ima napomenu o odnosu nomena i mjesta"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13149"
+            }
         ]
     },
     {
@@ -3948,6 +5423,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je nomen za vremenski raspon"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13010"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10012"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P12035"
             }
         ]
     },
@@ -3975,6 +5465,21 @@
             {
                 "@value": "je oznaka za vremenski raspon"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13152"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10012"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P12036"
+            }
         ]
     },
     {
@@ -4000,6 +5505,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je nadzirana pristupnica za vremenski raspon"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13153"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10012"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P12037"
             }
         ]
     },
@@ -4027,6 +5547,21 @@
             {
                 "@value": "je usvojena pristupnica za vremenski raspon"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13154"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10012"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P12038"
+            }
         ]
     },
     {
@@ -4052,6 +5587,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je varijantna pristupnica za vremenski raspon"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13154"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10012"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P12039"
             }
         ]
     },
@@ -4079,6 +5629,21 @@
             {
                 "@value": "je identifikator za vremenski raspon"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13153"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10012"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P12040"
+            }
         ]
     },
     {
@@ -4104,6 +5669,11 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "ima napomenu o nomenu vremenskog raspona"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13016"
             }
         ]
     },
@@ -4131,6 +5701,11 @@
             {
                 "@value": "ima napomenu o identifikaciji vremenskog raspona"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13158"
+            }
         ]
     },
     {
@@ -4156,6 +5731,11 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "ima napomenu o odnosu nomena i vremenskog raspona"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13158"
             }
         ]
     },
@@ -4183,6 +5763,21 @@
             {
                 "@value": "je ime agenta"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13071"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10006"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P60192"
+            }
         ]
     },
     {
@@ -4208,6 +5803,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je usvojeno ime agenta"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13161"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10006"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P60193"
             }
         ]
     },
@@ -4235,6 +5845,21 @@
             {
                 "@value": "je varijantno ime agenta"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13161"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10006"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P60194"
+            }
         ]
     },
     {
@@ -4260,6 +5885,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je ime kolektivnog agenta"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13098"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10008"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P80195"
             }
         ]
     },
@@ -4287,6 +5927,21 @@
             {
                 "@value": "je usvojeno ime kolektivnog agenta"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13164"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10008"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P80196"
+            }
         ]
     },
     {
@@ -4312,6 +5967,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je varijantno ime kolektivnog agenta"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13164"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10008"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P80197"
             }
         ]
     },
@@ -4442,6 +6112,21 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "je nomen predmet djela"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P13019"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#range": [
+            {
+                "@id": "http://www.registar.kam.hr/Element/C10002"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#inverseOf": [
+            {
+                "@id": "http://www.registar.kam.hr/Elements/P20324"
             }
         ]
     }
