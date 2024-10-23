@@ -1,0 +1,171 @@
+CURIE,Label,Domain,Definition,subPropertyOf,Range,inverseOf
+kamob:P10001,ima vrstu obitelji,kamob:C10010,"Povezuje obitelj s izrazom, nadziranim nazivom, kôdom ili drugom oznakom koja označava vrstu kojoj pripada obitelj.",kamka:P80001,,
+kamob:P10002,ima funkciju ili djelatnost obitelji,kamob:C10010,"Povezuje obitelj s izrazom, nadziranim nazivom, identifikatorom ili drugom oznakom za područje ljudskog znanja ili aktivnosti kojim se obitelj bavi i/ili unutar kojega obnaša određenu funkciju.",,,
+kamob:P10003,ima napomenu o funkciji ili djelatnosti obitelji,kamob:C10010,"Povezuje obitelj s kratkim nestrukturiranim tekstom u kojemu se navode objašnjenja i druge pojedinosti o funkciji koju obitelj obavlja ili je obavljala, odnosno području ljudskog znanja ili aktivnosti kojim se bavi(la).",kamob:P10008,,
+kamob:P10005,ima genealogiju obitelji,kamob:C10010,"Povezuje obitelj s strukturiranim ili nestrukturiranim tekstom u kojemu se objašnjava porijeklo, razvoj i grananje obitelji.",,,
+kamob:P10006,ima jezik obitelji,kamob:C10010,"Povezuje obitelj s izrazom, nadziranim nazivom, kôdom, identifikatorom ili drugom oznakom koja označava jezik kojim se obitelj služi(la) u svom javnom djelovanju.",,,
+kamob:P10007,ima povijest obitelji,kamob:C10010,Povezuje obitelj s kratakim nestrukturiranim tekstom koji opisuje najznačajnije događaje vezane uz djelovanje obitelji. ,,,
+kamob:P10008,ima napomenu o obitelji,kamob:C10010,"Povezuje obitelji s kratakim nestrukturiranim tekstom koji sadržava pojedinosti o obitelji koje se smatraju značajnima, a nisu iskazane u drugim elementima opisa.",kamjo:P10022,,
+kamob:P10009,je obitelj povezana s jedinicom opisa,kamob:C10010,Povezuje obitelj s jedinicom opisa.,kamka:P80002,kamjo:C10001,kamjo:P10012
+kamob:P10010,je obitelj povezana s djelom,kamob:C10010,Povezuje obitelj s djelom.,kamob:P10009,kamd:C10002,kamd:P20039
+kamob:P10011,je obitelj povezana s izrazom,kamob:C10010,Povezuje obitelj s izrazom.,kamob:P10009,kami:C10003,kami:P30036
+kamob:P10012,je obitelj povezana s pojavnim oblikom,kamob:C10010,Povezuje obitelj s pojavnim oblikom.,kamob:P10009,kampo:C10004,kampo:P40099
+kamob:P10013,je obitelj povezana s primjerkom,kamob:C10010,Povezuje obitelj s primjerkom.,kamob:P10009,kamp:C10005,kamp:P50029
+kamob:P10014,je obitelj čije ovlasti proizlaze iz djela,kamob:C10010,"Povezuje obitelj čije se ovlasti, funkcije i odgovornosti temelje na djelu s tim djelom.",kamob:P10010,kamd:C10002,kamd:P20044
+kamob:P10015,je obitelj navodni stvaratelj djela,kamob:C10010,"Povezuje obitelj čija je stvaralačka uloga u nastanku djela pogrešna, lažna ili izmišljena s tim djelom.",kamob:P10010,kamd:C10002,kamd:P20049
+kamob:P10016,je obitelj nositelj prava intelektualnog vlasništva djela,kamob:C10010,"Povezuje obitelj koja nad djelom uživa imovinska autorska prava ili pravo industrijskog vlasništva (patent, oznaka izvornosti itd.) s tim djelom.",kamob:P10010,kamd:C10002,kamd:P20054
+kamob:P10017,je obitelj pretpostavljeni stvaratelj djela,kamob:C10010,"Povezuje obitelj koju se opravdano smatra stvarateljem djela, ali njena stvaralačka uloga nije pouzdano utvrđena ili dokazana s tim djelom.",kamob:P10010,kamd:C10002,kamd:P20059
+kamob:P10018,je obitelj stvaratelj djela,kamob:C10010,Povezuje obitelj s djelom kojega je stvorila.,kamob:P10010,kamd:C10002,kamd:P20064
+kamob:P10019,je obitelj koja daje intervju,kamob:C10010,Povezuje obitelj koja u pisanom ili usmenom obliku odgovara na pitanja koja mu postavlja voditelj intervjua s tim djelom.,kamob:P10018,kamd:C10002,kamd:P20069
+kamob:P10020,je arhitekt,kamob:C10010,"Povezuje obitelj odgovornu za projekt građevine ili drugog prostornog kompleksa, uključujući koordinaciju projektnog tima s tim djelom",kamob:P10018,kamd:C10002,kamd:P20074
+kamob:P10021,je krajobrazni arhitekt,kamob:C10010,Povezuje obitelj odgovornu za planiranje i oblikovanje krajobraza s tim djelom.,kamob:P10018,kamd:C10002,kamd:P20079
+kamob:P10022,je autor izložbe,kamob:C10010,"Povezuje obitelj odgovornu za koncepciju izložbe, uključujući istraživački rad, izradu scenarija izložbe, koordinaciju stručnjaka i stručnih timova itd. s tim djelom.",kamob:P10018,kamd:C10002,kamd:P20084
+kamob:P10023,je autor performansa,kamob:C10010,Povezuje obitelj koja je autor performansa s tim djelom.,kamob:P10018,kamd:C10002,kamd:P20089
+kamob:P10024,je autor teksta,kamob:C10010,Povezuje obitelj odgovornu za djelo izraženo u tekstualnom obliku s tim djelom.,kamob:P10018,kamd:C10002,kamd:P20094
+kamob:P10025,je copywriter,kamob:C10010,Povezuje obitelj koja je osmislila tekst reklame s tim djelom.,kamob:P10018,kamd:C10002,kamd:P20099
+kamob:P10026,je korespondent,kamob:C10010,"Povezuje obitelj koja je osmislila i poslala tekstualnu poruku (pismo, poruku elektroničke pošte itd.) s tim djelom.",kamob:P10018,kamd:C10002,kamd:P20104
+kamob:P10027,je libretist,kamob:C10010,"Povezuje obitelj odgovornu za tekst libreta glazbeno-scenskog djela (opere, operete itd.) ili oratorija s tim djelom.",kamob:P10018,kamd:C10002,kamd:P20109
+kamob:P10028,je pisac,kamob:C10010,Povezuje obitelj koja je osmislila tekst djela s tim djelom.,kamob:P10018,kamd:C10002,kamd:P20114
+kamob:P10029,je scenarist,kamob:C10010,"Povezuje obitelj odgovornu za ideju i sinopsis i/ili scenarij radijskog ili televizijskog programa, stripa, video igre ili drugog narativnog djela iskazanog u slikovnom obliku, osim filma s tim djelom.",kamob:P10018,kamd:C10002,kamd:P20119
+kamob:P10030,je tekstopisac,kamob:C10010,Povezuje obitelj odgovornu za tekst pjesme s tim djelom.,kamob:P10018,kamd:C10002,kamd:P20124
+kamob:P10032,je dizajner,kamob:C10010,"Povezuje obitelj odgovornu za funkcionalno i/ili vizualno oblikovanje industrijskog predmeta (industrijski dizajner) ili komunikacijsku formu (grafički dizajner), uključujući koordinaciju projektnog tima s tim djelom.",kamob:P10018,kamd:C10002,kamd:P20131
+kamob:P10035,je istraživač,kamob:C10010,Povezuje obitelj odgovornu za koncepciju i provedbu istraživanja s tim djelom.,kamob:P10018,kamd:C10002,kamd:P20140
+kamob:P10038,je izumitelj,kamob:C10010,Povezuje obitelj odgovornu za osmišljavanje i razvoj nove vrste predmeta ili tehnološkog postupka s tim djelom.,kamob:P10018,kamd:C10002,kamd:P20149
+kamob:P10039,je kartograf,kamob:C10010,"Povezuje obitelj koja je stvorila kartu, atlas ili drugi kartografski prikaz u analognom ili digitalnom obliku s tim djelom.",kamob:P10018,kamd:C10002,kamd:P20154
+kamob:P10040,je koreograf,kamob:C10010,Povezuje obitelj koja je osmislila ples ili drugi oblik izvedbene umjetnosti koji se temelji na pokretima tijela s tim djelom.,kamob:P10018,kamd:C10002,kamd:P20159
+kamob:P10041,je likovni umjetnik,kamob:C10010,Povezuje obitelj koja je osmislila djelo likovne umjetnosti s tim djelom.,kamob:P10018,kamd:C10002,kamd:P20164
+kamob:P10043,je fotograf,kamob:C10010,"Povezuje obitelj koja je osmislila fotografiju ili djelo sastavljeno od fotografija (fotografski album, fotomonografiju itd.) s tim djelom.",kamob:P10018,kamd:C10002,kamd:P20171
+kamob:P10044,je grafičar,kamob:C10010,Povezuje obitelj koja je osmislila djelo grafičke umjetnosti s tim djelom.,kamob:P10018,kamd:C10002,kamd:P20176
+kamob:P10046,je kipar,kamob:C10010,"Povezuje obitelj koja je osmislila i oblikovala trodimenzionalno likovno djelo, uključujući kipove, reljefe i arhitektonsku plastiku s tim djelom.",kamob:P10018,kamd:C10002,kamd:P20181
+kamob:P10047,je medaljer,kamob:C10010,"Povezuje obitelj koja je osmislila i oblikovala medalju, plaketu, novčić ili drugo djelo sitne, najčešće metalne plastike s tim djelom.",kamob:P10018,kamd:C10002,kamd:P20186
+kamob:P10048,je slikar,kamob:C10010,Povezuje obitelj koja je stvorila slikarsko djelo s tim djelom.,kamob:P10018,kamd:C10002,kamd:P20191
+kamob:P10049,je nositelj projekta,kamob:C10010,Povezuje obitelj koja upravlja znanstvenim ili razvojnim projektom i odgovorna je za sve aspekte projekta s tim djelom.,kamob:P10018,kamd:C10002,kamd:P20196
+kamob:P10058,je stvaratelj arhivskog gradiva,kamob:C10010,"Povezuje obitelj čije je djelovanje dovelo do nastanka, prikupljanja i/ili čuvanja arhivskog fonda ili njegovog dijela s tim djelom.",kamob:P10018,kamd:C10002,kamd:P20221
+kamob:P10059,je stvaratelj zbirke,kamob:C10010,Povezuje obitelj odgovornu za plan prikupljanja građe u zbirci s tim djelom.,kamob:P10018,kamd:C10002,kamd:P20226
+kamob:P10060,je ugovorna stranka,kamob:C10010,Povezuje obitelj koja je sklopila ugovor s tim djelom.,kamob:P10018,kamd:C10002,kamd:P20231
+kamob:P10063,je sudionik u nastanku djela,kamob:C10010,"Povezuje obitelj koja je potaknula, nadahnula, podržala i/ili odobrila djelo, ali nije imala izravnu stvaralačku ulogu u njegovu nastanku s tim djelom.",kamob:P10010,kamd:C10002,kamd:P20245
+kamob:P10064,je adresat,kamob:C10010,"Povezuje obitelj koja je primila tekstualnu poruku (pismo, poruku elektroničke pošte, poruku putem mobilne aplikacije itd.) s tim djelom.",kamob:P10063,kamd:C10002,kamd:P20250
+kamob:P10065,je obitelj kojoj je djelo posvećeno,kamob:C10010,Povezuje obitelj kojoj je djelo formalno ili neformalno posvećeno s tim djelom.,kamob:P10063,kamd:C10002,kamd:P20255
+kamob:P10067,je izdavač,kamob:C10010,"Povezuje obitelj koja u vlastito ime pokreće, organizira i financijski podupire izdavanje djela (najčešće serijske jedinice građe) s tim djelom.",kamob:P10063,kamd:C10002,kamob:P10077
+kamob:P10069,je naručitelj,kamob:C10010,Povezuje obitelj koja je naručila i platila stvaranje djela s tim djelom.,kamob:P10063,kamd:C10002,kamd:P20272
+kamob:P10071,je osnivač,kamob:C10010,"Povezuje obitelj koja je pokrenula izdavanje neomeđene jedinice građe (časopisa, novina, bloga, nakladničke cjeline itd.); izdavanje može i ne mora sâma organizirati i/ili financijski podupirati s tim djelom.",kamob:P10063,kamd:C10002,kamd:P20279
+kamob:P10072,je pokrovitelj,kamob:C10010,"Povezuje obitelj koja je financijski podržala (ali nije nužno sama naručila, pokrenula ili utemeljila) stvaranje djela ili organizirani događaj (istraživanje, konferenciju, izložbu itd.) koji je doveo do nastanka djela s tim djelom.",kamob:P10063,kamd:C10002,kamd:P20284
+kamob:P10073,je savjetnik,kamob:C10010,Povezuje obitelj koja je sudjelovala u stvaranju djela svojim stručnim znanjem ili iskustvom u određenom području djelovanja s tim djelom.,kamob:P10063,kamd:C10002,kamd:P20289
+kamob:P10074,je cenzor,kamob:C10010,"Povezuje obitelj koja je izmijenila izvorni sadržaj jedinice građe (tekst, kompoziciju, slijed sekvenci itd.) kako bi bio u skladu s određenim političkim ili religijskim svjetonazorom s izrazom tog djela.",kamob:P10011,kami:C10003,kami:P30041
+kamob:P10075,je citirani autor,kamob:C10010,Povezuje obitelj čije se djelo navodi ili citira u sadržaju jedinice građe s izrazom tog djela.,kamob:P10011,kami:C10003,kami:P30046
+kamob:P10076,je glazbeni aranžer,kamob:C10010,Povezuje obitelj koja je na temelju osnovne zamisli skladatelja razradila instrumentalne i/ili vokalne dionice glazbenog djela za određeni izvođački sastav ili preradila glazbeno djelo drugog skladatelja za drugi izvođački sastav ili tonalitet s izrazom tog djela.,kamob:P10011,kami:C10003,kami:P30051
+kamob:P10077,je izvođač,kamob:C10010,Povezuje obitelj koja nastupa u izvedbi djela s izrazom tog djela.,kamob:P10011,kami:C10003,kami:P30056
+kamob:P10078,je glazbenik,kamob:C10010,"Povezuje obitelj koja izvodi instrumentalno, vokalno ili vokalno-instrumentalno glazbeno djelo s izrazom tog djela.",kamob:P10077,kami:C10003,kami:P30061
+kamob:P10081,je instrumentalist,kamob:C10010,Povezuje obitelj koja svira glazbeni instrument u izvedbi glazbenog djela s izrazom tog djela.,kamob:P10077,kami:C10003,kami:P30070
+kamob:P10082,je pjevač,kamob:C10010,Povezuje obitelj koja izvodi vokalno glazbeno djelo ili vokalnu dionicu glazbenog djela s izrazom tog djela.,kamob:P10077,kami:C10003,kami:P30075
+kamob:P10084,je glumac,kamob:C10010,"Povezuje obitelj koja tumači ulogu u dramskoj ili glazbeno-scenskoj predstavi, filmu ili drugom obliku izvedbene umjetnosti s izrazom tog djela.",kamob:P10077,kami:C10003,kami:P30082
+kamob:P10092,je plesač,kamob:C10010,Povezuje obitelj koja pleše u glazbeno-scenskoj predstavi ili drugom obliku izvedbene umjetnosti s izrazom tog djela.,kamob:P10077,kami:C10003,kami:P30101
+kamob:P10099,je suradnik u realizaciji izraza,kamob:C10010,Povezuje obitelj koja je sudjelovala u realizaciji djela stručnim doprinosom u određenom području djelovanja s tim djelom.,kamob:P10011,kami:C10003,kami:P30118
+kamob:P10100,je animator,kamob:C10010,"Povezuje obitelj odgovornu za stvaranje privida kretanja niza statičnih slika ili predmeta u filmu, videu, računalnoj igri ili sl. s izrazom tog djela.",kamob:P10099,kami:C10003,kami:P30123
+kamob:P10101,je autor računalnih vizualizacija,kamob:C10010,"Povezuje obitelj odgovornu za stvaranje računalnih vizualizacija koje  prikazuju građevinu, tehničku tvorevinu ili drugi objekt u stanju dovršenosti s izrazom tog djela.",kamob:P10099,kami:C10003,kami:P30128
+kamob:P10102,je direktor fotografije,kamob:C10010,"Povezuje obitelj koja koordinira i nadzire snimanje scena u filmu, videu, televizijskom programu ili drugom obliku pokretnih slika s tim djelom.",kamob:P10099,kami:C10003,kami:P30133
+kamob:P10103,je dizajner interijera,kamob:C10010,"Povezuje obitelj odgovornu za odabir, dizajn i raspored elemenata interijera građevine s izrazom tog djela.",kamob:P10099,kami:C10003,kami:P30138
+kamob:P10104,je inženjer zvuka,kamob:C10010,"Povezuje obitelj odgovornu za tehničke aspekte proizvodnje zvuka tijekom snimanja, miksanja i izvedbe glazbenih i zvučnih sadržaja s izrazom tog djela.",kamob:P10099,kami:C10003,kami:P30143
+kamob:P10105,je kolorist,kamob:C10010,"Povezuje obitelj koja kolorira crteže, grafike, fotografije i druge izraze likovnih djela drugih umjetnika s izrazom tog djela.",kamob:P10099,kami:C10003,kami:P30148
+kamob:P10106,je kostimograf,kamob:C10010,"Povezuje obitelj odgovornu za dizajn i izradu kostima za film, televizijski program, kazališnu predstavu ili drugi oblik izvedbene umjetnosti s izrazom tog djela.",kamob:P10099,kami:C10003,kami:P30153
+kamob:P10107,je majstor rasvjete,kamob:C10010,"Povezuje obitelj koja oblikuje elemente rasvjete za potrebe snimanja filma ili televizijskog programa, dramske ili glazbeno-scenske izvedbe itd. s izrazom tog djela.",kamob:P10099,kami:C10003,kami:P30158
+kamob:P10108,je majstor specijalnih efekata,kamob:C10010,Povezuje obitelj koja oblikuje specijalne slikovne i zvučne efekte tijekom snimanja ili u post-produkciji filma i drugih sadržaja u audiovizualnom mediju s izrazom tog djela.,kamob:P10099,kami:C10003,kami:P30163
+kamob:P10109,je masker,kamob:C10010,"Povezuje obitelj odgovornu za dizajn i izradu maski i drugih prostetičkih pomagala za film, televizijski program, kazališnu predstavu ili drugi oblik izvedbene umjetnosti s izrazom tog djela.",kamob:P10099,kami:C10003,kami:P30168
+kamob:P10110,je montažer,kamob:C10010,"Povezuje obitelj koja odabire i uređuje snimljeni slikovni ili zvučni materijal i povezuje ga u cjelinu, uključujući sinkronizaciju slike i zvuka, montažu zvuka, posebne efekte itd. s izrazom tog djela.",kamob:P10099,kami:C10003,kami:P30173
+kamob:P10111,je pisac dijaloga,kamob:C10010,"Povezuje obitelj koja piše dijaloge likova u skladu sa sinopsisom ili scenarijem radijskog ili televizijskog programa, stripa, video igre ili drugog narativnog djela iskazanog u slikovnom obliku s izrazom tog djela.",kamob:P10099,kami:C10003,kami:P30178
+kamob:P10112,je programer-suradnik,kamob:C10010,"Povezuje obitelj koja programira kôd za neki interaktivni multimedijski sadržaj (video igru, elektroničku knjigu itd.) s izrazom tog djela.",kamob:P10099,kami:C10003,kami:P30183
+kamob:P10113,je redatelj sinkronizacije,kamob:C10010,"Povezuje obitelj odgovornu za nadzor nad sinkronizacijom jezika filma, televizijskog programa, djela videoumjetnosti i sl. na drugi jezik s izrazom tog djela.",kamob:P10099,kami:C10003,kami:P30188
+kamob:P10114,je scenarist filma,kamob:C10010,"Povezuje obitelj odgovornu za originalni ili adaptirani filmski scenarij, uključujući specifikaciju tijeka radnje, ambijenata, likova, njihovih postupaka i dijaloga s izrazom tog djela.",kamob:P10099,kami:C10003,kami:P30193
+kamob:P10115,je scenograf,kamob:C10010,"Povezuje obitelj odgovornu za dizajn i izradu elemenata ambijenta u filmu, televizijskom programu, kazališnoj predstavi ili drugom obliku izvedbene umjetnosti s izrazom tog djela.",kamob:P10099,kami:C10003,kami:P30198
+kamob:P10116,je skladatelj glazbe,kamob:C10010,"Povezuje obitelj koja je skladala popratnu glazbu za film, televizijski program, kazališnu predstavu, video igru itd. s izrazom tog djela.",kamob:P10099,kami:C10003,kami:P30203
+kamob:P10117,je snimatelj,kamob:C10010,"Povezuje obitelj koja kamerom snima film, video ili drugu vrstu pokretnih slika s izrazom tog djela.",kamob:P10099,kami:C10003,kami:P30208
+kamob:P10118,je statičar,kamob:C10010,Povezuje obitelj odgovornu za izračun nosivosti građevne konstrukcije s izrazom tog djela.,kamob:P10099,kami:C10003,kami:P30213
+kamob:P10119,je šminker,kamob:C10010,"Povezuje obitelj koja šminka izvođače za potrebe snimanja filma, televizijskog programa, kazališne predstave ili drugog oblika izvedbene umjetnosti s izrazom tog djela.",kamob:P10099,kami:C10003,kami:P30218
+kamob:P10120,je tehnički crtač,kamob:C10010,"Povezuje obitelj odgovornu za izradu detaljnih tehničkih crteža koji  prikazuju građevinu, tehničku tvorevinu ili drugi objekt u stanju dovršenosti s izrazom tog djela.",kamob:P10099,kami:C10003,kami:P30223
+kamob:P10121,je tonski snimatelj,kamob:C10010,Povezuje obitelj koja snima zvučne sadržaje u studijskom prostoru ili na terenu ili sudjeluje u tonskoj realizaciji radijskoga ili televizijskog programa s izrazom tog djela.,kamob:P10099,kami:C10003,kami:P30228
+kamob:P10124,je izrađivač,kamob:C10010,Povezuje obitelj koja je sudjelovala u procesu ručne ili manufakturne izrade pojavnog oblika ili njegovih dijelova s tim pojavnim oblikom.,kamob:P10012,kampo:C10004,kampo:P40104
+kamob:P10125,je bojadisar,kamob:C10010,"Povezuje obitelj koja je obojila tekstil od kojega se sastoji odjevni, uporabni ili neki drugi predmet s tim pojavnim oblikom.",kamob:P10124,kampo:C10004,kampo:P40109
+kamob:P10126,je bravar,kamob:C10010,"Povezuje obitelj koja je izradila metalne konstrukcijske ili ukrasne elemente na građevini ili dijelovima građevine, uključujući metalne ograde, namještaj, kvake itd. s tim pojavnim oblikom.",kamob:P10124,kampo:C10004,kampo:P40114
+kamob:P10127,je brusač,kamob:C10010,Povezuje obitelj koja je obradila površinu dragog kamena s tim pojavnim oblikom.,kamob:P10124,kampo:C10004,kampo:P40119
+kamob:P10128,je cizeler,kamob:C10010,Povezuje obitelj koja je obradila metalni predmet tehnikom cizeliranja s tim pojavnim oblikom.,kamob:P10124,kampo:C10004,kampo:P40124
+kamob:P10129,je emajler,kamob:C10010,"Povezuje obitelj koja je nanijela emajl na površinu metalnog, keramičkog ili staklenog predmeta s tim pojavnim oblikom.",kamob:P10124,kampo:C10004,kampo:P40129
+kamob:P10130,je intarzist,kamob:C10010,"Povezuje obitelj koja je ukrasila drveni predmet umecima od metala, drva, slonovače ili drugih materijala s tim pojavnim oblikom.",kamob:P10124,kampo:C10004,kampo:P40134
+kamob:P10131,je kalupar,kamob:C10010,Povezuje obitelj koja je izradila kalup za oblikovanje keramike i stakla ili lijevanje rastaljenog metala i/ili izradio predmet iz kalupa s tim pojavnim oblikom.,kamob:P10124,kampo:C10004,kampo:P40139
+kamob:P10132,je keramičar,kamob:C10010,Povezuje obitelj koji je izradio predmet ili dio predmeta od keramike s tim pojavnim oblikom.,kamob:P10124,kampo:C10004,kampo:P40144
+kamob:P10133,je klesar,kamob:C10010,"Povezuje obitelj koja je ugradila, oblikovala i/ili ukrasila kameni predmet, uključujući dijelove arhitekonske plastike s tim pojavnim oblikom.",kamob:P10124,kampo:C10004,kampo:P40149
+kamob:P10134,je kovač,kamob:C10010,Povezuje obitelj koja je iskovala uporabni predmet ili dio predmeta od željeza s tim pojavnim oblikom.,kamob:P10124,kampo:C10004,kampo:P40154
+kamob:P10135,je kovinopojasar,kamob:C10010,Povezuje obitelj koja je izradila metalni predmet ili dio predmeta tehnikom tiještenja s tim pojavnim oblikom.,kamob:P10124,kampo:C10004,kampo:P40159
+kamob:P10136,je krojač,kamob:C10010,Povezuje obitelj koja je izradila odjevni ili drugi predmet ili dio predmeta od tekstila s tim pojavnim oblikom.,kamob:P10124,kampo:C10004,kampo:P40164
+kamob:P10137,je lakirer,kamob:C10010,"Povezuje obitelj koja je nanijela sloj laka na površinu namještaja ili drugog predmeta, uključujući izradu raznih motiva s tim pojavnim oblikom.",kamob:P10124,kampo:C10004,kampo:P40169
+kamob:P10138,je ljevač,kamob:C10010,"Povezuje obitelj koja je oblikovala predmet lijevanjem tekućeg metala, stakla ili drugog materijala u kalup s tim pojavnim oblikom.",kamob:P10124,kampo:C10004,kampo:P40174
+kamob:P10139,je modeler,kamob:C10010,Povezuje obitelj koja je oblikovala predmet modeliranjem pripremljene smjese s tim pojavnim oblikom.,kamob:P10124,kampo:C10004,kampo:P40179
+kamob:P10140,je pisar,kamob:C10010,Povezuje obitelj koja je ispisala ili prepisala tekst rukopisa s izrazom tog djela.,kamob:P10124,kampo:C10004,kampo:P40184
+kamob:P10141,je pozlatar,kamob:C10010,"Povezuje obitelj koja je nanijela pozlatu na predmet od drva, metala, keramike, porculana, stakla, kože ili drugog materijala s tim pojavnim oblikom.",kamob:P10124,kampo:C10004,kampo:P40189
+kamob:P10142,je rezbar,kamob:C10010,Povezuje obitelj koja je oblikovala ili ukrasila predmet ili dio drvenog predmeta urezivanjem raznih oblika s tim pojavnim oblikom.,kamob:P10124,kampo:C10004,kampo:P40194
+kamob:P10143,je staklopuhač,kamob:C10010,"Povezuje obitelj koja je oblikovala stakleni predmet upuhivanjem zraka u masu rastaljenog stakla, uključujući dodatno oblikovanje hvataljkama, škarama i valjanjem s tim pojavnim oblikom.",kamob:P10124,kampo:C10004,kampo:P40199
+kamob:P10144,je stolar,kamob:C10010,"Povezuje obitelj koja je izradila drveni predmet ili građevni element, uključujući namještaj, oplate, obloge i građevnu stolariju s tim pojavnim oblikom.",kamob:P10124,kampo:C10004,kampo:P40204
+kamob:P10145,je tapetar,kamob:C10010,Povezuje obitelj koja je izradila tekstilne presvlake za namještaj s tim pojavnim oblikom.,kamob:P10124,kampo:C10004,kampo:P40209
+kamob:P10146,je tkalac,kamob:C10010,Povezuje obitelj koja je izradila tekstil ili drugi materijal tehnikom prepletanja niti s tim pojavnim oblikom.,kamob:P10124,kampo:C10004,kampo:P40214
+kamob:P10147,je uokvirivač,kamob:C10010,"Povezuje obitelj koja je izradila ili ukrasila okvir za sliku, ogledalo ili drugi predmet s tim pojavnim oblikom.",kamob:P10124,kampo:C10004,kampo:P40219
+kamob:P10148,je urar,kamob:C10010,Povezuje obitelj koja je izradila satni mehanizam s tim pojavnim oblikom.,kamob:P10124,kampo:C10004,kampo:P40224
+kamob:P10149,je vizažist,kamob:C10010,Povezuje obitelj koja je izradila predmet ili dio predmeta tehnikom vitraja s tim pojavnim oblikom.,kamob:P10124,kampo:C10004,kampo:P40229
+kamob:P10150,je nakladnik,kamob:C10010,"Povezuje obitelj koja je organizacijski, financijski i pravno odgovorna za objavljivanje pojavnog oblika s tim pojavnim oblikom.",kamob:P10012,kampo:C10004,kampo:P40234
+kamob:P10151,je oglašivač,kamob:C10010,Povezuje obitelj koja je osmislila reklamnu kampanju i/ili koordinirala oglašavanje pojavnog oblika u masovnim medijima s tim pojavnim oblikom.,kamob:P10012,kampo:C10004,kampo:P40239
+kamob:P10152,je proizvođač,kamob:C10010,"Povezuje obitelj koja je organizirala, financirala i/ili sudjelovala u procesu serijske proizvodnje pojavnog oblika ili njegovih dijelova s tim pojavnim oblikom.",kamob:P10012,kampo:C10004,kampo:P40244
+kamob:P10153,je proizvođač papira,kamob:C10010,"Povezuje obitelj koja je proizvela papir tiskanog ili rukopisnog sveska, lista ili skupa listova s tim pojavnim oblikom.",kamob:P10152,kampo:C10004,kampo:P40249
+kamob:P10154,je tiskar,kamob:C10010,Povezuje obitelj koja je proizvela pojavni oblik otiskom teksta ili slike na papir ili drugu podlogu s tim pojavnim oblikom.,kamob:P10152,kampo:C10004,kampo:P40254
+kamob:P10155,je prenositelj,kamob:C10010,"Povezuje obitelj koja je sudjelovala u prijenosu sadržaja putem televizije, radija, interneta itd. s tim pojavnim oblikom.",kamob:P10012,kampo:C10004,kampo:P40259
+kamob:P10156,je prodavač,kamob:C10010,Povezuje obitelj koja nudi na prodaju primjerke serijski proizvedenoga pojavnog oblika s tim pojavnim oblikom.,kamob:P10012,kampo:C10004,kampo:P40264
+kamob:P10157,je knjižar,kamob:C10010,Povezuje obitelj koja nudi na prodaju knjige i druge publikacije s tim pojavnim oblikom.,kamob:P10156,kampo:C10004,kampo:P40269
+kamob:P10158,je raspačavatelj,kamob:C10010,Povezuje obitelj koja ima isključivo pravo prodaje ili dijeljenja primjeraka pojavnog oblika na određenom tržištu s tim pojavnim oblikom.,kamob:P10012,kampo:C10004,kampo:P40274
+kamob:P10159,je suradnik na izdanju,kamob:C10010,Povezuje obitelj koja sudjeluje u pripremi određenog izdanja za objavljivanje s tim pojavnim oblikom.,kamob:P10012,kampo:C10004,kampo:P40279
+kamob:P10160,je autor dodanog teksta,kamob:C10010,"Povezuje obitelj koja je dopunila izdanje teksta druge obitelji predgovorom, pogovorom, objašnjenjima, komentarima itd. s tim pojavnim oblikom.",kamob:P10159,kampo:C10004,kampo:P40284
+kamob:P10161,je grafički urednik,kamob:C10010,"Povezuje obitelj odgovornu za grafičko oblikovanje izdanja, uključujući prijelom i pripremu za tisak s tim pojavnim oblikom.",kamob:P10159,kampo:C10004,kampo:P40289
+kamob:P10162,je ilustrator,kamob:C10010,Povezuje obitelj koja je oblikovala slikovne prikaze uz određeno izdanje teksta s tim pojavnim oblikom.,kamob:P10159,kampo:C10004,kampo:P40294
+kamob:P10163,je tipograf,kamob:C10010,"Povezuje obitelj koja je oblikovala slova tiskanog teksta, uključujući slaganje tiskarskog sloga od pomičnih slova s tim pojavnim oblikom.",kamob:P10159,kampo:C10004,kampo:P40299
+kamob:P10164,je obitelj koja je preinačila primjerak,kamob:C10010,Povezuje obitelj čija je intervencija dovela do razlikovanja primjerka od drugih primjeraka istog pojavnog oblika s tim primjerkom.,kamob:P10013,kamp:C10005,kamp:P50037
+kamob:P10165,je anotator,kamob:C10010,"Povezuje obitelj koja je ručno dodala primjerku tekstualne, slikovne ili druge bilješke s tim primjerkom.",kamob:P10164,kamp:C10005,kamp:P50042
+kamob:P10166,je iluminator,kamob:C10010,Povezuje obitelj koja je ukrasila primjerak iluminacijama s tim primjerkom.,kamob:P10164,kamp:C10005,kamp:P50047
+kamob:P10167,je knjigoveža,kamob:C10010,Povezuje obitelj koja je uvezala knjigu s tim primjerkom.,kamob:P10164,kamp:C10005,kamp:P50052
+kamob:P10168,je restaurator,kamob:C10010,Povezuje obitelj koja je modificirala primjerak kako bi zaustavila njegovo propadanje i vratila ga u stanje najbliže onome kakvo je bilo u određenom razdoblju njegove prošlosti s tim primjerkom.,kamob:P10164,kamp:C10005,kamp:P50062
+kamob:P10169,je rubrikator,kamob:C10010,Povezuje obitelji koja je oblikovala i ukrasila početna slova (inicijale) teksta u rukopisima i prvim tiskanim knjigama s tim primjerkom.,kamob:P10164,kamp:C10005,kamp:P50121
+kamob:P10170,je obitelj koja je stručno obradila primjerak,kamob:C10010,"Povezuje obitelj odgovornu za inventarizaciju i/ili stručnu obradu primjerka, uključujući unos podataka o primjerku u informacijski sustav s tim primjerkom.",kamob:P10013,kamp:C10005,kamp:P50071
+kamob:P10171,je determinator,kamob:C10010,Povezuje obitelj koja je identificirala vrstu kojoj pripada primjerak prirodoslovne građe s tim primjerkom.,kamob:P10013,kamp:C10005,kamp:P50076
+kamob:P10172,je aukcionist,kamob:C10010,Povezuje osobu koja je posredovala pri aukcijskoj kupnji primjerka s tim primjerkom.,kamob:P10013,kamp:C10005,kamp:P50081
+kamob:P10173,je posjednik,kamob:C10010,Povezuje obitelj koja posjeduje i/ili skrbi o primjerku s tim primjerkom.,kamob:P10013,kamp:C10005,kamp:P50086
+kamob:P10174,je vlasnik,kamob:C10010,Povezuje obitelj koja nad primjerkom uživa ili je uživao vlasnička prava s tim primjerkom.,kamob:P10173,kamp:C10005,kamp:P50091
+kamob:P10175,je darovatelj,kamob:C10010,Povezuje obitelj koja je darovala primjerak sadašnjem vlasniku s tim primjerkom.,kamob:P10173,kamp:C10005,kamp:P50096
+kamob:P10176,je deponent,kamob:C10010,Povezuje obitelj koja je primjerak u svom vlasništvu povjerila na skrb i upravljanje sadašnjem imatelju s tim primjerkom.,kamob:P10173,kamp:C10005,kamp:P50101
+kamob:P10177,je prodavatelj,kamob:C10010,Povezuje obitelj koja je prodala primjerak sadašnjem vlasniku s tim primjerkom.,kamob:P10173,kamp:C10005,kamp:P50106
+kamob:P10178,je preparator,kamob:C10010,Povezuje obitelj koja je izradila preparat primjerka prirodoslovne građe s tim primjerkom.,kamob:P10013,kamp:C10005,kamp:P50057
+kamob:P10179,je procjenitelj,kamob:C10010,Povezuje obitelj koja je procijenila vrijednost primjerka s tim primjerkom.,kamob:P10013,kamp:C10005,kamp:P50111
+kamob:P10180,je sakupljač,kamob:C10010,Povezuje obitelj koja je prikupila primjerak terenskim istraživanjem s tim primjerkom.,kamob:P10013,kamp:C10005,kamp:P50116
+kamob:P10181,je obitelj povezana s mjestom,kamob:C10010,Povezuje obitelj s mjestom.,kamob:P10009,kamm:C10011,kamm:P11035
+kamob:P10182,ima mjesto djelovanja obitelji,kamob:C10010,Povezuje obitelj s mjestom povezanim s privatnom i/ili profesionalnom poviješću obitelji.,kamob:P10181,kamm:C10011,kamm:P11036
+kamob:P10183,ima posjed obitelji,kamob:C10010,Povezuje obitelj s mjesto u vlasništvu obitelji.,kamob:P10181,kamm:C10011,kamm:P11037
+kamob:P10184,je obitelj povezana s vremenskim rasponom,kamob:C10010,Povezuje obitelj s vremenskim rasponom,kamob:P10009,kamvr:C10012,kamvr:P12028
+kamob:P10185,ima vrijeme djelovanja obitelji,kamob:C10010,Povezuje obitelj s vremenskim rasponom u kojemu je obitelj djelovala.,kamob:P10184,kamvr:C10012,kamvr:P12029
+kamob:P10186,je obitelj povezana s agentom,kamob:C10010,Povezuje obitelj s agentom.,kamob:P10009,kama:C10006,kama:P60195
+kamob:P10187,je obitelj povezana s osobom,kamob:C10010,Povezuje obitelj s osobom.,kamob:P10186,kamo:C10007,kamo:P70242
+kamob:P10188,je obitelj kojoj je osoba član,kamob:C10010,"Povezuje obitelj s osobom koja joj pripada rodbinskim, bračnim ili drugim vezama.",kamob:P10187,kamo:C10007,kamo:P70243
+kamob:P10189,je obitelj povezana s kolektivnim agentom,kamob:C10010,Povezuje obitelj s kolektivnim agentom.,kamob:P10186,kamka:C10008,kamka:P80013
+kamob:P10190,je obitelj povezana s korporativnim tijelom,kamob:C10010,Povezuje obitelj s korporativnim tijelom.,kamob:P10189,kamkt:C10009,kamkt:P90207
+kamob:P10191,je osnivač korporativnog tijela,kamob:C10010,Povezuje obitelj s korporativnim tijelom koje je osnovala.,kamob:P10190,kamkt:C10009,kamkt:P90208
+kamob:P10192,je vlasnik korporativnog tijela,kamob:C10010,Povezuje obitelj s korporativnim tijelom koje je vlasnik.,kamob:P10190,kamkt:C10009,kamkt:P90209
+kamob:P10193,je obitelj povezana s obitelji,kamob:C10010,Povezuje obitelj s obitelji.,kamob:P10189,kamob:C10010,kamob:P10193
+kamob:P10194,je potomak,kamob:C10010,Povezuje obitelj s obitelji od koje je genealoški potekla.,kamob:P10193,kamob:C10010,kamob:P10195
+kamob:P10195,je predak,kamob:C10010,Povezuje obitelj s obitelj od koje je genealoški potekla.,kamob:P10193,kamob:C10010,kamob:P10194
+kamob:P10196,je obitelj povezana s nomenom za obitelj,kamob:C10010,Povezuje obitelj s nomenom za tu obitelj.,kamob:P10009,kamn:C10013,kamn:P13123
+kamob:P10197,ima oznaku za obitelj,kamob:C10010,Povezuje obitelj s oznakom za tu obitelj.,kamob:P10196,kamn:C10013,kamn:P13124
+kamob:P10198,ima nadziranu pristupnicu za obitelj,kamob:C10010,"Povezuje obitelj s nadziranom riječi ili nizom riječi i/ili drugih oznaka, koja unutar nekog sustava jednoznačno identificira obitelj i okuplja podatke o obitelji.",kamob:P10197,kamn:C10013,kamn:P13125
+kamob:P10199,ima usvojenu pristupnicu za obitelj,kamob:C10010,"Povezuje obitelj s riječi, znakom ili nizom riječi ili znakova koji dosljedno imenuje obitelj unutar određenog sustava. ",kamob:P10198,kamn:C10013,kamn:P13126
+kamob:P10200,ima varijantnu pristupnicu za obitelj,kamob:C10010,"Povezuje obitelj s riječi, znakom ili nizom riječi ili znakova koji imenuju obitelj unutar određenog sustava, a nisu odabrani za usvojeni oblik imena obitelji.",kamob:P10198,kamn:C10013,kamn:P13127
+kamob:P10201,ima ime obitelji,kamob:C10010,Povezuje obitelj s imenom za obitelj.,kamob:P10197,kamn:C10013,kamn:P13128
+kamob:P10202,ima usvojeno ime obitelji,kamob:C10010,Povezuje obitelj s riječi ili nizom riječi ili znakova koji jednoznačno i dosljedno imenuje obitelj unutar određenog sustava.,kamob:P10201,kamn:C10013,kamn:P13129
+kamob:P10203,ima varijantno ime obitelji,kamob:C10010,"Povezuje obitelj s riječi, znakom ili nizom riječi ili znakova koji identificiraju obitelj unutar određenog sustava, a nisu odabrani za usvojeno ime obitelji.",kamob:P10201,kamn:C10013,kamn:P13131
+kamob:P10204,ima dodatno obilježje obitelji,kamob:C10010,"Povezuje obitelj s riječi, znakom ili nizom riječi ili znakova koji razlikuje obitelj od drugih obitelji s istim usvojenim ili varijantnim oblikom imena.",,,
+kamob:P10205,ima identifikator obitelji,kamob:C10010,Povezuje obitelj s brojčanom ili slovno-brojčanom oznakom ili nizom znakova koji jednoznačno identificira obitelj unutar određenog sustava.,kamob:P10197,kamn:C10013,kamn:P13133
+kamob:P10206,ima napomenu o identifikaciji obitelji,kamob:C10010,Povezuje obitelj s kratkim tekstom u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o obitelji i/ili izvorima iz kojih su identifikacijski podaci preuzeti.,kamob:P10008,,
+kamob:P10207,ima napomenu o odnosu obitelji i drugih jedinica opisa,kamob:C10010,"Povezuje obitelj s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između obitelji i i druge obitelj ili više drugih obitelji, odnosno obitelji i druge ili više drugih jedinica opisa.",kamob:P10008,,
+kamob:P10208,je obitelj predmet djela,kamob:C10010,"Povezuje obitelj s izrazom, nadziranim nazivom, imenom, naslovom, identifikatorom ili drugom nadziranom oznakom koja označava temu kojom se bavi ili koju prikazuje djelo.
+",kamob:P10010,kamd:C10002,kamd:P20329
