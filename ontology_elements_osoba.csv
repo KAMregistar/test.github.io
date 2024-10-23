@@ -1,0 +1,247 @@
+CURIE,Label,Domain,Definition,subPropertyOf,Range,inverseOf
+kamo:P70001,je osoba povezana s jedinicom opisa,kamo:C10007,Povezuje osobu s jedinicom opisa.,kama:P60002,kamjo:C10001,kamjo:P10009
+kamo:P70002,je osoba povezana s nomenom za osobu,kamo:C10007,Povezuje osobu s nomenom za osobu.,kamo:P70001,kamn:C10013,kamn:P13080
+kamo:P70003,ima oznaku za osobu,kamo:C10007,Povezuje osobu s oznakom za osobu.,kamo:P70002,kamn:C10013,kamn:P13081
+kamo:P70004,ima identifikator osobe,kamo:C10007,Povezuje osobu s brojčanom ili slovno-brojčanom oznakom ili skupom znakova koji jednoznačno identificira osobu unutar određenog sustava.,kamo:P70003,kamn:C10013,kamn:P13082
+kamo:P70005,ima nadziranu pristupnicu za osobu,kamo:C10007,Povezuje osobu s nadziranom pristupnicom za osobu.,kamo:P70003,kamn:C10013,kamn:P13083
+kamo:P70006,ima usvojenu pristupnicu za osobu,kamo:C10007,"Povezuje osobu s riječi, izrazom ili skupom znakova koji jednoznačno i dosljedno imenuje osobu unutar određenog sustava.",kamo:P70005,kamn:C10013,kamn:P13084
+kamo:P70007,ima varijantnu pristupnicu za osobu,kamo:C10007,"Povezuje osobu s riječi, izrekom ili skupom znakova koji identificiraju osobu unutar određenog sustava, a nisu odabrani za usvojeno ime osobe.",kamo:P70005,kamn:C10013,kamn:P13085
+kamo:P70008,ima ime osobe,kamo:C10007,Povezuje osobu s imenom osobe.,kamo:P70003,kamn:C10013,kamn:P13086
+kamo:P70009,ima usvojeno ime osobe,kamo:C10007,"Povezuje osobu s riječi, izrazom ili skupom znakova koji dosljedno imenuje osobu unutar određenog sustava.",kamo:P70008,kamn:C10013,kamn:P13087
+kamo:P70010,ima varijantno ime osobe,kamo:C10007,"Povezuje osobu s riječi, izrekom ili skupom znakova koji imenuju osobu unutar određenog sustava, a nisu odabrani za usvojeni oblik imena osobe.",kamo:P70008,kamn:C10013,kamn:P13089
+kamo:P70011,ima titulu osobe,kamo:C10007,Povezuje osobu s oznakom položaja koji osoba zauzima unutar društvene ili vjerske zajednice.,,,
+kamo:P70012,ima dodatno obilježje osobe,kamo:C10007,"Povezuje osobu s riječi, izrekom ili skupom znakova koji razlikuje osobu od drugih osoba s istim oblikom imena.",,,
+kamo:P70013,ima funkciju ili djelatnost osobe,kamo:C10007,"Povezuje osobu s izrazom, nadziranim nazivom, identifikatorom ili drugom oznaom za područje ljudskog znanja ili aktivnosti u kojemu osoba sudjeluje ili je sudjelovala, ili kojim se bavi(la).",,,
+kamo:P70014,ima zanimanje osobe,kamo:C10007,"Povezuje osobu s izrazom, nadziranim nazivom, identifikatorom ili drugom oznakom za zanimanje kojim se osoba bavi(la).",,,
+kamo:P70015,"ima napomenu o funkciji, djelatnosti ili zanimanju osobe",kamo:C10007,"Povezuje osobu s kratkim nestrukturiranim tekstom u kojemu se navode objašnjenja i druge pojedinosti o funkciji, djelatnosti ili zanimanju kojim se osoba bavi(la).",kamo:P70018,,
+kamo:P70016,ima jezik osobe,kamo:C10007,"Povezuje osobu s jezikom kojim se osoba služi(la) u svom javnom djelovanju, uključujući pisanje, kazivanje, govore, glumu itd.",,,
+kamo:P70017,ima biografiju osobe,kamo:C10007,Povezuje osobu s kratkim nestrukturiranim tekstom koji opisuje najvažnije događaje iz života i javnog djelovanja osobe.,,,
+kamo:P70018,ima napomenu o osobi,kamo:C10007,Povezuje osobu s tekstom u kojemu se navode pojedinosti o osobi koje nisu iskazane u drugim elementima opisa.,kamjo:P10022,,
+kamo:P70019,je osoba povezana s djelom,kamo:C10007,Povezuje osobu s djelom.,kamo:P70001,kamd:C10002,kamd:P20036
+kamo:P70020,je osoba povezana s izrazom,kamo:C10007,Povezuje osobu s izrazom.,kamo:P70001,kami:C10003,kami:P30033
+kamo:P70021,je osoba povezana s pojavnim oblikom,kamo:C10007,Povezuje osobu s pojavnim oblikom.,kamo:P70001,kampo:C10004,kampo:P40096
+kamo:P70022,je osoba povezana s primjerkom,kamo:C10007,Povezuje osobu s primjerkom.,kamo:P70001,kamp:C10005,kamp:P50026
+kamo:P70023,je osoba čije ovlasti proizlaze iz djela,kamo:C10007,"Povezuje osobu čije se ovlasti, funkcije i odgovornosti temelje na djelu s tim djelom.",kamo:P70019,kamd:C10002,kamd:P20041
+kamo:P70024,je osoba navodni stvaratelj djela,kamo:C10007,"Povezuje osobu čija je stvaralačka uloga u nastanku djela pogrešna, lažna ili izmišljena s tim djelom.",kamo:P70019,kamd:C10002,kamd:P20046
+kamo:P70025,je osoba nositelj prava intelektualnog vlasništva djela,kamo:C10007,"Povezuje osobu koja nad djelom uživa imovinska autorska prava ili pravo industrijskog vlasništva (patent, oznaka izvornosti itd.) s tim djelom.",kamo:P70019,kamd:C10002,kamd:P20051
+kamo:P70026,je osoba pretpostavljeni stvaratelj djela,kamo:C10007,"Povezuje osobu koju se opravdano smatra stvarateljem djela, ali njena stvaralačka uloga nije pouzdano utvrđena ili dokazana s tim djelom.",kamo:P70019,kamd:C10002,kamd:P20056
+kamo:P70027,je osoba stvaratelj djela,kamo:C10007,Povezuje osobu s djelom kojega je stvorila.,kamo:P70019,kamd:C10002,kamd:P20061
+kamo:P70028,je osoba koja daje intervju,kamo:C10007,Povezuje osobu koja u pisanom ili usmenom obliku odgovara na pitanja koja mu postavlja voditelj intervjua s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20066
+kamo:P70029,je arhitekt,kamo:C10007,"Povezuje osobu odgovornu za projekt građevine ili drugog prostornog kompleksa, uključujući koordinaciju projektnog tima s tim djelom",kamo:P70027,kamd:C10002,kamd:P20071
+kamo:P70030,je krajobrazni arhitekt,kamo:C10007,Povezuje osobu odgovornu za planiranje i oblikovanje krajobraza s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20076
+kamo:P70031,je autor izložbe,kamo:C10007,"Povezuje osobu odgovornu za koncepciju izložbe, uključujući istraživački rad, izradu scenarija izložbe, koordinaciju stručnjaka i stručnih timova itd. s tim djelom.",kamo:P70027,kamd:C10002,kamd:P20081
+kamo:P70032,je autor performansa,kamo:C10007,Povezuje osobu koja je autor performansa s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20086
+kamo:P70033,je autor teksta,kamo:C10007,Povezuje osobu koja je odgovorna za djelo izraženo u tekstualnom obliku s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20091
+kamo:P70034,je copywriter,kamo:C10007,Povezuje osobu koja je osmislila tekst reklame s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20096
+kamo:P70035,je korespondent,kamo:C10007,"Povezuje osobu koja je osmislila i poslala tekstualnu poruku (pismo, poruku elektroničke pošte itd.) s tim djelom.",kamo:P70027,kamd:C10002,kamd:P20101
+kamo:P70036,je libretist,kamo:C10007,"Povezuje osobu odgovornu za tekst libreta glazbeno-scenskog djela (opere, operete itd.) ili oratorija s tim djelom.",kamo:P70027,kamd:C10002,kamd:P20106
+kamo:P70037,je pisac,kamo:C10007,Povezuje osobu koja je osmislila književno djelo s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20111
+kamo:P70038,je scenarist,kamo:C10007,"Povezuje osobu odgovornu za ideju i sinopsis i/ili scenarij radijskog ili televizijskog programa, stripa, video igre ili drugog narativnog djela iskazanog u slikovnom obliku, osim filma s tim djelom.",kamo:P70027,kamd:C10002,kamd:P20116
+kamo:P70039,je tekstopisac,kamo:C10007,Povezuje osobu odgovornu za tekst pjesme s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20121
+kamo:P70040,je disertant,kamo:C10007,Povezuje osobu koja u akademskoj raspravi brani disertaciju radi stjecanja akademskog stupnja s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20126
+kamo:P70041,je dizajner,kamo:C10007,"Povezuje osobu odgovornu za funkcionalno i/ili vizualno oblikovanje industrijskog predmeta (industrijski dizajner) ili komunikacijsku formu (grafički dizajner), uključujući koordinaciju projektnog tima s tim djelom.",kamo:P70027,kamd:C10002,kamd:P20128
+kamo:P70042,je glavni i odgovorni urednik,kamo:C10007,"Povezuje osobu odgovornu za uredničku politiku i sadržaj neomeđene jedinice građe (časopisa, novina, nakladničke cjeline, mrežnih stranica, bloga itd.) s tim djelom.",kamo:P70027,kamd:C10002,kamd:P20133
+kamo:P70043,je govornik,kamo:C10007,"Povezuje osobu koja je održala govor, predavanje, propovijed ili drugi oblik usmenog obraćanja publici s tim djelom.",kamo:P70027,kamd:C10002,kamd:P20135
+kamo:P70044,je istraživač,kamo:C10007,Povezuje osobu odgovornu za koncepciju i provedbu istraživanja s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20137
+kamo:P70045,je član istraživačke skupine,kamo:C10007,Povezuje osobu koja sudjeluje u skupini koja je osmislila i provela istraživanje s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20142
+kamo:P70046,je voditelj istraživačke skupine,kamo:C10007,Povezuje osobu koja nadzire rad skupine koja je osmislila i provela istraživanje s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20144
+kamo:P70047,je izumitelj,kamo:C10007,Povezuje osobu odgovornu za osmišljavanje i razvoj nove vrste predmeta ili tehnološkog postupka s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20145
+kamo:P70048,je kartograf,kamo:C10007,"Povezuje osobu koja je stvorila kartu, atlas ili drugi kartografski prikaz u analognom ili digitalnom obliku s tim djelom.",kamo:P70027,kamd:C10002,kamd:P20151
+kamo:P70049,je koreograf,kamo:C10007,Povezuje osobu koja je osmislila ples ili drugi oblik izvedbene umjetnosti koji se temelji na pokretima tijela s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20156
+kamo:P70050,je likovni umjetnik,kamo:C10007,Povezuje osobu koja je osmislila djelo likovne umjetnosti s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20161
+kamo:P70051,je crtač,kamo:C10007,Povezuje osobu koja je osmislila crtež s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20166
+kamo:P70052,je fotograf,kamo:C10007,"Povezuje osobu koja je osmislila fotografiju ili djelo sastavljeno od fotografija (fotografski album, fotomonografiju itd.) s tim djelom.",kamo:P70027,kamd:C10002,kamd:P20168
+kamo:P70053,je grafičar,kamo:C10007,Povezuje osobu koja je osmislila djelo grafičke umjetnosti s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20173
+kamo:P70054,je kipar,kamo:C10007,"Povezuje osobu koja je osmislila i oblikovala trodimenzionalno likovno djelo, uključujući kipove, reljefe i arhitektonsku plastiku s tim djelom.",kamo:P70027,kamd:C10002,kamd:P20178
+kamo:P70055,je medaljer,kamo:C10007,"Povezuje osobu koja je osmislila i oblikovala medalju, plaketu, novčić ili drugo djelo sitne, najčešće metalne plastike s tim djelom.",kamo:P70027,kamd:C10002,kamd:P20183
+kamo:P70056,je slikar,kamo:C10007,Povezuje osobu koja je stvorila slikarsko djelo s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20188
+kamo:P70057,je nositelj projekta,kamo:C10007,Povezuje osobu koja upravlja znanstvenim ili razvojnim projektom i odgovorna je za sve aspekte projekta s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20193
+kamo:P70058,je praeses,kamo:C10007,"Povezuje osobu koja predsjedava akademskom raspravom (predsjednik ispita), a često je odgovorna i za odabir teme disertacije i oblikovanje teze s tim djelom.",kamo:P70027,kamd:C10002,kamd:P20198
+kamo:P70059,je priređivač,kamo:C10007,"Povezuje osobu koja je prikupila, sabrala i uredila više izraza djela drugih osoba u jedinstveno novo djelo poput antologije, zbornika, kompilacije i sl. s tim djelom.",kamo:P70027,kamd:C10002,kamd:P20200
+kamo:P70060,je programer,kamo:C10007,Povezuje osobu koja je stvorila kôd računalnog programa ili aplikacije s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20204
+kamo:P70061,je redatelj,kamo:C10007,"Povezuje osobu odgovornu za koncepciju i nadzor nad stvaranjem filma, televizijskog programa, djela videoumjetnosti, scenskog djela i sl. s tim djelom.",kamo:P70027,kamd:C10002,kamd:P20208
+kamo:P70062,je filmski redatelj,kamo:C10007,Povezuje osobu odgovornu za koncepciju i nadzor nad snimanjem filma s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20210
+kamo:P70063,je kazališni redatelj,kamo:C10007,Povezuje osobu odgovornu za koncepciju i nadzor nad stvaranjem scenskog djela s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20212
+kamo:P70064,je sastavljač,kamo:C10007,"Povezuje osobu koja je prikupila, sabrala i uredila različite podatke u referentnu cjelinu (enciklopediju, rječnik, vodič, bibliografiju, statističku tablicu i sl.) s tim djelom.",kamo:P70027,kamd:C10002,kamd:P20202
+kamo:P70065,je skladatelj,kamo:C10007,Povezuje osobu koja je skladala samostalno glazbeno djelo s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20214
+kamo:P70066,je stvaratelj arhivskog gradiva,kamo:C10007,"Povezuje osobu čije je djelovanje dovelo do nastanka, prikupljanja i/ili čuvanja arhivskog fonda ili njegovog dijela s tim djelom.",kamo:P70027,kamd:C10002,kamd:P20218
+kamo:P70067,je stvaratelj zbirke,kamo:C10007,Povezuje osobu odgovornu za plan prikupljanja građe u zbirci s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20223
+kamo:P70068,je ugovorna stranka,kamo:C10007,Povezuje osobu koja je sklopila ugovor s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20228
+kamo:P70069,je urbanist,kamo:C10007,"Povezuje osobu odgovornu za planiranje funkcije i prostorne organizacije grada ili dijela grada, uključujući planove, računalne simulacije i sl. koji prikazuju izgled i namjenu gradskog prostora s tim djelom.",kamo:P70027,kamd:C10002,kamd:P20233
+kamo:P70070,je voditelj intervjua,kamo:C10007,Povezuje osobu koja u pisanom ili usmenom obliku postavlja pitanja drugoj osobi s tim djelom.,kamo:P70027,kamd:C10002,kamd:P20237
+kamo:P70071,je osoba sudionik u nastanku djela,kamo:C10007,"Povezuje osobu koja je potaknula, nadahnula, podržala i/ili odobrila djelo, ali nije imala izravnu stvaralačku ulogu u njegovu nastanku s tim djelom.",kamo:P70019,kamd:C10002,kamd:P20242
+kamo:P70072,je adresat,kamo:C10007,"Povezuje osobu koja je primila tekstualnu poruku (pismo, poruku elektroničke pošte, poruku putem mobilne aplikacije itd.) s tim djelom.",kamo:P70071,kamd:C10002,kamd:P20247
+kamo:P70073,je osoba kojoj je djelo posvećeno,kamo:C10007,Povezuje osobu kojoj je djelo formalno ili neformalno posvećeno s tim djelom.,kamo:P70071,kamd:C10002,kamd:P20252
+kamo:P70074,je član povjerenstva za stjecanje akademskog stupnja,kamo:C10007,Povezuje osobu koja sudjeluje u povjerenstvu koje nadzire i odobrava završni rad ili disertaciju s tim djelom.,kamo:P70071,kamd:C10002,kamd:P20260
+kamo:P70075,je izdavač,kamo:C10007,"Povezuje osobu koja u vlastito ime pokreće, organizira i financijski podupire izdavanje djela (najčešće serijske jedinice građe) s tim djelom.",kamo:P70071,kamd:C10002,kamd:P20262
+kamo:P70076,je mentor,kamo:C10007,Povezuje osobu koja nadzire izradu ocjenskog ili završnog rada ili disertacije s tim djelom.,kamo:P70071,kamd:C10002,kamd:P20267
+kamo:P70077,je naručitelj,kamo:C10007,Povezuje osobu koja je naručila i platila stvaranje djela s tim djelom.,kamo:P70071,kamd:C10002,kamd:P20269
+kamo:P70078,je oponent,kamo:C10007,Povezuje osobu koja se u akademskoj raspravi suprotstavlja tezi koju brani disertant s tim djelom.,kamo:P70071,kamd:C10002,kamd:P20274
+kamo:P70079,je osnivač,kamo:C10007,"Povezuje osobu koja je pokrenula izdavanje neomeđene jedinice građe (časopisa, novina, bloga, nakladničke cjeline itd.); izdavanje može i ne mora sâma organizirati i/ili financijski podupirati s tim djelom.",kamo:P70071,kamd:C10002,kamd:P20276
+kamo:P70080,je pokrovitelj,kamo:C10007,"Povezuje osobu koja je financijski podržala (ali nije nužno sama naručila, pokrenula ili utemeljila) stvaranje djela ili organizirani događaj (istraživanje, konferenciju, izložbu itd.) koji je doveo do nastanka djela s tim djelom.",kamo:P70071,kamd:C10002,kamd:P20281
+kamo:P70081,je savjetnik,kamo:C10007,Povezuje osobu koja je sudjelovala u stvaranju djela svojim stručnim znanjem ili iskustvom u određenom području djelovanja s tim djelom.,kamo:P70071,kamd:C10002,kamd:P20286
+kamo:P70082,je cenzor,kamo:C10007,"Povezuje osobu koja je izmijenila izvorni sadržaj jedinice građe (tekst, kompoziciju, slijed sekvenci itd.) kako bi bio u skladu s određenim političkim ili religijskim svjetonazorom s izrazom tog djela.",kamo:P70020,kami:C10003,kami:P30038
+kamo:P70083,je citirani autor,kamo:C10007,Povezuje osobu čije se djelo navodi ili citira u sadržaju jedinice građe s izrazom tog djela.,kamo:P70020,kami:C10003,kami:P30043
+kamo:P70084,je glazbeni aranžer,kamo:C10007,Povezuje osobu koja je na temelju osnovne zamisli skladatelja razradila instrumentalne i/ili vokalne dionice glazbenog djela za određeni izvođački sastav ili preradila glazbeno djelo drugog skladatelja za drugi izvođački sastav ili tonalitet s izrazom tog djela.,kamo:P70020,kami:C10003,kami:P30048
+kamo:P70085,je izvođač,kamo:C10007,Povezuje osobu koja nastupa u izvedbi djela s izrazom tog djela.,kamo:P70020,kami:C10003,kami:P30053
+kamo:P70086,je glazbenik,kamo:C10007,"Povezuje osobu koja izvodi instrumentalno, vokalno ili vokalno-instrumentalno glazbeno djelo s izrazom tog djela.",kamo:P70085,kami:C10003,kami:P30058
+kamo:P70087,je dirigent,kamo:C10007,Povezuje osobu koja ravna instrumentalnim ili mješovitim sastavom koji izvodi glazbeno ili glazbeno-scensko djelo s izrazom tog djela.,kamo:P70085,kami:C10003,kami:P30063
+kamo:P70088,je DJ,kamo:C10007,Povezuje osobu koja reproducira i miješa izraze postojećih glazbenih djela u novu cjelinu s izrazom tog djela.,kamo:P70085,kami:C10003,kami:P30065
+kamo:P70089,je instrumentalist,kamo:C10007,Povezuje osobu koja svira glazbeni instrument u izvedbi glazbenog djela s izrazom tog djela.,kamo:P70085,kami:C10003,kami:P30067
+kamo:P70090,je pjevač,kamo:C10007,Povezuje osobu koja izvodi vokalno glazbeno djelo ili vokalnu dionicu glazbenog djela s izrazom tog djela.,kamo:P70085,kami:C10003,kami:P30072
+kamo:P70091,je voditelj zbora,kamo:C10007,Povezuje osobu koja ravna zborom koji izvodi vokalno ili vokalno-instrumentalno glazbeno djelo s izrazom tog djela.,kamo:P70085,kami:C10003,kami:P30077
+kamo:P70092,je glumac,kamo:C10007,"Povezuje osobu koja tumači ulogu u dramskoj ili glazbeno-scenskoj predstavi, filmu ili drugom obliku izvedbene umjetnosti s izrazom tog djela.",kamo:P70085,kami:C10003,kami:P30079
+kamo:P70093,je glasovni glumac,kamo:C10007,"Povezuje osobu koja posuđuje glas liku u filmu, računalnoj igri, radijskoj drami ili drugom djelu zvučnog ili zvučno-slikovnog sadržaja s izrazom tog djela.",kamo:P70085,kami:C10003,kami:P30084
+kamo:P70094,je kazivač,kamo:C10007,"Povezuje osobu koja govori ili pripovijeda  narodne pjesme, priče i sl. onome tko zapisuje ili snima s izrazom tog djela.",kamo:P70085,kami:C10003,kami:P30086
+kamo:P70095,je komentator,kamo:C10007,"Povezuje osobu koja interpretira, analizira ili raspravlja na neku temu u televizijskoj ili radijskoj emisiji ili drugom djelu zvučnog ili zvučno-slikovnog sadržaja s izrazom tog djela.",kamo:P70085,kami:C10003,kami:P30088
+kamo:P70096,je lutkar,kamo:C10007,"Povezuje osobu koja upravlja lutkama u dramskoj ili glazbeno-scenskoj predstavi, filmu ili drugom obliku izvedbene umjetnosti s izrazom tog djela.",kamo:P70085,kami:C10003,kami:P30090
+kamo:P70097,je moderator,kamo:C10007,Povezuje osobu koja vodi raspravu na određenu temu uživo ili putem medija masovnog priopćavanja s izrazom tog djela.,kamo:P70085,kami:C10003,kami:P30092
+kamo:P70098,je panelist,kamo:C10007,Povezuje osobu koja sudjeluje u raspravi na određenu temu uživo ili putem medija masovnog priopćavanja s izrazom tog djela.,kamo:P70085,kami:C10003,kami:P30094
+kamo:P70099,je pantomimičar,kamo:C10007,"Povezuje osobu koja osjećaje, misli i stavove izražava tehnikom i pravilima pantomime s izrazom tog djela.",kamo:P70085,kami:C10003,kami:P30096
+kamo:P70100,je plesač,kamo:C10007,Povezuje osobu koja pleše u glazbeno-scenskoj predstavi ili drugom obliku izvedbene umjetnosti s izrazom tog djela.,kamo:P70085,kami:C10003,kami:P30098
+kamo:P70101,je pripovjedač,kamo:C10007,"Povezuje osobu koja pripovijeda priču druge osobe; posebice ona koja pripovijeda radnju u filmu, zvučnoj knjizi, računalnoj igri ili drugom obliku fikcije iskazane snimljenim govorom s izrazom tog djela.",kamo:P70085,kami:C10003,kami:P30103
+kamo:P70102,je spiker,kamo:C10007,"Povezuje osobu koja na radiju ili televiziji najavljuje program ili čita informativne tekstove, uključujući vijesti, dokumentarne emisije itd. s izrazom tog djela.",kamo:P70085,kami:C10003,kami:P30105
+kamo:P70103,je voditelj,kamo:C10007,"Povezuje osobu koja uživo ili putem masovnih medija (radija, televizije itd.) vodi program koji uključuje i druge izvođače s izrazom tog djela.",kamo:P70085,kami:C10003,kami:P30107
+kamo:P70104,je lektor,kamo:C10007,Povezuje osobu koja jezično i stilski ispravlja i dotjeruje tekst u pripremi za objavljivanje s izrazom tog djela.,kamo:P70020,kami:C10003,kami:P30109
+kamo:P70105,je prevoditelj,kamo:C10007,"Povezuje osobu koja, slijedeći izvornik, prenosi tekst s jednog jezika u drugi ili iz starijeg oblika jezika u noviji oblik s izrazom tog djela.",kamo:P70020,kami:C10003,kami:P30111
+kamo:P70106,je sažimatelj,kamo:C10007,"Povezuje osobu koja je sažela izvorni izraz djela bez značajnijih promjena u sadržaju, značenju itd. s izrazom tog djela.",kamo:P70020,kami:C10003,kami:P30113
+kamo:P70107,je suradnik u realizaciji izraza,kamo:C10007,Povezuje osobu koja je sudjelovala u realizaciji djela stručnim doprinosom u određenom području djelovanja s izrazom tog djela.,kamo:P70020,kami:C10003,kami:P30115
+kamo:P70108,je animator,kamo:C10007,"Povezuje osobu odgovornu za stvaranje privida kretanja niza statičnih slika ili predmeta u filmu, videu, računalnoj igri ili sl. s izrazom tog djela.",kamo:P70107,kami:C10003,kami:P30120
+kamo:P70110,je autor računalnih vizualizacija,kamo:C10007,"Povezuje osobu odgovornu za stvaranje računalnih vizualizacija koje  prikazuju građevinu, tehničku tvorevinu ili drugi objekt u stanju dovršenosti s izrazom tog djela.",kamo:P70107,kami:C10003,kami:P30125
+kamo:P70111,je direktor fotografije,kamo:C10007,"Povezuje osobu odgovornu za stvaranje računalnih vizualizacija koje  prikazuju građevinu, tehničku tvorevinu ili drugi objekt u stanju dovršenosti  s izrazom tog djela.",kamo:P70107,kami:C10003,kami:P30130
+kamo:P70112,je dizajner interijera,kamo:C10007,"Povezuje osobu odgovornu za odabir, dizajn i raspored elemenata interijera građevine s izrazom tog djela.",kamo:P70107,kami:C10003,kami:P30135
+kamo:P70113,je inženjer zvuka,kamo:C10007,"Povezuje osobu odgovornu za tehničke aspekte proizvodnje zvuka tijekom snimanja, miksanja i izvedbe glazbenih i zvučnih sadržaja s izrazom tog djela.",kamo:P70107,kami:C10003,kami:P30140
+kamo:P70114,je kolorist,kamo:C10007,"Povezuje osobu koja kolorira crteže, grafike, fotografije i druge izraze likovnih djela drugih umjetnika s izrazom tog djela.",kamo:P70107,kami:C10003,kami:P30145
+kamo:P70115,je kostimograf,kamo:C10007,"Povezuje osobu odgovornu za dizajn i izradu kostima za film, televizijski program, kazališnu predstavu ili drugi oblik izvedbene umjetnosti s izrazom tog djela.",kamo:P70107,kami:C10003,kami:P30150
+kamo:P70116,je majstor rasvjete,kamo:C10007,"Povezuje osobu koja oblikuje elemente rasvjete za potrebe snimanja filma ili televizijskog programa, dramske ili glazbeno-scenske izvedbe itd. s izrazom tog djela.",kamo:P70107,kami:C10003,kami:P30155
+kamo:P70117,je majstor specijalne rasvjete,kamo:C10007,Povezuje osobu koja oblikuje specijalne slikovne i zvučne efekte tijekom snimanja ili u post-produkciji filma i drugih oblika u audiovizualnom mediju s izrazom tog djela.,kamo:P70107,kami:C10003,kami:P30160
+kamo:P70118,je masker,kamo:C10007,"Povezuje osobu odgovornu za dizajn i izradu maski i drugih prostetičkih pomagala za film, televizijski program, kazališnu predstavu ili drugi oblik izvedbene umjetnosti s izrazom tog djela.",kamo:P70107,kami:C10003,kami:P30165
+kamo:P70119,je montažer,kamo:C10007,"Povezuje osobu koja odabire i uređuje snimljeni slikovni ili zvučni materijal i povezuje ga u cjelinu, uključujući sinkronizaciju slike i zvuka, montažu zvuka, posebne efekte itd. s izrazom tog djela.",kamo:P70107,kami:C10003,kami:P30170
+kamo:P70120,je pisac dijaloga,kamo:C10007,"Povezuje osobu koja piše dijaloge likova u skladu sa sinopsisom ili scenarijem radijskog ili televizijskog programa, stripa, video igre ili drugog narativnog djela iskazanog u slikovnom obliku s izrazom tog djela.",kamo:P70107,kami:C10003,kami:P30175
+kamo:P70121,je programer-suradnik,kamo:C10007,"Povezuje osobu koja programira kôd za neki interaktivni multimedijski sadržaj (video igru, elektroničku knjigu itd.) s izrazom tog djela.",kamo:P70107,kami:C10003,kami:P30180
+kamo:P70122,je redatelj sinkronizacije,kamo:C10007,"Povezuje osobu odgovornu za nadzor nad sinkronizacijom jezika filma, televizijskog programa, djela videoumjetnosti i sl. na drugi jezik s izrazom tog djela.",kamo:P70107,kami:C10003,kami:P30185
+kamo:P70123,je scenarist filma,kamo:C10007,"Povezuje osobu odgovornu za originalni ili adaptirani filmski scenarij, uključujući specifikaciju tijeka radnje, ambijenata, likova, njihovih postupaka i dijaloga s izrazom tog djela.",kamo:P70107,kami:C10003,kami:P30190
+kamo:P70124,je scenograf,kamo:C10007,"Povezuje osobu odgovornu za dizajn i izradu elemenata ambijenta u filmu, televizijskom programu, kazališnoj predstavi ili drugom obliku izvedbene umjetnosti s izrazom tog djela.",kamo:P70107,kami:C10003,kami:P30195
+kamo:P70125,je skladatelj glazbe,kamo:C10007,"Povezuje osobu koja je skladala popratnu glazbu za film, televizijski program, kazališnu predstavu, video igru itd. s izrazom tog djela.",kamo:P70107,kami:C10003,kami:P30200
+kamo:P70126,je snimatelj,kamo:C10007,"Povezuje osobu koja kamerom snima film, video ili drugu vrstu pokretnih slika s izrazom tog djela.",kamo:P70107,kami:C10003,kami:P30205
+kamo:P70127,je statičar,kamo:C10007,Povezuje osobu odgovornu za izračun nosivosti građevne konstrukcije s izrazom tog djela.,kamo:P70107,kami:C10003,kami:P30210
+kamo:P70128,je šminker,kamo:C10007,"Povezuje osobu koja šminka izvođače za potrebe snimanja filma, televizijskog programa, kazališne predstave ili drugog oblika izvedbene umjetnosti s izrazom tog djela.",kamo:P70107,kami:C10003,kami:P30215
+kamo:P70129,je tehnički crtač,kamo:C10007,"Povezuje osobu odgovornu za izradu detaljnih tehničkih crteža koji  prikazuju građevinu, tehničku tvorevinu ili drugi objekt u stanju dovršenosti s izrazom tog djela.",kamo:P70107,kami:C10003,kami:P30220
+kamo:P70130,je tonski snimatelj,kamo:C10007,Povezuje osobu koja snima zvučne sadržaje u studijskom prostoru ili na terenu ili sudjeluje u tonskoj realizaciji radijskoga ili televizijskog programa s izrazom tog djela.,kamo:P70107,kami:C10003,kami:P30225
+kamo:P70131,je urednik,kamo:C10007,"Povezuje osobu koja uređuje i priprema za objavljivanje tekst druge osobe u skladu s uredničkom politikom nakladnika i/ili standardima određene nakladničke cjeline, časopisa, ciljane publike ili sl. s izrazom tog djela.",kamo:P70020,kami:C10003,kami:P30230
+kamo:P70132,je zapisničar,kamo:C10007,"Povezuje osobu koja je zabilježila sadržaj sastanka, sjednice, zasjedanja i sl. s izrazom tog djela.",kamo:P70020,kami:C10003,kami:P30232
+kamo:P70133,je izrađivač,kamo:C10007,Povezuje osobu koja je sudjelovala u procesu ručne ili manufakturne izrade pojavnog oblika ili njegovih dijelova s tim pojavnim oblikom.,kamo:P70021,kampo:C10004,kampo:P40101
+kamo:P70134,je bojadisar,kamo:C10007,"Povezuje osobu koja je obojila tekstil od kojega se sastoji odjevni, uporabni ili neki drugi predmet s tim pojavnim oblikom.",kamo:P70133,kampo:C10004,kampo:P40106
+kamo:P70135,je bravar,kamo:C10007,"Povezuje osobu koja je izradila metalne konstrukcijske ili ukrasne elemente na građevini ili dijelovima građevine, uključujući metalne ograde, namještaj, kvake itd. s tim pojavnim oblikom.",kamo:P70133,kampo:C10004,kampo:P40111
+kamo:P70136,je brusač,kamo:C10007,Povezuje osobu koja je obradila površinu dragog kamena s tim pojavnim oblikom.,kamo:P70133,kampo:C10004,kampo:P40116
+kamo:P70137,je cizeler,kamo:C10007,Povezuje osobu koja je obradila metalni predmet tehnikom cizeliranja s tim pojavnim oblikom.,kamo:P70133,kampo:C10004,kampo:P40121
+kamo:P70138,je emajler,kamo:C10007,"Povezuje osobu koja je nanijela emajl na površinu metalnog, keramičkog ili staklenog predmeta s tim pojavnim oblikom.",kamo:P70133,kampo:C10004,kampo:P40126
+kamo:P70139,je intarzist,kamo:C10007,"Povezuje osobu koja je ukrasila drveni predmet umecima od metala, drva, slonovače ili drugih materijala s tim pojavnim oblikom.",kamo:P70133,kampo:C10004,kampo:P40131
+kamo:P70140,je kalupar,kamo:C10007,Povezuje osobu koja je izradila kalup za oblikovanje keramike i stakla ili lijevanje rastaljenog metala i/ili izradila predmet iz kalupa s tim pojavnim oblikom.,kamo:P70133,kampo:C10004,kampo:P40136
+kamo:P70141,je keramičar,kamo:C10007,Povezuje osobu koja je izradila predmet ili dio predmeta od keramike s tim pojavnim oblikom.,kamo:P70133,kampo:C10004,kampo:P40141
+kamo:P70142,je klesar,kamo:C10007,"Povezuje osobu koja je ugradila, oblikovala i/ili ukrasila kameni predmet, uključujući dijelove arhitekonske plastike s tim pojavnim oblikom.",kamo:P70133,kampo:C10004,kampo:P40146
+kamo:P70143,je kovač,kamo:C10007,Povezuje osobu koja je iskovala uporabni predmet ili dio predmeta od željeza s tim pojavnim oblikom.,kamo:P70133,kampo:C10004,kampo:P40151
+kamo:P70144,je kovinopojasar,kamo:C10007,Povezuje osobu koja je izradila metalni predmet ili dio predmeta tehnikom tiještenja s tim pojavnim oblikom.,kamo:P70133,kampo:C10004,kampo:P40156
+kamo:P70145,je krojač,kamo:C10007,Povezuje osobu koja je izradila odjevni ili drugi predmet ili dio predmeta od tekstila s tim pojavnim oblikom.,kamo:P70133,kampo:C10004,kampo:P40161
+kamo:P70146,je lakirer,kamo:C10007,"Povezuje osobu koja je nanijela sloj laka na površinu namještaja ili drugog predmeta, uključujući izradu raznih motiva s tim pojavnim oblikom.",kamo:P70133,kampo:C10004,kampo:P40166
+kamo:P70147,je ljevač,kamo:C10007,"Povezuje osobu koja je oblikovala predmet lijevanjem tekućeg metala, stakla ili drugog materijala u kalup s tim pojavnim oblikom.",kamo:P70133,kampo:C10004,kampo:P40171
+kamo:P70148,je modeler,kamo:C10007,Povezuje osobu koja je oblikovala predmet modeliranjem pripremljene smjese s tim pojavnim oblikom.,kamo:P70133,kampo:C10004,kampo:P40176
+kamo:P70149,je pisar,kamo:C10007,Povezuje osobu koja je ispisala ili prepisala tekst rukopisa s tim pojavnim oblikom.,kamo:P70133,kampo:C10004,kampo:P40181
+kamo:P70150,je pozlatar,kamo:C10007,"Povezuje osobu koja je nanijela pozlatu na predmet od drva, metala, keramike, porculana, stakla, kože ili drugog materijala s tim pojavnim oblikom.",kamo:P70133,kampo:C10004,kampo:P40186
+kamo:P70151,je rezbar,kamo:C10007,Povezuje osobu koja je oblikovala ili ukrasila predmet ili dio drvenog predmeta urezivanjem raznih oblika s tim pojavnim oblikom.,kamo:P70133,kampo:C10004,kampo:P40191
+kamo:P70152,je staklopuhač,kamo:C10007,"Povezuje osobu koja je oblikovala stakleni predmet upuhivanjem zraka u masu rastaljenog stakla, uključujući dodatno oblikovanje hvataljkama, škarama i valjanjem s tim pojavnim oblikom.",kamo:P70133,kampo:C10004,kampo:P40196
+kamo:P70153,je stolar,kamo:C10007,"Povezuje osobu koja je izradila drveni predmet ili građevni element, uključujući namještaj, oplate, obloge i građevnu stolariju s tim pojavnim oblikom.",kamo:P70133,kampo:C10004,kampo:P40201
+kamo:P70154,je tapetar,kamo:C10007,Povezuje osobu koja je izradila tekstilne presvlake za namještaj s tim pojavnim oblikom.,kamo:P70133,kampo:C10004,kampo:P40206
+kamo:P70155,je tkalac,kamo:C10007,Povezuje osobu koja je izradila tekstil ili drugi materijal tehnikom prepletanja niti s tim pojavnim oblikom.,kamo:P70133,kampo:C10004,kampo:P40211
+kamo:P70156,je uokvirivač,kamo:C10007,"Povezuje osobu koja je izradila ili ukrasila okvir za sliku, ogledalo ili drugi predmet s tim pojavnim oblikom.",kamo:P70133,kampo:C10004,kampo:P40216
+kamo:P70157,je urar,kamo:C10007,Povezuje osobu koja je izradila satni mehanizam s tim pojavnim oblikom.,kamo:P70133,kampo:C10004,kampo:P40221
+kamo:P70158,je vizažist,kamo:C10007,Povezuje osobu koja je izradila predmet ili dio predmeta tehnikom vitraja s tim pojavnim oblikom.,kamo:P70133,kampo:C10004,kampo:P40226
+kamo:P70159,je nakladnik,kamo:C10007,"Povezuje osobu koja je organizacijski, financijski i pravno odgovorna za objavljivanje pojavnog oblika s tim pojavnim oblikom.",kamo:P70021,kampo:C10004,kampo:P40231
+kamo:P70160,je oglašivač,kamo:C10007,Povezuje osobu koja je osmislila reklamnu kampanju i/ili koordinirala oglašavanje pojavnog oblika u masovnim medijima s tim pojavnim oblikom.,kamo:P70021,kampo:C10004,kampo:P40236
+kamo:P70161,je proizvođač,kamo:C10007,"Povezuje osobu koja je organizirala, financirala i/ili sudjelovala u procesu serijske proizvodnje pojavnog oblika ili njegovih dijelova s tim pojavnim oblikom.",kamo:P70021,kampo:C10004,kampo:P40241
+kamo:P70162,je proizvođač papira,kamo:C10007,"Povezuje osobu koja je proizvela papir tiskanog ili rukopisnog sveska, lista ili skupa listova s tim pojavnim oblikom.",kamo:P70161,kampo:C10004,kampo:P40246
+kamo:P70163,je tiskar,kamo:C10007,Povezuje osobu koja je proizvela pojavni oblik otiskom teksta ili slike na papir ili drugu podlogu s tim pojavnim oblikom.,kamo:P70161,kampo:C10004,kampo:P40251
+kamo:P70164,je prenositelj,kamo:C10007,"Povezuje osobu koja je sudjelovala u prijenosu sadržaja putem televizije, radija, interneta itd. s tim pojavnim oblikom.",kamo:P70021,kampo:C10004,kampo:P40256
+kamo:P70165,je prodavač,kamo:C10007,Povezuje osobu koja nudi na prodaju primjerke serijski proizvedenoga pojavnog oblika s tim pojavnim oblikom.,kamo:P70021,kampo:C10004,kampo:P40261
+kamo:P70166,je knjižar,kamo:C10007,Povezuje osobu koja nudi na prodaju knjige i druge publikacije s tim pojavnim oblikom.,kamo:P70165,kampo:C10004,kampo:P40266
+kamo:P70167,je raspačavatelj,kamo:C10007,Povezuje osobu koja ima isključivo pravo prodaje ili dijeljenja primjeraka pojavnog oblika na određenom tržištu s tim pojavnim oblikom.,kamo:P70021,kampo:C10004,kampo:P40271
+kamo:P70168,je suradnik na izdanju,kamo:C10007,Povezuje osobu koja sudjeluje u pripremi određenog izdanja za objavljivanje s tim pojavnim oblikom.,kamo:P70021,kampo:C10004,kampo:P40276
+kamo:P70169,je autor dodanog teksta,kamo:C10007,"Povezuje osobu koja je dopunila izdanje teksta druge osobe predgovorom, pogovorom, objašnjenjima, komentarima itd. s tim pojavnim oblikom.",kamo:P70168,kampo:C10004,kampo:P40281
+kamo:P70170,je grafički urednik,kamo:C10007,"Povezuje osobu odgovornu za grafičko oblikovanje izdanja, uključujući prijelom i pripremu za tisak s tim pojavnim oblikom.",kamo:P70168,kampo:C10004,kampo:P40286
+kamo:P70171,je ilustrator,kamo:C10007,Povezuje osobu koja je oblikovala slikovne prikaze uz određeno izdanje teksta s tim pojavnim oblikom.,kamo:P70168,kampo:C10004,kampo:P40291
+kamo:P70172,je tipograf,kamo:C10007,"Povezuje osobu koja je oblikovala slova tiskanog teksta, uključujući slaganje tiskarskog sloga od pomičnih slova s tim pojavnim oblikom.",kamo:P70168,kampo:C10004,kampo:P40296
+kamo:P70173,je osoba koja je preinačila primjerak,kamo:C10007,"Povezuje osobu čijom je intervencijom primjerak stekao posebna obilježja, uključujući ona po kojima se razlikuje od drugih primjeraka istog pojavnog oblika s tim primjerkom.",kamo:P70022,kamp:C10005,kamp:P50034
+kamo:P70174,je anotator,kamo:C10007,"Povezuje osobu koja je ručno dodala primjerku tekstualne, slikovne ili druge bilješke s tim primjerkom.",kamo:P70173,kamp:C10005,kamp:P50039
+kamo:P70175,je iluminator,kamo:C10007,Povezuje osobu koja je ukrasila primjerak iluminacijama s tim primjerkom.,kamo:P70173,kamp:C10005,kamp:P50044
+kamo:P70176,je knjigoveža,kamo:C10007,Povezuje osobu koja je uvezala knjigu s tim primjerkom.,kamo:P70173,kamp:C10005,kamp:P50049
+kamo:P70177,je restaurator,kamo:C10007,Povezuje osobu koja je modificirala primjerak kako bi zaustavila njegovo propadanje i vratila ga u stanje najbliže onome kakvo je bilo u određenom razdoblju njegove prošlosti s tim primjerkom.,kamo:P70173,kamp:C10005,kamp:P50059
+kamo:P70178,je rubrikator,kamo:C10007,Povezuje osobu koja je oblikovao i ukrasio početna slova (inicijale) teksta u rukopisima i prvim tiskanim knjigama s tim primjerkom.,kamo:P70173,kamp:C10005,kamp:P50064
+kamo:P70179,je osoba koja je stručno obradila primjerak,kamo:C10007,Povezuje osobu koja je oblikovala i ukrasila početna slova (inicijale) teksta u rukopisima i prvim tiskanim knjigama,kamo:P70022,kamp:C10005,kamp:P50068
+kamo:P70180,je determinator,kamo:C10007,Povezuje osobu koja je identificirala vrstu kojoj pripada primjerak prirodoslovne građe s tim primjerkom.,kamo:P70022,kamp:C10005,kamp:P50073
+kamo:P70181,je aukcionist,kamo:C10007,Povezuje osobu koja je posredovala pri aukcijskoj kupnji primjerka s tim primjerkom.,kamo:P70022,kamp:C10005,kamp:P50078
+kamo:P70182,je posjednik,kamo:C10007,Povezuje osobu koja posjeduje i/ili skrbi o primjerku s tim primjerkom.,kamo:P70022,kamp:C10005,kamp:P50083
+kamo:P70183,je vlasnik,kamo:C10007,Povezuje osobu koja nad primjerkom uživa ili je uživao vlasnička prava s tim primjerkom.,kamo:P70183,kamp:C10005,kamp:P50088
+kamo:P70184,je darovatelj,kamo:C10007,Povezuje osobu koja je darovala primjerak sadašnjem vlasniku s tim primjerkom.,kamo:P70183,kamp:C10005,kamp:P50093
+kamo:P70185,je deponent,kamo:C10007,Povezuje osobu koja je primjerak u svom vlasništvu povjerila na skrb i upravljanje sadašnjem imatelju s tim primjerkom.,kamo:P70183,kamp:C10005,kamp:P50098
+kamo:P70186,je prodavatelj,kamo:C10007,Povezuje osobu koja je prodala primjerak sadašnjem vlasniku s tim primjerkom.,kamo:P70183,kamp:C10005,kamp:P50103
+kamo:P70187,je preparator,kamo:C10007,Povezuje osobu koja je izradila preparat  prirodoslovnog objekta s tim primjerkom.,kamo:P70022,kamp:C10005,kamp:P50054
+kamo:P70188,je procjenitelj,kamo:C10007,Povezuje osobu koja je procijenila vrijednost primjerka s tim primjerkom.,kamo:P70022,kamp:C10005,kamp:P50108
+kamo:P70189,je sakupljač,kamo:C10007,Povezuje osobu koja je prikupila primjerak terenskim istraživanjem s tim primjerkom.,kamo:P70022,kamp:C10005,kamp:P50113
+kamo:P70190,je osoba povezana s mjestom,kamo:C10007,Povezuje osobu s mjestom.,kamo:P70001,kamm:C10011,kamm:P11024
+kamo:P70191,ima mjesto djelovanja ,kamo:C10007,Povezuje osobu s mjestom na kojemu je osoba djelovala.,kamo:P70190,kamm:C10011,kamm:P11025
+kamo:P70192,ima mjesto rođenja ,kamo:C10007,Povezuje osobu s mjestom na kojemu je osoba rođena.,kamo:P70190,kamm:C10011,kamm:P11026
+kamo:P70193,ima mjesto sahrane,kamo:C10007,Povezuje osobu s mjestom na kojemu je osoba sahranjena.,kamo:P70190,kamm:C10011,kamm:P11027
+kamo:P70194,ima mjesto smrti,kamo:C10007,Povezuje osobu s mjestom na kojemu je osoba umrla.,kamo:P70190,kamm:C10011,kamm:P11028
+kamo:P70195,ima u posjedu mjesto,kamo:C10007,Povezuje osobu s mjestom u vlasništvu osobe.,kamo:P70190,kamm:C10011,kamm:P11029
+kamo:P70196,je osoba povezana s vremenskim rasponom,kamo:C10007,Povezuje osobu s vremenskim rasponom,kamo:P70001,kamvr:C10012,kamvr:P12018
+kamo:P70197,ima vrijeme djelovanja,kamo:C10007,Povezuje osobu s vremenskim rasponom u kojemu je osoba djelovala.,kamo:P70196,kamvr:C10012,kamvr:P12019
+kamo:P70198,ima vrijeme obnašanja dužnosti ili položaja,kamo:C10007,Povezuje osobu s vremenskim rasponom u kojemu je osoba obnašala određenu dužnost ili položaj.,kamo:P70196,kamvr:C10012,kamvr:P12020
+kamo:P70199,ima vrijeme rođenja,kamo:C10007,Povezuje osobu s vremenskim rasponom u kojemu je osoba rođena.,kamo:P70196,kamvr:C10012,kamvr:P12021
+kamo:P70200,ima vrijeme smrti,kamo:C10007,Povezuje osobu s vremenskim rasponom u kojemu je osoba umrla.,kamo:P70196,kamvr:C10012,kamvr:P12022
+kamo:P70201,je osoba povezana s agentom,kamo:C10007,Povezuje osobu s agentom.,kamo:P70001,kama:C10006,kama:P60008
+kamo:P70202,je osoba povezana s osobom,kamo:C10007,Povezuje osobu s osobom,kamo:P70201,kamo:C10007,kamo:P70202
+kamo:P70203,je brat,kamo:C10007,Povezuje osobu s osobom muškog roda koja s njim dijeli iste roditelje.,kamo:P70202,kamo:C10007,kamo:P70204
+kamo:P70204,ima brata,kamo:C10007,Povezuje osobu s osobom muškog roda koja s njim dijeli iste roditelje.,kamo:P70202,kamo:C10007,kamo:P70203
+kamo:P70205,je dijete,kamo:C10007,Povezuje osobu s osobom čiji je neposredni potomak.,kamo:P70202,kamo:C10007,kamo:P70206
+kamo:P70206,ima dijete,kamo:C10007,Povezuje osobu s osobom koja je njen neposredni potomak.,kamo:P70202,kamo:C10007,kamo:P70205
+kamo:P70207,je kći,kamo:C10007,Povezuje osobu s osobom kojoj je neposredni potomak ženskog roda.        ,kamo:P70205,kamo:C10007,kamo:P70208
+kamo:P70208,ima kći,kamo:C10007,Povezuje osobu s osobom koja je njen neposredni potomak ženskog roda.        ,kamo:P70206,kamo:C10007,kamo:P70207
+kamo:P70209,je sin,kamo:C10007,Povezuje osobu s osobom kojoj je neposredni potomak muškog roda.,kamo:P70205,kamo:C10007,kamo:P70210
+kamo:P70210,ima sina,kamo:C10007,Povezuje osobu s osobom koja je njen neposredni potomak muškog roda.,kamo:P70206,kamo:C10007,kamo:P70209
+kamo:P70211,je mecena,kamo:C10007,Povezuje osobu koja novcem i drugim materijalnim dobrima podupire rad (osobito umjetnički) druge osobe.,kamo:P70202,kamo:C10007,kamo:P70212
+kamo:P70212,ima mecenu,kamo:C10007,Povezuje osobu s osobom koja novcem i drugim materijalnim dobrima podupire njen rad (osobito umjetnički).,kamo:P70202,kamo:C10007,kamo:P70211
+kamo:P70213,je nasljednik,kamo:C10007,Povezuje osobu s osobom koju je naslijedila u obavljanju neke dužnosti ili obnašanju položaja.,kamo:P70202,kamo:C10007,kamo:P70214
+kamo:P70214,ima nasljednika,kamo:C10007,Povezuje osobu s osobom koja ju je naslijedila u obavljanju neke dužnosti ili obnašanju položaja.,kamo:P70202,kamo:C10007,kamo:P70213
+kamo:P70215,je nastavnik,kamo:C10007,Povezuje osobu s osobom kojoj je predavala u akademskoj ustanovi; koju je vodila ili nadzirala u procesu stjecanja akademskog stupnja.,kamo:P70202,kamo:C10007,kamo:P70216
+kamo:P70216,ima nastavnika,kamo:C10007,Povezuje osobu s osobom koja joj je predavala u akademskoj ustanovi; koja ju je vodila ili nadzirala u procesu stjecanja akademskog stupnja.,kamo:P70202,kamo:C10007,kamo:P70215
+kamo:P70217,je prethodnik,kamo:C10007,Povezuje osobu s osobom prije koje je obavljala neku dužnost ili obnašala položaj.,kamo:P70202,kamo:C10007,kamo:P70218
+kamo:P70218,ima prethodnika,kamo:C10007,Povezuje osobu s osobom koje je prije nje obavljala neku dužnost ili obnašala položaj.,kamo:P70202,kamo:C10007,kamo:P70217
+kamo:P70219,je roditelj,kamo:C10007,Povezuje osobu s osobom koja mu je neposredni potomak.,kamo:P70202,kamo:C10007,kamo:P70220
+kamo:P70220,ima roditelja,kamo:C10007,Povezuje osobu s osobom kojoj je neposredni potomak.,kamo:P70202,kamo:C10007,kamo:P70219
+kamo:P70221,je majka,kamo:C10007,Povezuje osobu ženskog roda s osobom kojoj je roditelj.,kamo:P70219,kamo:C10007,kamo:P70222
+kamo:P70222,ima majku,kamo:C10007,Povezuje osobu s osobom ženskog roda koja je roditelj toj osobi.,kamo:P70220,kamo:C10007,kamo:P70221
+kamo:P70223,je otac,kamo:C10007,Povezuje osobu muškog roda s osobom kojoj je roditelj.,kamo:P70219,kamo:C10007,kamo:P70224
+kamo:P70224,ima oca,kamo:C10007,Povezuje osobu s osobom muškog roda koja je roditelj toj osobi.,kamo:P70220,kamo:C10007,kamo:P70223
+kamo:P70225,je rođak,kamo:C10007,Povezuje osobu s osobom s kojom je u daljoj rodbinskoj vezi.,kamo:P70202,kamo:C10007,kamo:P70226
+kamo:P70226,ima rođaka,kamo:C10007,Povezuje osobu s osobom s kojom je u daljoj rodbinskoj vezi.,kamo:P70202,kamo:C10007,kamo:P70225
+kamo:P70227,je sestra,kamo:C10007,Povezuje osobu s osobom ženskog roda koja s njom dijeli iste roditelje.,kamo:P70202,kamo:C10007,kamo:P70228
+kamo:P70228,ima sestru,kamo:C10007,Povezuje osobu s osobom ženskog roda koja s njom dijeli iste roditelje.,kamo:P70202,kamo:C10007,kamo:P70227
+kamo:P70229,je student,kamo:C10007,Povezuje osobu s osobom koja je toj osobi predavala u akademskoj ustanovi; s osobom pod čijim je nadzorom ili mentorstvom stekla akademski stupanj.,kamo:P70202,kamo:C10007,kamo:P70230
+kamo:P70230,ima studenta,kamo:C10007,Povezuje osobu s osobom kojoj je predavala u akademskoj ustanovi; s osobom koja je stekla akademski stupanj pod njenim nadzorom ili mentorstvom.,kamo:P70202,kamo:C10007,kamo:P70229
+kamo:P70231,je suradnik,kamo:C10007,Povezuje osobu s osobom koja u svom radu djeluje zajednički s tom osobom. ,kamo:P70202,kamo:C10007,kamo:P70232
+kamo:P70232,ima suradnika,kamo:C10007,Povezuje osobu s osobom koja u svom radu djeluje zajednički s tom osobom. ,kamo:P70202,kamo:C10007,kamo:P70231
+kamo:P70233,je učenik,kamo:C10007,Povezuje osobu s osobom od koje je izučila zanat ili zanimanje.,kamo:P70202,kamo:C10007,kamo:P70234
+kamo:P70234,ima učenika,kamo:C10007,Povezuje osobu s osobom koju je izučila zanat ili zanimanje.,kamo:P70202,kamo:C10007,kamo:P70233
+kamo:P70235,je učitelj,kamo:C10007,Povezuje osobu s osobom koju je podučila zanatu ili zanimanju.,kamo:P70202,kamo:C10007,kamo:P70236
+kamo:P70236,ima učitelja,kamo:C10007,Povezuje osobu s osobom koja ju je podučila zanatu ili zanimanju.,kamo:P70202,kamo:C10007,kamo:P70235
+kamo:P70237,je osoba povezana s kolektivnim agentom,kamo:C10007,Povezuje osobu s kolektivnim agentom.,kamo:P70201,kamka:C10008,kamka:P80198
+kamo:P70238,je osoba povezana s korporativnim tijelom,kamo:C10007,Povezuje osobu s korporativnim tijelom.,kamo:P70237,kamkt:C10009,kamkt:P90203
+kamo:P70239,je član korporativnog tijela,kamo:C10007,"Povezuje osobu s korporativnim tijelom (udruge, stranke, grupe, korporativnog sastanka itd.) kojeg je član.",kamo:P70238,kamkt:C10009,kamkt:P90205
+kamo:P70240,je vlasnik korporativnog tijela,kamo:C10007,Povezuje osobu s korporativnim tijelom kojeg je vlasnik,kamo:P70238,kamkt:C10009,kamkt:P90206
+kamo:P70241,je zaposlenik korporativnog tijela,kamo:C10007,"Povezuje osobu s korporativnim tijelom (ustanovi, tvrtki itd.) u čijem je radnom odnosu.	",kamo:P70238,kamkt:C10009,kamkt:P90204
+kamo:P70242,je osoba povezana s obitelji,kamo:C10007,Povezuje osobu s obitelji.,kamo:P70237,kamob:C10010,kamob:P10187
+kamo:P70243,je osoba član obitelji,kamo:C10007,"Povezuje osobu s obitelji s kojom je povezana rodbinskim, bračnim ili drugim vezama.",kamo:P70242,kamob:C10010,kamob:P10188
+kamo:P70244,ima napomenu o identifikaciji osobe,kamo:C10007,Povezuje osobu s kratkim tekstom u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o osobi i/ili izvorima iz kojih su identifikacijski podaci preuzeti.,kamo:P70018,,
+kamo:P70245,ima napomenu o odnosu osobe i drugih jedinica opisa,kamo:C10007,"Povezuje osobu s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između osobe i i druge osobe ili više drugih osoba, odnosno osobe i druge ili više drugih jedinica opisa.",kamo:P70018,,
+kamo:P70247,je osoba predmet djela,kamo:C10007,"Povezuje osobu s izrazom, nadziranim nazivom, imenom, naslovom, identifikatorom ili drugom nadziranom oznakom koja označava temu kojom se bavi ili koju prikazuje djelo.",kamo:P70019,kamd:C10002,kamd:P20326
+kamo:P70246,ima kategoriju osobe,kamo:C10007,Povezuje osobu s vrstom kojoj osoba pripada.,kama:P60001,,

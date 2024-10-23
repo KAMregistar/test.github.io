@@ -1,0 +1,196 @@
+CURIE,Label,Domain,Definition,subPropertyOf,Range,inverseOf
+kama:P60001,ima vrstu agenta,kama:C10006,"Povezuje agenta s izrazom koji označava je li agent osoba, kolektivni agent, korporativno tijelo ili obitelj.",kamjo:P10001,,
+kama:P60002,je agent povezan s jedinicom opisa,kama:C10006,Povezuje agenta s jedinicom opisa.,kamjo:P10003,kamjo:C10001,kamjo:P10008
+kama:P60003,je agent povezan s djelom,kama:C10006,Povezuje agenta s djelom.,kama:P60002,kamd:C10002,kamd:P20035
+kama:P60004,je agent povezan s izrazom,kama:C10006,Povezuje agenta s izrazom.,kama:P60002,kami:C10003,kami:P30032
+kama:P60005,je agent povezan s pojavnim oblikom,kama:C10006,Povezuje agenta s pojavnim oblikom.,kama:P60002,kampo:C10004,kampo:P40095
+kama:P60006,je agent povezan s primjerkom,kama:C10006,Povezuje agenta s primjerkom.,kama:P60002,kamp:C10005,kamp:P50025
+kama:P60007,je agent povezan s agentom,kama:C10006,Povezuje agenta s agentom.,kama:P60002,kama:C10006,kama:P60007
+kama:P60008,je agent povezan s osobom,kama:C10006,Povezuje agenta s osobom.,kama:P60007,kamo:C10007,kamo:P70201
+kama:P60009,je agent povezan s kolektivnim agentom,kama:C10006,Povezuje agenta s kolektivnim agentom.,kama:P60007,kamka:C10008,kamka:P80010
+kama:P60010,je agent povezan s mjestom,kama:C10006,Povezuje agenta s mjestom.,kama:P60002,kamjo:C100011,kamm:P11023
+kama:P60011,je agent povezan s vremenskim rasponom,kama:C10006,Povezuje agenta s vremenskim rasponom.,kama:P60002,kamjo:C100012,kamvr:P12017
+kama:P60012,je agent čije ovlasti proizlaze iz djela,kama:C10006,"Povezuje agenta čije se ovlasti, funkcije i odgovornosti temelje na djelu s tim djelom.",kama:P60003,kamd:C10002,kamd:P20040
+kama:P60013,je agent navodni stvaratelj ,kama:C10006,"Povezuje agenta čija je stvaralačka uloga u nastanku djela pogrešna, lažna ili izmišljena s tim djelom.",kama:P60003,kamd:C10002,kamd:P20045
+kama:P60014,je agent nositelj prava intelektualnog vlasništva,kama:C10006,"Povezuje agenta koji nad djelom uživa imovinska autorska prava ili pravo industrijskog vlasništva (patent, oznaka izvornosti itd.) s tim djelom.",kama:P60003,kamd:C10002,kamd:P20050
+kama:P60015,je agent pretpostavljeni stvaratelj,kama:C10006,"Povezuje agenta koji se opravdano smatra stvarateljem djela, ali njegova stvaralačka uloga nije pouzdano utvrđena ili dokazana s tim djelom.",kama:P60003,kamd:C10002,kamd:P20055
+kama:P60016,je agent stvaratelj,kama:C10006,Povezuje agenta s djelom kojeg je stvorio.,kama:P60003,kamd:C10002,kamd:P20060
+kama:P60017,je agent koji daje intervju,kama:C10006,Povezuje agenta koji u pisanom ili usmenom obliku odgovara na pitanja koja mu postavlja voditelj intervjua s tim djelom.,kama:P60016,kamd:C10002,kamd:P20065
+kama:P60018,je agent arhitekt,kama:C10006,"Povezuje agenta odgovornog za projekt građevine ili drugog prostornog kompleksa, uključujući koordinaciju projektnog tima s tim djelom",kama:P60016,kamd:C10002,kamd:P20070
+kama:P60019,je agent krajobrazni arhitekt,kama:C10006,Povezuje agenta odgovornog za planiranje i oblikovanje krajobraza s tim djelom.,kama:P60016,kamd:C10002,kamd:P20075
+kama:P60020,je autor izložbe,kama:C10006,"Povezuje agenta odgovornog za koncepciju izložbe, uključujući istraživački rad, izradu scenarija izložbe, koordinaciju stručnjaka i stručnih timova itd. s tim djelom.",kama:P60016,kamd:C10002,kamd:P20080
+kama:P60021,je autor performansa,kama:C10006,Povezuje agenta koji je autor performansa s tim djelom.,kama:P60016,kamd:C10002,kamd:P20085
+kama:P60022,je autor teksta,kama:C10006,Povezuje agent odgovoranog za djelo izraženo u tekstualnom obliku s tim djelom.,kama:P60016,kamd:C10002,kamd:P20090
+kama:P60023,je copyrighter,kama:C10006,Povezuje agenta koji je osmislio tekst reklame s tim djelom.,kama:P60016,kamd:C10002,kamd:P20095
+kama:P60024,je korespondent,kama:C10006,"Povezuje agenta koji je osmislio i poslao tekstualnu poruku (pismo, poruku elektroničke pošte itd.) s tim djelom.",kama:P60016,kamd:C10002,kamd:P20100
+kama:P60025,je disertant,kama:C10006,Povezuje agenta koji u akademskoj raspravi brani disertaciju radi stjecanja akademskog stupnja s tim djelom.,kama:P60016,kamd:C10002,kamd:P20125
+kama:P60026,je libretist,kama:C10006,"Povezuje agenta odgovornog za tekst libreta glazbeno-scenskog djela (opere, operete itd.) ili oratorija s tim djelom.",kama:P60016,kamd:C10002,kamd:P20105
+kama:P60027,je pisac,kama:C10006,Povezuje agenta koji je osmislio književno djelo s tim djelom.,kama:P60016,kamd:C10002,kamd:P20110
+kama:P60028,je scenarist,kama:C10006,"Povezuje agenta odgovornog za ideju i sinopsis i/ili scenarij radijskog ili televizijskog programa, stripa, video igre ili drugog narativnog djela iskazanog u slikovnom obliku, osim filma s tim djelom.",kama:P60016,kamd:C10002,kamd:P20115
+kama:P60029,je tekstopisac,kama:C10006,Povezuje agenta odgovornog za tekst pjevanog glazbenog djela s tim djelom.,kama:P60016,kamd:C10002,kamd:P20120
+kama:P60030,je dizajner,kama:C10006,Povezuje agenta odgovornog za funkcionalno i/ili vizualno oblikovanje industrijskog predmeta (industrijski dizajner) ili komunikacijsku formu (grafički dizajner) s tim djelom.,kama:P60016,kamd:C10002,kamd:P20127
+kama:P60031,je glavni i odgovorni urednik,kama:C10006,"Povezuje agenta odgovornog za uredničku politiku i sadržaj neomeđene jedinice građe (časopisa, novina, nakladničke cjeline, mrežnih stranica, bloga itd.) s tim djelom.",kama:P60016,kamd:C10002,kamd:P20132
+kama:P60032,je govornik,kama:C10006,"Povezuje agenta koji je održao govor, predavanje, propovijed ili drugi oblik usmenog obraćanja publici s tim djelom.",kama:P60016,kamd:C10002,kamd:P20134
+kama:P60033,je istraživač,kama:C10006,Povezuje agenta odgovornog za koncepciju i provedbu istraživanja s tim djelom.,kama:P60016,kamd:C10002,kamd:P20136
+kama:P60034,je član istraživačke skupine,kama:C10006,Povezuje agenta koji sudjeluje u skupini koja je osmislila i provela istraživanje s tim djelom.,kama:P60016,kamd:C10002,kamd:P20141
+kama:P60035,je voditelj istraživačke skupine,kama:C10006,Povezuje agenta koji nadzire rad skupine koja je osmislila i provela istraživanje s tim djelom.,kama:P60016,kamd:C10002,kamd:P20143
+kama:P60036,je izumitelj,kama:C10006,Povezuje agenta odgovornog za osmišljavanje i razvoj nove vrste predmeta ili tehnološkog postupka s tim djelom.,kama:P60016,kamd:C10002,kamd:P20145
+kama:P60037,je kartograf,kama:C10006,"Povezuje agenta koji je stvorio kartu, atlas ili drugi kartografski prikaz u analognom ili digitalnom obliku s tim djelom.",kama:P60016,kamd:C10002,kamd:P20150
+kama:P60038,je koreograf,kama:C10006,Povezuje agenta koji je osmislio ples ili drugi oblik izvedbene umjetnosti koji se temelji na pokretima tijela s tim djelom.,kama:P60016,kamd:C10002,kamd:P20155
+kama:P60039,je likovni umjetnik,kama:C10006,Povezuje agenta koji je osmislio djelo likovne umjetnosti s tim djelom.,kama:P60016,kamd:C10002,kamd:P20160
+kama:P60040,je crtač,kama:C10006,Povezuje agenta koji je osmislio crtež s tim djelom.,kama:P60016,kamd:C10002,kamd:P20165
+kama:P60041,je fotograf,kama:C10006,"Povezuje agenta koji je osmislio fotografiju ili djelo sastavljeno od fotografija (fotografski album, fotomonografiju itd.) s tim djelom.",kama:P60016,kamd:C10002,kamd:P20167
+kama:P60042,je grafičar,kama:C10006,Povezuje agenta koji je osmislio djelo grafičke umjetnosti s tim djelom.,kama:P60016,kamd:C10002,kamd:P20172
+kama:P60043,je kipar,kama:C10006,"Povezuje agenta koji je osmislio i oblikovao trodimenzionalno likovno djelo, uključujući kipove, reljefe i arhitektonsku plastiku s tim djelom.",kama:P60016,kamd:C10002,kamd:P20177
+kama:P60044,je medaljer,kama:C10006,"Povezuje agenta koji je osmislio i oblikovao medalju, plaketu, novčić ili drugo djelo sitne, najčešće metalne plastike s tim djelom.",kama:P60016,kamd:C10002,kamd:P20182
+kama:P60045,je slikar,kama:C10006,Povezuje agenta koji je stvorio slikarsko djelo s tim djelom.,kama:P60016,kamd:C10002,kamd:P20187
+kama:P60046,je nositelj projekta,kama:C10006,Povezuje agenta koji upravlja znanstvenim ili razvojnim projektom i odgovoran je za sve aspekte projekta s tim djelom.,kama:P60016,kamd:C10002,kamd:P20192
+kama:P60047,je praeses,kama:C10006,"Povezuje agenta koji predsjedava akademskom raspravom (predsjednik ispita), a često je odgovoran i za odabir teme disertacije i oblikovanje teze s tim djelom.",kama:P60016,kamd:C10002,kamd:P20197
+kama:P60048,je priređivač,kama:C10006,"Povezuje agenta koji je prikupio, sabrao i uredio više izraza djela drugih agenata u jedinstveno novo djelo poput antologije, zbornika, kompilacije i sl. s tim djelom.",kama:P60016,kamd:C10002,kamd:P20199
+kama:P60049,je programer,kama:C10006,Povezuje agenta koji je stvorio kôd računalnog programa ili aplikacije s tim djelom.,kama:P60016,kamd:C10002,kamd:P20203
+kama:P60050,je redatelj,kama:C10006,"Povezuje agenta odgovornog za koncepciju i nadzor nad stvaranjem filma, televizijskog programa, djela videoumjetnosti, scenskog djela i sl. s tim djelom.",kama:P60016,kamd:C10002,kamd:P20207
+kama:P60051,je filmski redatelj,kama:C10006,Povezuje agenta odgovornog za koncepciju i nadzor nad snimanjem filma s tim djelom.,kama:P60016,kamd:C10002,kamd:P20209
+kama:P60052,je kazališni redatelj,kama:C10006,Povezuje agenta odgovornog za koncepciju i nadzor nad stvaranjem scenskog djela s tim djelom.,kama:P60016,kamd:C10002,kamd:P20211
+kama:P60053,je sastavljač,kama:C10006,"Povezuje agenta koji je prikupio, sabrao i uredio različite podatke u referentnu cjelinu (enciklopediju, rječnik, vodič, bibliografiju, statističku tablicu i sl.) s tim djelom.",kama:P60016,kamd:C10002,kamd:P20201
+kama:P60054,je skladatelj,kama:C10006,Povezuje agenta koji je skladao samostalno glazbeno djelo s tim djelom.,kama:P60016,kamd:C10002,kamd:P20213
+kama:P60055,je stvaratelj arhivskog gradiva,kama:C10006,"Povezuje agenta čije je djelovanje dovelo do nastanka, prikupljanja i/ili čuvanja arhivskog fonda ili njegovog dijela s tim djelom.",kama:P60016,kamd:C10002,kamd:P20217
+kama:P60056,je stvaratelj zbirke,kama:C10006,Povezuje agenta odgovornog za plan prikupljanja građe u zbirci s tim djelom.,kama:P60016,kamd:C10002,kamd:P20222
+kama:P60057,je ugovorna stranka,kama:C10006,Povezuje agenta koji je sklopio ugovor s tim djelom.,kama:P60016,kamd:C10002,kamd:P20227
+kama:P60058,je urbanist,kama:C10006,"Povezuje agenta odgovornog za planiranje funkcije i prostorne organizacije grada ili dijela grada, uključujući planove, računalne simulacije i sl. koji prikazuju izgled i namjenu gradskog prostora s tim djelom.",kama:P60016,kamd:C10002,kamd:P20232
+kama:P60059,je voditelj intervjua,kama:C10006,Povezuje agenta koji u pisanom ili usmenom obliku postavlja pitanja drugom agentu s tim djelom.,kama:P60016,kamd:C10002,kamd:P20236
+kama:P60060,je zakonodavac,kama:C10006,Povezuje agenta - upravno-teritorijalnu jedinicu čije je zakonodavno tijelo donijelo zakon ili drugi opći pravni akt s tim djelom.,kama:P60016,kamd:C10002,kamd:P20238
+kama:P60061,je agent sudionik u nastanku djela,kama:C10006,"Povezuje agenta koji je potaknuo, nadahnuo, podržao i/ili odobrio djelo, ali nije imao izravnu stvaralačku ulogu u njegovu nastanku s tim djelom.",kama:P60003,kamd:C10002,kamd:P20241
+kama:P60062,je agent adresat,kama:C10006,"Povezuje agenta koji je primio tekstualnu poruku (pismo, poruku elektroničke pošte, poruku putem mobilne aplikacije itd.) s tim djelom.",kama:P60062,kamd:C10002,kamd:P20246
+kama:P60063,je agent kojem je djelo posvećeno,kama:C10006,Povezuje agenta kojem je djelo formalno ili neformalno posvećeno s tim djelom.,kama:P60062,kamd:C10002,kamd:P20251
+kama:P60064,je akademska ustanova,kama:C10006,Povezuje agenta koji je odobrio završni rad ili disertaciju na temelju koje se dodijeljuje akademski stupanj s tim djelom.,kama:P60062,kamd:C10002,kamd:P20256
+kama:P60065,je član povjerenstva za stjecanje akademskog stupnja,kama:C10006,Povezuje agenta koji sudjeluje u povjerenstvu koje nadzire i odobrava završni rad ili disertaciju s tim djelom.,kama:P60062,kamd:C10002,kamd:P20259
+kama:P60066,je izdavač,kama:C10006,"Povezuje agenta koji u vlastito ime pokreće, organizira i financijski podupire izdavanje djela (najčešće serijske jedinice građe) s tim djelom.",kama:P60062,kamd:C10002,kamd:P20261
+kama:P60067,je mentor,kama:C10006,Povezuje agenta koji nadzire izradu ocjenskog ili završnog rada ili disertacije s tim djelom.,kama:P60062,kamd:C10002,kamd:P20266
+kama:P60068,je naručitelj,kama:C10006,Povezuje agenta  koji je naručio i platio stvaranje djela s tim djelom.,kama:P60062,kamd:C10002,kamd:P20268
+kama:P60069,je oponent,kama:C10006,Povezuje agenta koji se u akademskoj raspravi suprotstavlja tezi koju brani disertant s tim djelom.,kama:P60062,kamd:C10002,kamd:P20273
+kama:P60070,je osnivač,kama:C10006,"Povezuje agenta koji je pokrenuo izdavanje neomeđene jedinice građe (časopisa, novina, bloga, nakladničke cjeline itd.); izdavanje može i ne mora sâm organizirati i/ili financijski podupirati s tim djelom.",kama:P60062,kamd:C10002,kamd:P20275
+kama:P60071,je pokrovitelj,kama:C10006,"Povezuje agenta koji je financijski podržao (ali nije nužno sam naručio, pokrenuo ili utemeljio) stvaranje djela ili organizirani događaj (istraživanje, konferenciju, izložbu itd.) koji je doveo do nastanka djela s tim djelom.",kama:P60062,kamd:C10002,kamd:P20280
+kama:P60072,je savjetnik,kama:C10006,Povezuje agenta koji je sudjelovao u stvaranju djela svojim stručnim znanjem ili iskustvom u određenom području djelovanja s tim djelom.,kama:P60062,kamd:C10002,kamd:P20285
+kama:P60073,je cenzor,kama:C10006,"Povezuje agenta koji je izmijenio izvorni sadržaj jedinice građe (tekst, kompoziciju, slijed sekvenci itd.) kako bi bio u skladu s određenim političkim ili religijskim svjetonazorom s izrazom tog djela.",kama:P60004,kami:C10003,kami:P30037
+kama:P60074,je citirani autor,kama:C10006,Povezuje agenta čije se djelo navodi ili citira u sadržaju jedinice građe s izrazom tog djela.,kama:P60004,kami:C10003,kami:P30042
+kama:P60075,je glazbeni aranžer,kama:C10006,Povezuje agenta koji je na temelju osnovne zamisli skladatelja razradio instrumentalne i/ili vokalne dionice glazbenog djela za određeni izvođački sastav ili preradio glazbeno djelo drugog skladatelja za drugi izvođački sastav ili tonalitet s izrazom tog djela.,kama:P60004,kami:C10003,kami:P30047
+kama:P60076,je izvođač,kama:C10006,Povezuje agenta koji nastupa u izvedbi djela s izrazom tog djela.,kama:P60004,kami:C10003,kami:P30052
+kama:P60077,je glazbenik,kama:C10006,"Povezuje agenta koji izvodi instrumentalno, vokalno ili vokalno-instrumentalno glazbeno djelo s izrazom tog djela.",kama:P60077,kami:C10003,kami:P30057
+kama:P60078,je dirigent,kama:C10006,Povezuje agenta koji ravna instrumentalnim ili mješovitim sastavom koji izvodi glazbeno ili glazbeno-scensko djelo s izrazom tog djela.,kama:P60077,kami:C10003,kami:P30062
+kama:P60079,je DJ,kama:C10006,Povezuje agenta koji reproducira i miješa izraze postojećih glazbenih djela u novu cjelinu s izrazom tog djela.,kama:P60077,kami:C10003,kami:P30064
+kama:P60080,je instrumentalist,kama:C10006,Povezuje agenta koji svira glazbeni instrument u izvedbi glazbenog djela s izrazom tog djela.,kama:P60077,kami:C10003,kami:P30066
+kama:P60081,je pjevač,kama:C10006,Povezuje agenta koja izvodi vokalno glazbeno djelo ili vokalnu dionicu glazbenog djela s izrazom tog djela.,kama:P60077,kami:C10003,kami:P30071
+kama:P60082,je voditelj zbora,kama:C10006,Povezuje agenta koji ravna zborom koji izvodi vokalno ili vokalno-instrumentalno glazbeno djelo s izrazom tog djela.,kama:P60077,kami:C10003,kami:P30076
+kama:P60083,je glumac,kama:C10006,"Povezuje agenta koji tumači ulogu u dramskoj ili glazbeno-scenskoj predstavi, filmu ili drugom obliku izvedbene umjetnosti s izrazom tog djela.",kama:P60077,kami:C10003,kami:P30078
+kama:P60084,je glasovni glumac,kama:C10006,"Povezuje agenta koji posuđuje glas liku u filmu, računalnoj igri, radijskoj drami ili drugom djelu zvučnog ili zvučno-slikovnog sadržaja s izrazom tog djela.",kama:P60077,kami:C10003,kami:P30083
+kama:P60085,je kazivač,kama:C10006,"Povezuje agenta koji govori ili pripovijeda  narodne pjesme, priče i sl. onome tko zapisuje ili snima s izrazom tog djela.",kama:P60077,kami:C10003,kami:P30085
+kama:P60086,je komentator,kama:C10006,"Povezuje agenta koji interpretira, analizira ili raspravlja na neku temu u televizijskoj ili radijskoj emisiji ili drugom djelu zvučnog ili zvučno-slikovnog sadržaja s izrazom tog djela.",kama:P60077,kami:C10003,kami:P30087
+kama:P60087,je lutkar,kama:C10006,"Povezuje agenta koji upravlja lutkama u dramskoj ili glazbeno-scenskoj predstavi, filmu ili drugom obliku izvedbene umjetnosti s izrazom tog djela.",kama:P60077,kami:C10003,kami:P30089
+kama:P60088,je moderator,kama:C10006,Povezuje agenta koji vodi raspravu na određenu temu uživo ili putem medija masovnog priopćavanja s izrazom tog djela.,kama:P60077,kami:C10003,kami:P30091
+kama:P60089,je panelist,kama:C10006,Povezuje agenta koji sudjeluje u raspravi na određenu temu uživo ili putem medija masovnog priopćavanja s izrazom tog djela.,kama:P60077,kami:C10003,kami:P30093
+kama:P60090,je pantomimičar,kama:C10006,"Povezuje agenta koji osjećaje, misli i stavove izražava tehnikom i pravilima pantomime s tim izrazom.",kama:P60077,kami:C10003,kami:P30095
+kama:P60091,je plesač,kama:C10006,Povezuje agenta koji pleše u glazbeno-scenskoj predstavi ili drugom obliku izvedbene umjetnosti s izrazom tog djela.,kama:P60077,kami:C10003,kami:P30097
+kama:P60092,je pripovjedač,kama:C10006,"Povezuje agenta koji pripovijeda priču drugog agenta; posebice onog koji pripovijeda radnju u filmu, zvučnoj knjizi, računalnoj igri ili drugom obliku fikcije iskazane snimljenim govorom s izrazom tog djela.",kama:P60077,kami:C10003,kami:P30102
+kama:P60093,je spiker,kama:C10006,"Povezuje agenta koji na radiju ili televiziji najavljuje program ili čita informativne tekstove, uključujući vijesti, dokumentarne emisije itd. s izrazom tog djela.",kama:P60077,kami:C10003,kami:P30104
+kama:P60094,je voditelj,kama:C10006,"Povezuje agenta koji uživo ili putem masovnih medija (radija, televizije itd.) vodi program koji uključuje i druge izvođače s izrazom tog djela.",kama:P60077,kami:C10003,kami:P30106
+kama:P60095,je lektor,kama:C10006,Povezuje agenta koji jezično i stilski ispravlja i dotjeruje tekst u pripremi za objavljivanje s izrazom tog djela.,kama:P60004,kami:C10003,kami:P30108
+kama:P60096,je prevoditelj,kama:C10006,"Povezuje agenta koji, slijedeći izvornik, prenosi tekst s jednog jezika u drugi ili iz starijeg oblika jezika u noviji oblik s izrazom tog djela.",kama:P60004,kami:C10003,kami:P30110
+kama:P60097,je sažimatelj,kama:C10006,"Povezuje agenta koji je sažeo izvorni izraz djela bez značajnijih promjena u sadržaju, značenju itd. s izrazom tog djela.",kama:P60004,kami:C10003,kami:P30112
+kama:P60098,je suradnik u realizaciji izraza,kama:C10006,Povezuje agenta koji je sudjelovao u realizaciji djela stručnim doprinosom u određenom području djelovanja s tim izrazom.,kama:P60004,kami:C10003,kami:P30114
+kama:P60099,je animator,kama:C10006,"Povezuje agenta odgovornog za stvaranje privida kretanja niza statičnih slika ili predmeta u filmu, videu, računalnoj igri ili sl. s izrazom tog djela.",kama:P60099,kami:C10003,kami:P30119
+kama:P60100,je autor računalnih vizualizacija,kama:C10006,"Povezuje agenta odgovornog za stvaranje računalnih vizualizacija koje  prikazuju građevinu, tehničku tvorevinu ili drugi objekt u stanju dovršenosti s izrazom tog djela.",kama:P60099,kami:C10003,kami:P30124
+kama:P60101,je direktor fotografije,kama:C10006,"Povezuje agenta koji koordinira i nadzire snimanje scena u filmu, videu, televizijskom programu ili drugom obliku pokretnih slika s tim izrazom.",kama:P60099,kami:C10003,kami:P30129
+kama:P60102,je dizajner interijera,kama:C10006,"Povezuje agenta odgovornog za odabir, dizajn i raspored elemenata interijera građevine s izrazom tog djela.",kama:P60099,kami:C10003,kami:P30134
+kama:P60103,je inženjer zvuka,kama:C10006,"Povezuje agenta odgovornog za tehničke aspekte proizvodnje zvuka tijekom snimanja, miksanja i izvedbe glazbenih i zvučnih sadržaja s izrazom tog djela.",kama:P60099,kami:C10003,kami:P30139
+kama:P60104,je kolorist,kama:C10006,"Povezuje agenta koji kolorira crteže, grafike, fotografije i druge izraze likovnih djela drugih umjetnika s izrazom tog djela.",kama:P60099,kami:C10003,kami:P30144
+kama:P60105,je kostimograf,kama:C10006,"Povezuje agenta odgovornog za dizajn i izradu kostima za film, televizijski program, kazališnu predstavu ili drugi oblik izvedbene umjetnosti s izrazom tog djela.",kama:P60099,kami:C10003,kami:P30149
+kama:P60106,je majstor rasvjete,kama:C10006,"Povezuje agenta koji oblikuje elemente rasvjete za potrebe snimanja filma ili televizijskog programa, dramske ili glazbeno-scenske izvedbe itd. s izrazom tog djela.",kama:P60099,kami:C10003,kami:P30154
+kama:P60107,je majstor specijalnih efekata,kama:C10006,Povezuje agenta koji oblikuje specijalne slikovne i zvučne efekte tijekom snimanja ili u post-produkciji filma i drugih sadržaja u audiovizualnom mediju s tim djelom.,kama:P60099,kami:C10003,kami:P30159
+kama:P60108,je masker,kama:C10006,"Povezuje agenta odgovornog za dizajn i izradu maski i drugih prostetičkih pomagala za film, televizijski program, kazališnu predstavu ili drugi oblik izvedbene umjetnosti s izrazom tog djela.",kama:P60099,kami:C10003,kami:P30164
+kama:P60109,je montažer,kama:C10006,"Povezuje agenta koji odabire i uređuje snimljeni slikovni ili zvučni materijal i povezuje ga u cjelinu, uključujući sinkronizaciju slike i zvuka, montažu zvuka, posebne efekte itd. s izrazom tog djela.",kama:P60099,kami:C10003,kami:P30169
+kama:P60110,je pisac dijaloga,kama:C10006,"Povezuje agenta koji piše dijaloge likova u skladu sa sinopsisom ili scenarijem radijskog ili televizijskog programa, stripa, video igre ili drugog narativnog djela iskazanog u slikovnom obliku s izrazom tog djela.",kama:P60099,kami:C10003,kami:P30174
+kama:P60111,je programer-suradnik,kama:C10006,"Povezuje agenta koji programira kôd za neki interaktivni multimedijski sadržaj (video igru, elektroničku knjigu itd.) s izrazom tog djela.",kama:P60099,kami:C10003,kami:P30179
+kama:P60112,je redatelj sinkronizacije,kama:C10006,"Povezuje agenta odgovornog za nadzor nad sinkronizacijom jezika filma, televizijskog programa, djela videoumjetnosti i sl. na drugi jezik s izrazom tog djela.",kama:P60099,kami:C10003,kami:P30184
+kama:P60113,je scenarist filma,kama:C10006,"Povezuje agenta odgovornog za originalni ili adaptirani filmski scenarij, uključujući specifikaciju tijeka radnje, ambijenata, likova, njihovih postupaka i dijaloga s izrazom tog djela.",kama:P60099,kami:C10003,kami:P30189
+kama:P60114,je scenograf,kama:C10006,"Povezuje agenta odgovornog za dizajn i izradu elemenata ambijenta u filmu, televizijskom programu, kazališnoj predstavi ili drugom obliku izvedbene umjetnosti s izrazom tog djela.",kama:P60099,kami:C10003,kami:P30194
+kama:P60115,je skladatelj glazbe,kama:C10006,"Povezuje agenta koji je skladao popratnu glazbu za film, televizijski program, kazališnu predstavu, video igru itd. s izrazom tog djela.",kama:P60099,kami:C10003,kami:P30199
+kama:P60116,je snimatelj,kama:C10006,"Povezuje agent koji kamerom snima film, video ili drugu vrstu pokretnih slika s izrazom tog. djela.",kama:P60099,kami:C10003,kami:P30204
+kama:P60117,je statičar,kama:C10006,Povezuje agenta odgovornog za izračun nosivosti građevne konstrukcije s izrazom tog djela.,kama:P60099,kami:C10003,kami:P30209
+kama:P60118,je šminker,kama:C10006,"Povezuje agenta koji šminka izvođače za potrebe snimanja filma, televizijskog programa, kazališne predstave ili drugog oblika izvedbene umjetnosti s izrazom tog djela.",kama:P60099,kami:C10003,kami:P30214
+kama:P60119,je tehnički crtač,kama:C10006,"Povezuje agenta odgovornog za izradu detaljnih tehničkih crteža koji  prikazuju građevinu, tehničku tvorevinu ili drugi objekt u stanju dovršenosti s izrazom tog djela.",kama:P60099,kami:C10003,kami:P30219
+kama:P60120,je tonski snimatelj,kama:C10006,Povezuje agenta koji snima zvučne sadržaje u studijskom prostoru ili na terenu ili sudjeluje u tonskoj realizaciji radijskoga ili televizijskog programa s izrazom tog djela.,kama:P60099,kami:C10003,kami:P30224
+kama:P60121,je urednik,kama:C10006,"Povezuje agenta koji uređuje i priprema za objavljivanje tekst drugog agenta u skladu s uredničkom politikom nakladnika i/ili standardima određene nakladničke cjeline, časopisa, ciljane publike ili sl. s izrazom tog djela.",kama:P60004,kami:C10003,kami:P30229
+kama:P60122,je zapisničar,kama:C10006,"Povezuje agenta koji je zabilježio sadržaj sastanka, sjednice, zasjedanja i sl. s izrazom tog djela.",kama:P60004,kami:C10003,kami:P30231
+kama:P60123,je izrađivač,kama:C10006,Povezuje agenta koji je sudjelovao u procesu ručne ili manufakturne izrade pojavnog oblika ili njegovih dijelova s tim pojavnim oblikom.,kama:P60005,kampo:C10004,kampo:P40100
+kama:P60124,je bojadisar,kama:C10006,"Povezuje agenta koji je obojio tekstil od kojega se sastoji odjevni, uporabni ili neki drugi predmet s tim pojavnim oblikom.",kama:P60124,kampo:C10004,kampo:P40105
+kama:P60125,je bravar,kama:C10006,"Povezuje agenta koji je izradio metalne konstrukcijske ili ukrasne elemente na građevini ili dijelovima građevine, uključujući metalne ograde, namještaj, kvake itd. s tim pojavnim oblikom.",kama:P60124,kampo:C10004,kampo:P40110
+kama:P60126,je brusač,kama:C10006,Povezuje agenta koji je obradio površinu dragog kamena s tim pojavnim oblikom.,kama:P60124,kampo:C10004,kampo:P40115
+kama:P60127,je cizeler,kama:C10006,Povezuje agenta koji je obradio metalni predmet tehnikom cizeliranja s tim pojavnim oblikom.,kama:P60124,kampo:C10004,kampo:P40120
+kama:P60128,je emajler,kama:C10006,"Povezuje agenta koji je nanio emajl na površinu metalnog, keramičkog ili staklenog predmeta s tim pojavnim oblikom.",kama:P60124,kampo:C10004,kampo:P40125
+kama:P60129,je intarzist,kama:C10006,"Povezuje agenta koji je ukrasio drveni predmet umecima od metala, drva, slonovače ili drugih materijala s tim pojavnim oblikom.",kama:P60124,kampo:C10004,kampo:P40130
+kama:P60130,je kalupar,kama:C10006,Povezuje agenta koji je izradio kalup za oblikovanje keramike i stakla ili lijevanje rastaljenog metala i/ili izradio predmet iz kalupa s tim pojavnim oblikom.,kama:P60124,kampo:C10004,kampo:P40135
+kama:P60131,je keramičar,kama:C10006,Povezuje agenta koji je izradio predmet ili dio predmeta od keramike s tim pojavnim oblikom.,kama:P60124,kampo:C10004,kampo:P40140
+kama:P60132,je klesar,kama:C10006,"Povezuje agenta koji je ugradio, oblikovao i/ili ukrasio kameni predmet, uključujući dijelove arhitekonske plastike s tim pojavnim oblikom.",kama:P60124,kampo:C10004,kampo:P40145
+kama:P60133,je kovač,kama:C10006,Povezuje agenta koji je iskovao uporabni predmet ili dio predmeta od željeza s tim pojavnim oblikom.,kama:P60124,kampo:C10004,kampo:P40150
+kama:P60134,je kovinopojasar,kama:C10006,Povezuje agenta koji je izradio metalni predmet ili dio predmeta tehnikom tiještenja s tim pojavnim oblikom.,kama:P60124,kampo:C10004,kampo:P40155
+kama:P60135,je krojač,kama:C10006,Povezuje agenta koji je izradio odjevni ili drugi predmet ili dio predmeta od tekstila s tim pojavnim oblikom.,kama:P60124,kampo:C10004,kampo:P40160
+kama:P60136,je lakirer,kama:C10006,"Povezuje agenta koji je nanio sloj laka na površinu namještaja ili drugog predmeta, uključujući izradu raznih motiva s tim pojavnim oblikom.",kama:P60124,kampo:C10004,kampo:P40165
+kama:P60137,je ljevač,kama:C10006,"Povezuje agenta koji je oblikovao predmet lijevanjem tekućeg metala, stakla ili drugog materijala u kalup s tim pojavnim oblikom.",kama:P60124,kampo:C10004,kampo:P40170
+kama:P60138,je modeler,kama:C10006,Povezuje agenta koji je oblikovao predmet modeliranjem pripremljene smjese s tim pojavnim oblikom.,kama:P60124,kampo:C10004,kampo:P40175
+kama:P60139,je pisar,kama:C10006,Povezuje agenta koji je ispisao ili prepisao tekst rukopisa s tim pojavnim oblikom.,kama:P60124,kampo:C10004,kampo:P40180
+kama:P60140,je pozlatar,kama:C10006,"Povezuje agenta koji je nanio pozlatu na predmet od drva, metala, keramike, porculana, stakla, kože ili drugog materijala s tim pojavnim oblikom.",kama:P60124,kampo:C10004,kampo:P40185
+kama:P60141,je rezbar,kama:C10006,Povezuje agenta koji je oblikovao ili ukrasio predmet ili dio drvenog predmeta urezivanjem raznih oblika s tim pojavnim oblikom.,kama:P60124,kampo:C10004,kampo:P40190
+kama:P60142,je staklopuhač,kama:C10006,"Povezuje agenta koji je oblikovao stakleni predmet upuhivanjem zraka u masu rastaljenog stakla, uključujući dodatno oblikovanje hvataljkama, škarama i valjanjem s tim pojavnim oblikom.",kama:P60124,kampo:C10004,kampo:P40195
+kama:P60143,je stolar,kama:C10006,"Povezuje agenta koji je izradio drveni predmet ili građevni element, uključujući namještaj, oplate, obloge i građevnu stolariju s tim pojavnim oblikom.",kama:P60124,kampo:C10004,kampo:P40200
+kama:P60144,je tapetar,kama:C10006,Povezuje agenta koji je izradio tekstilne presvlake za namještaj s tim pojavnim oblikom.,kama:P60124,kampo:C10004,kampo:P40205
+kama:P60145,je tkalac,kama:C10006,Povezuje agenta koji je izradio tekstil ili drugi materijal tehnikom prepletanja niti s tim pojavnim oblikom.,kama:P60124,kampo:C10004,kampo:P40210
+kama:P60146,je uokvirivač,kama:C10006,"Povezuje agenta koji je izradio ili ukrasio okvir za sliku, ogledalo ili drugi predmet s tim pojavnim oblikom.",kama:P60124,kampo:C10004,kampo:P40215
+kama:P60147,je urar,kama:C10006,Povezuje agenta koji je izradio satni mehanizam s tim pojavnim oblikom.,kama:P60124,kampo:C10004,kampo:P40220
+kama:P60148,je vizažist,kama:C10006,Povezuje agenta koji je izradio predmet ili dio predmeta tehnikom vitraja s tim pojavnim oblikom.,kama:P60124,kampo:C10004,kampo:P40225
+kama:P60149,je nakladnik,kama:C10006,"Povezuje agenta koji je organizacijski, financijski i pravno odgovoran za objavljivanje pojavnog oblika s tim pojavnim oblikom.",kama:P60005,kampo:C10004,kampo:P40230
+kama:P60150,je oglašivač,kama:C10006,Povezuje agenta koji je osmislio reklamnu kampanju i/ili koordinirao oglašavanje pojavnog oblika u masovnim medijima s tim pojavnim oblikom.,kama:P60005,kampo:C10004,kampo:P40235
+kama:P60151,je proizvođač,kama:C10006,"Povezuje agenta koji je organizirao, financirao i/ili sudjelovao u procesu serijske proizvodnje pojavnog oblika ili njegovih dijelova s tim pojavnim oblikom.",kama:P60005,kampo:C10004,kampo:P40240
+kama:P60152,je proizvođač papira,kama:C10006,"Povezuje agenta koji je proizveo papir tiskanog ili rukopisnog sveska, lista ili skupa listova s tim pojavnim oblikom.",kama:P60152,kampo:C10004,kampo:P40245
+kama:P60153,je tiskar,kama:C10006,Povezuje agenta koji je proizveo pojavni oblik otiskom teksta ili slike na papir ili drugu podlogu s tim pojavnim oblikom.,kama:P60152,kampo:C10004,kampo:P40250
+kama:P60154,je prenositelj,kama:C10006,"Povezuje agenta koji je sudjelovao u prijenosu sadržaja putem televizije, radija, interneta itd. s tim pojavnim oblikom.",kama:P60005,kampo:C10004,kampo:P40255
+kama:P60155,je prodavač,kama:C10006,Povezuje agenta koji nudi na prodaju primjerke serijski proizvedenoga pojavnog oblika s tim pojavnim oblikom.,kama:P60005,kampo:C10004,kampo:P40260
+kama:P60156,je knjižar,kama:C10006,Povezuje agenta koji nudi na prodaju knjige i druge publikacije s tim pojavnim oblikom.,kama:P60156,kampo:C10004,kampo:P40265
+kama:P60157,je raspačavatelj,kama:C10006,Povezuje agenta koji ima isključivo pravo prodaje ili dijeljenja primjeraka pojavnog oblika na određenom tržištu s tim pojavnim oblikom.,kama:P60005,kampo:C10004,kampo:P40270
+kama:P60158,je suradnik na izdanju,kama:C10006,Povezuje agenta koji sudjeluje u pripremi određenog izdanja za objavljivanje s tim pojavnim oblikom.,kama:P60005,kampo:C10004,kampo:P40275
+kama:P60159,je autor dodanog teksta,kama:C10006,"Povezuje agenta koji je dopunio izdanje teksta drugog agenta predgovorom, pogovorom, objašnjenjima, komentarima itd. s tim pojavnim oblikom.",kama:P60159,kampo:C10004,kampo:P40280
+kama:P60160,je grafički urednik,kama:C10006,"Povezuje agenta odgovornog za grafičko oblikovanje izdanja, uključujući prijelom i pripremu za tisak s tim pojavnim oblikom.",kama:P60159,kampo:C10004,kampo:P40285
+kama:P60161,je ilustrator,kama:C10006,Povezuje agenta koji je oblikovao slikovne prikaze uz određeno izdanje teksta s tim pojavnim oblikom.,kama:P60159,kampo:C10004,kampo:P40290
+kama:P60162,je tipograf,kama:C10006,"Povezuje agenta koji je oblikovao slova tiskanog teksta, uključujući slaganje tiskarskog sloga od pomičnih slova s tim pojavnim oblikom.",kama:P60159,kampo:C10004,kampo:P40295
+kama:P60163,je agent koji je preinačio primjerak,kama:C10006,"Povezuje agenta čijom je intervencijom primjerak stekao posebna obilježja, uključujući ona po kojima se razlikuje od drugih primjeraka istog pojavnog oblika s tim primjerkom.",kama:P60006,kamp:C10005,kamp:P50033
+kama:P60164,je anotator,kama:C10006,"Povezuje agenta koji je ručno dodao primjerku tekstualne, slikovne ili druge bilješke s tim primjerkom.",kama:P60164,kamp:C10005,kamp:P50038
+kama:P60165,je iluminator,kama:C10006,Povezuje agenta koji je ukrasio primjerak iluminacijama s tim primjerkom.,kama:P60164,kamp:C10005,kamp:P50043
+kama:P60166,je knjigoveža,kama:C10006,Povezuje agenta koji je uvezao knjigu s tim primjerkom.,kama:P60164,kamp:C10005,kamp:P50048
+kama:P60167,je restaurator,kama:C10006,Povezuje agenta koji je modificirao primjerak kako bi zaustavio njegovo propadanje i vratio ga u stanje najbliže onome kakvo je bilo u određenom razdoblju njegove prošlosti s tim primjerkom.,kama:P60164,kamp:C10005,kamp:P50058
+kama:P60168,je rubrikator,kama:C10006,Povezuje agenta koji je oblikovao i ukrasio početna slova (inicijale) teksta u rukopisima i prvim tiskanim knjigama s tim primjerkom.,kama:P60164,kamp:C10005,kamp:P50063
+kama:P60169,je agent koji je stručno obradio primjerak,kama:C10006,"Povezuje agenta odgovornog za inventarizaciju i/ili stručnu obradu primjerka, uključujući unos podataka o primjerku u informacijski sustav s tim primjerkom.",kama:P60006,kamp:C10005,kamp:P50067
+kama:P60170,je determinator,kama:C10006,Povezuje agenta koji je identificirao vrstu kojoj pripada primjerak prirodoslovne građe s tim primjerkom.,kama:P60006,kamp:C10005,kamp:P50072
+kama:P60171,je aukcionist,kama:C10006,Povezuje agenta koji je posredovao pri aukcijskoj kupnji primjerka s tim primjerkom.,kama:P60006,kamp:C10005,kamp:P50077
+kama:P60172,je posjednik,kama:C10006,Povezuje agenta koji posjeduje i/ili skrbi o primjerku s tim primjerkom.,kama:P60006,kamp:C10005,kamp:P50082
+kama:P60173,je vlasnik,kama:C10006,Povezuje agenta koji nad primjerkom uživa ili je uživao vlasnička prava s tim primjerkom.,kama:P60173,kamp:C10005,kamp:P50087
+kama:P60174,je darovatelj,kama:C10006,Povezuje agenta koji je darovao primjerak sadašnjem vlasniku s tim primjerkom.,kama:P60173,kamp:C10005,kamp:P50092
+kama:P60175,je deponent,kama:C10006,Povezuje agenta koji je primjerak u svom vlasništvu povjerio na skrb i upravljanje sadašnjem imatelju s tim primjerkom.,kama:P60173,kamp:C10005,kamp:P50097
+kama:P60176,je prodavatelj,kama:C10006,Povezuje agenta koji je prodao primjerak sadašnjem vlasniku s tim primjerkom.,kama:P60173,kamp:C10005,kamp:P50102
+kama:P60177,je preparator,kama:C10006,Povezuje agenta koji je izradio preparat  prirodoslovnog objekta s tim primjerkom.,kama:P60006,kamp:C10005,kamp:P50053
+kama:P60178,je procjenitelj,kama:C10006,Povezuje agenta koji je procijenio vrijednost primjerka s tim primjerkom.,kama:P60006,kamp:C10005,kamp:P50107
+kama:P60179,je sakupljač,kama:C10006,Povezuje agenta koji je prikupio primjerak terenskim istraživanjem s tim primjerkom.,kama:P60006,kamp:C10005,kamp:P50112
+kama:P60180,ima napomenu o agentu,kama:C10006,Povezuje agenta s bilo kojom informacijom o agentu koja nije zabilježena uporabom specifičnih atributa i/ili odnosa.,kamjo:P10022,,
+kama:P60181,ima napomenu o odnosu agenta i drugih jedinica opisa,kama:C10006,"Povezuje agenta s kratkim nestrukturiranim tekstom koji sadržava pojedinosti o odnosu između agenta i drugog agenta ili više drugih agenata, odnosno agenta i druge ili više drugih jedinica opisa.",kama:P60181,,
+kama:P60182,je agent povezan s nomenom za agenta,kama:C10006,Povezuje agenta s nomenom za agenta.,kama:P60002,kamn:C10013,kamn:P13070
+kama:P60183,ima oznaku za agenta,kama:C10006,Povezuje agenta s oznakom za agenta.,kama:P60183,kamn:C10013,kamn:P13071
+kama:P60184,ima nadziranu pristupnicu za agenta,kama:C10006,"Povezuje agenta s nadziranom riječi ili nizom riječi i/ili drugih oznaka, koja unutar nekog sustava jednoznačno identificira djelo i okuplja podatke o agentu.",kama:P60184,kamn:C10013,kamn:P13072
+kama:P60185,ima usvojenu pristupnicu za agenta,kama:C10006,"Povezuje agenta s usvojenom riječi ili nizom riječi i/ili drugih oznaka, koja unutar nekog sustava jednoznačno identificira agenta i okuplja podatke o agentu.",kama:P60185,kamn:C10013,kamn:P13073
+kama:P60186,ima varijantnu pristupnicu za agenta,kama:C10006,"Povezuje agenta s riječi ili nizom riječi ili znakova koji identificiraju agenta unutar određenog sustava, a nisu odabrani za usvojenu pristupnicu.",kama:P60185,kamn:C10013,kamn:P13074
+kama:P60187,ima dodatno obilježje agenta,kama:C10006,"Povezuje agenta s riječi, brojkom ili nizom riječi, brojki ili drugih znakova, koji služi razlikovanju agenata čije je ime jednako ili slično.",,,
+kama:P60188,ima identifikator agenta,kama:C10006,Povezuje agenta s brojčanom ili slovno-brojčanom oznakom koja unutar određenog sustava jednoznačno identificira agenta.,kama:P60184,kamn:C10013,kamn:P13076
+kama:P60189,ima napomenu o identifikaciji agenta,kama:C10006,Povezuje agenta s kratkim tekstom u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o agentu i/ili izvorima iz kojih su identifikacijski podaci preuzeti.,kama:P60181,,
+kama:P60190,je agent predmet djela,kama:C10006,"Povezuje agenta s izrazom, nadziranim nazivom, imenom, naslovom, identifikatorom ili drugom nadziranom oznakom koja označava temu kojom se bavi ili koju prikazuje djelo.
+",kama:P60003,kamd:C10002,kamd:P20325
+kama:P60191,ima ime agenta,kama:C10006,Povezuje agenta s imenom za agenta.,kama:P60184,kamn:C10013,kamn:P13161
+kama:P60192,ima usvojeno ime agenta,kama:C10006,Povezuje agenta s riječi ili nizom riječi ili znakova koji jednoznačno i dosljedno imenuje agenta unutar određenog sustava.,kamka:P60192,kamn:C10013,kamn:P13162
+kama:P60193,ima varijantno ime agenta,kama:C10006,"Povezuje agenta s riječi, znakom ili nizom riječi ili znakova koji identificiraju agenta unutar određenog sustava, a nisu odabrani za usvojeno ime agenta.",kamka:P60192,kamn:C10013,kamn:P13163
+kama:P60194,je agent povezan s obitelji,kama:C10006,Povezuje agenta s obitelji.,kama:P60002,kamo:C10010,kamob:P10186
