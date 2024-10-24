@@ -10,23 +10,24 @@
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
-        /* Additional styling for the table */
-        table {
+        /* Styling the first table (property details) */
+        #propertyTable {
             width: 100%;
             border-collapse: collapse;
         }
-        td {
+        #propertyTable td {
             padding: 8px;
-            border: 1px solid #ddd;
+            border: 1px solid #ddd; /* Match DataTables' line style */
         }
-        tr:first-child td {
-            border-top: 2px solid black;
+        /* Line above first row and below last row in the property details table */
+        #propertyTable tr:first-child td {
+            border-top: 1px solid #ddd; /* Match the DataTables border style */
         }
-        tr:last-child td {
-            border-bottom: 2px solid black;
+        #propertyTable tr:last-child td {
+            border-bottom: 1px solid #ddd; /* Match the DataTables border style */
         }
         /* Set the width of the first column to 25% */
-        td:first-child {
+        #propertyTable td:first-child {
             width: 25%;
             font-weight: bold;
         }
@@ -109,22 +110,22 @@ function displayPropertyDetails(curie, data) {
     if (property) {
         const label = property['http://www.w3.org/2000/01/rdf-schema#label']
             ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
-            : '';
+            : ''; 
         const definition = property['http://www.registar.kam.hr/ontologies/ont.owl/definition']
             ? property['http://www.registar.kam.hr/ontologies/ont.owl/definition'][0]['@value']
-            : '';
+            : ''; 
         const domain = property['http://www.w3.org/2000/01/rdf-schema#domain']
             ? property['http://www.w3.org/2000/01/rdf-schema#domain'][0]['@id']
-            : '';
+            : ''; 
         const range = property['http://www.w3.org/2000/01/rdf-schema#range']
             ? property['http://www.w3.org/2000/01/rdf-schema#range'][0]['@id']
-            : '';  // Leave the range cell empty if no value is available
+            : '';  // Leave the cell empty if no value is available
         const subPropertyOf = property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf']
             ? property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'][0]['@id']
-            : '';
+            : ''; 
         const inverseOf = property['http://www.w3.org/2002/07/owl#inverseOf']
             ? property['http://www.w3.org/2002/07/owl#inverseOf'][0]['@id']
-            : '';
+            : ''; 
 
         content.innerHTML = `<h2>Details for CURIE: ${curie}</h2>`;
         let table = `<table id="propertyTable" class="display">
