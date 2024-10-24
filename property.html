@@ -9,6 +9,28 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /* Additional styling for the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        tr:first-child td {
+            border-top: 2px solid black;
+        }
+        tr:last-child td {
+            border-bottom: 2px solid black;
+        }
+        /* Set the width of the first column to 25% */
+        td:first-child {
+            width: 25%;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
@@ -87,22 +109,22 @@ function displayPropertyDetails(curie, data) {
     if (property) {
         const label = property['http://www.w3.org/2000/01/rdf-schema#label']
             ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
-            : 'Unknown Label';
+            : '';
         const definition = property['http://www.registar.kam.hr/ontologies/ont.owl/definition']
             ? property['http://www.registar.kam.hr/ontologies/ont.owl/definition'][0]['@value']
-            : 'No definition available';
+            : '';
         const domain = property['http://www.w3.org/2000/01/rdf-schema#domain']
             ? property['http://www.w3.org/2000/01/rdf-schema#domain'][0]['@id']
-            : 'No Domain';
+            : '';
         const range = property['http://www.w3.org/2000/01/rdf-schema#range']
             ? property['http://www.w3.org/2000/01/rdf-schema#range'][0]['@id']
-            : 'No Range';
+            : '';  // Leave the range cell empty if no value is available
         const subPropertyOf = property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf']
             ? property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'][0]['@id']
-            : 'No subPropertyOf';
+            : '';
         const inverseOf = property['http://www.w3.org/2002/07/owl#inverseOf']
             ? property['http://www.w3.org/2002/07/owl#inverseOf'][0]['@id']
-            : 'No inverseOf';
+            : '';
 
         content.innerHTML = `<h2>Details for CURIE: ${curie}</h2>`;
         let table = `<table id="propertyTable" class="display">
