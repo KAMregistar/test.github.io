@@ -28,7 +28,7 @@
         }
         /* Set the width of the first column to 25% */
         #propertyTable td:first-child {
-            width: 25%;
+            width: 15%;
             font-weight: bold;
         }
     </style>
@@ -126,10 +126,10 @@ function displayPropertyDetails(curie, data) {
 
         const label = property['http://www.w3.org/2000/01/rdf-schema#label']
             ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
-            : 'Unknown Label';
+            : '';
         const definition = property['http://www.registar.kam.hr/ontologies/ont.owl/definition']
             ? property['http://www.registar.kam.hr/ontologies/ont.owl/definition'][0]['@value']
-            : 'No definition available';
+            : '';
 
         // Ensure that domain, range, inverseOf, and subPropertyOf are extracted correctly
         const domain = property['http://www.w3.org/2000/01/rdf-schema#domain'] && property['http://www.w3.org/2000/01/rdf-schema#domain'][0]
