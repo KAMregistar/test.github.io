@@ -50,13 +50,6 @@ function redirectToIndex(section) {
     }
 }
 
-// Fetch the ontology data from localStorage
-const ontologyData = JSON.parse(localStorage.getItem('ontologyData'));
-
-// Get the CURIE from the URL parameters
-const urlParams = new URLSearchParams(window.location.search);
-const curie = urlParams.get('curie');
-
 // Function to generate download links
 function generateDownloadLinks(curie) {
     const className = curie.split(':')[1].toLowerCase().replace(/ /g, '_');
@@ -136,10 +129,61 @@ function displayPropertyDetails(curie, data) {
     }
 }
 
-// Initialize the CURIE details
-fetch('KAMOntologija_v9.jsonld')
-displayPropertyDetails(curie, ontologyData);
+// Function to check localStorage availability
+function isLocalStorageAvailable() {
+    try {
+        const test = '__localStorageTest__';
+        localStorage.setItem(test, test);
+        localStorage.removeItem(test);
+        return true;
+    } catch (e) {
+        return false;
+    }
+}
 
+// Fetch and display CURIE details
+const urlParams = new URLSearchParams(window.location.search);
+const curie = urlParams.get('curie');
+
+// Try localStorage, fallback to fetching JSON file
+if (isLocalStorageAvailable()) {
+    const ontologyData = JSON.parse(localStorage.getItem('ontologyData'));
+    if (ontologyData) {
+        displayPropertyDetails(curie, ontologyData);
+    } else {
+        // Fallback to fetching JSON-LD if data is not in localStorage
+        fetch('KAMOntologija_v9.jsonld')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                displayPropertyDetails(curie, data);
+            })
+            .catch(error => {
+                console.error('There has been a problem with your fetch operation:', error);
+                document.getElementById('content').innerHTML = '<p>Error loading ontology data.</p>';
+            });
+    }
+} else {
+    // If localStorage is not available, fetch the data directly
+    fetch('KAMOntologija_v9.jsonld')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            displayPropertyDetails(curie, data);
+        })
+        .catch(error => {
+            console.error('There has been a problem with your fetch operation:', error);
+            document.getElementById('content').innerHTML = '<p>Error loading ontology data.</p>';
+        });
+}
 </script>
 
 </body>
