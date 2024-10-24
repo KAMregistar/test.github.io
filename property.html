@@ -91,6 +91,9 @@ function displayPropertyDetails(curie, data) {
         const definition = property['http://www.registar.kam.hr/ontologies/ont.owl/definition']
             ? property['http://www.registar.kam.hr/ontologies/ont.owl/definition'][0]['@value']
             : 'No definition available';
+        const domain = property['http://www.w3.org/2000/01/rdf-schema#domain']
+            ? property['http://www.w3.org/2000/01/rdf-schema#domain'][0]['@id']
+            : 'No Domain';
         const range = property['http://www.w3.org/2000/01/rdf-schema#range']
             ? property['http://www.w3.org/2000/01/rdf-schema#range'][0]['@id']
             : 'No Range';
@@ -103,13 +106,14 @@ function displayPropertyDetails(curie, data) {
 
         content.innerHTML = `<h2>Details for CURIE: ${curie}</h2>`;
         let table = `<table id="propertyTable" class="display">
-            <thead><tr><th>Property</th><th>Value</th></tr></thead>
             <tbody>
-            <tr><td>Label</td><td>${label}</td></tr>
-            <tr><td>Definition</td><td>${definition}</td></tr>
-            <tr><td>Range</td><td>${range}</td></tr>
-            <tr><td>subPropertyOf</td><td>${subPropertyOf}</td></tr>
-            <tr><td>inverseOf</td><td>${inverseOf}</td></tr>
+            <tr><td>KAM ID</td><td>${curie}</td></tr>
+            <tr><td>Naziv</td><td>${label}</td></tr>
+            <tr><td>Definicija</td><td>${definition}</td></tr>
+            <tr><td>Domena</td><td>${domain}</td></tr>
+            <tr><td>Doseg</td><td>${range}</td></tr>
+            <tr><td>Obrnuto od</td><td>${inverseOf}</td></tr>
+            <tr><td>Podsvojstvo od</td><td>${subPropertyOf}</td></tr>
             </tbody></table>`;
         
         content.innerHTML += table;
@@ -122,7 +126,12 @@ function displayPropertyDetails(curie, data) {
         content.innerHTML += modifiedTable;
 
         $(document).ready(function() {
-            $('#propertyTable').DataTable();
+            $('#propertyTable').DataTable({
+                "paging": false,      // Disable pagination
+                "info": false,        // Disable entry information
+                "searching": false,   // Disable search bar
+                "ordering": false     // Disable column ordering
+            });
         });
     } else {
         content.innerHTML = '<p>Details not found for the selected CURIE.</p>';
