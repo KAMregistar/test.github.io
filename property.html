@@ -169,6 +169,7 @@ function displayPropertyDetails(curie, data) {
         content.innerHTML += downloadTable;
         content.innerHTML += modifiedTable;
 
+        // Initialize DataTable after the table is fully populated
         $(document).ready(function() {
             $('#propertyTable').DataTable({
                 "paging": false,      // Disable pagination
