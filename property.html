@@ -112,15 +112,16 @@ function makeClickableLink(uri) {
 function displayPropertyDetails(curie, data) {
     const content = document.getElementById('content');
     
-    // Log the whole data object for debugging
-    console.log("Ontology Data:", data);
+    // Log the full ontology data and the CURIE for debugging
+    console.log("Full Ontology Data:", data);
+    console.log("CURIE:", curie);
     
     const property = Object.values(data).find(item => {
         return item['http://www.registar.kam.hr/ontologies/ont.owl/ID'] && item['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'] === curie;
     });
 
     if (property) {
-        // Log the selected property for debugging
+        // Log the property object for debugging
         console.log("Selected Property:", property);
 
         const label = property['http://www.w3.org/2000/01/rdf-schema#label']
@@ -140,9 +141,12 @@ function displayPropertyDetails(curie, data) {
         const subPropertyOf = property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'] && property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'][0]
             ? makeClickableLink(property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'][0]['@id'])
             : '';
+        
+        // Log the `inverseOf` value for debugging
         const inverseOf = property['http://www.w3.org/2002/07/owl#inverseOf'] && property['http://www.w3.org/2002/07/owl#inverseOf'][0]
             ? makeClickableLink(property['http://www.w3.org/2002/07/owl#inverseOf'][0]['@id'])
             : '';
+        console.log("inverseOf:", inverseOf);  // Log to debug why it's not showing up
 
         content.innerHTML = `<h2>Details for CURIE: ${curie}</h2>`;
         let table = `<table id="propertyTable" class="display">
