@@ -21,14 +21,14 @@
         }
         /* Line above first row and below last row in the property details table */
         #propertyTable tr:first-child td {
-            border-top: 1px solid #fff; /* Match the DataTables border style */
+            border-top: 1px solid #000; /* Match the DataTables border style */
         }
         #propertyTable tr:last-child td {
-            border-bottom: 1px solid #fff; /* Match the DataTables border style */
+            border-bottom: 1px solid #000; /* Match the DataTables border style */
         }
         /* Set the width of the first column to 25% */
         #propertyTable td:first-child {
-            width: 20%;
+            width: 15%;
             font-weight: bold;
         }
     </style>
@@ -100,6 +100,14 @@ function getLastModifiedDate() {
     return table2;
 }
 
+// Helper function to generate clickable links if the value is a URI
+function makeClickableLink(uri) {
+    if (uri) {
+        return `<a href="${uri}" target="_blank">${uri}</a>`;
+    }
+    return '';
+}
+
 // Display the details of the property on the page
 function displayPropertyDetails(curie, data) {
     const content = document.getElementById('content');
@@ -110,22 +118,22 @@ function displayPropertyDetails(curie, data) {
     if (property) {
         const label = property['http://www.w3.org/2000/01/rdf-schema#label']
             ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
-            : ''; 
+            : '';
         const definition = property['http://www.registar.kam.hr/ontologies/ont.owl/definition']
             ? property['http://www.registar.kam.hr/ontologies/ont.owl/definition'][0]['@value']
-            : ''; 
+            : '';
         const domain = property['http://www.w3.org/2000/01/rdf-schema#domain']
-            ? property['http://www.w3.org/2000/01/rdf-schema#domain'][0]['@id']
-            : ''; 
+            ? makeClickableLink(property['http://www.w3.org/2000/01/rdf-schema#domain'][0]['@id'])
+            : '';  // Make clickable or empty if not present
         const range = property['http://www.w3.org/2000/01/rdf-schema#range']
-            ? property['http://www.w3.org/2000/01/rdf-schema#range'][0]['@id']
-            : '';  // Leave the cell empty if no value is available
+            ? makeClickableLink(property['http://www.w3.org/2000/01/rdf-schema#range'][0]['@id'])
+            : '';  // Leave the range cell empty if no value is available
         const subPropertyOf = property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf']
-            ? property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'][0]['@id']
-            : ''; 
+            ? makeClickableLink(property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'][0]['@id'])
+            : '';
         const inverseOf = property['http://www.w3.org/2002/07/owl#inverseOf']
-            ? property['http://www.w3.org/2002/07/owl#inverseOf'][0]['@id']
-            : ''; 
+            ? makeClickableLink(property['http://www.w3.org/2002/07/owl#inverseOf'][0]['@id'])
+            : '';
 
         content.innerHTML = `<h2>Details for CURIE: ${curie}</h2>`;
         let table = `<table id="propertyTable" class="display">
