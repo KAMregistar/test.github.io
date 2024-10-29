@@ -80,7 +80,6 @@ function displayPropertiesForClass(classId, data, className) {
     if (properties.length === 0) {
         content.innerHTML += '<p>No properties found for this class.</p>';
     } else {
-        // Create table structure
         let table = `<table id="propertiesTable" class="display">
             <thead>
                 <tr><th></th><th>CURIE</th><th>Naziv svojstva</th><th>Podsvojstvo od</th><th>Obrnuto od</th><th>Doseg</th></tr>
@@ -113,7 +112,6 @@ function displayPropertiesForClass(classId, data, className) {
             $('#propertiesTable').DataTable();
         });
 
-        // Set up expand functionality
         document.querySelectorAll('.expand-arrow').forEach(arrow => {
             arrow.addEventListener('click', function() {
                 const curie = this.parentNode.getAttribute('data-curie');
@@ -183,6 +181,7 @@ function loadDetailsForCurie(curie, detailsRow) {
             });
 
             if (property) {
+                console.log("Property found:", property); // Debug log
                 const label = property['http://www.w3.org/2000/01/rdf-schema#label']?.[0]?.['@value'] || 'Unknown Label';
                 const definition = property['http://www.registar.kam.hr/ontologies/ont.owl/definition']?.[0]?.['@value'] || 'No definition available';
                 const range = property['http://www.w3.org/2000/01/rdf-schema#range']?.[0]?.['@id'] || 'No Range';
@@ -197,10 +196,12 @@ function loadDetailsForCurie(curie, detailsRow) {
                     <strong>Obrnuto od:</strong> ${inverseOf}
                 </td>`;
             } else {
+                console.warn("No matching property found for CURIE:", curie); // Debug warning
                 detailsRow.innerHTML = `<td colspan="6">Details not found for CURIE: ${curie}</td>`;
             }
         })
         .catch(error => {
+            console.error('Error loading details:', error); // Error log
             detailsRow.innerHTML = `<td colspan="6">Error loading details: ${error}</td>`;
         });
 }
