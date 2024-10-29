@@ -17,7 +17,22 @@
 <body>
 
 <div id="menu-bar">
-    <!-- Menu bar content remains the same -->
+    <img src="kam.png" alt="KAM Logo" class="logo">
+    <h1><a href="index.html" style="text-decoration:none; color:inherit;">Registar</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+    <div>
+        KLASE
+        <div class="dropdown" id="klase-dropdown"></div>
+    </div>
+    <div>
+        SVOJSTVA
+        <div class="dropdown" id="svojstva-dropdown"></div>
+    </div>
+    <div id="prefiksi"> 
+        PREFIKSI
+    </div>
+    <div>
+        Pomoć
+    </div>
 </div>
 
 <div id="content">
@@ -26,6 +41,7 @@
 </div>
 
 <script>
+// Function to display properties for a class when "Svojstva" menu item is clicked
 function displayPropertiesForClass(classId, data, className) {
     const properties = Object.values(data).filter(item => {
         const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
