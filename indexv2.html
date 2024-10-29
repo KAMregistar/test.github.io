@@ -10,7 +10,6 @@
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
-        /* Basic dropdown menu styling */
         .dropdown {
             display: none;
             position: absolute;
@@ -30,6 +29,8 @@
             position: relative;
             cursor: pointer;
         }
+        .expand-arrow { cursor: pointer; }
+        .details-row { display: none; background-color: #f9f9f9; }
     </style>
 </head>
 <body>
@@ -70,45 +71,106 @@ function displayClassDetails(ontologyClass) {
 
 // Display properties for a selected class in the content area
 function displayPropertiesForClass(classId, data, className) {
+    const properties = Object.values(data).filter(item => {
+        const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
+        return domains && domains.some(domain => domain['@id'] === classId);
+    });
+
     const content = document.getElementById('content');
-    content.innerHTML = `<h2>Svojstva za klasu: ${className}</h2><p>Detalji svojstva ovdje.</p>`;
+    content.innerHTML = `<h2>Svojstva za klasu: ${className}</h2>`;
+
+    if (properties.length === 0) {
+        content.innerHTML += '<p>No properties found for this class.</p>';
+    } else {
+        // Create table structure
+        let table = `<table id="propertiesTable" class="display">
+            <thead>
+                <tr><th></th><th>CURIE</th><th>Naziv svojstva</th><th>Podsvojstvo od</th><th>Obrnuto od</th><th>Doseg</th></tr>
+            </thead><tbody>`;
+
+        properties.forEach(property => {
+            const curieValue = property['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+                ? property['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
+                : '';
+            const label = property['http://www.w3.org/2000/01/rdf-schema#label']
+                ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+                : 'Unknown Label';
+            const subPropertyOf = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'], data);
+            const inverseOf = getCurieForProperty(property['http://www.w3.org/2002/07/owl#inverseOf'], data);
+            const range = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#range'], data);
+
+            table += `<tr data-curie="${curieValue}">
+                <td class="expand-arrow">▶</td>
+                <td>${curieValue}</td>
+                <td>${label}</td>
+                <td>${subPropertyOf}</td>
+                <td>${inverseOf}</td>
+                <td>${range}</td>
+            </tr>
+            <tr class="details-row" data-details-for="${curieValue}">
+                <td colspan="6">Loading...</td>
+            </tr>`;
+        });
+
+        table += '</tbody></table>';
+        content.innerHTML += table;
+
+        $(document).ready(function() {
+            $('#propertiesTable').DataTable();
+        });
+
+        // Set up expand functionality
+        document.querySelectorAll('.expand-arrow').forEach(arrow => {
+            arrow.addEventListener('click', function() {
+                const curie = this.parentNode.getAttribute('data-curie');
+                const detailsRow = document.querySelector(`tr[data-details-for="${curie}"]`);
+
+                if (detailsRow.style.display === 'none') {
+                    if (detailsRow.innerHTML === 'Loading...') {
+                        loadDetailsForCurie(curie, detailsRow);
+                    }
+                    detailsRow.style.display = 'table-row';
+                    this.textContent = '▼';
+                } else {
+                    detailsRow.style.display = 'none';
+                    this.textContent = '▶';
+                }
+            });
+        });
+    }
 }
 
-// Populate "Klase" dropdown
+// Fetch and populate dropdown data
 function populateKlaseDropdown(data) {
     const klaseDropdown = document.getElementById('klase-dropdown');
     Object.keys(data).forEach(key => {
         const element = data[key];
-        const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
-        const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
+        const label = element['http://www.w3.org/2000/01/rdf-schema#label']?.[0]?.['@value'] || element['@id'].split('/').pop();
 
-        if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+        if (element['@type']?.includes('http://www.w3.org/2002/07/owl#Class')) {
             const item = document.createElement('div');
-            item.textContent = dropdownLabel;
-            item.onclick = () => displayClassDetails(element); // Assign click event
+            item.textContent = label;
+            item.onclick = () => displayClassDetails(element);
             klaseDropdown.appendChild(item);
         }
     });
 }
 
-// Populate "Svojstva" dropdown
 function populateSvojstvaDropdown(data) {
     const svojstvaDropdown = document.getElementById('svojstva-dropdown');
     Object.keys(data).forEach(key => {
         const element = data[key];
-        const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
-        const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
+        const label = element['http://www.w3.org/2000/01/rdf-schema#label']?.[0]?.['@value'] || element['@id'].split('/').pop();
 
-        if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+        if (element['@type']?.includes('http://www.w3.org/2002/07/owl#Class')) {
             const item = document.createElement('div');
-            item.textContent = dropdownLabel;
-            item.onclick = () => displayPropertiesForClass(element['@id'], data, dropdownLabel); // Assign click event
+            item.textContent = label;
+            item.onclick = () => displayPropertiesForClass(element['@id'], data, label);
             svojstvaDropdown.appendChild(item);
         }
     });
 }
 
-// Close dropdowns when clicking outside
 window.onclick = function(event) {
     if (!event.target.matches('.menu-item')) {
         document.querySelectorAll('.dropdown').forEach(dropdown => {
@@ -117,7 +179,7 @@ window.onclick = function(event) {
     }
 }
 
-// Fetch JSON-LD data and initialize dropdowns
+// Fetch JSON-LD and initialize dropdowns
 fetch('KAMOntologija_v9.jsonld')
     .then(response => response.json())
     .then(data => {
@@ -125,6 +187,45 @@ fetch('KAMOntologija_v9.jsonld')
         populateSvojstvaDropdown(data);
     })
     .catch(error => console.error('Error fetching JSON-LD:', error));
+
+// Helper functions for extracting CURIE details
+function getCurieForProperty(propertyField, data) {
+    const idValue = propertyField?.[0]?.['@id'];
+    return data[idValue]?.['http://www.registar.kam.hr/ontologies/ont.owl/ID']?.[0]?.['@value'] || '';
+}
+
+// Load details for a specific CURIE in expanded row
+function loadDetailsForCurie(curie, detailsRow) {
+    fetch('KAMOntologija_v9.jsonld')
+        .then(response => response.json())
+        .then(data => {
+            const property = Object.values(data).find(item => {
+                const idField = item['http://www.registar.kam.hr/ontologies/ont.owl/ID']?.[0]?.['@value'];
+                return idField === curie;
+            });
+
+            if (property) {
+                const label = property['http://www.w3.org/2000/01/rdf-schema#label']?.[0]?.['@value'] || 'Unknown Label';
+                const definition = property['http://www.registar.kam.hr/ontologies/ont.owl/definition']?.[0]?.['@value'] || 'No definition available';
+                const range = property['http://www.w3.org/2000/01/rdf-schema#range']?.[0]?.['@id'] || 'No Range';
+                const subPropertyOf = property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf']?.[0]?.['@id'] || 'No subPropertyOf';
+                const inverseOf = property['http://www.w3.org/2002/07/owl#inverseOf']?.[0]?.['@id'] || 'No inverseOf';
+
+                detailsRow.innerHTML = `<td colspan="6">
+                    <strong>Naziv:</strong> ${label} <br>
+                    <strong>Definicija:</strong> ${definition} <br>
+                    <strong>Doseg:</strong> ${range} <br>
+                    <strong>Podsvojstvo od:</strong> ${subPropertyOf} <br>
+                    <strong>Obrnuto od:</strong> ${inverseOf}
+                </td>`;
+            } else {
+                detailsRow.innerHTML = `<td colspan="6">Details not found for CURIE: ${curie}</td>`;
+            }
+        })
+        .catch(error => {
+            detailsRow.innerHTML = `<td colspan="6">Error loading details: ${error}</td>`;
+        });
+}
 
 </script>
 </body>
