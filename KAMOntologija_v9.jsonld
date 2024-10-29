@@ -42388,7 +42388,7 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#range": [
             {
-                "@id": "http://www.registar.kam.hr/Element/c/C100011"
+                "@id": "http://www.registar.kam.hr/Element/c/C10011"
             }
         ],
         "http://www.w3.org/2002/07/owl#inverseOf": [
