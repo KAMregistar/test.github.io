@@ -59,6 +59,21 @@ function toggleDropdown(dropdownId) {
     dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
 }
 
+// Display class details in the content area
+function displayClassDetails(ontologyClass) {
+    const content = document.getElementById('content');
+    const title = ontologyClass['http://www.w3.org/2000/01/rdf-schema#label']
+        ? ontologyClass['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+        : 'Unknown Class';
+    content.innerHTML = `<h2>Klasa: ${title}</h2><p>Detalji klase ovdje.</p>`;
+}
+
+// Display properties for a selected class in the content area
+function displayPropertiesForClass(classId, data, className) {
+    const content = document.getElementById('content');
+    content.innerHTML = `<h2>Svojstva za klasu: ${className}</h2><p>Detalji svojstva ovdje.</p>`;
+}
+
 // Populate "Klase" dropdown
 function populateKlaseDropdown(data) {
     const klaseDropdown = document.getElementById('klase-dropdown');
@@ -70,7 +85,7 @@ function populateKlaseDropdown(data) {
         if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
             const item = document.createElement('div');
             item.textContent = dropdownLabel;
-            item.onclick = () => displayClassDetails(element);
+            item.onclick = () => displayClassDetails(element); // Assign click event
             klaseDropdown.appendChild(item);
         }
     });
@@ -87,13 +102,13 @@ function populateSvojstvaDropdown(data) {
         if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
             const item = document.createElement('div');
             item.textContent = dropdownLabel;
-            item.onclick = () => displayPropertiesForClass(element['@id'], data, dropdownLabel);
+            item.onclick = () => displayPropertiesForClass(element['@id'], data, dropdownLabel); // Assign click event
             svojstvaDropdown.appendChild(item);
         }
     });
 }
 
-// Close the dropdown if clicked outside
+// Close dropdowns when clicking outside
 window.onclick = function(event) {
     if (!event.target.matches('.menu-item')) {
         document.querySelectorAll('.dropdown').forEach(dropdown => {
