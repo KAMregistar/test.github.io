@@ -63,9 +63,7 @@ function toggleDropdown(dropdownId) {
 // Display class details in the content area
 function displayClassDetails(ontologyClass) {
     const content = document.getElementById('content');
-    const title = ontologyClass['http://www.w3.org/2000/01/rdf-schema#label']
-        ? ontologyClass['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
-        : 'Unknown Class';
+    const title = ontologyClass['http://www.w3.org/2000/01/rdf-schema#label']?.[0]?.['@value'] || 'Unknown Class';
     content.innerHTML = `<h2>Klasa: ${title}</h2><p>Detalji klase ovdje.</p>`;
 }
 
@@ -89,12 +87,8 @@ function displayPropertiesForClass(classId, data, className) {
             </thead><tbody>`;
 
         properties.forEach(property => {
-            const curieValue = property['http://www.registar.kam.hr/ontologies/ont.owl/ID']
-                ? property['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
-                : '';
-            const label = property['http://www.w3.org/2000/01/rdf-schema#label']
-                ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
-                : 'Unknown Label';
+            const curieValue = property['http://www.registar.kam.hr/ontologies/ont.owl/ID']?.[0]?.['@value'] || '';
+            const label = property['http://www.w3.org/2000/01/rdf-schema#label']?.[0]?.['@value'] || 'Unknown Label';
             const subPropertyOf = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'], data);
             const inverseOf = getCurieForProperty(property['http://www.w3.org/2002/07/owl#inverseOf'], data);
             const range = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#range'], data);
@@ -140,7 +134,7 @@ function displayPropertiesForClass(classId, data, className) {
     }
 }
 
-// Fetch and populate dropdown data
+// Populate "Klase" dropdown
 function populateKlaseDropdown(data) {
     const klaseDropdown = document.getElementById('klase-dropdown');
     Object.keys(data).forEach(key => {
@@ -156,6 +150,7 @@ function populateKlaseDropdown(data) {
     });
 }
 
+// Populate "Svojstva" dropdown
 function populateSvojstvaDropdown(data) {
     const svojstvaDropdown = document.getElementById('svojstva-dropdown');
     Object.keys(data).forEach(key => {
@@ -171,30 +166,13 @@ function populateSvojstvaDropdown(data) {
     });
 }
 
-window.onclick = function(event) {
-    if (!event.target.matches('.menu-item')) {
-        document.querySelectorAll('.dropdown').forEach(dropdown => {
-            dropdown.style.display = 'none';
-        });
-    }
-}
-
-// Fetch JSON-LD and initialize dropdowns
-fetch('KAMOntologija_v9.jsonld')
-    .then(response => response.json())
-    .then(data => {
-        populateKlaseDropdown(data);
-        populateSvojstvaDropdown(data);
-    })
-    .catch(error => console.error('Error fetching JSON-LD:', error));
-
-// Helper functions for extracting CURIE details
+// Helper function to get CURIE for property fields
 function getCurieForProperty(propertyField, data) {
     const idValue = propertyField?.[0]?.['@id'];
     return data[idValue]?.['http://www.registar.kam.hr/ontologies/ont.owl/ID']?.[0]?.['@value'] || '';
 }
 
-// Load details for a specific CURIE in expanded row
+// Load details for a specific CURIE in the expanded row
 function loadDetailsForCurie(curie, detailsRow) {
     fetch('KAMOntologija_v9.jsonld')
         .then(response => response.json())
@@ -225,6 +203,23 @@ function loadDetailsForCurie(curie, detailsRow) {
         .catch(error => {
             detailsRow.innerHTML = `<td colspan="6">Error loading details: ${error}</td>`;
         });
+}
+
+// Fetch JSON-LD and initialize dropdowns
+fetch('KAMOntologija_v9.jsonld')
+    .then(response => response.json())
+    .then(data => {
+        populateKlaseDropdown(data);
+        populateSvojstvaDropdown(data);
+    })
+    .catch(error => console.error('Error fetching JSON-LD:', error));
+
+window.onclick = function(event) {
+    if (!event.target.matches('.menu-item')) {
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.style.display = 'none';
+        });
+    }
 }
 
 </script>
