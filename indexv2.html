@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ontologija KAM</title>
+    <!-- Google Fonts import for Poppins and Rubik -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <!-- Include DataTables CSS and JS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        .expand-arrow {
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .details-row {
+            background-color: #f9f9f9;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div id="menu-bar">
+    <img src="kam.png" alt="KAM Logo" class="logo">
+    <h1><a href="index.html" style="text-decoration:none; color:inherit;">Registar</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+    <div>
+        KLASE
+        <div class="dropdown" id="klase-dropdown"></div>
+    </div>
+    <div>
+        SVOJSTVA
+        <div class="dropdown" id="svojstva-dropdown"></div>
+    </div>
+    <div id="prefiksi"> 
+        PREFIKSI
+    </div>
+    <div>
+        Pomoć
+    </div>
+</div>
+
+<div id="content">
+    <p>O registru</p>
+</div>
+
+<div id="footer">
+    © 2024 Nacionalna i sveučilišna knjižnica u Zagrebu. Sva prava pridržana. | Hrvatske bratske zajednice 4, 10000 Zagreb, Hrvatska | Tel. +385 1 616 4021
+</div>
+
+<script>
+    function displayPropertiesForClass(classId, data, className) {
+        const properties = Object.values(data).filter(item => {
+            const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
+            return domains && domains.some(domain => domain['@id'] === classId);
+        });
+
+        const content = document.getElementById('content');
+        content.innerHTML = `<h2>Svojstva za klasu: ${className}</h2>`;
+
+        if (properties.length === 0) {
+            content.innerHTML += '<p>No properties found for this class.</p>';
+        } else {
+            let table = `<table id="myTable" class="display">
+                <thead>
+                    <tr><th></th><th>CURIE</th><th>Naziv svojstva</th><th>Podsvojstvo od</th><th>Obrnuto od</th><th>Doseg</th></tr>
+                </thead><tbody>`;
+
+            properties.forEach(property => {
+                const curieValue = property['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+                    ? property['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
+                    : ''; 
+                const label = property['http://www.w3.org/2000/01/rdf-schema#label']
+                    ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+                    : 'Unknown Label';
+                const subPropertyOf = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'], data);
+                const inverseOf = getCurieForProperty(property['http://www.w3.org/2002/07/owl#inverseOf'], data);
+                const range = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#range'], data);
+
+                table += `
+                    <tr data-curie="${curieValue}">
+                        <td class="expand-arrow">▶</td>
+                        <td>${curieValue}</td>
+                        <td>${label}</td>
+                        <td>${subPropertyOf}</td>
+                        <td>${inverseOf}</td>
+                        <td>${range}</td>
+                    </tr>
+                    <tr class="details-row" data-curie-details="${curieValue}">
+                        <td colspan="6">Loading...</td>
+                    </tr>`;
+            });
+
+            table += '</tbody></table>';
+            content.innerHTML += table;
+
+            $(document).ready(function() {
+                $('#myTable').DataTable();
+            });
+
+            // Add event listener for the expand arrow
+            document.querySelectorAll('.expand-arrow').forEach(arrow => {
+                arrow.addEventListener('click', function() {
+                    const curie = this.parentNode.getAttribute('data-curie');
+                    const detailsRow = document.querySelector(`tr[data-curie-details="${curie}"]`);
+
+                    if (detailsRow.style.display === 'none') {
+                        // Fetch details if row is being expanded
+                        if (detailsRow.innerHTML === 'Loading...') {
+                            loadDetailsForCurie(curie, detailsRow);
+                        }
+                        detailsRow.style.display = 'table-row';
+                        this.innerHTML = '▼';
+                    } else {
+                        detailsRow.style.display = 'none';
+                        this.innerHTML = '▶';
+                    }
+                });
+            });
+        }
+    }
+
+    // Function to load CURIE details within the row
+    function loadDetailsForCurie(curie, detailsRow) {
+        fetch('KAMOntologija_v9.jsonld')
+            .then(response => response.json())
+            .then(data => {
+                const property = Object.values(data).find(item => item['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'] === curie);
+                if (property) {
+                    const label = property['http://www.w3.org/2000/01/rdf-schema#label']
+                        ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+                        : 'Unknown Label';
+                    const definition = property['http://www.registar.kam.hr/ontologies/ont.owl/definition']
+                        ? property['http://www.registar.kam.hr/ontologies/ont.owl/definition'][0]['@value']
+                        : 'No definition available';
+                    const range = property['http://www.w3.org/2000/01/rdf-schema#range']
+                        ? property['http://www.w3.org/2000/01/rdf-schema#range'][0]['@id']
+                        : 'No Range';
+                    const subPropertyOf = property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf']
+                        ? property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'][0]['@id']
+                        : 'No subPropertyOf';
+                    const inverseOf = property['http://www.w3.org/2002/07/owl#inverseOf']
+                        ? property['http://www.w3.org/2002/07/owl#inverseOf'][0]['@id']
+                        : 'No inverseOf';
+
+                    detailsRow.innerHTML = `
+                        <td colspan="6">
+                            <strong>Naziv:</strong> ${label} <br>
+                            <strong>Definicija:</strong> ${definition} <br>
+                            <strong>Doseg:</strong> ${range} <br>
+                            <strong>Podsvojstvo od:</strong> ${subPropertyOf} <br>
+                            <strong>Obrnuto od:</strong> ${inverseOf} <br>
+                        </td>`;
+                }
+            })
+            .catch(error => {
+                detailsRow.innerHTML = `<td colspan="6">Error loading details: ${error}</td>`;
+            });
+    }
+
+    // Helper function to get CURIE links
+    function getCurieForProperty(propertyField, data) {
+        if (propertyField && propertyField[0] && propertyField[0]['@id']) {
+            const idValue = propertyField[0]['@id'];
+            const foundElement = Object.values(data).find(item => item['@id'] === idValue);
+            if (foundElement && foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID']) {
+                return foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'];
+            }
+        }
+        return '';
+    }
+
+    // Function to initialize dropdowns (use your JSON-LD as in your existing code)
+
+</script>
+
+</body>
+</html>
