@@ -149,7 +149,7 @@ function displayPropertyDetails(curie, data) {
             : 'No inverseOf found';  // If inverseOf is missing, display this message
         console.log("inverseOf:", inverseOf);  // Log to debug why it's not showing up
 
-        content.innerHTML = `<h2>Details for CURIE: ${curie}</h2>`;
+        content.innerHTML = `<h2>Detalji za: "${label}"</h2>`;
         let table = `<table id="propertyTable" class="display">
             <tbody>
             <tr><td>KAM ID</td><td>${curie}</td></tr>
