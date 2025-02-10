@@ -122,7 +122,7 @@ function displayPropertyDetails(curie, data) {
 
     if (property) {
         // Log the full property object for inspection
-        console.log("Selected Property (Full):", property);
+        console.log("Odaberite svojstvo (Full):", property);
 
         const label = property['http://www.w3.org/2000/01/rdf-schema#label']
             ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
@@ -146,7 +146,7 @@ function displayPropertyDetails(curie, data) {
         const inverseOfKey = 'http://www.w3.org/2002/07/owl#inverseOf';  // The expected key
         const inverseOf = property[inverseOfKey] && property[inverseOfKey][0]
             ? makeClickableLink(property[inverseOfKey][0]['@id'])
-            : 'No inverseOf found';  // If inverseOf is missing, display this message
+            : 'Ne postoji <i>inverseOf</i>';  // If inverseOf is missing, display this message
         console.log("inverseOf:", inverseOf);  // Log to debug why it's not showing up
 
         content.innerHTML = `<h2>Detalji za: "${label}"</h2>`;
@@ -219,7 +219,7 @@ if (isLocalStorageAvailable()) {
             })
             .catch(error => {
                 console.error('There has been a problem with your fetch operation:', error);
-                document.getElementById('content').innerHTML = '<p>Error loading ontology data.</p>';
+                document.getElementById('content').innerHTML = '<p>Pogreška u dohvaćanju ontologije.</p>';
             });
     }
 } else {
@@ -236,7 +236,7 @@ if (isLocalStorageAvailable()) {
         })
         .catch(error => {
             console.error('There has been a problem with your fetch operation:', error);
-            document.getElementById('content').innerHTML = '<p>Error loading ontology data.</p>';
+            document.getElementById('content').innerHTML = '<p>Pogreška u dohvaćanju ontologije.</p>';
         });
 }
 </script>
