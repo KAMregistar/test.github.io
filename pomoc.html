@@ -1,168 +1,79 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tutorijal za korištenje ontologije KAM</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Rubik:wght@300&display=swap" rel="stylesheet">
-  <!-- DataTables CSS (ako se koristi negdje drugdje) -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"/>
-  <!-- Učitaj jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- Učitaj DataTables (ako je potrebno) -->
-  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-  <!-- Vaš vlastiti CSS -->
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <style>
-    /* Osnovni stilovi za izbornik i sadržaj stranice */
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff;
-      color: #333;
-    }
-    #menu-bar {
-      background-color: #003366;
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      color: #fff;
-    }
-    #menu-bar img.logo {
-      height: 50px;
-      margin-right: 20px;
-    }
-    #menu-bar h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-    #menu-bar a {
-      color: #fff;
-      text-decoration: none;
-    }
-    /* Jednostavni izbornik (menu) – ovdje se mogu dodati i dodatni stilovi */
-    #menu-bar div {
-      margin-left: 20px;
-      position: relative;
-    }
-    .dropdown {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #f9f9f9;
-      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-      min-width: 160px;
-      z-index: 100;
-    }
-    .dropdown div {
-      padding: 8px;
-      cursor: pointer;
-      color: #003366;
-    }
-    .dropdown div:hover {
-      background-color: #e6e6e6;
-    }
-    #content {
-      padding: 20px;
-      max-width: 800px;
-      margin: 20px auto;
-      line-height: 1.6;
-    }
-    #content h2 {
-      color: #003366;
-      margin-top: 0;
-    }
-    #footer {
-      background-color: #000;
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-      font-size: 14px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorijal za korištenje ontologije KAM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-<!-- Menu bar -->
 <div id="menu-bar">
-  <img src="kam.png" alt="KAM Logo" class="logo">
-  <h1><a href="index.html" style="text-decoration:none; color:inherit;">Registar</a></h1>
-  <div class="menu-item" onclick="toggleDropdown('klase-dropdown')">KLASE
-    <div class="dropdown" id="klase-dropdown"></div>
-  </div>
-  <div class="menu-item" onclick="toggleDropdown('svojstva-dropdown')">SVOJSTVA
-    <div class="dropdown" id="svojstva-dropdown"></div>
-  </div>
-  <div class="menu-item"><a href="index.html?section=prefiksi" style="text-decoration:none; color:inherit;">PREFIKSI</a></div>
-  <div class="menu-item"><a href="index.html?section=pomoc" style="text-decoration:none; color:inherit;">Pomoć</a></div>
+    <img src="kam.png" alt="KAM Logo" class="logo">
+    <h1><a href="index.html" style="text-decoration:none; color:inherit;">Registar</a></h1>
+    <div>
+        <a href="index.html" onclick="redirectToIndex('klase'); return false;">KLASE</a>
+    </div>
+    <div>
+        <a href="index.html" onclick="redirectToIndex('svojstva'); return false;">SVOJSTVA</a>
+    </div>
+    <div>
+        <a href="index.html" onclick="redirectToIndex('prefiksi'); return false;">PREFIKSI</a>
+    </div>
+    <div>
+        <a href="index.html" onclick="redirectToIndex('pomoc'); return false;">Pomoć</a>
+    </div>
 </div>
 
-<!-- Sadržaj stranice – Tutorijal -->
 <div id="content">
-  <h2>Tutorijal za korištenje ontologije KAM</h2>
-  <p><strong>Što je ontologija KAM?</strong><br>
-  Ontologija KAM je strukturirani, formalni prikaz entiteta (klasa) i njihovih svojstava (atributa i odnosa) koji se koriste za opis i organizaciju knjižnične, arhivske, muzejske i srodne građe. Ona pomaže u standardizaciji opisa i olakšava razmjenu informacija među različitim sustavima, čime se poboljšava interoperabilnost i omogućuje automatsko zaključivanje o podacima.</p>
-  
-  <p><strong>Čemu služi ontologija KAM?</strong><br>
-  <em>Standardizacija opisa:</em> Omogućuje dosljedan i jedinstven način opisa objekata, što olakšava pretraživanje i organizaciju podataka.<br>
-  <em>Interoperabilnost:</em> Podaci opisani pomoću ontologije mogu se koristiti u različitim aplikacijama bez dodatnih prilagodbi.<br>
-  <em>Automatsko zaključivanje:</em> Unaprijed definirani odnosi i svojstva omogućuju sustavima automatsko prepoznavanje veza između podataka, čime se poboljšava njihova analiza i interpretacija.</p>
-  
-  <p><strong>Kako koristiti ontologiju KAM?</strong></p>
-  <ol>
-    <li><strong>Pregled klasa i svojstava:</strong><br>
-      Ontologija sadrži različite klase (npr. knjige, dokumenti, umjetnička djela) i za svaku klasu definirana su svojstva (atributi i odnosi, poput autora, godine izdanja, lokacije itd.). Na našoj stranici možete pregledavati klase i svojstva putem izbornika – klikom na pojedina stavku otvorit će se detaljan opis entiteta.
-    </li>
-    <li><strong>Korištenje pretraživača:</strong><br>
-      Preko interaktivnih tablica možete pretraživati i filtrirati entitete, što omogućuje brzo pronalaženje potrebnih informacija bez tehničkog znanja.
-    </li>
-    <li><strong>Preuzimanje podataka:</strong><br>
-      Ontologija je dostupna u više formata (JSON-LD, CSV, RDF/XML, TTL). Ovi formati omogućuju korisnicima da preuzmu podatke u formatu koji im najviše odgovara i koriste ih u vlastitim aplikacijama.
-    </li>
-    <li><strong>Praktična primjena:</strong><br>
-      <em>Knjižničari i kustosi:</em> Koristite ontologiju za dosljedan opis i katalogizaciju zbirki.<br>
-      <em>Galeristi:</em> Standardizirani opisi umjetničkih djela olakšavaju prezentaciju i pretraživanje izložbi.<br>
-      <em>Arhivisti:</em> Ontologija pomaže u organizaciji arhivskog gradiva, osiguravajući bolji pristup podacima i njihovo očuvanje.
-    </li>
-  </ol>
-  
-  <p><strong>Zaključak:</strong><br>
-  Ontologija KAM pruža jedinstven i jednostavan način za organizaciju i pretraživanje informacija, omogućavajući bržu i učinkovitiju obradu podataka u kulturnom, knjižničnom, muzejskom i srodnom području.</p>
+    <h2>Tutorijal za korištenje ontologije KAM</h2>
+    <p><strong>Što je ontologija KAM?</strong><br>
+    Ontologija KAM je strukturirani, formalni prikaz entiteta (klasa) i njihovih svojstava (atributa i odnosa) koji se koriste za opis i organizaciju kulturne, knjižnične i muzejske građe. Omogućuje standardiziran opis podataka, olakšava pretraživanje i poboljšava interoperabilnost između različitih sustava.</p>
+    
+    <p><strong>Čemu služi ontologija KAM?</strong><br>
+    - <em>Standardizacija opisa:</em> Omogućuje dosljedan način opisa podataka.<br>
+    - <em>Interoperabilnost:</em> Olakšava razmjenu podataka između različitih informacijskih sustava.<br>
+    - <em>Automatsko zaključivanje:</em> Omogućuje sustavima prepoznavanje odnosa između podataka.</p>
+    
+    <p><strong>Kako koristiti ontologiju KAM?</strong></p>
+    <ol>
+        <li><strong>Pregled klasa i svojstava:</strong><br>
+            Na stranici možete pregledavati klase i svojstva putem izbornika. Klikom na pojedinu klasu ili svojstvo prikazuju se detaljne informacije.
+        </li>
+        <li><strong>Pretraživanje i filtriranje:</strong><br>
+            Interaktivne tablice omogućuju brzo pretraživanje i filtriranje podataka.
+        </li>
+        <li><strong>Preuzimanje podataka:</strong><br>
+            Ontologija je dostupna u više formata (JSON-LD, CSV, RDF/XML, TTL) za preuzimanje i upotrebu u različitim sustavima.
+        </li>
+        <li><strong>Praktična primjena:</strong><br>
+            <em>Knjižničari:</em> Standardizirani opis građe u katalozima.<br>
+            <em>Kustosi i galeristi:</em> Dosljedni opisi umjetničkih djela.<br>
+            <em>Arhivisti:</em> Organizacija arhivske građe.</li>
+    </ol>
+    
+    <p><strong>Zaključak:</strong><br>
+    Ontologija KAM omogućuje organizaciju i pretraživanje podataka u kulturnom, knjižničnom i muzejskom sektoru.</p>
 </div>
 
-<!-- Footer -->
 <div id="footer">
-  © 2024 Nacionalna i sveučilišna knjižnica u Zagrebu. Sva prava pridržana. | Hrvatske bratske zajednice 4, 10000 Zagreb, Hrvatska | Tel. +385 1 616 4021
+    © 2024 Nacionalna i sveučilišna knjižnica u Zagrebu. Sva prava pridržana. | Hrvatske bratske zajednice 4, 10000 Zagreb, Hrvatska | Tel. +385 1 616 4021
 </div>
 
 <script>
-// Helper function za preusmjeravanje
+// Funkcija za preusmjeravanje na odabranu sekciju
 function redirectToIndex(section) {
-  const urlParams = new URLSearchParams(window.location.search);
-  const curie = urlParams.get('curie');
-  if (section === 'klase' || section === 'svojstva' || section === 'prefiksi' || section === 'pomoc') {
-    window.location.href = `index.html?section=${section}&curie=${curie}`;
-  } else {
-    window.location.href = `index.html?curie=${curie}`;
-  }
-}
-
-// Funkcija za prebacivanje vidljivosti dropdown izbornika
-function toggleDropdown(dropdownId) {
-  const dropdown = document.getElementById(dropdownId);
-  dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-}
-
-// Zatvaranje dropdowna kada se klikne izvan izbornika
-window.onclick = function(event) {
-  if (!event.target.matches('.menu-item') && !event.target.closest('.menu-item')) {
-    document.querySelectorAll('.dropdown').forEach(dropdown => {
-      dropdown.style.display = 'none';
-    });
-  }
+    const urlParams = new URLSearchParams(window.location.search);
+    const curie = urlParams.get('curie');
+    if (section) {
+        window.location.href = `index.html?section=${section}&curie=${curie}`;
+    } else {
+        window.location.href = `index.html?curie=${curie}`;
+    }
 }
 </script>
 
