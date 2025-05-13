@@ -70,6 +70,10 @@
             border: none;
             cursor: pointer;
         }
+        .form-buttons {
+            display: flex;
+            gap: 10px;
+        }
     </style>
 </head>
 <body>
@@ -111,7 +115,10 @@
             <option value="kam:K10003">Rukopis</option>
         </select>
 
-        <button type="submit">Generiraj JSON-LD zapis</button>
+        <div class="form-buttons">
+            <button type="submit">Generiraj JSON-LD zapis</button>
+            <button type="button" onclick="resetForm()" style="background-color: #777;">Obriši</button>
+        </div>
     </form>
 
     <div class="output" id="output"></div>
@@ -120,6 +127,11 @@
 <script>
     function redirectToIndex(section) {
         window.location.href = `index.html?section=${section}`;
+    }
+
+    function resetForm() {
+        document.getElementById("kamForm").reset();
+        document.getElementById("output").textContent = "";
     }
 
     document.getElementById('kamForm').addEventListener('submit', function(event) {
