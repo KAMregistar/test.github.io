@@ -59,8 +59,14 @@
         <label for="title">Naslov knjige:</label>
         <input type="text" id="title" required>
 
-        <label for="author">Autor:</label>
+        <label for="author">Autor (ime i prezime):</label>
         <input type="text" id="author" required>
+
+        <label for="authorBirth">Datum rođenja autora (ISO format):</label>
+        <input type="text" id="authorBirth">
+
+        <label for="authorSameAs">Wikidata poveznica (Q-ID):</label>
+        <input type="text" id="authorSameAs" placeholder="https://www.wikidata.org/entity/QXXXXXX">
 
         <label for="publisher">Nakladnik:</label>
         <input type="text" id="publisher">
@@ -87,22 +93,34 @@
 
         const title = document.getElementById('title').value;
         const author = document.getElementById('author').value;
+        const authorBirth = document.getElementById('authorBirth').value;
+        const authorSameAs = document.getElementById('authorSameAs').value;
         const publisher = document.getElementById('publisher').value;
         const year = document.getElementById('year').value;
         const type = document.getElementById('type').value;
+
+        const authorObj = {
+            "@type": "kam:Osoba",
+            "rdfs:label": author
+        };
+
+        if (authorBirth) {
+            authorObj["schema:birthDate"] = authorBirth;
+        }
+        if (authorSameAs) {
+            authorObj["owl:sameAs"] = authorSameAs;
+        }
 
         const jsonld = {
             "@context": {
                 "kam": "http://www.registar.kam.hr/ontologies/ont.owl/",
                 "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-                "schema": "http://schema.org/"
+                "schema": "http://schema.org/",
+                "owl": "http://www.w3.org/2002/07/owl#"
             },
             "@type": type,
             "rdfs:label": title,
-            "kam:P10010": {
-                "@type": "kam:Osoba",
-                "rdfs:label": author
-            },
+            "kam:P10010": authorObj,
             "kam:P20001": publisher,
             "kam:P30002": year
         };
