@@ -1,124 +1,185 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-  <meta charset="UTF-8">
-  <title>Unos građe | Ontologija KAM</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    label {
-      display: block;
-      margin-top: 12px;
-    }
-    input, select, textarea {
-      width: 100%;
-      padding: 8px;
-      margin-top: 4px;
-    }
-    .radio-group {
-      display: flex;
-      gap: 20px;
-      margin-top: 4px;
-    }
-    .form-buttons {
-      margin-top: 20px;
-      display: flex;
-      gap: 10px;
-    }
-    .output {
-      margin-top: 20px;
-      background: #f4f4f4;
-      padding: 15px;
-      font-family: monospace;
-      white-space: pre-wrap;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unos nove knjige | Ontologija KAM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0; padding: 0;
+        }
+        #menu-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 20px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        #menu-bar img.logo {
+            height: 40px;
+        }
+        #menu-bar h1 {
+            margin: 0;
+            font-size: 1.5em;
+            font-weight: normal;
+        }
+        #menu-bar h1 a {
+            font-weight: bold;
+            text-decoration: none;
+            color: inherit;
+        }
+        #menu-bar > div {
+            margin-left: 20px;
+        }
+        #menu-bar > div a {
+            text-decoration: none;
+            color: #663399;
+            font-weight: 500;
+        }
+        #content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 12px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+        }
+        .output {
+            background: #f4f4f4;
+            padding: 15px;
+            margin-top: 20px;
+            white-space: pre-wrap;
+            border-left: 4px solid #0077aa;
+            font-family: monospace;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #0077aa;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .form-buttons {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
 </head>
 <body>
-  <h2>Unos bibliografske građe prema KAM ontologiji</h2>
+<div id="menu-bar">
+    <img src="kam.png" alt="KAM Logo" class="logo">
+    <h1><a href="index.html">Registar</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+    <div><a href="index.html" onclick="redirectToIndex('klase'); return false;">KLASE</a></div>
+    <div><a href="index.html" onclick="redirectToIndex('svojstva'); return false;">SVOJSTVA</a></div>
+    <div><a href="index.html" onclick="redirectToIndex('prefiksi'); return false;">PREFIKSI</a></div>
+    <div><a href="index.html" onclick="redirectToIndex('pomoc'); return false;">Pomoć</a></div>
+</div>
 
-  <form id="kamForm">
-    <label for="title">Naslov:</label>
-    <input type="text" id="title" required>
+<div id="content">
+    <h2>Unos nove građe prema KAM ontologiji</h2>
 
-    <label>Autor:</label>
-    <div class="radio-group">
-      <label><input type="radio" name="authorType" value="object" checked> Poveži s entitetom</label>
-      <label><input type="radio" name="authorType" value="literal"> Unesi kao tekst</label>
-    </div>
+    <form id="kamForm">
+        <label for="title">Naslov građe:</label>
+        <input type="text" id="title" required>
 
-    <div id="author-object-group">
-      <label for="authorURI">URI autora:</label>
-      <input type="text" id="authorURI" placeholder="http://example.org/autor/123">
-    </div>
+        <label for="author">Autor (ime i prezime):</label>
+        <input type="text" id="author" required>
 
-    <div id="author-literal-group" style="display: none;">
-      <label for="authorLabel">Ime i prezime autora:</label>
-      <input type="text" id="authorLabel">
-    </div>
+        <label for="authorBirth">Datum rođenja autora (ISO format):</label>
+        <input type="text" id="authorBirth">
 
-    <label for="year">Godina izdanja:</label>
-    <input type="text" id="year">
+        <label for="authorSameAs">Wikidata poveznica (Q-ID):</label>
+        <input type="text" id="authorSameAs" placeholder="https://www.wikidata.org/entity/QXXXXXX">
 
-    <div class="form-buttons">
-      <button type="submit">Generiraj JSON-LD</button>
-      <button type="button" onclick="resetForm()">Obriši</button>
-    </div>
-  </form>
+        <label for="publisher">Nakladnik:</label>
+        <input type="text" id="publisher">
 
-  <div class="output" id="output"></div>
+        <label for="year">Godina izdanja:</label>
+        <input type="text" id="year">
 
-  <script>
-    document.querySelectorAll('input[name="authorType"]').forEach(el => {
-      el.addEventListener('change', function() {
-        const type = this.value;
-        document.getElementById('author-object-group').style.display = type === 'object' ? 'block' : 'none';
-        document.getElementById('author-literal-group').style.display = type === 'literal' ? 'block' : 'none';
-      });
-    });
+        <label for="type">Vrsta građe:</label>
+        <select id="type">
+            <option value="kam:K10001">Knjiga</option>
+            <option value="kam:K10002">Zbirka</option>
+            <option value="kam:K10003">Rukopis</option>
+            <option value="kam:K10004">Kartografska građa</option>
+            <option value="kam:K10005">Audiovizualna građa</option>
+            <option value="kam:K10006">Elektronička građa</option>
+            <option value="kam:K10007">Tisak</option>
+            <option value="kam:K10008">Građa za slijepe</option>
+            <option value="kam:K10009">Grafička građa</option>
+        </select>
 
-    function resetForm() {
-      document.getElementById('kamForm').reset();
-      document.getElementById('output').textContent = "";
-      document.getElementById('author-object-group').style.display = 'block';
-      document.getElementById('author-literal-group').style.display = 'none';
+        <div class="form-buttons">
+            <button type="submit">Generiraj JSON-LD zapis</button>
+            <button type="button" onclick="resetForm()" style="background-color: #777;">Obriši</button>
+        </div>
+    </form>
+
+    <div class="output" id="output"></div>
+</div>
+
+<script>
+    function redirectToIndex(section) {
+        window.location.href = `index.html?section=${section}`;
     }
 
-    document.getElementById('kamForm').addEventListener('submit', function(e) {
-      e.preventDefault();
+    function resetForm() {
+        document.getElementById("kamForm").reset();
+        document.getElementById("output").textContent = "";
+    }
 
-      const title = document.getElementById('title').value;
-      const authorType = document.querySelector('input[name="authorType"]:checked').value;
-      const year = document.getElementById('year').value;
+    document.getElementById('kamForm').addEventListener('submit', function(event) {
+        event.preventDefault();
 
-      let record = {
-        "@context": {
-          "kamad": "http://www.registar.kam.hr/ontologies/ont.owl/ad/",
-          "kamao": "http://www.registar.kam.hr/ontologies/ont.owl/ao/",
-          "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
-        },
-        "rdfs:label": title,
-        "kamad:P60001": undefined, // zamijenit će se u nastavku
-        "kamad:P30002": year
-      };
+        const title = document.getElementById('title').value;
+        const author = document.getElementById('author').value;
+        const authorBirth = document.getElementById('authorBirth').value;
+        const authorSameAs = document.getElementById('authorSameAs').value;
+        const publisher = document.getElementById('publisher').value;
+        const year = document.getElementById('year').value;
+        const type = document.getElementById('type').value;
 
-      if (authorType === 'object') {
-        const uri = document.getElementById('authorURI').value;
-        record["kamao:P60001"] = { "@id": uri };
-        delete record["kamad:P60001"];
-      } else {
-        const label = document.getElementById('authorLabel').value;
-        record["kamad:P60001"] = label;
-        delete record["kamao:P60001"];
-      }
+        const authorObj = {
+            "@type": "kam:Osoba",
+            "rdfs:label": author
+        };
 
-      document.getElementById('output').textContent = JSON.stringify(record, null, 2);
+        if (authorBirth) {
+            authorObj["schema:birthDate"] = authorBirth;
+        }
+        if (authorSameAs) {
+            authorObj["owl:sameAs"] = authorSameAs;
+        }
+
+        const jsonld = {
+            "@context": {
+                "kam": "http://www.registar.kam.hr/ontologies/ont.owl/",
+                "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+                "schema": "http://schema.org/",
+                "owl": "http://www.w3.org/2002/07/owl#"
+            },
+            "@type": type,
+            "rdfs:label": title,
+            "kam:P10010": authorObj,
+            "kam:P20001": publisher,
+            "kam:P30002": year
+        };
+
+        document.getElementById('output').textContent = JSON.stringify(jsonld, null, 2);
     });
-  </script>
+</script>
+
 </body>
 </html>
