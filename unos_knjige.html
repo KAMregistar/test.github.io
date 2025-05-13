@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unos nove knjige | Ontologija KAM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0; padding: 0;
+        }
+        #content {
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 12px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+        }
+        .output {
+            background: #f4f4f4;
+            padding: 15px;
+            margin-top: 20px;
+            white-space: pre-wrap;
+            border-left: 4px solid #0077aa;
+            font-family: monospace;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #0077aa;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="menu-bar">
+    <img src="kam.png" alt="KAM Logo" class="logo">
+    <h1><a href="index.html" style="text-decoration:none; color:inherit;">Registar</a></h1>
+    <div><a href="index.html">KLASE</a></div>
+    <div><a href="index.html">SVOJSTVA</a></div>
+    <div><a href="index.html">PREFIKSI</a></div>
+    <div><a href="index.html">Pomoć</a></div>
+</div>
+
+<div id="content">
+    <h2>Unos nove knjige prema KAM ontologiji</h2>
+
+    <form id="kamForm">
+        <label for="title">Naslov knjige:</label>
+        <input type="text" id="title" required>
+
+        <label for="author">Autor:</label>
+        <input type="text" id="author" required>
+
+        <label for="publisher">Nakladnik:</label>
+        <input type="text" id="publisher">
+
+        <label for="year">Godina izdanja:</label>
+        <input type="text" id="year">
+
+        <label for="type">Vrsta građe:</label>
+        <select id="type">
+            <option value="kam:K10001">Knjiga</option>
+            <option value="kam:K10002">Zbirka</option>
+            <option value="kam:K10003">Rukopis</option>
+        </select>
+
+        <button type="submit">Generiraj JSON-LD zapis</button>
+    </form>
+
+    <div class="output" id="output"></div>
+</div>
+
+<script>
+    document.getElementById('kamForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const title = document.getElementById('title').value;
+        const author = document.getElementById('author').value;
+        const publisher = document.getElementById('publisher').value;
+        const year = document.getElementById('year').value;
+        const type = document.getElementById('type').value;
+
+        const jsonld = {
+            "@context": {
+                "kam": "http://www.registar.kam.hr/ontologies/ont.owl/",
+                "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+                "schema": "http://schema.org/"
+            },
+            "@type": type,
+            "rdfs:label": title,
+            "kam:P10010": {
+                "@type": "kam:Osoba",
+                "rdfs:label": author
+            },
+            "kam:P20001": publisher,
+            "kam:P30002": year
+        };
+
+        document.getElementById('output').textContent = JSON.stringify(jsonld, null, 2);
+    });
+</script>
+
+</body>
+</html>
