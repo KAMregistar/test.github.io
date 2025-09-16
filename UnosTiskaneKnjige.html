@@ -2,37 +2,77 @@
 <html lang="hr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Unos – Tiskana knjiga u više svezaka | KAM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;color:#1f2937;background:#f6f7fb}
-    header{padding:16px 20px;border-bottom:1px solid #e5e7eb;background:#fff;position:sticky;top:0;z-index:10}
-    header h1{margin:0;font-size:18px}
-    main{max-width:1100px;margin:0 auto;padding:20px}
-    .card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px;margin:14px 0}
-    .row{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
-    label{font-size:13px;color:#6b7280}
-    input,select,textarea{width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:10px}
-    .cols-12{grid-column:span 12}.cols-8{grid-column:span 8}.cols-6{grid-column:span 6}.cols-4{grid-column:span 4}.cols-3{grid-column:span 3}.cols-2{grid-column:span 2}
-    .actions{display:flex;gap:10px;justify-content:flex-end;margin-top:10px}
-    button{border:0;border-radius:10px;padding:10px 16px;cursor:pointer}
-    .primary{background:#6d28d9;color:#fff}
-    .ghost{background:transparent;border:1px solid #e5e7eb}
-    pre{background:#0b1020;color:#cfe8ff;border-radius:10px;padding:14px;white-space:pre-wrap}
-    .err{color:#b91c1c;font-weight:600}
-    h2{margin:0 0 8px;font-size:16px}
+    :root{
+      --ink:#1f2937; --muted:#6b7280; --brand:#6d28d9; --bg:#f8fafc; --panel:#ffffff; --border:#e5e7eb;
+    }
+    *{box-sizing:border-box;}
+    html,body{margin:0;padding:0;}
+    body{font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg)}
+    /* Header + nav */
+    header{display:flex;align-items:center;gap:14px;padding:14px 18px;border-bottom:1px solid var(--border);background:var(--panel);position:sticky;top:0;z-index:10}
+    header img{height:32px;width:auto}
+    header h1{font-size:18px;margin:0;font-weight:600}
+    nav{margin-left:auto;display:flex;gap:12px}
+    nav a{font-size:13px;color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:8px}
+    nav a:hover{background:#f1f5f9;color:#111827}
+    /* Layout */
+    main{max-width:1100px;margin:0 auto;padding:18px}
+    .card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:16px;margin:14px 0}
+    .section-title{font-size:16px;font-weight:600;margin:0 0 10px}
+    /* Robust grid */
+    .row{
+      display:grid;
+      grid-template-columns:repeat(12, minmax(0,1fr));
+      gap:12px;
+      width:100%;
+    }
+    .cols-12{grid-column:span 12}
+    .cols-8{grid-column:span 8}
+    .cols-6{grid-column:span 6}
+    .cols-4{grid-column:span 4}
+    .cols-3{grid-column:span 3}
+    .cols-2{grid-column:span 2}
+    label{font-size:13px;color:var(--muted)}
+    input,select,textarea{width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:#fff}
+    .hint{font-size:12px;color:var(--muted)}
+    .actions{display:flex;gap:10px;justify-content:flex-end;padding:10px 0}
+    button{appearance:none;border:0;border-radius:10px;padding:10px 16px;cursor:pointer}
+    .primary{background:var(--brand);color:#fff}
+    .ghost{background:transparent;border:1px solid var(--border)}
+    pre.output{white-space:pre-wrap;background:#0b1020;color:#cfe8ff;border-radius:12px;padding:14px;overflow:auto}
+    .pill{display:inline-flex;align-items:center;gap:6px;background:#f1f5f9;border:1px solid var(--border);border-radius:999px;padding:4px 8px;font-size:12px;margin-left:6px}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .cols-8{grid-column:span 12}
+      .cols-6{grid-column:span 12}
+      .cols-4{grid-column:span 12}
+      .cols-3{grid-column:span 12}
+      .cols-2{grid-column:span 12}
+      nav{display:none}
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>KAM – Unos tiskane knjige u više svezaka</h1>
+    <img src="kam.png" alt="KAM logo" />
+    <h1>Unos tiskane knjige u više svezaka <span class="pill">KAM aplikacijski profil</span></h1>
+    <nav>
+      <a href="#">Početna</a>
+      <a href="#">KAM pravilnik</a>
+      <a href="#">Pomoć</a>
+    </nav>
   </header>
 
   <main>
-    <form id="kamForm">
-      <!-- STVARNI PRIKAZ -->
+    <form id="kamForm" novalidate>
+      <!-- 1. STVARNI PRIKAZ -->
       <section class="card">
-        <h2>1. Stvarni prikaz (ISBD)</h2>
+        <h2 class="section-title">1. Stvarni prikaz (ISBD)</h2>
         <div class="row">
           <div class="cols-8">
             <label for="e1_4">1.4 Glavni stvarni naslov</label>
@@ -43,8 +83,8 @@
             <input id="e1_6" />
           </div>
           <div class="cols-12">
-            <label for="e1_9">1.9 Odgovornost uz stvarni naslov</label>
-            <input id="e1_9" placeholder="npr. autor ; ilustrator ; prevoditelj" />
+            <label for="e1_9">1.9 Odgovornost uz stvarni naslov <span class="hint">npr. autor; ilustrator; prevoditelj</span></label>
+            <input id="e1_9" placeholder="npr. Anthony de Mello ; ilustrirao Dragan Vidović ; prijevod Ivan Cindori" />
           </div>
           <div class="cols-4">
             <label for="e1_12">1.12 Podatak o izdanju</label>
@@ -56,38 +96,38 @@
           </div>
           <div class="cols-4">
             <label for="e1_23">1.23 Nakladnik / proizvođač</label>
-            <input id="e1_23" placeholder="npr. Nakladnik d.o.o." />
+            <input id="e1_23" placeholder="npr. Filozofsko-teološki institut …" />
           </div>
           <div class="cols-4">
-            <label for="e1_25">1.25 Godina / vremenski raspon izdavanja</label>
+            <label for="e1_25">1.25 Godina/Vrijeme izdavanja</label>
             <input id="e1_25" placeholder="npr. 2000–2001" />
           </div>
           <div class="cols-4">
             <label for="e1_34">1.34 Nakladnička cjelina</label>
-            <input id="e1_34" placeholder="npr. Biblioteka X" />
+            <input id="e1_34" placeholder="npr. Biblioteka Radost i nada" />
           </div>
           <div class="cols-4">
             <label for="e1_38">1.38 Numeracija u nakladničkoj cjelini</label>
-            <input id="e1_38" placeholder="npr. 11" />
+            <input id="e1_38" placeholder="npr. 11, 14" />
           </div>
         </div>
       </section>
 
-      <!-- IDENTIFIKACIJA -->
+      <!-- 2. IDENTIFIKACIJA -->
       <section class="card">
-        <h2>2. Identifikacija jedinice građe</h2>
+        <h2 class="section-title">2. Identifikacija jedinice građe</h2>
         <div class="row">
           <div class="cols-3">
             <label for="e2_1">2.1 Razina opisa djela</label>
-            <input id="e2_1" placeholder="pojedinačno / skupno" />
+            <input id="e2_1" placeholder="pojedinačno / skupno djelo" />
           </div>
           <div class="cols-3">
             <label for="e2_2">2.2 Razina opisa pojavnog oblika</label>
-            <input id="e2_2" placeholder="pojedinačni / skupni" />
+            <input id="e2_2" placeholder="pojedinačni / skupni oblik" />
           </div>
           <div class="cols-3">
             <label for="e2_4">2.4 Medij</label>
-            <input id="e2_4" placeholder="neposredovan/posredovan" />
+            <input id="e2_4" placeholder="neposredovan / posredovan" />
           </div>
           <div class="cols-3">
             <label for="e2_5">2.5 Oblik sadržaja</label>
@@ -95,19 +135,19 @@
           </div>
           <div class="cols-6">
             <label for="e2_6">2.6 Identifikator djela</label>
-            <input id="e2_6" placeholder="VIAF / ISNI / Wikidata…" />
+            <input id="e2_6" placeholder="VIAF / Wikidata / ISNI" />
           </div>
           <div class="cols-6">
             <label for="e2_7">2.7 Usvojena pristupnica za djelo</label>
-            <input id="e2_7" placeholder="Autor… Naslov…" />
+            <input id="e2_7" placeholder="De Mello, Anthony… The prayer of the frog" />
           </div>
           <div class="cols-6">
             <label for="e2_18">2.18 Usvojena pristupnica za izraz</label>
             <input id="e2_18" placeholder="… Hrvatski" />
           </div>
           <div class="cols-6">
-            <label for="e2_22">2.22 Identifikator pojavnog oblika</label>
-            <input id="e2_22" placeholder="ISBN (cjelina i dijelovi); drugi ID-evi" />
+            <label for="e2_22">2.22 Identifikator pojavnog oblika <span class="hint">ISBN za cjelinu i dijelove</span></label>
+            <input id="e2_22" placeholder="ISBN cjelina; ISBN dio 1; ISBN dio 2" />
           </div>
           <div class="cols-12">
             <label for="e2_23">2.23 Usvojena pristupnica za pojavni oblik</label>
@@ -116,17 +156,17 @@
         </div>
       </section>
 
-      <!-- TEMATIKA -->
+      <!-- 3. TEMATIKA I SADRŽAJ -->
       <section class="card">
-        <h2>3. Tematika i sadržaj</h2>
+        <h2 class="section-title">3. Tematika i sadržaj</h2>
         <div class="row">
           <div class="cols-4">
             <label for="e3_8">3.8 Oblik/žanr</label>
-            <input id="e3_8" placeholder="npr. kratke priče" />
+            <input id="e3_8" placeholder="npr. mikro priče" />
           </div>
           <div class="cols-4">
             <label for="e3_7">3.7 Područje (UDK)</label>
-            <input id="e3_7" placeholder="npr. 82-3=163.42" />
+            <input id="e3_7" placeholder="npr. 821.111(540)-36=163.42" />
           </div>
           <div class="cols-2">
             <label for="e3_11">3.11 Jezik sadržaja</label>
@@ -143,13 +183,13 @@
         </div>
       </section>
 
-      <!-- MATERIJALNI OPIS -->
+      <!-- 4. MATERIJALNI OPIS -->
       <section class="card">
-        <h2>4. Materijalni opis</h2>
+        <h2 class="section-title">4. Materijalni opis</h2>
         <div class="row">
           <div class="cols-6">
             <label for="e4_1">4.1 Opseg</label>
-            <input id="e4_1" placeholder="npr. 2 sv. (195;196 str.)" />
+            <input id="e4_1" placeholder="npr. 2 sv. (195; 196 str.)" />
           </div>
           <div class="cols-6">
             <label for="e4_5">4.5 Dimenzije</label>
@@ -158,9 +198,9 @@
         </div>
       </section>
 
-      <!-- ŽIVOTNI CIKLUS -->
+      <!-- 5. ŽIVOTNI CIKLUS -->
       <section class="card">
-        <h2>5. Životni ciklus jedinice građe</h2>
+        <h2 class="section-title">5. Životni ciklus jedinice građe</h2>
         <div class="row">
           <div class="cols-6">
             <label for="e5_10">5.10 Način nabave</label>
@@ -169,9 +209,9 @@
         </div>
       </section>
 
-      <!-- DOSTUPNOST -->
+      <!-- 6. DOSTUPNOST I UPORABA -->
       <section class="card">
-        <h2>6. Dostupnost i uporaba</h2>
+        <h2 class="section-title">6. Dostupnost i uporaba</h2>
         <div class="row">
           <div class="cols-6">
             <label for="e6_10">6.10 Dostupnost primjerka</label>
@@ -180,9 +220,9 @@
         </div>
       </section>
 
-      <!-- ODNOSI -->
+      <!-- 10. ODNOSI -->
       <section class="card">
-        <h2>10. Odnosi i napomene o odnosima</h2>
+        <h2 class="section-title">10. Odnosi i napomene o odnosima</h2>
         <div class="row">
           <div class="cols-12">
             <label for="e10_2">10.2 Odnos djela i izraza</label>
@@ -190,19 +230,19 @@
           </div>
           <div class="cols-12">
             <label for="e10_3">10.3 Odnos izraza i izraza</label>
-            <input id="e10_3" placeholder="Biblioteka X → Dio: Naslov" />
+            <input id="e10_3" placeholder="Biblioteka Radost i nada → Dio: Molitva žabe" />
           </div>
           <div class="cols-6">
             <label for="e10_9">10.9 Odnos djela i stvaratelja</label>
-            <input id="e10_9" placeholder="Autor: Prezime, Ime, godina–godina" />
+            <input id="e10_9" placeholder="Autor: De Mello, Anthony, 1931–1987" />
           </div>
           <div class="cols-6">
             <label for="e10_10">10.10 Odnos izraza i agenta</label>
-            <input id="e10_10" placeholder="Prevoditelj: …" />
+            <input id="e10_10" placeholder="Prevoditelj: Cindori, Ivan, 1938–" />
           </div>
           <div class="cols-6">
             <label for="e10_11">10.11 Odnos pojavnog oblika i agenta</label>
-            <input id="e10_11" placeholder="Ilustrator: …" />
+            <input id="e10_11" placeholder="Ilustrator: Vidović, Dragan" />
           </div>
         </div>
       </section>
@@ -213,11 +253,11 @@
       </div>
     </form>
 
-    <div class="card">
-      <strong>Rezultat</strong>
-      <pre id="output"></pre>
-      <div id="error" class="err"></div>
-    </div>
+    <details class="card" open>
+      <summary><strong>Rezultat</strong> (generirani JSON-LD)</summary>
+      <pre id="output" class="output" aria-live="polite"></pre>
+      <div id="error" class="hint" style="color:#b91c1c"></div>
+    </details>
   </main>
 
   <script>
@@ -226,25 +266,23 @@
       const err = document.getElementById('error');
       const v = id => (document.getElementById(id)?.value || '').trim();
 
-      // Stabilni ID-jevi (sinkron, bez crypto/BigInt)
+      /* Stabilni ID-jevi – djb2 32-bit (sinkron, radi svugdje) */
       function hash32(str){
-        let h = 5381;
-        for(let i=0;i<str.length;i++){ h = ((h<<5)+h) + str.charCodeAt(i); h |= 0; }
+        let h = 5381; for(let i=0;i<str.length;i++){ h = ((h<<5)+h) + str.charCodeAt(i); h |= 0; }
         return (h>>>0).toString(16).padStart(8,'0');
       }
       function idFor(nsType, content){
         return 'http://www.registar.kam.hr/id/' + hash32(nsType+'|'+(content||''));
       }
 
-      // KAM klase
+      /* KAM klase */
       const C = {
         PojavniOblik:'http://www.registar.kam.hr/Element/c/C10004',
         Nomen:'http://www.registar.kam.hr/Element/c/C10013',
         Mjesto:'http://www.registar.kam.hr/Element/c/C10011',
         Vrijeme:'http://www.registar.kam.hr/Element/c/C10012'
       };
-
-      // KAM svojstva (poznata i potvrđena)
+      /* KAM svojstva (potvrđena) */
       const P = {
         glavniNaslov:'http://www.registar.kam.hr/Elements/po/P40004',
         dodatakNaslovu:'http://www.registar.kam.hr/Elements/po/P40006',
@@ -262,7 +300,6 @@
         usvojenaPristupnicaVrijeme:'http://www.registar.kam.hr/Elements/vr/P12038'
       };
 
-      // Pomoćne tvorbene funkcije
       function makeNomen(graph, text, lang){
         if(!text) return null;
         const id = idFor(C.Nomen, (lang||'')+'|'+text);
@@ -284,57 +321,52 @@
         return id;
       }
 
-      // Mapiranje polja forme na KAM svojstva (proširivo)
+      /* Mapiranje polja forme na KAM svojstva (proširivo) */
       const MAP_FIELDS = [
-        // Stvarni prikaz
-        {id:'e1_4', prop:P.glavniNaslov, lang:'hr'},
-        {id:'e1_6', prop:P.dodatakNaslovu, lang:'hr'},
-        {id:'e1_9', prop:P.odgovornostNaslov, lang:'hr'},
-        {id:'e1_12', prop:P.podatakOIzd, lang:'hr'},
-        {id:'e1_23', prop:P.imeNakladnika, lang:'hr'},
-        {id:'e1_34', prop:P.nakladnickaCjelina, lang:'hr'},
+        // 1. Stvarni prikaz
+        {id:'e1_4',  prop:P.glavniNaslov,           lang:'hr'},
+        {id:'e1_6',  prop:P.dodatakNaslovu,         lang:'hr'},
+        {id:'e1_9',  prop:P.odgovornostNaslov,      lang:'hr'},
+        {id:'e1_12', prop:P.podatakOIzd,            lang:'hr'},
+        {id:'e1_23', prop:P.imeNakladnika,          lang:'hr'},
+        {id:'e1_34', prop:P.nakladnickaCjelina,     lang:'hr'},
         {id:'e2_22', prop:P.identifikatorPojOblika, lang:''},
-        // Tematika (jezici često se vežu na Izraz; ovdje privremeno kao nomenski niz)
-        {id:'e3_11', prop:P.nomenskiNiz, lang:'hr'}, // Jezik sadržaja -> Nomen tekst
-        {id:'e3_13', prop:P.nomenskiNiz, lang:'hr'}, // Jezik izvornika -> Nomen tekst
-        {id:'e3_8',  prop:P.nomenskiNiz, lang:'hr'}, // Oblik/žanr -> Nomen tekst
-        {id:'e3_7',  prop:P.nomenskiNiz, lang:''},   // UDK -> literalni niz (bez @language)
-        {id:'e3_19', prop:P.nomenskiNiz, lang:'hr'}, // Ilustracije -> Nomen tekst
-        // Materijalni opis
-        {id:'e4_1', prop:P.opseg, lang:''},
-        {id:'e4_5', prop:P.dimenzije, lang:''}
+        // 3. Tematika i sadržaj – (napomena: jezici i UDK kasnije se mogu povezati na Izraz/koncept)
+        {id:'e3_8',  prop:P.nomenskiNiz,            lang:'hr'},
+        {id:'e3_7',  prop:P.nomenskiNiz,            lang:''},
+        {id:'e3_11', prop:P.nomenskiNiz,            lang:'hr'},
+        {id:'e3_13', prop:P.nomenskiNiz,            lang:'hr'},
+        {id:'e3_19', prop:P.nomenskiNiz,            lang:'hr'},
+        // 4. Materijalni opis
+        {id:'e4_1',  prop:P.opseg,                  lang:''},
+        {id:'e4_5',  prop:P.dimenzije,              lang:''}
       ];
 
       function toKAMJsonLD(){
         const graph = [];
 
-        // Pojavni oblik ID iz stabilnih polja
+        // Pojavni oblik — stabilni @id iz ključnih polja
         const poKey = [v('e1_4'), v('e1_23'), v('e1_25'), v('e2_22')].filter(Boolean).join('|') || 'tmp';
         const poId = idFor(C.PojavniOblik, poKey);
         const po = { '@id': poId, '@type': C.PojavniOblik };
 
-        // Prolaz kroz mapiranja (stvara Nomene i veže ih na po)
+        // Polja koja idu kao Nomen -> veze na Pojavni oblik (gdje imamo točno svojstvo)
         MAP_FIELDS.forEach(({id, prop, lang})=>{
           const val = v(id); if(!val) return;
           const nId = makeNomen(graph, val, lang);
-          if(prop === P.nomenskiNiz){
-            // ako nemamo precizno svojstvo na po, ne vežemo direktno;
-            // Nomen ipak ulazi u graf (kasnije ga se može semantički povezati!)
-            return;
-          }
+          if(prop === P.nomenskiNiz){ return; } // ove Nomene smo stvorili, ali ih zasad ne vežemo na PO bez spec. svojstva
           po[prop] = (po[prop]||[]).concat([{ '@id': nId }]);
         });
 
-        // Mjesto i Vrijeme su entiteti
-        const mjestoId = makeMjesto(graph, v('e1_21')); if(mjestoId) po[P.mjestoIzdavanja] = [{ '@id': mjestoId }];
+        // Posebni entiteti
+        const mjestoId  = makeMjesto(graph,  v('e1_21')); if(mjestoId)  po[P.mjestoIzdavanja]  = [{ '@id': mjestoId  }];
         const vrijemeId = makeVrijeme(graph, v('e1_25')); if(vrijemeId) po[P.vrijemeIzdavanja] = [{ '@id': vrijemeId }];
 
         graph.push(po);
         return { '@graph': graph };
       }
 
-      const form = document.getElementById('kamForm');
-      form.addEventListener('submit', (e)=>{
+      document.getElementById('kamForm').addEventListener('submit', (e)=>{
         e.preventDefault();
         err.textContent = '';
         try{
@@ -346,9 +378,9 @@
         }
       });
 
-      // Test gumb za brzu provjeru
+      // Test gumb (za brzu provjeru)
       document.getElementById('testBtn').addEventListener('click', ()=>{
-        document.getElementById('e1_4').value = 'Molitva žabe';
+        document.getElementById('e1_4').value  = 'Molitva žabe';
         document.getElementById('e1_23').value = 'KS';
         document.getElementById('e1_25').value = '2000–2001';
         document.getElementById('e2_22').value = 'ISBN 953-123-456-7';
