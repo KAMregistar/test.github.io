@@ -256,7 +256,7 @@
     }
 
     // === JSON-LD prema KAM ontologiji (v12) ===
-    async function toKAMJsonLD(form){
+    function toKAMJsonLD(form){
       const C = {
         PojavniOblik: 'http://www.registar.kam.hr/Element/c/C10004',
         Nomen: 'http://www.registar.kam.hr/Element/c/C10013',
@@ -282,60 +282,52 @@
 
       const v = id => (document.getElementById(id)?.value || '').trim();
 
-      // Deterministički, stabilni @id-ovi bez blank-nodeova
-      async function hashHex(str){
-        if (window.crypto && window.crypto.subtle && window.isSecureContext) {
-          const enc = new TextEncoder();
-          const buf = await crypto.subtle.digest('SHA-1', enc.encode(str));
-          const arr = Array.from(new Uint8Array(buf));
-          return { algo: 'sha1', hex: arr.map(b=>b.toString(16).padStart(2,'0')).join('') };
-        } else {
-          // FNV-1a 64-bit (BigInt) fallback za nesigurne kontekste (http/file)
-          let hash = 0xcbf29ce484222325n;
-          const prime = 0x100000001b3n;
-          for (const ch of str) {
-            hash ^= BigInt(ch.codePointAt(0));
-            hash = (hash * prime) & 0xffffffffffffffffn;
-          }
-          return { algo: 'fnv1a64', hex: hash.toString(16).padStart(16,'0') };
+      // Sinkroni deterministički hash (FNV-1a 64-bit)
+      function hashHexSync(str){
+        let hash = 0xcbf29ce484222325n;
+        const prime = 0x100000001b3n;
+        for (const ch of str){
+          hash ^= BigInt(ch.codePointAt(0));
+          hash = (hash * prime) & 0xffffffffffffffffn;
         }
+        return hash.toString(16).padStart(16,'0');
       }
-      const idFor = async (typeIRI, content) => {
-        const {algo, hex} = await hashHex(typeIRI+'|'+(content||''));
-        return `http://www.registar.kam.hr/id/${algo}/${hex}`;
-      };
+      function idFor(typeIRI, content){
+        const hex = hashHexSync(typeIRI+'|'+(content||''));
+        return `http://www.registar.kam.hr/id/fnv1a64/${hex}`;
+      }
 
       const graph = [];
 
-      async function makeNomen(text, lang='hr'){
+      function makeNomen(text, lang='hr'){
         if(!text) return null;
-        const id = await idFor(C.Nomen, `${lang}|${text}`);
+        const id = idFor(C.Nomen, `${lang}|${text}`);
         const node = { '@id': id, '@type': C.Nomen, [P.nomenskiNiz]: [{ '@value': text, ...(lang?{'@language':lang}:{}) }] };
         graph.push(node);
         return id;
       }
 
-      async function makeMjesto(naziv){
+      function makeMjesto(naziv){
         if(!naziv) return null;
-        const id = await idFor(C.Mjesto, naziv);
-        const nId = await makeNomen(naziv);
+        const id = idFor(C.Mjesto, naziv);
+        const nId = makeNomen(naziv);
         const node = { '@id': id, '@type': C.Mjesto, [P.usvojenaPristupnicaMjesto]: nId ? [{ '@id': nId }] : [] };
         graph.push(node);
         return id;
       }
 
-      async function makeVrijeme(raspon){
+      function makeVrijeme(raspon){
         if(!raspon) return null;
-        const id = await idFor(C.Vrijeme, raspon);
-        const nId = await makeNomen(raspon);
+        const id = idFor(C.Vrijeme, raspon);
+        const nId = makeNomen(raspon);
         const node = { '@id': id, '@type': C.Vrijeme, [P.usvojenaPristupnicaVrijeme]: nId ? [{ '@id': nId }] : [] };
         graph.push(node);
         return id;
       }
 
-      // Sastavi deterministički ključ pojavnoga oblika (kombinacija najstabilnijih polja)
+      // ID pojavnoga oblika iz stabilnih polja
       const poKey = [v('e1_4'), v('e1_23'), v('e1_25'), v('e2_22')].filter(Boolean).join('|');
-      const poId = await idFor(C.PojavniOblik, poKey || Math.random().toString());
+      const poId = idFor(C.PojavniOblik, poKey || Math.random().toString());
       const po = { '@id': poId, '@type': C.PojavniOblik };
 
       const mapFields = [
@@ -353,23 +345,33 @@
       for(const {field, prop} of mapFields){
         const val = v(field);
         if(val){
-          const nId = await makeNomen(val);
+          const nId = makeNomen(val);
           po[prop] = (po[prop]||[]).concat([{ '@id': nId }]);
         }
       }
 
-      const mjestoId = await makeMjesto(v('e1_21'));
+      const mjestoId = makeMjesto(v('e1_21'));
       if(mjestoId){ po[P.mjestoIzdavanja] = [{ '@id': mjestoId }]; }
 
-      const vrijemeId = await makeVrijeme(v('e1_25'));
+      const vrijemeId = makeVrijeme(v('e1_25'));
       if(vrijemeId){ po[P.vrijemeIzdavanja] = [{ '@id': vrijemeId }]; }
 
       graph.push(po);
       return { '@graph': graph };
     }
 
-    form.addEventListener('submit', async (e)=>{
+    form.addEventListener('submit', (e)=>{
       e.preventDefault();
+      try{
+        const data = toKAMJsonLD(form);
+        out.textContent = JSON.stringify(data, null, 2);
+      }catch(err){
+        out.textContent = 'Greška pri generiranju JSON-LD zapisa
+' + (err?.message||err);
+        console.error(err);
+      }
+      out.scrollIntoView({behavior:'smooth', block:'start'});
+    });
       try{
         const data = await toKAMJsonLD(form);
         out.textContent = JSON.stringify(data, null, 2);
