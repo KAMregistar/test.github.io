@@ -256,7 +256,7 @@
     }
 
     // === JSON-LD prema KAM ontologiji (v12) ===
-    function toKAMJsonLD(form){
+    async function toKAMJsonLD(form){
       const C = {
         PojavniOblik: 'http://www.registar.kam.hr/Element/c/C10004',
         Nomen: 'http://www.registar.kam.hr/Element/c/C10013',
@@ -264,7 +264,6 @@
         Vrijeme: 'http://www.registar.kam.hr/Element/c/C10012'
       };
       const P = {
-        // Pojavni oblik → Nomen
         glavniNaslov: 'http://www.registar.kam.hr/Elements/po/P40004',
         dodatakNaslovu: 'http://www.registar.kam.hr/Elements/po/P40006',
         odgovornostNaslov: 'http://www.registar.kam.hr/Elements/po/P40009',
@@ -274,57 +273,56 @@
         dimenzije: 'http://www.registar.kam.hr/Elements/po/P40050',
         nakladnickaCjelina: 'http://www.registar.kam.hr/Elements/po/P40034',
         identifikatorPojOblika: 'http://www.registar.kam.hr/Elements/po/P40319',
-        // Pojavni oblik → Mjesto/Vrijeme
         mjestoIzdavanja: 'http://www.registar.kam.hr/Elements/po/P40301',
         vrijemeIzdavanja: 'http://www.registar.kam.hr/Elements/po/P40306',
-        // Nomen → literal (nomenski niz)
         nomenskiNiz: 'http://www.registar.kam.hr/Elements/n/P13002',
-        // Mjesto → Nomen
         usvojenaPristupnicaMjesto: 'http://www.registar.kam.hr/Elements/m/P11044',
-        // Vrijeme → Nomen
         usvojenaPristupnicaVrijeme: 'http://www.registar.kam.hr/Elements/vr/P12038'
       };
 
-      // Dohvati vrijednosti iz forme (po ID-u)
       const v = id => (document.getElementById(id)?.value || '').trim();
 
-      let nodeIdCounter = 1;
-      const newBNode = (prefix) => `_:${prefix}${nodeIdCounter++}`;
+      // Deterministički, stabilni @id-ovi bez blank-nodeova
+      async function sha1Hex(str){
+        const enc = new TextEncoder();
+        const buf = await crypto.subtle.digest('SHA-1', enc.encode(str));
+        const arr = Array.from(new Uint8Array(buf));
+        return arr.map(b=>b.toString(16).padStart(2,'0')).join('');
+      }
+      const idFor = async (typeIRI, content) => `urn:sha1:${await sha1Hex(typeIRI+'|'+(content||''))}`;
 
       const graph = [];
 
-      // Helperi za kreiranje čvorova
-      const makeNomen = (text, lang='hr') => {
-        const nid = newBNode('n');
-        const n = { '@id': nid, '@type': C.Nomen, [P.nomenskiNiz]: text ? [{ '@value': text, ...(lang?{'@language':lang}:{}) }] : [] };
-        graph.push(n);
-        return n;
-      };
+      async function makeNomen(text, lang='hr'){
+        if(!text) return null;
+        const id = await idFor(C.Nomen, `${lang}|${text}`);
+        const node = { '@id': id, '@type': C.Nomen, [P.nomenskiNiz]: [{ '@value': text, ...(lang?{'@language':lang}:{}) }] };
+        graph.push(node);
+        return id;
+      }
 
-      const makeMjesto = (naziv) => {
-        const mid = newBNode('m');
-        const m = { '@id': mid, '@type': C.Mjesto };
-        if(naziv){
-          const n = makeNomen(naziv);
-          m[P.usvojenaPristupnicaMjesto] = [{ '@id': n['@id'] }];
-        }
-        graph.push(m);
-        return m;
-      };
+      async function makeMjesto(naziv){
+        if(!naziv) return null;
+        const id = await idFor(C.Mjesto, naziv);
+        const nId = await makeNomen(naziv);
+        const node = { '@id': id, '@type': C.Mjesto, [P.usvojenaPristupnicaMjesto]: nId ? [{ '@id': nId }] : [] };
+        graph.push(node);
+        return id;
+      }
 
-      const makeVrijeme = (raspon) => {
-        const tid = newBNode('t');
-        const t = { '@id': tid, '@type': C.Vrijeme };
-        if(raspon){
-          const n = makeNomen(raspon);
-          t[P.usvojenaPristupnicaVrijeme] = [{ '@id': n['@id'] }];
-        }
-        graph.push(t);
-        return t;
-      };
+      async function makeVrijeme(raspon){
+        if(!raspon) return null;
+        const id = await idFor(C.Vrijeme, raspon);
+        const nId = await makeNomen(raspon);
+        const node = { '@id': id, '@type': C.Vrijeme, [P.usvojenaPristupnicaVrijeme]: nId ? [{ '@id': nId }] : [] };
+        graph.push(node);
+        return id;
+      }
 
-      // Glavni čvor: pojavni oblik
-      const po = { '@id': newBNode('po'), '@type': C.PojavniOblik };
+      // Sastavi deterministički ključ pojavnoga oblika (kombinacija najstabilnijih polja)
+      const poKey = [v('e1_4'), v('e1_23'), v('e1_25'), v('e2_22')].filter(Boolean).join('|');
+      const poId = await idFor(C.PojavniOblik, poKey || Math.random().toString());
+      const po = { '@id': poId, '@type': C.PojavniOblik };
 
       const mapFields = [
         { field:'e1_4', prop:P.glavniNaslov },
@@ -338,34 +336,30 @@
         { field:'e4_5', prop:P.dimenzije }
       ];
 
-      mapFields.forEach(({field, prop})=>{
+      for(const {field, prop} of mapFields){
         const val = v(field);
         if(val){
-          const n = makeNomen(val);
-          po[prop] = (po[prop]||[]).concat([{ '@id': n['@id'] }]);
+          const nId = await makeNomen(val);
+          po[prop] = (po[prop]||[]).concat([{ '@id': nId }]);
         }
-      });
-
-      // Mjesto izdavanja (kao entitet Mjesto)
-      if(v('e1_21')){
-        const m = makeMjesto(v('e1_21'));
-        po[P.mjestoIzdavanja] = [{ '@id': m['@id'] }];
       }
 
-      // Vrijeme izdavanja (C10012) – unos tipa "2000-2001" ili "2001"
-      if(v('e1_25')){
-        const t = makeVrijeme(v('e1_25'));
-        po[P.vrijemeIzdavanja] = [{ '@id': t['@id'] }];
-      }
+      const mjestoId = await makeMjesto(v('e1_21'));
+      if(mjestoId){ po[P.mjestoIzdavanja] = [{ '@id': mjestoId }]; }
+
+      const vrijemeId = await makeVrijeme(v('e1_25'));
+      if(vrijemeId){ po[P.vrijemeIzdavanja] = [{ '@id': vrijemeId }]; }
 
       graph.push(po);
-
-      // Vratimo JSON-LD s punim IRI-jima (bez @contexta, radi interoperabilnosti)
       return { '@graph': graph };
     }
 
-    form.addEventListener('submit', (e)=>{
+    form.addEventListener('submit', async (e)=>{
       e.preventDefault();
+      const data = await toKAMJsonLD(form);
+      out.textContent = JSON.stringify(data, null, 2);
+      out.scrollIntoView({behavior:'smooth', block:'start'});
+    });
       const data = toKAMJsonLD(form);
       out.textContent = JSON.stringify(data, null, 2);
       out.scrollIntoView({behavior:'smooth', block:'start'});
