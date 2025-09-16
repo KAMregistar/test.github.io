@@ -255,45 +255,121 @@
       })).filter(e=>e.value!=='' || e.label);
     }
 
-    // Minimalni JSON objekt: uključuje i grubu projekciju u schema.org gdje je smisleno
-    function toJSON(form){
-      const elements = collectKAMElements(form);
-
-      // Grubi preslik za najčešće elemente
-      const map = Object.fromEntries(elements.map(e=>[e.label, e.value]));
-
-      const schema = {
-        '@context': 'https://schema.org',
-        '@type': 'Book',
-        name: map['1.4 Glavni stvarni naslov'] || undefined,
-        alternateName: map['2.23 Usvojena pristupnica za pojavni oblik'] || undefined,
-        inLanguage: map['3.11 Jezik sadržaja'] || undefined,
-        translationOfWork: map['3.13 Jezik izvornika'] ? { '@type':'CreativeWork', inLanguage: map['3.13 Jezik izvornika']} : undefined,
-        bookEdition: map['1.12 Podatak o izdanju'] || undefined,
-        publisher: map['1.23 Nakladnik'] ? { '@type':'Organization', name: map['1.23 Nakladnik'] } : undefined,
-        locationCreated: map['1.21 Mjesto izdavanja'] || undefined,
-        datePublished: map['1.25 Godina izdavanja'] || undefined,
-        isPartOf: map['1.34 Nakladnička cjelina'] || undefined,
-        isbn: (map['2.22 Identifikator pojavnog oblika']||'').split(/[,;]+/).map(s=>s.trim()).filter(Boolean)[0] || undefined,
-        numberOfVolumes: (map['4.1 Opseg']||'').match(/(\d+)\s*sv\./i)?.[1] || undefined,
-        size: map['4.5 Dimenzije'] || undefined,
-        description: map['1.6 Dodatak glavnom stvarnom naslovu'] || undefined
+    // === JSON-LD prema KAM ontologiji (v12) ===
+    function toKAMJsonLD(form){
+      const C = {
+        PojavniOblik: 'http://www.registar.kam.hr/Element/c/C10004',
+        Nomen: 'http://www.registar.kam.hr/Element/c/C10013',
+        Mjesto: 'http://www.registar.kam.hr/Element/c/C10011',
+        Vrijeme: 'http://www.registar.kam.hr/Element/c/C10012'
+      };
+      const P = {
+        // Pojavni oblik → Nomen
+        glavniNaslov: 'http://www.registar.kam.hr/Elements/po/P40004',
+        dodatakNaslovu: 'http://www.registar.kam.hr/Elements/po/P40006',
+        odgovornostNaslov: 'http://www.registar.kam.hr/Elements/po/P40009',
+        podatakOIzd: 'http://www.registar.kam.hr/Elements/po/P40012',
+        imeNakladnika: 'http://www.registar.kam.hr/Elements/po/P40023',
+        opseg: 'http://www.registar.kam.hr/Elements/po/P40046',
+        dimenzije: 'http://www.registar.kam.hr/Elements/po/P40050',
+        nakladnickaCjelina: 'http://www.registar.kam.hr/Elements/po/P40034',
+        identifikatorPojOblika: 'http://www.registar.kam.hr/Elements/po/P40319',
+        // Pojavni oblik → Mjesto/Vrijeme
+        mjestoIzdavanja: 'http://www.registar.kam.hr/Elements/po/P40301',
+        vrijemeIzdavanja: 'http://www.registar.kam.hr/Elements/po/P40306',
+        // Nomen → literal (nomenski niz)
+        nomenskiNiz: 'http://www.registar.kam.hr/Elements/n/P13002',
+        // Mjesto → Nomen
+        usvojenaPristupnicaMjesto: 'http://www.registar.kam.hr/Elements/m/P11044',
+        // Vrijeme → Nomen
+        usvojenaPristupnicaVrijeme: 'http://www.registar.kam.hr/Elements/vr/P12038'
       };
 
-      const kamPayload = {
-        '@context': {
-          'kam': 'http://www.registar.kam.hr/ontologies/ont.owl/',
-          'schema': 'https://schema.org/'
-        },
-        '@type': 'kam:Publikacija',
-        'kam:jedinicaOpis': 'jedinica građe',
-        'kam:elementi': elements
+      // Dohvati vrijednosti iz forme (po ID-u)
+      const v = id => (document.getElementById(id)?.value || '').trim();
+
+      let nodeIdCounter = 1;
+      const newBNode = (prefix) => `_:${prefix}${nodeIdCounter++}`;
+
+      const graph = [];
+
+      // Helperi za kreiranje čvorova
+      const makeNomen = (text, lang='hr') => {
+        const nid = newBNode('n');
+        const n = { '@id': nid, '@type': C.Nomen, [P.nomenskiNiz]: text ? [{ '@value': text, ...(lang?{'@language':lang}:{}) }] : [] };
+        graph.push(n);
+        return n;
       };
 
-      return { schemaOrg: schema, kam: kamPayload };
+      const makeMjesto = (naziv) => {
+        const mid = newBNode('m');
+        const m = { '@id': mid, '@type': C.Mjesto };
+        if(naziv){
+          const n = makeNomen(naziv);
+          m[P.usvojenaPristupnicaMjesto] = [{ '@id': n['@id'] }];
+        }
+        graph.push(m);
+        return m;
+      };
+
+      const makeVrijeme = (raspon) => {
+        const tid = newBNode('t');
+        const t = { '@id': tid, '@type': C.Vrijeme };
+        if(raspon){
+          const n = makeNomen(raspon);
+          t[P.usvojenaPristupnicaVrijeme] = [{ '@id': n['@id'] }];
+        }
+        graph.push(t);
+        return t;
+      };
+
+      // Glavni čvor: pojavni oblik
+      const po = { '@id': newBNode('po'), '@type': C.PojavniOblik };
+
+      const mapFields = [
+        { field:'e1_4', prop:P.glavniNaslov },
+        { field:'e1_6', prop:P.dodatakNaslovu },
+        { field:'e1_9', prop:P.odgovornostNaslov },
+        { field:'e1_12', prop:P.podatakOIzd },
+        { field:'e1_23', prop:P.imeNakladnika },
+        { field:'e1_34', prop:P.nakladnickaCjelina },
+        { field:'e2_22', prop:P.identifikatorPojOblika },
+        { field:'e4_1', prop:P.opseg },
+        { field:'e4_5', prop:P.dimenzije }
+      ];
+
+      mapFields.forEach(({field, prop})=>{
+        const val = v(field);
+        if(val){
+          const n = makeNomen(val);
+          po[prop] = (po[prop]||[]).concat([{ '@id': n['@id'] }]);
+        }
+      });
+
+      // Mjesto izdavanja (kao entitet Mjesto)
+      if(v('e1_21')){
+        const m = makeMjesto(v('e1_21'));
+        po[P.mjestoIzdavanja] = [{ '@id': m['@id'] }];
+      }
+
+      // Vrijeme izdavanja (C10012) – unos tipa "2000-2001" ili "2001"
+      if(v('e1_25')){
+        const t = makeVrijeme(v('e1_25'));
+        po[P.vrijemeIzdavanja] = [{ '@id': t['@id'] }];
+      }
+
+      graph.push(po);
+
+      // Vratimo JSON-LD s punim IRI-jima (bez @contexta, radi interoperabilnosti)
+      return { '@graph': graph };
     }
 
     form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const data = toKAMJsonLD(form);
+      out.textContent = JSON.stringify(data, null, 2);
+      out.scrollIntoView({behavior:'smooth', block:'start'});
+    });('submit', (e)=>{
       e.preventDefault();
       const data = toJSON(form);
       out.textContent = JSON.stringify(data, null, 2);
