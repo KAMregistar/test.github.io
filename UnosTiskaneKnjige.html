@@ -256,7 +256,7 @@
     }
 
     // === JSON-LD prema KAM ontologiji (v12) ===
-    function toKAMJsonLD(form){
+    async function toKAMJsonLD(form){
       const C = {
         PojavniOblik: 'http://www.registar.kam.hr/Element/c/C10004',
         Nomen: 'http://www.registar.kam.hr/Element/c/C10013',
@@ -282,52 +282,46 @@
 
       const v = id => (document.getElementById(id)?.value || '').trim();
 
-      // Sinkroni deterministički hash (FNV-1a 64-bit)
-      function hashHexSync(str){
-        let hash = 0xcbf29ce484222325n;
-        const prime = 0x100000001b3n;
-        for (const ch of str){
-          hash ^= BigInt(ch.codePointAt(0));
-          hash = (hash * prime) & 0xffffffffffffffffn;
-        }
-        return hash.toString(16).padStart(16,'0');
+      // Deterministički, stabilni @id-ovi bez blank-nodeova
+      async function sha1Hex(str){
+        const enc = new TextEncoder();
+        const buf = await crypto.subtle.digest('SHA-1', enc.encode(str));
+        const arr = Array.from(new Uint8Array(buf));
+        return arr.map(b=>b.toString(16).padStart(2,'0')).join('');
       }
-      function idFor(typeIRI, content){
-        const hex = hashHexSync(typeIRI+'|'+(content||''));
-        return `http://www.registar.kam.hr/id/fnv1a64/${hex}`;
-      }
+      const idFor = async (typeIRI, content) => `urn:sha1:${await sha1Hex(typeIRI+'|'+(content||''))}`;
 
       const graph = [];
 
-      function makeNomen(text, lang='hr'){
+      async function makeNomen(text, lang='hr'){
         if(!text) return null;
-        const id = idFor(C.Nomen, `${lang}|${text}`);
+        const id = await idFor(C.Nomen, `${lang}|${text}`);
         const node = { '@id': id, '@type': C.Nomen, [P.nomenskiNiz]: [{ '@value': text, ...(lang?{'@language':lang}:{}) }] };
         graph.push(node);
         return id;
       }
 
-      function makeMjesto(naziv){
+      async function makeMjesto(naziv){
         if(!naziv) return null;
-        const id = idFor(C.Mjesto, naziv);
-        const nId = makeNomen(naziv);
+        const id = await idFor(C.Mjesto, naziv);
+        const nId = await makeNomen(naziv);
         const node = { '@id': id, '@type': C.Mjesto, [P.usvojenaPristupnicaMjesto]: nId ? [{ '@id': nId }] : [] };
         graph.push(node);
         return id;
       }
 
-      function makeVrijeme(raspon){
+      async function makeVrijeme(raspon){
         if(!raspon) return null;
-        const id = idFor(C.Vrijeme, raspon);
-        const nId = makeNomen(raspon);
+        const id = await idFor(C.Vrijeme, raspon);
+        const nId = await makeNomen(raspon);
         const node = { '@id': id, '@type': C.Vrijeme, [P.usvojenaPristupnicaVrijeme]: nId ? [{ '@id': nId }] : [] };
         graph.push(node);
         return id;
       }
 
-      // ID pojavnoga oblika iz stabilnih polja
+      // Sastavi deterministički ključ pojavnoga oblika (kombinacija najstabilnijih polja)
       const poKey = [v('e1_4'), v('e1_23'), v('e1_25'), v('e2_22')].filter(Boolean).join('|');
-      const poId = idFor(C.PojavniOblik, poKey || Math.random().toString());
+      const poId = await idFor(C.PojavniOblik, poKey || Math.random().toString());
       const po = { '@id': poId, '@type': C.PojavniOblik };
 
       const mapFields = [
@@ -345,43 +339,23 @@
       for(const {field, prop} of mapFields){
         const val = v(field);
         if(val){
-          const nId = makeNomen(val);
+          const nId = await makeNomen(val);
           po[prop] = (po[prop]||[]).concat([{ '@id': nId }]);
         }
       }
 
-      const mjestoId = makeMjesto(v('e1_21'));
+      const mjestoId = await makeMjesto(v('e1_21'));
       if(mjestoId){ po[P.mjestoIzdavanja] = [{ '@id': mjestoId }]; }
 
-      const vrijemeId = makeVrijeme(v('e1_25'));
+      const vrijemeId = await makeVrijeme(v('e1_25'));
       if(vrijemeId){ po[P.vrijemeIzdavanja] = [{ '@id': vrijemeId }]; }
 
       graph.push(po);
       return { '@graph': graph };
     }
 
-    form.addEventListener('submit', (e)=>{
+    form.addEventListener('submit', async (e)=>{
       e.preventDefault();
-      try{
-        const data = toKAMJsonLD(form);
-        out.textContent = JSON.stringify(data, null, 2);
-      }catch(err){
-        out.textContent = 'Greška pri generiranju JSON-LD zapisa
-' + (err?.message||err);
-        console.error(err);
-      }
-      out.scrollIntoView({behavior:'smooth', block:'start'});
-    });
-      try{
-        const data = await toKAMJsonLD(form);
-        out.textContent = JSON.stringify(data, null, 2);
-      }catch(err){
-        out.textContent = 'Greška pri generiranju JSON-LD zapisa
-' + (err?.message||err);
-        console.error(err);
-      }
-      out.scrollIntoView({behavior:'smooth', block:'start'});
-    });
       const data = await toKAMJsonLD(form);
       out.textContent = JSON.stringify(data, null, 2);
       out.scrollIntoView({behavior:'smooth', block:'start'});
