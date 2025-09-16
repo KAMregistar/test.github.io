@@ -283,13 +283,27 @@
       const v = id => (document.getElementById(id)?.value || '').trim();
 
       // Deterministički, stabilni @id-ovi bez blank-nodeova
-      async function sha1Hex(str){
-        const enc = new TextEncoder();
-        const buf = await crypto.subtle.digest('SHA-1', enc.encode(str));
-        const arr = Array.from(new Uint8Array(buf));
-        return arr.map(b=>b.toString(16).padStart(2,'0')).join('');
+      async function hashHex(str){
+        if (window.crypto && window.crypto.subtle && window.isSecureContext) {
+          const enc = new TextEncoder();
+          const buf = await crypto.subtle.digest('SHA-1', enc.encode(str));
+          const arr = Array.from(new Uint8Array(buf));
+          return { algo: 'sha1', hex: arr.map(b=>b.toString(16).padStart(2,'0')).join('') };
+        } else {
+          // FNV-1a 64-bit (BigInt) fallback za nesigurne kontekste (http/file)
+          let hash = 0xcbf29ce484222325n;
+          const prime = 0x100000001b3n;
+          for (const ch of str) {
+            hash ^= BigInt(ch.codePointAt(0));
+            hash = (hash * prime) & 0xffffffffffffffffn;
+          }
+          return { algo: 'fnv1a64', hex: hash.toString(16).padStart(16,'0') };
+        }
       }
-      const idFor = async (typeIRI, content) => `urn:sha1:${await sha1Hex(typeIRI+'|'+(content||''))}`;
+      const idFor = async (typeIRI, content) => {
+        const {algo, hex} = await hashHex(typeIRI+'|'+(content||''));
+        return `http://www.registar.kam.hr/id/${algo}/${hex}`;
+      };
 
       const graph = [];
 
@@ -356,6 +370,16 @@
 
     form.addEventListener('submit', async (e)=>{
       e.preventDefault();
+      try{
+        const data = await toKAMJsonLD(form);
+        out.textContent = JSON.stringify(data, null, 2);
+      }catch(err){
+        out.textContent = 'Greška pri generiranju JSON-LD zapisa
+' + (err?.message||err);
+        console.error(err);
+      }
+      out.scrollIntoView({behavior:'smooth', block:'start'});
+    });
       const data = await toKAMJsonLD(form);
       out.textContent = JSON.stringify(data, null, 2);
       out.scrollIntoView({behavior:'smooth', block:'start'});
