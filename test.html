@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAM – Unos tiskane knjige u više svezaka (FIX)</title>
+<style>
+ body{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:#f6f7fb;color:#1f2937}
+ header{background:#fff;border-bottom:1px solid #e5e7eb;padding:14px 18px;position:sticky;top:0}
+ main{max-width:980px;margin:0 auto;padding:18px}
+ .card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:14px;margin:12px 0}
+ .row{display:grid;grid-template-columns:repeat(12,1fr);gap:10px}
+ label{font-size:12px;color:#6b7280}
+ input,select{width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:10px}
+ .cols-4{grid-column:span 4}.cols-6{grid-column:span 6}.cols-12{grid-column:span 12}
+ .actions{display:flex;gap:8px;justify-content:flex-end}
+ button{border:0;border-radius:10px;padding:10px 14px;cursor:pointer}
+ .primary{background:#6d28d9;color:#fff}.ghost{background:transparent;border:1px solid #e5e7eb}
+ pre{background:#0b1020;color:#cfe8ff;border-radius:10px;padding:12px;white-space:pre-wrap}
+ .err{color:#b91c1c;font-weight:600}
+</style>
+</head>
+<body>
+  <header>
+    <h1 style="margin:0;font-size:18px">KAM – Unos tiskane knjige u više svezaka (FIX)</h1>
+  </header>
+  <main>
+    <form id="kamForm">
+      <section class="card">
+        <h2 style="margin:0 0 8px;font-size:16px">Stvarni prikaz (ISBD)</h2>
+        <div class="row">
+          <div class="cols-6">
+            <label for="e1_4">1.4 Glavni stvarni naslov</label>
+            <input id="e1_4" />
+          </div>
+          <div class="cols-6">
+            <label for="e1_6">1.6 Dodatak glavnom stvarnom naslovu</label>
+            <input id="e1_6" />
+          </div>
+          <div class="cols-4">
+            <label for="e1_21">1.21 Mjesto izdavanja</label>
+            <input id="e1_21" />
+          </div>
+          <div class="cols-4">
+            <label for="e1_23">1.23 Nakladnik</label>
+            <input id="e1_23" />
+          </div>
+          <div class="cols-4">
+            <label for="e1_25">1.25 Godina/Vrijeme</label>
+            <input id="e1_25" />
+          </div>
+          <div class="cols-6">
+            <label for="e2_22">2.22 Identifikator pojavnog oblika (ISBN)</label>
+            <input id="e2_22" />
+          </div>
+          <div class="cols-6">
+            <label for="e4_1">4.1 Opseg</label>
+            <input id="e4_1" />
+          </div>
+          <div class="cols-6">
+            <label for="e4_5">4.5 Dimenzije</label>
+            <input id="e4_5" />
+          </div>
+        </div>
+      </section>
+      <div class="actions">
+        <button type="button" class="ghost" id="testBtn">Test</button>
+        <button type="submit" class="primary">Generiraj JSON-LD</button>
+      </div>
+    </form>
+    <div class="card">
+      <strong>Rezultat</strong>
+      <pre id="output"></pre>
+      <div id="error" class="err"></div>
+    </div>
+  </main>
+<script>
+(function(){
+  const out = document.getElementById('output');
+  const err = document.getElementById('error');
+  window.addEventListener('error', e=>{ err.textContent = 'JS greška: '+e.message; });
+
+  // djb2 32-bit hash (bez BigInt/crypto) — stabilan u svakom browseru
+  function hash32(str){
+    let h = 5381; for(let i=0;i<str.length;i++){ h = ((h<<5)+h) + str.charCodeAt(i); h |= 0; }
+    return (h>>>0).toString(16).padStart(8,'0');
+  }
+  function idFor(nsType, content){
+    return 'http://www.registar.kam.hr/id/'+hash32(nsType+'|'+(content||''));
+  }
+
+  const C = {
+    PojavniOblik:'http://www.registar.kam.hr/Element/c/C10004',
+    Nomen:'http://www.registar.kam.hr/Element/c/C10013',
+    Mjesto:'http://www.registar.kam.hr/Element/c/C10011',
+    Vrijeme:'http://www.registar.kam.hr/Element/c/C10012'
+  };
+  const P = {
+    glavniNaslov:'http://www.registar.kam.hr/Elements/po/P40004',
+    dodatakNaslovu:'http://www.registar.kam.hr/Elements/po/P40006',
+    odgovornostNaslov:'http://www.registar.kam.hr/Elements/po/P40009',
+    podatakOIzd:'http://www.registar.kam.hr/Elements/po/P40012',
+    imeNakladnika:'http://www.registar.kam.hr/Elements/po/P40023',
+    opseg:'http://www.registar.kam.hr/Elements/po/P40046',
+    dimenzije:'http://www.registar.kam.hr/Elements/po/P40050',
+    nakladnickaCjelina:'http://www.registar.kam.hr/Elements/po/P40034',
+    identifikatorPojOblika:'http://www.registar.kam.hr/Elements/po/P40319',
+    mjestoIzdavanja:'http://www.registar.kam.hr/Elements/po/P40301',
+    vrijemeIzdavanja:'http://www.registar.kam.hr/Elements/po/P40306',
+    nomenskiNiz:'http://www.registar.kam.hr/Elements/n/P13002',
+    usvojenaPristupnicaMjesto:'http://www.registar.kam.hr/Elements/m/P11044',
+    usvojenaPristupnicaVrijeme:'http://www.registar.kam.hr/Elements/vr/P12038'
+  };
+
+  const v = id => (document.getElementById(id)?.value||'').trim();
+
+  function makeNomen(graph, text, lang){
+    if(!text) return null;
+    const id = idFor(C.Nomen, (lang||'')+'|'+text);
+    graph.push({ '@id': id, '@type': C.Nomen, [P.nomenskiNiz]: [{ '@value': text, ...(lang?{'@language':lang}:{}) }] });
+    return id;
+  }
+  function makeMjesto(graph, naziv){
+    if(!naziv) return null;
+    const id = idFor(C.Mjesto, naziv);
+    const nId = makeNomen(graph, naziv, 'hr');
+    graph.push({ '@id': id, '@type': C.Mjesto, [P.usvojenaPristupnicaMjesto]: nId ? [{ '@id': nId }] : [] });
+    return id;
+  }
+  function makeVrijeme(graph, raspon){
+    if(!raspon) return null;
+    const id = idFor(C.Vrijeme, raspon);
+    const nId = makeNomen(graph, raspon, '');
+    graph.push({ '@id': id, '@type': C.Vrijeme, [P.usvojenaPristupnicaVrijeme]: nId ? [{ '@id': nId }] : [] });
+    return id;
+  }
+
+  function build(){
+    err.textContent='';
+    const graph = [];
+    const poKey = [v('e1_4'), v('e1_23'), v('e1_25'), v('e2_22')].filter(Boolean).join('|') || 'tmp';
+    const poId = idFor(C.PojavniOblik, poKey);
+    const po = { '@id': poId, '@type': C.PojavniOblik };
+
+    const fields = [
+      {id:'e1_4', p:P.glavniNaslov},
+      {id:'e1_6', p:P.dodatakNaslovu},
+      {id:'e1_23', p:P.imeNakladnika},
+      {id:'e2_22', p:P.identifikatorPojOblika},
+      {id:'e4_1', p:P.opseg},
+      {id:'e4_5', p:P.dimenzije}
+    ];
+    fields.forEach(f=>{
+      const val = v(f.id); if(!val) return;
+      const nId = makeNomen(graph, val, 'hr');
+      po[f.p] = (po[f.p]||[]).concat([{ '@id': nId }]);
+    });
+    const mjestoId = makeMjesto(graph, v('e1_21')); if(mjestoId) po[P.mjestoIzdavanja] = [{ '@id': mjestoId }];
+    const vrijemeId = makeVrijeme(graph, v('e1_25')); if(vrijemeId) po[P.vrijemeIzdavanja] = [{ '@id': vrijemeId }];
+
+    graph.push(po);
+    return { '@graph': graph };
+  }
+
+  document.getElementById('kamForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    try{
+      const data = build();
+      out.textContent = JSON.stringify(data, null, 2);
+    }catch(ex){ err.textContent = 'Greška: '+ex.message; console.error(ex); }
+  });
+
+  document.getElementById('testBtn').addEventListener('click', function(){
+    // auto-populate minimal values i prikaži JSON
+    document.getElementById('e1_4').value = 'Molitva žabe';
+    document.getElementById('e1_23').value = 'KS';
+    document.getElementById('e1_25').value = '2000–2001';
+    document.getElementById('e2_22').value = 'ISBN 953-123-456-7';
+    const data = build();
+    out.textContent = JSON.stringify(data, null, 2);
+  });
+})();
+</script>
+</body>
+</html>
