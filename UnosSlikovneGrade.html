@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ontologija KAM — Unos slikovne građe (plakat)</title>
+
+  <!-- Isti fontovi i biblioteke kao na tvojoj stranici -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Rubik:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"/>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+  <!-- Tvoj globalni stil -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Poppins,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:#1f2937;background:#f6f7fb}
+    #menu-bar{display:flex;align-items:center;gap:20px;padding:10px 16px;border-bottom:1px solid #e5e7eb;background:#fff;position:sticky;top:0;z-index:100}
+    #menu-bar .logo{height:36px;width:auto}
+    #menu-bar h1{margin:0;font-size:18px;font-weight:600}
+    #menu-bar>div{position:relative;font-size:14px;cursor:default}
+    #menu-bar .dropdown{position:absolute;top:20px;left:0;min-width:240px;background:#fff;border:1px solid #e5e7eb;border-radius:0px;padding:8px;display:none;max-height:320px;overflow:auto;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+    #menu-bar>div:hover .dropdown{display:block}
+    #menu-bar .dropdown div{padding:8px;border-radius:8px}
+    #menu-bar .dropdown div:hover{background:#f3f4f6}
+
+    #content{max-width:1100px;margin:16px auto;padding:0 16px 20px}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:16px;margin:14px 0}
+    .row{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px}
+    label{font-size:13px;color:#111827}
+    input,select,textarea{width:100%;padding:10px 12px;border:1px solid #94a3b8;border-radius:0px;background:#fff}
+    .cols-12{grid-column:span 12}.cols-8{grid-column:span 8}.cols-6{grid-column:span 6}.cols-4{grid-column:span 4}.cols-3{grid-column:span 3}.cols-2{grid-column:span 2}
+    .actions{display:flex;gap:10px;justify-content:flex-end;padding:10px 0}
+    button{appearance:none;border:0;border-radius:0px;padding:10px 16px;cursor:pointer}
+    .primary{background:#6d28d9;color:#fff}.ghost{background:transparent;border:1px solid #e5e7eb}
+    pre.output{white-space:pre-wrap;background:#0b1020;color:#cfe8ff;border-radius:12px;padding:14px;overflow:auto}
+    .card h2,.card h3{background:#eee;margin:-16px -16px 12px -16px;padding:10px 16px;border-bottom:1px solid #e5e7eb;border-radius:0 0 0 0;font-size:16px;font-weight:600}
+    @media(max-width:980px){.cols-8,.cols-6,.cols-4,.cols-3,.cols-2{grid-column:span 12}#menu-bar h1{display:none}}
+  </style>
+</head>
+<body>
+
+<!-- Isti izbornik kao na tvojoj stranici -->
+<div id="menu-bar">
+  <img src="kam.png" alt="KAM Logo" class="logo">
+  <h1><a href="index.html" style="text-decoration:none;color:inherit;">Registar</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+  <div>KLASE<div class="dropdown" id="klase-dropdown"></div></div>
+  <div>SVOJSTVA<div class="dropdown" id="svojstva-dropdown"></div></div>
+  <div id="prefiksi">PREFIKSI</div>
+  <div>Pomoć</div>
+</div>
+
+<div id="content">
+  <h2>Unos slikovne građe — plakat (KAM)</h2>
+
+  <form id="kamForm" onsubmit="return false">
+
+    <!-- (neobvezno) URL digitalnog prikaza, iz primjera -->
+    <section class="card">
+      <h3>0. Pomoćno</h3>
+      <div class="row">
+        <div class="cols-12">
+          <label for="url_digital">URL digitalnog prikaza (neobvezno)</label>
+          <input id="url_digital" placeholder="https://..."/>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. STVARNI PRIKAZ -->
+    <section class="card">
+      <h3>1. Stvarni prikaz (ISBD)</h3>
+      <div class="row">
+        <div class="cols-6">
+          <label for="e1_4">1.4 Glavni stvarni naslov</label>
+          <input id="e1_4" placeholder="Zagreb Film Festival"/>
+        </div>
+        <div class="cols-6">
+          <label for="e1_6">1.6 Dodatak glavnom stvarnom naslovu</label>
+          <input id="e1_6" placeholder="11.–19. 11./2017. : ..."/>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. IDENTIFIKACIJA -->
+    <section class="card">
+      <h3>2. Identifikacija jedinice građe</h3>
+      <div class="row">
+        <div class="cols-3">
+          <label for="e2_1">2.1 Razina opisa djela</label>
+          <input id="e2_1" placeholder="pojedinačno djelo"/>
+        </div>
+        <div class="cols-3">
+          <label for="e2_2">2.2 Razina opisa pojavnog oblika</label>
+          <input id="e2_2" placeholder="pojedinačni pojavni oblik"/>
+        </div>
+        <div class="cols-3">
+          <label for="e2_4">2.4 Medij</label>
+          <input id="e2_4" placeholder="neposredovan"/>
+        </div>
+        <div class="cols-3">
+          <label for="e2_5">2.5 Oblik sadržaja</label>
+          <input id="e2_5" placeholder="slika"/>
+        </div>
+        <div class="cols-6">
+          <label for="e2_7">2.7 Usvojena pristupnica za djelo</label>
+          <input id="e2_7" placeholder="Šesnić &amp; Turković. Zagreb Film Festival (2017)"/>
+        </div>
+        <div class="cols-6">
+          <label for="e2_8">2.8 Usvojeni naslov djela</label>
+          <input id="e2_8" placeholder="Zagreb Film Festival"/>
+        </div>
+        <div class="cols-6">
+          <label for="e2_10">2.10 Dodatno obilježje djela</label>
+          <input id="e2_10" placeholder="(2017)"/>
+        </div>
+        <div class="cols-6">
+          <label for="e2_23">2.23 Usvojena pristupnica za pojavni oblik</label>
+          <input id="e2_23" placeholder="Zagreb Film Festival"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. TEMATIKA I SADRŽAJ -->
+    <section class="card">
+      <h3>3. Tematika i sadržaj</h3>
+      <div class="row">
+        <div class="cols-6">
+          <label for="e3_7">3.7 Područje (UDK)</label>
+          <input id="e3_7" placeholder="766"/>
+        </div>
+        <div class="cols-6">
+          <label for="e3_8">3.8 Oblik ili žanr</label>
+          <input id="e3_8" placeholder="plakati kulturnih manifestacija"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. MATERIJALNI OPIS -->
+    <section class="card">
+      <h3>4. Materijalni opis</h3>
+      <div class="row">
+        <div class="cols-4">
+          <label for="e4_1">4.1 Opseg</label>
+          <input id="e4_1" placeholder="1 plakat"/>
+        </div>
+        <div class="cols-4">
+          <label for="e4_5">4.5 Dimenzije</label>
+          <input id="e4_5" placeholder="695 × 482 mm"/>
+        </div>
+        <div class="cols-4">
+          <label for="e4_8">4.8 Materijal</label>
+          <input id="e4_8" placeholder="papir"/>
+        </div>
+        <div class="cols-6">
+          <label for="e4_11">4.11 Tehnika</label>
+          <input id="e4_11" placeholder="digitalni tisak"/>
+        </div>
+        <div class="cols-6">
+          <label for="e4_13">4.13 Boja</label>
+          <input id="e4_13" placeholder="u bojama"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. ŽIVOTNI CIKLUS -->
+    <section class="card">
+      <h3>5. Životni ciklus jedinice građe</h3>
+      <div class="row">
+        <div class="cols-6">
+          <label for="e5_10">5.10 Način nabave</label>
+          <input id="e5_10" placeholder="dar"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. DOSTUPNOST -->
+    <section class="card">
+      <h3>6. Dostupnost i uporaba</h3>
+      <div class="row">
+        <div class="cols-6">
+          <label for="e6_10">6.10 Dostupnost primjerka</label>
+          <input id="e6_10" placeholder="za rad u čitaonici"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. ODNOSI -->
+    <section class="card">
+      <h3>10. Odnosi i napomene o odnosima</h3>
+      <div class="row">
+        <div class="cols-12">
+          <label for="e10_8">10.8 Odnos djela i agenta</label>
+          <input id="e10_8" placeholder="sudionik u nastanku djela: Zagreb Film Festival (15 ; 2017 ; Zagreb)"/>
+        </div>
+        <div class="cols-12">
+          <label for="e10_9">10.9 Odnos djela i stvaratelja</label>
+          <input id="e10_9" placeholder="dizajner: Šesnić &amp; Turković"/>
+        </div>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button type="button" class="ghost" id="testBtn">Test</button>
+      <button type="button" class="primary" id="genBtn">Generiraj JSON-LD</button>
+    </div>
+  </form>
+
+  <details class="card" open>
+    <summary><strong>Rezultat</strong> (generirani JSON-LD)</summary>
+    <pre id="output" class="output" aria-live="polite"></pre>
+    <div id="error" class="hint" style="color:#b91c1c"></div>
+  </details>
+</div>
+
+<div id="footer" style="background:#111;color:#fff;padding:12px 16px;font-size:12px">
+  © 2025 Nacionalna i sveučilišna knjižnica u Zagrebu. Sva prava pridržana.
+</div>
+
+<!-- === Izbornik: iste funkcije kao u tvom predlošku === -->
+<script>
+function getCurieForProperty(propertyField, data) {
+  if (propertyField && propertyField[0] && propertyField[0]['@id']) {
+    const idValue = propertyField[0]['@id'];
+    const foundElement = Object.values(data).find(item => item['@id'] === idValue);
+    if (foundElement && foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID']) {
+      return foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'];
+    }
+  }
+  return '';
+}
+function createCurieLink(curieValue) {
+  if (curieValue) {
+    const link = `property.html?curie=${encodeURIComponent(curieValue)}`;
+    return `<a href="${link}" target="_blank">${curieValue}</a>`;
+  }
+  return '';
+}
+function displayPropertiesForClass(classId, data, className) {
+  const properties = Object.values(data).filter(item => {
+    const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
+    return domains && domains.some(domain => domain['@id'] === classId);
+  });
+  const content = document.getElementById('content');
+  const prev = document.getElementById('properties-panel');
+  if (prev) prev.remove();
+  const panel = document.createElement('div');
+  panel.id = 'properties-panel';
+  panel.innerHTML = `<h3>Svojstva za klasu: ${className}</h3>`;
+  if (properties.length === 0) {
+    panel.innerHTML += '<p>Nema svojstava za ovu klasu.</p>';
+  } else {
+    let table = `<table id="myTable" class="display">
+      <thead><tr><th>CURIE</th><th>Naziv svojstva</th><th>Podsvojstvo od</th><th>Obrnuto od</th><th>Doseg</th></tr></thead><tbody>`;
+    properties.forEach(property => {
+      const curieValue = property['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+        ? property['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'] : '';
+      const label = property['http://www.w3.org/2000/01/rdf-schema#label']
+        ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value'] : 'Unknown Label';
+      const subPropertyOf = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'], data);
+      const inverseOf = getCurieForProperty(property['http://www.w3.org/2002/07/owl#inverseOf'], data);
+      const range = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#range'], data);
+      table += `<tr>
+        <td>${createCurieLink(curieValue)}</td>
+        <td>${label}</td>
+        <td>${createCurieLink(subPropertyOf)}</td>
+        <td>${createCurieLink(inverseOf)}</td>
+        <td>${createCurieLink(range)}</td>
+      </tr>`;
+    });
+    table += '</tbody></table>';
+    panel.innerHTML += table;
+    $(document).ready(function(){ $('#myTable').DataTable(); });
+  }
+  content.prepend(panel);
+}
+function populateKlaseDropdown(data) {
+  const dd = document.getElementById('klase-dropdown'); dd.innerHTML = '';
+  Object.keys(data).forEach(key => {
+    const el = data[key];
+    const labels = el['http://www.w3.org/2000/01/rdf-schema#label'];
+    const label = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : el['@id'].split('/').pop();
+    if (el['@type'] && el['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+      const item = document.createElement('div');
+      item.textContent = label;
+      item.onclick = () => displayPropertiesForClass(el['@id'], data, label);
+      dd.appendChild(item);
+    }
+  });
+}
+function populateSvojstvaDropdown(data){ populateKlaseDropdown(data); }
+function populatePrefiksi(data) {
+  const prefiksi = document.getElementById('prefiksi');
+  prefiksi.onclick = () => {
+    const unique = new Set();
+    const content = document.getElementById('content');
+    const prev = document.getElementById('prefixes-panel');
+    if (prev) prev.remove();
+    const panel = document.createElement('div');
+    panel.id = 'prefixes-panel';
+    panel.innerHTML = '<h3>Prefiksi</h3>';
+    let table = `<table class="display" id="downloadTable"><thead><tr><th>Prefix</th><th>Naziv</th><th>Imenski prostor</th></tr></thead><tbody>`;
+    Object.keys(data).forEach(key => {
+      const el = data[key];
+      if (el['@type'] && el['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+        const id = el['@id'] || '';
+        const namespace = id.substring(0, id.lastIndexOf('/') + 1);
+        const curie = el['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+          ? el['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'] : null;
+        if (curie) {
+          const prefix = curie.split(':')[0];
+          if (!unique.has(prefix)) {
+            unique.add(prefix);
+            const className = el['http://www.w3.org/2000/01/rdf-schema#label']?.[0]?.['@value'] || '';
+            table += `<tr><td>${prefix}</td><td>${className}</td><td>${namespace}</td></tr>`;
+          }
+        }
+      }
+    });
+    table += '</tbody></table>';
+    panel.innerHTML += table;
+    content.prepend(panel);
+    $(document).ready(function(){ $('#downloadTable').DataTable({ paging:false, searching:false, info:false }); });
+  };
+}
+fetch('KAMOntologija_v12.jsonld')
+  .then(r => { if(!r.ok) throw new Error('Ne mogu dohvatiti KAMOntologija_v12.jsonld'); return r.json(); })
+  .then(data => { populateKlaseDropdown(data); populateSvojstvaDropdown(data); populatePrefiksi(data); })
+  .catch(e => console.error('Pogreška u dohvaćanju JSON-LD:', e));
+</script>
+
+<!-- === JSON-LD generator (osnovna mapa; proširi po potrebi) === -->
+<script>
+(function(){
+  const out = document.getElementById('output');
+  const err = document.getElementById('error');
+  const v = id => (document.getElementById(id)?.value || '').trim();
+
+  function hash32(str){ let h=5381; for(let i=0;i<str.length;i++){ h=((h<<5)+h)+str.charCodeAt(i); h|=0 } return (h>>>0).toString(16).padStart(8,'0'); }
+  function idFor(nsType, content){ return 'http://www.registar.kam.hr/id/' + hash32(nsType+'|'+(content||'')); }
+
+  // KAM klase (osnovno)
+  const C = {
+    PojavniOblik: 'http://www.registar.kam.hr/Element/c/C10004',
+    Nomen:        'http://www.registar.kam.hr/Element/c/C10013',
+    Mjesto:       'http://www.registar.kam.hr/Element/c/C10011',
+    Vrijeme:      'http://www.registar.kam.hr/Element/c/C10012'
+  };
+
+  // KAM svojstva koja su već korištena na tvojoj stranici
+  const P = {
+    glavniNaslov:            'http://www.registar.kam.hr/Elements/po/P40004',
+    dodatakNaslovu:          'http://www.registar.kam.hr/Elements/po/P40006',
+    opseg:                   'http://www.registar.kam.hr/Elements/po/P40046',
+    dimenzije:               'http://www.registar.kam.hr/Elements/po/P40050',
+    mjestoIzdavanja:         'http://www.registar.kam.hr/Elements/po/P40301',
+    vrijemeIzdavanja:        'http://www.registar.kam.hr/Elements/po/P40306',
+    nomenskiNiz:             'http://www.registar.kam.hr/Elements/n/P13002',
+    usvojenaPristupnicaMj:   'http://www.registar.kam.hr/Elements/m/P11044',
+    usvojenaPristupnicaVr:   'http://www.registar.kam.hr/Elements/vr/P12038',
+
+    // PRIPREMLJENO za slikovnu građu — zamijeni CURIE-evima kad potvrdiš:
+   materijal: 'http://www.registar.kam.hr/Elements/po/P40053',  // ima materijal
+   tehnika:   'http://www.registar.kam.hr/Elements/po/P40057',  // ima napomenu o materijalu i tehnici
+   boja:      'http://www.registar.kam.hr/Elements/po/P40049'   // ima napomenu o materijalnom nositelju (najbliže za boju)
+  };
+
+  function makeNomen(graph, text, lang){
+    if(!text) return null;
+    const id = idFor(C.Nomen, (lang||'')+'|'+text);
+    graph.push({ '@id': id, '@type': C.Nomen, [P.nomenskiNiz]: [{ '@value': text, ...(lang?{'@language':lang}:{}) }] });
+    return id;
+  }
+
+  function toKAMJsonLD(){
+    const graph = [];
+    const poKey = [v('e1_4'), v('e4_1'), v('e4_5')].filter(Boolean).join('|') || 'tmp';
+    const poId  = idFor(C.PojavniOblik, poKey);
+    const po    = { '@id': poId, '@type': C.PojavniOblik };
+
+    // 1. naslov + dodatak
+    const nTitle = makeNomen(graph, v('e1_4'), 'hr'); if(nTitle) po[P.glavniNaslov] = [{ '@id': nTitle }];
+    const nSub   = makeNomen(graph, v('e1_6'), 'hr'); if(nSub)   po[P.dodatakNaslovu] = [{ '@id': nSub }];
+
+    // 4. opseg, dimenzije
+    const nOpseg = makeNomen(graph, v('e4_1'), '');   if(nOpseg) po[P.opseg] = [{ '@id': nOpseg }];
+    const nDim   = makeNomen(graph, v('e4_5'), '');   if(nDim)   po[P.dimenzije] = [{ '@id': nDim }];
+
+    // 4.8, 4.11, 4.13 — privremeni “hookovi” (zamijeni P.materijal/tehnika/boja točnim ID-jevima)
+    const nMat = makeNomen(graph, v('e4_8'), 'hr');   if(nMat) po[P.materijal] = [{ '@id': nMat }];
+    const nTek = makeNomen(graph, v('e4_11'), 'hr');  if(nTek) po[P.tehnika]   = [{ '@id': nTek }];
+    const nBo  = makeNomen(graph, v('e4_13'), 'hr');  if(nBo)  po[P.boja]      = [{ '@id': nBo }];
+
+    // (neobvezno) URL digitalnog prikaza — dodaj kao napomenu ili vanjskoPoveznica po potrebi
+
+    graph.push(po);
+    return { '@graph': graph };
+  }
+
+  document.getElementById('genBtn').addEventListener('click', ()=>{
+    err.textContent = '';
+    try{
+      const data = toKAMJsonLD();
+      document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+    }catch(ex){
+      err.textContent = 'Greška: ' + ex.message;
+      console.error(ex);
+    }
+  });
+
+  document.getElementById('testBtn').addEventListener('click', ()=>{
+    document.getElementById('e1_4').value  = 'Zagreb Film Festival';
+    document.getElementById('e1_6').value  = '11.–19. 11./2017. : ...';
+    document.getElementById('e4_1').value  = '1 plakat';
+    document.getElementById('e4_5').value  = '695 × 482 mm';
+    document.getElementById('e4_8').value  = 'papir';
+    document.getElementById('e4_11').value = 'digitalni tisak';
+    document.getElementById('e4_13').value = 'u bojama';
+    const data = toKAMJsonLD();
+    document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+  });
+})();
+</script>
+
+</body>
+</html>
