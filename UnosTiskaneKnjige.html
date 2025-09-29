@@ -58,17 +58,50 @@
       .cols-8,.cols-6,.cols-4,.cols-3,.cols-2{grid-column:span 12}
       #menu-bar h1{display:none}
     }
-	.card h2, 
-.card h3 {
-  background: #eee;   
-  margin: -16px -16px 12px -16px;  
-  padding: 10px 16px;   /* unutarnji razmak */
-  border-bottom: 1px solid #e5e7eb; 
-  border-radius: 0px 0px 0 0;    
-  font-size: 16px;
-  font-weight: 600;
-}
+    .card h2, 
+    .card h3 {
+      background: #eee;   
+      margin: -16px -16px 12px -16px;  
+      padding: 10px 16px;   /* unutarnji razmak */
+      border-bottom: 1px solid #e5e7eb; 
+      border-radius: 0px 0px 0 0;    
+      font-size: 16px;
+      font-weight: 600;
+    }
 
+    /* Help ikona + modal */
+    .help-icon {
+      font-size: 16px;
+      margin-left: 8px;
+      cursor: pointer;
+      color: #6d28d9;
+    }
+    .help-icon:hover { color:#4c1d95; }
+
+    .help-modal {
+      display: none; 
+      position: fixed;
+      z-index: 2000;
+      left: 0; top: 0; width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.4);
+    }
+    .help-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 420px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+      font-size: 14px;
+    }
+    .help-close {
+      float: right;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #666;
+    }
+    .help-close:hover { color: #000; }
   </style>
 </head>
 <body>
@@ -94,7 +127,10 @@
   <form id="kamForm" onsubmit="return false">
     <!-- 1. STVARNI PRIKAZ -->
     <section class="card">
-      <h3>1. Stvarni prikaz (ISBD)</h3>
+      <h3>
+        1. Stvarni prikaz (ISBD)
+        <span class="help-icon" onclick="openHelp('help1')">ℹ</span>
+      </h3>
       <div class="row">
         <div class="cols-8">
           <label for="e1_4">1.4 Glavni stvarni naslov</label>
@@ -134,6 +170,22 @@
         </div>
       </div>
     </section>
+
+    <!-- HELP modal za sekciju 1 -->
+    <div id="help1" class="help-modal">
+      <div class="help-content">
+        <span class="help-close" onclick="closeHelp('help1')">&times;</span>
+        <h4>Uputa: 1. Stvarni prikaz (ISBD)</h4>
+        <p>
+          Ovdje se unosi <b>glavni stvarni naslov</b> (npr. naslov djela ili publikacije)
+          te eventualni <b>dodatak naslovu</b> (npr. podnaslov, datumi).
+          <br><br>
+          <b>Primjeri:</b><br>
+          • Glavni naslov: <i>Molitva žabe</i><br>
+          • Dodatak: <i>pripovijetke iz cijeloga svijeta</i>
+        </p>
+      </div>
+    </div>
 
     <!-- 2. IDENTIFIKACIJA -->
     <section class="card">
@@ -288,7 +340,6 @@
 </div>
 
 <script>
-
 function displayLastModified() {
   const lastModified = document.lastModified;
   const lm = document.getElementById('last-modified');
@@ -534,6 +585,21 @@ fetch('KAMOntologija_v12.jsonld')
     out.textContent = JSON.stringify(data, null, 2);
   });
 })();
+</script>
+
+<script>
+/* HELP prozorčići */
+function openHelp(id) {
+  document.getElementById(id).style.display = "block";
+}
+function closeHelp(id) {
+  document.getElementById(id).style.display = "none";
+}
+window.onclick = function(event) {
+  document.querySelectorAll('.help-modal').forEach(modal => {
+    if (event.target === modal) modal.style.display = "none";
+  });
+}
 </script>
 
 </body>
