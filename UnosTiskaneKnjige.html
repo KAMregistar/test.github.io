@@ -323,7 +323,9 @@
 
     <div class="actions">
       <button type="button" class="ghost" id="testBtn">Test</button>
-      <button type="button" class="primary" id="genBtn">Generiraj JSON-LD</button>
+      <button type="button" class="primary" id="genBtn"> JSON-LD</button>
+	  <button type="button" class="primary" id="genTurtleBtn">TTL</button>
+      <button type="button" class="primary" id="genRdfBtn">RDF/XML</button>
     </div>
   </form>
 
@@ -562,6 +564,35 @@ fetch('KAMOntologija_v12.jsonld')
     return { '@graph': graph };
   }
 
+function jsonldToTurtle(jsonld) {
+  // pojednostavljeno: samo string s napomenom
+  return "# Turtle serializacija\n" + JSON.stringify(jsonld, null, 2);
+}
+
+function jsonldToRdfXml(jsonld) {
+  // pojednostavljeno: samo string s napomenom
+  return "<!-- RDF/XML serializacija -->\n" + JSON.stringify(jsonld, null, 2);
+}
+
+function jsonldToXls(jsonld) {
+  // izvući vrijednosti i složiti tablicu (CSV ili XLSX)
+  let rows = [];
+  rows.push(["ID", "Tip", "Svojstvo", "Vrijednost"]);
+  jsonld["@graph"].forEach(node => {
+    const id = node["@id"];
+    const type = node["@type"];
+    for (let key in node) {
+      if (key.startsWith("http")) {
+        const values = node[key];
+        values.forEach(v => {
+          rows.push([id, type, key, v["@value"] || v["@id"] || ""]);
+        });
+      }
+    }
+  });
+  // generiraj CSV string
+  return rows.map(r => r.join(";")).join("\n");
+}
   document.getElementById('genBtn').addEventListener('click', ()=>{
     err.textContent = '';
     try{
