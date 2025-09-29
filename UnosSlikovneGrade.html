@@ -5,13 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Slikovna građa (plakat)</title>
 
-  <!-- Isti fontovi i biblioteke kao na tvojoj stranici -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Rubik:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"/>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 
-  <!-- Tvoj globalni stil -->
   <link rel="stylesheet" href="style.css">
 
   <style>
@@ -42,7 +40,6 @@
 </head>
 <body>
 
-<!-- Isti izbornik kao na tvojoj stranici -->
 <div id="menu-bar">
   <img src="kam.png" alt="KAM Logo" class="logo">
   <h1><a href="index.html" style="text-decoration:none;color:inherit;">Registar</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
@@ -57,7 +54,7 @@
 
   <form id="kamForm" onsubmit="return false">
 
-    <!-- (neobvezno) URL digitalnog prikaza, iz primjera -->
+    <!-- URL digitalnog prikaza, iz primjera -->
     <section class="card">
       <h3>0. Pomoćno</h3>
       <div class="row">
@@ -218,7 +215,7 @@
   © 2025 Nacionalna i sveučilišna knjižnica u Zagrebu. Sva prava pridržana.
 </div>
 
-<!-- === Izbornik: iste funkcije kao u tvom predlošku === -->
+<!-- === Izbornik === -->
 <script>
 function getCurieForProperty(propertyField, data) {
   if (propertyField && propertyField[0] && propertyField[0]['@id']) {
@@ -330,7 +327,7 @@ fetch('KAMOntologija_v12.jsonld')
   .catch(e => console.error('Pogreška u dohvaćanju JSON-LD:', e));
 </script>
 
-<!-- === JSON-LD generator (osnovna mapa; proširi po potrebi) === -->
+<!-- === JSON-LD generator === -->
 <script>
 (function(){
   const out = document.getElementById('output');
@@ -348,7 +345,7 @@ fetch('KAMOntologija_v12.jsonld')
     Vrijeme:      'http://www.registar.kam.hr/Element/c/C10012'
   };
 
-  // KAM svojstva koja su već korištena na tvojoj stranici
+  // KAM svojstva
   const P = {
     glavniNaslov:            'http://www.registar.kam.hr/Elements/po/P40004',
     dodatakNaslovu:          'http://www.registar.kam.hr/Elements/po/P40006',
@@ -360,7 +357,7 @@ fetch('KAMOntologija_v12.jsonld')
     usvojenaPristupnicaMj:   'http://www.registar.kam.hr/Elements/m/P11044',
     usvojenaPristupnicaVr:   'http://www.registar.kam.hr/Elements/vr/P12038',
 
-    // PRIPREMLJENO za slikovnu građu — zamijeni CURIE-evima kad potvrdiš:
+    // PRIPREMLJENO za slikovnu građu
    materijal: 'http://www.registar.kam.hr/Elements/po/P40053',  // ima materijal
    tehnika:   'http://www.registar.kam.hr/Elements/po/P40057',  // ima napomenu o materijalu i tehnici
    boja:      'http://www.registar.kam.hr/Elements/po/P40049'   // ima napomenu o materijalnom nositelju (najbliže za boju)
@@ -392,7 +389,7 @@ fetch('KAMOntologija_v12.jsonld')
     const nTek = makeNomen(graph, v('e4_11'), 'hr');  if(nTek) po[P.tehnika]   = [{ '@id': nTek }];
     const nBo  = makeNomen(graph, v('e4_13'), 'hr');  if(nBo)  po[P.boja]      = [{ '@id': nBo }];
 
-    // (neobvezno) URL digitalnog prikaza — dodaj kao napomenu ili vanjskoPoveznica po potrebi
+    // (neobvezno) URL digitalnog prikaza
 
     graph.push(po);
     return { '@graph': graph };
