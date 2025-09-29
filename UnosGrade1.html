@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tiskana knjiga u više svezaka</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Rubik:wght@300&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"/>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+  <!-- DODANO: RDF & XLSX biblioteke -->
+  <script src="https://unpkg.com/n3/browser/n3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Poppins, system-ui, Segoe UI, Roboto, Arial, sans-serif; color:#1f2937; background:#f6f7fb; }
+
+    #menu-bar {
+      display:flex; align-items:center; gap:20px;
+      padding:10px 16px; border-bottom:1px solid #e5e7eb; background:#fff; position:sticky; top:0; z-index:100;
+    }
+    #menu-bar .logo { height:36px; width:auto; }
+    #menu-bar h1 { margin:0; font-size:18px; font-weight:600; }
+    #menu-bar > div { position:relative; font-size:14px; cursor:default; }
+    #menu-bar .dropdown {
+      position:absolute; top:20px; left:0; min-width:240px;
+      background:#fff; border:1px solid #e5e7eb; border-radius:0px; padding:8px; display:none; max-height:320px; overflow:auto;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+    }
+    #menu-bar > div:hover .dropdown { display:block; }
+    #menu-bar .dropdown div { padding:8px; border-radius:8px; }
+    #menu-bar .dropdown div:hover { background:#f3f4f6; }
+
+    /* Sadržaj stranice ispod menija */
+    #content { max-width:1100px; margin:16px auto; padding:0 16px 20px; }
+
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:16px;margin:14px 0}
+    .row{display:grid;grid-template-columns:repeat(12, minmax(0,1fr));gap:12px}
+    label{font-size:13px;color:#111827}
+    input,select,textarea{width:100%;padding:10px 12px;border:1px solid #94a3b8;border-radius:0px;background:#fff}
+
+    .cols-12{grid-column:span 12}
+    .cols-8{grid-column:span 8}
+    .cols-6{grid-column:span 6}
+    .cols-4{grid-column:span 4}
+    .cols-3{grid-column:span 3}
+    .cols-2{grid-column:span 2}
+
+    .actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end;padding:10px 0}
+    button{appearance:none;border:0;border-radius:0px;padding:10px 16px;cursor:pointer}
+    .primary{background:#6d28d9;color:#fff}
+    .ghost{background:transparent;border:1px solid #e5e7eb}
+    pre.output{white-space:pre-wrap;background:#0b1020;color:#cfe8ff;border-radius:12px;padding:14px;overflow:auto}
+
+    @media (max-width: 980px){
+      .cols-8,.cols-6,.cols-4,.cols-3,.cols-2{grid-column:span 12}
+      #menu-bar h1{display:none}
+    }
+    .card h2, 
+    .card h3 {
+      background: #eee;   
+      margin: -16px -16px 12px -16px;  
+      padding: 10px 16px;   /* unutarnji razmak */
+      border-bottom: 1px solid #e5e7eb; 
+      border-radius: 0px 0px 0 0;    
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    /* Help ikona + modal (crveno "i" kako si tražila) */
+    .help-icon {
+      font-size: 16px;
+      margin-left: 8px;
+      cursor: pointer;
+      color: red;
+    }
+    .help-icon:hover { color: darkred; }
+
+    .help-modal {
+      display: none; 
+      position: fixed;
+      z-index: 2000;
+      left: 0; top: 0; width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.4);
+    }
+    .help-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 420px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+      font-size: 14px;
+    }
+    .help-close {
+      float: right;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #666;
+    }
+    .help-close:hover { color: #000; }
+  </style>
+</head>
+<body>
+
+<div id="menu-bar">
+  <img src="kam.png" alt="KAM Logo" class="logo">
+  <h1><a href="index.html" style="text-decoration:none; color:inherit;">Registar</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+  <div>
+    KLASE
+    <div class="dropdown" id="klase-dropdown"></div>
+  </div>
+  <div>
+    SVOJSTVA
+    <div class="dropdown" id="svojstva-dropdown"></div>
+  </div>
+  <div id="prefiksi">PREFIKSI</div>
+  <div>Pomoć</div>
+</div>
+
+<div id="content">
+  <h2>Unos tiskane knjige u više svezaka</h2>
+
+  <form id="kamForm" onsubmit="return false">
+    <!-- 1. STVARNI PRIKAZ -->
+    <section class="card">
+      <h3>
+        1. Stvarni prikaz (ISBD)
+        <span class="help-icon" onclick="openHelp('help1')">ℹ</span>
+      </h3>
+      <div class="row">
+        <div class="cols-8">
+          <label for="e1_4">1.4 Glavni stvarni naslov</label>
+          <input id="e1_4" />
+        </div>
+        <div class="cols-4">
+          <label for="e1_6">1.6 Dodatak glavnom stvarnom naslovu</label>
+          <input id="e1_6" />
+        </div>
+        <div class="cols-12">
+          <label for="e1_9">1.9 Odgovornost uz stvarni naslov</label>
+          <input id="e1_9" placeholder="npr. autor ; ilustrator ; prevoditelj" />
+        </div>
+        <div class="cols-4">
+          <label for="e1_12">1.12 Podatak o izdanju</label>
+          <input id="e1_12" placeholder="npr. III. izdanje" />
+        </div>
+        <div class="cols-4">
+          <label for="e1_21">1.21 Mjesto izdavanja</label>
+          <input id="e1_21" placeholder="npr. Zagreb" />
+        </div>
+        <div class="cols-4">
+          <label for="e1_23">1.23 Nakladnik / proizvođač</label>
+          <input id="e1_23" placeholder="npr. Nakladnik d.o.o." />
+        </div>
+        <div class="cols-4">
+          <label for="e1_25">1.25 Godina/Vrijeme izdavanja</label>
+          <input id="e1_25" placeholder="npr. 2000–2001" />
+        </div>
+        <div class="cols-4">
+          <label for="e1_34">1.34 Nakladnička cjelina</label>
+          <input id="e1_34" placeholder="npr. Biblioteka…" />
+        </div>
+        <div class="cols-4">
+          <label for="e1_38">1.38 Numeracija u nakladničkoj cjelini</label>
+          <input id="e1_38" placeholder="npr. 11" />
+        </div>
+      </div>
+    </section>
+
+    <!-- HELP modal za sekciju 1 -->
+    <div id="help1" class="help-modal">
+      <div class="help-content">
+        <span class="help-close" onclick="closeHelp('help1')">&times;</span>
+        <h4>Uputa: 1. Stvarni prikaz (ISBD)</h4>
+        <p>
+          Ovdje se unosi <b>glavni stvarni naslov</b> (npr. naslov djela ili publikacije)
+          te eventualni <b>dodatak naslovu</b> (npr. podnaslov, datumi).
+          <br><br>
+          <b>Primjeri:</b><br>
+          • Glavni naslov: <i>Molitva žabe</i><br>
+          • Dodatak: <i>pripovijetke iz cijeloga svijeta</i>
+        </p>
+      </div>
+    </div>
+
+    <!-- 2. IDENTIFIKACIJA -->
+    <section class="card">
+      <h3>
+        2. Identifikacija jedinice građe
+        <span class="help-icon" onclick="openHelp('help2')">ℹ</span>
+      </h3>
+      <div class="row">
+        <div class="cols-3">
+          <label for="e2_1">2.1 Razina opisa djela</label>
+          <input id="e2_1" placeholder="pojedinačno / skupno djelo" />
+        </div>
+        <div class="cols-3">
+          <label for="e2_2">2.2 Razina opisa pojavnog oblika</label>
+          <input id="e2_2" placeholder="pojedinačni / skupni oblik" />
+        </div>
+        <div class="cols-3">
+          <label for="e2_4">2.4 Medij</label>
+          <input id="e2_4" placeholder="neposredovan / posredovan" />
+        </div>
+        <div class="cols-3">
+          <label for="e2_5">2.5 Oblik sadržaja</label>
+          <input id="e2_5" placeholder="tekst" />
+        </div>
+        <div class="cols-6">
+          <label for="e2_6">2.6 Identifikator djela</label>
+          <input id="e2_6" placeholder="VIAF / ISNI / Wikidata…" />
+        </div>
+        <div class="cols-6">
+          <label for="e2_7">2.7 Usvojena pristupnica za djelo</label>
+          <input id="e2_7" placeholder="Autor… Naslov…" />
+        </div>
+        <div class="cols-6">
+          <label for="e2_18">2.18 Usvojena pristupnica za izraz</label>
+          <input id="e2_18" placeholder="… Hrvatski" />
+        </div>
+        <div class="cols-6">
+          <label for="e2_22">2.22 Identifikator pojavnog oblika</label>
+          <input id="e2_22" placeholder="ISBN (cjelina i dijelovi); drugi ID-evi" />
+        </div>
+        <div class="cols-12">
+          <label for="e2_23">2.23 Usvojena pristupnica za pojavni oblik</label>
+          <input id="e2_23" placeholder="npr. Molitva žabe" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. TEMATIKA I SADRŽAJ -->
+    <section class="card">
+      <h3>
+        3. Tematika i sadržaj
+        <span class="help-icon" onclick="openHelp('help3')">ℹ</span>
+      </h3>
+      <div class="row">
+        <div class="cols-4">
+          <label for="e3_8">3.8 Oblik/žanr</label>
+          <input id="e3_8" placeholder="npr. mikro priče" />
+        </div>
+        <div class="cols-4">
+          <label for="e3_7">3.7 Područje (UDK)</label>
+          <input id="e3_7" placeholder="npr. 821.111(540)-36=163.42" />
+        </div>
+        <div class="cols-2">
+          <label for="e3_11">3.11 Jezik sadržaja</label>
+          <input id="e3_11" placeholder="hrvatski" />
+        </div>
+        <div class="cols-2">
+          <label for="e3_13">3.13 Jezik izvornika</label>
+          <input id="e3_13" placeholder="engleski" />
+        </div>
+        <div class="cols-12">
+          <label for="e3_19">3.19 Ilustracije</label>
+          <input id="e3_19" placeholder="Ilustr." />
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. MATERIJALNI OPIS -->
+    <section class="card">
+      <h3>
+        4. Materijalni opis
+        <span class="help-icon" onclick="openHelp('help4')">ℹ</span>
+      </h3>
+      <div class="row">
+        <div class="cols-6">
+          <label for="e4_1">4.1 Opseg</label>
+          <input id="e4_1" placeholder="npr. 2 sv. (195; 196 str.)" />
+        </div>
+        <div class="cols-6">
+          <label for="e4_5">4.5 Dimenzije</label>
+          <input id="e4_5" placeholder="npr. 19 cm" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. ŽIVOTNI CIKLUS -->
+    <section class="card">
+      <h3>
+        5. Životni ciklus jedinice građe
+        <span class="help-icon" onclick="openHelp('help5')">ℹ</span>
+      </h3>
+      <div class="row">
+        <div class="cols-6">
+          <label for="e5_10">5.10 Način nabave</label>
+          <input id="e5_10" placeholder="npr. obvezni primjerak" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. DOSTUPNOST I UPORABA -->
+    <section class="card">
+      <h3>
+        6. Dostupnost i uporaba
+        <span class="help-icon" onclick="openHelp('help6')">ℹ</span>
+      </h3>
+      <div class="row">
+        <div class="cols-6">
+          <label for="e6_10">6.10 Dostupnost primjerka</label>
+          <input id="e6_10" placeholder="npr. korištenje u čitaonici" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. ODNOSI -->
+    <section class="card">
+      <h3>
+        10. Odnosi i napomene o odnosima
+        <span class="help-icon" onclick="openHelp('help10')">ℹ</span>
+      </h3>
+      <div class="row">
+        <div class="cols-12">
+          <label for="e10_2">10.2 Odnos djela i izraza</label>
+          <input id="e10_2" placeholder="Prijevod: The prayer of the frog → Hrvatski" />
+        </div>
+        <div class="cols-12">
+          <label for="e10_3">10.3 Odnos izraza i izraza</label>
+          <input id="e10_3" placeholder="Biblioteka … → Dio: …" />
+        </div>
+        <div class="cols-6">
+          <label for="e10_9">10.9 Odnos djela i stvaratelja</label>
+          <input id="e10_9" placeholder="Autor: Prezime, Ime, godine" />
+        </div>
+        <div class="cols-6">
+          <label for="e10_10">10.10 Odnos izraza i agenta</label>
+          <input id="e10_10" placeholder="Prevoditelj: …" />
+        </div>
+        <div class="cols-6">
+          <label for="e10_11">10.11 Odnos pojavnog oblika i agenta</label>
+          <input id="e10_11" placeholder="Ilustrator: …" />
+        </div>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button type="button" class="ghost" id="testBtn">Test</button>
+      <button type="button" class="primary" id="genBtn">Generiraj JSON-LD</button>
+      <!-- DODANI GUMBI -->
+      <button type="button" class="primary" id="genTurtleBtn">Generiraj Turtle</button>
+      <button type="button" class="primary" id="genRdfBtn">Generiraj RDF/XML</button>
+      <button type="button" class="primary" id="genXlsBtn">Generiraj XLSX</button>
+    </div>
+  </form>
+
+  <details class="card" open>
+    <summary><strong>Rezultat</strong> (generirani izlaz)</summary>
+    <pre id="output" class="output" aria-live="polite"></pre>
+    <a id="downloadLink" style="display:none;" download="podaci.xlsx">Preuzmi XLSX</a>
+    <div id="error" class="hint" style="color:#b91c1c"></div>
+  </details>
+</div>
+
+<!-- Footer -->
+<div id="footer" style="background:#111;color:#fff;padding:12px 16px;font-size:12px">
+  © 2024 Nacionalna i sveučilišna knjižnica u Zagrebu. Sva prava pridržana.
+</div>
+
+<script>
+function displayLastModified() {
+  const lastModified = document.lastModified;
+  const lm = document.getElementById('last-modified');
+  if (lm) lm.innerHTML = `<p>Posljednja izmjena: ${lastModified}</p>`;
+}
+displayLastModified();
+
+function getCurieForProperty(propertyField, data) {
+  if (propertyField && propertyField[0] && propertyField[0]['@id']) {
+    const idValue = propertyField[0]['@id'];
+    const foundElement = Object.values(data).find(item => item['@id'] === idValue);
+    if (foundElement && foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID']) {
+      return foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'];
+    }
+  }
+  return '';
+}
+function createCurieLink(curieValue) {
+  if (curieValue) {
+    const link = `property.html?curie=${encodeURIComponent(curieValue)}`;
+    return `<a href="${link}" target="_blank">${curieValue}</a>`;
+  }
+  return '';
+}
+function displayPropertiesForClass(classId, data, className) {
+  const properties = Object.values(data).filter(item => {
+    const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
+    return domains && domains.some(domain => domain['@id'] === classId);
+  });
+  const content = document.getElementById('content');
+  const prev = document.getElementById('properties-panel');
+  if (prev) prev.remove();
+  const panel = document.createElement('div');
+  panel.id = 'properties-panel';
+  panel.innerHTML = `<h3>Svojstva za klasu: ${className}</h3>`;
+  if (properties.length === 0) {
+    panel.innerHTML += '<p>Nema svojstava za ovu klasu.</p>';
+  } else {
+    let table = `<table id="myTable" class="display">
+      <thead><tr><th>CURIE</th><th>Naziv svojstva</th><th>Podsvojstvo od</th><th>Obrnuto od</th><th>Doseg</th></tr></thead><tbody>`;
+    properties.forEach(property => {
+      const curieValue = property['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+        ? property['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'] : '';
+      const label = property['http://www.w3.org/2000/01/rdf-schema#label']
+        ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value'] : 'Unknown Label';
+      const subPropertyOf = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'], data);
+      const inverseOf = getCurieForProperty(property['http://www.w3.org/2002/07/owl#inverseOf'], data);
+      const range = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#range'], data);
+      table += `<tr>
+        <td>${createCurieLink(curieValue)}</td>
+        <td>${label}</td>
+        <td>${createCurieLink(subPropertyOf)}</td>
+        <td>${createCurieLink(inverseOf)}</td>
+        <td>${createCurieLink(range)}</td>
+      </tr>`;
+    });
+    table += '</tbody></table>';
+    panel.innerHTML += table;
+    $(document).ready(function(){ $('#myTable').DataTable(); });
+  }
+  content.prepend(panel);
+}
+function populateKlaseDropdown(data) {
+  const dd = document.getElementById('klase-dropdown');
+  dd.innerHTML = '';
+  Object.keys(data).forEach(key => {
+    const el = data[key];
+    const labels = el['http://www.w3.org/2000/01/rdf-schema#label'];
+    const label = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : el['@id'].split('/').pop();
+    if (el['@type'] && el['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+      const item = document.createElement('div');
+      item.textContent = label;
+      item.onclick = () => displayPropertiesForClass(el['@id'], data, label);
+      dd.appendChild(item);
+    }
+  });
+}
+function populateSvojstvaDropdown(data) {
+  const dd = document.getElementById('svojstva-dropdown');
+  dd.innerHTML = '';
+  Object.keys(data).forEach(key => {
+    const el = data[key];
+    const labels = el['http://www.w3.org/2000/01/rdf-schema#label'];
+    const label = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : el['@id'].split('/').pop();
+    if (el['@type'] && el['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+      const item = document.createElement('div');
+      item.textContent = label;
+      item.onclick = () => displayPropertiesForClass(el['@id'], data, label);
+      dd.appendChild(item);
+    }
+  });
+}
+function populatePrefiksi(data) {
+  const prefiksi = document.getElementById('prefiksi');
+  prefiksi.onclick = () => {
+    const unique = new Set();
+    const content = document.getElementById('content');
+    const prev = document.getElementById('prefixes-panel');
+    if (prev) prev.remove();
+    const panel = document.createElement('div');
+    panel.id = 'prefixes-panel';
+    panel.innerHTML = '<h3>Prefiksi</h3>';
+    let table = `<table class="display" id="downloadTable"><thead><tr><th>Prefix</th><th>Naziv</th><th>Imenski prostor</th></tr></thead><tbody>`;
+    Object.keys(data).forEach(key => {
+      const el = data[key];
+      if (el['@type'] && el['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+        const id = el['@id'] || '';
+        const namespace = id.substring(0, id.lastIndexOf('/') + 1);
+        const curie = el['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+          ? el['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'] : null;
+        if (curie) {
+          const prefix = curie.split(':')[0];
+          if (!unique.has(prefix)) {
+            unique.add(prefix);
+            const className = el['http://www.w3.org/2000/01/rdf-schema#label']?.[0]?.['@value'] || '';
+            table += `<tr><td>${prefix}</td><td>${className}</td><td>${namespace}</td></tr>`;
+          }
+        }
+      }
+    });
+    table += '</tbody></table>';
+    panel.innerHTML += table;
+    content.prepend(panel);
+    $(document).ready(function(){
+      $('#downloadTable').DataTable({ paging:false, searching:false, info:false });
+    });
+  };
+}
+fetch('KAMOntologija_v12.jsonld')
+  .then(r => { if(!r.ok) throw new Error('Ne mogu dohvatiti KAMOntologija_v12.jsonld'); return r.json(); })
+  .then(data => { populateKlaseDropdown(data); populateSvojstvaDropdown(data); populatePrefiksi(data); })
+  .catch(e => console.error('Pogreška u dohvaćanju JSON-LD:', e));
+</script>
+
+<script>
+/* ====== GENERATOR KAM JSON-LD + KONVERZIJE (Turtle, RDF/XML, XLSX) ====== */
+(function(){
+  const out = document.getElementById('output');
+  const err = document.getElementById('error');
+  const downloadLink = document.getElementById('downloadLink');
+  const v = id => (document.getElementById(id)?.value || '').trim();
+
+  function hash32(str){
+    let h = 5381; for(let i=0;i<str.length;i++){ h = ((h<<5)+h) + str.charCodeAt(i); h |= 0; }
+    return (h>>>0).toString(16).padStart(8,'0');
+  }
+  function idFor(nsType, content){
+    return 'http://www.registar.kam.hr/id/' + hash32(nsType+'|'+(content||''));
+  }
+  const C = {
+    PojavniOblik:'http://www.registar.kam.hr/Element/c/C10004',
+    Nomen:'http://www.registar.kam.hr/Element/c/C10013',
+    Mjesto:'http://www.registar.kam.hr/Element/c/C10011',
+    Vrijeme:'http://www.registar.kam.hr/Element/c/C10012'
+  };
+  const P = {
+    glavniNaslov:'http://www.registar.kam.hr/Elements/po/P40004',
+    dodatakNaslovu:'http://www.registar.kam.hr/Elements/po/P40006',
+    odgovornostNaslov:'http://www.registar.kam.hr/Elements/po/P40009',
+    podatakOIzd:'http://www.registar.kam.hr/Elements/po/P40012',
+    imeNakladnika:'http://www.registar.kam.hr/Elements/po/P40023',
+    opseg:'http://www.registar.kam.hr/Elements/po/P40046',
+    dimenzije:'http://www.registar.kam.hr/Elements/po/P40050',
+    nakladnickaCjelina:'http://www.registar.kam.hr/Elements/po/P40034',
+    identifikatorPojOblika:'http://www.registar.kam.hr/Elements/po/P40319',
+    mjestoIzdavanja:'http://www.registar.kam.hr/Elements/po/P40301',
+    vrijemeIzdavanja:'http://www.registar.kam.hr/Elements/po/P40306',
+    nomenskiNiz:'http://www.registar.kam.hr/Elements/n/P13002',
+    usvojenaPristupnicaMjesto:'http://www.registar.kam.hr/Elements/m/P11044',
+    usvojenaPristupnicaVrijeme:'http://www.registar.kam.hr/Elements/vr/P12038'
+  };
+
+  function makeNomen(graph, text, lang){
+    if(!text) return null;
+    const id = idFor(C.Nomen, (lang||'')+'|'+text);
+    graph.push({ '@id': id, '@type': C.Nomen, [P.nomenskiNiz]: [{ '@value': text, ...(lang?{'@language':lang}:{}) }] });
+    return id;
+  }
+  function makeMjesto(graph, naziv){
+    if(!naziv) return null;
+    const id = idFor(C.Mjesto, naziv);
+    const nId = makeNomen(graph, naziv, 'hr');
+    graph.push({ '@id': id, '@type': C.Mjesto, [P.usvojenaPristupnicaMjesto]: nId ? [{ '@id': nId }] : [] });
+    return id;
+  }
+  function makeVrijeme(graph, raspon){
+    if(!raspon) return null;
+    const id = idFor(C.Vrijeme, raspon);
+    const nId = makeNomen(graph, raspon, '');
+    graph.push({ '@id': id, '@type': C.Vrijeme, [P.usvojenaPristupnicaVrijeme]: nId ? [{ '@id': nId }] : [] });
+    return id;
+  }
+
+  const MAP_FIELDS = [
+    {id:'e1_4',  prop:P.glavniNaslov,           lang:'hr'},
+    {id:'e1_6',  prop:P.dodatakNaslovu,         lang:'hr'},
+    {id:'e1_9',  prop:P.odgovornostNaslov,      lang:'hr'},
+    {id:'e1_12', prop:P.podatakOIzd,            lang:'hr'},
+    {id:'e1_23', prop:P.imeNakladnika,          lang:'hr'},
+    {id:'e1_34', prop:P.nakladnickaCjelina,     lang:'hr'},
+    {id:'e2_22', prop:P.identifikatorPojOblika, lang:''},
+    {id:'e4_1',  prop:P.opseg,                  lang:''},
+    {id:'e4_5',  prop:P.dimenzije,              lang:''}
+  ];
+
+  function toKAMJsonLD(){
+    const graph = [];
+    const poKey = [v('e1_4'), v('e1_23'), v('e1_25'), v('e2_22')].filter(Boolean).join('|') || 'tmp';
+    const poId = idFor(C.PojavniOblik, poKey);
+    const po = { '@id': poId, '@type': C.PojavniOblik };
+
+    MAP_FIELDS.forEach(({id, prop, lang})=>{
+      const val = v(id); if(!val) return;
+      const nId = makeNomen(graph, val, lang);
+      po[prop] = (po[prop]||[]).concat([{ '@id': nId }]);
+    });
+
+    const mjestoId  = makeMjesto(graph,  v('e1_21')); if(mjestoId)  po[P.mjestoIzdavanja]  = [{ '@id': mjestoId  }];
+    const vrijemeId = makeVrijeme(graph, v('e1_25')); if(vrijemeId) po[P.vrijemeIzdavanja] = [{ '@id': vrijemeId }];
+
+    graph.push(po);
+    return { '@graph': graph };
+  }
+
+  /* ---------- KONVERZIJE ---------- */
+
+  // JSON-LD -> Turtle (N3.js)
+  async function jsonldToTurtle(jsonld) {
+    const writer = new N3.Writer({ format: "Turtle" });
+    jsonld["@graph"].forEach(node => {
+      const subj = N3.DataFactory.namedNode(node["@id"]);
+      const type = node["@type"];
+      if (type && typeof type === 'string' && type.startsWith('http')) {
+        writer.addQuad(subj, N3.DataFactory.namedNode('http://www.w3.org/1999/02/22-rdf-syntax-ns#type'), N3.DataFactory.namedNode(type));
+      }
+      for (let key in node) {
+        if (!key.startsWith("http")) continue;
+        const arr = node[key] || [];
+        arr.forEach(v => {
+          if (v["@value"] !== undefined) {
+            const lit = v["@language"] ? N3.DataFactory.literal(v["@value"], v["@language"]) : N3.DataFactory.literal(v["@value"]);
+            writer.addQuad(subj, N3.DataFactory.namedNode(key), lit);
+          } else if (v["@id"]) {
+            writer.addQuad(subj, N3.DataFactory.namedNode(key), N3.DataFactory.namedNode(v["@id"]));
+          }
+        });
+      }
+    });
+    return new Promise((resolve, reject)=> writer.end((e, result)=> e?reject(e):resolve(result)));
+  }
+
+  // JSON-LD -> (pojednostavljeni) RDF/XML
+  function jsonldToRdfXml(jsonld) {
+    const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    let xml = `<?xml version="1.0"?>\n<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">\n`;
+    jsonld["@graph"].forEach(node=>{
+      xml += `  <rdf:Description rdf:about="${esc(node["@id"])}">\n`;
+      for (let key in node) {
+        if (!key.startsWith("http")) continue;
+        const arr = node[key] || [];
+        arr.forEach(v=>{
+          const tag = `prop`; // generički tag; za precizno mapiranje koristite QName/prefikse
+          if (v["@value"] !== undefined) {
+            xml += `    <${tag}>${esc(v["@value"])}</${tag}>\n`;
+          } else if (v["@id"]) {
+            xml += `    <${tag} rdf:resource="${esc(v["@id"])}"/>\n`;
+          }
+        });
+      }
+      xml += `  </rdf:Description>\n`;
+    });
+    xml += `</rdf:RDF>`;
+    return xml;
+  }
+
+  // JSON-LD -> XLSX (SheetJS)
+  function jsonldToXlsx(jsonld) {
+    const rows = [["ID", "Tip", "Svojstvo (IRI)", "Vrijednost"]];
+    jsonld["@graph"].forEach(node=>{
+      const id = node["@id"] || "";
+      const type = node["@type"] || "";
+      for (let key in node) {
+        if (!key.startsWith("http")) continue;
+        const arr = node[key] || [];
+        arr.forEach(v=>{
+          rows.push([id, type, key, v["@value"] || v["@id"] || ""]);
+        });
+      }
+    });
+    const ws = XLSX.utils.aoa_to_sheet(rows);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Podaci");
+    const wbout = XLSX.write(wb, { bookType: "xlsx", type: "array" });
+    const blob = new Blob([wbout], { type: "application/octet-stream" });
+    const url = URL.createObjectURL(blob);
+    downloadLink.href = url;
+    downloadLink.style.display = "inline";
+    downloadLink.textContent = "Preuzmi XLSX";
+    return "XLSX generiran. Klikni „Preuzmi XLSX”.";
+  }
+
+  /* ---------- GUMBI ---------- */
+  document.getElementById('genBtn').addEventListener('click', ()=>{
+    err.textContent = '';
+    downloadLink.style.display = "none";
+    try{
+      const data = toKAMJsonLD();
+      out.textContent = JSON.stringify(data, null, 2);
+      if (history && history.replaceState) {
+        history.replaceState(null, '', location.pathname + location.hash);
+      }
+    }catch(ex){
+      err.textContent = 'Greška: ' + ex.message;
+      console.error(ex);
+    }
+  });
+
+  document.getElementById('testBtn').addEventListener('click', ()=>{
+    document.getElementById('e1_4').value  = 'Molitva žabe';
+    document.getElementById('e1_23').value = 'KS';
+    document.getElementById('e1_25').value = '2000–2001';
+    document.getElementById('e2_22').value = 'ISBN 953-123-456-7';
+    const data = toKAMJsonLD();
+    out.textContent = JSON.stringify(data, null, 2);
+    downloadLink.style.display = "none";
+  });
+
+  document.getElementById('genTurtleBtn').addEventListener('click', async ()=>{
+    err.textContent = '';
+    downloadLink.style.display = "none";
+    try{
+      const data = toKAMJsonLD();
+      const ttl = await jsonldToTurtle(data);
+      out.textContent = ttl;
+    }catch(ex){
+      err.textContent = 'Greška (Turtle): ' + ex.message;
+      console.error(ex);
+    }
+  });
+
+  document.getElementById('genRdfBtn').addEventListener('click', ()=>{
+    err.textContent = '';
+    downloadLink.style.display = "none";
+    try{
+      const data = toKAMJsonLD();
+      const rdf = jsonldToRdfXml(data);
+      out.textContent = rdf;
+    }catch(ex){
+      err.textContent = 'Greška (RDF/XML): ' + ex.message;
+      console.error(ex);
+    }
+  });
+
+  document.getElementById('genXlsBtn').addEventListener('click', ()=>{
+    err.textContent = '';
+    try{
+      const data = toKAMJsonLD();
+      out.textContent = jsonldToXlsx(data);
+    }catch(ex){
+      err.textContent = 'Greška (XLSX): ' + ex.message;
+      console.error(ex);
+    }
+  });
+
+})();
+</script>
+
+<script>
+/* HELP prozorčići */
+function openHelp(id) {
+  document.getElementById(id).style.display = "block";
+}
+function closeHelp(id) {
+  document.getElementById(id).style.display = "none";
+}
+window.onclick = function(event) {
+  document.querySelectorAll('.help-modal').forEach(modal => {
+    if (event.target === modal) modal.style.display = "none";
+  });
+}
+</script>
+
+<!-- HELP PROZORI (ostali) -->
+<div id="help2" class="help-modal"><div class="help-content"><span class="help-close" onclick="closeHelp('help2')">&times;</span><h4>Uputa: 2. Identifikacija</h4><p>Određuje se razina opisa (djelo, izraz, pojavni oblik), medij, oblik sadržaja, identifikatori (ISBN, VIAF…).</p></div></div>
+<div id="help3" class="help-modal"><div class="help-content"><span class="help-close" onclick="closeHelp('help3')">&times;</span><h4>Uputa: 3. Tematika i sadržaj</h4><p>Navodi se predmetno područje (UDK), oblik/žanr i jezici.</p></div></div>
+<div id="help4" class="help-modal"><div class="help-content"><span class="help-close" onclick="closeHelp('help4')">&times;</span><h4>Uputa: 4. Materijalni opis</h4><p>Opisuje se fizički opseg i dimenzije.</p></div></div>
+<div id="help5" class="help-modal"><div class="help-content"><span class="help-close" onclick="closeHelp('help5')">&times;</span><h4>Uputa: 5. Životni ciklus</h4><p>Bilježi se način nabave (kupnja, obvezni primjerak, dar…).</p></div></div>
+<div id="help6" class="help-modal"><div class="help-content"><span class="help-close" onclick="closeHelp('help6')">&times;</span><h4>Uputa: 6. Dostupnost i uporaba</h4><p>Definiraju se uvjeti dostupnosti primjerka.</p></div></div>
+<div id="help10" class="help-modal"><div class="help-content"><span class="help-close" onclick="closeHelp('help10')">&times;</span><h4>Uputa: 10. Odnosi</h4><p>Unose se veze između djela, izraza, pojavnih oblika i stvaratelja.</p></div></div>
+
+</body>
+</html>
