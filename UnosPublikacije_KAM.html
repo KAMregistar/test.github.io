@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Unos publikacije - KAM</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+  <h1>Unos publikacije</h1>
+  <form id="kamForm">
+    <!-- Primjer polja (umjesto svih 200) -->
+    <div class="card mb-3">
+      <div class="card-header bg-light">1 Stvarni prikaz jedinice građe</div>
+      <div class="card-body">
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="e1_4" class="form-label">Glavni stvarni naslov</label>
+            <input type="text" id="e1_4" class="form-control">
+          </div>
+          <div class="col-md-6">
+            <label for="e1_5" class="form-label">Usporedni stvarni naslov</label>
+            <input type="text" id="e1_5" class="form-control">
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-primary" onclick="generateJSONLD()">Generiraj JSON-LD</button>
+  </form>
+  <h3 class="mt-4">Rezultat</h3>
+  <pre id="output"></pre>
+</div>
+<script src="kam_map.js"></script>
+<script>
+function toKAMJsonLD() {
+  const data = {
+    "@context": {
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "kam": "http://www.registar.kam.hr/Elements/"
+    },
+    "@graph": []
+  };
+  document.querySelectorAll("input, textarea, select").forEach(el => {
+    const value = el.value.trim();
+    if (!value) return;
+    const labelEl = el.closest("div").querySelector("label");
+    if (!labelEl) return;
+    const label = labelEl.innerText.trim();
+    const uri = MAP_FIELDS[label];
+    if (!uri) return;
+    data["@graph"].push({
+      "@id": uri,
+      "rdfs:label": label,
+      "rdfs:value": value
+    });
+  });
+  return JSON.stringify(data, null, 2);
+}
+function generateJSONLD() {
+  const jsonld = toKAMJsonLD();
+  document.getElementById("output").textContent = jsonld;
+}
+</script>
+</body>
+</html>
