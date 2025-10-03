@@ -1,134 +1,551 @@
 <!DOCTYPE html>
+
 <html lang="hr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unos publikacije - KAM</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <style>
-    body {
-      display: flex;
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Tiskana knjiga u više svezaka</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&amp;family=Rubik:wght@300&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<!-- DODANO: RDF & XLSX biblioteke -->
+<script src="https://unpkg.com/n3/browser/n3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<link href="style.css" rel="stylesheet"/>
+<style>
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Poppins, system-ui, Segoe UI, Roboto, Arial, sans-serif; color:#1f2937; background:#f6f7fb; }
+
+    #menu-bar {
+      display:flex; align-items:center; gap:20px;
+      padding:10px 16px; border-bottom:1px solid #e5e7eb; background:#fff; position:sticky; top:0; z-index:100;
     }
-    #sidebar {
-      width: 180px;
+    #menu-bar .logo { height:36px; width:auto; }
+    #menu-bar h1 { margin:0; font-size:18px; font-weight:600; }
+    #menu-bar > div { position:relative; font-size:14px; cursor:default; }
+    #menu-bar .dropdown {
+      position:absolute; top:20px; left:0; min-width:240px;
+      background:#fff; border:1px solid #e5e7eb; border-radius:0px; padding:8px; display:none; max-height:320px; overflow:auto;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+    }
+    #menu-bar > div:hover .dropdown { display:block; }
+    #menu-bar .dropdown div { padding:8px; border-radius:8px; }
+    #menu-bar .dropdown div:hover { background:#f3f4f6; }
+
+    /* Sadržaj stranice ispod menija */
+    #content { max-width:1100px; margin:16px auto; padding:0 16px 20px; }
+
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:16px;margin:14px 0}
+    .row{display:grid;grid-template-columns:repeat(12, minmax(0,1fr));gap:12px}
+    label{font-size:13px;color:#111827}
+    input,select,textarea{width:100%;padding:10px 12px;border:1px solid #94a3b8;border-radius:0px;background:#fff}
+
+    .cols-12{grid-column:span 12}
+    .cols-8{grid-column:span 8}
+    .cols-6{grid-column:span 6}
+    .cols-4{grid-column:span 4}
+    .cols-3{grid-column:span 3}
+    .cols-2{grid-column:span 2}
+
+    .actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end;padding:10px 0}
+    button{appearance:none;border:0;border-radius:0px;padding:10px 16px;cursor:pointer}
+    .primary{background:#6d28d9;color:#fff}
+    .ghost{background:transparent;border:1px solid #e5e7eb}
+    pre.output{white-space:pre-wrap;background:#0b1020;color:#cfe8ff;border-radius:12px;padding:14px;overflow:auto}
+
+    @media (max-width: 980px){
+      .cols-8,.cols-6,.cols-4,.cols-3,.cols-2{grid-column:span 12}
+      #menu-bar h1{display:none}
+    }
+    .card h2, 
+    .card h3 {
+      background: #eee;   
+      margin: -16px -16px 12px -16px;  
+      padding: 10px 16px;   /* unutarnji razmak */
+      border-bottom: 1px solid #e5e7eb; 
+      border-radius: 0px 0px 0 0;    
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    /* Help ikona + modal (crveno "i" kako si tražila) */
+    .help-icon {
+      font-size: 16px;
+      margin-left: 8px;
+      cursor: pointer;
+      color: red;
+    }
+    .help-icon:hover { color: darkred; }
+
+    .help-modal {
+      display: none; 
       position: fixed;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      background-color: #f8f9fa;
-      padding-top: 20px;
-      border-right: 1px solid #dee2e6;
+      z-index: 2000;
+      left: 0; top: 0; width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.4);
     }
-    #sidebar a {
-      display: block;
-      padding: 8px 12px;
-      color: #000;
-      text-decoration: none;
-    }
-    #sidebar a:hover {
-      background-color: #e9ecef;
-    }
-    #content {
-      margin-left: 200px;
+    .help-content {
+      background-color: #fff;
+      margin: 10% auto;
       padding: 20px;
-      flex: 1;
+      border-radius: 10px;
+      width: 420px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+      font-size: 14px;
     }
-    textarea {
-      width: 100%;
-      height: 250px;
-      margin-top: 20px;
+    .help-close {
+      float: right;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #666;
     }
+    .help-close:hover { color: #000; }
   </style>
-</head>
+</link></head>
 <body>
-
-<div id="sidebar">
-  <a href="#sec1">1 Stvarni prikaz</a>
-  <a href="#sec2">2 Identifikacija</a>
-  <a href="#sec3">3 Tematika</a>
-  <a href="#sec4">4 Materijalni opis</a>
-  <a href="#sec5">5 Životni ciklus</a>
-  <a href="#sec6">6 Dostupnost</a>
-  <a href="#sec10">10 Odnosi</a>
+<div id="kamSidebar" style="position:fixed;left:0;top:0;height:100vh;width:72px;background:#f8f9fa;border-right:1px solid #dee2e6;display:flex;flex-direction:column;gap:8px;align-items:center;padding-top:16px;z-index:1030;">
+<a href="#sec1" title="1">1</a>
+<a href="#sec2" title="2">2</a>
+<a href="#sec3" title="3">3</a>
+<a href="#sec4" title="4">4</a>
+<a href="#sec5" title="5">5</a>
+<a href="#sec6" title="6">6</a>
+<a href="#sec10" title="10">10</a>
 </div>
+<style>
+#kamSidebar a{display:block;width:40px;height:40px;line-height:40px;text-align:center;border-radius:8px;color:#333;text-decoration:none;border:1px solid #ddd;background:#fff;font-weight:600}
+#kamSidebar a:hover{background:#e9ecef}
+@media (max-width: 768px){#kamSidebar{display:none}}
+.kam-offset{margin-left:88px}
+</style>
 
+<div id="menu-bar">
+<img alt="KAM Logo" class="logo" src="kam.png"/>
+<h1><a href="index.html" style="text-decoration:none; color:inherit;">Registar</a>          </h1>
+<div>
+    KLASE
+    <div class="dropdown" id="klase-dropdown"></div>
+</div>
+<div>
+    SVOJSTVA
+    <div class="dropdown" id="svojstva-dropdown"></div>
+</div>
+<div id="prefiksi">PREFIKSI</div>
+<div>Pomoć</div>
+</div>
 <div id="content">
-  <h2>Unos publikacije</h2>
-
-  <div class="accordion" id="kamAccordion">
-    <div class="accordion-item" id="sec1">
-      <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true">
-          1. Stvarni prikaz jedinice građe
-        </button>
-      </h2>
-      <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#kamAccordion">
-        <div class="accordion-body">
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label class="form-label">1.1 Stvarni prikaz</label>
-              <input type="text" class="form-control" id="field_1_1">
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">1.2 Napomena o stvarnom prikazu</label>
-              <textarea class="form-control" id="field_1_2"></textarea>
-            </div>
-          </div>
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label class="form-label">1.3 Podatak o stvarnom naslovu</label>
-              <input type="text" class="form-control" id="field_1_3">
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">1.4 Glavni stvarni naslov</label>
-              <input type="text" class="form-control" id="field_1_4">
-            </div>
-          </div>
-          <!-- Ovdje dodati ostala polja sekcije 1 po istom principu -->
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item" id="sec2">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
-          2. Identifikacija jedinice građe
-        </button>
-      </h2>
-      <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#kamAccordion">
-        <div class="accordion-body">
-          <div class="row mb-3">
-            <div class="col-md-4">
-              <label class="form-label">2.1 Razina opisa djela</label>
-              <input type="text" class="form-control" id="field_2_1">
-            </div>
-            <div class="col-md-4">
-              <label class="form-label">2.2 Razina opisa pojavnog oblika</label>
-              <input type="text" class="form-control" id="field_2_2">
-            </div>
-            <div class="col-md-4">
-              <label class="form-label">2.4 Medij</label>
-              <input type="text" class="form-control" id="field_2_4">
-            </div>
-          </div>
-          <!-- Dodati ostala polja sekcije 2 -->
-        </div>
-      </div>
-    </div>
-
-    <!-- Sekcije 3,4,5,6,10 po istom principu -->
-
-  </div>
-
-  <button class="btn btn-primary mt-3" onclick="generateJSONLD()">Generiraj JSON-LD</button>
-  <button class="btn btn-secondary mt-3" onclick="generateTTL()">Generiraj Turtle</button>
-  <button class="btn btn-secondary mt-3" onclick="generateRDF()">Generiraj RDF/XML</button>
-  <button class="btn btn-secondary mt-3" onclick="generateXLSX()">Generiraj XLSX</button>
-
-  <textarea id="output" readonly></textarea>
+<h2>Unos tiskane knjige u više svezaka</h2>
+<div class="kam-offset"><form id="kamForm" onsubmit="return false"><div class="accordion" id="kamAccordion"><div class="accordion-item" id="sec1"><h2 class="accordion-header"><button class="accordion-button" data-bs-target="#collapse1" data-bs-toggle="collapse" type="button">1. Stvarni prikaz jedinice građe</button></h2><div class="accordion-collapse collapse show" data-bs-parent="#kamAccordion" id="collapse1"><div class="accordion-body"><div class="row"><div class="col-md-4 mb-3"><label class="form-label" for="e1_1">Stvarni prikaz</label><input class="form-control" id="e1_1" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e1_2">Napomena o stvarnom prikazu</label><textarea class="form-control" id="e1_2" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_3">Podatak o stvarnom naslovu</label><input class="form-control" id="e1_3" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_4">Glavni stvarni naslov</label><input class="form-control" id="e1_4" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_5">Usporedni stvarni naslov</label><input class="form-control" id="e1_5" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_6">Dodatak glavnom stvarnom naslovu</label><input class="form-control" id="e1_6" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_7">Usporedni dodatak glavnom stvarnom naslovu</label><input class="form-control" id="e1_7" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e1_8">Napomena o stvarnom naslovu</label><textarea class="form-control" id="e1_8" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_9">Podatak o odgovornosti koji se odnosi na stvarni naslov</label><input class="form-control" id="e1_9" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_10">Usporedni podatak o odgovornosti koji se odnosi na stvarni naslov</label><input class="form-control" id="e1_10" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e1_11">Napomena o odgovornosti koja se odnosi stvarni naslov</label><textarea class="form-control" id="e1_11" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_12">Podatak o izdanju</label><input class="form-control" id="e1_12" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_13">Oznaka izdanja</label><input class="form-control" id="e1_13" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_14">Usporedna oznaka izdanja</label><input class="form-control" id="e1_14" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_15">Dodatna oznaka izdanja</label><input class="form-control" id="e1_15" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_16">Usporedna dodatna oznaka izdanja</label><input class="form-control" id="e1_16" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_17">Podatak o odgovornosti koji se odnosi na izdanje</label><input class="form-control" id="e1_17" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_18">Usporedni podatak o odgovornosti koji se odnosi na izdanje</label><input class="form-control" id="e1_18" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e1_19">Napomena o izdanju</label><textarea class="form-control" id="e1_19" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_20">Podatak o izdavanju, proizvodnji ili raspačavanju</label><input class="form-control" id="e1_20" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_21">Ime mjesta izdavanja, proizvodnje ili raspačavanja</label><input class="form-control" id="e1_21" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_22">Usporedno ime mjesta izdavanja, proizvodnje ili raspačavanja</label><input class="form-control" id="e1_22" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_23">Ime nakladnika, proizvođača ili raspačavatelja</label><input class="form-control" id="e1_23" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_24">Usporedno ime nakladnika, proizvođača ili raspačavatelja</label><input class="form-control" id="e1_24" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_25">Oznaka godine izdavanja, proizvodnje ili raspačavanja</label><input class="form-control" id="e1_25" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e1_26">Napomena o izdavanju, proizvodnji ili raspačavanju</label><textarea class="form-control" id="e1_26" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_27">Podatak o tiskanju ili izradi</label><input class="form-control" id="e1_27" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_28">Ime mjesta tiskanja ili izrade</label><input class="form-control" id="e1_28" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_29">Ime tiskara ili izrađivača</label><input class="form-control" id="e1_29" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_30">Oznaka godine tiskanja ili izrade</label><input class="form-control" id="e1_30" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e1_31">Napomena o tiskanju ili izradi</label><textarea class="form-control" id="e1_31" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_32">Oznaka godine copyrighta</label><input class="form-control" id="e1_32" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e1_33">Napomena o copyrightu</label><textarea class="form-control" id="e1_33" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_34">Podatak o nakladničkoj cjelini</label><input class="form-control" id="e1_34" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_35">Stvarni naslov nakladničke cjeline</label><input class="form-control" id="e1_35" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_36">Podatak o odgovornosti koji se odnosi na nakladničku cjelinu</label><input class="form-control" id="e1_36" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_37">Međunarodni standardni broj nakladničke cjeline</label><input class="form-control" id="e1_37" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e1_38">Numeracija u nakladničkoj cjelini</label><input class="form-control" id="e1_38" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e1_39">Napomena o nakladničkoj cjelini</label><textarea class="form-control" id="e1_39" rows="3"></textarea></div></div></div></div></div><div class="accordion-item" id="sec2"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-target="#collapse2" data-bs-toggle="collapse" type="button">2. Identifikacija jedinice građe</button></h2><div class="accordion-collapse collapse" data-bs-parent="#kamAccordion" id="collapse2"><div class="accordion-body"><div class="row"><div class="col-md-4 mb-3"><label class="form-label" for="e2_1">Razina opisa djela</label><input class="form-control" id="e2_1" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_2">Razina opisa pojavnog oblika</label><input class="form-control" id="e2_2" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_4">Medij</label><input class="form-control" id="e2_4" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_5">Oblik sadržaja</label><input class="form-control" id="e2_5" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_6">Identifikator djela</label><input class="form-control" id="e2_6" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_7">Usvojena pristupnica za djelo</label><input class="form-control" id="e2_7" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_8">Usvojeni naslov djela</label><input class="form-control" id="e2_8" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_9">Vrsta usvojenog naslova djela</label><input class="form-control" id="e2_9" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_10">Dodatno obilježje djela</label><input class="form-control" id="e2_10" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_11">Ključni naslov</label><input class="form-control" id="e2_11" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_12">Varijantna pristupnica za djelo</label><input class="form-control" id="e2_12" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_13">Varijantni naslov djela</label><input class="form-control" id="e2_13" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_14">Vrsta varijantnog naslova djela</label><input class="form-control" id="e2_14" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_15">Brojčane i kronološke oznake serijske građe</label><input class="form-control" id="e2_15" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e2_16">Napomena o identifikaciji djela</label><textarea class="form-control" id="e2_16" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_17">Identifikator izraza</label><input class="form-control" id="e2_17" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_18">Usvojena pristupnica za izraz</label><input class="form-control" id="e2_18" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_19">Dodatno obilježje izraza</label><input class="form-control" id="e2_19" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_20">Varijantna pristupnica za izraz</label><input class="form-control" id="e2_20" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e2_21">Napomena o identifikaciji izraza</label><textarea class="form-control" id="e2_21" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_22">Identifikator pojavnog oblika</label><input class="form-control" id="e2_22" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_23">Usvojena pristupnica za pojavni oblik</label><input class="form-control" id="e2_23" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_24">Dodatno obilježje pojavnog oblika</label><input class="form-control" id="e2_24" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_25">Skraćeni naslov</label><input class="form-control" id="e2_25" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_26">Varijantna pristupnica za pojavni oblik</label><input class="form-control" id="e2_26" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_27">Varijantni naslov pojavnog oblika</label><input class="form-control" id="e2_27" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e2_28">Napomena o identifikaciji pojavnog oblika</label><textarea class="form-control" id="e2_28" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_29">Identifikator primjerka</label><input class="form-control" id="e2_29" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_30">Usvojena pristupnica za primjerak</label><input class="form-control" id="e2_30" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e2_31">Napomena o identifikaciji primjerka</label><textarea class="form-control" id="e2_31" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e2_32">Preporučeni način citiranja</label><input class="form-control" id="e2_32" type="text"/></div></div></div></div></div><div class="accordion-item" id="sec3"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-target="#collapse3" data-bs-toggle="collapse" type="button">3. Tematika i sadržaj jedinice građe</button></h2><div class="accordion-collapse collapse" data-bs-parent="#kamAccordion" id="collapse3"><div class="accordion-body"><div class="row"><div class="col-md-4 mb-3"><label class="form-label" for="e3_1">Izvorni natpisi i oznake</label><input class="form-control" id="e3_1" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e3_2">Napomena o izvornim natpisima i oznakama</label><textarea class="form-control" id="e3_2" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e3_3">Opis sadržaja</label><input class="form-control" id="e3_3" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e3_4">Ključne riječi</label><input class="form-control" id="e3_4" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e3_5">Predmet</label><input class="form-control" id="e3_5" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e3_6">Napomena o predmetu</label><textarea class="form-control" id="e3_6" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e3_7">Područje</label><input class="form-control" id="e3_7" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e3_8">Oblik ili žanr</label><input class="form-control" id="e3_8" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e3_12">Napomena o jeziku sadržaja</label><textarea class="form-control" id="e3_12" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e3_13">Jezik izvornika</label><input class="form-control" id="e3_13" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e3_14">Napomena o jeziku izvornika</label><textarea class="form-control" id="e3_14" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e3_15">Pismo sadržaja</label><input class="form-control" id="e3_15" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e3_16">Napomena o pismu sadržaja</label><textarea class="form-control" id="e3_16" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e3_17">Pismo izvornika</label><input class="form-control" id="e3_17" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e3_18">Napomena o pismu izvornika</label><textarea class="form-control" id="e3_18" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e3_19">Ilustracije</label><input class="form-control" id="e3_19" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e3_20">Zvučni sadržaj</label><input class="form-control" id="e3_20" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e3_21">Trajanje</label><input class="form-control" id="e3_21" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e3_22">Napomena o trajanju</label><textarea class="form-control" id="e3_22" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e3_23">Glazbeni format</label><input class="form-control" id="e3_23" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e3_24">Izvođački sastav</label><input class="form-control" id="e3_24" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e3_25">Mjerilo</label><input class="form-control" id="e3_25" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e3_26">Napomena o mjerilu</label><textarea class="form-control" id="e3_26" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e3_27">Kartografska projekcija</label><input class="form-control" id="e3_27" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e3_28">Geografska dužina i geografska širina</label><input class="form-control" id="e3_28" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e3_29">Napomena o geografskoj dužini i geografskoj širini</label><textarea class="form-control" id="e3_29" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e3_30">Rektascenzija i deklinacija</label><input class="form-control" id="e3_30" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e3_31">Ravnodnevica</label><input class="form-control" id="e3_31" type="text"/></div></div></div></div></div><div class="accordion-item" id="sec4"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-target="#collapse4" data-bs-toggle="collapse" type="button">4. Materijalni opis jedinice građe</button></h2><div class="accordion-collapse collapse" data-bs-parent="#kamAccordion" id="collapse4"><div class="accordion-body"><div class="row"><div class="col-md-4 mb-3"><label class="form-label" for="e4_1">Opseg</label><input class="form-control" id="e4_1" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e4_2">Napomena o opsegu</label><textarea class="form-control" id="e4_2" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_3">Materijalni nositelj</label><input class="form-control" id="e4_3" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e4_4">Napomena o materijalnom nositelju</label><textarea class="form-control" id="e4_4" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_5">Dimenzije</label><input class="form-control" id="e4_5" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e4_6">Napomena o dimenzijama</label><textarea class="form-control" id="e4_6" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_7">Masa</label><input class="form-control" id="e4_7" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_8">Materijal</label><input class="form-control" id="e4_8" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_9">Materijal podloge</label><input class="form-control" id="e4_9" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_10">Materijal nanosa</label><input class="form-control" id="e4_10" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_11">Tehnika</label><input class="form-control" id="e4_11" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e4_12">Napomena o materijalu i tehnici</label><textarea class="form-control" id="e4_12" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_13">Boja</label><input class="form-control" id="e4_13" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e4_14">Napomena o boji</label><textarea class="form-control" id="e4_14" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_15">Bibliografski format</label><input class="form-control" id="e4_15" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_16">Stranični postav</label><input class="form-control" id="e4_16" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_17">Generacija</label><input class="form-control" id="e4_17" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_18">Polaritet slike</label><input class="form-control" id="e4_18" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_19">Položaj sličica</label><input class="form-control" id="e4_19" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_20">Omjer smanjenja mikrooblika</label><input class="form-control" id="e4_20" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_21">Videoformat</label><input class="form-control" id="e4_21" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_22">Standard emitiranja</label><input class="form-control" id="e4_22" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_23">Standard projekcije</label><input class="form-control" id="e4_23" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_24">Format datoteke</label><input class="form-control" id="e4_24" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_25">Veličina datoteke</label><input class="form-control" id="e4_25" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_26">Razlučivost slike</label><input class="form-control" id="e4_26" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_27">Način snimanja</label><input class="form-control" id="e4_27" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_28">Broj zvučnih kanala</label><input class="form-control" id="e4_28" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_29">Sustav korekcije zvuka</label><input class="form-control" id="e4_29" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_30">Sustav smanjenja šuma</label><input class="form-control" id="e4_30" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e4_31">Brzina reprodukcije zvuka</label><input class="form-control" id="e4_31" type="text"/></div></div></div></div></div><div class="accordion-item" id="sec5"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-target="#collapse5" data-bs-toggle="collapse" type="button">5. Životni ciklus jedinice građe</button></h2><div class="accordion-collapse collapse" data-bs-parent="#kamAccordion" id="collapse5"><div class="accordion-body"><div class="row"><div class="col-md-4 mb-3"><label class="form-label" for="e5_1">Povijest djela</label><input class="form-control" id="e5_1" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e5_2">Plan sređivanja</label><input class="form-control" id="e5_2" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e5_4">Učestalost izlaženja ili osuvremenjivanja</label><input class="form-control" id="e5_4" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e5_5">Nagrade</label><input class="form-control" id="e5_5" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e5_6">Napomena o nagradama</label><textarea class="form-control" id="e5_6" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e5_7">Povijest primjerka</label><input class="form-control" id="e5_7" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e5_8">Dodani natpisi i oznake</label><input class="form-control" id="e5_8" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e5_9">Napomena o dodanim natpisima i oznakama</label><textarea class="form-control" id="e5_9" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e5_10">Način nabave</label><input class="form-control" id="e5_10" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e5_11">Napomena o nabavi</label><textarea class="form-control" id="e5_11" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e5_13">Stanje primjerka</label><input class="form-control" id="e5_13" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e5_14">Konzervacija i restauracija</label><input class="form-control" id="e5_14" type="text"/></div></div></div></div></div><div class="accordion-item" id="sec6"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-target="#collapse6" data-bs-toggle="collapse" type="button">6. Dostupnost i uporaba jedinice građe</button></h2><div class="accordion-collapse collapse" data-bs-parent="#kamAccordion" id="collapse6"><div class="accordion-body"><div class="row"><div class="col-md-4 mb-3"><label class="form-label" for="e6_1">Ciljana publika djela</label><input class="form-control" id="e6_1" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e6_2">Napomena o ciljanoj publici djela</label><textarea class="form-control" id="e6_2" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e6_3">Ciljana publika izraza</label><input class="form-control" id="e6_3" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e6_4">Napomena o ciljanoj publici izraza</label><textarea class="form-control" id="e6_4" rows="3"></textarea></div><div class="col-md-4 mb-3"><label class="form-label" for="e6_5">Uvjeti objavljivanja, umnožavanja ili prikazivanja</label><input class="form-control" id="e6_5" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e6_6">Tehnički uvjeti pristupa</label><input class="form-control" id="e6_6" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e6_7">Regionalni kôd</label><input class="form-control" id="e6_7" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e6_8">Online pristup</label><input class="form-control" id="e6_8" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e6_9">Dostupnost pojavnog oblika</label><input class="form-control" id="e6_9" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e6_10">Dostupnost primjerka</label><input class="form-control" id="e6_10" type="text"/></div></div></div></div></div><div class="accordion-item" id="sec10"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-target="#collapse10" data-bs-toggle="collapse" type="button">10. Odnosi i napomene o odnosima među jedinicama opisa</button></h2><div class="accordion-collapse collapse" data-bs-parent="#kamAccordion" id="collapse10"><div class="accordion-body"><div class="row"><div class="col-md-4 mb-3"><label class="form-label" for="e10_1">Odnos djela i djela</label><input class="form-control" id="e10_1" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e10_2">Odnos djela i izraza</label><input class="form-control" id="e10_2" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e10_3">Odnos izraza i izraza</label><input class="form-control" id="e10_3" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e10_4">Odnos izraza i pojavnog oblika</label><input class="form-control" id="e10_4" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e10_5">Odnos pojavnog oblika i pojavnog oblika</label><input class="form-control" id="e10_5" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e10_6">Odnos pojavnog oblika i primjerka</label><input class="form-control" id="e10_6" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e10_7">Odnos primjerka i primjerka</label><input class="form-control" id="e10_7" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e10_8">Odnos djela i agenta</label><input class="form-control" id="e10_8" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e10_9">Odnos djela i stvaratelja</label><input class="form-control" id="e10_9" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e10_10">Odnos izraza i agenta</label><input class="form-control" id="e10_10" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e10_11">Odnos pojavnog oblika i agenta</label><input class="form-control" id="e10_11" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e10_12">Odnos primjerka i agenta</label><input class="form-control" id="e10_12" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e10_13">Odnos djela i mjesta</label><input class="form-control" id="e10_13" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e10_14">Odnos izraza i mjesta</label><input class="form-control" id="e10_14" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e10_15">Odnos pojavnog oblika i mjesta</label><input class="form-control" id="e10_15" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e10_16">Odnos primjerka i mjesta</label><input class="form-control" id="e10_16" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e10_19">Odnos djela i vremenskog raspona</label><input class="form-control" id="e10_19" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e10_20">Odnos izraza i vremenskog raspona</label><input class="form-control" id="e10_20" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e10_21">Odnos pojavnog oblika i vremenskog raspona</label><input class="form-control" id="e10_21" type="text"/></div><div class="col-md-4 mb-3"><label class="form-label" for="e10_22">Odnos primjerka i vremenskog raspona</label><input class="form-control" id="e10_22" type="text"/></div><div class="col-md-12 mb-3"><label class="form-label" for="e10_26">Napomena o odnosu djela i drugih jedinica opisa</label><textarea class="form-control" id="e10_26" rows="3"></textarea></div><div class="col-md-12 mb-3"><label class="form-label" for="e10_27">Napomena o odnosu izraza i drugih jedinica opisa</label><textarea class="form-control" id="e10_27" rows="3"></textarea></div><div class="col-md-12 mb-3"><label class="form-label" for="e10_28">Napomena o odnosu pojavnog oblika i drugih jedinica opisa</label><textarea class="form-control" id="e10_28" rows="3"></textarea></div><div class="col-md-12 mb-3"><label class="form-label" for="e10_29">Napomena o odnosu primjerka i drugih jedinica opisa</label><textarea class="form-control" id="e10_29" rows="3"></textarea></div></div></div></div></div></div>
+<div class="mt-3 d-flex flex-wrap gap-2">
+<button class="btn btn-primary" id="genJsonBtn" type="button">Generiraj JSON-LD</button>
+<button class="btn btn-secondary" id="genTtlBtn" type="button">Generiraj Turtle</button>
+<button class="btn btn-secondary" id="genRdfBtn" type="button">Generiraj RDF/XML</button>
+<button class="btn btn-secondary" id="genXlsBtn" type="button">Generiraj XLSX</button>
 </div>
+<div class="mt-2">
+<label class="form-label" for="outputArea">Rezultat</label>
+<textarea class="form-control" id="outputArea" rows="14"></textarea>
+</div>
+</form></div>
+<details class="card" open="">
+<summary><strong>Rezultat</strong> (generirani izlaz)</summary>
+<pre aria-live="polite" class="output" id="output"></pre>
+<a download="podaci.xlsx" id="downloadLink" style="display:none;">Preuzmi XLSX</a>
+<div class="hint" id="error" style="color:#b91c1c"></div>
+</details>
+</div>
+<!-- Footer -->
+<div id="footer" style="background:#111;color:#fff;padding:12px 16px;font-size:12px">
+  © 2024 Nacionalna i sveučilišna knjižnica u Zagrebu. Sva prava pridržana.
+</div>
+<script>
+function displayLastModified() {
+  const lastModified = document.lastModified;
+  const lm = document.getElementById('last-modified');
+  if (lm) lm.innerHTML = `<p>Posljednja izmjena: ${lastModified}</p>`;
+}
+displayLastModified();
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="kam_map.js"></script>
-</body>
+function getCurieForProperty(propertyField, data) {
+  if (propertyField && propertyField[0] && propertyField[0]['@id']) {
+    const idValue = propertyField[0]['@id'];
+    const foundElement = Object.values(data).find(item => item['@id'] === idValue);
+    if (foundElement && foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID']) {
+      return foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'];
+    }
+  }
+  return '';
+}
+function createCurieLink(curieValue) {
+  if (curieValue) {
+    const link = `property.html?curie=${encodeURIComponent(curieValue)}`;
+    return `<a href="${link}" target="_blank">${curieValue}</a>`;
+  }
+  return '';
+}
+function displayPropertiesForClass(classId, data, className) {
+  const properties = Object.values(data).filter(item => {
+    const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
+    return domains && domains.some(domain => domain['@id'] === classId);
+  });
+  const content = document.getElementById('content');
+  const prev = document.getElementById('properties-panel');
+  if (prev) prev.remove();
+  const panel = document.createElement('div');
+  panel.id = 'properties-panel';
+  panel.innerHTML = `<h3>Svojstva za klasu: ${className}</h3>`;
+  if (properties.length === 0) {
+    panel.innerHTML += '<p>Nema svojstava za ovu klasu.</p>';
+  } else {
+    let table = `<table id="myTable" class="display">
+      <thead><tr><th>CURIE</th><th>Naziv svojstva</th><th>Podsvojstvo od</th><th>Obrnuto od</th><th>Doseg</th></tr></thead><tbody>`;
+    properties.forEach(property => {
+      const curieValue = property['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+        ? property['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'] : '';
+      const label = property['http://www.w3.org/2000/01/rdf-schema#label']
+        ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value'] : 'Unknown Label';
+      const subPropertyOf = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'], data);
+      const inverseOf = getCurieForProperty(property['http://www.w3.org/2002/07/owl#inverseOf'], data);
+      const range = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#range'], data);
+      table += `<tr>
+        <td>${createCurieLink(curieValue)}</td>
+        <td>${label}</td>
+        <td>${createCurieLink(subPropertyOf)}</td>
+        <td>${createCurieLink(inverseOf)}</td>
+        <td>${createCurieLink(range)}</td>
+      </tr>`;
+    });
+    table += '</tbody></table>';
+    panel.innerHTML += table;
+    $(document).ready(function(){ $('#myTable').DataTable(); });
+  }
+  content.prepend(panel);
+}
+function populateKlaseDropdown(data) {
+  const dd = document.getElementById('klase-dropdown');
+  dd.innerHTML = '';
+  Object.keys(data).forEach(key => {
+    const el = data[key];
+    const labels = el['http://www.w3.org/2000/01/rdf-schema#label'];
+    const label = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : el['@id'].split('/').pop();
+    if (el['@type'] && el['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+      const item = document.createElement('div');
+      item.textContent = label;
+      item.onclick = () => displayPropertiesForClass(el['@id'], data, label);
+      dd.appendChild(item);
+    }
+  });
+}
+function populateSvojstvaDropdown(data) {
+  const dd = document.getElementById('svojstva-dropdown');
+  dd.innerHTML = '';
+  Object.keys(data).forEach(key => {
+    const el = data[key];
+    const labels = el['http://www.w3.org/2000/01/rdf-schema#label'];
+    const label = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : el['@id'].split('/').pop();
+    if (el['@type'] && el['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+      const item = document.createElement('div');
+      item.textContent = label;
+      item.onclick = () => displayPropertiesForClass(el['@id'], data, label);
+      dd.appendChild(item);
+    }
+  });
+}
+function populatePrefiksi(data) {
+  const prefiksi = document.getElementById('prefiksi');
+  prefiksi.onclick = () => {
+    const unique = new Set();
+    const content = document.getElementById('content');
+    const prev = document.getElementById('prefixes-panel');
+    if (prev) prev.remove();
+    const panel = document.createElement('div');
+    panel.id = 'prefixes-panel';
+    panel.innerHTML = '<h3>Prefiksi</h3>';
+    let table = `<table class="display" id="downloadTable"><thead><tr><th>Prefix</th><th>Naziv</th><th>Imenski prostor</th></tr></thead><tbody>`;
+    Object.keys(data).forEach(key => {
+      const el = data[key];
+      if (el['@type'] && el['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+        const id = el['@id'] || '';
+        const namespace = id.substring(0, id.lastIndexOf('/') + 1);
+        const curie = el['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+          ? el['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'] : null;
+        if (curie) {
+          const prefix = curie.split(':')[0];
+          if (!unique.has(prefix)) {
+            unique.add(prefix);
+            const className = el['http://www.w3.org/2000/01/rdf-schema#label']?.[0]?.['@value'] || '';
+            table += `<tr><td>${prefix}</td><td>${className}</td><td>${namespace}</td></tr>`;
+          }
+        }
+      }
+    });
+    table += '</tbody></table>';
+    panel.innerHTML += table;
+    content.prepend(panel);
+    $(document).ready(function(){
+      $('#downloadTable').DataTable({ paging:false, searching:false, info:false });
+    });
+  };
+}
+fetch('KAMOntologija_v12.jsonld')
+  .then(r => { if(!r.ok) throw new Error('Ne mogu dohvatiti KAMOntologija_v12.jsonld'); return r.json(); })
+  .then(data => { populateKlaseDropdown(data); populateSvojstvaDropdown(data); populatePrefiksi(data); })
+  .catch(e => console.error('Pogreška u dohvaćanju JSON-LD:', e));
+</script>
+<script>
+/* ====== GENERATOR KAM JSON-LD + KONVERZIJE (Turtle, RDF/XML, XLSX) ====== */
+(function(){
+  const out = document.getElementById('output');
+  const err = document.getElementById('error');
+  const downloadLink = document.getElementById('downloadLink');
+  const v = id => (document.getElementById(id)?.value || '').trim();
+
+  function hash32(str){
+    let h = 5381; for(let i=0;i<str.length;i++){ h = ((h<<5)+h) + str.charCodeAt(i); h |= 0; }
+    return (h>>>0).toString(16).padStart(8,'0');
+  }
+  function idFor(nsType, content){
+    return 'http://www.registar.kam.hr/id/' + hash32(nsType+'|'+(content||''));
+  }
+  const C = {
+    PojavniOblik:'http://www.registar.kam.hr/Element/c/C10004',
+    Nomen:'http://www.registar.kam.hr/Element/c/C10013',
+    Mjesto:'http://www.registar.kam.hr/Element/c/C10011',
+    Vrijeme:'http://www.registar.kam.hr/Element/c/C10012'
+  };
+  const P = {
+    glavniNaslov:'http://www.registar.kam.hr/Elements/po/P40004',
+    dodatakNaslovu:'http://www.registar.kam.hr/Elements/po/P40006',
+    odgovornostNaslov:'http://www.registar.kam.hr/Elements/po/P40009',
+    podatakOIzd:'http://www.registar.kam.hr/Elements/po/P40012',
+    imeNakladnika:'http://www.registar.kam.hr/Elements/po/P40023',
+    opseg:'http://www.registar.kam.hr/Elements/po/P40046',
+    dimenzije:'http://www.registar.kam.hr/Elements/po/P40050',
+    nakladnickaCjelina:'http://www.registar.kam.hr/Elements/po/P40034',
+    identifikatorPojOblika:'http://www.registar.kam.hr/Elements/po/P40319',
+    mjestoIzdavanja:'http://www.registar.kam.hr/Elements/po/P40301',
+    vrijemeIzdavanja:'http://www.registar.kam.hr/Elements/po/P40306',
+    nomenskiNiz:'http://www.registar.kam.hr/Elements/n/P13002',
+    usvojenaPristupnicaMjesto:'http://www.registar.kam.hr/Elements/m/P11044',
+    usvojenaPristupnicaVrijeme:'http://www.registar.kam.hr/Elements/vr/P12038'
+  };
+
+  function makeNomen(graph, text, lang){
+    if(!text) return null;
+    const id = idFor(C.Nomen, (lang||'')+'|'+text);
+    graph.push({ '@id': id, '@type': C.Nomen, [P.nomenskiNiz]: [{ '@value': text, ...(lang?{'@language':lang}:{}) }] });
+    return id;
+  }
+  function makeMjesto(graph, naziv){
+    if(!naziv) return null;
+    const id = idFor(C.Mjesto, naziv);
+    const nId = makeNomen(graph, naziv, 'hr');
+    graph.push({ '@id': id, '@type': C.Mjesto, [P.usvojenaPristupnicaMjesto]: nId ? [{ '@id': nId }] : [] });
+    return id;
+  }
+  function makeVrijeme(graph, raspon){
+    if(!raspon) return null;
+    const id = idFor(C.Vrijeme, raspon);
+    const nId = makeNomen(graph, raspon, '');
+    graph.push({ '@id': id, '@type': C.Vrijeme, [P.usvojenaPristupnicaVrijeme]: nId ? [{ '@id': nId }] : [] });
+    return id;
+  }
+
+  const MAP_FIELDS = [
+    {id:'e1_4',  prop:P.glavniNaslov,           lang:'hr'},
+    {id:'e1_6',  prop:P.dodatakNaslovu,         lang:'hr'},
+    {id:'e1_9',  prop:P.odgovornostNaslov,      lang:'hr'},
+    {id:'e1_12', prop:P.podatakOIzd,            lang:'hr'},
+    {id:'e1_23', prop:P.imeNakladnika,          lang:'hr'},
+    {id:'e1_34', prop:P.nakladnickaCjelina,     lang:'hr'},
+    {id:'e2_22', prop:P.identifikatorPojOblika, lang:''},
+    {id:'e4_1',  prop:P.opseg,                  lang:''},
+    {id:'e4_5',  prop:P.dimenzije,              lang:''}
+  ];
+
+  function toKAMJsonLD(){
+    const graph = [];
+    const poKey = [v('e1_4'), v('e1_23'), v('e1_25'), v('e2_22')].filter(Boolean).join('|') || 'tmp';
+    const poId = idFor(C.PojavniOblik, poKey);
+    const po = { '@id': poId, '@type': C.PojavniOblik };
+
+    MAP_FIELDS.forEach(({id, prop, lang})=>{
+      const val = v(id); if(!val) return;
+      const nId = makeNomen(graph, val, lang);
+      po[prop] = (po[prop]||[]).concat([{ '@id': nId }]);
+    });
+
+    const mjestoId  = makeMjesto(graph,  v('e1_21')); if(mjestoId)  po[P.mjestoIzdavanja]  = [{ '@id': mjestoId  }];
+    const vrijemeId = makeVrijeme(graph, v('e1_25')); if(vrijemeId) po[P.vrijemeIzdavanja] = [{ '@id': vrijemeId }];
+
+    graph.push(po);
+    return { '@graph': graph };
+  }
+
+  /* ---------- KONVERZIJE ---------- */
+
+  // JSON-LD -> Turtle (N3.js)
+  async function jsonldToTurtle(jsonld) {
+    const writer = new N3.Writer({ format: "Turtle" });
+    jsonld["@graph"].forEach(node => {
+      const subj = N3.DataFactory.namedNode(node["@id"]);
+      const type = node["@type"];
+      if (type && typeof type === 'string' && type.startsWith('http')) {
+        writer.addQuad(subj, N3.DataFactory.namedNode('http://www.w3.org/1999/02/22-rdf-syntax-ns#type'), N3.DataFactory.namedNode(type));
+      }
+      for (let key in node) {
+        if (!key.startsWith("http")) continue;
+        const arr = node[key] || [];
+        arr.forEach(v => {
+          if (v["@value"] !== undefined) {
+            const lit = v["@language"] ? N3.DataFactory.literal(v["@value"], v["@language"]) : N3.DataFactory.literal(v["@value"]);
+            writer.addQuad(subj, N3.DataFactory.namedNode(key), lit);
+          } else if (v["@id"]) {
+            writer.addQuad(subj, N3.DataFactory.namedNode(key), N3.DataFactory.namedNode(v["@id"]));
+          }
+        });
+      }
+    });
+    return new Promise((resolve, reject)=> writer.end((e, result)=> e?reject(e):resolve(result)));
+  }
+
+  // JSON-LD -> (pojednostavljeni) RDF/XML
+  function jsonldToRdfXml(jsonld) {
+    const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    let xml = `<?xml version="1.0"?>\n<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">\n`;
+    jsonld["@graph"].forEach(node=>{
+      xml += `  <rdf:Description rdf:about="${esc(node["@id"])}">\n`;
+      for (let key in node) {
+        if (!key.startsWith("http")) continue;
+        const arr = node[key] || [];
+        arr.forEach(v=>{
+          const tag = `prop`; // generički tag; za precizno mapiranje koristite QName/prefikse
+          if (v["@value"] !== undefined) {
+            xml += `    <${tag}>${esc(v["@value"])}</${tag}>\n`;
+          } else if (v["@id"]) {
+            xml += `    <${tag} rdf:resource="${esc(v["@id"])}"/>\n`;
+          }
+        });
+      }
+      xml += `  </rdf:Description>\n`;
+    });
+    xml += `</rdf:RDF>`;
+    return xml;
+  }
+
+  // JSON-LD -> XLSX (SheetJS)
+  function jsonldToXlsx(jsonld) {
+    const rows = [["ID", "Tip", "Svojstvo (IRI)", "Vrijednost"]];
+    jsonld["@graph"].forEach(node=>{
+      const id = node["@id"] || "";
+      const type = node["@type"] || "";
+      for (let key in node) {
+        if (!key.startsWith("http")) continue;
+        const arr = node[key] || [];
+        arr.forEach(v=>{
+          rows.push([id, type, key, v["@value"] || v["@id"] || ""]);
+        });
+      }
+    });
+    const ws = XLSX.utils.aoa_to_sheet(rows);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Podaci");
+    const wbout = XLSX.write(wb, { bookType: "xlsx", type: "array" });
+    const blob = new Blob([wbout], { type: "application/octet-stream" });
+    const url = URL.createObjectURL(blob);
+    downloadLink.href = url;
+    downloadLink.style.display = "inline";
+    downloadLink.textContent = "Preuzmi XLSX";
+    return "XLSX generiran. Klikni „Preuzmi XLSX”.";
+  }
+
+  /* ---------- GUMBI ---------- */
+  document.getElementById('genBtn').addEventListener('click', ()=>{
+    err.textContent = '';
+    downloadLink.style.display = "none";
+    try{
+      const data = toKAMJsonLD();
+      out.textContent = JSON.stringify(data, null, 2);
+      if (history && history.replaceState) {
+        history.replaceState(null, '', location.pathname + location.hash);
+      }
+    }catch(ex){
+      err.textContent = 'Greška: ' + ex.message;
+      console.error(ex);
+    }
+  });
+
+  document.getElementById('testBtn').addEventListener('click', ()=>{
+    document.getElementById('e1_4').value  = 'Molitva žabe';
+    document.getElementById('e1_23').value = 'KS';
+    document.getElementById('e1_25').value = '2000–2001';
+    document.getElementById('e2_22').value = 'ISBN 953-123-456-7';
+    const data = toKAMJsonLD();
+    out.textContent = JSON.stringify(data, null, 2);
+    downloadLink.style.display = "none";
+  });
+
+  document.getElementById('genTurtleBtn').addEventListener('click', async ()=>{
+    err.textContent = '';
+    downloadLink.style.display = "none";
+    try{
+      const data = toKAMJsonLD();
+      const ttl = await jsonldToTurtle(data);
+      out.textContent = ttl;
+    }catch(ex){
+      err.textContent = 'Greška (Turtle): ' + ex.message;
+      console.error(ex);
+    }
+  });
+
+  document.getElementById('genRdfBtn').addEventListener('click', ()=>{
+    err.textContent = '';
+    downloadLink.style.display = "none";
+    try{
+      const data = toKAMJsonLD();
+      const rdf = jsonldToRdfXml(data);
+      out.textContent = rdf;
+    }catch(ex){
+      err.textContent = 'Greška (RDF/XML): ' + ex.message;
+      console.error(ex);
+    }
+  });
+
+  document.getElementById('genXlsBtn').addEventListener('click', ()=>{
+    err.textContent = '';
+    try{
+      const data = toKAMJsonLD();
+      out.textContent = jsonldToXlsx(data);
+    }catch(ex){
+      err.textContent = 'Greška (XLSX): ' + ex.message;
+      console.error(ex);
+    }
+  });
+
+})();
+</script>
+<script>
+/* HELP prozorčići */
+function openHelp(id) {
+  document.getElementById(id).style.display = "block";
+}
+function closeHelp(id) {
+  document.getElementById(id).style.display = "none";
+}
+window.onclick = function(event) {
+  document.querySelectorAll('.help-modal').forEach(modal => {
+    if (event.target === modal) modal.style.display = "none";
+  });
+}
+</script>
+<!-- HELP PROZORI (ostali) -->
+<div class="help-modal" id="help2"><div class="help-content"><span class="help-close" onclick="closeHelp('help2')">×</span><h4>Uputa: 2. Identifikacija</h4><p>Određuje se razina opisa (djelo, izraz, pojavni oblik), medij, oblik sadržaja, identifikatori (ISBN, VIAF…).</p></div></div>
+<div class="help-modal" id="help3"><div class="help-content"><span class="help-close" onclick="closeHelp('help3')">×</span><h4>Uputa: 3. Tematika i sadržaj</h4><p>Navodi se predmetno područje (UDK), oblik/žanr i jezici.</p></div></div>
+<div class="help-modal" id="help4"><div class="help-content"><span class="help-close" onclick="closeHelp('help4')">×</span><h4>Uputa: 4. Materijalni opis</h4><p>Opisuje se fizički opseg i dimenzije.</p></div></div>
+<div class="help-modal" id="help5"><div class="help-content"><span class="help-close" onclick="closeHelp('help5')">×</span><h4>Uputa: 5. Životni ciklus</h4><p>Bilježi se način nabave (kupnja, obvezni primjerak, dar…).</p></div></div>
+<div class="help-modal" id="help6"><div class="help-content"><span class="help-close" onclick="closeHelp('help6')">×</span><h4>Uputa: 6. Dostupnost i uporaba</h4><p>Definiraju se uvjeti dostupnosti primjerka.</p></div></div>
+<div class="help-modal" id="help10"><div class="help-content"><span class="help-close" onclick="closeHelp('help10')">×</span><h4>Uputa: 10. Odnosi</h4><p>Unose se veze između djela, izraza, pojavnih oblika i stvaratelja.</p></div></div>
+<script src="kam_map.js"></script></body>
 </html>
