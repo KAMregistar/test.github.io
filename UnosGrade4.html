@@ -81,7 +81,6 @@
 </head>
 <body>
 
-<!-- gornji meni (nepromijenjen) -->
 <div id="menu-bar">
   <img alt="KAM Logo" class="logo" src="kam.png"/>
   <h1><a href="index.html" style="text-decoration:none; color:inherit;">Registar</a>          </h1>
@@ -111,7 +110,7 @@
           <input id="e1_1" />
         </div>
 
-        <!-- ✳︎✳︎ NOVO: wrapper + gumb + template za višestruke napomene ✳︎✳︎ -->
+        <!-- višestruke napomene -->
         <div class="cols-12" id="e1_2_wrapper">
           <label for="e1_2">1.2 Napomena o stvarnom prikazu</label>
           <textarea id="e1_2" name="e1_2[]"></textarea>
@@ -129,7 +128,7 @@
             </div>
           </div>
         </template>
-        <!-- ✳︎✳︎ KRAJ NOVO ✳︎✳︎ -->
+        <!-- visestruke napomene kraj -->
 
         <div class="cols-4">
           <label for="e1_3">1.3 Podatak o stvarnom naslovu</label>
@@ -282,14 +281,88 @@
       </div>
     </section>
 
-    <!-- OSTALE SEKCIJE (2,3,4,5,6,10) — ostavljene identične kao do sada -->
-    <!-- Tvoj dosadašnji HTML za sekcije 2,3,4,5,6 i 10 ovdje se NE mijenja.
-         Ako želiš, samo zalijepi svoje postojeće blokove bez promjena. -->
-
-    <section class="card">
-      <h3>… ostatak tvojih sekcija (2–10) …</h3>
-      <!-- Zalijepi svoje dosadašnje sekcije ovdje -->
-    </section>
+<!-- HELP modal za sekciju 1 -->
+<div class="help-modal" id="help1">
+<div class="help-content">
+<span class="help-close" onclick="closeHelp('help1')">×</span>
+<h4>Uputa: 1. Stvarni prikaz</h4>
+<p>
+          Ovdje se unosi <b>glavni stvarni naslov</b> (npr. naslov djela ili publikacije)
+          te eventualni <b>dodatak naslovu</b> (npr. podnaslov, datumi).
+          <br/><br/>
+<b>Primjeri:</b><br/>
+          • Glavni naslov: <i>Molitva žabe</i><br/>
+          • Dodatak: <i>pripovijetke iz cijeloga svijeta</i>
+</p>
+</div>
+</div>
+<!-- 2. IDENTIFIKACIJA -->
+<section class="card">
+<h3>
+        2. Identifikacija jedinice građe
+        <span class="help-icon" onclick="openHelp('help2')">ℹ</span>
+<button class="small-btn" type="button" onclick="window.open('https://pravilnik.kam.hr/index.php?action=chapter&id=9','_blank')">
+KAM Pravilnik - Identifikacija jedinice građe
+</button>
+</a>
+</h3>
+<div class="row"><div class="cols-3"><label for="e2_1">2.1 Razina opisa djela</label><input id="e2_1"/></div><div class="cols-3"><label for="e2_2">2.2 Razina opisa pojavnog oblika</label><input id="e2_2"/></div><div class="cols-3"><label for="e2_4">2.4 Medij</label><input id="e2_4"/></div><div class="cols-3"><label for="e2_5">2.5 Oblik sadržaja</label><input id="e2_5"/></div><div class="cols-3"><label for="e2_6">2.6 Identifikator djela</label><input id="e2_6"/></div><div class="cols-3"><label for="e2_7">2.7 Usvojena pristupnica za djelo</label><input id="e2_7"/></div><div class="cols-3"><label for="e2_8">2.8 Usvojeni naslov djela</label><input id="e2_8"/></div><div class="cols-3"><label for="e2_9">2.9 Vrsta usvojenog naslova djela</label><input id="e2_9"/></div><div class="cols-3"><label for="e2_10">2.10 Dodatno obilježje djela</label><input id="e2_10"/></div><div class="cols-3"><label for="e2_11">2.11 Ključni naslov</label><input id="e2_11"/></div><div class="cols-3"><label for="e2_12">2.12 Varijantna pristupnica za djelo</label><input id="e2_12"/></div><div class="cols-3"><label for="e2_13">2.13 Varijantni naslov djela</label><input id="e2_13"/></div><div class="cols-6"><label for="e2_14">2.14 Vrsta varijantnog naslova djela</label><input id="e2_14"/></div><div class="cols-6"><label for="e2_15">2.15 Brojčane i kronološke oznake serijske građe</label><input id="e2_15"/></div><div class="cols-12"><label for="e2_16">2.16 Napomena o identifikaciji djela</label><textarea id="e2_16"></textarea></div><div class="cols-3"><label for="e2_17">2.17 Identifikator izraza</label><input id="e2_17"/></div><div class="cols-3"><label for="e2_18">2.18 Usvojena pristupnica za izraz</label><input id="e2_18"/></div><div class="cols-3"><label for="e2_19">2.19 Dodatno obilježje izraza</label><input id="e2_19"/></div><div class="cols-3"><label for="e2_20">2.20 Varijantna pristupnica za izraz</label><input id="e2_20"/></div><div class="cols-12"><label for="e2_21">2.21 Napomena o identifikaciji izraza</label><textarea id="e2_21"></textarea></div><div class="cols-4"><label for="e2_22">2.22 Identifikator pojavnog oblika</label><input id="e2_22"/></div><div class="cols-4"><label for="e2_23">2.23 Usvojena pristupnica za pojavni oblik</label><input id="e2_23"/></div><div class="cols-4"><label for="e2_24">2.24 Dodatno obilježje pojavnog oblika</label><input id="e2_24"/></div><div class="cols-4"><label for="e2_25">2.25 Skraćeni naslov</label><input id="e2_25"/></div><div class="cols-4"><label for="e2_26">2.26 Varijantna pristupnica za pojavni oblik</label><input id="e2_26"/></div><div class="cols-4"><label for="e2_27">2.27 Varijantni naslov pojavnog oblika</label><input id="e2_27"/></div><div class="cols-12"><label for="e2_28">2.28 Napomena o identifikaciji pojavnog oblika</label><textarea id="e2_28"></textarea></div><div class="cols-6"><label for="e2_29">2.29 Identifikator primjerka</label><input id="e2_29"/></div><div class="cols-6"><label for="e2_30">2.30 Usvojena pristupnica za primjerak</label><input id="e2_30"/></div><div class="cols-12"><label for="e2_31">2.31 Napomena o identifikaciji primjerka</label><textarea id="e2_31"></textarea></div><div class="cols-12"><label for="e2_32">2.32 Preporučeni način citiranja</label><input id="e2_32"/></div></div>
+</section>
+<!-- 3. TEMATIKA I SADRŽAJ -->
+<section class="card">
+<h3>
+        3. Tematika i sadržaj
+        <span class="help-icon" onclick="openHelp('help3')">ℹ</span>
+		<button class="small-btn" type="button" onclick="window.open('https://pravilnik.kam.hr/index.php?action=chapter&id=11','_blank')">
+KAM Pravilnik - Tematika i sadržaj jedinice građe
+</button>
+</h3>
+<div class="row"><div class="cols-12"><label for="e3_1">3.1 Izvorni natpisi i oznake</label><input id="e3_1"/></div><div class="cols-12"><label for="e3_2">3.2 Napomena o izvornim natpisima i oznakama</label><textarea id="e3_2"></textarea></div><div class="cols-4"><label for="e3_3">3.3 Opis sadržaja</label><input id="e3_3"/></div><div class="cols-4"><label for="e3_4">3.4 Ključne riječi</label><input id="e3_4"/></div><div class="cols-4"><label for="e3_5">3.5 Predmet</label><input id="e3_5"/></div><div class="cols-12"><label for="e3_6">3.6 Napomena o predmetu</label><textarea id="e3_6"></textarea></div><div class="cols-6"><label for="e3_7">3.7 Područje</label><input id="e3_7"/></div><div class="cols-6"><label for="e3_8">3.8 Oblik ili žanr</label><input id="e3_8"/></div><div class="cols-12"><label for="e3_12">3.12 Napomena o jeziku sadržaja</label><textarea id="e3_12"></textarea></div><div class="cols-12"><label for="e3_13">3.13 Jezik izvornika</label><input id="e3_13"/></div><div class="cols-12"><label for="e3_14">3.14 Napomena o jeziku izvornika</label><textarea id="e3_14"></textarea></div><div class="cols-12"><label for="e3_15">3.15 Pismo sadržaja</label><input id="e3_15"/></div><div class="cols-12"><label for="e3_16">3.16 Napomena o pismu sadržaja</label><textarea id="e3_16"></textarea></div><div class="cols-12"><label for="e3_17">3.17 Pismo izvornika</label><input id="e3_17"/></div><div class="cols-12"><label for="e3_18">3.18 Napomena o pismu izvornika</label><textarea id="e3_18"></textarea></div><div class="cols-4"><label for="e3_19">3.19 Ilustracije</label><input id="e3_19"/></div><div class="cols-4"><label for="e3_20">3.20 Zvučni sadržaj</label><input id="e3_20"/></div><div class="cols-4"><label for="e3_21">3.21 Trajanje</label><input id="e3_21"/></div><div class="cols-12"><label for="e3_22">3.22 Napomena o trajanju</label><textarea id="e3_22"></textarea></div><div class="cols-4"><label for="e3_23">3.23 Glazbeni format</label><input id="e3_23"/></div><div class="cols-4"><label for="e3_24">3.24 Izvođački sastav</label><input id="e3_24"/></div><div class="cols-4"><label for="e3_25">3.25 Mjerilo</label><input id="e3_25"/></div><div class="cols-12"><label for="e3_26">3.26 Napomena o mjerilu</label><textarea id="e3_26"></textarea></div><div class="cols-6"><label for="e3_27">3.27 Kartografska projekcija</label><input id="e3_27"/></div><div class="cols-6"><label for="e3_28">3.28 Geografska dužina i geografska širina</label><input id="e3_28"/></div><div class="cols-12"><label for="e3_29">3.29 Napomena o geografskoj dužini i geografskoj širini</label><textarea id="e3_29"></textarea></div><div class="cols-6"><label for="e3_30">3.30 Rektascenzija i deklinacija</label><input id="e3_30"/></div><div class="cols-6"><label for="e3_31">3.31 Ravnodnevica</label><input id="e3_31"/></div></div>
+</section>
+<!-- 4. MATERIJALNI OPIS -->
+<section class="card">
+<h3>
+        4. Materijalni opis
+        <span class="help-icon" onclick="openHelp('help4')">ℹ</span>
+		<button class="small-btn" type="button" onclick="window.open('https://pravilnik.kam.hr/index.php?action=chapter&id=10','_blank')">
+KAM Pravilnik - Materijalni opis jedinice građe
+</button>
+</h3>
+<div class="row"><div class="cols-12"><label for="e4_1">4.1 Opseg</label><input id="e4_1"/></div><div class="cols-12"><label for="e4_2">4.2 Napomena o opsegu</label><textarea id="e4_2"></textarea></div><div class="cols-12"><label for="e4_3">4.3 Materijalni nositelj</label><input id="e4_3"/></div><div class="cols-12"><label for="e4_4">4.4 Napomena o materijalnom nositelju</label><textarea id="e4_4"></textarea></div><div class="cols-12"><label for="e4_5">4.5 Dimenzije</label><input id="e4_5"/></div><div class="cols-12"><label for="e4_6">4.6 Napomena o dimenzijama</label><textarea id="e4_6"></textarea></div><div class="cols-4"><label for="e4_7">4.7 Masa</label><input id="e4_7"/></div><div class="cols-4"><label for="e4_8">4.8 Materijal</label><input id="e4_8"/></div><div class="cols-4"><label for="e4_9">4.9 Materijal podloge</label><input id="e4_9"/></div><div class="cols-6"><label for="e4_10">4.10 Materijal nanosa</label><input id="e4_10"/></div><div class="cols-6"><label for="e4_11">4.11 Tehnika</label><input id="e4_11"/></div><div class="cols-12"><label for="e4_12">4.12 Napomena o materijalu i tehnici</label><textarea id="e4_12"></textarea></div><div class="cols-12"><label for="e4_13">4.13 Boja</label><input id="e4_13"/></div><div class="cols-12"><label for="e4_14">4.14 Napomena o boji</label><textarea id="e4_14"></textarea></div><div class="cols-3"><label for="e4_15">4.15 Bibliografski format</label><input id="e4_15"/></div><div class="cols-3"><label for="e4_16">4.16 Stranični postav</label><input id="e4_16"/></div><div class="cols-3"><label for="e4_17">4.17 Generacija</label><input id="e4_17"/></div><div class="cols-3"><label for="e4_18">4.18 Polaritet slike</label><input id="e4_18"/></div><div class="cols-3"><label for="e4_19">4.19 Položaj sličica</label><input id="e4_19"/></div><div class="cols-3"><label for="e4_20">4.20 Omjer smanjenja mikrooblika</label><input id="e4_20"/></div><div class="cols-3"><label for="e4_21">4.21 Videoformat</label><input id="e4_21"/></div><div class="cols-3"><label for="e4_22">4.22 Standard emitiranja</label><input id="e4_22"/></div><div class="cols-3"><label for="e4_23">4.23 Standard projekcije</label><input id="e4_23"/></div><div class="cols-3"><label for="e4_24">4.24 Format datoteke</label><input id="e4_24"/></div><div class="cols-3"><label for="e4_25">4.25 Veličina datoteke</label><input id="e4_25"/></div><div class="cols-3"><label for="e4_26">4.26 Razlučivost slike</label><input id="e4_26"/></div><div class="cols-3"><label for="e4_27">4.27 Način snimanja</label><input id="e4_27"/></div><div class="cols-3"><label for="e4_28">4.28 Broj zvučnih kanala</label><input id="e4_28"/></div><div class="cols-3"><label for="e4_29">4.29 Sustav korekcije zvuka</label><input id="e4_29"/></div><div class="cols-3"><label for="e4_30">4.30 Sustav smanjenja šuma</label><input id="e4_30"/></div><div class="cols-3"><label for="e4_31">4.31 Brzina reprodukcije zvuka</label><input id="e4_31"/></div></div>
+</section>
+<!-- 5. ŽIVOTNI CIKLUS -->
+<section class="card">
+<h3>
+        5. Životni ciklus jedinice građe
+        <span class="help-icon" onclick="openHelp('help5')">ℹ</span>
+		<button class="small-btn" type="button" onclick="window.open('https://pravilnik.kam.hr/index.php?action=chapter&id=14','_blank')">
+KAM Pravilnik - Životni ciklus jedinice građe
+</button>
+</h3>
+<div class="row"><div class="cols-6"><label for="e5_1">5.1 Povijest djela</label><input id="e5_1"/></div><div class="cols-6"><label for="e5_2">5.2 Plan sređivanja</label><input id="e5_2"/></div><div class="cols-6"><label for="e5_4">5.4 Učestalost izlaženja ili osuvremenjivanja</label><input id="e5_4"/></div><div class="cols-6"><label for="e5_5">5.5 Nagrade</label><input id="e5_5"/></div><div class="cols-12"><label for="e5_6">5.6 Napomena o nagradama</label><textarea id="e5_6"></textarea></div><div class="cols-6"><label for="e5_7">5.7 Povijest primjerka</label><input id="e5_7"/></div><div class="cols-6"><label for="e5_8">5.8 Dodani natpisi i oznake</label><input id="e5_8"/></div><div class="cols-12"><label for="e5_9">5.9 Napomena o dodanim natpisima i oznakama</label><textarea id="e5_9"></textarea></div><div class="cols-12"><label for="e5_10">5.10 Način nabave</label><input id="e5_10"/></div><div class="cols-12"><label for="e5_11">5.11 Napomena o nabavi</label><textarea id="e5_11"></textarea></div><div class="cols-6"><label for="e5_13">5.13 Stanje primjerka</label><input id="e5_13"/></div><div class="cols-6"><label for="e5_14">5.14 Konzervacija i restauracija</label><input id="e5_14"/></div></div>
+</section>
+<!-- 6. DOSTUPNOST I UPORABA -->
+<section class="card">
+<h3>
+        6. Dostupnost i uporaba
+        <span class="help-icon" onclick="openHelp('help6')">ℹ</span>
+		<button class="small-btn" type="button" onclick="window.open('https://pravilnik.kam.hr/index.php?action=chapter&id=15','_blank')">
+KAM Pravilnik - Dostupnost i uporaba jedinice građe
+</button>
+</h3>
+<div class="row"><div class="cols-12"><label for="e6_1">6.1 Ciljana publika djela</label><input id="e6_1"/></div><div class="cols-12"><label for="e6_2">6.2 Napomena o ciljanoj publici djela</label><textarea id="e6_2"></textarea></div><div class="cols-12"><label for="e6_3">6.3 Ciljana publika izraza</label><input id="e6_3"/></div><div class="cols-12"><label for="e6_4">6.4 Napomena o ciljanoj publici izraza</label><textarea id="e6_4"></textarea></div><div class="cols-4"><label for="e6_5">6.5 Uvjeti objavljivanja, umnožavanja ili prikazivanja</label><input id="e6_5"/></div><div class="cols-4"><label for="e6_6">6.6 Tehnički uvjeti pristupa</label><input id="e6_6"/></div><div class="cols-4"><label for="e6_7">6.7 Regionalni kôd</label><input id="e6_7"/></div><div class="cols-4"><label for="e6_8">6.8 Online pristup</label><input id="e6_8"/></div><div class="cols-4"><label for="e6_9">6.9 Dostupnost pojavnog oblika</label><input id="e6_9"/></div><div class="cols-4"><label for="e6_10">6.10 Dostupnost primjerka</label><input id="e6_10"/></div></div>
+</section>
+<!-- 10. ODNOSI -->
+<section class="card">
+<h3>
+        10. Odnosi i napomene o odnosima
+        <span class="help-icon" onclick="openHelp('help10')">ℹ</span>
+		<button class="small-btn" type="button" onclick="window.open('https://pravilnik.kam.hr/index.php?action=chapter&id=21','_blank')">
+KAM Pravilnik -  Odnosi i napomene o odnosima među jedinicama opisa
+</button>
+</h3>
+<div class="row"><div class="cols-4"><label for="e10_1">10.1 Odnos djela i djela</label><input id="e10_1"/></div><div class="cols-4"><label for="e10_2">10.2 Odnos djela i izraza</label><input id="e10_2"/></div><div class="cols-4"><label for="e10_3">10.3 Odnos izraza i izraza</label><input id="e10_3"/></div><div class="cols-4"><label for="e10_4">10.4 Odnos izraza i pojavnog oblika</label><input id="e10_4"/></div><div class="cols-4"><label for="e10_5">10.5 Odnos pojavnog oblika i pojavnog oblika</label><input id="e10_5"/></div><div class="cols-4"><label for="e10_6">10.6 Odnos pojavnog oblika i primjerka</label><input id="e10_6"/></div><div class="cols-4"><label for="e10_7">10.7 Odnos primjerka i primjerka</label><input id="e10_7"/></div><div class="cols-4"><label for="e10_8">10.8 Odnos djela i agenta</label><input id="e10_8"/></div><div class="cols-4"><label for="e10_9">10.9 Odnos djela i stvaratelja</label><input id="e10_9"/></div><div class="cols-4"><label for="e10_10">10.10 Odnos izraza i agenta</label><input id="e10_10"/></div><div class="cols-4"><label for="e10_11">10.11 Odnos pojavnog oblika i agenta</label><input id="e10_11"/></div><div class="cols-4"><label for="e10_12">10.12 Odnos primjerka i agenta</label><input id="e10_12"/></div><div class="cols-4"><label for="e10_13">10.13 Odnos djela i mjesta</label><input id="e10_13"/></div><div class="cols-4"><label for="e10_14">10.14 Odnos izraza i mjesta</label><input id="e10_14"/></div><div class="cols-4"><label for="e10_15">10.15 Odnos pojavnog oblika i mjesta</label><input id="e10_15"/></div><div class="cols-4"><label for="e10_16">10.16 Odnos primjerka i mjesta</label><input id="e10_16"/></div><div class="cols-4"><label for="e10_19">10.19 Odnos djela i vremenskog raspona</label><input id="e10_19"/></div><div class="cols-4"><label for="e10_20">10.20 Odnos izraza i vremenskog raspona</label><input id="e10_20"/></div><div class="cols-4"><label for="e10_21">10.21 Odnos pojavnog oblika i vremenskog raspona</label><input id="e10_21"/></div><div class="cols-4"><label for="e10_22">10.22 Odnos primjerka i vremenskog raspona</label><input id="e10_22"/></div><div class="cols-12"><label for="e10_26">10.26 Napomena o odnosu djela i drugih jedinica opisa</label><textarea id="e10_26"></textarea></div><div class="cols-12"><label for="e10_27">10.27 Napomena o odnosu izraza i drugih jedinica opisa</label><textarea id="e10_27"></textarea></div><div class="cols-12"><label for="e10_28">10.28 Napomena o odnosu pojavnog oblika i drugih jedinica opisa</label><textarea id="e10_28"></textarea></div><div class="cols-12"><label for="e10_29">10.29 Napomena o odnosu primjerka i drugih jedinica opisa</label><textarea id="e10_29"></textarea></div></div>
+</section>
 
     <div class="actions">
       <button class="ghost" id="testBtn" type="button">Test</button>
@@ -312,8 +385,21 @@
   © 2024 Nacionalna i sveučilišna knjižnica u Zagrebu. Sva prava pridržana.
 </div>
 
-<!-- HELP modali (ostavi svoje postojeće) -->
-<div class="help-modal" id="help1"><div class="help-content"><span class="help-close" onclick="closeHelp('help1')">×</span><h4>Uputa: 1. Stvarni prikaz</h4><p>…</p></div></div>
+<!-- HELP modal za sekciju 1 -->
+<div class="help-modal" id="help1">
+<div class="help-content">
+<span class="help-close" onclick="closeHelp('help1')">×</span>
+<h4>Uputa: 1. Stvarni prikaz</h4>
+<p>
+          Ovdje se unosi <b>glavni stvarni naslov</b> (npr. naslov djela ili publikacije)
+          te eventualni <b>dodatak naslovu</b> (npr. podnaslov, datumi).
+          <br/><br/>
+<b>Primjeri:</b><br/>
+          • Glavni naslov: <i>Molitva žabe</i><br/>
+          • Dodatak: <i>pripovijetke iz cijeloga svijeta</i>
+</p>
+</div>
+</div>
 
 <script>
   /* HELP otvaranje/zatvaranje (kao i prije) */
@@ -349,8 +435,371 @@
   }
 </script>
 
-<!-- TVOJ POSTOJEĆI JS za generiranje JSON-LD / Turtle / RDF / XLSX ostaje nepromijenjen -->
-<!-- (Ako je u posebnom .js, samo ga i dalje uključuj kao i prije) -->
+<script>
+function displayLastModified() {
+  const lastModified = document.lastModified;
+  const lm = document.getElementById('last-modified');
+  if (lm) lm.innerHTML = `<p>Posljednja izmjena: ${lastModified}</p>`;
+}
+displayLastModified();
 
+function getCurieForProperty(propertyField, data) {
+  if (propertyField && propertyField[0] && propertyField[0]['@id']) {
+    const idValue = propertyField[0]['@id'];
+    const foundElement = Object.values(data).find(item => item['@id'] === idValue);
+    if (foundElement && foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID']) {
+      return foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'];
+    }
+  }
+  return '';
+}
+function createCurieLink(curieValue) {
+  if (curieValue) {
+    const link = `property.html?curie=${encodeURIComponent(curieValue)}`;
+    return `<a href="${link}" target="_blank">${curieValue}</a>`;
+  }
+  return '';
+}
+function displayPropertiesForClass(classId, data, className) {
+  const properties = Object.values(data).filter(item => {
+    const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
+    return domains && domains.some(domain => domain['@id'] === classId);
+  });
+  const content = document.getElementById('content');
+  const prev = document.getElementById('properties-panel');
+  if (prev) prev.remove();
+  const panel = document.createElement('div');
+  panel.id = 'properties-panel';
+  panel.innerHTML = `<h3>Svojstva za klasu: ${className}</h3>`;
+  if (properties.length === 0) {
+    panel.innerHTML += '<p>Nema svojstava za ovu klasu.</p>';
+  } else {
+    let table = `<table id="myTable" class="display">
+      <thead><tr><th>CURIE</th><th>Naziv svojstva</th><th>Podsvojstvo od</th><th>Obrnuto od</th><th>Doseg</th></tr></thead><tbody>`;
+    properties.forEach(property => {
+      const curieValue = property['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+        ? property['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'] : '';
+      const label = property['http://www.w3.org/2000/01/rdf-schema#label']
+        ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value'] : 'Unknown Label';
+      const subPropertyOf = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'], data);
+      const inverseOf = getCurieForProperty(property['http://www.w3.org/2002/07/owl#inverseOf'], data);
+      const range = getCurieForProperty(property['http://www.w3.org/2000/01/rdf-schema#range'], data);
+      table += `<tr>
+        <td>${createCurieLink(curieValue)}</td>
+        <td>${label}</td>
+        <td>${createCurieLink(subPropertyOf)}</td>
+        <td>${createCurieLink(inverseOf)}</td>
+        <td>${createCurieLink(range)}</td>
+      </tr>`;
+    });
+    table += '</tbody></table>';
+    panel.innerHTML += table;
+    $(document).ready(function(){ $('#myTable').DataTable(); });
+  }
+  content.prepend(panel);
+}
+function populateKlaseDropdown(data) {
+  const dd = document.getElementById('klase-dropdown');
+  dd.innerHTML = '';
+  Object.keys(data).forEach(key => {
+    const el = data[key];
+    const labels = el['http://www.w3.org/2000/01/rdf-schema#label'];
+    const label = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : el['@id'].split('/').pop();
+    if (el['@type'] && el['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+      const item = document.createElement('div');
+      item.textContent = label;
+      item.onclick = () => displayPropertiesForClass(el['@id'], data, label);
+      dd.appendChild(item);
+    }
+  });
+}
+function populateSvojstvaDropdown(data) {
+  const dd = document.getElementById('svojstva-dropdown');
+  dd.innerHTML = '';
+  Object.keys(data).forEach(key => {
+    const el = data[key];
+    const labels = el['http://www.w3.org/2000/01/rdf-schema#label'];
+    const label = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : el['@id'].split('/').pop();
+    if (el['@type'] && el['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+      const item = document.createElement('div');
+      item.textContent = label;
+      item.onclick = () => displayPropertiesForClass(el['@id'], data, label);
+      dd.appendChild(item);
+    }
+  });
+}
+function populatePrefiksi(data) {
+  const prefiksi = document.getElementById('prefiksi');
+  prefiksi.onclick = () => {
+    const unique = new Set();
+    const content = document.getElementById('content');
+    const prev = document.getElementById('prefixes-panel');
+    if (prev) prev.remove();
+    const panel = document.createElement('div');
+    panel.id = 'prefixes-panel';
+    panel.innerHTML = '<h3>Prefiksi</h3>';
+    let table = `<table class="display" id="downloadTable"><thead><tr><th>Prefix</th><th>Naziv</th><th>Imenski prostor</th></tr></thead><tbody>`;
+    Object.keys(data).forEach(key => {
+      const el = data[key];
+      if (el['@type'] && el['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+        const id = el['@id'] || '';
+        const namespace = id.substring(0, id.lastIndexOf('/') + 1);
+        const curie = el['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+          ? el['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'] : null;
+        if (curie) {
+          const prefix = curie.split(':')[0];
+          if (!unique.has(prefix)) {
+            unique.add(prefix);
+            const className = el['http://www.w3.org/2000/01/rdf-schema#label']?.[0]?.['@value'] || '';
+            table += `<tr><td>${prefix}</td><td>${className}</td><td>${namespace}</td></tr>`;
+          }
+        }
+      }
+    });
+    table += '</tbody></table>';
+    panel.innerHTML += table;
+    content.prepend(panel);
+    $(document).ready(function(){
+      $('#downloadTable').DataTable({ paging:false, searching:false, info:false });
+    });
+  };
+}
+fetch('KAMOntologija_v12.jsonld')
+  .then(r => { if(!r.ok) throw new Error('Ne mogu dohvatiti KAMOntologija_v12.jsonld'); return r.json(); })
+  .then(data => { populateKlaseDropdown(data); populateSvojstvaDropdown(data); populatePrefiksi(data); })
+  .catch(e => console.error('Pogreška u dohvaćanju JSON-LD:', e));
+</script>
+<script>
+/* ====== GENERATOR KAM JSON-LD + KONVERZIJE (Turtle, RDF/XML, XLSX) ====== */
+(function(){
+  const out = document.getElementById('output');
+  const err = document.getElementById('error');
+  const downloadLink = document.getElementById('downloadLink');
+  const v = id => (document.getElementById(id)?.value || '').trim();
+
+  function hash32(str){
+    let h = 5381; for(let i=0;i<str.length;i++){ h = ((h<<5)+h) + str.charCodeAt(i); h |= 0; }
+    return (h>>>0).toString(16).padStart(8,'0');
+  }
+  function idFor(nsType, content){
+    return 'http://www.registar.kam.hr/id/' + hash32(nsType+'|'+(content||''));
+  }
+  const C = {
+    PojavniOblik:'http://www.registar.kam.hr/Element/c/C10004',
+    Nomen:'http://www.registar.kam.hr/Element/c/C10013',
+    Mjesto:'http://www.registar.kam.hr/Element/c/C10011',
+    Vrijeme:'http://www.registar.kam.hr/Element/c/C10012'
+  };
+  const P = {
+    glavniNaslov:'http://www.registar.kam.hr/Elements/po/P40004',
+    dodatakNaslovu:'http://www.registar.kam.hr/Elements/po/P40006',
+    odgovornostNaslov:'http://www.registar.kam.hr/Elements/po/P40009',
+    podatakOIzd:'http://www.registar.kam.hr/Elements/po/P40012',
+    imeNakladnika:'http://www.registar.kam.hr/Elements/po/P40023',
+    opseg:'http://www.registar.kam.hr/Elements/po/P40046',
+    dimenzije:'http://www.registar.kam.hr/Elements/po/P40050',
+    nakladnickaCjelina:'http://www.registar.kam.hr/Elements/po/P40034',
+    identifikatorPojOblika:'http://www.registar.kam.hr/Elements/po/P40319',
+    mjestoIzdavanja:'http://www.registar.kam.hr/Elements/po/P40301',
+    vrijemeIzdavanja:'http://www.registar.kam.hr/Elements/po/P40306',
+    nomenskiNiz:'http://www.registar.kam.hr/Elements/n/P13002',
+    usvojenaPristupnicaMjesto:'http://www.registar.kam.hr/Elements/m/P11044',
+    usvojenaPristupnicaVrijeme:'http://www.registar.kam.hr/Elements/vr/P12038'
+  };
+
+  function makeNomen(graph, text, lang){
+    if(!text) return null;
+    const id = idFor(C.Nomen, (lang||'')+'|'+text);
+    graph.push({ '@id': id, '@type': C.Nomen, [P.nomenskiNiz]: [{ '@value': text, ...(lang?{'@language':lang}:{}) }] });
+    return id;
+  }
+  function makeMjesto(graph, naziv){
+    if(!naziv) return null;
+    const id = idFor(C.Mjesto, naziv);
+    const nId = makeNomen(graph, naziv, 'hr');
+    graph.push({ '@id': id, '@type': C.Mjesto, [P.usvojenaPristupnicaMjesto]: nId ? [{ '@id': nId }] : [] });
+    return id;
+  }
+  function makeVrijeme(graph, raspon){
+    if(!raspon) return null;
+    const id = idFor(C.Vrijeme, raspon);
+    const nId = makeNomen(graph, raspon, '');
+    graph.push({ '@id': id, '@type': C.Vrijeme, [P.usvojenaPristupnicaVrijeme]: nId ? [{ '@id': nId }] : [] });
+    return id;
+  }
+
+  const MAP_FIELDS = [
+    {id:'e1_4',  prop:P.glavniNaslov,           lang:'hr'},
+    {id:'e1_6',  prop:P.dodatakNaslovu,         lang:'hr'},
+    {id:'e1_9',  prop:P.odgovornostNaslov,      lang:'hr'},
+    {id:'e1_12', prop:P.podatakOIzd,            lang:'hr'},
+    {id:'e1_23', prop:P.imeNakladnika,          lang:'hr'},
+    {id:'e1_34', prop:P.nakladnickaCjelina,     lang:'hr'},
+    {id:'e2_22', prop:P.identifikatorPojOblika, lang:''},
+    {id:'e4_1',  prop:P.opseg,                  lang:''},
+    {id:'e4_5',  prop:P.dimenzije,              lang:''}
+  ];
+
+  function toKAMJsonLD(){
+    const graph = [];
+    const poKey = [v('e1_4'), v('e1_23'), v('e1_25'), v('e2_22')].filter(Boolean).join('|') || 'tmp';
+    const poId = idFor(C.PojavniOblik, poKey);
+    const po = { '@id': poId, '@type': C.PojavniOblik };
+
+    MAP_FIELDS.forEach(({id, prop, lang})=>{
+      const val = v(id); if(!val) return;
+      const nId = makeNomen(graph, val, lang);
+      po[prop] = (po[prop]||[]).concat([{ '@id': nId }]);
+    });
+
+    const mjestoId  = makeMjesto(graph,  v('e1_21')); if(mjestoId)  po[P.mjestoIzdavanja]  = [{ '@id': mjestoId  }];
+    const vrijemeId = makeVrijeme(graph, v('e1_25')); if(vrijemeId) po[P.vrijemeIzdavanja] = [{ '@id': vrijemeId }];
+
+    graph.push(po);
+    return { '@graph': graph };
+  }
+
+  /* ---------- KONVERZIJE ---------- */
+
+  // JSON-LD -> Turtle (N3.js)
+  async function jsonldToTurtle(jsonld) {
+    const writer = new N3.Writer({ format: "Turtle" });
+    jsonld["@graph"].forEach(node => {
+      const subj = N3.DataFactory.namedNode(node["@id"]);
+      const type = node["@type"];
+      if (type && typeof type === 'string' && type.startsWith('http')) {
+        writer.addQuad(subj, N3.DataFactory.namedNode('http://www.w3.org/1999/02/22-rdf-syntax-ns#type'), N3.DataFactory.namedNode(type));
+      }
+      for (let key in node) {
+        if (!key.startsWith("http")) continue;
+        const arr = node[key] || [];
+        arr.forEach(v => {
+          if (v["@value"] !== undefined) {
+            const lit = v["@language"] ? N3.DataFactory.literal(v["@value"], v["@language"]) : N3.DataFactory.literal(v["@value"]);
+            writer.addQuad(subj, N3.DataFactory.namedNode(key), lit);
+          } else if (v["@id"]) {
+            writer.addQuad(subj, N3.DataFactory.namedNode(key), N3.DataFactory.namedNode(v["@id"]));
+          }
+        });
+      }
+    });
+    return new Promise((resolve, reject)=> writer.end((e, result)=> e?reject(e):resolve(result)));
+  }
+
+  // JSON-LD -> (pojednostavljeni) RDF/XML
+  function jsonldToRdfXml(jsonld) {
+    const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    let xml = `<?xml version="1.0"?>\n<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">\n`;
+    jsonld["@graph"].forEach(node=>{
+      xml += `  <rdf:Description rdf:about="${esc(node["@id"])}">\n`;
+      for (let key in node) {
+        if (!key.startsWith("http")) continue;
+        const arr = node[key] || [];
+        arr.forEach(v=>{
+          const tag = `prop`; // generički tag; za precizno mapiranje koristite QName/prefikse
+          if (v["@value"] !== undefined) {
+            xml += `    <${tag}>${esc(v["@value"])}</${tag}>\n`;
+          } else if (v["@id"]) {
+            xml += `    <${tag} rdf:resource="${esc(v["@id"])}"/>\n`;
+          }
+        });
+      }
+      xml += `  </rdf:Description>\n`;
+    });
+    xml += `</rdf:RDF>`;
+    return xml;
+  }
+
+  // JSON-LD -> XLSX (SheetJS)
+  function jsonldToXlsx(jsonld) {
+    const rows = [["ID", "Tip", "Svojstvo (IRI)", "Vrijednost"]];
+    jsonld["@graph"].forEach(node=>{
+      const id = node["@id"] || "";
+      const type = node["@type"] || "";
+      for (let key in node) {
+        if (!key.startsWith("http")) continue;
+        const arr = node[key] || [];
+        arr.forEach(v=>{
+          rows.push([id, type, key, v["@value"] || v["@id"] || ""]);
+        });
+      }
+    });
+    const ws = XLSX.utils.aoa_to_sheet(rows);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Podaci");
+    const wbout = XLSX.write(wb, { bookType: "xlsx", type: "array" });
+    const blob = new Blob([wbout], { type: "application/octet-stream" });
+    const url = URL.createObjectURL(blob);
+    downloadLink.href = url;
+    downloadLink.style.display = "inline";
+    downloadLink.textContent = "Preuzmi XLSX";
+    return "XLSX generiran. Klikni „Preuzmi XLSX”.";
+  }
+
+  /* ---------- GUMBI ---------- */
+  document.getElementById('genBtn').addEventListener('click', ()=>{
+    err.textContent = '';
+    downloadLink.style.display = "none";
+    try{
+      const data = toKAMJsonLD();
+      out.textContent = JSON.stringify(data, null, 2);
+      if (history && history.replaceState) {
+        history.replaceState(null, '', location.pathname + location.hash);
+      }
+    }catch(ex){
+      err.textContent = 'Greška: ' + ex.message;
+      console.error(ex);
+    }
+  });
+
+  document.getElementById('testBtn').addEventListener('click', ()=>{
+    document.getElementById('e1_4').value  = 'Molitva žabe';
+    document.getElementById('e1_23').value = 'KS';
+    document.getElementById('e1_25').value = '2000–2001';
+    document.getElementById('e2_22').value = 'ISBN 953-123-456-7';
+    const data = toKAMJsonLD();
+    out.textContent = JSON.stringify(data, null, 2);
+    downloadLink.style.display = "none";
+  });
+
+  document.getElementById('genTurtleBtn').addEventListener('click', async ()=>{
+    err.textContent = '';
+    downloadLink.style.display = "none";
+    try{
+      const data = toKAMJsonLD();
+      const ttl = await jsonldToTurtle(data);
+      out.textContent = ttl;
+    }catch(ex){
+      err.textContent = 'Greška (Turtle): ' + ex.message;
+      console.error(ex);
+    }
+  });
+
+  document.getElementById('genRdfBtn').addEventListener('click', ()=>{
+    err.textContent = '';
+    downloadLink.style.display = "none";
+    try{
+      const data = toKAMJsonLD();
+      const rdf = jsonldToRdfXml(data);
+      out.textContent = rdf;
+    }catch(ex){
+      err.textContent = 'Greška (RDF/XML): ' + ex.message;
+      console.error(ex);
+    }
+  });
+
+  document.getElementById('genXlsBtn').addEventListener('click', ()=>{
+    err.textContent = '';
+    try{
+      const data = toKAMJsonLD();
+      out.textContent = jsonldToXlsx(data);
+    }catch(ex){
+      err.textContent = 'Greška (XLSX): ' + ex.message;
+      console.error(ex);
+    }
+  });
+
+})();
+</script>
 </body>
 </html>
