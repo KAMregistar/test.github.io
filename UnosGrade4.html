@@ -641,23 +641,42 @@ fetch('KAMOntologija_v12.jsonld')
   ];
 
   function toKAMJsonLD(){
-    const graph = [];
-    const poKey = [v('e1_4'), v('e1_23'), v('e1_25'), v('e2_22')].filter(Boolean).join('|') || 'tmp';
-    const poId = idFor(C.PojavniOblik, poKey);
-    const po = { '@id': poId, '@type': C.PojavniOblik };
+  const graph = [];
+  const poKey = [v('e1_4'), v('e1_23'), v('e1_25'), v('e2_22')].filter(Boolean).join('|') || 'tmp';
+  const poId = idFor(C.PojavniOblik, poKey);
+  const po = { '@id': poId, '@type': C.PojavniOblik };
 
-    MAP_FIELDS.forEach(({id, prop, lang})=>{
-      const val = v(id); if(!val) return;
-      const nId = makeNomen(graph, val, lang);
-      po[prop] = (po[prop]||[]).concat([{ '@id': nId }]);
-    });
-
-    const mjestoId  = makeMjesto(graph,  v('e1_21')); if(mjestoId)  po[P.mjestoIzdavanja]  = [{ '@id': mjestoId  }];
-    const vrijemeId = makeVrijeme(graph, v('e1_25')); if(vrijemeId) po[P.vrijemeIzdavanja] = [{ '@id': vrijemeId }];
-
-    graph.push(po);
-    return { '@graph': graph };
+  // --- DODANO: helper koji dohvaća sve vrijednosti polja s istim imenom ---
+  function valuesFor(name){
+    const els = document.querySelectorAll(`[name="${name}"]`);
+    return Array.from(els).map(e => e.value.trim()).filter(Boolean);
   }
+
+  // --- upis postojećih polja iz MAP_FIELDS ---
+  MAP_FIELDS.forEach(({id, prop, lang})=>{
+    const val = v(id); if(!val) return;
+    const nId = makeNomen(graph, val, lang);
+    po[prop] = (po[prop]||[]).concat([{ '@id': nId }]);
+  });
+
+  // --- NOVO: dodavanje svih napomena iz e1_2[] ---
+  const napomene = valuesFor('e1_2[]');
+  if (napomene.length) {
+    const propNapomena = 'http://www.registar.kam.hr/Elements/po/P40002'; // (ovdje stavi pravi IRI za napomenu o stvarnom prikazu)
+    po[propNapomena] = [];
+    napomene.forEach(text => {
+      const nId = makeNomen(graph, text, 'hr');
+      po[propNapomena].push({ '@id': nId });
+    });
+  }
+
+  // --- ostatak kao i prije ---
+  const mjestoId  = makeMjesto(graph,  v('e1_21')); if(mjestoId)  po[P.mjestoIzdavanja]  = [{ '@id': mjestoId  }];
+  const vrijemeId = makeVrijeme(graph, v('e1_25')); if(vrijemeId) po[P.vrijemeIzdavanja] = [{ '@id': vrijemeId }];
+
+  graph.push(po);
+  return { '@graph': graph };
+}
 
   /* ---------- KONVERZIJE ---------- */
 
