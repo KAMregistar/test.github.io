@@ -17,6 +17,16 @@
     #propertyTable tr:first-child td { border-top:1px solid #ddd; }
     #propertyTable tr:last-child  td { border-bottom:1px solid #ddd; }
     #propertyTable td:first-child { width:18%; font-weight:bold; }
+
+    /* stabilan klik u dropdownu */
+    #menu-bar .dropdown a {
+      display:block;
+      padding:6px 10px;
+      text-decoration:none;
+      color:inherit;
+    }
+    #menu-bar .dropdown a:hover { background:#f3f3f3; }
+    #menu-bar .dropdown { z-index:1000; }
   </style>
 </head>
 <body>
@@ -36,7 +46,6 @@
     <div class="dropdown" id="svojstva-dropdown"></div>
   </div>
 
-  <!-- PREFIKSI nije dropdown; klik crta tablicu u #content kao na indexu -->
   <div id="prefiksi">PREFIKSI</div>
 
   <div><a href="index.html" onclick="redirectToIndex('pomoc'); return false;">Pomoć</a></div>
@@ -71,7 +80,7 @@ function isLocalStorageAvailable() {
   catch(e){ return false; }
 }
 
-/* ----------------- DROPDOWNI – ISTA LOGIKA KAO NA INDEXU ----------------- */
+/* ----------------- DROPDOWNI ----------------- */
 function populateKlaseDropdown(data) {
   const graph = getGraph(data);
   const dd = document.getElementById('klase-dropdown');
@@ -87,12 +96,10 @@ function populateKlaseDropdown(data) {
     const hr = labels.find(l => l['@language'] === 'hr');
     const name = (hr && hr['@value']) || (labels[0] && labels[0]['@value']) || (el['@id']||'').split('/').pop();
 
-    const item = document.createElement('div');
-    item.textContent = name;
-    // index prikazuje klase; zadržavamo isti UX – vodi na index
-    item.onclick = () => window.location.href =
-      `index.html?section=klase&class=${encodeURIComponent(el['@id'])}`;
-    dd.appendChild(item);
+    const a = document.createElement('a');
+    a.href = `index.html?class=${encodeURIComponent(el['@id'])}`;
+    a.textContent = name;
+    dd.appendChild(a);
   });
 }
 
@@ -102,22 +109,26 @@ function populateSvojstvaDropdown(data) {
   if (!dd) return;
   dd.innerHTML = '';
 
-  // Na indexu "SVOJSTVA" zapravo lista KLASE i otvara pregled svojstava za odabranu klasu.
+  const propTypes = [
+    'http://www.w3.org/2002/07/owl#ObjectProperty',
+    'http://www.w3.org/2002/07/owl#DatatypeProperty',
+    'http://www.w3.org/2002/07/owl#AnnotationProperty'
+  ];
+
   graph.forEach(el => {
     const types = el['@type'] || [];
-    const isClass = types.includes('http://www.w3.org/2002/07/owl#Class');
-    if (!isClass) return;
+    const isProp = types.some(t => propTypes.includes(t));
+    if (!isProp) return;
 
     const labels = el['http://www.w3.org/2000/01/rdf-schema#label'] || [];
     const hr = labels.find(l => l['@language'] === 'hr');
     const name = (hr && hr['@value']) || (labels[0] && labels[0]['@value']) || (el['@id']||'').split('/').pop();
 
-    const item = document.createElement('div');
-    item.textContent = name;
-    // Ista akcija kao na indexu: prikaži svojstva te klase na index stranici
-    item.onclick = () => window.location.href =
-      `index.html?section=svojstva&class=${encodeURIComponent(el['@id'])}`;
-    dd.appendChild(item);
+    const curie = el['http://www.registar.kam.hr/ontologies/ont.owl/ID']?.[0]?.['@value'] || '';
+    const a = document.createElement('a');
+    a.href = `property.html?curie=${encodeURIComponent(curie)}`;
+    a.textContent = name;
+    dd.appendChild(a);
   });
 }
 
@@ -126,7 +137,7 @@ function wirePrefiksiClick(data){
   if (!btn) return;
   btn.onclick = () => {
     const graph = getGraph(data);
-    const unique = new Map(); // prefix -> {namespace, count}
+    const unique = new Map();
     graph.forEach(el => {
       const curie = el['http://www.registar.kam.hr/ontologies/ont.owl/ID']?.[0]?.['@value'];
       if (!curie || !curie.includes(':')) return;
@@ -181,7 +192,7 @@ function displayPropertyDetails(curie, data) {
   );
 
   if (!property) {
-    content.innerHTML = '<p>Details not found for the selected CURIE.</p>';
+    content.innerHTML = '<p>Detalji nisu pronađeni za zadani CURIE.</p>';
     return;
   }
 
@@ -225,7 +236,6 @@ function bootstrap(data){
   if (curie) displayPropertyDetails(curie, data);
 }
 
-// 1) probaj iz localStorage (index ga tamo stavlja)
 (function init(){
   if (isLocalStorageAvailable()){
     const cached = localStorage.getItem('ontologyData');
@@ -233,7 +243,6 @@ function bootstrap(data){
       try { bootstrap(JSON.parse(cached)); return; } catch(e){}
     }
   }
-  // 2) fetch – isti fajl kao na indexu; ako ne postoji, fallback
   fetch('KAMOntologija_v12.jsonld')
     .then(r => r.ok ? r.json() : Promise.reject())
     .then(data => { try{localStorage.setItem('ontologyData', JSON.stringify(data));}catch(e){} bootstrap(data); })
