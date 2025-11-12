@@ -103,34 +103,30 @@ function populateKlaseDropdown(data) {
   });
 }
 
+<script>
 function populateSvojstvaDropdown(data) {
-  const graph = getGraph(data);
+  const graph = Array.isArray(data) ? data : (data['@graph'] || []);
   const dd = document.getElementById('svojstva-dropdown');
   if (!dd) return;
   dd.innerHTML = '';
 
-  const propTypes = [
-    'http://www.w3.org/2002/07/owl#ObjectProperty',
-    'http://www.w3.org/2002/07/owl#DatatypeProperty',
-    'http://www.w3.org/2002/07/owl#AnnotationProperty'
-  ];
-
   graph.forEach(el => {
-    const types = el['@type'] || [];
-    const isProp = types.some(t => propTypes.includes(t));
-    if (!isProp) return;
+    const isClass = (el['@type'] || []).includes('http://www.w3.org/2002/07/owl#Class');
+    if (!isClass) return;
 
     const labels = el['http://www.w3.org/2000/01/rdf-schema#label'] || [];
     const hr = labels.find(l => l['@language'] === 'hr');
     const name = (hr && hr['@value']) || (labels[0] && labels[0]['@value']) || (el['@id']||'').split('/').pop();
 
-    const curie = el['http://www.registar.kam.hr/ontologies/ont.owl/ID']?.[0]?.['@value'] || '';
     const a = document.createElement('a');
-    a.href = `property.html?curie=${encodeURIComponent(curie)}`;
+    // → LISTA SVOJSTAVA ZA ODABRANU KLASU (ISTO KAO NA index.html)
+    a.href = `index.html?section=svojstva&class=${encodeURIComponent(el['@id'])}`;
     a.textContent = name;
     dd.appendChild(a);
   });
 }
+</script>
+
 
 function wirePrefiksiClick(data){
   const btn = document.getElementById('prefiksi');
