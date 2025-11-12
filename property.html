@@ -239,6 +239,76 @@ if (isLocalStorageAvailable()) {
             document.getElementById('content').innerHTML = '<p>Pogreška u dohvaćanju ontologije.</p>';
         });
 }
+// --- DODAJ OVAJ DIO NA KRAJ ---
+
+// Funkcije za popunjavanje izbornika
+function populateKlaseDropdown(data) {
+    const klaseDropdown = document.createElement('div');
+    klaseDropdown.classList.add('dropdown');
+    Object.keys(data).forEach(key => {
+        const element = data[key];
+        const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
+        const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
+        if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+            const item = document.createElement('div');
+            item.textContent = dropdownLabel;
+            item.onclick = () => {
+                window.location.href = `index.html?class=${encodeURIComponent(element['@id'])}`;
+            };
+            klaseDropdown.appendChild(item);
+        }
+    });
+    document.querySelector('#menu-bar div:nth-child(3)').appendChild(klaseDropdown);
+}
+
+function populateSvojstvaDropdown(data) {
+    const svojstvaDropdown = document.createElement('div');
+    svojstvaDropdown.classList.add('dropdown');
+    Object.keys(data).forEach(key => {
+        const element = data[key];
+        const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
+        const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
+        if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+            const item = document.createElement('div');
+            item.textContent = dropdownLabel;
+            item.onclick = () => {
+                window.location.href = `index.html?property=${encodeURIComponent(element['@id'])}`;
+            };
+            svojstvaDropdown.appendChild(item);
+        }
+    });
+    document.querySelector('#menu-bar div:nth-child(4)').appendChild(svojstvaDropdown);
+}
+
+function populatePrefiksiDropdown(data) {
+    const prefiksiDropdown = document.createElement('div');
+    prefiksiDropdown.classList.add('dropdown');
+    const uniquePrefixes = new Set();
+    Object.keys(data).forEach(key => {
+        const element = data[key];
+        const curie = element['http://www.registar.kam.hr/ontologies/ont.owl/ID'];
+        if (curie && curie[0] && curie[0]['@value']) {
+            const prefix = curie[0]['@value'].split(':')[0];
+            if (!uniquePrefixes.has(prefix)) {
+                uniquePrefixes.add(prefix);
+                const item = document.createElement('div');
+                item.textContent = prefix;
+                prefiksiDropdown.appendChild(item);
+            }
+        }
+    });
+    document.querySelector('#menu-bar div:nth-child(5)').appendChild(prefiksiDropdown);
+}
+
+// Učitaj ontologiju i popuni dropdown-ove
+fetch('KAMOntologija_v9.jsonld')
+    .then(response => response.json())
+    .then(data => {
+        populateKlaseDropdown(data);
+        populateSvojstvaDropdown(data);
+        populatePrefiksiDropdown(data);
+    })
+    .catch(err => console.error("Greška pri dohvaćanju ontologije:", err));
 
 </script>
 
