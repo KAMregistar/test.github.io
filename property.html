@@ -239,6 +239,17 @@ if (isLocalStorageAvailable()) {
             document.getElementById('content').innerHTML = '<p>Pogreška u dohvaćanju ontologije.</p>';
         });
 }
+
+<script>
+fetch('KAMOntologija_v12.jsonld')
+  .then(r => r.json())
+  .then(data => {
+      populateKlaseDropdown(data);
+      populateSvojstvaDropdown(data);
+      populatePrefiksi(data);
+  });
+</script>
+
 </script>
 
 </body>
