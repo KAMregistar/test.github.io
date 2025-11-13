@@ -24,6 +24,7 @@
       padding:6px 10px;
       text-decoration:none;
       color:inherit;
+      cursor:pointer;
     }
     #menu-bar .dropdown a:hover { background:#f3f3f3; }
     #menu-bar .dropdown { z-index:1000; }
@@ -46,13 +47,14 @@
     <div class="dropdown" id="svojstva-dropdown"></div>
   </div>
 
+  <!-- PREFIKSI nije dropdown; klik crta tablicu u #content -->
   <div id="prefiksi">PREFIKSI</div>
 
   <div><a href="index.html" onclick="redirectToIndex('pomoc'); return false;">Pomoć</a></div>
 </div>
 
 <div id="content">
-  <p>Detalji za CURIE entitet.</p>
+  <p>Detalji za entitet.</p>
 </div>
 
 <div id="footer">
@@ -80,7 +82,7 @@ function isLocalStorageAvailable() {
   catch(e){ return false; }
 }
 
-/* ----------------- DROPDOWNI ----------------- */
+/* ----------------- DROPDOWNI (ISTE STAVKE − KLASE) ----------------- */
 function populateKlaseDropdown(data) {
   const graph = getGraph(data);
   const dd = document.getElementById('klase-dropdown');
@@ -88,8 +90,7 @@ function populateKlaseDropdown(data) {
   dd.innerHTML = '';
 
   graph.forEach(el => {
-    const types = el['@type'] || [];
-    const isClass = types.includes('http://www.w3.org/2002/07/owl#Class');
+    const isClass = (el['@type'] || []).includes('http://www.w3.org/2002/07/owl#Class');
     if (!isClass) return;
 
     const labels = el['http://www.w3.org/2000/01/rdf-schema#label'] || [];
@@ -97,15 +98,15 @@ function populateKlaseDropdown(data) {
     const name = (hr && hr['@value']) || (labels[0] && labels[0]['@value']) || (el['@id']||'').split('/').pop();
 
     const a = document.createElement('a');
-    a.href = `index.html?class=${encodeURIComponent(el['@id'])}`;
+    // ➜ stranica o klasi NA property.html
+    a.href = `property.html?class=${encodeURIComponent(el['@id'])}`;
     a.textContent = name;
     dd.appendChild(a);
   });
 }
 
-/* ⬇️ TVOJA TRAŽENA VERZIJA — SVOJSTVA dropdown listaju KLASE, a klik vodi na listu svojstava te klase */
 function populateSvojstvaDropdown(data) {
-  const graph = Array.isArray(data) ? data : (data['@graph'] || []);
+  const graph = getGraph(data);
   const dd = document.getElementById('svojstva-dropdown');
   if (!dd) return;
   dd.innerHTML = '';
@@ -119,8 +120,8 @@ function populateSvojstvaDropdown(data) {
     const name = (hr && hr['@value']) || (labels[0] && labels[0]['@value']) || (el['@id']||'').split('/').pop();
 
     const a = document.createElement('a');
-    // → LISTA SVOJSTAVA ZA ODABRANU KLASU (ISTO KAO NA index.html)
-    a.href = `index.html?section=svojstva&class=${encodeURIComponent(el['@id'])}`;
+    // ➜ lista svojstava te klase NA property.html
+    a.href = `property.html?section=svojstva&class=${encodeURIComponent(el['@id'])}`;
     a.textContent = name;
     dd.appendChild(a);
   });
@@ -217,17 +218,92 @@ function displayPropertyDetails(curie, data) {
   $(document).ready(()=> $('#propertyTable').DataTable({paging:false, info:false, searching:false, ordering:false}));
 }
 
+/* ----------------- PRIKAZ KLASE & LISTE SVOJSTAVA ----------------- */
+function displayClassDetails(classId, data) {
+  const content = document.getElementById('content');
+  const graph = getGraph(data);
+  const cls = graph.find(el => el['@id'] === classId);
+  if (!cls) { content.innerHTML = '<p>Klasa nije pronađena.</p>'; return; }
+
+  const labels = cls['http://www.w3.org/2000/01/rdf-schema#label'] || [];
+  const hr = labels.find(l => l['@language']==='hr');
+  const name = (hr && hr['@value']) || (labels[0] && labels[0]['@value']) || classId.split('/').pop();
+
+  const comment = cls['http://www.w3.org/2000/01/rdf-schema#comment']?.[0]?.['@value'] || '';
+  const superClass = cls['http://www.w3.org/2000/01/rdf-schema#subClassOf']?.[0]?.['@id'] || '';
+
+  content.innerHTML = `
+    <h2>Klasa: "${name}"</h2>
+    <table id="classTable" class="display">
+      <tbody>
+        <tr><td>@id</td><td>${makeClickableLink(classId)}</td></tr>
+        <tr><td>Opis</td><td>${comment}</td></tr>
+        <tr><td>Nadklasa</td><td>${makeClickableLink(superClass)}</td></tr>
+      </tbody>
+    </table>
+  `;
+  $(document).ready(()=> $('#classTable').DataTable({paging:false, info:false, searching:false, ordering:false}));
+}
+
+function displayPropertiesForClassOnPropertyPage(classId, data) {
+  const content = document.getElementById('content');
+  const graph = getGraph(data);
+  const propTypes = [
+    'http://www.w3.org/2002/07/owl#ObjectProperty',
+    'http://www.w3.org/2002/07/owl#DatatypeProperty',
+    'http://www.w3.org/2002/07/owl#AnnotationProperty'
+  ];
+
+  const props = graph.filter(el => {
+    const types = el['@type'] || [];
+    const isProp = types.some(t => propTypes.includes(t));
+    const domains = el['http://www.w3.org/2000/01/rdf-schema#domain'] || [];
+    return isProp && domains.some(d => d['@id'] === classId);
+  });
+
+  // Naziv klase (za naslov)
+  const cls = graph.find(el => el['@id'] === classId);
+  const clsLabel = cls?.['http://www.w3.org/2000/01/rdf-schema#label']?.[0]?.['@value'] || classId.split('/').pop();
+
+  let html = `<h2>Svojstva za klasu: "${clsLabel}"</h2>
+  <table class="display" id="propsTable">
+    <thead><tr><th>KAM ID</th><th>Naziv</th><th>Domena</th><th>Akcija</th></tr></thead><tbody>`;
+
+  props.forEach(p => {
+    const labels = p['http://www.w3.org/2000/01/rdf-schema#label'] || [];
+    const hr = labels.find(l => l['@language']==='hr');
+    const name = (hr && hr['@value']) || (labels[0] && labels[0]['@value']) || (p['@id']||'').split('/').pop();
+    const curie = p['http://www.registar.kam.hr/ontologies/ont.owl/ID']?.[0]?.['@value'] || '';
+    const domId = p['http://www.w3.org/2000/01/rdf-schema#domain']?.[0]?.['@id'] || '';
+    html += `<tr>
+      <td>${curie}</td>
+      <td>${name}</td>
+      <td>${makeClickableLink(domId)}</td>
+      <td><a href="property.html?curie=${encodeURIComponent(curie)}">Otvori svojstvo</a></td>
+    </tr>`;
+  });
+
+  html += `</tbody></table>`;
+  content.innerHTML = html;
+  $(document).ready(()=> $('#propsTable').DataTable({paging:false, info:false, searching:false}));
+}
+
 /* ----------------- BOOTSTRAP ----------------- */
 let ontologyDataGlobal = null;
 const urlParams = new URLSearchParams(window.location.search);
 const curie = urlParams.get('curie');
+const classId = urlParams.get('class');
+const section = urlParams.get('section');
 
 function bootstrap(data){
   ontologyDataGlobal = data;
   populateKlaseDropdown(data);
   populateSvojstvaDropdown(data);
   wirePrefiksiClick(data);
+
   if (curie) displayPropertyDetails(curie, data);
+  if (classId && !section) displayClassDetails(classId, data);
+  if (classId && section === 'svojstva') displayPropertiesForClassOnPropertyPage(classId, data);
 }
 
 (function init(){
@@ -237,7 +313,7 @@ function bootstrap(data){
       try { bootstrap(JSON.parse(cached)); return; } catch(e){}
     }
   }
-  fetch('KAMOntologija_v12.jsonld')
+  fetch('KAMOntologija_v12.jsonld')   /* koristi isti fajl kao index.html */
     .then(r => r.ok ? r.json() : Promise.reject())
     .then(data => { try{localStorage.setItem('ontologyData', JSON.stringify(data));}catch(e){} bootstrap(data); })
     .catch(() => {
@@ -246,7 +322,7 @@ function bootstrap(data){
         .then(data => { try{localStorage.setItem('ontologyData', JSON.stringify(data));}catch(e){} bootstrap(data); })
         .catch(err => {
           console.error('Ne mogu dohvatiti ontologiju:', err);
-          if (curie) document.getElementById('content').innerHTML = '<p>Pogreška u dohvaćanju ontologije.</p>';
+          document.getElementById('content').innerHTML = '<p>Pogreška u dohvaćanju ontologije.</p>';
         });
     });
 })();
