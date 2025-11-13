@@ -277,16 +277,40 @@ function populatePrefiksi(data) {
 
 // Fetch JSON-LD data and initialize the menu
 fetch('KAMOntologija_v12.jsonld')  // Replace with your JSON-LD file path
-    .then(response => {
-        if (!response.ok) throw new Error('Network response was not ok');
-        return response.json();
-    })
-    .then(data => {
-        populateKlaseDropdown(data);
-        populateSvojstvaDropdown(data);
-        populatePrefiksi(data);
-    })
-    .catch(error => console.error('Pogreška u dohvaćanju JSON-LD:', error));
+.then(data => {
+    // 1) Standardno punjenje dropdowna – ostaje isto
+    populateKlaseDropdown(data);
+    populateSvojstvaDropdown(data);
+    populatePrefiksi(data);
+
+    // 2) NOVO: čitanje parametara iz URL-a
+    const urlParams = new URLSearchParams(window.location.search);
+    const classId = urlParams.get('class');
+    const section = urlParams.get('section'); // može biti 'klase', 'svojstva' ili null
+
+    if (classId) {
+        // Nađi odgovarajući element u ontologiji po @id
+        const element = Object.values(data).find(el => el['@id'] === classId);
+
+        if (element) {
+            // Izvuci labelu kao što to radiš u dropdownu
+            const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
+            const classLabel =
+                labels && labels[0] && labels[0]['@value']
+                    ? labels[0]['@value']
+                    : element['@id'].split('/').pop();
+
+            // Ako je section = 'svojstva' ➜ prikaži tablicu svojstava te klase
+            if (section === 'svojstva') {
+                displayPropertiesForClass(classId, data, classLabel);
+            } else {
+                // inače (section = 'klase' ili ništa) ➜ prikaži detalje klase
+                displayClassDetails(element);
+            }
+        }
+    }
+})
+
 
 </script>
 
