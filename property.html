@@ -97,11 +97,12 @@ function populateKlaseDropdown(data) {
     const hr = labels.find(l => l['@language'] === 'hr');
     const name = (hr && hr['@value']) || (labels[0] && labels[0]['@value']) || (el['@id']||'').split('/').pop();
 
-    const a = document.createElement('a');
-    // ➜ stranica o klasi NA property.html
-    a.href = `property.html?class=${encodeURIComponent(el['@id'])}`;
-    a.textContent = name;
-    dd.appendChild(a);
+	const a = document.createElement('a');
+	// NOVO: vodi na index.html
+	a.href = `index.html?class=${encodeURIComponent(el['@id'])}`;
+	a.textContent = name;
+	dd.appendChild(a);
+
   });
 }
 
