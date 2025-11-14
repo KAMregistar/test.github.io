@@ -173,57 +173,21 @@ $(document).ready(function() {
 
 
 // Populate "Klase" dropdown
-function populateSvojstvaDropdown(data) {
-    const svojstvaDropdown = document.getElementById('svojstva-dropdown');
-    if (!svojstvaDropdown) return;
-
-    // isprazni dropdown (za slučaj da je već bilo nečega)
-    svojstvaDropdown.innerHTML = "";
-
+function populateKlaseDropdown(data) {
+    const klaseDropdown = document.getElementById('klase-dropdown');
     Object.keys(data).forEach(key => {
         const element = data[key];
-        if (!element) return;
-
-        // U dropdown idu samo OWL klase (kao i prije)
-        if (!(element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class'))) {
-            return;
-        }
-
-        // Label za prikaz u izborniku
         const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
-        const dropdownLabel =
-            labels && labels[0] && labels[0]['@value']
-                ? labels[0]['@value']
-                : (element['@id'] ? element['@id'].split('/').pop() : 'Bez naziva');
+        const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
 
-        // CURIE klase (npr. "kamjo:C10001")
-        const curieField = element['http://www.registar.kam.hr/ontologies/ont.owl/ID'];
-        if (!curieField || !curieField[0] || !curieField[0]['@value']) {
-            // ako nema ID, preskoči
-            return;
+        if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+            const item = document.createElement('div');
+            item.textContent = dropdownLabel;
+            item.onclick = () => displayClassDetails(element);
+            klaseDropdown.appendChild(item);
         }
-        const curieValue = curieField[0]['@value']; // npr. "kamjo:C10001"
-
-        // Iz CURIE-ja izvučemo prefiks i napravimo slug za URL:
-        // "kamjo" -> "jo", "kama" -> "a", "kamd" -> "d", ...
-        const prefix = curieValue.split(':')[0]; // "kamjo"
-        let slug;
-        if (prefix.startsWith('kam')) {
-            slug = prefix.slice(3);             // makni "kam" -> "jo"
-        } else {
-            slug = prefix;                      // fallback: koristi cijeli prefiks
-        }
-
-        // Napravimo <div><a href="/elements/jo/">Jedinica opisa</a></div>
-        const item = document.createElement('div');
-        const link = document.createElement('a');
-        link.textContent = dropdownLabel;
-        link.href = `/elements/${slug}/`;   // APSOLUTNA putanja – radi s bilo koje stranice
-        item.appendChild(link);
-        svojstvaDropdown.appendChild(item);
     });
 }
-
 
 // Function to display class details in a transposed table
 function displayClassDetails(ontologyClass) {
