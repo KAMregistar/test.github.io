@@ -218,17 +218,36 @@ function displayClassDetails(ontologyClass) {
 
 function populateSvojstvaDropdown(data) {
     const svojstvaDropdown = document.getElementById('svojstva-dropdown');
-    Object.keys(data).forEach(key => {
-        const element = data[key];
-        const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
-        const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
+    svojstvaDropdown.innerHTML = ""; // za svaki slučaj
 
-        if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-            const item = document.createElement('div');
-            item.textContent = dropdownLabel;
-            item.onclick = () => displayPropertiesForClass(element['@id'], data, dropdownLabel);
-            svojstvaDropdown.appendChild(item);
+    Object.values(data).forEach(element => {
+        // U dropdown idu samo klase
+        if (!(element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class'))) {
+            return;
         }
+
+        // Label za prikaz u izborniku
+        const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
+        const dropdownLabel = labels && labels[0] && labels[0]['@value']
+            ? labels[0]['@value']
+            : element['@id'].split('/').pop();
+
+        // CURIE klase (npr. "kamjo:C10001")
+        const curieField = element['http://www.registar.kam.hr/ontologies/ont.owl/ID'];
+        if (!curieField || !curieField[0] || !curieField[0]['@value']) return;
+        const curieValue = curieField[0]['@value'];
+
+        // Iz CURIE-ja izvučemo slug za URL: "kamjo" -> "jo", "kama" -> "a", ...
+        const prefix = curieValue.split(':')[0];      // npr. "kamjo"
+        const slug = prefix.replace(/^kam/, '');      // "jo"
+
+        // Napravimo <a href="/elements/jo/">
+        const item = document.createElement('div');
+        const link = document.createElement('a');
+        link.textContent = dropdownLabel;
+        link.href = `/elements/${slug}/`;  // APSOLUTNA putanja – radi s bilo koje stranice
+        item.appendChild(link);
+        svojstvaDropdown.appendChild(item);
     });
 }
 
