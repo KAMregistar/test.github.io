@@ -215,7 +215,7 @@ function displayClassDetails(ontologyClass) {
                     </thead><tbody>
                         <tr><td>ID</td><td>${id}</td></tr>
                         <tr><td>Naziv klase</td><td>${title}</td></tr>
-                        <tr><td>Element</td><td>${types.map(type => type.split('#').pop()).join(', ')}</td></tr>
+                        <tr><td>Element</td><td>${types.map(type => {const t = type.split('#').pop(); return t === "Class" ? "klasa" : t;}).join(', ')}</td></tr>
                         <tr><td>Definicija</td><td>${definition}</td></tr>
                         <tr><td>CURIE</td><td>${createCurieLink(curieValue)}</td></tr>
                     </tbody>
