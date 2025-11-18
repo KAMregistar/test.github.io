@@ -14,45 +14,6 @@
 
 <style>
   * { box-sizing: border-box; }
-  body {
-    margin:0;
-    font-family: Poppins, system-ui, Segoe UI, Roboto, Arial, sans-serif;
-    color:#1f2937;
-    background:#f6f7fb;
-  }
-
-  #menu-bar {
-    display:flex;
-    align-items:center;
-    gap:20px;
-    padding:10px 16px;
-    border-bottom:1px solid #e5e7eb;
-    background:#fff;
-    position:sticky;
-    top:0;
-    z-index:100;
-  }
-  #menu-bar .logo { height:36px; width:auto; }
-  #menu-bar h1 { margin:0; font-size:18px; font-weight:600; }
-  #menu-bar > div { position:relative; font-size:14px; cursor:default; }
-  #menu-bar .dropdown {
-    position:absolute;
-    top:20px;
-    left:0;
-    min-width:240px;
-    background:#fff;
-    border:1px solid #e5e7eb;
-    padding:8px;
-    display:none;
-    max-height:320px;
-    overflow:auto;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.08);
-  }
-  #menu-bar > div:hover .dropdown { display:block; }
-  #menu-bar .dropdown div { padding:8px; border-radius:0px; }
-  #menu-bar .dropdown div:hover { background:#f3f4f6; }
-
-  #content { max-width:1100px; margin:16px auto; padding:0 16px 20px; }
 
   .card{
     background:#fff;
@@ -103,10 +64,6 @@
   }
   .entity-btn:hover{ background:#5a009e; }
 
-  @media (max-width:980px){
-    .cols-6,.cols-4,.cols-3{grid-column:span 12}
-    #menu-bar h1{display:none}
-  }
 </style>
 </head>
 <body>
