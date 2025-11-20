@@ -208,16 +208,35 @@ function populateKlaseDropdown(data) {
     Object.keys(data).forEach(key => {
         const element = data[key];
         const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
-        const dropdownLabel = labels && labels[0] && labels[0]['@value'] ? labels[0]['@value'] : element['@id'].split('/').pop();
+        const dropdownLabel = labels && labels[0] && labels[0]['@value']
+            ? labels[0]['@value']
+            : element['@id'].split('/').pop();
 
         if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+
+            // uzmi KAM ID, npr. "kami:C10003"
+            const idField = element['http://www.registar.kam.hr/ontologies/ont.owl/ID'];
+            const curie = idField && idField[0] ? idField[0]['@value'] : null;
+            const localId = curie ? curie.split(':')[1] : null; // C10003
+
             const item = document.createElement('div');
             item.textContent = dropdownLabel;
-            item.onclick = () => displayClassDetails(element);
+
+            if (localId) {
+                // idi na kanonski URI klase
+                item.onclick = () => {
+                    window.location.href = `/Elements/c/#${localId}`;
+                };
+            } else {
+                // fallback: stari način
+                item.onclick = () => displayClassDetails(element);
+            }
+
             klaseDropdown.appendChild(item);
         }
     });
 }
+
 
 // Function to display class details in a transposed table
 function displayClassDetails(ontologyClass) {
