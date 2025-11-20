@@ -18,6 +18,12 @@
     el.innerHTML = `<p>Posljednja izmjena: ${lastModified}</p>`;
   }
 
+function getHashIdGeneric() {
+  const h = window.location.hash;
+  if (!h || !h.startsWith("#")) return null;
+  return h.substring(1).trim();
+}
+
   // data može biti array, { "@graph": [...] } ili običan objekt
   function getGraph(data) {
     if (Array.isArray(data)) return data;
@@ -387,22 +393,95 @@ function populateSvojstvaDropdown() {
     return null;
   }
 
-  function initPropertyGroup() {
-    const content = document.getElementById("content");
-    if (!content) return;
+ function initPropertyGroup() {
+  const content = document.getElementById("content");
+  if (!content) return;
 
-    const domainClass = findDomainClassForGroup();
-    if (!domainClass) {
-      content.innerHTML =
-        "<p>Nisam uspio pronaći klasu za ovu grupu svojstava (provjeri domainLabel/groupPrefix).</p>";
+  const domainClass = findDomainClassForGroup();
+  if (!domainClass) {
+    content.innerHTML =
+      "<p>Nisam uspio pronaći klasu za ovu grupu svojstava (provjeri domainLabel/groupPrefix).</p>";
+    return;
+  }
+
+  const classId = domainClass["@id"];
+  const classLabel = getHrLabel(domainClass);
+
+  // prefiks za svojstva (kamd, kamjo, ...)
+  const prefix =
+    groupPrefix ||
+    (function () {
+      const curieField =
+        domainClass["http://www.registar.kam.hr/ontologies/ont.owl/ID"];
+      if (!curieField || !curieField[0] || !curieField[0]["@value"]) return "";
+      return curieField[0]["@value"].split(":")[0]; // npr. "kamd"
+    })();
+
+  function render() {
+    const hashId = getHashIdGeneric(); // npr. "P20007" ili null
+
+    // BEZ HASH-a → tablica svojstava za klasu (kao dosad)
+    if (!hashId) {
+      displayPropertiesForClass(classId, classLabel);
       return;
     }
 
-    const classId = domainClass["@id"];
-    const label = getHrLabel(domainClass);
+    // S HASH-om → detalj svojstva
+    const curie = prefix + ":" + hashId;
+    const prop = GRAPH.find((el) => {
+      const cf = el["http://www.registar.kam.hr/ontologies/ont.owl/ID"];
+      return cf && cf[0] && cf[0]["@value"] === curie;
+    });
 
-    displayPropertiesForClass(classId, label);
+    if (!prop) {
+      content.innerHTML =
+        `<p>Svojstvo <code>${curie}</code> nije pronađeno u ontologiji.</p>`;
+      return;
+    }
+
+    const label =
+      prop["http://www.w3.org/2000/01/rdf-schema#label"]?.[0]?.["@value"] ||
+      "Bez naziva";
+    const def =
+      prop["http://www.registar.kam.hr/ontologies/ont.owl/definition"]?.[0]?.[
+        "@value"
+      ] || "Bez definicije";
+
+    const domainCurie = getCurieForProperty(
+      prop["http://www.w3.org/2000/01/rdf-schema#domain"]
+    );
+    const rangeCurie = getCurieForProperty(
+      prop["http://www.w3.org/2000/01/rdf-schema#range"]
+    );
+    const subCurie = getCurieForProperty(
+      prop["http://www.w3.org/2000/01/rdf-schema#subPropertyOf"]
+    );
+    const invCurie = getCurieForProperty(
+      prop["http://www.w3.org/2002/07/owl#inverseOf"]
+    );
+
+    let html = `<h2>${label}</h2>
+      <table id="myPropDetail" class="display">
+        <tbody>
+          <tr><td><b>CURIE</b></td><td>${curie}</td></tr>
+          <tr><td><b>Definicija</b></td><td>${def}</td></tr>
+          <tr><td><b>Domena</b></td><td>${createCurieLink(domainCurie)}</td></tr>
+          <tr><td><b>Doseg</b></td><td>${createCurieLink(rangeCurie)}</td></tr>
+          <tr><td><b>Podsvojstvo od</b></td><td>${createCurieLink(subCurie)}</td></tr>
+          <tr><td><b>Obrnuto od</b></td><td>${createCurieLink(invCurie)}</td></tr>
+        </tbody>
+      </table>`;
+
+    content.innerHTML = html;
+    if (window.$ && $.fn.DataTable) {
+      $("#myPropDetail").DataTable();
+    }
   }
+
+  // početna render funkcija + reakcija na promjenu hash-a
+  window.addEventListener("hashchange", render);
+  render();
+}
 
   // ====== INIT ZA ROOT STRANICU =====================================
 
@@ -425,6 +504,7 @@ function populateSvojstvaDropdown() {
       initPropertyGroup();
     }
   }
+
 
   // start
   displayLastModified();
