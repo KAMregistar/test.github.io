@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KAM – klase (C)</title>
 
-    <!-- isti fontovi i CSS kao na root indexu -->
+    <!-- Fonts & CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Rubik:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../../style.css">
 
@@ -17,7 +17,7 @@
 </head>
 <body>
 
-<!-- HEADER – copy/paste iz root index.html -->
+<!-- GORNJI MENI – isti kao na početnoj -->
 <div id="menu-bar">
     <img src="../../kam.png" alt="KAM Logo" class="logo">
     <h1>
@@ -32,8 +32,9 @@
         SVOJSTVA
         <div class="dropdown" id="svojstva-dropdown"></div>
     </div>
-    <div id="profili">APLIKACIJSKI PROFILI</div>
-    <div id="prefiksi">PREFIKSI</div>
+    <div id="prefiksi">
+        PREFIKSI
+    </div>
     <div>Pomoć</div>
 </div>
 
@@ -48,7 +49,9 @@
 </div>
 
 <script>
-// ---------- isti helperi kao u root indexu (skraćena verzija) ----------
+const JSONLD_URL = "../../KAMOntologija_v12.jsonld";
+
+// ----------------- OPĆE STVARI -----------------
 
 function displayLastModified() {
     const lastModified = document.lastModified;
@@ -65,14 +68,15 @@ function createCurieLink(curieValue) {
 
     const [prefix, localId] = parts;
 
-    // KAM – isto što imaš u root indexu
     if (prefix.startsWith('kam')) {
         let segment = '';
 
         if (localId.startsWith('C')) {
-            segment = 'c';                     // klase idu u /Elements/c/
+            // klase → /Elements/c/
+            segment = 'c';
         } else if (localId.startsWith('P')) {
-            const suffix = prefix.substring(3); // "jo", "a", ...
+            // svojstva → po prefiksu (jo, a, ...)
+            const suffix = prefix.substring(3); // "jo" iz "kamjo"
             segment = suffix || '';
         } else {
             segment = prefix.substring(3) || '';
@@ -84,9 +88,24 @@ function createCurieLink(curieValue) {
         }
     }
 
+    // fallback – stari način, ako nešto nije KAM
     const fallbackLink = `../../property.html?curie=${encodeURIComponent(curieValue)}`;
     return `<a href="${fallbackLink}">${curieValue}</a>`;
 }
+
+// helper: iz @id (URI) pronađi KAM CURIE
+function getCurieForProperty(propertyField, data) {
+    if (propertyField && propertyField[0] && propertyField[0]["@id"]) {
+        const idValue = propertyField[0]["@id"];
+        const foundElement = Object.values(data).find(item => item["@id"] === idValue);
+        if (foundElement && foundElement["http://www.registar.kam.hr/ontologies/ont.owl/ID"]) {
+            return foundElement["http://www.registar.kam.hr/ontologies/ont.owl/ID"][0]["@value"];
+        }
+    }
+    return "";
+}
+
+// ----------------- PRIKAZ KLASE -----------------
 
 function displayClassDetails(ontologyClass) {
     const content = document.getElementById('content');
@@ -105,21 +124,22 @@ function displayClassDetails(ontologyClass) {
     const types = ontologyClass['@type'] || [];
 
     let table = `<table id="myClassTable" class="display">
-                    <thead>
-                        <tr><th>Svojstvo</th><th>Vrijednost</th></tr>
-                    </thead><tbody>
-                        <tr><td>ID</td><td>${id}</td></tr>
-                        <tr><td>Naziv klase</td><td>${title}</td></tr>
-                        <tr><td>Element</td><td>${
-                            types.map(type => {
-                                const t = type.split('#').pop();
-                                return t === "Class" ? "klasa" : t;
-                            }).join(', ')
-                        }</td></tr>
-                        <tr><td>Definicija</td><td>${definition}</td></tr>
-                        <tr><td>CURIE</td><td>${createCurieLink(curieValue)}</td></tr>
-                    </tbody>
-                </table>`;
+        <thead>
+            <tr><th>Svojstvo</th><th>Vrijednost</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>ID</td><td>${id}</td></tr>
+            <tr><td>Naziv klase</td><td>${title}</td></tr>
+            <tr><td>Element</td><td>${
+                types.map(type => {
+                    const t = type.split('#').pop();
+                    return t === "Class" ? "klasa" : t;
+                }).join(', ')
+            }</td></tr>
+            <tr><td>Definicija</td><td>${definition}</td></tr>
+            <tr><td>CURIE</td><td>${createCurieLink(curieValue)}</td></tr>
+        </tbody>
+    </table>`;
 
     content.innerHTML = table;
 
@@ -128,88 +148,8 @@ function displayClassDetails(ontologyClass) {
     });
 }
 
-// dropdowni – možeš copy/paste iz root indexa ako želiš da i ovdje rade
-function populateKlaseDropdown(data) {
-    const klaseDropdown = document.getElementById('klase-dropdown');
-    Object.keys(data).forEach(key => {
-        const element = data[key];
-        const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
-        const dropdownLabel = labels && labels[0] && labels[0]['@value']
-            ? labels[0]['@value']
-            : element['@id'].split('/').pop();
+// ----------------- PRIKAZ SVOJSTAVA ZA KLASU (SVOJSTVA dropdown) -----------------
 
-        if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-            const item = document.createElement('div');
-            item.textContent = dropdownLabel;
-            item.onclick = () => displayClassDetails(element);
-            klaseDropdown.appendChild(item);
-        }
-    });
-}
-
-function populateSvojstvaDropdown(data) {
-    const svojstvaDropdown = document.getElementById('svojstva-dropdown');
-    Object.keys(data).forEach(key => {
-        const element = data[key];
-        const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
-        const dropdownLabel = labels && labels[0] && labels[0]['@value']
-            ? labels[0]['@value']
-            : element['@id'].split('/').pop();
-
-        // tražimo klase – za svaku klasu u dropdownu SVOJSTVA nudimo “svojstva za tu klasu”
-        if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
-            const item = document.createElement('div');
-            item.textContent = dropdownLabel;
-            item.onclick = () => displayPropertiesForClass(element['@id'], data, dropdownLabel);
-            svojstvaDropdown.appendChild(item);
-        }
-    });
-}
-
-// ---------- RDA-style: klasa iz hasha Cxxxxx ----------
-
-const JSONLD_URL = "../../KAMOntologija_v12.jsonld";
-
-function getHashId() {
-    const h = window.location.hash;
-    if (!h || !h.startsWith("#")) return null;
-    const id = h.substring(1).trim(); // C10001
-    return id || null;
-}
-
-// nađi klasu po lokalnom ID-u (C10001), ignorira prefiks
-function findClassByLocalId(localId, data) {
-    return Object.values(data).find(el => {
-        if (!(el['@type'] && el['@type'].includes('http://www.w3.org/2002/07/owl#Class'))) {
-            return false;
-        }
-        const idField = el['http://www.registar.kam.hr/ontologies/ont.owl/ID'];
-        if (!idField || !idField[0] || !idField[0]['@value']) return false;
-        const curie = idField[0]['@value'];      // npr. "kamjo:C10001"
-        return curie.endsWith(':' + localId);    // završava na ":C10001"
-    });
-}
-
-fetch(JSONLD_URL)
-    .then(r => {
-        if (!r.ok) throw new Error("Network error");
-        return r.json();
-    })
-    .then(data => {
-        populateKlaseDropdown(data);   
-		// helper: iz @id (URI) do CURIE-ja preko KAM ID polja
-function getCurieForProperty(propertyField, data) {
-    if (propertyField && propertyField[0] && propertyField[0]['@id']) {
-        const idValue = propertyField[0]['@id'];
-        const foundElement = Object.values(data).find(item => item['@id'] === idValue);
-        if (foundElement && foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID']) {
-            return foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'];
-        }
-    }
-    return '';
-}
-
-// tablica "Svojstva za klasu: X" – ista logika kao na početnoj stranici
 function displayPropertiesForClass(classId, data, className) {
     const properties = Object.values(data).filter(item => {
         const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
@@ -270,7 +210,108 @@ function displayPropertiesForClass(classId, data, className) {
     });
 }
 
-		populateSvojstvaDropdown(data);
+// ----------------- DROPDOWNI -----------------
+
+function populateKlaseDropdown(data) {
+    const klaseDropdown = document.getElementById('klase-dropdown');
+    Object.keys(data).forEach(key => {
+        const element = data[key];
+        const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
+        const dropdownLabel = labels && labels[0] && labels[0]['@value']
+            ? labels[0]['@value']
+            : element['@id'].split('/').pop();
+
+        if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+            const item = document.createElement('div');
+            item.textContent = dropdownLabel;
+            item.onclick = () => displayClassDetails(element);
+            klaseDropdown.appendChild(item);
+        }
+    });
+}
+
+function populateSvojstvaDropdown(data) {
+    const svojstvaDropdown = document.getElementById('svojstva-dropdown');
+    Object.keys(data).forEach(key => {
+        const element = data[key];
+        const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
+        const dropdownLabel = labels && labels[0] && labels[0]['@value']
+            ? labels[0]['@value']
+            : element['@id'].split('/').pop();
+
+        if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+            const item = document.createElement('div');
+            item.textContent = dropdownLabel;
+            item.onclick = () => displayPropertiesForClass(element['@id'], data, dropdownLabel);
+            svojstvaDropdown.appendChild(item);
+        }
+    });
+}
+
+function populatePrefiksi(data) {
+    const prefiksi = document.getElementById('prefiksi');
+    prefiksi.addEventListener('click', () => {
+        const uniquePrefixes = new Set();
+        const content = document.getElementById('content');
+        content.innerHTML = '<h2>Prefiksi</h2>';
+        let table = `<table><tr><th>Prefix</th><th>Naziv</th><th>Imenski prostor</th></tr>`;
+        Object.keys(data).forEach(key => {
+            const element = data[key];
+
+            if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+                const id = element['@id'] || 'Nepoznat ID';
+                const namespace = id.substring(0, id.lastIndexOf('/') + 1);
+                const curieValue = element['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+                    ? element['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
+                    : null;
+                if (curieValue) {
+                    const prefix = curieValue.split(':')[0];
+                    if (!uniquePrefixes.has(prefix)) {
+                        uniquePrefixes.add(prefix);
+                        const className =
+                            element['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value'];
+                        table += `<tr><td>${prefix}</td><td>${className}</td><td>${namespace}</td></tr>`;
+                    }
+                }
+            }
+        });
+        table += '</table>';
+        content.innerHTML += table;
+    });
+}
+
+// ----------------- HASH → Cxxxx → klasa -----------------
+
+function getHashId() {
+    const h = window.location.hash;
+    if (!h || !h.startsWith("#")) return null;
+    const id = h.substring(1).trim(); // npr. C10001
+    return id || null;
+}
+
+// nađi klasu po lokalnom ID-u (Cxxxx), ignorira prefiks (kamjo:, kama:, ...)
+function findClassByLocalId(localId, data) {
+    return Object.values(data).find(el => {
+        if (!(el['@type'] && el['@type'].includes('http://www.w3.org/2002/07/owl#Class'))) {
+            return false;
+        }
+        const idField = el['http://www.registar.kam.hr/ontologies/ont.owl/ID'];
+        if (!idField || !idField[0] || !idField[0]['@value']) return false;
+        const curie = idField[0]['@value'];    // npr. "kamjo:C10001"
+        return curie.endsWith(':' + localId);  // završava na ":C10001"
+    });
+}
+
+fetch(JSONLD_URL)
+    .then(r => {
+        if (!r.ok) throw new Error("Network error");
+        return r.json();
+    })
+    .then(data => {
+        populateKlaseDropdown(data);
+        populateSvojstvaDropdown(data);
+        populatePrefiksi(data);
+
         function showFromHash() {
             const localId = getHashId();
             if (!localId) {
@@ -295,7 +336,7 @@ function displayPropertiesForClass(classId, data, className) {
         document.getElementById('content').innerHTML =
             "<p>Greška pri učitavanju ontologije.</p>";
     });
-
 </script>
+
 </body>
 </html>
