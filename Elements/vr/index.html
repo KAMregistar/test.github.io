@@ -2,9 +2,9 @@
 <html lang="hr">
 <head>
   <meta charset="UTF-8">
-  <title>KAM Klasa Nomen</title>
+  <title>KAM Klasa Vremenski raspon</title>
 
-     <!-- Fonts & CSS -->
+    <!-- Fonts & CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Rubik:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../../style.css">
 
@@ -51,19 +51,14 @@
 <div id="footer">
     © 2025 Nacionalna i sveučilišna knjižnica u Zagrebu. Sva prava pridržana.
 </div>
-
-  <script>
-    window.KAM_CONFIG = {
-      pageType: "propertyGroup",
-      jsonPath: "../../KAMOntologija_v12.jsonld",
-
-      /* !! SAMO OVO MIJENJAŠ !! */
-
-      groupPrefix: "kamn",          // npr. "kamjo", "kama", "kamm"…
-      domainLabel: "Nomen"     // npr. "Jedinica opisa", "Mjesto", …
-    };
-  </script>
-
-  <script src="../../kam.js"></script>
+<script>
+  window.KAM_CONFIG = {
+    pageType: "propertyGroup",
+    jsonPath: "../../KAMOntologija_v12.jsonld",
+    groupPrefix: "kamjvr",
+    domainLabel: "Vremenski raspon"
+  };
+</script>
+<script src="../../kam.js"></script>
 </body>
 </html>
