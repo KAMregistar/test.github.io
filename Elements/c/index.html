@@ -148,6 +148,24 @@ function populateKlaseDropdown(data) {
 }
 
 // Prefiksi / Svojstva – možeš isto prekopirati ako želiš, za kratko ih preskačemo…
+function populateSvojstvaDropdown(data) {
+    const svojstvaDropdown = document.getElementById('svojstva-dropdown');
+    Object.keys(data).forEach(key => {
+        const element = data[key];
+        const labels = element['http://www.w3.org/2000/01/rdf-schema#label'];
+        const dropdownLabel = labels && labels[0] && labels[0]['@value']
+            ? labels[0]['@value']
+            : element['@id'].split('/').pop();
+
+        // tražimo klase – za svaku klasu u dropdownu SVOJSTVA nudimo “svojstva za tu klasu”
+        if (element['@type'] && element['@type'].includes('http://www.w3.org/2002/07/owl#Class')) {
+            const item = document.createElement('div');
+            item.textContent = dropdownLabel;
+            item.onclick = () => displayPropertiesForClass(element['@id'], data, dropdownLabel);
+            svojstvaDropdown.appendChild(item);
+        }
+    });
+}
 
 // ---------- RDA-style: klasa iz hasha Cxxxxx ----------
 
