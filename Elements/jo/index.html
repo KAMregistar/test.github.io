@@ -55,12 +55,15 @@
 
 <!-- KONFIGURACIJA ZA zajednički kam.js -->
 <script>
-    window.KAM_CONFIG = {
-        pageType: "propertyJo",                     // ova stranica je za svojstva kamjo:Pxxxx
-        jsonPath: "../../KAMOntologija_v12.jsonld"  // relativna putanja do ontologije
-    };
+  window.KAM_CONFIG = {
+    pageType: "propertyGroup",
+    jsonPath: "../../KAMOntologija_v12.jsonld",
+    groupPrefix: "kamjo",
+    domainLabel: "Jedinica opisa"
+  };
 </script>
 <script src="../../kam.js"></script>
+
 
 </body>
 </html>
