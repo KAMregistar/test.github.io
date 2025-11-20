@@ -230,20 +230,29 @@ function populateSvojstvaDropdown(data) {
                 ? labels[0]["@value"]
                 : element["@id"].split("/").pop();
 
-        // u dropdown SVOJSTVA stavljamo KLASE:
         if (
             element["@type"] &&
             element["@type"].includes("http://www.w3.org/2002/07/owl#Class")
         ) {
             const item = document.createElement("div");
             item.textContent = dropdownLabel;
-            // klik → tablica svojstava za tu klasu
-            item.onclick = () =>
-                displayPropertiesForClass(element["@id"], data, dropdownLabel);
+
+            if (dropdownLabel === "Jedinica opisa") {
+                // 🔁 poseban slučaj: uvijek idi na /Elements/jo/
+                item.onclick = () => {
+                    window.location.href = "/Elements/jo/";
+                };
+            } else {
+                // ostale klase: ponašaj se kao i prije
+                item.onclick = () =>
+                    displayPropertiesForClass(element["@id"], data, dropdownLabel);
+            }
+
             svojstvaDropdown.appendChild(item);
         }
     });
 }
+
 
 
     function populatePrefiksi(data) {
