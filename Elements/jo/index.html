@@ -83,18 +83,33 @@ function createCurieLink(curieValue) {
 
     const [prefix, localId] = parts;
 
+    // Samo za naše KAM prefikse radimo RDA-stil URI
     if (prefix.startsWith('kam')) {
-        const suffix = prefix.substring(3); // "jo" iz "kamjo"
-        if (suffix) {
-            const link = `/Elements/${suffix}/#${localId}`;
+        let segment = '';
+
+        if (localId.startsWith('C')) {
+            // C = klasa → uvijek u /Elements/c/
+            segment = 'c';
+        } else if (localId.startsWith('P')) {
+            // P = svojstvo → ovisi o prefiksu (jo, a, c, ...)
+            const suffix = prefix.substring(3); // "jo" iz "kamjo"
+            segment = suffix || '';             // npr. jo, a, ...
+        } else {
+            // za svaki slučaj, fallback na suffix iz prefiksa
+            segment = prefix.substring(3) || '';
+        }
+
+        if (segment) {
+            const link = `/Elements/${segment}/#${localId}`;
             return `<a href="${link}">${curieValue}</a>`;
         }
     }
 
-    // fallback – ako je neki drugi prefix
+    // Fallback za sve što nije KAM prefiks
     const fallbackLink = `../../property.html?curie=${encodeURIComponent(curieValue)}`;
     return `<a href="${fallbackLink}">${curieValue}</a>`;
 }
+
 
 function displayClassDetails(ontologyClass) {
     const content = document.getElementById('content');
