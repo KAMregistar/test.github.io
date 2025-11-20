@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>KAM Registar</title>
+
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../datatables.css">
+  <script src="../../jquery.min.js"></script>
+  <script src="../../datatables.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="../../logo.png" alt="KAM Registar">
+      <span>Registar</span>
+    </div>
+    <nav>
+      <div class="nav-item">
+        KLASE
+        <div id="klase-dropdown" class="dropdown"></div>
+      </div>
+      <div class="nav-item">
+        SVOJSTVA
+        <div id="svojstva-dropdown" class="dropdown"></div>
+      </div>
+      <div class="nav-item"><a href="../../profiles.html">APLIKACIJSKI PROFILI</a></div>
+      <div class="nav-item"><a href="../../prefixes.html">PREFIKSI</a></div>
+      <div class="nav-item"><a href="../../help.html">Pomoć</a></div>
+    </nav>
+  </header>
+
+  <main>
+    <div id="content">Učitavam podatke…</div>
+    <div id="last-modified"></div>
+  </main>
+
+  <script>
+    window.KAM_CONFIG = {
+      pageType: "propertyGroup",
+      jsonPath: "../../KAMOntologija_v12.jsonld",
+
+      groupPrefix: "kamkt",          // npr. "kamjo", "kama", "kamm"…
+      domainLabel: "Kolektivni agent"     // npr. "Jedinica opisa", "Mjesto", …
+    };
+  </script>
+
+  <script src="../../kam.js"></script>
+</body>
+</html>
