@@ -147,7 +147,6 @@ function populateKlaseDropdown(data) {
     });
 }
 
-// Prefiksi / Svojstva – možeš isto prekopirati ako želiš, za kratko ih preskačemo…
 function populateSvojstvaDropdown(data) {
     const svojstvaDropdown = document.getElementById('svojstva-dropdown');
     Object.keys(data).forEach(key => {
@@ -198,7 +197,7 @@ fetch(JSONLD_URL)
     })
     .then(data => {
         populateKlaseDropdown(data);   // ako želiš dropdown KLASE i ovdje
-
+		populateSvojstvaDropdown(data);s
         function showFromHash() {
             const localId = getHashId();
             if (!localId) {
