@@ -80,14 +80,14 @@
 
 <!-- KONFIGURACIJA ZA zajednički kam.js -->
 <script>
-  window.KAM_CONFIG = {
-    pageType: "propertyGroup",
-    jsonPath: "../../KAMOntologija_v12.jsonld",
-    groupPrefix: "kamjo",            // prefiks u CURIE-ju
-    domainLabel: "Jedinica opisa"    // kako se klasa zove u ontologiji
-  };
+    window.KAM_CONFIG = {
+        pageType: "root",                 // ovo je početna stranica
+        jsonPath: "KAMOntologija_v12.jsonld"
+    };
 </script>
-<script src="../../kam.js"></script>
+
+<!-- Učitavanje zajedničkog JS-a -->
+<script src="kam.js"></script>
 
 </body>
 </html>
