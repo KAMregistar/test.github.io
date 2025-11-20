@@ -91,55 +91,68 @@
 
   // KLASE: svaka stavka vodi na /Elements/c/#Cxxxxx
   function populateKlaseDropdown() {
-    const dd = document.getElementById("klase-dropdown");
-    if (!dd) return;
-    dd.innerHTML = "";
+  const dd = document.getElementById("klase-dropdown");
+  if (!dd) return;
+  dd.innerHTML = "";
 
-    GRAPH.forEach((el) => {
-      if (!isClass(el)) return;
-      const curieField = el["http://www.registar.kam.hr/ontologies/ont.owl/ID"];
-      if (!curieField || !curieField[0] || !curieField[0]["@value"]) return;
-      const curie = curieField[0]["@value"]; // npr. kamjo:C10001
-      const parts = curie.split(":");
-      if (parts.length !== 2) return;
-      const localId = parts[1]; // C10001
+  GRAPH.forEach((el) => {
+    if (!isClass(el)) return;
 
-      const label = getHrLabel(el);
+    const curieField = el["http://www.registar.kam.hr/ontologies/ont.owl/ID"];
+    if (!curieField || !curieField[0] || !curieField[0]["@value"]) return;
 
-      const a = document.createElement("a");
-      a.href = `/Elements/c/#${encodeURIComponent(localId)}`;
-      a.textContent = label;
-      dd.appendChild(a);
-    });
-  }
+    const curie = curieField[0]["@value"];      // npr. "kamjo:C10001"
+    const parts = curie.split(":");
+    if (parts.length !== 2) return;
+    const localId = parts[1];                   // "C10001"
 
-  // SVOJSTVA: svaka stavka vodi na /Elements/jo/, /Elements/a/, /Elements/m/ ...
-  // segment = prefiks iza "kam", npr. "jo" iz "kamjo"
-  function populateSvojstvaDropdown() {
-    const dd = document.getElementById("svojstva-dropdown");
-    if (!dd) return;
-    dd.innerHTML = "";
+    const label = getHrLabel(el);
 
-    GRAPH.forEach((el) => {
-      if (!isClass(el)) return;
-      const curieField = el["http://www.registar.kam.hr/ontologies/ont.owl/ID"];
-      if (!curieField || !curieField[0] || !curieField[0]["@value"]) return;
+    const item = document.createElement("div");
+    item.textContent = label;
+    // ako imaš klasu u CSS-u (npr. dropdown-item), dodaj:
+    // item.className = "dropdown-item";
 
-      const curie = curieField[0]["@value"]; // npr. "kamjo:C10001"
-      const [prefix] = curie.split(":");
-      if (!prefix || !prefix.startsWith("kam")) return;
+    item.onclick = function () {
+      window.location.href = `/Elements/c/#${encodeURIComponent(localId)}`;
+    };
 
-      const segment = prefix.substring(3); // "jo", "a", "m", "n"...
-      if (!segment) return; // ako nema segmenta, preskoči
+    dd.appendChild(item);
+  });
+}
 
-      const label = getHrLabel(el);
+function populateSvojstvaDropdown() {
+  const dd = document.getElementById("svojstva-dropdown");
+  if (!dd) return;
+  dd.innerHTML = "";
 
-      const a = document.createElement("a");
-      a.href = `/Elements/${segment}/`;
-      a.textContent = label;
-      dd.appendChild(a);
-    });
-  }
+  GRAPH.forEach((el) => {
+    if (!isClass(el)) return;
+
+    const curieField = el["http://www.registar.kam.hr/ontologies/ont.owl/ID"];
+    if (!curieField || !curieField[0] || !curieField[0]["@value"]) return;
+
+    const curie = curieField[0]["@value"];   // "kamjo:C10001"
+    const [prefix] = curie.split(":");
+    if (!prefix || !prefix.startsWith("kam")) return;
+
+    const segment = prefix.substring(3);     // "jo", "a", "m", ...
+    if (!segment) return;
+
+    const label = getHrLabel(el);
+
+    const item = document.createElement("div");
+    item.textContent = label;
+    // item.className = "dropdown-item";
+
+    item.onclick = function () {
+      window.location.href = `/Elements/${segment}/`;
+    };
+
+    dd.appendChild(item);
+  });
+}
+
 
   // PREFIKSI – kao do sada: tablica u #content
   function populatePrefiksi() {
@@ -394,9 +407,6 @@
   // ====== INIT ZA ROOT STRANICU =====================================
 
   function initRootPage() {
-    // Root stranica ima statičan tekst u #content; ovdje samo inicijaliziramo meni
-    // i omogućimo Prefikse itd.
-    // (Ako kasnije želiš da root reagira na ?section=, tu se može proširiti.)
   }
 
   // ====== GLAVNI FETCH & DISPATCH ===================================
