@@ -85,28 +85,37 @@ function createCurieLink(curieValue) {
     if (!curieValue) return '';
 
     const parts = curieValue.split(':');
-    if (parts.length !== 2) {
-        // Ako iz nekog razloga nije u obliku prefix:ID, samo prikaži tekst
-        return curieValue;
-    }
+    if (parts.length !== 2) return curieValue;
 
     const [prefix, localId] = parts;
 
-    // --- KAM prefiksi dobivaju RDA-stil URI-je ---
-    // npr. kamjo:P10001 → /Elements/jo/#P10001
+    // Samo za naše KAM prefikse radimo RDA-stil URI
     if (prefix.startsWith('kam')) {
-        const suffix = prefix.substring(3); // "jo" iz "kamjo", "a" iz "kama", "c" iz "kamc", ...
-        if (suffix) {
-            const link = `/Elements/${suffix}/#${localId}`;
+        let segment = '';
+
+        if (localId.startsWith('C')) {
+            // C = klasa → uvijek u /Elements/c/
+            segment = 'c';
+        } else if (localId.startsWith('P')) {
+            // P = svojstvo → ovisi o prefiksu (jo, a, c, ...)
+            const suffix = prefix.substring(3); // "jo" iz "kamjo"
+            segment = suffix || '';             // npr. jo, a, ...
+        } else {
+            // za svaki slučaj, fallback na suffix iz prefiksa
+            segment = prefix.substring(3) || '';
+        }
+
+        if (segment) {
+            const link = `/Elements/${segment}/#${localId}`;
             return `<a href="${link}">${curieValue}</a>`;
         }
     }
 
-    // --- fallback za ostale prefikse (ako ih ima) ---
-    // i dalje koristiš stari property.html, tako da ništa ne “pukne”
+    // Fallback za sve što nije KAM prefiks
     const fallbackLink = `../../property.html?curie=${encodeURIComponent(curieValue)}`;
     return `<a href="${fallbackLink}">${curieValue}</a>`;
 }
+
 
 
 // Function to display properties for a class when "Svojstva" menu item is clicked
