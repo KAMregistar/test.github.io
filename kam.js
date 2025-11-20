@@ -218,30 +218,68 @@
     }
 
     // SVOJSTVA – lista klasa, klik → tablica svojstava za tu klasu
-    function populateSvojstvaDropdown(data) {
-        const svojstvaDropdown = document.getElementById("svojstva-dropdown");
-        if (!svojstvaDropdown) return;
+function populateSvojstvaDropdown(data) {
+    const svojstvaDropdown = document.getElementById("svojstva-dropdown");
+    if (!svojstvaDropdown) return;
 
-        Object.keys(data).forEach((key) => {
-            const element = data[key];
-            const labels = element["http://www.w3.org/2000/01/rdf-schema#label"];
-            const dropdownLabel =
-                labels && labels[0] && labels[0]["@value"]
-                    ? labels[0]["@value"]
-                    : element["@id"].split("/").pop();
+    Object.values(data).forEach((element) => {
+        const types = element["@type"] || [];
 
-            if (
-                element["@type"] &&
-                element["@type"].includes("http://www.w3.org/2002/07/owl#Class")
-            ) {
-                const item = document.createElement("div");
-                item.textContent = dropdownLabel;
-                item.onclick = () =>
-                    displayPropertiesForClass(element["@id"], data, dropdownLabel);
-                svojstvaDropdown.appendChild(item);
-            }
-        });
-    }
+        // uzimamo samo svojstva, ne klase
+        const isProperty =
+            types.includes("http://www.w3.org/1999/02/22-rdf-syntax-ns#Property") ||
+            types.includes("http://www.w3.org/2002/07/owl#ObjectProperty") ||
+            types.includes("http://www.w3.org/2002/07/owl#DatatypeProperty");
+
+        if (!isProperty) return;
+
+        const idField = element["http://www.registar.kam.hr/ontologies/ont.owl/ID"];
+        if (!idField || !idField[0] || !idField[0]["@value"]) return;
+
+        const curieValue = idField[0]["@value"];      // npr. kamjo:P10001
+
+        const labels = element["http://www.w3.org/2000/01/rdf-schema#label"];
+        const label =
+            labels && labels[0] && labels[0]["@value"]
+                ? labels[0]["@value"]
+                : "";
+
+        // iz CURIE-ja do kanonskog URI-ja (isti obrazac kao u createCurieLink)
+        const parts = curieValue.split(":");
+        if (parts.length !== 2) return;
+        const [prefix, localId] = parts;
+
+        let segment = "";
+
+        if (localId.startsWith("C")) {
+            segment = "c";
+        } else if (localId.startsWith("P")) {
+            const suffix = prefix.substring(3); // "jo" iz "kamjo"
+            segment = suffix || "";
+        } else {
+            segment = prefix.substring(3) || "";
+        }
+
+        let href;
+        if (segment) {
+            href = `/Elements/${segment}/#${localId}`;
+        } else {
+            // sigurnosni fallback
+            href = `property.html?curie=${encodeURIComponent(curieValue)}`;
+        }
+
+        const item = document.createElement("div");
+        const a = document.createElement("a");
+
+        // tekst u izborniku: CURIE – label
+        a.textContent = label ? `${curieValue} – ${label}` : curieValue;
+        a.href = href;
+
+        item.appendChild(a);
+        svojstvaDropdown.appendChild(item);
+    });
+}
+
 
     function populatePrefiksi(data) {
         const prefiksi = document.getElementById("prefiksi");
