@@ -1,5 +1,5 @@
 // kam.js – zajednički JS za registar KAM
-// Očekuje da je prije uključivanja postavljen window.KAM_CONFIG = { pageType, jsonPath }
+// Očekuje da je prije uključivanja postavljen window.KAM_CONFIG = { pageType, jsonPath, ... }
 
 (function () {
     const config = window.KAM_CONFIG || {};
@@ -179,7 +179,7 @@
 
     // ---------- DROPDOWNI ----------
 
-    // KLASE – sada vode na canonical URI /Elements/c/#Cxxxx
+    // KLASE – vode na canonical URI /Elements/c/#Cxxxx
     function populateKlaseDropdown(data) {
         const klaseDropdown = document.getElementById("klase-dropdown");
         if (!klaseDropdown) return;
@@ -217,43 +217,41 @@
         });
     }
 
-    // SVOJSTVA – lista klasa, klik → tablica svojstava za tu klasu
-function populateSvojstvaDropdown(data) {
-    const svojstvaDropdown = document.getElementById("svojstva-dropdown");
-    if (!svojstvaDropdown) return;
+    // SVOJSTVA – lista KLASA; klik → ili redirect (JO) ili tablica svojstava
+    function populateSvojstvaDropdown(data) {
+        const svojstvaDropdown = document.getElementById("svojstva-dropdown");
+        if (!svojstvaDropdown) return;
 
-    Object.keys(data).forEach((key) => {
-        const element = data[key];
-        const labels = element["http://www.w3.org/2000/01/rdf-schema#label"];
-        const dropdownLabel =
-            labels && labels[0] && labels[0]["@value"]
-                ? labels[0]["@value"]
-                : element["@id"].split("/").pop();
+        Object.keys(data).forEach((key) => {
+            const element = data[key];
+            const labels = element["http://www.w3.org/2000/01/rdf-schema#label"];
+            const dropdownLabel =
+                labels && labels[0] && labels[0]["@value"]
+                    ? labels[0]["@value"]
+                    : element["@id"].split("/").pop();
 
-        if (
-            element["@type"] &&
-            element["@type"].includes("http://www.w3.org/2002/07/owl#Class")
-        ) {
-            const item = document.createElement("div");
-            item.textContent = dropdownLabel;
+            if (
+                element["@type"] &&
+                element["@type"].includes("http://www.w3.org/2002/07/owl#Class")
+            ) {
+                const item = document.createElement("div");
+                item.textContent = dropdownLabel;
 
-            if (dropdownLabel === "Jedinica opisa") {
-                // 🔁 poseban slučaj: uvijek idi na /Elements/jo/
-                item.onclick = () => {
-                    window.location.href = "/Elements/jo/";
-                };
-            } else {
-                // ostale klase: ponašaj se kao i prije
-                item.onclick = () =>
-                    displayPropertiesForClass(element["@id"], data, dropdownLabel);
+                if (dropdownLabel === "Jedinica opisa") {
+                    // poseban slučaj: uvijek idi na /Elements/jo/
+                    item.onclick = () => {
+                        window.location.href = "/Elements/jo/";
+                    };
+                } else {
+                    // ostale klase: tablica svojstava na trenutnoj stranici
+                    item.onclick = () =>
+                        displayPropertiesForClass(element["@id"], data, dropdownLabel);
+                }
+
+                svojstvaDropdown.appendChild(item);
             }
-
-            svojstvaDropdown.appendChild(item);
-        }
-    });
-}
-
-
+        });
+    }
 
     function populatePrefiksi(data) {
         const prefiksi = document.getElementById("prefiksi");
@@ -302,7 +300,7 @@ function populateSvojstvaDropdown(data) {
         });
     }
 
-    // ---------- HASH HELPERI ----------
+    // ---------- HASH HELPERI & PRETRAGE ----------
 
     function getHashId() {
         const h = window.location.hash;
@@ -339,13 +337,14 @@ function populateSvojstvaDropdown(data) {
     // ---------- INIT ZA POJEDINE STRANICE ----------
 
     function initRootPage(data) {
+        displayLastModified();
         populateKlaseDropdown(data);
         populateSvojstvaDropdown(data);
         populatePrefiksi(data);
-        // sadržaj korijenske stranice ostaje onakav kakav je u HTML-u
     }
 
     function initClassPage(data) {
+        displayLastModified();
         populateKlaseDropdown(data);
         populateSvojstvaDropdown(data);
         populatePrefiksi(data);
@@ -372,29 +371,60 @@ function populateSvojstvaDropdown(data) {
         showFromHash();
     }
 
-    function initPropertyJoPage(data) {
+    // GENERIČKA STRANICA ZA SKUPINU SVOJSTAVA (Elements/jo/, Elements/a/, ...)
+    function initPropertyGroupPage(data) {
+        displayLastModified();
+
+        const cfg = window.KAM_CONFIG || {};
+        const groupPrefix = cfg.groupPrefix || "kamjo";     // npr. "kamjo", "kama", ...
+        const domainLabel = cfg.domainLabel || null;        // npr. "Jedinica opisa", "Publikacija", ...
+
         populateKlaseDropdown(data);
         populateSvojstvaDropdown(data);
         populatePrefiksi(data);
 
-        function showFromHash() {
+        function showFromHashOrDomain() {
             const localId = getHashId();
             const content = document.getElementById("content");
-            if (!localId || !content) {
-                if (content) {
-                    content.innerHTML =
-                        "<p>Nije zadano svojstvo (očekujem hash, npr. #P10001).</p>";
+            if (!content) return;
+
+            // 1) NEMA hash-a → ako imamo domainLabel, prikaži SVOJSTVA ZA TU KLASU
+            if (!localId) {
+                if (!domainLabel) {
+                    content.innerHTML = "<p>Nije zadano svojstvo.</p>";
+                    return;
                 }
-                return;
-            }
-            const curie = "kamjo:" + localId;
-            const prop = findElementByCURIE(data, curie);
-            if (!prop) {
-                content.innerHTML = `<p>Svojstvo <code>${curie}</code> nije pronađeno u ontologiji.</p>`;
+
+                const classElement = Object.values(data).find((el) => {
+                    const types = el["@type"] || [];
+                    if (!types.includes("http://www.w3.org/2002/07/owl#Class")) return false;
+                    const labels = el["http://www.w3.org/2000/01/rdf-schema#label"];
+                    return (
+                        labels &&
+                        labels[0] &&
+                        labels[0]["@value"] === domainLabel
+                    );
+                });
+
+                if (!classElement) {
+                    content.innerHTML =
+                        `<p>Klasa "${domainLabel}" nije pronađena u ontologiji.</p>`;
+                    return;
+                }
+
+                displayPropertiesForClass(classElement["@id"], data, domainLabel);
                 return;
             }
 
-            // prikaz svojstva – vrlo slično onome što već imaš
+            // 2) IMA hash (npr. #P10001) → detalj svojstva tog prefiksa
+            const curie = `${groupPrefix}:${localId}`;   // npr. "kamjo:P10001"
+            const prop = findElementByCURIE(data, curie);
+            if (!prop) {
+                content.innerHTML =
+                    `<p>Svojstvo <code>${curie}</code> nije pronađeno u ontologiji.</p>`;
+                return;
+            }
+
             const label = prop["http://www.w3.org/2000/01/rdf-schema#label"]
                 ? prop["http://www.w3.org/2000/01/rdf-schema#label"][0]["@value"]
                 : curie;
@@ -403,20 +433,16 @@ function populateSvojstvaDropdown(data) {
                 prop["http://www.registar.kam.hr/ontologies/ont.owl/definition"][0]["@value"];
 
             const subPropertyOf = getCurieForProperty(
-                prop["http://www.w3.org/2000/01/rdf-schema#subPropertyOf"],
-                data
+                prop["http://www.w3.org/2000/01/rdf-schema#subPropertyOf"], data
             );
             const inverseOf = getCurieForProperty(
-                prop["http://www.w3.org/2002/07/owl#inverseOf"],
-                data
+                prop["http://www.w3.org/2002/07/owl#inverseOf"], data
             );
             const range = getCurieForProperty(
-                prop["http://www.w3.org/2000/01/rdf-schema#range"],
-                data
+                prop["http://www.w3.org/2000/01/rdf-schema#range"], data
             );
             const domain = getCurieForProperty(
-                prop["http://www.w3.org/2000/01/rdf-schema#domain"],
-                data
+                prop["http://www.w3.org/2000/01/rdf-schema#domain"], data
             );
 
             const uri = window.location.href;
@@ -430,12 +456,8 @@ function populateSvojstvaDropdown(data) {
                         <tr><td><b>Definicija</b></td><td>${definition || "—"}</td></tr>
                         <tr><td><b>Domena</b></td><td>${createCurieLink(domain)}</td></tr>
                         <tr><td><b>Doseg</b></td><td>${createCurieLink(range)}</td></tr>
-                        <tr><td><b>Podsvojstvo od</b></td><td>${createCurieLink(
-                            subPropertyOf
-                        )}</td></tr>
-                        <tr><td><b>Obrnuto od</b></td><td>${createCurieLink(
-                            inverseOf
-                        )}</td></tr>
+                        <tr><td><b>Podsvojstvo od</b></td><td>${createCurieLink(subPropertyOf)}</td></tr>
+                        <tr><td><b>Obrnuto od</b></td><td>${createCurieLink(inverseOf)}</td></tr>
                     </tbody>
                 </table>
             `;
@@ -451,21 +473,19 @@ function populateSvojstvaDropdown(data) {
             }
         }
 
-        window.addEventListener("hashchange", showFromHash);
-        showFromHash();
+        window.addEventListener("hashchange", showFromHashOrDomain);
+        showFromHashOrDomain();
     }
 
     // ---------- GLAVNI INIT ----------
 
     function initWithData(data) {
-        displayLastModified();
-
         if (PAGE_TYPE === "root") {
             initRootPage(data);
         } else if (PAGE_TYPE === "classPage") {
             initClassPage(data);
-        } else if (PAGE_TYPE === "propertyJo") {
-            initPropertyJoPage(data);
+        } else if (PAGE_TYPE === "propertyGroup") {
+            initPropertyGroupPage(data);
         }
     }
 
