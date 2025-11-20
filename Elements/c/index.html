@@ -196,7 +196,80 @@ fetch(JSONLD_URL)
         return r.json();
     })
     .then(data => {
-        populateKlaseDropdown(data);   // ako želiš dropdown KLASE i ovdje
+        populateKlaseDropdown(data);   
+		// helper: iz @id (URI) do CURIE-ja preko KAM ID polja
+function getCurieForProperty(propertyField, data) {
+    if (propertyField && propertyField[0] && propertyField[0]['@id']) {
+        const idValue = propertyField[0]['@id'];
+        const foundElement = Object.values(data).find(item => item['@id'] === idValue);
+        if (foundElement && foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID']) {
+            return foundElement['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value'];
+        }
+    }
+    return '';
+}
+
+// tablica "Svojstva za klasu: X" – ista logika kao na početnoj stranici
+function displayPropertiesForClass(classId, data, className) {
+    const properties = Object.values(data).filter(item => {
+        const domains = item['http://www.w3.org/2000/01/rdf-schema#domain'];
+        return domains && domains.some(domain => domain['@id'] === classId);
+    });
+
+    const content = document.getElementById('content');
+    content.innerHTML = `<h2>Svojstva za klasu: ${className}</h2>`;
+
+    if (properties.length === 0) {
+        content.innerHTML += '<p>Nema svojstava za ovu klasu.</p>';
+        return;
+    }
+
+    let table = `<table id="myTable" class="display">
+        <thead>
+            <tr>
+                <th>CURIE</th>
+                <th>Naziv svojstva</th>
+                <th>Podsvojstvo od</th>
+                <th>Obrnuto od</th>
+                <th>Doseg</th>
+            </tr>
+        </thead>
+        <tbody>`;
+
+    properties.forEach(property => {
+        const curieValue = property['http://www.registar.kam.hr/ontologies/ont.owl/ID']
+            ? property['http://www.registar.kam.hr/ontologies/ont.owl/ID'][0]['@value']
+            : '';
+        const label = property['http://www.w3.org/2000/01/rdf-schema#label']
+            ? property['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value']
+            : 'Unknown Label';
+        const subPropertyOf = getCurieForProperty(
+            property['http://www.w3.org/2000/01/rdf-schema#subPropertyOf'], data
+        );
+        const inverseOf = getCurieForProperty(
+            property['http://www.w3.org/2002/07/owl#inverseOf'], data
+        );
+        const range = getCurieForProperty(
+            property['http://www.w3.org/2000/01/rdf-schema#range'], data
+        );
+
+        table += `<tr>
+            <td>${createCurieLink(curieValue)}</td>
+            <td>${label}</td>
+            <td>${createCurieLink(subPropertyOf)}</td>
+            <td>${createCurieLink(inverseOf)}</td>
+            <td>${createCurieLink(range)}</td>
+        </tr>`;
+    });
+
+    table += '</tbody></table>';
+    content.innerHTML += table;
+
+    $(function () {
+        $('#myTable').DataTable();
+    });
+}
+
 		populateSvojstvaDropdown(data);
         function showFromHash() {
             const localId = getHashId();
