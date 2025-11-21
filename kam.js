@@ -35,47 +35,42 @@ function getHashIdGeneric() {
   // RDA-style linkovi:
   //  - klase:  /Elements/c/#C10001
   //  - svojstva: /Elements/jo/#P10001, /Elements/a/#P100xx, ...
-  function createCurieLink(curieValue) {
-  if (!curieValue) return "";
+function createCurieLink(curieValue) {
+    if (!curieValue) return "";
 
-  const parts = curieValue.split(":");
-  if (parts.length !== 2) return curieValue;
+    const parts = curieValue.split(":");
+    if (parts.length !== 2) return curieValue;
 
-  const prefix = parts[0];   // npr. "kamka" ili "kamkt"
-  const localId = parts[1];  // npr. "P80002" ili "C10001"
+    const prefix = parts[0];   // npr. "kamka" ili "kamkt"
+    const localId = parts[1];  // npr. "P80002" ili "C10001"
 
-  let folder = "";
+    let folder = "";
 
-  // Sve klase idu u Elements/c/
-  if (localId.startsWith("C")) {
-    folder = "c";
-  } else if (localId.startsWith("P")) {
-    // Svojstva: folder je SUFFIX iza "kam"
-    // kamka -> "ka", kamkt -> "kt", kamjo -> "jo" ...
-    if (prefix.startsWith("kam")) {
-      folder = prefix.substring(3);   // uzmi sve iza "kam"
+    // Sve klase idu u Elements/c/
+    if (localId.startsWith("C")) {
+        folder = "c";
+    } else if (localId.startsWith("P")) {
+        // Svojstva: folder je sufiks iza "kam"
+        // kamka -> "ka", kamkt -> "kt", kamjo -> "jo" ...
+        if (prefix.startsWith("kam")) {
+            folder = prefix.substring(3);
+        }
+    } else {
+        // fallback – ako jednom imaš neke druge ID-eve
+        if (prefix.startsWith("kam")) {
+            folder = prefix.substring(3);
+        }
     }
-  } else {
-    // fallback – ako jednom imaš neke druge ID-eve
-    if (prefix.startsWith("kam")) {
-      folder = prefix.substring(3);
-    }
-  }
 
-  if (!folder) {
     // Ako iz nekog razloga ne znamo u koji folder, vrati plain tekst
-    return curieValue;
-  }
+    if (!folder) {
+        return curieValue;
+    }
 
-  const href = `/Elements/${folder}/#${localId}`;
-  return `<a href="${href}">${curieValue}</a>`;
+    const href = `/Elements/${folder}/#${localId}`;
+    return `<a href="${href}">${curieValue}</a>`;
 }
 
-
-    // fallback – ako nije KAM
-    const fallbackLink = `./property.html?curie=${encodeURIComponent(curieValue)}`;
-    return `<a href="${fallbackLink}">${curieValue}</a>`;
-  }
 
   // helper: iz @id (URI-ja) izvuci CURIE iz ontologije
   function getCurieForProperty(propertyField) {
