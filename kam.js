@@ -535,5 +535,4 @@ function populateSvojstvaDropdown() {
       }
     });
 })();
-console.log("Trenutni KAM_CONFIG:", window.KAM_CONFIG);
-console.log("Korišteni jsonPath:", jsonPath);
+
