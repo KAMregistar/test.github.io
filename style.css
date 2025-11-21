@@ -137,3 +137,19 @@
     .download-table tbody tr:last-child {
         border-bottom: 1px solid #ddd;
     }
+/* KAM tablice za svojstva – stabilne širine stupaca */
+table.kam-table {
+    width: 100%;
+    table-layout: fixed; /* omogućuje da drugi stupac popuni ostatak prostora */
+}
+
+table.kam-table th:nth-child(1),
+table.kam-table td:nth-child(1) {
+    width: 220px;         /* fiksna širina prvog stupca */
+    white-space: nowrap;
+}
+
+table.kam-table th:nth-child(2),
+table.kam-table td:nth-child(2) {
+    word-wrap: break-word;
+}
