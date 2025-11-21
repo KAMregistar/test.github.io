@@ -517,22 +517,33 @@ function populateSvojstvaDropdown() {
   displayLastModified();
 
   fetch(jsonPath)
-    .then((r) => {
-      if (!r.ok) throw new Error("Network response was not ok");
-      return r.json();
-    })
-    .then((data) => {
-      RAW_DATA = data;
-      GRAPH = getGraph(data);
+  .then((r) => {
+    if (!r.ok) throw new Error("Network response was not ok");
+    return r.json();
+  })
+  .then((data) => {
+    RAW_DATA = data;
+    GRAPH = getGraph(data);
+
+    try {
       initAfterDataLoaded();
-    })
-    .catch((err) => {
-      console.error("Pogreška u dohvaćanju JSON-LD:", err);
+    } catch (e) {
+      console.error("Greška u JavaScriptu tijekom inicijalizacije:", e);
       const content = document.getElementById("content");
       if (content) {
         content.innerHTML =
-          "<p>Greška pri učitavanju ontologije. Provjeri putanju jsonPath u KAM_CONFIG.</p>";
+          "<p>Greška u JavaScriptu prilikom prikaza ove stranice (JSON je učitan, ali je došlo do greške u kodu). Pogledaj konzolu za detalje.</p>";
       }
-    });
+    }
+  })
+  .catch((err) => {
+    console.error("Greška pri dohvaćanju ili parsiranju JSON-LD:", err);
+    const content = document.getElementById("content");
+    if (content) {
+      content.innerHTML =
+        "<p>Greška pri dohvaćanju ontologije (JSON datoteka se nije mogla učitati). Provjeri jsonPath u KAM_CONFIG i dostupnost datoteke.</p>";
+    }
+  });
+
 })();
 
