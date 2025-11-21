@@ -241,7 +241,7 @@ function populateSvojstvaDropdown() {
     if (!elementType) elementType = "klasa";
 
     let table =
-      `<table id="myClassTable" class="display kam-table">` +
+      `<table id="myClassTable" class="display">` +
       `<thead><tr><th>Svojstvo</th><th>Vrijednost</th></tr></thead>` +
       `<tbody>` +
       `<tr><td>ID</td><td>${id}</td></tr>` +
@@ -253,12 +253,9 @@ function populateSvojstvaDropdown() {
 
     content.innerHTML = table;
 
-if (window.$ && $.fn.DataTable) {
-  $("#myClassTable").DataTable({
-    autoWidth: false   // da DataTables ne razbuca širine koje si zadala u CSS-u
-  });
-}
-
+    if (window.$ && $.fn.DataTable) {
+      $("#myClassTable").DataTable();
+    }
   }
 
   function getHashIdForClass() {
@@ -324,7 +321,7 @@ if (window.$ && $.fn.DataTable) {
     }
 
     let table =
-      `<table id="myPropDetail" class="display kam-table">` +
+      `<table id="myPropTable" class="display">` +
       `<thead>` +
       `<tr>` +
       `<th>CURIE</th>` +
@@ -367,13 +364,11 @@ if (window.$ && $.fn.DataTable) {
     });
 
     table += "</tbody></table>";
-    content.innerHTML = html;
-if (window.$ && $.fn.DataTable) {
-  $("#myPropDetail").DataTable({
-    autoWidth: false
-  });
-}
+    content.innerHTML += table;
 
+    if (window.$ && $.fn.DataTable) {
+      $("#myPropTable").DataTable();
+    }
   }
 
   // pronađi klasu za propertyGroup:
@@ -474,9 +469,7 @@ if (window.$ && $.fn.DataTable) {
 
     let html = `<h2>${label}</h2>
       <table id="myPropDetail" class="display">
-	      <thead>
-      <tr><th>Svojstvo</th><th>Vrijednost</th></tr>
-    </thead>
+
         <tbody>
           <tr><td><b>CURIE</b></td><td>${curie}</td></tr>
           <tr><td><b>Definicija</b></td><td>${def}</td></tr>
