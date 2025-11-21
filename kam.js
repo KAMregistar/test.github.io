@@ -62,7 +62,7 @@ function createCurieLink(curieValue) {
         }
     }
 
-    // Ako iz nekog razloga ne znamo u koji folder, vrati plain tekst
+    // Ako iz nekog razloga ne znamo u koji folder, vrati samo tekst
     if (!folder) {
         return curieValue;
     }
@@ -70,6 +70,7 @@ function createCurieLink(curieValue) {
     const href = `/Elements/${folder}/#${localId}`;
     return `<a href="${href}">${curieValue}</a>`;
 }
+
 
 
   // helper: iz @id (URI-ja) izvuci CURIE iz ontologije
