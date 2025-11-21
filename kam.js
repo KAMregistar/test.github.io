@@ -2,7 +2,7 @@
   // ====== KONFIGURACIJA S STRANICE (index.html ili Elements/.../index.html) ======
   const cfg = window.KAM_CONFIG || {};
   const pageType = cfg.pageType || "root";
-  const jsonPath = cfg.jsonPath || "/KAMOntologija_v12.jsonld";
+  const jsonPath = cfg.jsonPath || "https://www.registar.kam.hr/KAMOntologija_v12.jsonld";
   const groupPrefix = cfg.groupPrefix || null;   // npr. "kamjo"
   const domainLabel = cfg.domainLabel || null;   // npr. "Jedinica opisa"
 
