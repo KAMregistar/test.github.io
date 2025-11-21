@@ -72,7 +72,6 @@ function createCurieLink(curieValue) {
 }
 
 function generateDownloadLinks(curie) {
-  // curie npr. "kamjo:C10001" → uzmemo "C10001" i pretvorimo u "c10001"
   const className = (curie.split(':')[1] || '').toLowerCase().replace(/ /g, '_');
 
   const jsonLdLink = `ontology_elements_${className}.jsonld`;
@@ -80,15 +79,32 @@ function generateDownloadLinks(curie) {
   const rdfXmlLink = `ontology_elements_${className}.rdf`;
 
   return `
-    <table class="download-table">
-      <tr>
-        <td><b>Preuzimanja:</b></td>
-        <td><a href="${jsonLdLink}" download>JSON-LD</a></td>
-        <td><a href="${csvLink}"    download>CSV</a></td>
-        <td><a href="${rdfXmlLink}" download>RDF/XML</a></td>
-      </tr>
+    <table class="download-table" style="margin-top:20px;">
+      <tbody>
+        <tr>
+          <td>
+            <a href="${jsonLdLink}" download><b>JSON-LD</b></a>
+            <span style="color:#777;"> (application/ld+json)</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <a href="${csvLink}" download><b>CSV</b></a>
+            <span style="color:#777;"> (text/csv)</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <a href="${rdfXmlLink}" download><b>RDF/XML</b></a>
+            <span style="color:#777;"> (application/rdf+xml)</span>
+          </td>
+        </tr>
+      </tbody>
     </table>`;
 }
+
 
 
   // helper: iz @id (URI-ja) izvuci CURIE iz ontologije
