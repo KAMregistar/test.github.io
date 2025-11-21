@@ -77,10 +77,12 @@ function generateDownloadLinks(curie) {
   const jsonLdLink = `ontology_elements_${className}.jsonld`;
   const csvLink    = `ontology_elements_${className}.csv`;
   const rdfXmlLink = `ontology_elements_${className}.rdf`;
+  const ttlLink    = `ontology_elements_${className}.ttl`;
 
   return `
     <table class="download-table" style="margin-top:20px;">
       <tbody>
+
         <tr>
           <td>
             <a href="${jsonLdLink}" download><b>JSON-LD</b></a>
@@ -101,9 +103,18 @@ function generateDownloadLinks(curie) {
             <span style="color:#777;"> (application/rdf+xml)</span>
           </td>
         </tr>
+
+        <tr>
+          <td>
+            <a href="${ttlLink}" download><b>TTL</b></a>
+            <span style="color:#777;"> (text/turtle)</span>
+          </td>
+        </tr>
+
       </tbody>
     </table>`;
 }
+
 
 
 
