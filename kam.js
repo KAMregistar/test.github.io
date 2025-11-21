@@ -71,6 +71,24 @@ function createCurieLink(curieValue) {
     return `<a href="${href}">${curieValue}</a>`;
 }
 
+function generateDownloadLinks(curie) {
+  // curie npr. "kamjo:C10001" → uzmemo "C10001" i pretvorimo u "c10001"
+  const className = (curie.split(':')[1] || '').toLowerCase().replace(/ /g, '_');
+
+  const jsonLdLink = `ontology_elements_${className}.jsonld`;
+  const csvLink    = `ontology_elements_${className}.csv`;
+  const rdfXmlLink = `ontology_elements_${className}.rdf`;
+
+  return `
+    <table class="download-table">
+      <tr>
+        <td><b>Preuzimanja:</b></td>
+        <td><a href="${jsonLdLink}" download>JSON-LD</a></td>
+        <td><a href="${csvLink}"    download>CSV</a></td>
+        <td><a href="${rdfXmlLink}" download>RDF/XML</a></td>
+      </tr>
+    </table>`;
+}
 
 
   // helper: iz @id (URI-ja) izvuci CURIE iz ontologije
@@ -305,6 +323,19 @@ function populateSvojstvaDropdown() {
     const content = document.getElementById("content");
     if (!content) return;
 
+    // pronađi CURIE za ovu klasu (npr. "kamjo:C10001") da znamo koje datoteke za preuzimanje nudimo
+    let classCurie = "";
+    const classEl = GRAPH.find(
+      (el) => isClass(el) && el["@id"] === classId
+    );
+    if (classEl) {
+      const idField =
+        classEl["http://www.registar.kam.hr/ontologies/ont.owl/ID"];
+      if (idField && idField[0] && idField[0]["@value"]) {
+        classCurie = idField[0]["@value"];
+      }
+    }
+
     const properties = GRAPH.filter((item) => {
       const domains = item["http://www.w3.org/2000/01/rdf-schema#domain"];
       return (
@@ -317,6 +348,10 @@ function populateSvojstvaDropdown() {
 
     if (!properties.length) {
       content.innerHTML += "<p>Za ovu klasu nema definiranih svojstava.</p>";
+      // čak i ako nema svojstava, možeš po želji prikazati download (ako postoje datoteke)
+      if (classCurie) {
+        content.innerHTML += generateDownloadLinks(classCurie);
+      }
       return;
     }
 
@@ -366,10 +401,16 @@ function populateSvojstvaDropdown() {
     table += "</tbody></table>";
     content.innerHTML += table;
 
+    // nakon tablice – dodaj blok za preuzimanje, ako znamo CURIE klase
+    if (classCurie) {
+      content.innerHTML += generateDownloadLinks(classCurie);
+    }
+
     if (window.$ && $.fn.DataTable) {
       $("#myPropTable").DataTable();
     }
-  }
+}
+
 
   // pronađi klasu za propertyGroup:
   //  - ako ima domainLabel => tražimo po labelu
