@@ -469,7 +469,9 @@ function populateSvojstvaDropdown() {
 
     let html = `<h2>${label}</h2>
       <table id="myPropDetail" class="display">
-
+	      <thead>
+      <tr><th>Svojstvo</th><th>Vrijednost</th></tr>
+    </thead>
         <tbody>
           <tr><td><b>CURIE</b></td><td>${curie}</td></tr>
           <tr><td><b>Definicija</b></td><td>${def}</td></tr>
