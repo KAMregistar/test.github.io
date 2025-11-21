@@ -52,18 +52,16 @@
     © 2025 Nacionalna i sveučilišna knjižnica u Zagrebu. Sva prava pridržana.
 </div>
 
-  <script>
-    window.KAM_CONFIG = {
-      pageType: "propertyGroup",
-      jsonPath: "../../KAMOntologija_v12.jsonld",
+<script>
+	window.KAM_CONFIG = {
+		pageType: "propertyGroup",
+		jsonPath: "../../KAMOntologija_v12.jsonld",
 
-      /* !! SAMO OVO MIJENJAŠ !! */
+		groupPrefix: "kamm",          // npr. "kamjo", "kama", "kamm"…
+		domainLabel: "Mjesto"     // npr. "Jedinica opisa", "Mjesto", …
+	};
+</script>
 
-      groupPrefix: "kamm",          // npr. "kamjo", "kama", "kamm"…
-      domainLabel: "Mjesto"     // npr. "Jedinica opisa", "Mjesto", …
-    };
-  </script>
-
-  <script src="../../kam.js"></script>
+<script src="../../kam.js"></script>
 </body>
 </html>
