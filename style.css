@@ -137,3 +137,24 @@
     .download-table tbody tr:last-child {
         border-bottom: 1px solid #ddd;
     }
+/* Fiksna širina prvog stupca za tablice detalja klase i svojstva */
+#myClassTable,
+#myPropDetail {
+    width: 100%;
+    table-layout: fixed;  /* drugi stupac popunjava ostatak širine */
+}
+
+#myClassTable th:nth-child(1),
+#myClassTable td:nth-child(1),
+#myPropDetail th:nth-child(1),
+#myPropDetail td:nth-child(1) {
+    width: 220px;         /* ovdje mijenjaš širinu po želji, npr. 200, 250... */
+    white-space: nowrap;  /* da nazivi tipa "Podsvojstvo od" ne idu u tri reda */
+}
+
+#myClassTable th:nth-child(2),
+#myClassTable td:nth-child(2),
+#myPropDetail th:nth-child(2),
+#myPropDetail td:nth-child(2) {
+    word-wrap: break-word; /* dugi tekst/URI se fino lome u drugom stupcu */
+}
