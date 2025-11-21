@@ -241,7 +241,7 @@ function populateSvojstvaDropdown() {
     if (!elementType) elementType = "klasa";
 
     let table =
-      `<table id="myClassTable" class="display">` +
+      `<table id="myClassTable" class="display kam-table">` +
       `<thead><tr><th>Svojstvo</th><th>Vrijednost</th></tr></thead>` +
       `<tbody>` +
       `<tr><td>ID</td><td>${id}</td></tr>` +
@@ -253,9 +253,12 @@ function populateSvojstvaDropdown() {
 
     content.innerHTML = table;
 
-    if (window.$ && $.fn.DataTable) {
-      $("#myClassTable").DataTable();
-    }
+if (window.$ && $.fn.DataTable) {
+  $("#myClassTable").DataTable({
+    autoWidth: false   // da DataTables ne razbuca širine koje si zadala u CSS-u
+  });
+}
+
   }
 
   function getHashIdForClass() {
@@ -321,7 +324,7 @@ function populateSvojstvaDropdown() {
     }
 
     let table =
-      `<table id="myPropTable" class="display">` +
+      `<table id="myPropDetail" class="display kam-table">` +
       `<thead>` +
       `<tr>` +
       `<th>CURIE</th>` +
@@ -364,11 +367,13 @@ function populateSvojstvaDropdown() {
     });
 
     table += "</tbody></table>";
-    content.innerHTML += table;
+    content.innerHTML = html;
+if (window.$ && $.fn.DataTable) {
+  $("#myPropDetail").DataTable({
+    autoWidth: false
+  });
+}
 
-    if (window.$ && $.fn.DataTable) {
-      $("#myPropTable").DataTable();
-    }
   }
 
   // pronađi klasu za propertyGroup:
