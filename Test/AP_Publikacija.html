@@ -63,6 +63,79 @@
     cursor:pointer;
   }
   .entity-btn:hover{ background:#5a009e; }
+<style>
+  * { box-sizing: border-box; }
+
+  .card{
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:14px;
+    padding:16px;
+    margin:14px 0;
+  }
+  .row{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px}
+  label{font-size:13px;color:#111827}
+  input,textarea{
+    width:100%;
+    padding:10px 12px;
+    border:1px solid #94a3b8;
+    border-radius:0;
+    background:#fff
+  }
+  .cols-12{grid-column:span 12}
+  .cols-6{grid-column:span 6}
+  .cols-4{grid-column:span 4}
+  .cols-3{grid-column:span 3}
+
+  .card h2,
+  .card h3{
+    background:#eee;
+    margin:-16px -16px 12px -16px;
+    padding:10px 16px;
+    border-bottom:1px solid #e5e7eb;
+    font-size:16px;
+    font-weight:600;
+  }
+
+  /* ljubičasti gumbi za entitete – već imaš, ostaju */
+
+  /* GUMBI NA DNU (kao u UnosGrade4) */
+  .actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:flex-end;
+    padding:10px 0;
+  }
+  button{
+    appearance:none;
+    border:0;
+    border-radius:0px;
+    padding:10px 16px;
+    cursor:pointer;
+  }
+  .primary{
+    background:#6d28d9;
+    color:#fff;
+  }
+  .ghost{
+    background:transparent;
+    border:1px solid #e5e7eb;
+  }
+
+  /* mali ljubičasti gumb u naslovima blokova */
+  .small-btn{
+    font-size:12px;
+    padding:4px 10px;
+    margin-left:8px;
+    background:#6a0dad;
+    color:#fff;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+  }
+  .small-btn:hover{ background:#5a009e; }
+</style>
 
 </style>
 </head>
@@ -101,7 +174,13 @@
 
     <!-- 2. IDENTIFIKACIJA JEDINICE GRAĐE -->
     <section class="card">
-      <h3>2. Identifikacija jedinice građe</h3>
+  <h3>
+    2. Identifikacija jedinice građe
+    <button class="small-btn" type="button"
+            onclick="window.open('https://pravilnik.kam.hr/index.php?action=chapter&id=9','_blank')">
+      KAM Pravilnik – Identifikacija jedinice građe
+    </button>
+  </h3>
       <div class="row">
         <div class="cols-3">
           <label for="e2_1">2.1 Razina opisa djela</label>
@@ -152,7 +231,14 @@
 
     <!-- 3. TEMATIKA I SADRŽAJ JEDINICE GRAĐE -->
     <section class="card">
-      <h3>3. Tematika i sadržaj jedinice građe</h3>
+  <h3>
+    3. Tematika i sadržaj jedinice građe
+    <button class="small-btn" type="button"
+            onclick="window.open('https://pravilnik.kam.hr/index.php?action=chapter&id=11','_blank')">
+      KAM Pravilnik – Tematika i sadržaj jedinice građe
+    </button>
+  </h3>
+
       <div class="row">
         <div class="cols-12">
           <label for="e3_3">3.3 Opis sadržaja</label>
@@ -199,7 +285,14 @@
 
     <!-- 5. ŽIVOTNI CIKLUS JEDINICE GRAĐE -->
     <section class="card">
-      <h3>5. Životni ciklus jedinice građe</h3>
+  <h3>
+    5. Životni ciklus jedinice građe
+    <button class="small-btn" type="button"
+            onclick="window.open('https://pravilnik.kam.hr/index.php?action=chapter&id=14','_blank')">
+      KAM Pravilnik – Životni ciklus jedinice građe
+    </button>
+  </h3>
+
       <div class="row">
         <div class="cols-6">
           <label for="e5_1">5.1 Povijest djela</label>
@@ -228,7 +321,14 @@
 
     <!-- 6. DOSTUPNOST I UPORABA JEDINICE GRAĐE -->
     <section class="card">
-      <h3>6. Dostupnost i uporaba jedinice građe</h3>
+  <h3>
+    6. Dostupnost i uporaba jedinice građe
+    <button class="small-btn" type="button"
+            onclick="window.open('https://pravilnik.kam.hr/index.php?action=chapter&id=15','_blank')">
+      KAM Pravilnik – Dostupnost i uporaba jedinice građe
+    </button>
+  </h3>
+
       <div class="row">
         <div class="cols-12">
           <label for="e6_1">6.1 Ciljana publika djela</label>
@@ -243,7 +343,14 @@
 
     <!-- 10. ODNOSI I NAPOMENE O ODNOSIMA -->
     <section class="card">
-      <h3>10. Odnosi i napomene o odnosima među jedinicama opisa</h3>
+  <h3>
+    10. Odnosi i napomene o odnosima među jedinicama opisa
+    <button class="small-btn" type="button"
+            onclick="window.open('https://pravilnik.kam.hr/index.php?action=chapter&id=21','_blank')">
+      KAM Pravilnik – Odnosi i napomene o odnosima
+    </button>
+  </h3>
+
       <div class="row">
         <div class="cols-4">
           <label for="e10_1">10.1 Odnos djela i djela</label>
@@ -277,6 +384,13 @@
         </div>
       </div>
     </section>
+    <div class="actions">
+      <button class="ghost" type="button">Test</button>
+      <button class="primary" type="button">Generiraj JSON-LD</button>
+      <button class="primary" type="button">Generiraj Turtle</button>
+      <button class="primary" type="button">Generiraj RDF/XML</button>
+      <button class="primary" type="button">Generiraj XLSX</button>
+    </div>
 
   </form>
 </div>
