@@ -144,7 +144,6 @@
   align-items: center;
 }
 
-/* "normalna" polja: svaki unos zauzima cijelu širinu kolone (cols-6) */
 .field-group .ap-input {
   box-sizing: border-box;
   flex: 1 1 100%;
