@@ -377,110 +377,117 @@ function initApplicationProfilePage() {
 
 // grupira elementUsage po poglavlju (broj prije točke, npr. "2", "4", "5", "6", "10")
 function renderApplicationProfileForm(container, apData) {
-  const usages = apData.elementUsage || [];
-  const groups = {};
+  const cfg = window.KAM_CONFIG || {};
 
-  // grupiranje po prvom broju ispred točke (2.*, 4.*, 5.*...)
-  usages.forEach((u) => {
-    const num = u.elementNumber || "";
-    const sectionNum = num.split(".")[0] || "other";
+  // 1. Uzmemo elementUsage iz tvog JSON-LD-a
+  const usages = Array.isArray(apData.elementUsage) ? apData.elementUsage : [];
+
+  if (!usages.length) {
+    container.innerHTML = "<p>Nema definiranih elemenata u ovom aplikacijskom profilu.</p>";
+    return;
+  }
+
+  // 2. Grupiramo po prvom broju u elementNumber (2.* → poglavlje 2)
+  const groups = {};
+  usages.forEach(u => {
+    const num = u.elementNumber;
+    if (!num) return;
+    const sectionNum = String(num).split(".")[0]; // "2" iz "2.2"
     if (!groups[sectionNum]) groups[sectionNum] = [];
     groups[sectionNum].push(u);
   });
 
-  const sectionKeys = Object.keys(groups).sort((a, b) => Number(a) - Number(b));
+  const sectionLabels = cfg.sectionLabels || {};
+  const chapters = cfg.pravilnikChapters || {};
+  const basePravilnik = cfg.pravilnikBaseUrl || "";
+
   container.innerHTML = "";
 
-  const cfg = window.KAM_CONFIG || {};
-  const basePravilnik = cfg.pravilnikBaseUrl || "../Pravilnik/KAM_Pravilnik.html#poglavlje-";
-  const labels = cfg.sectionLabels || {};
+  // 3. Za svaku sekciju nacrtamo karticu + polja
+  Object.keys(groups)
+    .sort((a, b) => Number(a) - Number(b))
+    .forEach(sec => {
+      const sectionEl = document.createElement("section");
+      sectionEl.className = "card";
 
-  sectionKeys.forEach((sec) => {
-    const sectionEl = document.createElement("section");
-    sectionEl.className = "card";
+      // HEADER (naziv poglavlja + gumb za Pravilnik)
+      const header = document.createElement("div");
+      header.className = "section-header";
 
-    // --- HEADER S NAZIVOM POGLAVLJA ---
-    const header = document.createElement("div");
-    header.className = "section-header";
+      const h3 = document.createElement("h3");
+      const name = sectionLabels[sec] || ("Poglavlje " + sec);
+      h3.textContent = sec + ". " + name;
+      header.appendChild(h3);
 
-    const title = document.createElement("h3");
-    const sectionName = labels[sec] || ("Poglavlje " + sec);
-    title.textContent = sec + ". " + sectionName;
+      const helpBtn = document.createElement("button");
+      helpBtn.type = "button";
+      helpBtn.className = "section-help-btn";
+      helpBtn.textContent = "Više o ovim elementima u Pravilniku";
 
-    // --- GUMB ZA PRAVILNIK ---
-    const helpBtn = document.createElement("button");
-    helpBtn.type = "button";
-    helpBtn.className = "section-help-btn";
-    helpBtn.textContent = "Više o ovim elementima u Pravilniku";
-helpBtn.addEventListener("click", () => {
-  const chapterId = cfg.pravilnikChapters ? cfg.pravilnikChapters[sec] : null;
-  if (chapterId) {
-    const url = basePravilnik + chapterId;
-    window.open(url, "_blank");
-  } else {
-    alert("Nema definiranog linka za poglavlje " + sec);
-  }
-});
+      const chapterId = chapters[sec];
+      if (chapterId) {
+        helpBtn.addEventListener("click", () => {
+          window.open(basePravilnik + chapterId, "_blank");
+        });
+      } else {
+        helpBtn.disabled = true;
+      }
 
+      header.appendChild(helpBtn);
+      sectionEl.appendChild(header);
 
-    header.appendChild(title);
-    header.appendChild(helpBtn);
-    sectionEl.appendChild(header);
+      // RED s poljima
+      const row = document.createElement("div");
+      row.className = "row";
 
-    const row = document.createElement("div");
-    row.className = "row";
+      groups[sec]
+        .sort((a, b) => a.elementNumber.localeCompare(b.elementNumber))
+        .forEach(u => {
+          const col = document.createElement("div");
+          col.className = "cols-12";
 
-    // sortiranje elemenata unutar grupe po broju elementa
-    groups[sec]
-      .sort((a, b) =>
-        (a.elementNumber || "").localeCompare(b.elementNumber || "")
-      )
-      .forEach((u) => {
-        const col = document.createElement("div");
-        col.className = "cols-12";
+          const id = "e" + u.elementNumber.replace(".", "_");
 
-        const id = "e" + (u.elementNumber || "").replace(".", "_");
+          // Label + zvjezdica + "i" ikona
+          const labelWrap = document.createElement("div");
+          labelWrap.className = "field-label";
 
-        // omot za label + info ikonu
-const labelWrapper = document.createElement("div");
-labelWrapper.className = "field-label";
+          const label = document.createElement("label");
+          label.setAttribute("for", id);
+          label.textContent = u.elementNumber + " " + (u.label || "");
 
-const label = document.createElement("label");
-label.setAttribute("for", id);
-label.textContent =
-  (u.elementNumber ? u.elementNumber + " " : "") + (u.label || "");
+          if (u.required) {
+            const star = document.createElement("span");
+            star.className = "required";
+            star.textContent = " *";
+            label.appendChild(star);
+          }
 
-// zvjezdica za obavezna polja
-if (u.required) {
-  const star = document.createElement("span");
-  star.textContent = " *";
-  star.className = "required";
-  label.appendChild(star);
-}
+          labelWrap.appendChild(label);
 
-labelWrapper.appendChild(label);
+          if (u.definition) {
+            const info = document.createElement("span");
+            info.className = "info-icon";
+            info.textContent = "i";
+            info.title = u.definition;
+            labelWrap.appendChild(info);
+          }
 
-// mala "i" ikona ako postoji definicija
-if (u.definition) {
-  const info = document.createElement("span");
-  info.className = "info-icon";
-  info.textContent = "i";
-  info.title = u.definition;   // tooltip na hover
-  labelWrapper.appendChild(info);
-}
+          col.appendChild(labelWrap);
 
-const input = document.createElement("input");
-input.id = id;
-input.dataset.propertyIri = u.property || "";
+          // Jednostavno: za sve polja input type="text"
+          const input = document.createElement("input");
+          input.type = "text";
+          input.id = id;
+          input.dataset.propertyIri = u.property || "";
+          col.appendChild(input);
 
-col.appendChild(labelWrapper);
-col.appendChild(input);
+          row.appendChild(col);
+        });
 
-      });
-
-    sectionEl.appendChild(row);
-    container.appendChild(sectionEl);
-  });
+      sectionEl.appendChild(row);
+      container.appendChild(sectionEl);
+    });
 }
 
 
