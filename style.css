@@ -194,3 +194,71 @@
 .repeatable-add:active {
   transform: scale(0.9);
 }
+/* === KAM AP – dvostupčani grid za poglavlja === */
+
+/* Unutar kartica (sekcija) AP forme, red je grid sa 2 stupca  */
+.card .row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 jednaka stupca */
+    column-gap: 24px;   /* razmak između lijevog i desnog stupca */
+    row-gap: 12px;      /* vertikalni razmak između redova (poglavlja) */
+}
+
+/* U gridu ne želimo da .cols-6 i .cols-12 forsiraju svoje širine */
+.card .cols-6,
+.card .cols-12 {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Kolona unutar grida – sve lijepo ispod naslova */
+.ap-col {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Grupa polja za jedan element (uključujući ponavljanja) */
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;  /* mali razmak između ponovljenih inputa */
+}
+
+/* Napomene (cijela širina) već imaju cols-12 pa će u gridu
+   zauzeti cijeli red, ali ako želiš ih još naglasiti,
+   možeš dodati, nije obavezno: */
+.field-group.field-group-full {
+    width: 100%;
+}
+
+/* Plus gumb – kružić, uvijek iste veličine, uz zadnji input */
+.field-group .repeatable-add {
+    align-self: flex-start;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    margin-top: 2px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid #5835d0;
+    border-radius: 50%;
+    background: transparent;
+    color: #5835d0;
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 0;
+}
+
+.field-group .repeatable-add:hover {
+    background: #f3eeff;
+}
+
+.field-group .repeatable-add:active {
+    transform: scale(0.9);
+}
