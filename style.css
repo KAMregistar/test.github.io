@@ -137,16 +137,19 @@
     .download-table tbody tr:last-child {
         border-bottom: 1px solid #ddd;
     }
+
 .field-group {
   display: flex;
   gap: 0.5rem;
   align-items: center;
 }
 
+/* "normalna" polja: svaki unos zauzima cijelu širinu kolone (cols-6) */
 .field-group .ap-input {
-  flex: 1 1 auto;
+  box-sizing: border-box;
+  flex: 1 1 100%;
+  min-width: 120px;
 }
-
 
 .repeatable-add {
   width: 20px;
