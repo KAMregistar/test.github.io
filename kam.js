@@ -412,10 +412,16 @@ function renderApplicationProfileForm(container, apData) {
     helpBtn.type = "button";
     helpBtn.className = "section-help-btn";
     helpBtn.textContent = "Više o ovim elementima u Pravilniku";
-    helpBtn.addEventListener("click", () => {
-      const url = basePravilnik + sec;
-      window.open(url, "_blank");
-    });
+helpBtn.addEventListener("click", () => {
+  const chapterId = cfg.pravilnikChapters ? cfg.pravilnikChapters[sec] : null;
+  if (chapterId) {
+    const url = basePravilnik + chapterId;
+    window.open(url, "_blank");
+  } else {
+    alert("Nema definiranog linka za poglavlje " + sec);
+  }
+});
+
 
     header.appendChild(title);
     header.appendChild(helpBtn);
