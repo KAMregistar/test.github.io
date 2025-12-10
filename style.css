@@ -148,16 +148,30 @@
 }
 
 .repeatable-add {
-  border: none;
-  border-radius: 50%;
-  padding: 0.25rem 0.6rem;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  margin-left: 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid #5835d0;   /* ljubičasti obrub */
+  background: transparent;     /* bez boje */
+  color: #5835d0;              /* ljubičasti + simbol */
+  border-radius: 50%;          /* pravi krug */
   cursor: pointer;
+
+  font-size: 14px;
+  line-height: 0;              /* da plus bude centriran */
   font-weight: bold;
-  line-height: 1;
-  background-color: #5835d0; /* KAM ljubičasta, prilagodi po želji */
-  color: #fff;
 }
 
 .repeatable-add:hover {
-  opacity: 0.85;
+  background: #f3eeff;         /* vrlo lagana ljubičasta sjena */
+}
+
+.repeatable-add:active {
+  transform: scale(0.9);
 }
