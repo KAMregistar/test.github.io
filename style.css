@@ -147,25 +147,15 @@
   flex: 1 1 auto;
 }
 
+
 .repeatable-add {
-  width: 22px;
-  height: 22px;
-  padding: 0;
-  margin-left: 4px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border: 2px solid #5835d0;   /* ljubičasti obrub */
-  background: transparent;     /* bez boje */
-  color: #5835d0;              /* ljubičasti + simbol */
-  border-radius: 50%;          /* pravi krug */
-  cursor: pointer;
-
-  font-size: 14px;
-  line-height: 0;              /* da plus bude centriran */
-  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid #5835d0;
+  border-radius: 50%;
+  background: none;
+  color: #5835d0;
+  font-size: 13px;
 }
 
 .repeatable-add:hover {
