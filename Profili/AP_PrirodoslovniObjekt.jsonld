@@ -1,0 +1,229 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "ap": "http://www.registar.kam.hr/ontologies/ap#",
+    "property": {
+      "@id": "ap:property",
+      "@type": "@id"
+    },
+    "elementNumber": "ap:elementNumber",
+    "label": "rdfs:label",
+    "obligation": "ap:obligation",
+    "required": "ap:required",
+    "elementUsage": {
+      "@id": "ap:elementUsage",
+      "@container": "@set"
+    }
+  },
+
+  "@id": "http://www.registar.kam.hr/ApplicationProfiles/#PrirodoslovniObjekt",
+  "@type": "ap:ApplicationProfile",
+  "label": "Aplikacijski profil – Prirodoslovni objekt",
+
+  "elementUsage": [
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.2",
+      "label": "Razina opisa pojavnog oblika",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40040",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.3",
+      "label": "Naziv ili vrsta",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40041",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.29",
+      "label": "Identifikator primjerka",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50001",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.31",
+      "label": "Napomena o identifikaciji primjerka",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50003",
+      "obligation": "Nije obvezno",
+      "required": false
+    },
+
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.1",
+      "label": "Opseg",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40046",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima",
+      "required": true
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.2",
+      "label": "Napomena o opsegu",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40047",
+      "obligation": "Nije obvezno",
+      "required": false
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.5",
+      "label": "Dimenzije",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40050",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima",
+      "required": true
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.6",
+      "label": "Napomena o dimenzijama",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40051",
+      "obligation": "Nije obvezno",
+      "required": false
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.7",
+      "label": "Masa",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40052",
+      "obligation": "Nije obvezno",
+      "required": false
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.13",
+      "label": "Boja",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40058",
+      "obligation": "Nije obvezno",
+      "required": false
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.14",
+      "label": "Napomena o boji",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40059",
+      "obligation": "Nije obvezno",
+      "required": false
+    },
+
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "5.2",
+      "label": "Plan sređivanja",
+      "property": "http://www.registar.kam.hr/Elements/d/#P20012",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima",
+      "required": true
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "5.7",
+      "label": "Povijest primjerka",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50013",
+      "obligation": "Nije obvezno",
+      "required": false
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "5.8",
+      "label": "Dodani natpisi i oznake",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50006",
+      "obligation": "Nije obvezno",
+      "required": false
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "5.9",
+      "label": "Napomena o dodanim natpisima i oznakama",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50007",
+      "obligation": "Nije obvezno",
+      "required": false
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "5.10",
+      "label": "Način nabave",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50009",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "5.11",
+      "label": "Napomena o nabavi",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50010",
+      "obligation": "Nije obvezno",
+      "required": false
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "5.13",
+      "label": "Stanje primjerka",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50011",
+      "obligation": "Nije obvezno",
+      "required": false
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "5.14",
+      "label": "Konzervacija i restauracija",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50012",
+      "obligation": "Obvezno kad je primjenjivo i dostupno",
+      "required": true
+    },
+
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "6.6",
+      "label": "Tehnički uvjeti pristupa",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40078",
+      "obligation": "Nije obvezno",
+      "required": false
+    },
+
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.7",
+      "label": "Odnos primjerka i primjerka",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50021",
+      "obligation": "Nije obvezno",
+      "required": false
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.12",
+      "label": "Odnos primjerka i agenta",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50025",
+      "obligation": "Nije obvezno",
+      "required": false
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.16",
+      "label": "Odnos primjerka i mjesta",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50030",
+      "obligation": "Nije obvezno",
+      "required": false
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.22",
+      "label": "Odnos primjerka i vremenskog raspona",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50031",
+      "obligation": "Nije obvezno",
+      "required": false
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.29",
+      "label": "Napomena o odnosu primjerka i drugih jedinica opisa",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50123",
+      "obligation": "Nije obvezno",
+      "required": false
+    }
+  ]
+}
