@@ -138,31 +138,25 @@
         border-bottom: 1px solid #ddd;
     }
 
-/* grupa za jedno AP polje: inputi jedan ispod drugog, plus na dnu */
 .field-group {
   display: flex;
-  flex-direction: column;   /* VERTIKALNO slaganje */
-  gap: 0.35rem;
-  align-items: flex-start;
+  flex-direction: column;   /* vertical stacking */
+  gap: 0.3rem;
 }
 
-/* svi inputi zauzimaju cijelu širinu kolone (cols-6 ili cols-12) */
-.field-group .ap-input {
-  box-sizing: border-box;
-  width: 100%;
-  min-width: 0;
+.field-row {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
-/* napomene već imaju cols-12 pa će biti cijela stranica;
-   ne moraš ih posebno dirati, ali ako želiš: */
-.field-group.field-group-full .ap-input {
+.field-row .ap-input {
+  flex: 1 1 auto;
   width: 100%;
 }
 
-/* plus kružić – uvijek ista veličina, ne rasteže se */
-.repeatable-add {
+.field-row .repeatable-add {
   flex: 0 0 auto;
-  align-self: flex-start;       /* ostani lijevo, ne širi se */
   width: 22px;
   height: 22px;
   padding: 0;
@@ -173,18 +167,28 @@
   align-items: center;
 
   border: 2px solid #5835d0;
+  border-radius: 50%;
   background: transparent;
   color: #5835d0;
-  border-radius: 50%;
   cursor: pointer;
-
   font-size: 14px;
   font-weight: bold;
   line-height: 0;
 }
 
-.repeatable-add:hover {
+.field-row .repeatable-add:active {
+  transform: scale(0.9);
+}
+
+.field-row .repeatable-add:hover {
   background: #f3eeff;
+}
+
+
+/* napomene već imaju cols-12 pa će biti cijela stranica;
+   ne moraš ih posebno dirati, ali ako želiš: */
+.field-group.field-group-full .ap-input {
+  width: 100%;
 }
 
 .repeatable-add:active {
