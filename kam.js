@@ -390,18 +390,38 @@ function renderApplicationProfileForm(container, apData) {
   const sectionKeys = Object.keys(groups).sort((a, b) => Number(a) - Number(b));
   container.innerHTML = "";
 
+  const cfg = window.KAM_CONFIG || {};
+  const basePravilnik = cfg.pravilnikBaseUrl || "../Pravilnik/KAM_Pravilnik.html#poglavlje-";
+
   sectionKeys.forEach((sec) => {
     const sectionEl = document.createElement("section");
     sectionEl.className = "card";
 
+    // HEADER: naslov poglavlja + gumb za Pravilnik
+    const header = document.createElement("div");
+    header.className = "section-header";
+
     const h3 = document.createElement("h3");
     h3.textContent = sec + ". poglavlje";
-    sectionEl.appendChild(h3);
+
+    const helpBtn = document.createElement("button");
+    helpBtn.type = "button";
+    helpBtn.className = "section-help-btn";
+    helpBtn.textContent = "Više o ovim elementima u Pravilniku";
+
+    helpBtn.addEventListener("click", () => {
+      const url = basePravilnik + sec;
+      window.open(url, "_blank");
+    });
+
+    header.appendChild(h3);
+    header.appendChild(helpBtn);
+    sectionEl.appendChild(header);
 
     const row = document.createElement("div");
     row.className = "row";
 
-    // sortiraj elemente unutar poglavlja po elementNumber
+    // sortiraj elemente unutar poglavlja po broju elementa
     groups[sec]
       .sort((a, b) =>
         (a.elementNumber || "").localeCompare(b.elementNumber || "")
@@ -437,6 +457,7 @@ function renderApplicationProfileForm(container, apData) {
     container.appendChild(sectionEl);
   });
 }
+
 
 // poveže donje gumbe s generiranjem JSON-LD instance (za sada samo console.log + download)
 function wireApButtons() {
