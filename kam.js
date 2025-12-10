@@ -380,9 +380,10 @@ function renderApplicationProfileForm(container, apData) {
   const usages = apData.elementUsage || [];
   const groups = {};
 
+  // grupiranje po prvom broju ispred točke (2.*, 4.*, 5.*...)
   usages.forEach((u) => {
     const num = u.elementNumber || "";
-    const sectionNum = num.split(".")[0] || "ostalo";
+    const sectionNum = num.split(".")[0] || "other";
     if (!groups[sectionNum]) groups[sectionNum] = [];
     groups[sectionNum].push(u);
   });
@@ -392,36 +393,38 @@ function renderApplicationProfileForm(container, apData) {
 
   const cfg = window.KAM_CONFIG || {};
   const basePravilnik = cfg.pravilnikBaseUrl || "../Pravilnik/KAM_Pravilnik.html#poglavlje-";
+  const labels = cfg.sectionLabels || {};
 
   sectionKeys.forEach((sec) => {
     const sectionEl = document.createElement("section");
     sectionEl.className = "card";
 
-    // HEADER: naslov poglavlja + gumb za Pravilnik
+    // --- HEADER S NAZIVOM POGLAVLJA ---
     const header = document.createElement("div");
     header.className = "section-header";
 
-    const h3 = document.createElement("h3");
-    h3.textContent = sec + ". poglavlje";
+    const title = document.createElement("h3");
+    const sectionName = labels[sec] || ("Poglavlje " + sec);
+    title.textContent = sec + ". " + sectionName;
 
+    // --- GUMB ZA PRAVILNIK ---
     const helpBtn = document.createElement("button");
     helpBtn.type = "button";
     helpBtn.className = "section-help-btn";
     helpBtn.textContent = "Više o ovim elementima u Pravilniku";
-
     helpBtn.addEventListener("click", () => {
       const url = basePravilnik + sec;
       window.open(url, "_blank");
     });
 
-    header.appendChild(h3);
+    header.appendChild(title);
     header.appendChild(helpBtn);
     sectionEl.appendChild(header);
 
     const row = document.createElement("div");
     row.className = "row";
 
-    // sortiraj elemente unutar poglavlja po broju elementa
+    // sortiranje elemenata unutar grupe po broju elementa
     groups[sec]
       .sort((a, b) =>
         (a.elementNumber || "").localeCompare(b.elementNumber || "")
@@ -457,6 +460,7 @@ function renderApplicationProfileForm(container, apData) {
     container.appendChild(sectionEl);
   });
 }
+
 
 
 // poveže donje gumbe s generiranjem JSON-LD instance (za sada samo console.log + download)
