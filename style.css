@@ -137,3 +137,27 @@
     .download-table tbody tr:last-child {
         border-bottom: 1px solid #ddd;
     }
+.field-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.field-group .ap-input {
+  flex: 1 1 auto;
+}
+
+.repeatable-add {
+  border: none;
+  border-radius: 50%;
+  padding: 0.25rem 0.6rem;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1;
+  background-color: #5835d0; /* KAM ljubičasta, prilagodi po želji */
+  color: #fff;
+}
+
+.repeatable-add:hover {
+  opacity: 0.85;
+}

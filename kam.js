@@ -482,16 +482,41 @@ function renderApplicationProfileForm(container, apData) {
       labelWrap.appendChild(info);
     }
 
-    col.appendChild(labelWrap);
+              col.appendChild(labelWrap);
 
-    // Jednostavno: za sve polja input type="text"
-    const input = document.createElement("input");
-    input.type = "text";
-    input.id = id;
-    input.dataset.propertyIri = u.property || "";
-    col.appendChild(input);
+          // GRUPA: input (+ opcionalni plus gumb za ponovljiva polja)
+          const fieldGroup = document.createElement("div");
+          fieldGroup.className = "field-group";
+          fieldGroup.dataset.elementNumber = u.elementNumber || "";
 
-    row.appendChild(col);
+          // prvi input (zadržavamo stari id radi backward kompatibilnosti)
+          const input = document.createElement("input");
+          input.type = "text";
+          input.id = id; // npr. e2_2
+          input.className = "ap-input";
+          input.dataset.propertyIri = u.property || "";
+          input.dataset.elementNumber = u.elementNumber || "";
+
+          fieldGroup.appendChild(input);
+
+          // ako je polje ponovljivo -> dodaj "+" gumb
+          if (u.repeatable) {
+            const addBtn = document.createElement("button");
+            addBtn.type = "button";
+            addBtn.className = "repeatable-add";
+            addBtn.textContent = "+";
+            addBtn.title = "Dodaj još jedno ponavljanje ovog polja (maks. 10)";
+
+            addBtn.addEventListener("click", () => {
+              addRepeatableField(fieldGroup, u);
+            });
+
+            fieldGroup.appendChild(addBtn);
+          }
+
+          col.appendChild(fieldGroup);
+          row.appendChild(col);
+
   });
 
 
@@ -500,6 +525,30 @@ function renderApplicationProfileForm(container, apData) {
     });
 }
 
+// dodaje novi input za ponovljivo polje (maks. 10 po elementu)
+function addRepeatableField(groupEl, usage) {
+  const maxCount = 10;
+
+  const existingInputs = groupEl.querySelectorAll("input.ap-input");
+  if (existingInputs.length >= maxCount) {
+    alert("Dosegnut je maksimalan broj ponavljanja (10) za ovo polje.");
+    return;
+  }
+
+  const newInput = document.createElement("input");
+  newInput.type = "text";
+  newInput.className = "ap-input";
+  newInput.dataset.propertyIri = usage.property || "";
+  newInput.dataset.elementNumber = usage.elementNumber || "";
+
+  // umetni novi input prije + gumba
+  const addBtn = groupEl.querySelector(".repeatable-add");
+  if (addBtn) {
+    groupEl.insertBefore(newInput, addBtn);
+  } else {
+    groupEl.appendChild(newInput);
+  }
+}
 
 
 // poveže donje gumbe s generiranjem JSON-LD instance (za sada samo console.log + download)
@@ -554,24 +603,30 @@ function showApPreview() {
     const label = u.label || "";
     if (!num || !label) return;
 
-    const fieldId = "e" + num.replace(".", "_");
-    const input = document.getElementById(fieldId);
-    if (!input) return;
+    const selector = `input.ap-input[data-element-number="${num}"]`;
+    const inputs = document.querySelectorAll(selector);
+    if (!inputs.length) return;
 
-    const value = input.value.trim();
-    if (!value) return; // preskoči prazna polja
+    let first = true;
+    inputs.forEach((input) => {
+      const value = input.value.trim();
+      if (!value) return;
 
-    const tr = document.createElement("tr");
-    const th = document.createElement("th");
-    const td = document.createElement("td");
+      const tr = document.createElement("tr");
+      const th = document.createElement("th");
+      const td = document.createElement("td");
 
-    // lijevo ide naziv polja (bez broja) da izgleda kao u katalogu
-    th.textContent = label;
-    td.textContent = value;
+      // label prikaži samo prvi put, ostale vrijednosti idu ispod
+      th.textContent = first ? label : "";
+      td.textContent = value;
 
-    tr.appendChild(th);
-    tr.appendChild(td);
-    table.appendChild(tr);
+      tr.appendChild(th);
+      tr.appendChild(td);
+      table.appendChild(tr);
+
+      first = false;
+    });
+
   });
 
   // ako baš ništa nije popunjeno
@@ -626,19 +681,22 @@ function generateApInstanceJsonLd() {
     "@type": "kam:PrirodoslovniObjekt" // ako želiš generički, možeš staviti iz KAM_CONFIG
   };
 
-  usages.forEach((u) => {
-    const id = "e" + (u.elementNumber || "").replace(".", "_");
-    const el = document.getElementById(id);
-    if (!el) return;
-    const val = el.value;
-    if (!val) return;
-
+    usages.forEach((u) => {
     const prop = u.property;
     if (!prop) return;
 
-    if (!instance[prop]) instance[prop] = [];
-    instance[prop].push(val);
+    const selector = `input.ap-input[data-element-number="${u.elementNumber}"]`;
+    const inputs = document.querySelectorAll(selector);
+
+    inputs.forEach((el) => {
+      const val = (el.value || "").trim();
+      if (!val) return;
+
+      if (!instance[prop]) instance[prop] = [];
+      instance[prop].push(val);
+    });
   });
+
 
   const jsonText = JSON.stringify(instance, null, 2);
   console.log("AP instance JSON-LD:", instance);
