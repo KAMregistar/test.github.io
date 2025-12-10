@@ -493,16 +493,114 @@ function renderApplicationProfileForm(container, apData) {
 
 
 // poveže donje gumbe s generiranjem JSON-LD instance (za sada samo console.log + download)
+// poveže donje gumbe s generiranjem JSON-LD instance i pregleda zapisa
 function wireApButtons() {
-  const actions = document.querySelector(".actions");
-  if (!actions) return;
+  // JSON-LD gumb – prvo probaj po ID-u, inače fallback na prvi .primary
+  let jsonldBtn = document.getElementById("btn-jsonld");
+  if (!jsonldBtn) {
+    const actions = document.querySelector(".actions");
+    if (actions) {
+      const buttons = actions.querySelectorAll("button.primary");
+      if (buttons.length) {
+        jsonldBtn = buttons[0];
+      }
+    }
+  }
+  if (jsonldBtn) {
+    jsonldBtn.addEventListener("click", generateApInstanceJsonLd);
+  }
 
-  const buttons = actions.querySelectorAll("button.primary");
-  if (!buttons.length) return;
+  // NOVO: gumb "Generiraj primjer"
+  const previewBtn = document.getElementById("btn-preview");
+  if (previewBtn) {
+    previewBtn.addEventListener("click", showApPreview);
+  }
 
-  const jsonldBtn = buttons[0]; // 1. gumb = "Generiraj JSON-LD"
-  jsonldBtn.addEventListener("click", generateApInstanceJsonLd);
+  // inicijalizacija modala (zatvaranje na X, klik vani, Esc)
+  initPreviewModal();
 }
+// prikaže pop-up s pregledom popunjenih polja
+function showApPreview() {
+  const ap = window.KAM_ACTIVE_AP;
+  if (!ap) return;
+
+  const usages = Array.isArray(ap.elementUsage) ? ap.elementUsage : [];
+  const modal = document.getElementById("preview-modal");
+  if (!modal) return;
+
+  const table = modal.querySelector(".preview-table");
+  if (!table) return;
+
+  // očisti staro stanje
+  table.innerHTML = "";
+
+  // sortiraj po broju elementa (2.2, 4.1, ...)
+  const sorted = usages.slice().sort((a, b) =>
+    (a.elementNumber || "").localeCompare(b.elementNumber || "")
+  );
+
+  sorted.forEach(u => {
+    const num = u.elementNumber;
+    const label = u.label || "";
+    if (!num || !label) return;
+
+    const fieldId = "e" + num.replace(".", "_");
+    const input = document.getElementById(fieldId);
+    if (!input) return;
+
+    const value = input.value.trim();
+    if (!value) return; // preskoči prazna polja
+
+    const tr = document.createElement("tr");
+    const th = document.createElement("th");
+    const td = document.createElement("td");
+
+    // lijevo ide naziv polja (bez broja) da izgleda kao u katalogu
+    th.textContent = label;
+    td.textContent = value;
+
+    tr.appendChild(th);
+    tr.appendChild(td);
+    table.appendChild(tr);
+  });
+
+  // ako baš ništa nije popunjeno
+  if (!table.children.length) {
+    const tr = document.createElement("tr");
+    const td = document.createElement("td");
+    td.colSpan = 2;
+    td.textContent = "Nijedno polje nije popunjeno.";
+    tr.appendChild(td);
+    table.appendChild(tr);
+  }
+
+  modal.classList.remove("hidden");
+}
+
+// postavi zatvaranje modala (X, klik na pozadinu, tipka Esc)
+function initPreviewModal() {
+  const modal = document.getElementById("preview-modal");
+  if (!modal) return;
+
+  const backdrop = modal.querySelector(".modal-backdrop");
+  const closeBtn = modal.querySelector(".modal-close");
+
+  const close = () => modal.classList.add("hidden");
+
+  if (backdrop) {
+    backdrop.addEventListener("click", close);
+  }
+  if (closeBtn) {
+    closeBtn.addEventListener("click", close);
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+      close();
+    }
+  });
+}
+
 
 // jednostavno generiranje instance iz popunjenih polja
 function generateApInstanceJsonLd() {

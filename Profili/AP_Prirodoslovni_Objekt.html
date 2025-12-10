@@ -158,6 +158,76 @@
 .info-icon:hover{
   background:#e5e7eb;
 }
+.modal.hidden { display:none; }
+
+.modal{
+  position:fixed;
+  inset:0;
+  z-index:1000;
+  font-size:14px;
+}
+
+.modal-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.35);
+}
+
+.modal-dialog{
+  position:relative;
+  max-width:900px;
+  margin:40px auto;
+  background:#ffffff;
+  border-radius:14px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+  max-height:80vh;
+  display:flex;
+  flex-direction:column;
+}
+
+.modal-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 16px;
+  border-bottom:1px solid #e5e7eb;
+}
+
+.modal-header h3{
+  margin:0;
+  font-size:15px;
+}
+
+.modal-close{
+  border:none;
+  background:transparent;
+  font-size:20px;
+  line-height:1;
+  cursor:pointer;
+}
+
+.modal-body{
+  padding:10px 16px 16px;
+  overflow:auto;
+}
+
+.preview-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.preview-table th,
+.preview-table td{
+  padding:6px 10px;
+  border-bottom:1px solid #e5e7eb;
+  vertical-align:top;
+}
+
+.preview-table th{
+  width:30%;
+  font-weight:500;
+  background:#f9fafb;
+}
 
   </style>
 
@@ -233,12 +303,14 @@ pravilnikChapters: {
     <div id="ap-form-container"></div>
 
     <!-- GUMBI NA DNU -->
-    <div class="actions">
-      <button class="entity-btn" type="button">Generiraj JSON-LD</button>
-      <button class="entity-btn" type="button">Generiraj Turtle</button>
-      <button class="entity-btn" type="button">Generiraj RDF/XML</button>
-      <button class="entity-btn" type="button">Generiraj XLSX</button>
-    </div>
+<div class="actions">
+  <button class="primary" type="button" id="btn-jsonld">Generiraj JSON-LD</button>
+  <button class="primary" type="button" id="btn-turtle">Generiraj Turtle</button>
+  <button class="primary" type="button" id="btn-rdfxml">Generiraj RDF/XML</button>
+  <button class="primary" type="button" id="btn-xlsx">Generiraj XLSX</button>
+  <button class="primary" type="button" id="btn-preview">Generiraj primjer</button>
+</div>
+
   </form>
 </div>
 
@@ -249,6 +321,21 @@ pravilnikChapters: {
 
 <!-- KAM.JS -->
 <script src="../kam.js"></script>
+<!-- PREVIEW MODAL -->
+<div id="preview-modal" class="modal hidden">
+  <div class="modal-backdrop"></div>
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <h3>Primjer prikaza zapisa</h3>
+      <button type="button" class="modal-close" aria-label="Zatvori">&times;</button>
+    </div>
+    <div class="modal-body">
+      <table class="preview-table">
+        <!-- redovi se pune iz kam.js -->
+      </table>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
