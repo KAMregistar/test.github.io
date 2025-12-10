@@ -343,6 +343,152 @@ function populateSvojstvaDropdown() {
     window.addEventListener("hashchange", showFromHash);
     showFromHash();
   }
+// ================= APLIKACIJSKI PROFILI (AP FORME) ===================
+
+// očekuje da je u KAM_CONFIG zadano:
+// { pageType: "apForm", apProfilePath: "AP_PrirodoslovniObjekt.jsonld" }
+
+function initApplicationProfilePage() {
+  const apUrl = cfg.apProfilePath;
+  if (!apUrl) {
+    console.warn("Nije postavljen apProfilePath u KAM_CONFIG za apForm.");
+    return;
+  }
+
+  // u AP HTML-u imat ćemo <form id="ap-form"><div id="ap-form-container"></div>...
+  const container = document.getElementById("ap-form-container");
+  if (!container) {
+    console.warn("Nije pronađen #ap-form-container na AP stranici.");
+    return;
+  }
+
+  fetch(apUrl)
+    .then((r) => r.json())
+    .then((apData) => {
+      // spremi trenutno aktivni AP globalno ako zatreba
+      window.KAM_ACTIVE_AP = apData;
+      renderApplicationProfileForm(container, apData);
+      wireApButtons();
+    })
+    .catch((err) => {
+      console.error("Greška pri dohvaćanju AP JSON-LD:", err);
+    });
+}
+
+// grupira elementUsage po poglavlju (broj prije točke, npr. "2", "4", "5", "6", "10")
+function renderApplicationProfileForm(container, apData) {
+  const usages = apData.elementUsage || [];
+  const groups = {};
+
+  usages.forEach((u) => {
+    const num = u.elementNumber || "";
+    const sectionNum = num.split(".")[0] || "ostalo";
+    if (!groups[sectionNum]) groups[sectionNum] = [];
+    groups[sectionNum].push(u);
+  });
+
+  const sectionKeys = Object.keys(groups).sort((a, b) => Number(a) - Number(b));
+  container.innerHTML = "";
+
+  sectionKeys.forEach((sec) => {
+    const sectionEl = document.createElement("section");
+    sectionEl.className = "card";
+
+    const h3 = document.createElement("h3");
+    h3.textContent = sec + ". poglavlje";
+    sectionEl.appendChild(h3);
+
+    const row = document.createElement("div");
+    row.className = "row";
+
+    // sortiraj elemente unutar poglavlja po elementNumber
+    groups[sec]
+      .sort((a, b) =>
+        (a.elementNumber || "").localeCompare(b.elementNumber || "")
+      )
+      .forEach((u) => {
+        const col = document.createElement("div");
+        col.className = "cols-12";
+
+        const id = "e" + (u.elementNumber || "").replace(".", "_");
+
+        const label = document.createElement("label");
+        label.setAttribute("for", id);
+        label.textContent =
+          (u.elementNumber ? u.elementNumber + " " : "") + (u.label || "");
+
+        if (u.required) {
+          const star = document.createElement("span");
+          star.textContent = " *";
+          star.className = "required";
+          label.appendChild(star);
+        }
+
+        const input = document.createElement("input");
+        input.id = id;
+        input.dataset.propertyIri = u.property || "";
+
+        col.appendChild(label);
+        col.appendChild(input);
+        row.appendChild(col);
+      });
+
+    sectionEl.appendChild(row);
+    container.appendChild(sectionEl);
+  });
+}
+
+// poveže donje gumbe s generiranjem JSON-LD instance (za sada samo console.log + download)
+function wireApButtons() {
+  const actions = document.querySelector(".actions");
+  if (!actions) return;
+
+  const buttons = actions.querySelectorAll("button.primary");
+  if (!buttons.length) return;
+
+  const jsonldBtn = buttons[0]; // 1. gumb = "Generiraj JSON-LD"
+  jsonldBtn.addEventListener("click", generateApInstanceJsonLd);
+}
+
+// jednostavno generiranje instance iz popunjenih polja
+function generateApInstanceJsonLd() {
+  const ap = window.KAM_ACTIVE_AP;
+  if (!ap) {
+    console.warn("Nema učitanog AP (KAM_ACTIVE_AP).");
+    return;
+  }
+
+  const usages = ap.elementUsage || [];
+  const instance = {
+    "@context": {},
+    "@type": "kam:PrirodoslovniObjekt" // ako želiš generički, možeš staviti iz KAM_CONFIG
+  };
+
+  usages.forEach((u) => {
+    const id = "e" + (u.elementNumber || "").replace(".", "_");
+    const el = document.getElementById(id);
+    if (!el) return;
+    const val = el.value;
+    if (!val) return;
+
+    const prop = u.property;
+    if (!prop) return;
+
+    if (!instance[prop]) instance[prop] = [];
+    instance[prop].push(val);
+  });
+
+  const jsonText = JSON.stringify(instance, null, 2);
+  console.log("AP instance JSON-LD:", instance);
+
+  const blob = new Blob([jsonText], { type: "application/ld+json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "PrirodoslovniObjekt_instance.jsonld";
+  a.click();
+  URL.revokeObjectURL(url);
+}
 
   // ====== TABLICA SVOJSTAVA ZA KLASU (propertyGroup: /Elements/jo/) ======
 
@@ -580,7 +726,9 @@ function populateSvojstvaDropdown() {
       initClassPage();
     } else if (pageType === "propertyGroup") {
       initPropertyGroup();
-    }
+    }else if (pageType === "apForm") {
+    initApplicationProfilePage();
+  }
   }
 
 
