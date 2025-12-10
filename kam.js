@@ -527,30 +527,21 @@ function renderApplicationProfileForm(container, apData) {
 // dodaje novi input za ponovljivo polje (maks. 10 po elementu)
 // dodaje NOVU kolonu za ponovljivo polje (maks. 10 po elementu)
 // dodaje NOVU kolonu za ponovljivo polje (maks. 10 po elementu)
+// dodaje NOVI input unutar iste kolone (maks. 10 ponavljanja po elementu)
 function addRepeatableField(groupEl, usage) {
-  const col = groupEl.parentElement;       // div.cols-6.ap-col
-  const row = col.parentElement;           // div.row
-
   const elementNumber = usage.elementNumber || "";
 
-  // koliko već imamo kolona za ovaj element
-  const existingColsAll = row.querySelectorAll(
-    `.ap-col[data-element-number="${elementNumber}"]`
+  // svi inputi za ovaj element unutar ove grupe
+  const existingInputs = groupEl.querySelectorAll(
+    `input.ap-input[data-element-number="${elementNumber}"]`
   );
-  if (existingColsAll.length >= 10) {
+  if (existingInputs.length >= 10) {
     alert("Dosegnut je maksimalan broj ponavljanja (10) za ovo polje.");
     return;
   }
 
-  // napravi novu kolonu istih klasa (cols-6 ili cols-12 + ap-col)
-  const newCol = document.createElement("div");
-  newCol.className = col.className;
-  newCol.dataset.elementNumber = elementNumber;
-
-  // nova grupa
-  const newGroup = document.createElement("div");
-  newGroup.className = groupEl.className;  // field-group (+ field-group-full za napomene)
-  newGroup.dataset.elementNumber = elementNumber;
+  // gumb + (trebao bi biti zadnji u grupi)
+  const addBtn = groupEl.querySelector(".repeatable-add");
 
   // novi input
   const newInput = document.createElement("input");
@@ -558,33 +549,14 @@ function addRepeatableField(groupEl, usage) {
   newInput.className = "ap-input";
   newInput.dataset.propertyIri = usage.property || "";
   newInput.dataset.elementNumber = elementNumber;
-  newGroup.appendChild(newInput);
 
-  // stari plus (ako postoji) makni iz STARE grupe
-  const oldBtn = groupEl.querySelector(".repeatable-add");
-  if (oldBtn) {
-    oldBtn.remove();
+  if (addBtn) {
+    // ubaci input neposredno prije plus gumba
+    groupEl.insertBefore(newInput, addBtn);
+  } else {
+    // sigurnosni fallback – ako nema plus gumba, samo dodaj na kraj
+    groupEl.appendChild(newInput);
   }
-
-  // novi plus – seli se u novu grupu
-  const newBtn = document.createElement("button");
-  newBtn.type = "button";
-  newBtn.className = "repeatable-add";
-  newBtn.innerHTML = "&plus;";
-  newBtn.title = "Dodaj još jedno ponavljanje ovog polja (maks. 10)";
-  newBtn.addEventListener("click", () => {
-    addRepeatableField(newGroup, usage);
-  });
-  newGroup.appendChild(newBtn);
-
-  newCol.appendChild(newGroup);
-
-  // NOVO: umetni novu kolonu odmah iza zadnje postojeće za taj element
-  const existingCols = row.querySelectorAll(
-    `.ap-col[data-element-number="${elementNumber}"]`
-  );
-  const lastCol = existingCols[existingCols.length - 1];
-  lastCol.insertAdjacentElement("afterend", newCol);
 }
 
 
