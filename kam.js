@@ -443,11 +443,14 @@ function renderApplicationProfileForm(container, apData) {
       groups[sec]
   .sort((a, b) => a.elementNumber.localeCompare(b.elementNumber))
   .forEach(u => {
-    const lbl = (u.label || "").toLowerCase();
-    const isNote = lbl.startsWith("napomena");
+    // zadana širina = pola širine (cols-6)
+    let widthClass = "cols-6";
 
-    // kolona: napomene cijeli red, ostalo pola širine
-    const widthClass = isNote ? "cols-12" : "cols-6";
+    // ako je naziv polja "Napomena ..." → cijela širina (cols-12)
+    const lbl = (u.label || "").toLowerCase();
+    if (lbl.startsWith("napomena")) {
+      widthClass = "cols-12";
+    }
 
     const col = document.createElement("div");
     col.className = widthClass;
@@ -457,61 +460,6 @@ function renderApplicationProfileForm(container, apData) {
     // Label + zvjezdica + "i" ikona
     const labelWrap = document.createElement("div");
     labelWrap.className = "field-label";
-    const label = document.createElement("label");
-    label.setAttribute("for", id);
-    label.textContent = u.elementNumber + " " + (u.label || "");
-    if (u.required) {
-      const star = document.createElement("span");
-      star.className = "required";
-      star.textContent = " *";
-      label.appendChild(star);
-    }
-    labelWrap.appendChild(label);
-
-    if (u.definition) {
-      const info = document.createElement("span");
-      info.className = "info-icon";
-      info.textContent = "i";
-      info.title = u.definition;
-      labelWrap.appendChild(info);
-    }
-
-    col.appendChild(labelWrap);
-
-    // GRUPA: input(i) + plus gumb
-    const fieldGroup = document.createElement("div");
-    fieldGroup.className = "field-group";
-    if (isNote) {
-      fieldGroup.classList.add("field-group-full");  // specijalni režim za napomene
-    }
-    fieldGroup.dataset.elementNumber = u.elementNumber || "";
-
-    // prvi input
-    const input = document.createElement("input");
-    input.type = "text";
-    input.id = id;
-    input.className = "ap-input";
-    input.dataset.propertyIri = u.property || "";
-    input.dataset.elementNumber = u.elementNumber || "";
-    fieldGroup.appendChild(input);
-
-    // ponovljiva polja dobivaju plus
-    if (u.repeatable) {
-      const addBtn = document.createElement("button");
-      addBtn.type = "button";
-      addBtn.className = "repeatable-add";
-      addBtn.innerHTML = "&plus;";
-      addBtn.title = "Dodaj još jedno ponavljanje ovog polja (maks. 10)";
-      addBtn.addEventListener("click", () => {
-        addRepeatableField(fieldGroup, u);
-      });
-      fieldGroup.appendChild(addBtn);
-    }
-
-    col.appendChild(fieldGroup);
-    row.appendChild(col);
-  });
-
 
     const label = document.createElement("label");
     label.setAttribute("for", id);

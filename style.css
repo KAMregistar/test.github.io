@@ -137,51 +137,29 @@
     .download-table tbody tr:last-child {
         border-bottom: 1px solid #ddd;
     }
-/* grupa za jedno AP polje */
 .field-group {
   display: flex;
-  flex-wrap: wrap;        /* bitno: polja se mogu prelomiti u novi red */
   gap: 0.5rem;
   align-items: center;
 }
 
-/* "normalna" polja: svaki unos zauzima pola širine kolone (cols-6) */
 .field-group .ap-input {
-  box-sizing: border-box;
-  flex: 1 1 calc(50% - 0.5rem);   /* ~pola širine, minus razmak */
-  min-width: 120px;               /* da se ne stisne previše */
+  flex: 1 1 auto;
 }
 
-/* napomene: svaki unos je cijela širina kolone (a kolona je cols-12) */
-.field-group.field-group-full .ap-input {
-  flex: 1 1 100%;
-}
 
-/* plus kružić – uvijek ista veličina, ne rasteže se */
 .repeatable-add {
-  flex: 0 0 auto;               /* ne rasteži me */
-  width: 22px;
-  height: 22px;
-  padding: 0;
-  margin-left: 2px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border: 2px solid #5835d0;    /* ljubičasti obrub */
-  background: transparent;      /* bez popune */
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid #5835d0;
+  border-radius: 50%;
+  background: none;
   color: #5835d0;
-  border-radius: 50%;           /* kružić */
-  cursor: pointer;
-
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 0;
+  font-size: 13px;
 }
 
 .repeatable-add:hover {
-  background: #f3eeff;
+  background: #f3eeff;         /* vrlo lagana ljubičasta sjena */
 }
 
 .repeatable-add:active {
