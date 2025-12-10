@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Unos građe: Prirodoslovni objekt</title>
 
-  <!-- GLOBALNI KAM STILOVI (iz root foldera) -->
+  <!-- GLOBALNI KAM STILOVI -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Rubik:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../style.css">
 
@@ -14,11 +14,10 @@
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 
-  <!-- N3 i XLSX za generiranje (isti kao na AP_Publikacija) -->
+  <!-- N3 i XLSX za kasnije generiranje -->
   <script src="https://unpkg.com/n3/browser/n3.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 
-  <!-- DODATNI STILOVI ZA UNOS (kopirano iz AP_Publikacija) -->
   <style>
     * { box-sizing: border-box; }
 
@@ -29,8 +28,18 @@
       padding:16px;
       margin:14px 0;
     }
-    .row{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px}
-    label{font-size:13px;color:#111827}
+
+    .row{
+      display:grid;
+      grid-template-columns:repeat(12,minmax(0,1fr));
+      gap:12px;
+    }
+
+    label{
+      font-size:13px;
+      color:#111827;
+    }
+
     input,textarea{
       width:100%;
       padding:8px 10px;
@@ -38,7 +47,10 @@
       border-radius:8px;
       border:1px solid #d1d5db;
     }
-    textarea{min-height:70px;resize:vertical}
+    textarea{
+      min-height:70px;
+      resize:vertical;
+    }
 
     .actions{
       display:flex;
@@ -55,6 +67,7 @@
       border-radius:9999px;
       cursor:pointer;
     }
+
     .entity-buttons{
       display:flex;
       flex-wrap:wrap;
@@ -68,6 +81,7 @@
       padding:6px 14px;
       font-size:13px;
       cursor:pointer;
+      border-radius:9999px;
     }
 
     .cols-12{grid-column:span 12}
@@ -75,38 +89,73 @@
     .cols-4{grid-column:span 4}
     .cols-3{grid-column:span 3}
 
-    .card h2,
-    .card h3{
+    /* Naslov kartice + gumb za Pravilnik */
+    .section-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
       background:#eee;
       margin:-16px -16px 12px -16px;
       padding:10px 16px;
       border-bottom:1px solid #e5e7eb;
+    }
+
+    .section-header h3{
+      margin:0;
       font-size:15px;
     }
 
-    .required {
+    .section-help-btn{
+      background:#e5e7eb;
+      border:1px solid #9ca3af;
+      border-radius:9999px;
+      padding:4px 10px;
+      font-size:12px;
+      cursor:pointer;
+      white-space:nowrap;
+    }
+
+    .section-help-btn:hover{
+      background:#d1d5db;
+    }
+
+    .required{
       color:#b91c1c;
       font-weight:bold;
     }
+
+    .note{
+      font-size:13px;
+      color:#374151;
+      background:#f9fafb;
+      border:1px solid #e5e7eb;
+      border-radius:8px;
+      padding:8px 12px;
+      margin:6px 0 18px 0;
+    }
   </style>
 
-  <!-- KAM CONFIG: kažemo da je ovo AP forma i gdje je AP JSON-LD -->
+  <!-- KAM CONFIG: ovo je AP forma + put do AP JSON-LD i Pravilnika -->
   <script>
     window.KAM_CONFIG = {
       pageType: "apForm",
-      // prilagodi putanju ako JSON stavljaš u podmapu
       apProfilePath: "AP_PrirodoslovniObjekt.jsonld",
-      jsonPath: "../KAMOntologija_v12.jsonld"
+      jsonPath: "../KAMOntologija_v12.jsonld",
+      // OVDJE PRILAGODI URL POGLAVLJA PRAVILNIKA:
+      // npr. "../Pravilnik/KAM_Pravilnik.html#poglavlje-"
+      pravilnikBaseUrl: "../Pravilnik/KAM_Pravilnik.html#poglavlje-"
     };
   </script>
 </head>
 <body>
 
-<!-- GORNJI KAM MENI (kopirano iz AP_Publikacija) -->
+<!-- GORNJI KAM MENI -->
 <div id="menu-bar">
   <img alt="KAM Logo" class="logo" src="../kam.png"/>
-  <h1><a href="../index.html" style="text-decoration:none;color:inherit;">Registar</a>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+  <h1>
+    <a href="../index.html" style="text-decoration:none;color:inherit;">Registar</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </h1>
 
   <div>KLASE <div class="dropdown" id="klase-dropdown"></div></div>
   <div>SVOJSTVA <div class="dropdown" id="svojstva-dropdown"></div></div>
@@ -115,12 +164,17 @@
   <div>Pomoć</div>
 </div>
 
-<!-- SADRŽAJ STRANICE -->
+<!-- SADRŽAJ -->
 <div id="content">
 
   <h2>Unos građe: Prirodoslovni objekt</h2>
 
-  <!-- ljubičasti gumbi (ako želiš ih možeš i maknuti) -->
+  <!-- NAPOMENA O ZVJEZDICI -->
+  <div class="note">
+    Napomena: Polja označena zvjezdicom (<span class="required">*</span>) su obavezna.
+  </div>
+
+  <!-- ljubičasti gumbi (ako želiš ih možeš zadržati / maknuti) -->
   <div class="entity-buttons">
     <button class="entity-btn" type="button">Djelo</button>
     <button class="entity-btn" type="button">Izraz</button>
@@ -128,7 +182,7 @@
     <button class="entity-btn" type="button">Primjerak</button>
   </div>
 
-  <!-- Ovdje će JS generirati sekcije i polja iz AP JSON-LD -->
+  <!-- Ovdje JS generira sekcije i polja iz AP JSON-LD -->
   <form id="ap-form">
     <div id="ap-form-container"></div>
 
