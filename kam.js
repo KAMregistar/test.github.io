@@ -441,49 +441,59 @@ function renderApplicationProfileForm(container, apData) {
       row.className = "row";
 
       groups[sec]
-        .sort((a, b) => a.elementNumber.localeCompare(b.elementNumber))
-        .forEach(u => {
-          const col = document.createElement("div");
-          col.className = "cols-12";
+  .sort((a, b) => a.elementNumber.localeCompare(b.elementNumber))
+  .forEach(u => {
+    // zadana širina = pola širine (cols-6)
+    let widthClass = "cols-6";
 
-          const id = "e" + u.elementNumber.replace(".", "_");
+    // ako je naziv polja "Napomena ..." → cijela širina (cols-12)
+    const lbl = (u.label || "").toLowerCase();
+    if (lbl.startsWith("napomena")) {
+      widthClass = "cols-12";
+    }
 
-          // Label + zvjezdica + "i" ikona
-          const labelWrap = document.createElement("div");
-          labelWrap.className = "field-label";
+    const col = document.createElement("div");
+    col.className = widthClass;
 
-          const label = document.createElement("label");
-          label.setAttribute("for", id);
-          label.textContent = u.elementNumber + " " + (u.label || "");
+    const id = "e" + u.elementNumber.replace(".", "_");
 
-          if (u.required) {
-            const star = document.createElement("span");
-            star.className = "required";
-            star.textContent = " *";
-            label.appendChild(star);
-          }
+    // Label + zvjezdica + "i" ikona
+    const labelWrap = document.createElement("div");
+    labelWrap.className = "field-label";
 
-          labelWrap.appendChild(label);
+    const label = document.createElement("label");
+    label.setAttribute("for", id);
+    label.textContent = u.elementNumber + " " + (u.label || "");
 
-          if (u.definition) {
-            const info = document.createElement("span");
-            info.className = "info-icon";
-            info.textContent = "i";
-            info.title = u.definition;
-            labelWrap.appendChild(info);
-          }
+    if (u.required) {
+      const star = document.createElement("span");
+      star.className = "required";
+      star.textContent = " *";
+      label.appendChild(star);
+    }
 
-          col.appendChild(labelWrap);
+    labelWrap.appendChild(label);
 
-          // Jednostavno: za sve polja input type="text"
-          const input = document.createElement("input");
-          input.type = "text";
-          input.id = id;
-          input.dataset.propertyIri = u.property || "";
-          col.appendChild(input);
+    if (u.definition) {
+      const info = document.createElement("span");
+      info.className = "info-icon";
+      info.textContent = "i";
+      info.title = u.definition;
+      labelWrap.appendChild(info);
+    }
 
-          row.appendChild(col);
-        });
+    col.appendChild(labelWrap);
+
+    // Jednostavno: za sve polja input type="text"
+    const input = document.createElement("input");
+    input.type = "text";
+    input.id = id;
+    input.dataset.propertyIri = u.property || "";
+    col.appendChild(input);
+
+    row.appendChild(col);
+  });
+
 
       sectionEl.appendChild(row);
       container.appendChild(sectionEl);

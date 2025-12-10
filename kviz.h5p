@@ -1,0 +1,86 @@
+{
+  "singleChoiceSet": {
+    "questions": [
+      {
+        "question": "<p>Koji je od sljedećih odlomaka najvjerojatnije napisala umjetna inteligencija?</p>",
+        "answers": [
+          {
+            "text": "<p>Biljke u našem zavičaju imaju važnu ulogu u održavanju ekosustava. Učenici ih mogu promatrati tijekom šetnje i bilježiti uočene promjene. To pridonosi razvoju istraživačkog učenja.</p>",
+            "correct": false
+          },
+          {
+            "text": "<p>Biljke predstavljaju ključne biotičke čimbenike koji omogućuju optimalne fotosintetske procese i stvaraju sinergijske odnose unutar lokaliziranih biozonacija.</p>",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "question": "<p>Koji odlomak zvuči više kao tekst generiran umjetnom inteligencijom?</p>",
+        "answers": [
+          {
+            "text": "<p>Žutica česta u priobalju ima žute cvjetove i raste na sunčanim, kamenitim terenima. Djeca je lako prepoznaju po specifičnom mirisu.</p>",
+            "correct": false
+          },
+          {
+            "text": "<p>Žutica predstavlja fascinantan taksonomski primjer jedinstvene adaptivne flore koja se u mediteranskom krajoliku ističe polivalentnim morfološkim karakteristikama.</p>",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "question": "<p>Koji je od ovih odlomaka vjerojatnije generirao UI alat?</p>",
+        "answers": [
+          {
+            "text": "<p>Ova aktivnost omogućuje učenicima da primjenjuju svoje stečeno znanje kroz praktičnu primjenu u stvarnim životnim situacijama, potičući pritom razvoj viših kognitivnih procesa i metakognitivne refleksije.</p>",
+            "correct": true
+          },
+          {
+            "text": "<p>Učenici rješavaju zadatak i zatim zajedno razgovaramo o tome kako su došli do rješenja. Na taj način uočavaju svoje pogreške i uče jedni od drugih.</p>",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "question": "<p>Prepoznaj AI-tekst: koji odlomak zvuči manje kao da ga je napisao učitelj u praksi?</p>",
+        "answers": [
+          {
+            "text": "<p>Digitalna pismenost razvija se kroz redovitu uporabu digitalnih alata u stvarnim nastavnim situacijama, uz jasne ciljeve i povratne informacije učenicima.</p>",
+            "correct": false
+          },
+          {
+            "text": "<p>Digitalna pismenost predstavlja ključnu transverzalnu kompetenciju 21. stoljeća koja omogućuje učenicima učinkovitu navigaciju kompleksnim informacijskim okruženjima i odgovorno sudjelovanje u digitalnom društvu.</p>",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "question": "<p>Koji je odlomak tipičniji za AI-generirani opis školskog projekta?</p>",
+        "answers": [
+          {
+            "text": "<p>U projektu su učenici u skupinama istraživali biljni svijet školskog dvorišta, fotografirali biljke i svoje rezultate prikazali na zajedničkom plakatu.</p>",
+            "correct": false
+          },
+          {
+            "text": "<p>Projekt je osmišljen kao multidisciplinarna istraživačka aktivnost u kojoj učenici razvijaju suradničke vještine, kritičko mišljenje i kreativno rješavanje problema kroz sustavno prikupljanje i prezentaciju podataka o lokalnoj flori.</p>",
+            "correct": true
+          }
+        ]
+      }
+    ]
+  },
+  "behaviour": {
+    "autoContinue": false,
+    "timeoutCorrect": 2000,
+    "timeoutIncorrect": 2000,
+    "enableRetry": true,
+    "enableSolutionsButton": true
+  },
+  "l10n": {
+    "nextButtonLabel": "Sljedeće pitanje",
+    "showSolutionButtonLabel": "Prikaži rješenja",
+    "tryAgainButtonLabel": "Pokušaj ponovno",
+    "scoreBarLabel": "Ostvarili ste @score od @maxScore bodova",
+    "resultSlideTitle": "Rezultat",
+    "resultSlideDescription": "Sažetak vaših odgovora"
+  }
+}
