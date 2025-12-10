@@ -13,13 +13,12 @@
     "elementUsage": {
       "@id": "ap:elementUsage",
       "@container": "@set"
-    }
+    },
+    "definition": "http://www.registar.kam.hr/ontologies/ont.owl/definition"
   },
-
   "@id": "http://www.registar.kam.hr/ApplicationProfiles/#PrirodoslovniObjekt",
   "@type": "ap:ApplicationProfile",
   "label": "Aplikacijski profil – Prirodoslovni objekt",
-
   "elementUsage": [
     {
       "@type": "ap:ElementUsage",
@@ -27,7 +26,8 @@
       "label": "Razina opisa pojavnog oblika",
       "property": "http://www.registar.kam.hr/Elements/po/#P40040",
       "obligation": "Obvezno kad je primjenjivo",
-      "required": true
+      "required": true,
+      "definition": "Povezuje pojavni oblik s izrazom, nadziranim nazivom, kodom ili drugom oznakom koja označava razinu specifičnosti opisa pojavnog oblika jedinice građe u informacijskom sustavu, uključujući položaj unutar hijerarhije pojavnih oblika koja su s njim povezana odnosom cjeline i dijela."
     },
     {
       "@type": "ap:ElementUsage",
@@ -35,7 +35,8 @@
       "label": "Naziv ili vrsta",
       "property": "http://www.registar.kam.hr/Elements/po/#P40041",
       "obligation": "Obvezno kad je primjenjivo",
-      "required": true
+      "required": true,
+      "definition": "Povezuje pojavni oblik s odabranim terminom koji informativno označava njegovu vrstu, rod ili naziv, uzimajući u obzir stručnu terminologiju domene kojoj pripada jedinica građe."
     },
     {
       "@type": "ap:ElementUsage",
@@ -43,7 +44,8 @@
       "label": "Identifikator primjerka",
       "property": "http://www.registar.kam.hr/Elements/po/#P50001",
       "obligation": "Obvezno kad je primjenjivo",
-      "required": true
+      "required": true,
+      "definition": "Povezuje primjerak s identifikatorom koji je ustanovila ustanova koja upravlja jedinicom građe. Identifikator primjerka je jedinstvena oznaka primjerka u informacijskom sustavu ustanove (npr. inventarni broj, signatura ili druga interna oznaka)."
     },
     {
       "@type": "ap:ElementUsage",
@@ -51,16 +53,17 @@
       "label": "Napomena o identifikaciji primjerka",
       "property": "http://www.registar.kam.hr/Elements/po/#P50003",
       "obligation": "Nije obvezno",
-      "required": false
+      "required": false,
+      "definition": "Povezuje primjerak s napomenom koja dodatno pojašnjava identifikator primjerka ili način na koji je primjerak identificiran u informacijskom sustavu."
     },
-
     {
       "@type": "ap:ElementUsage",
       "elementNumber": "4.1",
       "label": "Opseg",
       "property": "http://www.registar.kam.hr/Elements/po/#P40046",
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima",
-      "required": true
+      "required": true,
+      "definition": "Povezuje pojavni oblik s iskazom o fizičkom opsegu jedinice građe (npr. broj dijelova, primjeraka, ploha ili mjernih jedinca) koji je relevantan za njeno materijalno svojstvo i rukovanje."
     },
     {
       "@type": "ap:ElementUsage",
@@ -68,7 +71,8 @@
       "label": "Napomena o opsegu",
       "property": "http://www.registar.kam.hr/Elements/po/#P40047",
       "obligation": "Nije obvezno",
-      "required": false
+      "required": false,
+      "definition": "Povezuje pojavni oblik s napomenom koja pojašnjava ili dodatno opisuje opseg jedinice građe, npr. posebnosti u brojanju, nedostatke ili nepravilnosti."
     },
     {
       "@type": "ap:ElementUsage",
@@ -76,7 +80,8 @@
       "label": "Dimenzije",
       "property": "http://www.registar.kam.hr/Elements/po/#P40050",
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima",
-      "required": true
+      "required": true,
+      "definition": "Povezuje pojavni oblik s iskazom o njegovim dimenzijama (npr. visina, širina, dubina, promjer) izraženim u standardnim mjernim jedinicama, u skladu s pravilima za mjerenje građe pojedine vrste."
     },
     {
       "@type": "ap:ElementUsage",
@@ -84,7 +89,8 @@
       "label": "Napomena o dimenzijama",
       "property": "http://www.registar.kam.hr/Elements/po/#P40051",
       "obligation": "Nije obvezno",
-      "required": false
+      "required": false,
+      "definition": "Povezuje pojavni oblik s napomenom koja pojašnjava način mjerenja ili posebnosti u vezi s dimenzijama jedinice građe (npr. nepravilni oblici, oštećenja, okvir uključen ili isključen iz mjerenja)."
     },
     {
       "@type": "ap:ElementUsage",
@@ -92,7 +98,8 @@
       "label": "Masa",
       "property": "http://www.registar.kam.hr/Elements/po/#P40052",
       "obligation": "Nije obvezno",
-      "required": false
+      "required": false,
+      "definition": "Povezuje pojavni oblik s iskazom o njegovoj masi izraženoj u standardnim mjernim jedinicama (npr. gramima ili kilogramima) kada je ta informacija važna za rukovanje, transport ili konzervatorske potrebe."
     },
     {
       "@type": "ap:ElementUsage",
@@ -100,7 +107,8 @@
       "label": "Boja",
       "property": "http://www.registar.kam.hr/Elements/po/#P40058",
       "obligation": "Nije obvezno",
-      "required": false
+      "required": false,
+      "definition": "Povezuje pojavni oblik s opisom boje ili kombinacije boja koje su značajne za vizualni dojam, identifikaciju, analizu ili interpretaciju jedinice građe."
     },
     {
       "@type": "ap:ElementUsage",
@@ -108,16 +116,17 @@
       "label": "Napomena o boji",
       "property": "http://www.registar.kam.hr/Elements/po/#P40059",
       "obligation": "Nije obvezno",
-      "required": false
+      "required": false,
+      "definition": "Povezuje pojavni oblik s napomenom koja pojašnjava specifičnosti boje (npr. izblijeđenost, promjene boje, restaurirani dijelovi, izvorna i naknadno nanesena boja)."
     },
-
     {
       "@type": "ap:ElementUsage",
       "elementNumber": "5.2",
       "label": "Plan sređivanja",
       "property": "http://www.registar.kam.hr/Elements/d/#P20012",
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima",
-      "required": true
+      "required": true,
+      "definition": "Povezuje djelo s informacijom o planiranom ili provedenom sređivanju jedinice građe, odnosno načinu grupiranja, razvrstavanja i strukturiranja jedinica u zbirke, podzbirke ili serije."
     },
     {
       "@type": "ap:ElementUsage",
@@ -125,7 +134,8 @@
       "label": "Povijest primjerka",
       "property": "http://www.registar.kam.hr/Elements/po/#P50013",
       "obligation": "Nije obvezno",
-      "required": false
+      "required": false,
+      "definition": "Povezuje primjerak s informacijama o njegovoj povijesti, uključujući ranije vlasnike, lokacije, načine uporabe, prijašnje signaturne oznake i druge događaje važ­ne za razumijevanje provenijencije."
     },
     {
       "@type": "ap:ElementUsage",
@@ -133,7 +143,8 @@
       "label": "Dodani natpisi i oznake",
       "property": "http://www.registar.kam.hr/Elements/po/#P50006",
       "obligation": "Nije obvezno",
-      "required": false
+      "required": false,
+      "definition": "Povezuje primjerak s izvornim ili naknadno dodanim natpisima, pečatima, etiketama, naljepnicama, žigovima i drugim oznakama koje se fizički nalaze na jedinici građe."
     },
     {
       "@type": "ap:ElementUsage",
@@ -141,7 +152,8 @@
       "label": "Napomena o dodanim natpisima i oznakama",
       "property": "http://www.registar.kam.hr/Elements/po/#P50007",
       "obligation": "Nije obvezno",
-      "required": false
+      "required": false,
+      "definition": "Povezuje primjerak s napomenom koja dodatno opisuje ili tumači dodane natpise i oznake (npr. nečitljivost, jezik, pismo, pretpostavljeni autor natpisa)."
     },
     {
       "@type": "ap:ElementUsage",
@@ -149,7 +161,8 @@
       "label": "Način nabave",
       "property": "http://www.registar.kam.hr/Elements/po/#P50009",
       "obligation": "Obvezno kad je primjenjivo",
-      "required": true
+      "required": true,
+      "definition": "Povezuje primjerak s informacijom o načinu na koji je ustanova stekla jedinicu građe (npr. kupnja, dar, zamjena, ustupanje, terenska zbirka), prema propisanim kategorijama nabave."
     },
     {
       "@type": "ap:ElementUsage",
@@ -157,7 +170,8 @@
       "label": "Napomena o nabavi",
       "property": "http://www.registar.kam.hr/Elements/po/#P50010",
       "obligation": "Nije obvezno",
-      "required": false
+      "required": false,
+      "definition": "Povezuje primjerak s napomenom koja pojašnjava okolnosti nabave (npr. ime donatora, posrednika, uvjete nabave, referencu na ugovor ili dokumentaciju)."
     },
     {
       "@type": "ap:ElementUsage",
@@ -165,7 +179,8 @@
       "label": "Stanje primjerka",
       "property": "http://www.registar.kam.hr/Elements/po/#P50011",
       "obligation": "Nije obvezno",
-      "required": false
+      "required": false,
+      "definition": "Povezuje primjerak s opisom njegovog trenutnog fizičkog stanja (npr. dobro, oštećeno, fragmentarno), prema standardiziranim konzervatorskim kriterijima ustanove."
     },
     {
       "@type": "ap:ElementUsage",
@@ -173,25 +188,26 @@
       "label": "Konzervacija i restauracija",
       "property": "http://www.registar.kam.hr/Elements/po/#P50012",
       "obligation": "Obvezno kad je primjenjivo i dostupno",
-      "required": true
+      "required": true,
+      "definition": "Povezuje primjerak s informacijama o provedenim ili planiranim konzervatorsko-restauratorskim zahvatima, uključujući datume, vrste zahvata i odgovorne stručnjake."
     },
-
     {
       "@type": "ap:ElementUsage",
       "elementNumber": "6.6",
       "label": "Tehnički uvjeti pristupa",
       "property": "http://www.registar.kam.hr/Elements/po/#P40078",
       "obligation": "Nije obvezno",
-      "required": false
+      "required": false,
+      "definition": "Povezuje pojavni oblik ili primjerak s opisom tehničkih uvjeta potrebnih za pristup, pregledavanje ili uporabu (npr. specifična oprema, softver, uvjeti osvjetljenja, zaštitne mjere)."
     },
-
     {
       "@type": "ap:ElementUsage",
       "elementNumber": "10.7",
       "label": "Odnos primjerka i primjerka",
       "property": "http://www.registar.kam.hr/Elements/po/#P50021",
       "obligation": "Nije obvezno",
-      "required": false
+      "required": false,
+      "definition": "Povezuje primjerak s jednim ili više drugih primjeraka s kojima je u značajnom odnosu (npr. par, serija, dio kompleta), pri čemu se odnos dodatno specificira drugim elementima ili kontekstom."
     },
     {
       "@type": "ap:ElementUsage",
@@ -199,7 +215,8 @@
       "label": "Odnos primjerka i agenta",
       "property": "http://www.registar.kam.hr/Elements/po/#P50025",
       "obligation": "Nije obvezno",
-      "required": false
+      "required": false,
+      "definition": "Povezuje primjerak s agentom (osobom ili korporativnim tijelom) koji je u određenom odnosu s jedinicom građe (npr. vlasnik, donator, restaurator), uz mogućnost dodatne specifikacije u drugim elementima."
     },
     {
       "@type": "ap:ElementUsage",
@@ -207,7 +224,8 @@
       "label": "Odnos primjerka i mjesta",
       "property": "http://www.registar.kam.hr/Elements/po/#P50030",
       "obligation": "Nije obvezno",
-      "required": false
+      "required": false,
+      "definition": "Povezuje primjerak s mjestom koje je u značajnom odnosu s jedinicom građe (npr. mjesto nalaza, mjesto izrade, mjesto uporabe ili čuvanja), u skladu s konceptom mjesta u ontologiji."
     },
     {
       "@type": "ap:ElementUsage",
@@ -215,7 +233,8 @@
       "label": "Odnos primjerka i vremenskog raspona",
       "property": "http://www.registar.kam.hr/Elements/po/#P50031",
       "obligation": "Nije obvezno",
-      "required": false
+      "required": false,
+      "definition": "Povezuje primjerak s vremenskim rasponom (npr. datumom ili razdobljem) koji je u značajnom odnosu s jedinicom građe (npr. vrijeme nastanka, uporabe, otkrivanja ili nabave)."
     },
     {
       "@type": "ap:ElementUsage",
@@ -223,7 +242,8 @@
       "label": "Napomena o odnosu primjerka i drugih jedinica opisa",
       "property": "http://www.registar.kam.hr/Elements/po/#P50123",
       "obligation": "Nije obvezno",
-      "required": false
+      "required": false,
+      "definition": "Povezuje primjerak s napomenom koja dodatno pojašnjava odnose primjerka i drugih jedinica opisa (djela, izraza, pojavnih oblika, primjeraka, mjesta, vremenskih raspona, agenata)."
     }
   ]
 }

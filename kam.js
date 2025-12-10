@@ -441,25 +441,41 @@ helpBtn.addEventListener("click", () => {
 
         const id = "e" + (u.elementNumber || "").replace(".", "_");
 
-        const label = document.createElement("label");
-        label.setAttribute("for", id);
-        label.textContent =
-          (u.elementNumber ? u.elementNumber + " " : "") + (u.label || "");
+        // omot za label + info ikonu
+const labelWrapper = document.createElement("div");
+labelWrapper.className = "field-label";
 
-        if (u.required) {
-          const star = document.createElement("span");
-          star.textContent = " *";
-          star.className = "required";
-          label.appendChild(star);
-        }
+const label = document.createElement("label");
+label.setAttribute("for", id);
+label.textContent =
+  (u.elementNumber ? u.elementNumber + " " : "") + (u.label || "");
 
-        const input = document.createElement("input");
-        input.id = id;
-        input.dataset.propertyIri = u.property || "";
+// zvjezdica za obavezna polja
+if (u.required) {
+  const star = document.createElement("span");
+  star.textContent = " *";
+  star.className = "required";
+  label.appendChild(star);
+}
 
-        col.appendChild(label);
-        col.appendChild(input);
-        row.appendChild(col);
+labelWrapper.appendChild(label);
+
+// mala "i" ikona ako postoji definicija
+if (u.definition) {
+  const info = document.createElement("span");
+  info.className = "info-icon";
+  info.textContent = "i";
+  info.title = u.definition;   // tooltip na hover
+  labelWrapper.appendChild(info);
+}
+
+const input = document.createElement("input");
+input.id = id;
+input.dataset.propertyIri = u.property || "";
+
+col.appendChild(labelWrapper);
+col.appendChild(input);
+
       });
 
     sectionEl.appendChild(row);
