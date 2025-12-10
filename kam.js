@@ -526,6 +526,7 @@ function renderApplicationProfileForm(container, apData) {
 
 // dodaje novi input za ponovljivo polje (maks. 10 po elementu)
 // dodaje NOVU kolonu za ponovljivo polje (maks. 10 po elementu)
+// dodaje NOVU kolonu za ponovljivo polje (maks. 10 po elementu)
 function addRepeatableField(groupEl, usage) {
   const col = groupEl.parentElement;       // div.cols-6.ap-col
   const row = col.parentElement;           // div.row
@@ -533,17 +534,17 @@ function addRepeatableField(groupEl, usage) {
   const elementNumber = usage.elementNumber || "";
 
   // koliko već imamo kolona za ovaj element
-  const existingCols = row.querySelectorAll(
+  const existingColsAll = row.querySelectorAll(
     `.ap-col[data-element-number="${elementNumber}"]`
   );
-  if (existingCols.length >= 10) {
+  if (existingColsAll.length >= 10) {
     alert("Dosegnut je maksimalan broj ponavljanja (10) za ovo polje.");
     return;
   }
 
   // napravi novu kolonu istih klasa (cols-6 ili cols-12 + ap-col)
   const newCol = document.createElement("div");
-  newCol.className = col.className; // zadržava cols-6/cols-12 i ap-col
+  newCol.className = col.className;
   newCol.dataset.elementNumber = elementNumber;
 
   // nova grupa
@@ -577,8 +578,15 @@ function addRepeatableField(groupEl, usage) {
   newGroup.appendChild(newBtn);
 
   newCol.appendChild(newGroup);
-  row.appendChild(newCol);
+
+  // NOVO: umetni novu kolonu odmah iza zadnje postojeće za taj element
+  const existingCols = row.querySelectorAll(
+    `.ap-col[data-element-number="${elementNumber}"]`
+  );
+  const lastCol = existingCols[existingCols.length - 1];
+  lastCol.insertAdjacentElement("afterend", newCol);
 }
+
 
 
 // poveže donje gumbe s generiranjem JSON-LD instance (za sada samo console.log + download)
