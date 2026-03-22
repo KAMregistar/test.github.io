@@ -25,7 +25,8 @@
       "obligation": "Obvezno kad je primjenjivo i dostupno",
       "required": true,
       "repeatable": true,
-      "definition": "Stvarni prikaz je riječ ili skup riječi i/ili znakova koji identificiraju jedinicu građe i pružaju informacije o mjestu, vremenu i agentima povezanima s nastankom jedinice građe, a navedeni su na samoj jedinici."
+      "definition": "Stvarni prikaz je riječ ili skup riječi i/ili znakova koji identificiraju jedinicu građe i pružaju informacije o mjestu, vremenu i agentima povezanima s nastankom jedinice građe, a navedeni su na samoj jedinici.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -34,7 +35,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Napomena o stvarnom prikazu je nestrukturirani ili polustrukturirani tekst u kojemu se navode pojedinosti o stvarnom prikazu, uključujući informacije o rasporedu i izvorima podataka stvarnog prikaza na jedinici građe."
+      "definition": "Napomena o stvarnom prikazu je nestrukturirani ili polustrukturirani tekst u kojemu se navode pojedinosti o stvarnom prikazu, uključujući informacije o rasporedu i izvorima podataka stvarnog prikaza na jedinici građe.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -43,7 +45,10 @@
       "obligation": "Obvezno kad je primjenjivo i dostupno",
       "required": true,
       "repeatable": false,
-      "definition": "Podatak o stvarnom naslovu je riječ, znak ili skup riječi i/ili znakova koji imenuje jedinicu građe, a naveden je na samoj jedinici."
+      "definition": "Podatak o stvarnom naslovu je riječ, znak ili skup riječi i/ili znakova koji imenuje jedinicu građe, a naveden je na samoj jedinici.",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40003",
+      "mappingCurie": "kampo:P40003",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -52,7 +57,10 @@
       "obligation": "Obvezno kad je primjenjivo i dostupno",
       "required": true,
       "repeatable": false,
-      "definition": "Glavni stvarni naslov je riječ, znak ili skup riječi i/ili znakova koji primarno imenuje jedinicu građe, a naveden je na samoj jedinici."
+      "definition": "Glavni stvarni naslov je riječ, znak ili skup riječi i/ili znakova koji primarno imenuje jedinicu građe, a naveden je na samoj jedinici.",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40004",
+      "mappingCurie": "kampo:P40004",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -61,7 +69,10 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Usporedni stvarni naslov je riječ, znak ili skup riječi i/ili znakova koji je naveden je u istom izvoru podataka na jedinici građe kao i glavni stvarni naslov i predstavlja njegovu istoznačnicu na drugom jeziku i/ili pismu."
+      "definition": "Usporedni stvarni naslov je riječ, znak ili skup riječi i/ili znakova koji je naveden je u istom izvoru podataka na jedinici građe kao i glavni stvarni naslov i predstavlja njegovu istoznačnicu na drugom jeziku i/ili pismu.",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40005",
+      "mappingCurie": "kampo:P40005",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -70,7 +81,10 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Dodatak glavnom stvarnom naslovu je riječ, znak ili skup riječi i/ili znakova koji pobliže određuje, objašnjava ili upotpunjuje glavni stvarni naslov, a i naveden je na jedinici građe, na jeziku glavnog stvarnog naslova i u istom izvoru podataka kao i glavni stvarni naslov."
+      "definition": "Dodatak glavnom stvarnom naslovu je riječ, znak ili skup riječi i/ili znakova koji pobliže određuje, objašnjava ili upotpunjuje glavni stvarni naslov, a i naveden je na jedinici građe, na jeziku glavnog stvarnog naslova i u istom izvoru podataka kao i glavni stvarni naslov.",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40006",
+      "mappingCurie": "kampo:P40006",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -79,7 +93,10 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Usporedni dodatak glavnom stvarnom naslovu je riječ, znak ili skup riječi i/ili znakova koji predstavlja istoznačnicu dodatka glavnom stvarnom naslovu na drugom jeziku i/ili pismu, a naveden je u istom izvoru podataka na jedinici građe kao i dodatak glavnom stvarnom naslovu."
+      "definition": "Usporedni dodatak glavnom stvarnom naslovu je riječ, znak ili skup riječi i/ili znakova koji predstavlja istoznačnicu dodatka glavnom stvarnom naslovu na drugom jeziku i/ili pismu, a naveden je u istom izvoru podataka na jedinici građe kao i dodatak glavnom stvarnom naslovu.",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40007",
+      "mappingCurie": "kampo:P40007",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -88,7 +105,8 @@
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 1.8.2 Uvjeti navođenja napomene o",
       "required": true,
       "repeatable": true,
-      "definition": "Napomena o stvarnom naslovu je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o stvarnom naslovu, uključujući izvor na jedinici građe iz kojega je podatak o stvarnom naslovu preuzet."
+      "definition": "Napomena o stvarnom naslovu je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o stvarnom naslovu, uključujući izvor na jedinici građe iz kojega je podatak o stvarnom naslovu preuzet.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -97,7 +115,8 @@
       "obligation": "Obvezno kad je primjenjivo",
       "required": true,
       "repeatable": false,
-      "definition": "Razina opisa djela je izraz, nadzirani naziv, kôd ili druga oznaka koja označava razinu specifičnosti opisa djela u informacijskom sustavu, uključujući položaj unutar hijerarhije djelâ koja su s njim povezana odnosom cjeline i dijela."
+      "definition": "Razina opisa djela je izraz, nadzirani naziv, kôd ili druga oznaka koja označava razinu specifičnosti opisa djela u informacijskom sustavu, uključujući položaj unutar hijerarhije djelâ koja su s njim povezana odnosom cjeline i dijela.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -106,7 +125,8 @@
       "obligation": "Obvezno kad je primjenjivo",
       "required": true,
       "repeatable": false,
-      "definition": "Razina opisa pojavnog oblika je izraz, nadzirani naziv, kôd ili druga oznaka koja označava razinu specifičnosti opisa pojavnog oblika jedinice građe u informacijskom sustavu."
+      "definition": "Razina opisa pojavnog oblika je izraz, nadzirani naziv, kôd ili druga oznaka koja označava razinu specifičnosti opisa pojavnog oblika jedinice građe u informacijskom sustavu.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -115,7 +135,10 @@
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 2.4.2 Uvjeti navođenja medija)",
       "required": true,
       "repeatable": true,
-      "definition": "Medij je izraz, nadzirani naziv, identifikator ili druga oznaka koja označava vrstu građe s obzirom na tehnologiju bilježenja, posredovanja i pohrane njezina sadržaja."
+      "definition": "Medij je izraz, nadzirani naziv, identifikator ili druga oznaka koja označava vrstu građe s obzirom na tehnologiju bilježenja, posredovanja i pohrane njezina sadržaja.",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40042",
+      "mappingCurie": "kampo:P40042",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -124,7 +147,8 @@
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 2.5.2 Uvjeti navođenja oblika sadržaja)",
       "required": true,
       "repeatable": true,
-      "definition": "Oblik sadržaja je izraz, nadzirani naziv, identifikator ili druga oznaka koja označava vrstu građe s obzirom na znakovni sustav kojim je izražen njezin sadržaj."
+      "definition": "Oblik sadržaja je izraz, nadzirani naziv, identifikator ili druga oznaka koja označava vrstu građe s obzirom na znakovni sustav kojim je izražen njezin sadržaj.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -133,7 +157,10 @@
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 2.6.2 Uvjeti navođenja identifikatora djela)",
       "required": true,
       "repeatable": true,
-      "definition": "Identifikator djela je brojčana ili slovno-brojčana oznaka koja unutar određenog sustava jednoznačno identificira djelo sadržano u jedinici građe."
+      "definition": "Identifikator djela je brojčana ili slovno-brojčana oznaka koja unutar određenog sustava jednoznačno identificira djelo sadržano u jedinici građe.",
+      "property": "http://www.registar.kam.hr/Elements/d/#P20309",
+      "mappingCurie": "kamd:P20309",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -142,7 +169,10 @@
       "obligation": "Obvezno kad je primjenjivo",
       "required": true,
       "repeatable": false,
-      "definition": "Usvojena pristupnica za djelo je nadzirana riječ, izraz ili niz riječi i/ili drugih oznaka, koji unutar nekog sustava jednoznačno identificira djelo i okuplja podatke o djelu."
+      "definition": "Usvojena pristupnica za djelo je nadzirana riječ, izraz ili niz riječi i/ili drugih oznaka, koji unutar nekog sustava jednoznačno identificira djelo i okuplja podatke o djelu.",
+      "property": "http://www.registar.kam.hr/Elements/n/#P13022",
+      "mappingCurie": "kamn:P13022",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -151,7 +181,10 @@
       "obligation": "Obvezno kad je primjenjivo",
       "required": true,
       "repeatable": false,
-      "definition": "Usvojeni naslov djela je riječ ili niz riječi i/ili drugih oznaka, kojemu se daje prednost u imenovanju djela unutar određenog sustava."
+      "definition": "Usvojeni naslov djela je riječ ili niz riječi i/ili drugih oznaka, kojemu se daje prednost u imenovanju djela unutar određenog sustava.",
+      "property": "http://www.registar.kam.hr/Elements/d/#P20304",
+      "mappingCurie": "kamd:P20304",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -160,7 +193,10 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Vrsta usvojenog naslova djela je riječ, izraz ili druga oznaka koja označava kojoj vrsti naslova pripada usvojeni naslov djela."
+      "definition": "Vrsta usvojenog naslova djela je riječ, izraz ili druga oznaka koja označava kojoj vrsti naslova pripada usvojeni naslov djela.",
+      "property": "http://www.registar.kam.hr/Elements/n/#P13026",
+      "mappingCurie": "kamn:P13026",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -169,7 +205,10 @@
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 2.10.2 Uvjeti navođenja dodatnog obilježja",
       "required": true,
       "repeatable": true,
-      "definition": "Dodatno obilježje djela je riječ, brojka ili niz riječi, brojki i/ili drugih znakova, koji služi razlikovanju djelâ koja imaju isti naslov ili razlikovanju djela od drugih jedinica opisa čije je ime jednako ili slično njegovom naslovu."
+      "definition": "Dodatno obilježje djela je riječ, brojka ili niz riječi, brojki i/ili drugih znakova, koji služi razlikovanju djelâ koja imaju isti naslov ili razlikovanju djela od drugih jedinica opisa čije je ime jednako ili slično njegovom naslovu.",
+      "property": "http://www.registar.kam.hr/Elements/d/#P20307",
+      "mappingCurie": "kamd:P20307",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -178,7 +217,10 @@
       "obligation": null,
       "required": null,
       "repeatable": null,
-      "definition": null
+      "definition": null,
+      "property": "http://www.registar.kam.hr/Elements/n/#P13023",
+      "mappingCurie": "kamn:P13023",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -187,7 +229,10 @@
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 2.13.2 Uvjeti navođenja varijantnog",
       "required": true,
       "repeatable": true,
-      "definition": "Varijantni naslov djela je riječ ili niz riječi i/ili drugih oznaka, koji imenuje djelo unutar nekog sustava, a nije odabran za usvojeni naslov djela."
+      "definition": "Varijantni naslov djela je riječ ili niz riječi i/ili drugih oznaka, koji imenuje djelo unutar nekog sustava, a nije odabran za usvojeni naslov djela.",
+      "property": "http://www.registar.kam.hr/Elements/d/#P20305",
+      "mappingCurie": "kamd:P20305",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -196,7 +241,10 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Vrsta varijantnog naslova djela je riječ, izraz ili druga oznaka koja označava kojoj vrsti naslova pripada varijantni naslov djela."
+      "definition": "Vrsta varijantnog naslova djela je riječ, izraz ili druga oznaka koja označava kojoj vrsti naslova pripada varijantni naslov djela.",
+      "property": "http://www.registar.kam.hr/Elements/n/#P13028",
+      "mappingCurie": "kamn:P13028",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -205,7 +253,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Napomena o identifikaciji djela je kratak tekst u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o djelu (identifikator djela, usvojeni naslov djela, varijantni naslov djela, ključni naslov, brojčane i kronološke oznake serijske građe) i/ili izvorima iz kojih su identifikacijski podaci preuzeti."
+      "definition": "Napomena o identifikaciji djela je kratak tekst u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o djelu (identifikator djela, usvojeni naslov djela, varijantni naslov djela, ključni naslov, brojčane i kronološke oznake serijske građe) i/ili izvorima iz kojih su identifikacijski podaci preuzeti.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -214,7 +263,10 @@
       "obligation": "Obvezno kad je primjenjivo i dostupno",
       "required": true,
       "repeatable": true,
-      "definition": "Identifikator izraza je brojčana ili slovno-brojčana oznaka koja unutar određenog sustava jednoznačno identificira izraz djela sadržanog u jedinici građe."
+      "definition": "Identifikator izraza je brojčana ili slovno-brojčana oznaka koja unutar određenog sustava jednoznačno identificira izraz djela sadržanog u jedinici građe.",
+      "property": "http://www.registar.kam.hr/Elements/i/#P30243",
+      "mappingCurie": "kami:P30243",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -223,7 +275,10 @@
       "obligation": "Obvezno kad je primjenjivo",
       "required": true,
       "repeatable": false,
-      "definition": "Usvojena pristupnica za izraz je nadzirana riječ, izraz ili niz riječi i/ili drugih oznaka, koji unutar nekog sustava jednoznačno identificira izraz i okuplja podatke o izrazu."
+      "definition": "Usvojena pristupnica za izraz je nadzirana riječ, izraz ili niz riječi i/ili drugih oznaka, koji unutar nekog sustava jednoznačno identificira izraz i okuplja podatke o izrazu.",
+      "property": "http://www.registar.kam.hr/Elements/n/#P13039",
+      "mappingCurie": "kamn:P13039",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -232,7 +287,10 @@
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 2.19.2 Uvjeti navođenja dodatnog obilježja",
       "required": true,
       "repeatable": true,
-      "definition": "Dodatno obilježje izraza je riječ, brojka ili niz riječi, brojki i/ili drugih znakova koji služi razlikovanju izrazâ istoga djela."
+      "definition": "Dodatno obilježje izraza je riječ, brojka ili niz riječi, brojki i/ili drugih znakova koji služi razlikovanju izrazâ istoga djela.",
+      "property": "http://www.registar.kam.hr/Elements/i/#P30242",
+      "mappingCurie": "kami:P30242",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -241,7 +299,10 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Varijantna pristupnica za izraz je riječ, izraz ili niz riječi i/ili drugih oznaka, koji identificira izraz unutar određenog sustava, a nije odabran za usvojenu pristupnicu."
+      "definition": "Varijantna pristupnica za izraz je riječ, izraz ili niz riječi i/ili drugih oznaka, koji identificira izraz unutar određenog sustava, a nije odabran za usvojenu pristupnicu.",
+      "property": "http://www.registar.kam.hr/Elements/n/#P13040",
+      "mappingCurie": "kamn:P13040",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -250,7 +311,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Napomena o identifikaciji izraza je kratak tekst u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o izrazu (identifikator izraza, usvojeni naslov izraza, varijantni naslov izraza) i/ili izvorima iz kojih su identifikacijski podaci preuzeti."
+      "definition": "Napomena o identifikaciji izraza je kratak tekst u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o izrazu (identifikator izraza, usvojeni naslov izraza, varijantni naslov izraza) i/ili izvorima iz kojih su identifikacijski podaci preuzeti.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -259,7 +321,10 @@
       "obligation": "Obvezno kad je primjenjivo i dostupno",
       "required": true,
       "repeatable": true,
-      "definition": "Identifikator pojavnog oblika je brojčana ili slovno-brojčana oznaka koja unutar određenog sustava jednoznačno identificira pojavni oblik jedinice građe."
+      "definition": "Identifikator pojavnog oblika je brojčana ili slovno-brojčana oznaka koja unutar određenog sustava jednoznačno identificira pojavni oblik jedinice građe.",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40319",
+      "mappingCurie": "kampo:P40319",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -268,7 +333,10 @@
       "obligation": "Obvezno kad je primjenjivo",
       "required": true,
       "repeatable": false,
-      "definition": "Usvojena pristupnica za pojavni oblik je nadzirana riječ, izraz ili niz riječi i/ili drugih oznaka, koji unutar nekog sustava jednoznačno identificira pojavni oblik i okuplja podatke o njemu."
+      "definition": "Usvojena pristupnica za pojavni oblik je nadzirana riječ, izraz ili niz riječi i/ili drugih oznaka, koji unutar nekog sustava jednoznačno identificira pojavni oblik i okuplja podatke o njemu.",
+      "property": "http://www.registar.kam.hr/Elements/n/#P13049",
+      "mappingCurie": "kamn:P13049",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -277,7 +345,8 @@
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 2.24.2 Uvjeti navođenja dodatnog obilježja",
       "required": true,
       "repeatable": true,
-      "definition": "Dodatno obilježje pojavnog oblika je riječ, brojka ili niz riječi, brojki i/ili drugih znakova, koji služi razlikovanju pojavnih oblika istoga izraza ili razlikovanju pojavnog oblika od drugih jedinica opisa čije je ime jednako ili slično njegovom naslovu."
+      "definition": "Dodatno obilježje pojavnog oblika je riječ, brojka ili niz riječi, brojki i/ili drugih znakova, koji služi razlikovanju pojavnih oblika istoga izraza ili razlikovanju pojavnog oblika od drugih jedinica opisa čije je ime jednako ili slično njegovom naslovu.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -286,7 +355,10 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Varijantna pristupnica za pojavni oblik je riječ, izraz ili niz riječi i/ili drugih oznaka, koji identificira pojavni oblik unutar određenog sustava, a nije odabran za usvojenu pristupnicu."
+      "definition": "Varijantna pristupnica za pojavni oblik je riječ, izraz ili niz riječi i/ili drugih oznaka, koji identificira pojavni oblik unutar određenog sustava, a nije odabran za usvojenu pristupnicu.",
+      "property": "http://www.registar.kam.hr/Elements/n/#P13050",
+      "mappingCurie": "kamn:P13050",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -295,7 +367,10 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Varijantni naslov pojavnog oblika je riječ, izraz ili niz riječi i/ili drugih oznaka koji je naveden na jedinici građe i imenuje jedinicu građe, ali nije odabran za glavni stvarni naslov niti se smatra nekim od drugih podelemenata stvarnog naslova, najčešće zato što se nalazi izvan propisanih izvora podataka za stvarni naslov."
+      "definition": "Varijantni naslov pojavnog oblika je riječ, izraz ili niz riječi i/ili drugih oznaka koji je naveden na jedinici građe i imenuje jedinicu građe, ali nije odabran za glavni stvarni naslov niti se smatra nekim od drugih podelemenata stvarnog naslova, najčešće zato što se nalazi izvan propisanih izvora podataka za stvarni naslov.",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40316",
+      "mappingCurie": "kampo:P40316",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -304,7 +379,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Napomena o identifikaciji pojavnog oblika je je kratak tekst u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o pojavnom obliku (identifikator pojavnog oblika, usvojeni naslov pojavnog oblika, varijantni naslov pojavnog oblika, skraćeni naslov, dodatno obilježje pojavnog oblika) i/ili izvorima iz kojih su identifikacijski podaci preuzeti."
+      "definition": "Napomena o identifikaciji pojavnog oblika je je kratak tekst u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o pojavnom obliku (identifikator pojavnog oblika, usvojeni naslov pojavnog oblika, varijantni naslov pojavnog oblika, skraćeni naslov, dodatno obilježje pojavnog oblika) i/ili izvorima iz kojih su identifikacijski podaci preuzeti.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -313,7 +389,10 @@
       "obligation": "Obvezno kad je primjenjivo",
       "required": true,
       "repeatable": true,
-      "definition": "Identifikator primjerka je brojčana ili slovno-brojčana oznaka koja unutar određenog sustava jednoznačno identificira primjerak jedinice građe."
+      "definition": "Identifikator primjerka je brojčana ili slovno-brojčana oznaka koja unutar određenog sustava jednoznačno identificira primjerak jedinice građe.",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50001",
+      "mappingCurie": "kamp:P50001",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -322,7 +401,10 @@
       "obligation": "Obvezno kad je primjenjivo",
       "required": true,
       "repeatable": false,
-      "definition": "Usvojena pristupnica za primjerak je nadzirana riječ, izraz ili niz riječi i/ili drugih oznaka, koji unutar nekog sustava jednoznačno identificira primjerak i okuplja podatke o njemu."
+      "definition": "Usvojena pristupnica za primjerak je nadzirana riječ, izraz ili niz riječi i/ili drugih oznaka, koji unutar nekog sustava jednoznačno identificira primjerak i okuplja podatke o njemu.",
+      "property": "http://www.registar.kam.hr/Elements/n/#P13063",
+      "mappingCurie": "kamn:P13063",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -331,7 +413,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Napomena o identifikaciji primjerka je kratak tekst u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o primjerku i/ili izvorima iz kojih su identifikacijski podaci preuzeti."
+      "definition": "Napomena o identifikaciji primjerka je kratak tekst u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o primjerku i/ili izvorima iz kojih su identifikacijski podaci preuzeti.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -340,7 +423,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Preporučeni način citiranja je način koji ustanova preporučuje za citiranje jedinice građe koje posjeduje i/ili za čiji je nastanak ili sređivanje odgovorna (npr. fondovi, zbirke, baze podataka, aplikacije itd.)."
+      "definition": "Preporučeni način citiranja je način koji ustanova preporučuje za citiranje jedinice građe koje posjeduje i/ili za čiji je nastanak ili sređivanje odgovorna (npr. fondovi, zbirke, baze podataka, aplikacije itd.).",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -349,7 +433,8 @@
       "obligation": "Obvezno kad je primjenjivo i dostupno",
       "required": true,
       "repeatable": true,
-      "definition": "Izvorni natpisi i oznake su riječi, znakovi ili skupovi riječi i/ili znakova koji se javljaju na jedinici građe (najčešće na epigrafskim spomenicima, uporabnim predmetima i drugim kulturnim objektima ili slikovnoj građi) kao dio izvornog oblikovanja, a predstavljaju sadržaj ili dio sadržaja (npr. dekorativni natpisi, citati, zazivi, gesla i sl.)."
+      "definition": "Izvorni natpisi i oznake su riječi, znakovi ili skupovi riječi i/ili znakova koji se javljaju na jedinici građe (najčešće na epigrafskim spomenicima, uporabnim predmetima i drugim kulturnim objektima ili slikovnoj građi) kao dio izvornog oblikovanja, a predstavljaju sadržaj ili dio sadržaja (npr. dekorativni natpisi, citati, zazivi, gesla i sl.).",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -358,7 +443,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Napomena o izvornim natpisima i oznakama je nestrukturirani ili polustrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o izvornim natpisima i oznakama na jedinici građe."
+      "definition": "Napomena o izvornim natpisima i oznakama je nestrukturirani ili polustrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o izvornim natpisima i oznakama na jedinici građe.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -367,7 +453,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Opis sadržaja je kratak nestrukturirani tekst koji objašnjava o čemu je ili što prikazuje jedinica građe."
+      "definition": "Opis sadržaja je kratak nestrukturirani tekst koji objašnjava o čemu je ili što prikazuje jedinica građe.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -376,7 +463,8 @@
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 3.5.2 Uvjeti navođenja predmeta)",
       "required": true,
       "repeatable": true,
-      "definition": "Predmet je izraz, nadzirani naziv, ime, naslov, identifikator ili druga nadzirana oznaka koja označava temu kojom se bavi ili koju prikazuje jedinica građe."
+      "definition": "Predmet je izraz, nadzirani naziv, ime, naslov, identifikator ili druga nadzirana oznaka koja označava temu kojom se bavi ili koju prikazuje jedinica građe.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -385,7 +473,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Napomena o predmetu je kratak nestrukturirani tekst u kojemu se navode objašnjenja, tumačenja i druge pojedinosti o predmetu jedinice građe i/ili načinu na koji je predmet utvrđen."
+      "definition": "Napomena o predmetu je kratak nestrukturirani tekst u kojemu se navode objašnjenja, tumačenja i druge pojedinosti o predmetu jedinice građe i/ili načinu na koji je predmet utvrđen.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -394,7 +483,8 @@
       "obligation": "Obvezno kad je primjenjivo",
       "required": true,
       "repeatable": true,
-      "definition": "Područje je izraz, nadzirani naziv, identifikator ili druga oznaka koja označava djelatnost, znanstvenu disciplinu ili drugo polje ljudskog znanja ili djelovanja kojemu pripada sadržaj jedinice građe unutar određenog klasifikacijskog sustava."
+      "definition": "Područje je izraz, nadzirani naziv, identifikator ili druga oznaka koja označava djelatnost, znanstvenu disciplinu ili drugo polje ljudskog znanja ili djelovanja kojemu pripada sadržaj jedinice građe unutar određenog klasifikacijskog sustava.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -403,7 +493,10 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Oblik ili žanr je izraz, nadzirani naziv, identifikator ili druga oznaka koja označava vrstu kojoj pripada jedinica građe s obzirom na namjenu i organizaciju sadržaja, odabir teme i stila i druge pretežito sadržajne značajke."
+      "definition": "Oblik ili žanr je izraz, nadzirani naziv, identifikator ili druga oznaka koja označava vrstu kojoj pripada jedinica građe s obzirom na namjenu i organizaciju sadržaja, odabir teme i stila i druge pretežito sadržajne značajke.",
+      "property": "http://www.registar.kam.hr/Elements/d/#P20315",
+      "mappingCurie": "kamd:P20315",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -412,7 +505,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Napomena o jeziku sadržaja je kratak nestrukturirani tekst u kojemu se navode pojedinosti o jeziku ili jezicima sadržaja jedinice građe."
+      "definition": "Napomena o jeziku sadržaja je kratak nestrukturirani tekst u kojemu se navode pojedinosti o jeziku ili jezicima sadržaja jedinice građe.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -421,7 +515,10 @@
       "obligation": "Nije obvezno (vidi i 3.13.2 Uvjeti navođenja jezika izvornika)",
       "required": false,
       "repeatable": true,
-      "definition": "Jezik izvornika je izraz, nadzirani naziv, kôd, identifikator ili druga oznaka za jezik kojim je izvorno zabilježen sadržaj jedinice građe."
+      "definition": "Jezik izvornika je izraz, nadzirani naziv, kôd, identifikator ili druga oznaka za jezik kojim je izvorno zabilježen sadržaj jedinice građe.",
+      "property": "http://www.registar.kam.hr/Elements/i/#P30003",
+      "mappingCurie": "kami:P30003",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -430,7 +527,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Napomena o jeziku izvornika je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o jeziku ili jezicima kojima je izvorno zabilježen sadržaj jedinice građe."
+      "definition": "Napomena o jeziku izvornika je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o jeziku ili jezicima kojima je izvorno zabilježen sadržaj jedinice građe.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -439,7 +537,10 @@
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 3.15.2 Uvjeti navođenja pisma sadržaja)",
       "required": true,
       "repeatable": true,
-      "definition": "Pismo sadržaja je izraz, nadzirani naziv, kôd, identifikator ili druga oznaka za sustav grafičkih znakova kojima je iskazan sadržaj jedinice građe."
+      "definition": "Pismo sadržaja je izraz, nadzirani naziv, kôd, identifikator ili druga oznaka za sustav grafičkih znakova kojima je iskazan sadržaj jedinice građe.",
+      "property": "http://www.registar.kam.hr/Elements/i/#P30005",
+      "mappingCurie": "kami:P30005",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -448,7 +549,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Napomena o pismu sadržaja je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o sustavu grafičkih znakova kojim je iskazan sadržaj jedinice građe."
+      "definition": "Napomena o pismu sadržaja je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o sustavu grafičkih znakova kojim je iskazan sadržaj jedinice građe.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -457,7 +559,10 @@
       "obligation": "Nije obvezno (vidi i 3.17.2 Uvjeti navođenja pisma izvornika)",
       "required": false,
       "repeatable": true,
-      "definition": "Pismo izvornika je izraz, nadzirani naziv, kôd, identifikator ili druga oznaka koja označava sustav grafičkih znakova kojim je izvorno zabilježen sadržaj jedinice građe."
+      "definition": "Pismo izvornika je izraz, nadzirani naziv, kôd, identifikator ili druga oznaka koja označava sustav grafičkih znakova kojim je izvorno zabilježen sadržaj jedinice građe.",
+      "property": "http://www.registar.kam.hr/Elements/i/#P30007",
+      "mappingCurie": "kami:P30007",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -466,7 +571,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Napomena o pismu izvornika je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o jednom ili više sustava grafičkih znakova kojima je izvorno zabilježen sadržaj jedinice građe."
+      "definition": "Napomena o pismu izvornika je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o jednom ili više sustava grafičkih znakova kojima je izvorno zabilježen sadržaj jedinice građe.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -475,7 +581,10 @@
       "obligation": "Obvezno kad je primjenjivo",
       "required": true,
       "repeatable": true,
-      "definition": "Mjerilo je brojčani podatak ili izraz koji označava odnos dimenzija jedinice građe ili udaljenosti prikazanih na jedinici građe i stvarnih dimenzija ili udaljenosti."
+      "definition": "Mjerilo je brojčani podatak ili izraz koji označava odnos dimenzija jedinice građe ili udaljenosti prikazanih na jedinici građe i stvarnih dimenzija ili udaljenosti.",
+      "property": "http://www.registar.kam.hr/Elements/i/#P30014",
+      "mappingCurie": "kami:P30014",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -484,7 +593,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Napomena o mjerilu je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o mjerilu jedinice građe."
+      "definition": "Napomena o mjerilu je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o mjerilu jedinice građe.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -493,7 +603,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Kartografska projekcija je izraz ili druga oznaka koja označava matematički sustav pomoću kojega je na karti prikazana Zemlja ili neko drugo nebesko tijelo, dio Zemlje ili nekog drugog nebeskog tijela ili položaj nebeskih tijela."
+      "definition": "Kartografska projekcija je izraz ili druga oznaka koja označava matematički sustav pomoću kojega je na karti prikazana Zemlja ili neko drugo nebesko tijelo, dio Zemlje ili nekog drugog nebeskog tijela ili položaj nebeskih tijela.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -502,7 +613,8 @@
       "obligation": "Obvezno kad je primjenjivo i dostupno",
       "required": true,
       "repeatable": false,
-      "definition": "Geografska dužina i geografska širina je izraz koji je naveden na kartografskoj jedinici građe, a označava položaj mjesta prikazanog na karti Zemlje ili nekog drugog nebeskog tijela, mjereno od početnog meridijana u pravcu istoka ili zapada te od ekvatora u pravcu sjevera ili juga."
+      "definition": "Geografska dužina i geografska širina je izraz koji je naveden na kartografskoj jedinici građe, a označava položaj mjesta prikazanog na karti Zemlje ili nekog drugog nebeskog tijela, mjereno od početnog meridijana u pravcu istoka ili zapada te od ekvatora u pravcu sjevera ili juga.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -511,7 +623,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Napomena o geografskoj dužini i geografskoj širini je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o geografskoj dužini i geografskoj širini prikaza na jedinici građe."
+      "definition": "Napomena o geografskoj dužini i geografskoj širini je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o geografskoj dužini i geografskoj širini prikaza na jedinici građe.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -520,7 +633,8 @@
       "obligation": "Obvezno kad je primjenjivo i dostupno",
       "required": true,
       "repeatable": false,
-      "definition": "Rektascenzija i deklinacija je izraz koji je naveden na kartografskoj jedinici građe, a označava položaj područja neba: kutnu udaljenost mjerenu prema istoku na ekvatoru od proljetne ravnodnevice do satnog kruga nebeskog tijela, od 0 do 24 sata, te kutnu udaljenost do nebeskog tijela mjerenu sjeverno ili južno pomoću 90˚ od nebeskog ekvatora uzduž kruga tijela u satu."
+      "definition": "Rektascenzija i deklinacija je izraz koji je naveden na kartografskoj jedinici građe, a označava položaj područja neba: kutnu udaljenost mjerenu prema istoku na ekvatoru od proljetne ravnodnevice do satnog kruga nebeskog tijela, od 0 do 24 sata, te kutnu udaljenost do nebeskog tijela mjerenu sjeverno ili južno pomoću 90˚ od nebeskog ekvatora uzduž kruga tijela u satu.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -529,7 +643,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": false,
-      "definition": "Ravnodnevica je izraz koji se javlja na kartografskoj jedinici građe, a označava jednu ili dvije točke sjecišta ekliptičnog i nebeskog ekvatora, zauzetog Suncem kad je njegova deklinacija 0˚."
+      "definition": "Ravnodnevica je izraz koji se javlja na kartografskoj jedinici građe, a označava jednu ili dvije točke sjecišta ekliptičnog i nebeskog ekvatora, zauzetog Suncem kad je njegova deklinacija 0˚.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -538,7 +653,10 @@
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 4.1.2 Uvjeti navođenja opsega)",
       "required": true,
       "repeatable": false,
-      "definition": "Opseg je niz brojki i izraza koji označavaju količinu i vrstu materijalnih objekata koji tvore jedinicu građe."
+      "definition": "Opseg je niz brojki i izraza koji označavaju količinu i vrstu materijalnih objekata koji tvore jedinicu građe.",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40046",
+      "mappingCurie": "kampo:P40046",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -547,7 +665,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Napomena o opsegu je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o opsegu jedinice građe."
+      "definition": "Napomena o opsegu je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o opsegu jedinice građe.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -556,7 +675,10 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Materijalni nositelj je izraz, nadzirani naziv, identifikator ili druga oznaka koja označava vrstu materijalnog objekta na kojemu je pohranjen sadržaj jedinice građe."
+      "definition": "Materijalni nositelj je izraz, nadzirani naziv, identifikator ili druga oznaka koja označava vrstu materijalnog objekta na kojemu je pohranjen sadržaj jedinice građe.",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40048",
+      "mappingCurie": "kampo:P40048",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -565,7 +687,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Napomena o materijalnom nositelju je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o materijalnom nositelju jedinice građe."
+      "definition": "Napomena o materijalnom nositelju je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o materijalnom nositelju jedinice građe.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -574,7 +697,10 @@
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 4.5.2 Uvjeti navođenja dimenzija)",
       "required": true,
       "repeatable": true,
-      "definition": "Dimenzije su niz brojki, izraza i drugih znakova koji označavaju veličinu pojavnog oblika jedinice građe ili njegova dijela."
+      "definition": "Dimenzije su niz brojki, izraza i drugih znakova koji označavaju veličinu pojavnog oblika jedinice građe ili njegova dijela.",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40050",
+      "mappingCurie": "kampo:P40050",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -583,7 +709,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Napomena o dimenzijama je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o dimenzijama jedinice građe."
+      "definition": "Napomena o dimenzijama je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o dimenzijama jedinice građe.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -592,7 +719,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Masa je izraz koji označava mjeru tromosti pojavnog oblika jedinice građe ili njegovog dijela."
+      "definition": "Masa je izraz koji označava mjeru tromosti pojavnog oblika jedinice građe ili njegovog dijela.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -601,7 +729,10 @@
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 4.8.2 Uvjeti navođenja materijala)",
       "required": true,
       "repeatable": true,
-      "definition": "Materijal je izraz, nadzirani naziv, identifikator ili druga oznaka za fizikalnu ili kemijsku tvar od koje se sastoji pojavni oblik ili dio pojavnog oblika jedinice građe."
+      "definition": "Materijal je izraz, nadzirani naziv, identifikator ili druga oznaka za fizikalnu ili kemijsku tvar od koje se sastoji pojavni oblik ili dio pojavnog oblika jedinice građe.",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40053",
+      "mappingCurie": "kampo:P40053",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -610,7 +741,10 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Materijal podloge je izraz, nadzirani naziv, identifikator ili druga oznaka za fizikalnu ili kemijsku tvar od koje je načinjena fizička podloga pojavnog oblika jedinice građe, kad se pojavni oblik sastoji od nanosa tvari na podlogu."
+      "definition": "Materijal podloge je izraz, nadzirani naziv, identifikator ili druga oznaka za fizikalnu ili kemijsku tvar od koje je načinjena fizička podloga pojavnog oblika jedinice građe, kad se pojavni oblik sastoji od nanosa tvari na podlogu.",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40054",
+      "mappingCurie": "kampo:P40054",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -619,7 +753,10 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Materijal nanosa je izraz, nadzirani naziv, identifikator ili druga oznaka za fizikalnu ili kemijsku tvar nanesenu na podlogu pojavnog oblika jedinice građe, kad se pojavni oblik sastoji od nanosa na podlozi."
+      "definition": "Materijal nanosa je izraz, nadzirani naziv, identifikator ili druga oznaka za fizikalnu ili kemijsku tvar nanesenu na podlogu pojavnog oblika jedinice građe, kad se pojavni oblik sastoji od nanosa na podlozi.",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40055",
+      "mappingCurie": "kampo:P40055",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -628,7 +765,8 @@
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 4.11.2 Uvjeti navođenja tehnike)",
       "required": true,
       "repeatable": true,
-      "definition": "Tehnika je izraz, nadzirani naziv, identifikator ili druga oznaka za postupak primijenjen u oblikovanju, izradi ili proizvodnji jedinice građe ili njezinog dijela."
+      "definition": "Tehnika je izraz, nadzirani naziv, identifikator ili druga oznaka za postupak primijenjen u oblikovanju, izradi ili proizvodnji jedinice građe ili njezinog dijela.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -637,7 +775,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Napomena o materijalu i tehnici je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o materijalu od kojega se sastoji pojavni oblik jedinice građe ili njegov dio i/ili tehnici oblikovanja, izrade ili proizvodnje pojavnog oblika jedinice građe ili njegova dijela."
+      "definition": "Napomena o materijalu i tehnici je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o materijalu od kojega se sastoji pojavni oblik jedinice građe ili njegov dio i/ili tehnici oblikovanja, izrade ili proizvodnje pojavnog oblika jedinice građe ili njegova dijela.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -646,7 +785,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Boja je izraz, nadzirani naziv, identifikator ili druga oznaka koja označava prisutnost boje u jedinici građe i/ili identificira vrstu boje."
+      "definition": "Boja je izraz, nadzirani naziv, identifikator ili druga oznaka koja označava prisutnost boje u jedinici građe i/ili identificira vrstu boje.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -655,7 +795,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Napomena o boji je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o prisutnosti i/ili vrsti boje jedinice građe."
+      "definition": "Napomena o boji je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o prisutnosti i/ili vrsti boje jedinice građe.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -664,7 +805,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": false,
-      "definition": "Generacija je izraz, nadzirani naziv ili druga oznaka koja označava koliko je puta sadržaj jedinice građe prenesen s jednog materijalnog nositelja na istovrsni nositelj u svrhu umnožavanja."
+      "definition": "Generacija je izraz, nadzirani naziv ili druga oznaka koja označava koliko je puta sadržaj jedinice građe prenesen s jednog materijalnog nositelja na istovrsni nositelj u svrhu umnožavanja.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -673,7 +815,10 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": false,
-      "definition": "Polaritet slike je izraz, nadzirani naziv ili druga oznaka za odnos boja i tonova slike i objekta prikazanog na slici."
+      "definition": "Polaritet slike je izraz, nadzirani naziv ili druga oznaka za odnos boja i tonova slike i objekta prikazanog na slici.",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40063",
+      "mappingCurie": "kampo:P40063",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -682,7 +827,10 @@
       "obligation": "Obvezno kad je primjenjivo",
       "required": true,
       "repeatable": null,
-      "definition": "Položaj sličica je izraz koji označava je li položaj sličica na dijafilmu ili mikrofilmu horizontalan ili vertikalan."
+      "definition": "Položaj sličica je izraz koji označava je li položaj sličica na dijafilmu ili mikrofilmu horizontalan ili vertikalan.",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40064",
+      "mappingCurie": "kampo:P40064",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -691,7 +839,8 @@
       "obligation": "Obvezno kad je primjenjivo",
       "required": true,
       "repeatable": false,
-      "definition": "Omjer smanjenja mikrooblika je izraz koji označava stupanj smanjenja tijekom prijenosa sadržaja jedinice građe u mikrooblik."
+      "definition": "Omjer smanjenja mikrooblika je izraz koji označava stupanj smanjenja tijekom prijenosa sadržaja jedinice građe u mikrooblik.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -700,7 +849,10 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Format datoteke je izraz koji označava standard za kodiranje, prijenos i pohranu digitalnih podataka."
+      "definition": "Format datoteke je izraz koji označava standard za kodiranje, prijenos i pohranu digitalnih podataka.",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40069",
+      "mappingCurie": "kampo:P40069",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -709,7 +861,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Veličina datoteke je izraz koji označava broj bajta jedinice građe na elektroničkom mediju."
+      "definition": "Veličina datoteke je izraz koji označava broj bajta jedinice građe na elektroničkom mediju.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -718,7 +871,10 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Razlučivost slike je izraz koji označava stupanj oštrine digitalne slike izražen brojem piksela."
+      "definition": "Razlučivost slike je izraz koji označava stupanj oštrine digitalne slike izražen brojem piksela.",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40071",
+      "mappingCurie": "kampo:P40071",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -727,7 +883,10 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Povijest djela je kratak nestrukturirani tekst koji sadržava pojedinosti o nastanku, recepciji i interpretaciji djela."
+      "definition": "Povijest djela je kratak nestrukturirani tekst koji sadržava pojedinosti o nastanku, recepciji i interpretaciji djela.",
+      "property": "http://www.registar.kam.hr/Elements/d/#P20016",
+      "mappingCurie": "kamd:P20016",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -736,7 +895,10 @@
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 5.2.2 Uvjeti navođenja plana sređivanja)",
       "required": true,
       "repeatable": true,
-      "definition": "Plan sređivanja je strukturirani ili nestrukturirani tekst u kojemu se objašnjava sadašnji i/ili planirani sustav organizacije fonda ili zbirke."
+      "definition": "Plan sređivanja je strukturirani ili nestrukturirani tekst u kojemu se objašnjava sadašnji i/ili planirani sustav organizacije fonda ili zbirke.",
+      "property": "http://www.registar.kam.hr/Elements/d/#P20012",
+      "mappingCurie": "kamd:P20012",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -745,7 +907,10 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Povijest primjerka je nestrukturirani tekst koji sadržava informacije o povijesti primjerka koje nisu odgovarajuće iskazane u drugim elementima podataka, uključujući vlasništvo nad primjerkom, preinake primjerka, povijest čuvanja itd."
+      "definition": "Povijest primjerka je nestrukturirani tekst koji sadržava informacije o povijesti primjerka koje nisu odgovarajuće iskazane u drugim elementima podataka, uključujući vlasništvo nad primjerkom, preinake primjerka, povijest čuvanja itd.",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50013",
+      "mappingCurie": "kamp:P50013",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -754,7 +919,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Dodani natpisi i oznake su riječi, znakovi ili skupovi riječi i/ili znakova koji se javljaju na jedinici građe, a nisu dio njezina izvornog oblikovanja, proizvodnje ili objavljivanja, već su ih tijekom vremena dodali posjednici, vlasnici, korisnici i drugi agenti."
+      "definition": "Dodani natpisi i oznake su riječi, znakovi ili skupovi riječi i/ili znakova koji se javljaju na jedinici građe, a nisu dio njezina izvornog oblikovanja, proizvodnje ili objavljivanja, već su ih tijekom vremena dodali posjednici, vlasnici, korisnici i drugi agenti.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -763,7 +929,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Napomena o dodanim natpisima i oznakama je nestrukturirani ili polustrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o dodanim natpisima i oznakama na jedinici građe."
+      "definition": "Napomena o dodanim natpisima i oznakama je nestrukturirani ili polustrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o dodanim natpisima i oznakama na jedinici građe.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -772,7 +939,10 @@
       "obligation": "Obvezno kad je primjenjivo",
       "required": true,
       "repeatable": true,
-      "definition": "Način nabave je nadzirani naziv, kôd ili druga nadzirana oznaka koja označava neposredan način na koji je jedinica građe dospjela u ustanovu u kojoj je pohranjena."
+      "definition": "Način nabave je nadzirani naziv, kôd ili druga nadzirana oznaka koja označava neposredan način na koji je jedinica građe dospjela u ustanovu u kojoj je pohranjena.",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50009",
+      "mappingCurie": "kamp:P50009",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -781,7 +951,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Napomena o nabavi je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o neposrednoj nabavi jedinice građe, uključujući način, izvor, mjesto i vrijeme nabave."
+      "definition": "Napomena o nabavi je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o neposrednoj nabavi jedinice građe, uključujući način, izvor, mjesto i vrijeme nabave.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -790,7 +961,10 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Stanje primjerka je izraz ili tekst u kojemu se navode informacije o fizičkom stanju primjerka jedinice građe, uključujući opće stanje, oštećenja, ranije provedene postupke zaštite, dijelove koji nedostaju i druga svojstva koja proizlaze iz životnog ciklusa primjerka i/ili razlikuju primjerak od drugih primjeraka istoga pojavnog oblika."
+      "definition": "Stanje primjerka je izraz ili tekst u kojemu se navode informacije o fizičkom stanju primjerka jedinice građe, uključujući opće stanje, oštećenja, ranije provedene postupke zaštite, dijelove koji nedostaju i druga svojstva koja proizlaze iz životnog ciklusa primjerka i/ili razlikuju primjerak od drugih primjeraka istoga pojavnog oblika.",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50011",
+      "mappingCurie": "kamp:P50011",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -799,7 +973,8 @@
       "obligation": "Obvezno kad je primjenjivo i dostupno",
       "required": true,
       "repeatable": true,
-      "definition": "Konzervacija i restauracija je tekst koji sadržava informacije o konzervatorskim i restauratorskim postupcima provedenima nad jedinicom građe, uključujući mjesto, vrijeme i agente odgovorne za konzervaciju i restauraciju."
+      "definition": "Konzervacija i restauracija je tekst koji sadržava informacije o konzervatorskim i restauratorskim postupcima provedenima nad jedinicom građe, uključujući mjesto, vrijeme i agente odgovorne za konzervaciju i restauraciju.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -808,7 +983,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Uvjeti objavljivanja, umnožavanja ili prikazivanja su izraz ili tekst koji označava pravna i druga ograničenja vezana uz objavljivanje, umnožavanje i/ili javno prikazivanje sadržaja jedinice građe."
+      "definition": "Uvjeti objavljivanja, umnožavanja ili prikazivanja su izraz ili tekst koji označava pravna i druga ograničenja vezana uz objavljivanje, umnožavanje i/ili javno prikazivanje sadržaja jedinice građe.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -817,7 +993,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Tehnički uvjeti pristupa su izraz ili tekst koji sadržava informacije o opremi, uređaju i/ili sustavu potrebnom za pristup sadržaju jedinice građe."
+      "definition": "Tehnički uvjeti pristupa su izraz ili tekst koji sadržava informacije o opremi, uređaju i/ili sustavu potrebnom za pristup sadržaju jedinice građe.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -826,7 +1003,10 @@
       "obligation": "Obvezno kad je primjenjivo",
       "required": true,
       "repeatable": true,
-      "definition": "Dostupnost primjerka je izraz, tekst ili druga oznaka koja označava uvjete pod kojima ustanova omogućuje korisnicima pristup primjerku jedinice građe."
+      "definition": "Dostupnost primjerka je izraz, tekst ili druga oznaka koja označava uvjete pod kojima ustanova omogućuje korisnicima pristup primjerku jedinice građe.",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50004",
+      "mappingCurie": "kamp:P50004",
+      "mappingBasis": "label"
     },
     {
       "@type": "ap:ElementUsage",
@@ -835,7 +1015,10 @@
       "obligation": null,
       "required": null,
       "repeatable": null,
-      "definition": null
+      "definition": null,
+      "property": "http://www.registar.kam.hr/Elements/ka/#P80002",
+      "mappingCurie": "kamka:P80002",
+      "mappingBasis": "definition"
     },
     {
       "@type": "ap:ElementUsage",
@@ -844,7 +1027,8 @@
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 10.1.2 Uvjeti navođenja odnosa djela i",
       "required": true,
       "repeatable": true,
-      "definition": "Odnos djela i djela (djelo je povezano s djelom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između dvaju djela."
+      "definition": "Odnos djela i djela (djelo je povezano s djelom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između dvaju djela.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -853,7 +1037,8 @@
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 10.2.2 Uvjeti navođenja odnosa djela i",
       "required": true,
       "repeatable": true,
-      "definition": "Odnos djela i izraza (djelo je povezano s izrazom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između djela i izraza."
+      "definition": "Odnos djela i izraza (djelo je povezano s izrazom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između djela i izraza.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -862,7 +1047,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Odnos izraza i izraza (izraz je povezan s izrazom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između dvaju izraza."
+      "definition": "Odnos izraza i izraza (izraz je povezan s izrazom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između dvaju izraza.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -871,7 +1057,8 @@
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 10.4.2 Uvjeti navođenja odnosa izraza i",
       "required": true,
       "repeatable": true,
-      "definition": "Odnos izraza i pojavnog oblika (izraz je povezan s pojavnim oblikom) je je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između izraza i pojavnog oblika."
+      "definition": "Odnos izraza i pojavnog oblika (izraz je povezan s pojavnim oblikom) je je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između izraza i pojavnog oblika.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -880,7 +1067,8 @@
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 10.5.2 Uvjeti navođenja odnosa pojavnog",
       "required": true,
       "repeatable": true,
-      "definition": "Odnos pojavnog oblika i pojavnog oblika (pojavni oblik je povezan s pojavnim oblikom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između dvaju pojavnih oblika."
+      "definition": "Odnos pojavnog oblika i pojavnog oblika (pojavni oblik je povezan s pojavnim oblikom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između dvaju pojavnih oblika.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -889,7 +1077,8 @@
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 10.6.2 Uvjeti navođenja odnosa pojavnog",
       "required": true,
       "repeatable": true,
-      "definition": "Odnos pojavnog oblika i primjerka (pojavni oblik je povezan s primjerkom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između pojavnog oblika i primjerka."
+      "definition": "Odnos pojavnog oblika i primjerka (pojavni oblik je povezan s primjerkom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između pojavnog oblika i primjerka.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -898,7 +1087,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Odnos primjerka i primjerka (primjerak je povezan s primjerkom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između dvaju primjeraka."
+      "definition": "Odnos primjerka i primjerka (primjerak je povezan s primjerkom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između dvaju primjeraka.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -907,7 +1097,8 @@
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 10.8.2 Uvjeti navođenja odnosa djela i",
       "required": true,
       "repeatable": true,
-      "definition": "Odnos djela i agenta (djelo je povezano s agentom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između djela i agenta."
+      "definition": "Odnos djela i agenta (djelo je povezano s agentom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između djela i agenta.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -916,7 +1107,8 @@
       "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 10.9.2 Uvjeti navođenja odnosa djela i",
       "required": true,
       "repeatable": true,
-      "definition": "Odnos djela i stvaratelja (djelo je stvorio stvaratelj) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između djela i agenta koji ga je stvorio svojim djelovanjem."
+      "definition": "Odnos djela i stvaratelja (djelo je stvorio stvaratelj) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između djela i agenta koji ga je stvorio svojim djelovanjem.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -925,7 +1117,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Odnos izraza i agenta (izraz je povezan s agentom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između izraza i agenta koji je sudjelovao u realizaciji izraza."
+      "definition": "Odnos izraza i agenta (izraz je povezan s agentom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između izraza i agenta koji je sudjelovao u realizaciji izraza.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -934,7 +1127,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Odnos pojavnog oblika i agenta (pojavni oblik je povezan s agentom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između pojavnog oblika jedinice građe i agenta koji je sudjelovao u njegovoj pripremi, izradi, objavljivanju, raspačavanju, oglašavanju i/ili prodaji."
+      "definition": "Odnos pojavnog oblika i agenta (pojavni oblik je povezan s agentom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između pojavnog oblika jedinice građe i agenta koji je sudjelovao u njegovoj pripremi, izradi, objavljivanju, raspačavanju, oglašavanju i/ili prodaji.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -943,7 +1137,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Odnos primjerka i agenta (primjerak je povezan s agentom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između primjerka i agenta koji ga je nabavio, posjedovao, obradio i/ili izmijenio."
+      "definition": "Odnos primjerka i agenta (primjerak je povezan s agentom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između primjerka i agenta koji ga je nabavio, posjedovao, obradio i/ili izmijenio.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -952,7 +1147,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Odnos djela i mjesta (djelo je povezano s mjestom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između djela i mjesta."
+      "definition": "Odnos djela i mjesta (djelo je povezano s mjestom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između djela i mjesta.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -961,7 +1157,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Odnos izraza i mjesta (izraz je povezan s mjestom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između izraza i mjesta."
+      "definition": "Odnos izraza i mjesta (izraz je povezan s mjestom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između izraza i mjesta.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -970,7 +1167,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Odnos pojavnog oblika i mjesta (pojavni oblik je povezan s mjestom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između pojavnog oblika i mjesta."
+      "definition": "Odnos pojavnog oblika i mjesta (pojavni oblik je povezan s mjestom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između pojavnog oblika i mjesta.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -979,7 +1177,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Odnos primjerka i mjesta (primjerak je povezan s mjestom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između primjerka i mjesta."
+      "definition": "Odnos primjerka i mjesta (primjerak je povezan s mjestom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između primjerka i mjesta.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -988,7 +1187,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Odnos djela i vremenskog raspona (djelo je povezano s vremenskim rasponom) je naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između djela i vremenskog raspona."
+      "definition": "Odnos djela i vremenskog raspona (djelo je povezano s vremenskim rasponom) je naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između djela i vremenskog raspona.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -997,7 +1197,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Odnos izraza i vremenskog raspona (izraz je povezan s vremenskim rasponom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između izraza i vremenskog raspona."
+      "definition": "Odnos izraza i vremenskog raspona (izraz je povezan s vremenskim rasponom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između izraza i vremenskog raspona.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -1006,7 +1207,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Odnos pojavnog oblika i vremenskog raspona (pojavni oblik je povezan s vremenskim rasponom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između pojavnog oblika i vremenskog raspona."
+      "definition": "Odnos pojavnog oblika i vremenskog raspona (pojavni oblik je povezan s vremenskim rasponom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između pojavnog oblika i vremenskog raspona.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -1015,7 +1217,8 @@
       "obligation": "Nije obvezno",
       "required": false,
       "repeatable": true,
-      "definition": "Odnos primjerka i vremenskog raspona (primjerak je povezan s vremenskim rasponom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između primjerka i vremenskog raspona."
+      "definition": "Odnos primjerka i vremenskog raspona (primjerak je povezan s vremenskim rasponom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između primjerka i vremenskog raspona.",
+      "property": null
     },
     {
       "@type": "ap:ElementUsage",
@@ -1024,7 +1227,10 @@
       "obligation": null,
       "required": null,
       "repeatable": null,
-      "definition": null
+      "definition": null,
+      "property": "http://www.registar.kam.hr/Elements/ka/#P80002",
+      "mappingCurie": "kamka:P80002",
+      "mappingBasis": "definition"
     },
     {
       "@type": "ap:ElementUsage",
@@ -1033,7 +1239,10 @@
       "obligation": null,
       "required": null,
       "repeatable": null,
-      "definition": null
+      "definition": null,
+      "property": "http://www.registar.kam.hr/Elements/ka/#P80002",
+      "mappingCurie": "kamka:P80002",
+      "mappingBasis": "definition"
     },
     {
       "@type": "ap:ElementUsage",
@@ -1042,7 +1251,10 @@
       "obligation": null,
       "required": null,
       "repeatable": null,
-      "definition": null
+      "definition": null,
+      "property": "http://www.registar.kam.hr/Elements/ka/#P80002",
+      "mappingCurie": "kamka:P80002",
+      "mappingBasis": "definition"
     },
     {
       "@type": "ap:ElementUsage",
@@ -1051,7 +1263,10 @@
       "obligation": null,
       "required": null,
       "repeatable": null,
-      "definition": null
+      "definition": null,
+      "property": "http://www.registar.kam.hr/Elements/ka/#P80002",
+      "mappingCurie": "kamka:P80002",
+      "mappingBasis": "definition"
     },
     {
       "@type": "ap:ElementUsage",
@@ -1060,7 +1275,10 @@
       "obligation": null,
       "required": null,
       "repeatable": null,
-      "definition": null
+      "definition": null,
+      "property": "http://www.registar.kam.hr/Elements/ka/#P80002",
+      "mappingCurie": "kamka:P80002",
+      "mappingBasis": "definition"
     },
     {
       "@type": "ap:ElementUsage",
@@ -1069,7 +1287,10 @@
       "obligation": null,
       "required": null,
       "repeatable": null,
-      "definition": null
+      "definition": null,
+      "property": "http://www.registar.kam.hr/Elements/ka/#P80002",
+      "mappingCurie": "kamka:P80002",
+      "mappingBasis": "definition"
     },
     {
       "@type": "ap:ElementUsage",
@@ -1078,7 +1299,10 @@
       "obligation": null,
       "required": null,
       "repeatable": null,
-      "definition": null
+      "definition": null,
+      "property": "http://www.registar.kam.hr/Elements/ka/#P80002",
+      "mappingCurie": "kamka:P80002",
+      "mappingBasis": "definition"
     }
   ]
 }
