@@ -627,7 +627,9 @@ function showApPreview() {
       const td = document.createElement("td");
 
       // label prikaži samo prvi put, ostale vrijednosti idu ispod
-      th.textContent = first ? label : "";
+th.textContent = first
+  ? (u.elementNumber ? u.elementNumber + " " : "") + label
+  : "";
       td.textContent = value;
 
       tr.appendChild(th);
