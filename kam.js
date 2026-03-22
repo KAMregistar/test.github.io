@@ -627,9 +627,43 @@ function showApPreview() {
       const td = document.createElement("td");
 
       // label prikaži samo prvi put, ostale vrijednosti idu ispod
-th.textContent = first
-  ? (u.elementNumber ? u.elementNumber + " " : "") + label
-  : "";
+if (first) {
+  const numberPart = u.elementNumber ? u.elementNumber + " " : "";
+  const labelPart = label || "";
+
+  let curieText = "";
+  let iri = u.property || "";
+
+  // Ako već imaš mappingCurie, koristi njega
+  if (u.mappingCurie) {
+    const parts = u.mappingCurie.split(":");
+    curieText = parts.length === 2 ? parts[1] : u.mappingCurie;
+  }
+  // Inače izvuci Pxxxx iz property URI-ja
+  else if (iri) {
+    const match = iri.match(/#(P\d+)$/);
+    if (match) {
+      if (u.mappingCurie) {
+  curieText = u.mappingCurie;
+} else if (iri) {
+  const match = iri.match(/\/Elements\/([^/]+)\/#(P\d+)$/);
+  if (match) {
+    curieText = `kam${match[1]}:${match[2]}`;
+  }
+}
+    }
+  }
+
+  if (curieText && iri) {
+    th.innerHTML =
+      `${numberPart}${labelPart} ` +
+      `(<a href="${iri}" target="_blank" rel="noopener noreferrer">${curieText}</a>)`;
+  } else {
+    th.textContent = numberPart + labelPart;
+  }
+} else {
+  th.textContent = "";
+}
       td.textContent = value;
 
       tr.appendChild(th);
