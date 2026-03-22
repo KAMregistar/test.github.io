@@ -685,30 +685,36 @@ function generateApInstanceJsonLd() {
     return;
   }
 
-  const usages = ap.elementUsage || [];
-const cfg = window.KAM_CONFIG || {};
+  const cfg = window.KAM_CONFIG || {};
+  const usages = Array.isArray(ap.elementUsage) ? ap.elementUsage : [];
 
-const instance = {
-  "@context": {},
-  "@type": cfg.instanceType || "kam:JedinicaGradje"
-};
+  const instance = {
+    "@context": {},
+    "@type": cfg.instanceType || "kam:JedinicaGradje"
+  };
 
-    usages.forEach((u) => {
+  usages.forEach((u) => {
     const prop = u.property;
     if (!prop) return;
 
     const selector = `input.ap-input[data-element-number="${u.elementNumber}"]`;
     const inputs = document.querySelectorAll(selector);
 
+    const values = [];
     inputs.forEach((el) => {
       const val = (el.value || "").trim();
-      if (!val) return;
-
-      if (!instance[prop]) instance[prop] = [];
-      instance[prop].push(val);
+      if (val) values.push(val);
     });
-  });
 
+    if (!values.length) return;
+
+    // Ako polje nije ponovljivo, uzmi samo prvu vrijednost
+    if (u.repeatable === false) {
+      instance[prop] = values[0];
+    } else {
+      instance[prop] = values;
+    }
+  });
 
   const jsonText = JSON.stringify(instance, null, 2);
   console.log("AP instance JSON-LD:", instance);
@@ -717,7 +723,7 @@ const instance = {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = "PrirodoslovniObjekt_instance.jsonld";
+  a.download = (cfg.outputFilename || "AP_instance") + ".jsonld";
   a.click();
   URL.revokeObjectURL(url);
 }
