@@ -686,10 +686,12 @@ function generateApInstanceJsonLd() {
   }
 
   const usages = ap.elementUsage || [];
-  const instance = {
-    "@context": {},
-    "@type": "kam:PrirodoslovniObjekt" // ako želiš generički, možeš staviti iz KAM_CONFIG
-  };
+const cfg = window.KAM_CONFIG || {};
+
+const instance = {
+  "@context": {},
+  "@type": cfg.instanceType || "kam:JedinicaGradje"
+};
 
     usages.forEach((u) => {
     const prop = u.property;
