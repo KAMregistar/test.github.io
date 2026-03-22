@@ -689,16 +689,17 @@ function generateApInstanceJsonLd() {
   const usages = Array.isArray(ap.elementUsage) ? ap.elementUsage : [];
 
   const instance = {
-    "@context": {},
-    "@type": cfg.instanceType || "kam:JedinicaGradje"
+    "@context": {
+      "ap": "http://www.registar.kam.hr/ontologies/ap#"
+    },
+    "@type": cfg.instanceType || "kam:JedinicaGradje",
+    "ap:displayRecord": []
   };
 
   usages.forEach((u) => {
-    const prop = u.property;
-    if (!prop) return;
-
     const selector = `input.ap-input[data-element-number="${u.elementNumber}"]`;
     const inputs = document.querySelectorAll(selector);
+    if (!inputs.length) return;
 
     const values = [];
     inputs.forEach((el) => {
@@ -708,12 +709,26 @@ function generateApInstanceJsonLd() {
 
     if (!values.length) return;
 
-    // Ako polje nije ponovljivo, uzmi samo prvu vrijednost
-    if (u.repeatable === false) {
-      instance[prop] = values[0];
-    } else {
-      instance[prop] = values;
+    // 1) Semantički sloj: property -> value / values
+    if (u.property) {
+      if (u.repeatable === false) {
+        instance[u.property] = values[0];
+      } else {
+        instance[u.property] = values;
+      }
     }
+
+    // 2) Prikazni sloj: isto što se vidi u preview prikazu
+    values.forEach((val) => {
+      instance["ap:displayRecord"].push({
+        "sectionNumber": u.sectionNumber || "",
+        "sectionLabel": u.sectionLabel || "",
+        "elementNumber": u.elementNumber || "",
+        "label": u.displayLabel || u.label || "",
+        "property": u.property || null,
+        "value": val
+      });
+    });
   });
 
   const jsonText = JSON.stringify(instance, null, 2);
@@ -727,7 +742,6 @@ function generateApInstanceJsonLd() {
   a.click();
   URL.revokeObjectURL(url);
 }
-
   // ====== TABLICA SVOJSTAVA ZA KLASU (propertyGroup: /Elements/jo/) ======
 
   function displayPropertiesForClass(classId, className) {
