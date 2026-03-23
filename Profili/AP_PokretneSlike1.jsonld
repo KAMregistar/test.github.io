@@ -1,0 +1,285 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "ap": "http://www.registar.kam.hr/ontologies/ap#",
+    "property": {
+      "@id": "ap:property",
+      "@type": "@id"
+    },
+    "elementNumber": "ap:elementNumber",
+    "label": "rdfs:label",
+    "obligation": "ap:obligation",
+    "required": "ap:required",
+    "repeatable": "ap:repeatable",
+    "elementUsage": {
+      "@id": "ap:elementUsage",
+      "@container": "@set"
+    },
+    "definition": "http://www.registar.kam.hr/ontologies/ont.owl/definition"
+  },
+  "@id": "http://www.registar.kam.hr/ApplicationProfiles/#PokretneSlike",
+  "@type": "ap:ApplicationProfile",
+  "label": "Aplikacijski profil – Pokretne slike",
+  "elementUsage": [
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "1.4",
+      "label": "Glavni stvarni naslov",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40004",
+      "obligation": "Obvezno kad je primjenjivo i dostupno",
+      "required": true,
+      "repeatable": false,
+      "definition": "Glavni stvarni naslov je riječ, znak ili skup riječi i/ili znakova koji primarno imenuje jedinicu građe, a naveden je na samoj jedinici."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "1.8",
+      "label": "Napomena o stvarnom naslovu",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40008",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima",
+      "required": true,
+      "repeatable": true,
+      "definition": "Napomena o stvarnom naslovu je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o stvarnom naslovu, uključujući izvor na jedinici građe iz kojega je podatak o stvarnom naslovu preuzet."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.2",
+      "label": "Razina opisa pojavnog oblika",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40040",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true,
+      "repeatable": false,
+      "definition": "Razina opisa pojavnog oblika je izraz, nadzirani naziv, kôd ili druga oznaka koja označava razinu specifičnosti opisa pojavnog oblika jedinice građe u informacijskom sustavu."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.4",
+      "label": "Medij",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40042",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima",
+      "required": true,
+      "repeatable": true,
+      "definition": "Medij je izraz, nadzirani naziv, identifikator ili druga oznaka koja označava vrstu građe s obzirom na tehnologiju bilježenja, posredovanja i pohrane njezina sadržaja."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.5",
+      "label": "Oblik sadržaja",
+      "property": "http://www.registar.kam.hr/Elements/i/#P30247",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima",
+      "required": true,
+      "repeatable": true,
+      "definition": "Oblik sadržaja je izraz, nadzirani naziv, identifikator ili druga oznaka koja označava vrstu građe s obzirom na znakovni sustav kojim je izražen njezin sadržaj."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.17",
+      "label": "Identifikator izraza",
+      "property": "http://www.registar.kam.hr/Elements/i/#P30243",
+      "obligation": "Obvezno kad je primjenjivo i dostupno",
+      "required": true,
+      "repeatable": true,
+      "definition": "Identifikator izraza je brojčana ili slovno-brojčana oznaka koja unutar određenog sustava jednoznačno identificira izraz djela sadržanog u jedinici građe."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.18",
+      "label": "Usvojena pristupnica za izraz",
+      "property": "http://www.registar.kam.hr/Elements/i/#P30240",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true,
+      "repeatable": false,
+      "definition": "Usvojena pristupnica za izraz je nadzirana riječ, izraz ili niz riječi i/ili drugih oznaka, koji unutar nekog sustava jednoznačno identificira izraz i okuplja podatke o izrazu."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.22",
+      "label": "Identifikator pojavnog oblika",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40319",
+      "obligation": "Obvezno kad je primjenjivo i dostupno",
+      "required": true,
+      "repeatable": true,
+      "definition": "Identifikator pojavnog oblika je brojčana ili slovno-brojčana oznaka koja unutar određenog sustava jednoznačno identificira pojavni oblik jedinice građe."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.23",
+      "label": "Usvojena pristupnica za pojavni oblik",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40312",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true,
+      "repeatable": false,
+      "definition": "Usvojena pristupnica za pojavni oblik je nadzirana riječ, izraz ili niz riječi i/ili drugih oznaka, koji unutar nekog sustava jednoznačno identificira pojavni oblik i okuplja podatke o njemu."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.29",
+      "label": "Identifikator primjerka",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50001",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true,
+      "repeatable": true,
+      "definition": "Povezuje primjerak s identifikatorom koji je ustanovila ustanova koja upravlja jedinicom građe. Identifikator primjerka je jedinstvena oznaka primjerka u informacijskom sustavu ustanove."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.31",
+      "label": "Napomena o identifikaciji primjerka",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50003",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Povezuje primjerak s napomenom koja dodatno pojašnjava identifikator primjerka ili način na koji je primjerak identificiran u informacijskom sustavu."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.1",
+      "label": "Opseg",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40046",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima",
+      "required": true,
+      "repeatable": true,
+      "definition": "Opseg je niz brojki i izraza koji označavaju količinu i vrstu materijalnih objekata koji tvore jedinicu građe."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.3",
+      "label": "Materijalni nositelj",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40048",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true,
+      "repeatable": true,
+      "definition": "Materijalni nositelj je nadzirani naziv, identifikator ili druga nadzirana oznaka koja označava vrstu fizičkog objekta na kojemu je pohranjen sadržaj jedinice građe."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.18",
+      "label": "Polaritet slike",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40063",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": false,
+      "definition": "Polaritet slike je izraz, nadzirani naziv ili druga oznaka za odnos boja i tonova slike i objekta prikazanog na slici."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.19",
+      "label": "Položaj sličica",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40064",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true,
+      "repeatable": false,
+      "definition": "Položaj sličica je izraz koji označava je li položaj sličica na dijafilmu ili mikrofilmu horizontalan ili vertikalan."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.21",
+      "label": "Videoformat",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40066",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true,
+      "repeatable": true,
+      "definition": "Videoformat je oznaka standardnog formata za proizvodnju, pohranu, prijenos i prikaz sadržaja na videomediju."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.22",
+      "label": "Standard emitiranja",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40067",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true,
+      "repeatable": true,
+      "definition": "Standard emitiranja je oznaka standarda za prijenos analognog televizijskog signala prilikom emitiranja sadržaja jedinice građe."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.23",
+      "label": "Standard projekcije",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40068",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true,
+      "repeatable": true,
+      "definition": "Standard projekcije je oznaka standarda ili formata proizvodnje i prikazivanja slika namijenjenih projiciranju."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.24",
+      "label": "Format datoteke",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40069",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Format datoteke je izraz koji označava standard za kodiranje, prijenos i pohranu digitalnih podataka."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.25",
+      "label": "Veličina datoteke",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40070",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Veličina datoteke je izraz koji označava broj bajta jedinice građe na elektroničkom mediju."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.26",
+      "label": "Razlučivost slike",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40071",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Razlučivost slike je izraz koji označava stupanj oštrine digitalne slike izražen brojem piksela."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.27",
+      "label": "Način snimanja",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40072",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Način snimanja je izraz koji označava postupak bilježenja i reproduciranja pokretnih slika, zvuka, glazbe i izgovorene riječi na materijalnom nositelju."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "5.10",
+      "label": "Način nabave",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50009",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true,
+      "repeatable": true,
+      "definition": "Povezuje primjerak s informacijom o načinu na koji je ustanova stekla jedinicu građe."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "5.11",
+      "label": "Napomena o nabavi",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50010",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Povezuje primjerak s napomenom koja pojašnjava okolnosti nabave."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "5.14",
+      "label": "Konzervacija i restauracija",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50012",
+      "obligation": "Obvezno kad je primjenjivo i dostupno",
+      "required": true,
+      "repeatable": true,
+      "definition": "Povezuje primjerak s informacijama o provedenim ili planiranim konzervatorsko-restauratorskim zahvatima, uključujući datume, vrste zahvata i odgovorne stručnjake."
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "6.6",
+      "label": "Tehnički uvjeti pristupa",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40078",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Tehnički uvjeti pristupa su izraz ili tekst koji sadržava informacije o opremi, uređaju i/ili sustavu potrebnom za pristup sadržaju jedinice građe."
+    }
+  ]
+}
