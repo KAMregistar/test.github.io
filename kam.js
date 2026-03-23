@@ -1017,20 +1017,6 @@ function generateApInstanceJsonLd() {
   }
 
 
-
-
-
-performance.mark("end-ap-load");
-performance.measure("apLoadTime", "start-ap-load", "end-ap-load");
-console.log("AP JSON-LD load time:",
-    performance.getEntriesByName("apLoadTime")[0].duration.toFixed(2),
-    "ms"
-);
-
-
-
-
-
   // start
   displayLastModified();
 
