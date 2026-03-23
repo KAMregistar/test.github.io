@@ -362,12 +362,6 @@ function initApplicationProfilePage() {
     return;
   }
 
-
-
-performance.mark("start-ap-load");
-
-
-
   fetch(apUrl)
     .then((r) => r.json())
     .then((apData) => {
@@ -530,6 +524,9 @@ function renderApplicationProfileForm(container, apData) {
 }
 
 
+// dodaje novi input za ponovljivo polje (maks. 10 po elementu)
+// dodaje NOVU kolonu za ponovljivo polje (maks. 10 po elementu)
+// dodaje NOVU kolonu za ponovljivo polje (maks. 10 po elementu)
 // dodaje NOVI input unutar iste kolone (maks. 10 ponavljanja po elementu)
 function addRepeatableField(groupEl, usage) {
   const elementNumber = usage.elementNumber || "";
@@ -561,7 +558,6 @@ function addRepeatableField(groupEl, usage) {
     groupEl.appendChild(newInput);
   }
 }
-
 
 
 // poveže donje gumbe s generiranjem JSON-LD instance (za sada samo console.log + download)
@@ -1021,17 +1017,6 @@ function generateApInstanceJsonLd() {
     initApplicationProfilePage();
   }
   }
-
-
-
-performance.mark("end-ap-load");
-performance.measure("apLoadTime", "start-ap-load", "end-ap-load");
-console.log("AP JSON-LD load time:",
-    performance.getEntriesByName("apLoadTime")[0].duration.toFixed(2),
-    "ms"
-);
-
-
 
 
   // start
