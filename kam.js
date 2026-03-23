@@ -355,20 +355,39 @@ function initApplicationProfilePage() {
     return;
   }
 
-  // u AP HTML-u imat ćemo <form id="ap-form"><div id="ap-form-container"></div>...
   const container = document.getElementById("ap-form-container");
   if (!container) {
     console.warn("Nije pronađen #ap-form-container na AP stranici.");
     return;
   }
 
+  performance.mark("start-ap-load");
+
   fetch(apUrl)
     .then((r) => r.json())
     .then((apData) => {
-      // spremi trenutno aktivni AP globalno ako zatreba
+      performance.mark("end-ap-load");
+      performance.measure("apLoadTime", "start-ap-load", "end-ap-load");
+
+      const loadMeasure = performance.getEntriesByName("apLoadTime").pop();
+      console.log("AP JSON-LD load time:", loadMeasure.duration.toFixed(2), "ms");
+
       window.KAM_ACTIVE_AP = apData;
+
+      performance.mark("start-ap-render");
+
       renderApplicationProfileForm(container, apData);
       wireApButtons();
+
+      performance.mark("end-ap-render");
+      performance.measure("apRenderTime", "start-ap-render", "end-ap-render");
+
+      const renderMeasure = performance.getEntriesByName("apRenderTime").pop();
+      console.log("AP form render time:", renderMeasure.duration.toFixed(2), "ms");
+
+      performance.measure("apTotalTime", "start-ap-load", "end-ap-render");
+      const totalMeasure = performance.getEntriesByName("apTotalTime").pop();
+      console.log("AP total load + render time:", totalMeasure.duration.toFixed(2), "ms");
     })
     .catch((err) => {
       console.error("Greška pri dohvaćanju AP JSON-LD:", err);
