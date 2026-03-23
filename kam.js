@@ -360,11 +360,21 @@ function initApplicationProfilePage() {
     console.warn("Nije pronađen #ap-form-container na AP stranici.");
     return;
   }
+  performance.clearMarks("start-ap-load");
+  performance.clearMarks("end-ap-load");
+  performance.clearMarks("start-ap-render");
+  performance.clearMarks("end-ap-render");
 
+  performance.clearMeasures("apLoadTime");
+  performance.clearMeasures("apRenderTime");
+  performance.clearMeasures("apTotalTime");
   performance.mark("start-ap-load");
 
-  fetch(apUrl)
-    .then((r) => r.json())
+fetch(apUrl)
+  .then((r) => {
+    if (!r.ok) throw new Error("Network response was not ok");
+    return r.json();
+  })
     .then((apData) => {
       performance.mark("end-ap-load");
       performance.measure("apLoadTime", "start-ap-load", "end-ap-load");
