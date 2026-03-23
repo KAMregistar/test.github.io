@@ -362,6 +362,12 @@ function initApplicationProfilePage() {
     return;
   }
 
+
+
+performance.mark("start-ap-load");
+
+
+
   fetch(apUrl)
     .then((r) => r.json())
     .then((apData) => {
@@ -1015,6 +1021,17 @@ function generateApInstanceJsonLd() {
     initApplicationProfilePage();
   }
   }
+
+
+
+performance.mark("end-ap-load");
+performance.measure("apLoadTime", "start-ap-load", "end-ap-load");
+console.log("AP JSON-LD load time:",
+    performance.getEntriesByName("apLoadTime")[0].duration.toFixed(2),
+    "ms"
+);
+
+
 
 
   // start
