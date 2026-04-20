@@ -700,9 +700,12 @@ function generateApInstanceJsonLd() {
   const cfg = window.KAM_CONFIG || {};
   const usages = Array.isArray(ap.elementUsage) ? ap.elementUsage : [];
 
+  const sectionLabels = cfg.sectionLabels || {};
+
   const instance = {
     "@context": {
-      "ap": "http://www.registar.kam.hr/ontologies/ap#"
+      "ap": "http://www.registar.kam.hr/ontologies/ap#",
+      "kam": "http://www.registar.kam.hr/ontologies/ont.owl#"
     },
     "@type": cfg.instanceType || "kam:JedinicaGradje",
     "ap:displayRecord": []
@@ -721,18 +724,48 @@ function generateApInstanceJsonLd() {
     const inputs = document.querySelectorAll(selector);
     if (!inputs.length) return;
 
+    const sectionNumber = String(num).split(".")[0];
+    const sectionLabel =
+      u.sectionLabel ||
+      sectionLabels[sectionNumber] ||
+      "";
+
     inputs.forEach((input) => {
       const value = (input.value || "").trim();
       if (!value) return;
 
+      let mappingCurie = u.mappingCurie || null;
+      const propertyIri = u.property || null;
+
+      // Ako mappingCurie nije zadan, pokušaj ga izvesti iz property URI-ja
+      if (!mappingCurie && propertyIri) {
+        const match = propertyIri.match(/\/Elements\/([^/]+)\/#(P\d+)$/);
+        if (match) {
+          mappingCurie = `kam${match[1]}:${match[2]}`;
+        }
+      }
+
+      // 1) Prikazni sloj — isto što korisnik vidi u previewu
       instance["ap:displayRecord"].push({
-        "sectionNumber": (num || "").split(".")[0],
-        "sectionLabel": "",
+        "sectionNumber": sectionNumber,
+        "sectionLabel": sectionLabel,
         "elementNumber": num,
         "label": label,
-        "property": u.property || null,
+        "mappingCurie": mappingCurie,
+        "property": propertyIri,
         "value": value
       });
+
+      // 2) Semantički sloj — ontološko svojstvo -> vrijednost
+      if (propertyIri) {
+        if (instance[propertyIri] === undefined) {
+          instance[propertyIri] = u.repeatable === false ? value : [value];
+        } else if (Array.isArray(instance[propertyIri])) {
+          instance[propertyIri].push(value);
+        } else {
+          instance[propertyIri] = [instance[propertyIri], value];
+        }
+      }
     });
   });
 
