@@ -697,28 +697,44 @@ function generateApInstanceJsonLd() {
     return;
   }
 
-  const usages = ap.elementUsage || [];
+  const cfg = window.KAM_CONFIG || {};
+  const usages = Array.isArray(ap.elementUsage) ? ap.elementUsage : [];
+
   const instance = {
-    "@context": {},
-    "@type": "kam:PrirodoslovniObjekt" // ako želiš generički, možeš staviti iz KAM_CONFIG
+    "@context": {
+      "ap": "http://www.registar.kam.hr/ontologies/ap#"
+    },
+    "@type": cfg.instanceType || "kam:JedinicaGradje",
+    "ap:displayRecord": []
   };
 
-    usages.forEach((u) => {
-    const prop = u.property;
-    if (!prop) return;
+  const sorted = usages.slice().sort((a, b) =>
+    (a.elementNumber || "").localeCompare(b.elementNumber || "")
+  );
 
-    const selector = `input.ap-input[data-element-number="${u.elementNumber}"]`;
+  sorted.forEach((u) => {
+    const num = u.elementNumber;
+    const label = u.label || "";
+    if (!num || !label) return;
+
+    const selector = `.ap-input[data-element-number="${num}"]`;
     const inputs = document.querySelectorAll(selector);
+    if (!inputs.length) return;
 
-    inputs.forEach((el) => {
-      const val = (el.value || "").trim();
-      if (!val) return;
+    inputs.forEach((input) => {
+      const value = (input.value || "").trim();
+      if (!value) return;
 
-      if (!instance[prop]) instance[prop] = [];
-      instance[prop].push(val);
+      instance["ap:displayRecord"].push({
+        "sectionNumber": (num || "").split(".")[0],
+        "sectionLabel": "",
+        "elementNumber": num,
+        "label": label,
+        "property": u.property || null,
+        "value": value
+      });
     });
   });
-
 
   const jsonText = JSON.stringify(instance, null, 2);
   console.log("AP instance JSON-LD:", instance);
@@ -727,11 +743,10 @@ function generateApInstanceJsonLd() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = "PrirodoslovniObjekt_instance.jsonld";
+  a.download = (cfg.outputFilename || "AP_instance") + ".jsonld";
   a.click();
   URL.revokeObjectURL(url);
 }
-
   // ====== TABLICA SVOJSTAVA ZA KLASU (propertyGroup: /Elements/jo/) ======
 
   function displayPropertiesForClass(classId, className) {
