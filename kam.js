@@ -355,49 +355,20 @@ function initApplicationProfilePage() {
     return;
   }
 
+  // u AP HTML-u imat ćemo <form id="ap-form"><div id="ap-form-container"></div>...
   const container = document.getElementById("ap-form-container");
   if (!container) {
     console.warn("Nije pronađen #ap-form-container na AP stranici.");
     return;
   }
-  performance.clearMarks("start-ap-load");
-  performance.clearMarks("end-ap-load");
-  performance.clearMarks("start-ap-render");
-  performance.clearMarks("end-ap-render");
 
-  performance.clearMeasures("apLoadTime");
-  performance.clearMeasures("apRenderTime");
-  performance.clearMeasures("apTotalTime");
-  performance.mark("start-ap-load");
-
-fetch(apUrl)
-  .then((r) => {
-    if (!r.ok) throw new Error("Network response was not ok");
-    return r.json();
-  })
+  fetch(apUrl)
+    .then((r) => r.json())
     .then((apData) => {
-      performance.mark("end-ap-load");
-      performance.measure("apLoadTime", "start-ap-load", "end-ap-load");
-
-      const loadMeasure = performance.getEntriesByName("apLoadTime").pop();
-      console.log("AP JSON-LD load time:", loadMeasure.duration.toFixed(2), "ms");
-
+      // spremi trenutno aktivni AP globalno ako zatreba
       window.KAM_ACTIVE_AP = apData;
-
-      performance.mark("start-ap-render");
-
       renderApplicationProfileForm(container, apData);
       wireApButtons();
-
-      performance.mark("end-ap-render");
-      performance.measure("apRenderTime", "start-ap-render", "end-ap-render");
-
-      const renderMeasure = performance.getEntriesByName("apRenderTime").pop();
-      console.log("AP form render time:", renderMeasure.duration.toFixed(2), "ms");
-
-      performance.measure("apTotalTime", "start-ap-load", "end-ap-render");
-      const totalMeasure = performance.getEntriesByName("apTotalTime").pop();
-      console.log("AP total load + render time:", totalMeasure.duration.toFixed(2), "ms");
     })
     .catch((err) => {
       console.error("Greška pri dohvaćanju AP JSON-LD:", err);
@@ -512,23 +483,27 @@ function renderApplicationProfileForm(container, apData) {
           col.appendChild(labelWrap);
 
           // GRUPA: input + (mogući) plus gumb
+                    // GRUPA: više redaka (svaki red = input + plus)
           const fieldGroup = document.createElement("div");
           fieldGroup.className = "field-group";
           if (isNote) {
-            fieldGroup.classList.add("field-group-full"); // da znamo da je puna širina
+            fieldGroup.classList.add("field-group-full"); // pune širine
           }
           fieldGroup.dataset.elementNumber = u.elementNumber || "";
 
-          // prvi input
+          // prvi red (input + eventualno plus)
+          const firstRow = document.createElement("div");
+          firstRow.className = "field-row";
+
           const input = document.createElement("input");
           input.type = "text";
           input.id = id;
           input.className = "ap-input";
           input.dataset.propertyIri = u.property || "";
           input.dataset.elementNumber = u.elementNumber || "";
-          fieldGroup.appendChild(input);
+          firstRow.appendChild(input);
 
-          // ako je polje ponovljivo -> + gumb
+          // ako je polje ponovljivo -> + gumb u tom retku
           if (u.repeatable) {
             const addBtn = document.createElement("button");
             addBtn.type = "button";
@@ -540,11 +515,13 @@ function renderApplicationProfileForm(container, apData) {
               addRepeatableField(fieldGroup, u);
             });
 
-            fieldGroup.appendChild(addBtn);
+            firstRow.appendChild(addBtn);
           }
 
+          fieldGroup.appendChild(firstRow);
           col.appendChild(fieldGroup);
           row.appendChild(col);
+
         });
 
       sectionEl.appendChild(row);
@@ -554,9 +531,7 @@ function renderApplicationProfileForm(container, apData) {
 
 
 // dodaje novi input za ponovljivo polje (maks. 10 po elementu)
-// dodaje NOVU kolonu za ponovljivo polje (maks. 10 po elementu)
-// dodaje NOVU kolonu za ponovljivo polje (maks. 10 po elementu)
-// dodaje NOVI input unutar iste kolone (maks. 10 ponavljanja po elementu)
+
 function addRepeatableField(groupEl, usage) {
   const elementNumber = usage.elementNumber || "";
 
@@ -569,25 +544,34 @@ function addRepeatableField(groupEl, usage) {
     return;
   }
 
-  // gumb + (trebao bi biti zadnji u grupi)
-  const addBtn = groupEl.querySelector(".repeatable-add");
+  // makni plus s prethodnog reda (ako postoji)
+  const rows = groupEl.querySelectorAll(".field-row");
+  const lastRow = rows[rows.length - 1];
+  const oldBtn = lastRow && lastRow.querySelector(".repeatable-add");
+  if (oldBtn) oldBtn.remove();
 
-  // novi input
+  // novi red
+  const newRow = document.createElement("div");
+  newRow.className = "field-row";
+
   const newInput = document.createElement("input");
   newInput.type = "text";
   newInput.className = "ap-input";
   newInput.dataset.propertyIri = usage.property || "";
   newInput.dataset.elementNumber = elementNumber;
+  newRow.appendChild(newInput);
 
-  if (addBtn) {
-    // ubaci input neposredno prije plus gumba
-    groupEl.insertBefore(newInput, addBtn);
-  } else {
-    // sigurnosni fallback – ako nema plus gumba, samo dodaj na kraj
-    groupEl.appendChild(newInput);
-  }
+  // novi plus ide u novi red
+  const newBtn = document.createElement("button");
+  newBtn.type = "button";
+  newBtn.className = "repeatable-add";
+  newBtn.innerHTML = "&plus;";
+  newBtn.title = "Dodaj još jedno ponavljanje ovog polja (maks. 10)";
+  newBtn.addEventListener("click", () => addRepeatableField(groupEl, usage));
+  newRow.appendChild(newBtn);
+
+  groupEl.appendChild(newRow);
 }
-
 
 // poveže donje gumbe s generiranjem JSON-LD instance (za sada samo console.log + download)
 // poveže donje gumbe s generiranjem JSON-LD instance i pregleda zapisa
@@ -655,43 +639,7 @@ function showApPreview() {
       const td = document.createElement("td");
 
       // label prikaži samo prvi put, ostale vrijednosti idu ispod
-if (first) {
-  const numberPart = u.elementNumber ? u.elementNumber + " " : "";
-  const labelPart = label || "";
-
-  let curieText = "";
-  let iri = u.property || "";
-
-  // Ako već imaš mappingCurie, koristi njega
-  if (u.mappingCurie) {
-    const parts = u.mappingCurie.split(":");
-    curieText = parts.length === 2 ? parts[1] : u.mappingCurie;
-  }
-  // Inače izvuci Pxxxx iz property URI-ja
-  else if (iri) {
-    const match = iri.match(/#(P\d+)$/);
-    if (match) {
-      if (u.mappingCurie) {
-  curieText = u.mappingCurie;
-} else if (iri) {
-  const match = iri.match(/\/Elements\/([^/]+)\/#(P\d+)$/);
-  if (match) {
-    curieText = `kam${match[1]}:${match[2]}`;
-  }
-}
-    }
-  }
-
-  if (curieText && iri) {
-    th.innerHTML =
-      `${numberPart}${labelPart} ` +
-      `(<a href="${iri}" target="_blank" rel="noopener noreferrer">${curieText}</a>)`;
-  } else {
-    th.textContent = numberPart + labelPart;
-  }
-} else {
-  th.textContent = "";
-}
+      th.textContent = first ? label : "";
       td.textContent = value;
 
       tr.appendChild(th);
@@ -749,51 +697,28 @@ function generateApInstanceJsonLd() {
     return;
   }
 
-  const cfg = window.KAM_CONFIG || {};
-  const usages = Array.isArray(ap.elementUsage) ? ap.elementUsage : [];
-
+  const usages = ap.elementUsage || [];
   const instance = {
-    "@context": {
-      "ap": "http://www.registar.kam.hr/ontologies/ap#"
-    },
-    "@type": cfg.instanceType || "kam:JedinicaGradje",
-    "ap:displayRecord": []
+    "@context": {},
+    "@type": "kam:PrirodoslovniObjekt" // ako želiš generički, možeš staviti iz KAM_CONFIG
   };
 
-  usages.forEach((u) => {
+    usages.forEach((u) => {
+    const prop = u.property;
+    if (!prop) return;
+
     const selector = `input.ap-input[data-element-number="${u.elementNumber}"]`;
     const inputs = document.querySelectorAll(selector);
-    if (!inputs.length) return;
 
-    const values = [];
     inputs.forEach((el) => {
       const val = (el.value || "").trim();
-      if (val) values.push(val);
-    });
+      if (!val) return;
 
-    if (!values.length) return;
-
-    // 1) Semantički sloj: property -> value / values
-    if (u.property) {
-      if (u.repeatable === false) {
-        instance[u.property] = values[0];
-      } else {
-        instance[u.property] = values;
-      }
-    }
-
-    // 2) Prikazni sloj: isto što se vidi u preview prikazu
-    values.forEach((val) => {
-      instance["ap:displayRecord"].push({
-        "sectionNumber": u.sectionNumber || "",
-        "sectionLabel": u.sectionLabel || "",
-        "elementNumber": u.elementNumber || "",
-        "label": u.displayLabel || u.label || "",
-        "property": u.property || null,
-        "value": val
-      });
+      if (!instance[prop]) instance[prop] = [];
+      instance[prop].push(val);
     });
   });
+
 
   const jsonText = JSON.stringify(instance, null, 2);
   console.log("AP instance JSON-LD:", instance);
@@ -802,10 +727,11 @@ function generateApInstanceJsonLd() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = (cfg.outputFilename || "AP_instance") + ".jsonld";
+  a.download = "PrirodoslovniObjekt_instance.jsonld";
   a.click();
   URL.revokeObjectURL(url);
 }
+
   // ====== TABLICA SVOJSTAVA ZA KLASU (propertyGroup: /Elements/jo/) ======
 
   function displayPropertiesForClass(classId, className) {
@@ -1035,6 +961,13 @@ function generateApInstanceJsonLd() {
     populateKlaseDropdown();
     populateSvojstvaDropdown();
     populatePrefiksi();
+	
+	const profiliBtn = document.getElementById("profili");
+if (profiliBtn) {
+  profiliBtn.onclick = () => {
+    window.location.href = "/Profili/Profili.html";
+  };
+}
 
     if (pageType === "root") {
       initRootPage();

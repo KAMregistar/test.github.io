@@ -1,0 +1,3975 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "ap": "http://www.registar.kam.hr/ontologies/ap#",
+    "elementNumber": "ap:elementNumber",
+    "label": "rdfs:label",
+    "obligation": "ap:obligation",
+    "required": "ap:required",
+    "repeatable": "ap:repeatable",
+    "elementUsage": {
+      "@id": "ap:elementUsage",
+      "@container": "@set"
+    },
+    "definition": "http://www.registar.kam.hr/ontologies/ont.owl/definition"
+  },
+  "@id": "http://www.registar.kam.hr/ApplicationProfiles/#ArhivskiTekst",
+  "@type": "ap:ApplicationProfile",
+  "label": "Aplikacijski profil – Arhivski tekst",
+  "sourceDocument": "Arhiv_Tekst.pdf",
+  "elementUsage": [
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "1.1",
+      "label": "Stvarni prikaz",
+      "obligation": "Obvezno kad je primjenjivo i dostupno",
+      "required": true,
+      "repeatable": true,
+      "definition": "Stvarni prikaz je riječ ili skup riječi i/ili znakova koji identificiraju jedinicu građe i pružaju informacije o mjestu, vremenu i agentima povezanima s nastankom jedinice građe, a navedeni su na samoj jedinici.",
+      "sectionNumber": "1",
+      "sectionLabel": "Stvarni prikaz jedinice građe",
+      "displayLabel": "Stvarni prikaz",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40001",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40001",
+          "label": "ima stvarni prikaz pojavnog oblika",
+          "score": 0.6364
+        },
+        {
+          "curie": "kampo:P40004",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40004",
+          "label": "ima glavni stvarni naslov",
+          "score": 0.5143
+        },
+        {
+          "curie": "kampo:P40005",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40005",
+          "label": "ima usporedni stvarni naslov",
+          "score": 0.4737
+        },
+        {
+          "curie": "kampo:P400035",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P400035",
+          "label": "ima stvarni naslov nakladničke cjeline",
+          "score": 0.4167
+        },
+        {
+          "curie": "kampo:P40009",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40009",
+          "label": "ima podatak o odgovornosti koji se odnosi na stvarni naslov",
+          "score": 0.2609
+        }
+      ],
+      "mappingScore": 0.6364,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "1.2",
+      "label": "Napomena o stvarnom prikazu",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Napomena o stvarnom prikazu je nestrukturirani ili polustrukturirani tekst u kojemu se navode pojedinosti o stvarnom prikazu, uključujući informacije o rasporedu i izvorima podataka stvarnog prikaza na jedinici građe.",
+      "sectionNumber": "1",
+      "sectionLabel": "Stvarni prikaz jedinice građe",
+      "displayLabel": "Napomena o stvarnom prikazu",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40008",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40008",
+          "label": "ima napomenu o stvarnom naslovu",
+          "score": 0.7778
+        },
+        {
+          "curie": "kampo:P40002",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40002",
+          "label": "ima napomenu o stvarnom prikazu pojavnog oblika",
+          "score": 0.7429
+        },
+        {
+          "curie": "kamn:P13067",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13067",
+          "label": "ima napomenu o nomenu primjerka",
+          "score": 0.7037
+        },
+        {
+          "curie": "kampo:P40321",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40321",
+          "label": "Ima napomenu o pojavnom obliku",
+          "score": 0.6792
+        },
+        {
+          "curie": "kamn:P13043",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13043",
+          "label": "ima napomenu o nomenu izraza",
+          "score": 0.6667
+        }
+      ],
+      "mappingScore": 0.7778,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "1.3",
+      "label": "Podatak o stvarnom naslovu",
+      "obligation": "Obvezno kad je primjenjivo i dostupno",
+      "required": true,
+      "repeatable": true,
+      "definition": "Podatak o stvarnom naslovu je riječ, znak ili skup riječi i/ili znakova koji imenuje jedinicu građe, a naveden je na samoj jedinici.",
+      "sectionNumber": "1",
+      "sectionLabel": "Stvarni prikaz jedinice građe",
+      "displayLabel": "Podatak o stvarnom naslovu",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40003",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40003",
+          "label": "ima podatak o stvarnom naslovu",
+          "score": 1.0
+        },
+        {
+          "curie": "kampo:P40006",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40006",
+          "label": "ima dodatak glavnom stvarnom naslovu",
+          "score": 0.8621
+        },
+        {
+          "curie": "kampo:P40008",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40008",
+          "label": "ima napomenu o stvarnom naslovu",
+          "score": 0.7925
+        },
+        {
+          "curie": "kampo:P40007",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40007",
+          "label": "ima usporedni dodatak glavnom stvarnom naslovu",
+          "score": 0.7647
+        },
+        {
+          "curie": "kampo:P40012",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40012",
+          "label": "ima podatak o izdanju",
+          "score": 0.6047
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40003",
+      "mappingCurie": "kampo:P40003",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "1.4",
+      "label": "Glavni stvarni naslov",
+      "obligation": "Obvezno kad je primjenjivo i dostupno",
+      "required": true,
+      "repeatable": true,
+      "definition": "Glavni stvarni naslov je riječ, znak ili skup riječi i/ili znakova koji primarno imenuje jedinicu građe, a naveden je na samoj jedinici.",
+      "sectionNumber": "1",
+      "sectionLabel": "Stvarni prikaz jedinice građe",
+      "displayLabel": "Glavni stvarni naslov",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40004",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40004",
+          "label": "ima glavni stvarni naslov",
+          "score": 1.0
+        },
+        {
+          "curie": "kampo:P40005",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40005",
+          "label": "ima usporedni stvarni naslov",
+          "score": 0.7556
+        },
+        {
+          "curie": "kampo:P40318",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40318",
+          "label": "ima skraćeni naslov ",
+          "score": 0.65
+        },
+        {
+          "curie": "kamn:P13055",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13055",
+          "label": "je skraćeni naslov ",
+          "score": 0.6154
+        },
+        {
+          "curie": "kamd:P20305",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20305",
+          "label": "ima varijantni naslov djela",
+          "score": 0.5833
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40004",
+      "mappingCurie": "kampo:P40004",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "1.5",
+      "label": "Usporedni stvarni naslov",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Usporedni stvarni naslov je riječ, znak ili skup riječi i/ili znakova koji je naveden je u istom izvoru podataka na jedinici građe kao i glavni stvarni naslov i predstavlja njegovu istoznačnicu na drugom jeziku i/ili pismu.",
+      "sectionNumber": "1",
+      "sectionLabel": "Stvarni prikaz jedinice građe",
+      "displayLabel": "Usporedni stvarni naslov",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40005",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40005",
+          "label": "ima usporedni stvarni naslov",
+          "score": 1.0
+        },
+        {
+          "curie": "kampo:P40004",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40004",
+          "label": "ima glavni stvarni naslov",
+          "score": 0.7556
+        },
+        {
+          "curie": "kampo:P40007",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40007",
+          "label": "ima usporedni dodatak glavnom stvarnom naslovu",
+          "score": 0.697
+        },
+        {
+          "curie": "kamn:P13055",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13055",
+          "label": "je skraćeni naslov ",
+          "score": 0.619
+        },
+        {
+          "curie": "kampo:P40318",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40318",
+          "label": "ima skraćeni naslov ",
+          "score": 0.6154
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40005",
+      "mappingCurie": "kampo:P40005",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "1.6",
+      "label": "Dodatak glavnom stvarnom naslovu",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Dodatak glavnom stvarnom naslovu je riječ, znak ili skup riječi i/ili znakova koji pobliže određuje, objašnjava ili upotpunjuje glavni stvarni naslov, a i naveden je na jedinici građe, na jeziku glavnog stvarnog naslova i u istom izvoru podataka kao i glavni stvarni naslov.",
+      "sectionNumber": "1",
+      "sectionLabel": "Stvarni prikaz jedinice građe",
+      "displayLabel": "Dodatak glavnom stvarnom naslovu",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40006",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40006",
+          "label": "ima dodatak glavnom stvarnom naslovu",
+          "score": 1.0
+        },
+        {
+          "curie": "kampo:P40007",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40007",
+          "label": "ima usporedni dodatak glavnom stvarnom naslovu",
+          "score": 0.8649
+        },
+        {
+          "curie": "kampo:P40003",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40003",
+          "label": "ima podatak o stvarnom naslovu",
+          "score": 0.8621
+        },
+        {
+          "curie": "kampo:P40008",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40008",
+          "label": "ima napomenu o stvarnom naslovu",
+          "score": 0.678
+        },
+        {
+          "curie": "kampo:P40002",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40002",
+          "label": "ima napomenu o stvarnom prikazu pojavnog oblika",
+          "score": 0.4051
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40006",
+      "mappingCurie": "kampo:P40006",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "1.7",
+      "label": "Usporedni dodatak glavnom stvarnom naslovu",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Usporedni dodatak glavnom stvarnom naslovu je riječ, znak ili skup riječi i/ili znakova koji predstavlja istoznačnicu dodatka glavnom stvarnom naslovu na drugom jeziku i/ili pismu, a naveden je u istom izvoru podataka na jedinici građe kao i dodatak glavnom stvarnom naslovu.",
+      "sectionNumber": "1",
+      "sectionLabel": "Stvarni prikaz jedinice građe",
+      "displayLabel": "Usporedni dodatak glavnom stvarnom naslovu",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40007",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40007",
+          "label": "ima usporedni dodatak glavnom stvarnom naslovu",
+          "score": 1.0
+        },
+        {
+          "curie": "kampo:P40006",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40006",
+          "label": "ima dodatak glavnom stvarnom naslovu",
+          "score": 0.8718
+        },
+        {
+          "curie": "kampo:P40003",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40003",
+          "label": "ima podatak o stvarnom naslovu",
+          "score": 0.7647
+        },
+        {
+          "curie": "kampo:P40005",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40005",
+          "label": "ima usporedni stvarni naslov",
+          "score": 0.697
+        },
+        {
+          "curie": "kampo:P40008",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40008",
+          "label": "ima napomenu o stvarnom naslovu",
+          "score": 0.6667
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40007",
+      "mappingCurie": "kampo:P40007",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "1.8",
+      "label": "Napomena o stvarnom naslovu",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 1.8.2 Uvjeti navođenja napomene o stvarnom naslovu)",
+      "required": true,
+      "repeatable": true,
+      "definition": "Napomena o stvarnom naslovu je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o stvarnom naslovu, uključujući izvor na jedinici građe iz kojega je podatak o stvarnom naslovu preuzet.",
+      "sectionNumber": "1",
+      "sectionLabel": "Stvarni prikaz jedinice građe",
+      "displayLabel": "Napomena o stvarnom naslovu",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40008",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40008",
+          "label": "ima napomenu o stvarnom naslovu",
+          "score": 0.963
+        },
+        {
+          "curie": "kampo:P40003",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40003",
+          "label": "ima podatak o stvarnom naslovu",
+          "score": 0.8302
+        },
+        {
+          "curie": "kamn:P13016",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13016",
+          "label": "ima napomenu o nomenu",
+          "score": 0.6818
+        },
+        {
+          "curie": "kampo:P40006",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40006",
+          "label": "ima dodatak glavnom stvarnom naslovu",
+          "score": 0.678
+        },
+        {
+          "curie": "kampo:P40049",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40049",
+          "label": "ima napomenu o materijalnom nositelju",
+          "score": 0.6667
+        }
+      ],
+      "mappingScore": 0.963,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40008",
+      "mappingCurie": "kampo:P40008",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.1",
+      "label": "Razina opisa djela",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true,
+      "repeatable": true,
+      "definition": "Razina opisa djela je izraz, nadzirani naziv, kôd ili druga oznaka koja označava razinu specifičnosti opisa djela u informacijskom sustavu, uključujući položaj unutar hijerarhije djelâ koja su s njim povezana odnosom cjeline i dijela.",
+      "sectionNumber": "2",
+      "sectionLabel": "Identifikacija jedinice građe",
+      "displayLabel": "Razina opisa djela",
+      "mappingCandidates": [
+        {
+          "curie": "kamd:P20001",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20001",
+          "label": "ima razinu opisa djela",
+          "score": 0.9444
+        },
+        {
+          "curie": "kamd:P20002",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20002",
+          "label": "ima opis sadržaja djela",
+          "score": 0.6829
+        },
+        {
+          "curie": "kamd:P20016",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20016",
+          "label": "ima povijest djela",
+          "score": 0.6667
+        },
+        {
+          "curie": "kamjo:P10021",
+          "iri": "http://www.registar.kam.hr/Elements/jo/#P10021",
+          "label": "je jedinica opisa predmet djela",
+          "score": 0.6522
+        },
+        {
+          "curie": "kampo:P40040",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40040",
+          "label": "ima razinu opisa pojavnog oblika",
+          "score": 0.6522
+        }
+      ],
+      "mappingScore": 0.9444,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/d/#P20001",
+      "mappingCurie": "kamd:P20001",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.2",
+      "label": "Razina opisa pojavnog oblika",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true,
+      "repeatable": true,
+      "definition": "Razina opisa pojavnog oblika je izraz, nadzirani naziv, kôd ili druga oznaka koja označava razinu specifičnosti opisa pojavnog oblika jedinice građe u informacijskom sustavu.",
+      "sectionNumber": "2",
+      "sectionLabel": "Identifikacija jedinice građe",
+      "displayLabel": "Razina opisa pojavnog oblika",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40040",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40040",
+          "label": "ima razinu opisa pojavnog oblika",
+          "score": 0.9643
+        },
+        {
+          "curie": "kampo:P40089",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40089",
+          "label": "je dio pojavnog oblika",
+          "score": 0.766
+        },
+        {
+          "curie": "kampo:P40314",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40314",
+          "label": "ima naslov pojavnog oblika",
+          "score": 0.76
+        },
+        {
+          "curie": "kamn:P13051",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13051",
+          "label": "je naslov pojavnog oblika",
+          "score": 0.76
+        },
+        {
+          "curie": "kampo:P40081",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40081",
+          "label": "ima dostupnost pojavnog oblika",
+          "score": 0.7586
+        }
+      ],
+      "mappingScore": 0.9643,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40040",
+      "mappingCurie": "kampo:P40040",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.4",
+      "label": "Medij",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 2.4.2 Uvjeti navođenja medija)",
+      "required": true,
+      "repeatable": true,
+      "definition": "Medij je izraz, nadzirani naziv, identifikator ili druga oznaka koja označava vrstu građe s obzirom na tehnologiju bilježenja, posredovanja i pohrane njezina sadržaja.",
+      "sectionNumber": "2",
+      "sectionLabel": "Identifikacija jedinice građe",
+      "displayLabel": "Medij",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40042",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40042",
+          "label": "ima medij",
+          "score": 1.0
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40042",
+      "mappingCurie": "kampo:P40042",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.5",
+      "label": "Oblik sadržaja",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 2.5.2 Uvjeti navođenja oblika sadržaja)",
+      "required": true,
+      "repeatable": true,
+      "definition": "Oblik sadržaja je izraz, nadzirani naziv, identifikator ili druga oznaka koja označava vrstu građe s obzirom na znakovni sustav kojim je izražen njezin sadržaj.",
+      "sectionNumber": "2",
+      "sectionLabel": "Identifikacija jedinice građe",
+      "displayLabel": "Oblik sadržaja",
+      "mappingCandidates": [
+        {
+          "curie": "kami:P30247",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30247",
+          "label": "ima oblik sadržaja izraza",
+          "score": 0.8
+        },
+        {
+          "curie": "kami:P30001",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30001",
+          "label": "ima jezik sadržaja",
+          "score": 0.7857
+        },
+        {
+          "curie": "kami:P30005",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30005",
+          "label": "ima pismo sadržaja",
+          "score": 0.7143
+        },
+        {
+          "curie": "kamd:P20002",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20002",
+          "label": "ima opis sadržaja djela",
+          "score": 0.6667
+        },
+        {
+          "curie": "kami:P30002",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30002",
+          "label": "ima napomenu o jeziku sadržaja",
+          "score": 0.6
+        }
+      ],
+      "mappingScore": 0.8,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.6",
+      "label": "Identifikator djela",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 2.6.2 Uvjeti navođenja identifikatora djela)",
+      "required": true,
+      "repeatable": true,
+      "definition": "Identifikator djela je brojčana ili slovno-brojčana oznaka koja unutar određenog sustava jednoznačno identificira djelo sadržano u jedinici građe.",
+      "sectionNumber": "2",
+      "sectionLabel": "Identifikacija jedinice građe",
+      "displayLabel": "Identifikator djela",
+      "mappingCandidates": [
+        {
+          "curie": "kamd:P20309",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20309",
+          "label": "ima identifikator djela",
+          "score": 1.0
+        },
+        {
+          "curie": "kamn:P13031",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13031",
+          "label": "je identifikator djela",
+          "score": 1.0
+        },
+        {
+          "curie": "kamm:P11046",
+          "iri": "http://www.registar.kam.hr/Elements/m/#P11046",
+          "label": "ima identifikator mjesta",
+          "score": 0.8718
+        },
+        {
+          "curie": "kamn:P13142",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13142",
+          "label": "je identifikator mjesta",
+          "score": 0.8718
+        },
+        {
+          "curie": "kama:P60188",
+          "iri": "http://www.registar.kam.hr/Elements/a/#P60188",
+          "label": "ima identifikator agenta",
+          "score": 0.8205
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/d/#P20309",
+      "mappingCurie": "kamd:P20309",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.7",
+      "label": "Usvojena pristupnica za djelo",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true,
+      "repeatable": true,
+      "definition": "Usvojena pristupnica za djelo je nadzirana riječ, izraz ili niz riječi i/ili drugih oznaka, koji unutar nekog sustava jednoznačno identificira djelo i okuplja podatke o djelu.",
+      "sectionNumber": "2",
+      "sectionLabel": "Identifikacija jedinice građe",
+      "displayLabel": "Usvojena pristupnica za djelo",
+      "mappingCandidates": [
+        {
+          "curie": "kamn:P13022",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13022",
+          "label": "je usvojena pristupnica za djelo",
+          "score": 1.0
+        },
+        {
+          "curie": "kamd:P20301",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20301",
+          "label": "ima usvojenu pristupnicu za djelo",
+          "score": 0.931
+        },
+        {
+          "curie": "kamn:P13140",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13140",
+          "label": "je usvojena pristupnica za mjesto",
+          "score": 0.9153
+        },
+        {
+          "curie": "kamn:P13126",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13126",
+          "label": "je usvojena pristupnica za obitelj",
+          "score": 0.8667
+        },
+        {
+          "curie": "kamn:P13084",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13084",
+          "label": "je usvojena pristupnica za osobu",
+          "score": 0.8621
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/n/#P13022",
+      "mappingCurie": "kamn:P13022",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.8",
+      "label": "Usvojeni naslov djela",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true,
+      "repeatable": true,
+      "definition": "Usvojeni naslov djela je riječ ili niz riječi i/ili drugih oznaka, kojemu se daje prednost u imenovanju djela unutar određenog sustava.",
+      "sectionNumber": "2",
+      "sectionLabel": "Identifikacija jedinice građe",
+      "displayLabel": "Usvojeni naslov djela",
+      "mappingCandidates": [
+        {
+          "curie": "kamd:P20304",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20304",
+          "label": "ima usvojeni naslov djela",
+          "score": 1.0
+        },
+        {
+          "curie": "kamn:P13025",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13025",
+          "label": "je usvojeni naslov djela",
+          "score": 1.0
+        },
+        {
+          "curie": "kamn:P13024",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13024",
+          "label": "je naslov djela",
+          "score": 0.8333
+        },
+        {
+          "curie": "kamn:P13026",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13026",
+          "label": "je vrsta usvojenog naslova djela",
+          "score": 0.8
+        },
+        {
+          "curie": "kamd:P20305",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20305",
+          "label": "ima varijantni naslov djela",
+          "score": 0.7727
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/d/#P20304",
+      "mappingCurie": "kamd:P20304",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.9",
+      "label": "Vrsta usvojenog naslova djela",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Vrsta usvojenog naslova djela je riječ, izraz ili druga oznaka koja označava kojoj vrsti naslova pripada usvojeni naslov djela.",
+      "sectionNumber": "2",
+      "sectionLabel": "Identifikacija jedinice građe",
+      "displayLabel": "Vrsta usvojenog naslova djela",
+      "mappingCandidates": [
+        {
+          "curie": "kamn:P13026",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13026",
+          "label": "je vrsta usvojenog naslova djela",
+          "score": 1.0
+        },
+        {
+          "curie": "kamn:P13028",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13028",
+          "label": "je vrsta varijantnog naslova djela",
+          "score": 0.8333
+        },
+        {
+          "curie": "kamd:P20304",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20304",
+          "label": "ima usvojeni naslov djela",
+          "score": 0.8148
+        },
+        {
+          "curie": "kamn:P13025",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13025",
+          "label": "je usvojeni naslov djela",
+          "score": 0.8
+        },
+        {
+          "curie": "kamn:P13145",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13145",
+          "label": "je vrsta usvojenog imena mjesta",
+          "score": 0.7719
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/n/#P13026",
+      "mappingCurie": "kamn:P13026",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.10",
+      "label": "Dodatno obilježje djela",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 2.10.2 Uvjeti navođenja dodatnog obilježja djela)",
+      "required": true,
+      "repeatable": true,
+      "definition": "Dodatno obilježje djela je riječ, brojka ili niz riječi, brojki i/ili drugih znakova, koji služi razlikovanju djelâ koja imaju isti naslov ili razlikovanju djela od drugih jedinica opisa čije je ime jednako ili slično njegovom naslovu.",
+      "sectionNumber": "2",
+      "sectionLabel": "Identifikacija jedinice građe",
+      "displayLabel": "Dodatno obilježje djela",
+      "mappingCandidates": [
+        {
+          "curie": "kamd:P20307",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20307",
+          "label": "ima dodatno obilježje djela",
+          "score": 1.0
+        },
+        {
+          "curie": "kamn:P13029",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13029",
+          "label": "je dodatno obilježje djela",
+          "score": 1.0
+        },
+        {
+          "curie": "kamm:P11050",
+          "iri": "http://www.registar.kam.hr/Elements/m/#P11050",
+          "label": "ima dodatno obilježje mjesta",
+          "score": 0.8936
+        },
+        {
+          "curie": "kamn:P13148",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13148",
+          "label": "je dodatno obilježje mjesta",
+          "score": 0.8936
+        },
+        {
+          "curie": "kama:P60187",
+          "iri": "http://www.registar.kam.hr/Elements/a/#P60187",
+          "label": "ima dodatno obilježje agenta",
+          "score": 0.8511
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/d/#P20307",
+      "mappingCurie": "kamd:P20307",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.12",
+      "label": "Varijantna pristupnica za djelo",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 2.12.2 Uvjeti navođenja varijantne pristupnice za djelo)",
+      "required": true,
+      "repeatable": true,
+      "definition": "Varijantna pristupnica za djelo je riječ, izraz ili niz riječi i/ili drugih oznaka koji identificira djelo unutar određenog sustava, a nije odabran za usvojenu pristupnicu.",
+      "sectionNumber": "2",
+      "sectionLabel": "Identifikacija jedinice građe",
+      "displayLabel": "Varijantna pristupnica za djelo",
+      "mappingCandidates": [
+        {
+          "curie": "kamn:P13023",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13023",
+          "label": "je varijantna pristupnica za djelo",
+          "score": 1.0
+        },
+        {
+          "curie": "kamd:P20302",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20302",
+          "label": "ima varijantnu pristupnicu za djelo",
+          "score": 0.9355
+        },
+        {
+          "curie": "kamn:P13141",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13141",
+          "label": "je varijantna pristupnica za mjesto",
+          "score": 0.9206
+        },
+        {
+          "curie": "kamn:P13127",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13127",
+          "label": "je varijantna pristupnica za obitelj",
+          "score": 0.875
+        },
+        {
+          "curie": "kamn:P13085",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13085",
+          "label": "je varijantna pristupnica za osobu",
+          "score": 0.871
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/n/#P13023",
+      "mappingCurie": "kamn:P13023",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.14",
+      "label": "Vrsta varijantnog naslova djela",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Vrsta varijantnog naslova djela je riječ, izraz ili druga oznaka koja označava kojoj vrsti naslova pripada varijantni naslov djela.",
+      "sectionNumber": "2",
+      "sectionLabel": "Identifikacija jedinice građe",
+      "displayLabel": "Vrsta varijantnog naslova djela",
+      "mappingCandidates": [
+        {
+          "curie": "kamn:P13028",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13028",
+          "label": "je vrsta varijantnog naslova djela",
+          "score": 1.0
+        },
+        {
+          "curie": "kamn:P13026",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13026",
+          "label": "je vrsta usvojenog naslova djela",
+          "score": 0.8333
+        },
+        {
+          "curie": "kamd:P20305",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20305",
+          "label": "ima varijantni naslov djela",
+          "score": 0.8276
+        },
+        {
+          "curie": "kamn:P13027",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13027",
+          "label": "je varijantni naslov djela",
+          "score": 0.8148
+        },
+        {
+          "curie": "kamn:P13147",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13147",
+          "label": "je vrsta varijantnog imena mjesta",
+          "score": 0.7869
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/n/#P13028",
+      "mappingCurie": "kamn:P13028",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.16",
+      "label": "Napomena o identifikaciji djela",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Napomena o identifikaciji djela je kratak tekst u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o djelu (identifikator djela, usvojeni naslov djela, varijantni naslov djela, ključni naslov, brojčane i kronološke oznake serijske građe) i/ili izvorima iz kojih su identifikacijski podaci preuzeti.",
+      "sectionNumber": "2",
+      "sectionLabel": "Identifikacija jedinice građe",
+      "displayLabel": "Napomena o identifikaciji djela",
+      "mappingCandidates": [
+        {
+          "curie": "kamd:P20312",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20312",
+          "label": "ima napomenu o identifikaciji djela",
+          "score": 0.9677
+        },
+        {
+          "curie": "kamn:P13034",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13034",
+          "label": "ima napomenu o identifikaciji djela",
+          "score": 0.9677
+        },
+        {
+          "curie": "kamn:P13150",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13150",
+          "label": "ima napomenu o identifikaciji mjesta",
+          "score": 0.8889
+        },
+        {
+          "curie": "kama:P60189",
+          "iri": "http://www.registar.kam.hr/Elements/a/#P60189",
+          "label": "ima napomenu o identifikaciji agenta",
+          "score": 0.8571
+        },
+        {
+          "curie": "kamn:P13078",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13078",
+          "label": "ima napomenu o identifikaciji agenta",
+          "score": 0.8571
+        }
+      ],
+      "mappingScore": 0.9677,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/d/#P20312",
+      "mappingCurie": "kamd:P20312",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.20",
+      "label": "Varijantna pristupnica za izraz",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Varijantna pristupnica za izraz je riječ, izraz ili niz riječi i/ili drugih oznaka, koji identificira izraz unutar određenog sustava, a nije odabran za usvojenu pristupnicu.",
+      "sectionNumber": "2",
+      "sectionLabel": "Identifikacija jedinice građe",
+      "displayLabel": "Varijantna pristupnica za izraz",
+      "mappingCandidates": [
+        {
+          "curie": "kamn:P13040",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13040",
+          "label": "je varijantna pristupnica za izraz",
+          "score": 1.0
+        },
+        {
+          "curie": "kami:P30241",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30241",
+          "label": "ima varijantnu pristupnicu za izraz",
+          "score": 0.9355
+        },
+        {
+          "curie": "kamn:P13064",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13064",
+          "label": "je varijantna pristupnica za primjerak",
+          "score": 0.8788
+        },
+        {
+          "curie": "kamn:P13074",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13074",
+          "label": "je varijantna pristupnica za agenta",
+          "score": 0.8571
+        },
+        {
+          "curie": "kamn:P13038",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13038",
+          "label": "je nadzirana pristupnica za izraz",
+          "score": 0.8525
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/n/#P13040",
+      "mappingCurie": "kamn:P13040",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.21",
+      "label": "Napomena o identifikaciji izraza",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Napomena o identifikaciji izraza je kratak tekst u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o izrazu (identifikator izraza, usvojeni naslov izraza, varijantni naslov izraza) i/ili izvorima iz kojih su identifikacijski podaci preuzeti.",
+      "sectionNumber": "2",
+      "sectionLabel": "Identifikacija jedinice građe",
+      "displayLabel": "Napomena o identifikaciji izraza",
+      "mappingCandidates": [
+        {
+          "curie": "kami:P30244",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30244",
+          "label": "ima napomenu o identifikaciji izraza",
+          "score": 0.9688
+        },
+        {
+          "curie": "kamn:P13044",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13044",
+          "label": "ima napomenu o identifikaciji izraza",
+          "score": 0.9688
+        },
+        {
+          "curie": "kama:P60189",
+          "iri": "http://www.registar.kam.hr/Elements/a/#P60189",
+          "label": "ima napomenu o identifikaciji agenta",
+          "score": 0.8438
+        },
+        {
+          "curie": "kamn:P13078",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13078",
+          "label": "ima napomenu o identifikaciji agenta",
+          "score": 0.8438
+        },
+        {
+          "curie": "kamp:P50003",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50003",
+          "label": "ima napomenu o identifikaciji primjerka",
+          "score": 0.8358
+        }
+      ],
+      "mappingScore": 0.9688,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/i/#P30244",
+      "mappingCurie": "kami:P30244",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.23",
+      "label": "Usvojena pristupnica za pojavni oblik",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true,
+      "repeatable": true,
+      "definition": "Usvojena pristupnica za pojavni oblik je nadzirana riječ, izraz ili niz riječi i/ili drugih oznaka, koji unutar nekog sustava jednoznačno identificira pojavni oblik i okuplja podatke o njemu.",
+      "sectionNumber": "2",
+      "sectionLabel": "Identifikacija jedinice građe",
+      "displayLabel": "Usvojena pristupnica za pojavni oblik",
+      "mappingCandidates": [
+        {
+          "curie": "kamn:P13049",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13049",
+          "label": "je usvojena pristupnica za pojavni oblik",
+          "score": 1.0
+        },
+        {
+          "curie": "kampo:P40312",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40312",
+          "label": "ima usvojenu pristupnicu za pojavni oblik",
+          "score": 0.9459
+        },
+        {
+          "curie": "kamn:P13050",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13050",
+          "label": "je varijantna pristupnica za pojavni oblik",
+          "score": 0.8684
+        },
+        {
+          "curie": "kamn:P13048",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13048",
+          "label": "je nadzirana pristupnica za pojavni oblik",
+          "score": 0.8462
+        },
+        {
+          "curie": "kamn:P13084",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13084",
+          "label": "je usvojena pristupnica za osobu",
+          "score": 0.8182
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/n/#P13049",
+      "mappingCurie": "kamn:P13049",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.24",
+      "label": "Dodatno obilježje pojavnog oblika",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 2.24.2 Uvjeti navođenja dodatnog obilježja pojavnog oblika)",
+      "required": true,
+      "repeatable": true,
+      "definition": "Dodatno obilježje pojavnog oblika je riječ, brojka ili niz riječi, brojki i/ili drugih znakova, koji služi razlikovanju pojavnih oblika istoga izraza ili razlikovanju pojavnog oblika od drugih jedinica opisa čije je ime jednako ili slično njegovom naslovu.",
+      "sectionNumber": "2",
+      "sectionLabel": "Identifikacija jedinice građe",
+      "displayLabel": "Dodatno obilježje pojavnog oblika",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40317",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40317",
+          "label": "ima dodatno obilježje naslova pojavnog oblika",
+          "score": 0.8919
+        },
+        {
+          "curie": "kamn:P13054",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13054",
+          "label": "je dodatno obilježje naslova pojavnog oblika",
+          "score": 0.8919
+        },
+        {
+          "curie": "kamkt:P90218",
+          "iri": "http://www.registar.kam.hr/Elements/kt/#P90218",
+          "label": "ima dodatno obilježje korporativnog tijela",
+          "score": 0.7887
+        },
+        {
+          "curie": "kamn:P13117",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13117",
+          "label": "je dodatno obilježje korporativnog tijela",
+          "score": 0.7887
+        },
+        {
+          "curie": "kamo:P70012",
+          "iri": "http://www.registar.kam.hr/Elements/o/#P70012",
+          "label": "ima dodatno obilježje osobe",
+          "score": 0.75
+        }
+      ],
+      "mappingScore": 0.8919,
+      "mappingConfidence": "medium",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40317",
+      "mappingCurie": "kampo:P40317",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.26",
+      "label": "Varijantna pristupnica za pojavni oblik",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Varijantna pristupnica za pojavni oblik je riječ, izraz ili niz riječi i/ili drugih oznaka, koji identificira pojavni oblik unutar određenog sustava, a nije odabran za usvojenu pristupnicu.",
+      "sectionNumber": "2",
+      "sectionLabel": "Identifikacija jedinice građe",
+      "displayLabel": "Varijantna pristupnica za pojavni oblik",
+      "mappingCandidates": [
+        {
+          "curie": "kamn:P13050",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13050",
+          "label": "je varijantna pristupnica za pojavni oblik",
+          "score": 1.0
+        },
+        {
+          "curie": "kampo:P40313",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40313",
+          "label": "ima varijantnu pristupnicu za pojavni oblik",
+          "score": 0.9487
+        },
+        {
+          "curie": "kamn:P13048",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13048",
+          "label": "je nadzirana pristupnica za pojavni oblik",
+          "score": 0.8831
+        },
+        {
+          "curie": "kamn:P13049",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13049",
+          "label": "je usvojena pristupnica za pojavni oblik",
+          "score": 0.8684
+        },
+        {
+          "curie": "kampo:P40311",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40311",
+          "label": "ima nadziranu pristupnicu za pojavni oblik",
+          "score": 0.8312
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/n/#P13050",
+      "mappingCurie": "kamn:P13050",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.27",
+      "label": "Varijantni naslov pojavnog oblika",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Varijantni naslov pojavnog oblika je riječ, izraz ili niz riječi i/ili drugih oznaka koji je naveden na jedinici građe i imenuje jedinicu građe, ali nije odabran za glavni stvarni naslov niti se smatra nekim od drugih podelemenata stvarnog naslova, najčešće zato što se nalazi izvan propisanih izvora podataka za stvarni naslov.",
+      "sectionNumber": "2",
+      "sectionLabel": "Identifikacija jedinice građe",
+      "displayLabel": "Varijantni naslov pojavnog oblika",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40316",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40316",
+          "label": "ima varijantni naslov pojavnog oblika",
+          "score": 1.0
+        },
+        {
+          "curie": "kamn:P13053",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13053",
+          "label": "je varijantni naslov pojavnog oblika",
+          "score": 1.0
+        },
+        {
+          "curie": "kampo:P40315",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40315",
+          "label": "ima usvojeni naslov pojavnog oblika",
+          "score": 0.8438
+        },
+        {
+          "curie": "kamn:P13052",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13052",
+          "label": "je usvojeni naslov pojavnog oblika",
+          "score": 0.8438
+        },
+        {
+          "curie": "kamn:P13051",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13051",
+          "label": "je naslov pojavnog oblika",
+          "score": 0.8276
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40316",
+      "mappingCurie": "kampo:P40316",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.28",
+      "label": "Napomena o identifikaciji pojavnog oblika",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Napomena o identifikaciji pojavnog oblika je je kratak tekst u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o pojavnom obliku (identifikator pojavnog oblika, usvojeni naslov pojavnog oblika, varijantni naslov pojavnog oblika, skraćeni naslov, dodatno obilježje pojavnog oblika) i/ili izvorima iz kojih su identifikacijski podaci preuzeti.",
+      "sectionNumber": "2",
+      "sectionLabel": "Identifikacija jedinice građe",
+      "displayLabel": "Napomena o identifikaciji pojavnog oblika",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40320",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40320",
+          "label": "ima napomenu o identifikaciji pojavnog oblika",
+          "score": 0.9756
+        },
+        {
+          "curie": "kamn:P13058",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13058",
+          "label": "ima napomenu o identifikaciji pojavnog oblika",
+          "score": 0.9756
+        },
+        {
+          "curie": "kamkt:P90221",
+          "iri": "http://www.registar.kam.hr/Elements/kt/#P90221",
+          "label": "ima napomenu o identifikaciji korporativnog tijela",
+          "score": 0.8046
+        },
+        {
+          "curie": "kamn:P13121",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13121",
+          "label": "ima napomenu o identifikaciji korporativnog tijela",
+          "score": 0.8046
+        },
+        {
+          "curie": "kamo:P70244",
+          "iri": "http://www.registar.kam.hr/Elements/o/#P70244",
+          "label": "ima napomenu o identifikaciji osobe",
+          "score": 0.7778
+        }
+      ],
+      "mappingScore": 0.9756,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40320",
+      "mappingCurie": "kampo:P40320",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.29",
+      "label": "Identifikator primjerka",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true,
+      "repeatable": true,
+      "definition": "Identifikator primjerka je brojčana ili slovno-brojčana oznaka koja unutar određenog sustava jednoznačno identificira primjerak jedinice građe.",
+      "sectionNumber": "2",
+      "sectionLabel": "Identifikacija jedinice građe",
+      "displayLabel": "Identifikator primjerka",
+      "mappingCandidates": [
+        {
+          "curie": "kamp:P50001",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50001",
+          "label": "ima identifikator primjerka",
+          "score": 1.0
+        },
+        {
+          "curie": "kamn:P13065",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13065",
+          "label": "je identifikator primjerka",
+          "score": 1.0
+        },
+        {
+          "curie": "kamm:P11046",
+          "iri": "http://www.registar.kam.hr/Elements/m/#P11046",
+          "label": "ima identifikator mjesta",
+          "score": 0.8372
+        },
+        {
+          "curie": "kamn:P13142",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13142",
+          "label": "je identifikator mjesta",
+          "score": 0.8372
+        },
+        {
+          "curie": "kamd:P20309",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20309",
+          "label": "ima identifikator djela",
+          "score": 0.8095
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50001",
+      "mappingCurie": "kamp:P50001",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.30",
+      "label": "Usvojena pristupnica za primjerak",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true,
+      "repeatable": true,
+      "definition": "Usvojena pristupnica za primjerak je nadzirana riječ, izraz ili niz riječi i/ili drugih oznaka, koji unutar nekog sustava jednoznačno identificira primjerak i okuplja podatke o njemu.",
+      "sectionNumber": "2",
+      "sectionLabel": "Identifikacija jedinice građe",
+      "displayLabel": "Usvojena pristupnica za primjerak",
+      "mappingCandidates": [
+        {
+          "curie": "kamn:P13063",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13063",
+          "label": "je usvojena pristupnica za primjerak",
+          "score": 1.0
+        },
+        {
+          "curie": "kamp:P50002",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50002",
+          "label": "ima usvojenu pristupnicu za primjerak",
+          "score": 0.9394
+        },
+        {
+          "curie": "kamn:P13039",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13039",
+          "label": "je usvojena pristupnica za izraz",
+          "score": 0.871
+        },
+        {
+          "curie": "kamn:P13140",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13140",
+          "label": "je usvojena pristupnica za mjesto",
+          "score": 0.8571
+        },
+        {
+          "curie": "kamn:P13064",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13064",
+          "label": "je varijantna pristupnica za primjerak",
+          "score": 0.8529
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/n/#P13063",
+      "mappingCurie": "kamn:P13063",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.31",
+      "label": "Napomena o identifikaciji primjerka",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Napomena o identifikaciji primjerka je kratak tekst u kojemu se navode objašnjenja i druge pojedinosti o identifikacijskim podacima o primjerku i/ili izvorima iz kojih su identifikacijski podaci preuzeti.",
+      "sectionNumber": "2",
+      "sectionLabel": "Identifikacija jedinice građe",
+      "displayLabel": "Napomena o identifikaciji primjerka",
+      "mappingCandidates": [
+        {
+          "curie": "kamp:P50003",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50003",
+          "label": "ima napomenu o identifikaciji primjerka",
+          "score": 0.9714
+        },
+        {
+          "curie": "kamn:P13150",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13150",
+          "label": "ima napomenu o identifikaciji mjesta",
+          "score": 0.8657
+        },
+        {
+          "curie": "kamd:P20312",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20312",
+          "label": "ima napomenu o identifikaciji djela",
+          "score": 0.8485
+        },
+        {
+          "curie": "kamn:P13034",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13034",
+          "label": "ima napomenu o identifikaciji djela",
+          "score": 0.8485
+        },
+        {
+          "curie": "kami:P30244",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30244",
+          "label": "ima napomenu o identifikaciji izraza",
+          "score": 0.806
+        }
+      ],
+      "mappingScore": 0.9714,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50003",
+      "mappingCurie": "kamp:P50003",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "2.32",
+      "label": "Preporučeni način citiranja",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Preporučeni način citiranja je način koji ustanova preporučuje za citiranje jedinice građe koje posjeduje i/ili za čiji je nastanak ili sređivanje odgovorna (npr. fondovi, zbirke, baze podataka, aplikacije itd.).",
+      "sectionNumber": "2",
+      "sectionLabel": "Identifikacija jedinice građe",
+      "displayLabel": "Preporučeni način citiranja",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40323",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40323",
+          "label": "ima preporučeni način citiranja pojavnog oblika",
+          "score": 0.7714
+        },
+        {
+          "curie": "kampo:P40072",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40072",
+          "label": "ima način snimanja",
+          "score": 0.5778
+        },
+        {
+          "curie": "kamp:P50009",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50009",
+          "label": "ima način nabave",
+          "score": 0.4651
+        }
+      ],
+      "mappingScore": 0.7714,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "3.3",
+      "label": "Opis sadržaja",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Opis sadržaja je kratak nestrukturirani tekst koji objašnjava o čemu je ili što prikazuje jedinica građe.",
+      "sectionNumber": "3",
+      "sectionLabel": "Tematika i sadržaj jedinice građe",
+      "displayLabel": "Opis sadržaja",
+      "mappingCandidates": [
+        {
+          "curie": "kami:P30005",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30005",
+          "label": "ima pismo sadržaja",
+          "score": 0.8889
+        },
+        {
+          "curie": "kamd:P20002",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20002",
+          "label": "ima opis sadržaja djela",
+          "score": 0.8125
+        },
+        {
+          "curie": "kami:P30001",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30001",
+          "label": "ima jezik sadržaja",
+          "score": 0.7407
+        },
+        {
+          "curie": "kami:P30006",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30006",
+          "label": "ima napomenu o pismu sadržaja",
+          "score": 0.6842
+        },
+        {
+          "curie": "kami:P30247",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30247",
+          "label": "ima oblik sadržaja izraza",
+          "score": 0.6471
+        }
+      ],
+      "mappingScore": 0.8889,
+      "mappingConfidence": "medium",
+      "property": "http://www.registar.kam.hr/Elements/i/#P30005",
+      "mappingCurie": "kami:P30005",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "3.5",
+      "label": "Predmet",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 3.5.2 Uvjeti navođenja predmeta)",
+      "required": true,
+      "repeatable": true,
+      "definition": "Predmet je izraz, nadzirani naziv, ime, naslov, identifikator ili druga nadzirana oznaka koja označava temu kojom se bavi ili koju prikazuje jedinica građe.",
+      "sectionNumber": "3",
+      "sectionLabel": "Tematika i sadržaj jedinice građe",
+      "displayLabel": "Predmet",
+      "mappingCandidates": [
+        {
+          "curie": "kamd:P20316",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20316",
+          "label": "ima predmet djelo",
+          "score": 0.7
+        },
+        {
+          "curie": "kamd:P20318",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20318",
+          "label": "ima predmet izraz",
+          "score": 0.7
+        },
+        {
+          "curie": "kamd:P20324",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20324",
+          "label": "ima predmet nomen",
+          "score": 0.7
+        },
+        {
+          "curie": "kamd:P20326",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20326",
+          "label": "ima predmet osobu",
+          "score": 0.7
+        },
+        {
+          "curie": "kamd:P20321",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20321",
+          "label": "ima predmet mjesto",
+          "score": 0.6667
+        }
+      ],
+      "mappingScore": 0.7,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "3.6",
+      "label": "Napomena o predmetu",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Napomena o predmetu je kratak nestrukturirani tekst u kojemu se navode objašnjenja, tumačenja i druge pojedinosti o predmetu jedinice građe i/ili načinu na koji je predmet utvrđen.",
+      "sectionNumber": "3",
+      "sectionLabel": "Tematika i sadržaj jedinice građe",
+      "displayLabel": "Napomena o predmetu",
+      "mappingCandidates": [
+        {
+          "curie": "kamd:P20317",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20317",
+          "label": "ima napomenu o predmetu djela",
+          "score": 0.8182
+        },
+        {
+          "curie": "kampo:P40047",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40047",
+          "label": "ima napomenu o opsegu",
+          "score": 0.7222
+        },
+        {
+          "curie": "kama:P60180",
+          "iri": "http://www.registar.kam.hr/Elements/a/#P60180",
+          "label": "ima napomenu o agentu",
+          "score": 0.7222
+        },
+        {
+          "curie": "kamm:P11051",
+          "iri": "http://www.registar.kam.hr/Elements/m/#P11051",
+          "label": "ima napomenu o mjestu",
+          "score": 0.7222
+        },
+        {
+          "curie": "kamn:P13016",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13016",
+          "label": "ima napomenu o nomenu",
+          "score": 0.7222
+        }
+      ],
+      "mappingScore": 0.8182,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "3.7",
+      "label": "Područje",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true,
+      "repeatable": true,
+      "definition": "Područje je izraz, nadzirani naziv, identifikator ili druga oznaka koja označava djelatnost, znanstvenu disciplinu ili drugo polje ljudskog znanja ili djelovanja kojemu pripada sadržaj jedinice građe unutar određenog klasifikacijskog sustava.",
+      "sectionNumber": "3",
+      "sectionLabel": "Tematika i sadržaj jedinice građe",
+      "displayLabel": "Područje",
+      "mappingCandidates": [
+        {
+          "curie": "kamd:P20314",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20314",
+          "label": "ima područje djela",
+          "score": 0.7273
+        },
+        {
+          "curie": "kamkt:P90185",
+          "iri": "http://www.registar.kam.hr/Elements/kt/#P90185",
+          "label": "ima upravno-teritorijalno područje",
+          "score": 0.4211
+        },
+        {
+          "curie": "kamm:P11034",
+          "iri": "http://www.registar.kam.hr/Elements/m/#P11034",
+          "label": "je upravno-teritorijalno područje korporativnog tijela",
+          "score": 0.2712
+        }
+      ],
+      "mappingScore": 0.7273,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "3.8",
+      "label": "Oblik ili žanr",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Oblik ili žanr je izraz, nadzirani naziv, identifikator ili druga oznaka koja označava vrstu kojoj pripada jedinica građe s obzirom na namjenu i organizaciju sadržaja, odabir teme i stila i druge pretežito sadržajne značajke.",
+      "sectionNumber": "3",
+      "sectionLabel": "Tematika i sadržaj jedinice građe",
+      "displayLabel": "Oblik ili žanr",
+      "mappingCandidates": [
+        {
+          "curie": "kamd:P20315",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20315",
+          "label": "ima oblik ili žanr",
+          "score": 1.0
+        },
+        {
+          "curie": "kami:P30247",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30247",
+          "label": "ima oblik sadržaja izraza",
+          "score": 0.5143
+        },
+        {
+          "curie": "kampo:P40065",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40065",
+          "label": "ima oblik smanjenja mikrooblika",
+          "score": 0.4878
+        },
+        {
+          "curie": "kampo:P40027",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40027",
+          "label": "ima podatak o tiskanju ili izradi",
+          "score": 0.4651
+        },
+        {
+          "curie": "kampo:P40031",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40031",
+          "label": "ima napomenu o tiskanju ili izradi",
+          "score": 0.4545
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/d/#P20315",
+      "mappingCurie": "kamd:P20315",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "3.12",
+      "label": "Napomena o jeziku sadržaja",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Napomena o jeziku sadržaja je kratak nestrukturirani tekst u kojemu se navode pojedinosti o jeziku ili jezicima sadržaja jedinice građe.",
+      "sectionNumber": "3",
+      "sectionLabel": "Tematika i sadržaj jedinice građe",
+      "displayLabel": "Napomena o jeziku sadržaja",
+      "mappingCandidates": [
+        {
+          "curie": "kami:P30002",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30002",
+          "label": "ima napomenu o jeziku sadržaja",
+          "score": 0.9615
+        },
+        {
+          "curie": "kami:P30006",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30006",
+          "label": "ima napomenu o pismu sadržaja",
+          "score": 0.8235
+        },
+        {
+          "curie": "kami:P30001",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30001",
+          "label": "ima jezik sadržaja",
+          "score": 0.7273
+        },
+        {
+          "curie": "kami:P30004",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30004",
+          "label": "ima napomenu o jeziku izvornika",
+          "score": 0.6792
+        },
+        {
+          "curie": "kamn:P13043",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13043",
+          "label": "ima napomenu o nomenu izraza",
+          "score": 0.64
+        }
+      ],
+      "mappingScore": 0.9615,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/i/#P30002",
+      "mappingCurie": "kami:P30002",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "3.14",
+      "label": "Napomena o jeziku izvornika",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Napomena o jeziku izvornika je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o jeziku ili jezicima kojima je izvorno zabilježen sadržaj jedinice građe.",
+      "sectionNumber": "3",
+      "sectionLabel": "Tematika i sadržaj jedinice građe",
+      "displayLabel": "Napomena o jeziku izvornika",
+      "mappingCandidates": [
+        {
+          "curie": "kami:P30004",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30004",
+          "label": "ima napomenu o jeziku izvornika",
+          "score": 0.963
+        },
+        {
+          "curie": "kami:P30008",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30008",
+          "label": "ima napomenu o pismu izvornika",
+          "score": 0.8302
+        },
+        {
+          "curie": "kami:P30003",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30003",
+          "label": "ima jezik izvornika",
+          "score": 0.7391
+        },
+        {
+          "curie": "kami:P30002",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30002",
+          "label": "ima napomenu o jeziku sadržaja",
+          "score": 0.717
+        },
+        {
+          "curie": "kamn:P13043",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13043",
+          "label": "ima napomenu o nomenu izraza",
+          "score": 0.6667
+        }
+      ],
+      "mappingScore": 0.963,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/i/#P30004",
+      "mappingCurie": "kami:P30004",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "3.15",
+      "label": "Pismo sadržaja",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 3.15.2 Uvjeti navođenja pisma sadržaja)",
+      "required": true,
+      "repeatable": true,
+      "definition": "Pismo sadržaja je izraz, nadzirani naziv, kôd, identifikator ili druga oznaka za sustav grafičkih znakova kojima je iskazan sadržaj jedinice građe.",
+      "sectionNumber": "3",
+      "sectionLabel": "Tematika i sadržaj jedinice građe",
+      "displayLabel": "Pismo sadržaja",
+      "mappingCandidates": [
+        {
+          "curie": "kami:P30005",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30005",
+          "label": "ima pismo sadržaja",
+          "score": 1.0
+        },
+        {
+          "curie": "kamd:P20002",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20002",
+          "label": "ima opis sadržaja djela",
+          "score": 0.7273
+        },
+        {
+          "curie": "kami:P30001",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30001",
+          "label": "ima jezik sadržaja",
+          "score": 0.7143
+        },
+        {
+          "curie": "kami:P30006",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30006",
+          "label": "ima napomenu o pismu sadržaja",
+          "score": 0.6667
+        },
+        {
+          "curie": "kami:P30247",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30247",
+          "label": "ima oblik sadržaja izraza",
+          "score": 0.6154
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/i/#P30005",
+      "mappingCurie": "kami:P30005",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "3.16",
+      "label": "Napomena o pismu sadržaja",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Napomena o pismu sadržaja je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o sustavu grafičkih znakova kojim je iskazan sadržaj jedinice građe.",
+      "sectionNumber": "3",
+      "sectionLabel": "Tematika i sadržaj jedinice građe",
+      "displayLabel": "Napomena o pismu sadržaja",
+      "mappingCandidates": [
+        {
+          "curie": "kami:P30006",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30006",
+          "label": "ima napomenu o pismu sadržaja",
+          "score": 0.96
+        },
+        {
+          "curie": "kami:P30002",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30002",
+          "label": "ima napomenu o jeziku sadržaja",
+          "score": 0.8235
+        },
+        {
+          "curie": "kami:P30005",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30005",
+          "label": "ima pismo sadržaja",
+          "score": 0.6977
+        },
+        {
+          "curie": "kamd:P20002",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20002",
+          "label": "ima opis sadržaja djela",
+          "score": 0.6667
+        },
+        {
+          "curie": "kami:P30008",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30008",
+          "label": "ima napomenu o pismu izvornika",
+          "score": 0.6667
+        }
+      ],
+      "mappingScore": 0.96,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/i/#P30006",
+      "mappingCurie": "kami:P30006",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "3.17",
+      "label": "Pismo izvornika",
+      "obligation": "Nije obvezno (vidi i 3.17.2 Uvjeti navođenja pisma izvornika)",
+      "required": false,
+      "repeatable": true,
+      "definition": "Pismo izvornika je izraz, nadzirani naziv, kôd, identifikator ili druga oznaka koja označava sustav grafičkih znakova kojim je izvorno zabilježen sadržaj jedinice građe.",
+      "sectionNumber": "3",
+      "sectionLabel": "Tematika i sadržaj jedinice građe",
+      "displayLabel": "Pismo izvornika",
+      "mappingCandidates": [
+        {
+          "curie": "kami:P30007",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30007",
+          "label": "ima pismo izvornika",
+          "score": 1.0
+        },
+        {
+          "curie": "kami:P30003",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30003",
+          "label": "ima jezik izvornika",
+          "score": 0.7333
+        },
+        {
+          "curie": "kami:P30008",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30008",
+          "label": "ima napomenu o pismu izvornika",
+          "score": 0.6829
+        },
+        {
+          "curie": "kami:P30004",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30004",
+          "label": "ima napomenu o jeziku izvornika",
+          "score": 0.5714
+        },
+        {
+          "curie": "kami:P30005",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30005",
+          "label": "ima pismo sadržaja",
+          "score": 0.5517
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/i/#P30007",
+      "mappingCurie": "kami:P30007",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "3.18",
+      "label": "Napomena o pismu izvornika",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Napomena o pismu izvornika je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o jednom ili više sustava grafičkih znakova kojima je izvorno zabilježen sadržaj jedinice građe.",
+      "sectionNumber": "3",
+      "sectionLabel": "Tematika i sadržaj jedinice građe",
+      "displayLabel": "Napomena o pismu izvornika",
+      "mappingCandidates": [
+        {
+          "curie": "kami:P30008",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30008",
+          "label": "ima napomenu o pismu izvornika",
+          "score": 0.9615
+        },
+        {
+          "curie": "kami:P30004",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30004",
+          "label": "ima napomenu o jeziku izvornika",
+          "score": 0.8302
+        },
+        {
+          "curie": "kami:P30007",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30007",
+          "label": "ima pismo izvornika",
+          "score": 0.7111
+        },
+        {
+          "curie": "kami:P30006",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30006",
+          "label": "ima napomenu o pismu sadržaja",
+          "score": 0.7059
+        },
+        {
+          "curie": "kamn:P13043",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13043",
+          "label": "ima napomenu o nomenu izraza",
+          "score": 0.68
+        }
+      ],
+      "mappingScore": 0.9615,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/i/#P30008",
+      "mappingCurie": "kami:P30008",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.4",
+      "label": "Napomena o materijalnom nositelju",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Napomena o materijalnom nositelju je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o materijalnom nositelju jedinice građe.",
+      "sectionNumber": "4",
+      "sectionLabel": "Materijalni opis jedinice građe",
+      "displayLabel": "Napomena o materijalnom nositelju",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40049",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40049",
+          "label": "ima napomenu o materijalnom nositelju",
+          "score": 0.9697
+        },
+        {
+          "curie": "kampo:P40057",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40057",
+          "label": "ima napomenu o materijalu i tehnici",
+          "score": 0.7188
+        },
+        {
+          "curie": "kamn:P13134",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13134",
+          "label": "ima napomenu o nomenu obitelji",
+          "score": 0.678
+        },
+        {
+          "curie": "kamkt:P90008",
+          "iri": "http://www.registar.kam.hr/Elements/kt/#P90008",
+          "label": "ima napomenu o korporativnom tijelu",
+          "score": 0.6562
+        },
+        {
+          "curie": "kampo:P40321",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40321",
+          "label": "Ima napomenu o pojavnom obliku",
+          "score": 0.6441
+        }
+      ],
+      "mappingScore": 0.9697,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40049",
+      "mappingCurie": "kampo:P40049",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.5",
+      "label": "Dimenzije",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 4.5.2 Uvjeti navođenja dimenzija)",
+      "required": true,
+      "repeatable": true,
+      "definition": "Dimenzije su niz brojki, izraza i drugih znakova koji označavaju veličinu pojavnog oblika jedinice građe ili njegova dijela.",
+      "sectionNumber": "4",
+      "sectionLabel": "Materijalni opis jedinice građe",
+      "displayLabel": "Dimenzije",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40050",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40050",
+          "label": "ima dimenzije",
+          "score": 1.0
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40050",
+      "mappingCurie": "kampo:P40050",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.6",
+      "label": "Napomena o dimenzijama",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Napomena o dimenzijama je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o dimenzijama jedinice građe.",
+      "sectionNumber": "4",
+      "sectionLabel": "Materijalni opis jedinice građe",
+      "displayLabel": "Napomena o dimenzijama",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40051",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40051",
+          "label": "ima napomenu o dimenzijama",
+          "score": 0.9545
+        },
+        {
+          "curie": "kamn:P13043",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13043",
+          "label": "ima napomenu o nomenu izraza",
+          "score": 0.6957
+        },
+        {
+          "curie": "kamd:P20011",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20011",
+          "label": "ima napomenu o nagradama",
+          "score": 0.6667
+        },
+        {
+          "curie": "kami:P30245",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30245",
+          "label": "ima napomenu o izrazu",
+          "score": 0.6667
+        },
+        {
+          "curie": "kamn:P13016",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13016",
+          "label": "ima napomenu o nomenu",
+          "score": 0.6667
+        }
+      ],
+      "mappingScore": 0.9545,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40051",
+      "mappingCurie": "kampo:P40051",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.8",
+      "label": "Materijal",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 4.8.2 Uvjeti navođenja materijala)",
+      "required": true,
+      "repeatable": true,
+      "definition": "Materijal je izraz, nadzirani naziv, identifikator ili druga oznaka za fizikalnu ili kemijsku tvar od koje se sastoji pojavni oblik ili dio pojavnog oblika jedinice građe.",
+      "sectionNumber": "4",
+      "sectionLabel": "Materijalni opis jedinice građe",
+      "displayLabel": "Materijal",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40053",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40053",
+          "label": "ima materijal ",
+          "score": 1.0
+        },
+        {
+          "curie": "kampo:P40055",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40055",
+          "label": "ima materijal nanosa",
+          "score": 0.72
+        },
+        {
+          "curie": "kampo:P40054",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40054",
+          "label": "ima materijal podloge",
+          "score": 0.6923
+        },
+        {
+          "curie": "kampo:P40048",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40048",
+          "label": "ima materijalni nositelj",
+          "score": 0.6207
+        },
+        {
+          "curie": "kampo:P40057",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40057",
+          "label": "ima napomenu o materijalu i tehnici",
+          "score": 0.45
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40053",
+      "mappingCurie": "kampo:P40053",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.14",
+      "label": "Napomena o boji",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Napomena o boji je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o prisutnosti i/ili vrsti boje jedinice građe.",
+      "sectionNumber": "4",
+      "sectionLabel": "Materijalni opis jedinice građe",
+      "displayLabel": "Napomena o boji",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40059",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40059",
+          "label": "ima napomenu o boji",
+          "score": 0.9333
+        },
+        {
+          "curie": "kamo:P70018",
+          "iri": "http://www.registar.kam.hr/Elements/o/#P70018",
+          "label": "ima napomenu o osobi",
+          "score": 0.7742
+        },
+        {
+          "curie": "kamob:P10008",
+          "iri": "http://www.registar.kam.hr/Elements/ob/#P10008",
+          "label": "ima napomenu o obitelji",
+          "score": 0.7647
+        },
+        {
+          "curie": "kamp:P50010",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50010",
+          "label": "ima napomenu o nabavi",
+          "score": 0.75
+        },
+        {
+          "curie": "kami:P30015",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30015",
+          "label": "ima napomenu o mjerilu",
+          "score": 0.7273
+        }
+      ],
+      "mappingScore": 0.9333,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40059",
+      "mappingCurie": "kampo:P40059",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.17",
+      "label": "Generacija",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Generacija je izraz, nadzirani naziv ili druga oznaka koja označava koliko je puta sadržaj jedinice građe prenesen s jednog materijalnog nositelja na istovrsni nositelj u svrhu umnožavanja.",
+      "sectionNumber": "4",
+      "sectionLabel": "Materijalni opis jedinice građe",
+      "displayLabel": "Generacija",
+      "mappingCandidates": [
+        {
+          "curie": "",
+          "iri": "",
+          "label": "",
+          "score": 0.0
+        }
+      ],
+      "mappingScore": 0.0,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.19",
+      "label": "Položaj sličica",
+      "obligation": "Obvezno kad je primjenjivo Ponovljivo Nije ponovljivo Cilj razumijevanje izgleda jedinice građe pristup sadržaju jedinice građe 4.19.1 Izvor podataka o položaju sličica Izvor podataka je jedinica građe. 4.19.2 Način navođenja položaja sličica Navodi se izraz horizontalno ili vertikalno.",
+      "required": true,
+      "repeatable": false,
+      "definition": "Položaj sličica je izraz koji označava je li položaj sličica na dijafilmu ili mikrofilmu horizontalan ili vertikalan.",
+      "sectionNumber": "4",
+      "sectionLabel": "Materijalni opis jedinice građe",
+      "displayLabel": "Položaj sličica",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40064",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40064",
+          "label": "ima položaj sličica",
+          "score": 1.0
+        },
+        {
+          "curie": "kamm:P11002",
+          "iri": "http://www.registar.kam.hr/Elements/m/#P11002",
+          "label": "ima geografski položaj mjesta",
+          "score": 0.5
+        },
+        {
+          "curie": "kamkt:P90005",
+          "iri": "http://www.registar.kam.hr/Elements/kt/#P90005",
+          "label": "ima pravni položaj korporativnog tijela",
+          "score": 0.4
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40064",
+      "mappingCurie": "kampo:P40064",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.20",
+      "label": "Omjer smanjenja mikrooblika",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true,
+      "repeatable": true,
+      "definition": "Omjer smanjenja mikrooblika je izraz koji označava stupanj smanjenja tijekom prijenosa sadržaja jedinice građe u mikrooblik.",
+      "sectionNumber": "4",
+      "sectionLabel": "Materijalni opis jedinice građe",
+      "displayLabel": "Omjer smanjenja mikrooblika",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40065",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40065",
+          "label": "ima oblik smanjenja mikrooblika",
+          "score": 0.8519
+        },
+        {
+          "curie": "kampo:P40075",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40075",
+          "label": "ima sustav smanjenja šuma",
+          "score": 0.5417
+        }
+      ],
+      "mappingScore": 0.8519,
+      "mappingConfidence": "medium",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40065",
+      "mappingCurie": "kampo:P40065",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.24",
+      "label": "Format datoteke",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Format datoteke je izraz koji označava standard za kodiranje, prijenos i pohranu digitalnih podataka.",
+      "sectionNumber": "4",
+      "sectionLabel": "Materijalni opis jedinice građe",
+      "displayLabel": "Format datoteke",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40069",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40069",
+          "label": "ima format datoteke",
+          "score": 1.0
+        },
+        {
+          "curie": "kampo:P40070",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40070",
+          "label": "ima veličinu datoteke",
+          "score": 0.6111
+        },
+        {
+          "curie": "kami:P30012",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30012",
+          "label": "ima glazbeni format",
+          "score": 0.4
+        },
+        {
+          "curie": "kampo:P40060",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40060",
+          "label": "ima bibliografski format",
+          "score": 0.3429
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40069",
+      "mappingCurie": "kampo:P40069",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "4.25",
+      "label": "Veličina datoteke",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Veličina datoteke je izraz koji označava broj bajta jedinice građe na elektroničkom mediju.",
+      "sectionNumber": "4",
+      "sectionLabel": "Materijalni opis jedinice građe",
+      "displayLabel": "Veličina datoteke",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40070",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40070",
+          "label": "ima veličinu datoteke",
+          "score": 0.9412
+        },
+        {
+          "curie": "kampo:P40069",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40069",
+          "label": "ima format datoteke",
+          "score": 0.625
+        }
+      ],
+      "mappingScore": 0.9412,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40070",
+      "mappingCurie": "kampo:P40070",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "5.1",
+      "label": "Povijest djela",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Povijest djela je kratak nestrukturirani tekst koji sadržava pojedinosti o nastanku, recepciji i interpretaciji djela.",
+      "sectionNumber": "5",
+      "sectionLabel": "Životni ciklus jedinice građe",
+      "displayLabel": "Povijest djela",
+      "mappingCandidates": [
+        {
+          "curie": "kamd:P20016",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20016",
+          "label": "ima povijest djela",
+          "score": 1.0
+        },
+        {
+          "curie": "kamp:P50013",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50013",
+          "label": "ima povijest primjerka",
+          "score": 0.75
+        },
+        {
+          "curie": "kamd:P20314",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20314",
+          "label": "ima područje djela",
+          "score": 0.7143
+        },
+        {
+          "curie": "kamob:P10007",
+          "iri": "http://www.registar.kam.hr/Elements/ob/#P10007",
+          "label": "ima povijest obitelji",
+          "score": 0.7097
+        },
+        {
+          "curie": "kamd:P20297",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20297",
+          "label": "ima vrijeme nastanka djela",
+          "score": 0.6667
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/d/#P20016",
+      "mappingCurie": "kamd:P20016",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "5.2",
+      "label": "Plan sređivanja",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 5.2.2 Uvjeti navođenja plana sređivanja)",
+      "required": true,
+      "repeatable": true,
+      "definition": "Plan sređivanja je strukturirani ili nestrukturirani tekst u kojemu se objašnjava sadašnji i/ili planirani sustav organizacije fonda ili zbirke.",
+      "sectionNumber": "5",
+      "sectionLabel": "Životni ciklus jedinice građe",
+      "displayLabel": "Plan sređivanja",
+      "mappingCandidates": [
+        {
+          "curie": "kamd:P20012",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20012",
+          "label": "ima plan sređivanja",
+          "score": 1.0
+        },
+        {
+          "curie": "kama:P60079",
+          "iri": "http://www.registar.kam.hr/Elements/a/#P60079",
+          "label": "je DJ",
+          "score": 0.2857
+        },
+        {
+          "curie": "kamo:P70088",
+          "iri": "http://www.registar.kam.hr/Elements/o/#P70088",
+          "label": "je DJ",
+          "score": 0.2857
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/d/#P20012",
+      "mappingCurie": "kamd:P20012",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "5.7",
+      "label": "Povijest primjerka",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Povijest primjerka je nestrukturirani tekst koji sadržava informacije o povijesti primjerka koje nisu odgovarajuće iskazane u drugim elementima podataka, uključujući vlasništvo nad primjerkom, preinake primjerka, povijest čuvanja itd.",
+      "sectionNumber": "5",
+      "sectionLabel": "Životni ciklus jedinice građe",
+      "displayLabel": "Povijest primjerka",
+      "mappingCandidates": [
+        {
+          "curie": "kamp:P50013",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50013",
+          "label": "ima povijest primjerka",
+          "score": 1.0
+        },
+        {
+          "curie": "kamd:P20016",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20016",
+          "label": "ima povijest djela",
+          "score": 0.75
+        },
+        {
+          "curie": "kamp:P50004",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50004",
+          "label": "ima dostupnost primjerka",
+          "score": 0.7368
+        },
+        {
+          "curie": "kamp:P50011",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50011",
+          "label": "ima stanje primjerka",
+          "score": 0.7059
+        },
+        {
+          "curie": "kampo:P40094",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40094",
+          "label": "je reprodukcija primjerka",
+          "score": 0.7
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50013",
+      "mappingCurie": "kamp:P50013",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "5.8",
+      "label": "Dodani natpisi i oznake",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Dodani natpisi i oznake su riječi, znakovi ili skupovi riječi i/ili znakova koji se javljaju na jedinici građe, a nisu dio njezina izvornog oblikovanja, proizvodnje ili objavljivanja, već su ih tijekom vremena dodali posjednici, vlasnici, korisnici i drugi agenti.",
+      "sectionNumber": "5",
+      "sectionLabel": "Životni ciklus jedinice građe",
+      "displayLabel": "Dodani natpisi i oznake",
+      "mappingCandidates": [
+        {
+          "curie": "kamp:P50006",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50006",
+          "label": "ima dodane natpise i oznake",
+          "score": 0.913
+        },
+        {
+          "curie": "kampo:P40043",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40043",
+          "label": "ima izvorne natpise i oznake",
+          "score": 0.766
+        },
+        {
+          "curie": "kamn:P13066",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13066",
+          "label": "je dodani natpis i oznaka za primjerak",
+          "score": 0.7586
+        },
+        {
+          "curie": "kamp:P50007",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50007",
+          "label": "ima napomenu o dodanim natpisima i oznakama",
+          "score": 0.7097
+        },
+        {
+          "curie": "kampo:P40044",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40044",
+          "label": "ima napomenu o izvornim natpisima i oznakama",
+          "score": 0.6032
+        }
+      ],
+      "mappingScore": 0.913,
+      "mappingConfidence": "medium",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50006",
+      "mappingCurie": "kamp:P50006",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "5.9",
+      "label": "Napomena o dodanim natpisima i oznakama",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Napomena o dodanim natpisima i oznakama je nestrukturirani ili polustrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o dodanim natpisima i oznakama na jedinici građe.",
+      "sectionNumber": "5",
+      "sectionLabel": "Životni ciklus jedinice građe",
+      "displayLabel": "Napomena o dodanim natpisima i oznakama",
+      "mappingCandidates": [
+        {
+          "curie": "kamp:P50007",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50007",
+          "label": "ima napomenu o dodanim natpisima i oznakama",
+          "score": 0.9744
+        },
+        {
+          "curie": "kampo:P40044",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40044",
+          "label": "ima napomenu o izvornim natpisima i oznakama",
+          "score": 0.8861
+        },
+        {
+          "curie": "kamn:P13066",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13066",
+          "label": "je dodani natpis i oznaka za primjerak",
+          "score": 0.6753
+        },
+        {
+          "curie": "kamp:P50006",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50006",
+          "label": "ima dodane natpise i oznake",
+          "score": 0.6667
+        },
+        {
+          "curie": "kamn:P13045",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13045",
+          "label": "ima napomenu o odnosu nomena i izraza",
+          "score": 0.6389
+        }
+      ],
+      "mappingScore": 0.9744,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50007",
+      "mappingCurie": "kamp:P50007",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "5.10",
+      "label": "Način nabave",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true,
+      "repeatable": true,
+      "definition": "Način nabave je nadzirani naziv, kôd ili druga nadzirana oznaka koja označava neposredan način na koji je jedinica građe dospjela u ustanovu u kojoj je pohranjena.",
+      "sectionNumber": "5",
+      "sectionLabel": "Životni ciklus jedinice građe",
+      "displayLabel": "Način nabave",
+      "mappingCandidates": [
+        {
+          "curie": "kamp:P50009",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50009",
+          "label": "ima način nabave",
+          "score": 1.0
+        },
+        {
+          "curie": "kampo:P40072",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40072",
+          "label": "ima način snimanja",
+          "score": 0.6923
+        },
+        {
+          "curie": "kamp:P50132",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50132",
+          "label": "ima vrijeme nabave",
+          "score": 0.6154
+        },
+        {
+          "curie": "kamp:P50127",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50127",
+          "label": "ima mjesto nabave",
+          "score": 0.56
+        },
+        {
+          "curie": "kamvr:P12015",
+          "iri": "http://www.registar.kam.hr/Elements/vr/#P12015",
+          "label": "je vrijeme nabave primjerka",
+          "score": 0.4444
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50009",
+      "mappingCurie": "kamp:P50009",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "5.11",
+      "label": "Napomena o nabavi",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Napomena o nabavi je kratak nestrukturirani tekst u kojemu se navode objašnjenja i druge pojedinosti o neposrednoj nabavi jedinice građe, uključujući način, izvor, mjesto i vrijeme nabave.",
+      "sectionNumber": "5",
+      "sectionLabel": "Životni ciklus jedinice građe",
+      "displayLabel": "Napomena o nabavi",
+      "mappingCandidates": [
+        {
+          "curie": "kamp:P50010",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50010",
+          "label": "ima napomenu o nabavi",
+          "score": 0.9412
+        },
+        {
+          "curie": "kampo:P40059",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40059",
+          "label": "ima napomenu o boji",
+          "score": 0.75
+        },
+        {
+          "curie": "kamo:P70018",
+          "iri": "http://www.registar.kam.hr/Elements/o/#P70018",
+          "label": "ima napomenu o osobi",
+          "score": 0.7273
+        },
+        {
+          "curie": "kamd:P20011",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20011",
+          "label": "ima napomenu o nagradama",
+          "score": 0.7027
+        },
+        {
+          "curie": "kampo:P40051",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40051",
+          "label": "ima napomenu o dimenzijama",
+          "score": 0.6667
+        }
+      ],
+      "mappingScore": 0.9412,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50010",
+      "mappingCurie": "kamp:P50010",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "5.13",
+      "label": "Stanje primjerka",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Stanje primjerka je izraz ili tekst u kojemu se navode informacije o fizičkom stanju primjerka jedinice građe, uključujući opće stanje, oštećenja, ranije provedene postupke zaštite, dijelove koji nedostaju i druga svojstva koja proizlaze iz životnog ciklusa primjerka i/ili razlikuju primjerak od drugih primjeraka istoga pojavnog oblika.",
+      "sectionNumber": "5",
+      "sectionLabel": "Životni ciklus jedinice građe",
+      "displayLabel": "Stanje primjerka",
+      "mappingCandidates": [
+        {
+          "curie": "kamp:P50011",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50011",
+          "label": "ima stanje primjerka",
+          "score": 1.0
+        },
+        {
+          "curie": "kamm:P11021",
+          "iri": "http://www.registar.kam.hr/Elements/m/#P11021",
+          "label": "je mjesto pohrane primjerka",
+          "score": 0.75
+        },
+        {
+          "curie": "kamp:P50004",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50004",
+          "label": "ima dostupnost primjerka",
+          "score": 0.7222
+        },
+        {
+          "curie": "kamm:P11019",
+          "iri": "http://www.registar.kam.hr/Elements/m/#P11019",
+          "label": "je mjesto nabave primjerka",
+          "score": 0.7179
+        },
+        {
+          "curie": "kamm:P11018",
+          "iri": "http://www.registar.kam.hr/Elements/m/#P11018",
+          "label": "je mjesto izlaganja primjerka",
+          "score": 0.7143
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50011",
+      "mappingCurie": "kamp:P50011",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "5.14",
+      "label": "Konzervacija i restauracija",
+      "obligation": "Obvezno kad je primjenjivo i dostupno",
+      "required": true,
+      "repeatable": true,
+      "definition": "Konzervacija i restauracija je tekst koji sadržava informacije o konzervatorskim i restauratorskim postupcima provedenima nad jedinicom građe, uključujući mjesto, vrijeme i agente odgovorne za konzervaciju i restauraciju.",
+      "sectionNumber": "5",
+      "sectionLabel": "Životni ciklus jedinice građe",
+      "displayLabel": "Konzervacija i restauracija",
+      "mappingCandidates": [
+        {
+          "curie": "kamp:P50012",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50012",
+          "label": "ima konzervaciju i restauraciju",
+          "score": 0.9259
+        },
+        {
+          "curie": "kampo:P40057",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40057",
+          "label": "ima napomenu o materijalu i tehnici",
+          "score": 0.4483
+        },
+        {
+          "curie": "kamd:P20014",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20014",
+          "label": "ima odabir, izlučivanje i rokove čuvanja",
+          "score": 0.4127
+        },
+        {
+          "curie": "kampo:P40044",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40044",
+          "label": "ima napomenu o izvornim natpisima i oznakama",
+          "score": 0.3881
+        },
+        {
+          "curie": "kamn:P13151",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13151",
+          "label": "ima napomenu o odnosu nomena i mjesta",
+          "score": 0.3667
+        }
+      ],
+      "mappingScore": 0.9259,
+      "mappingConfidence": "medium",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50012",
+      "mappingCurie": "kamp:P50012",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "6.5",
+      "label": "Uvjeti objavljivanja, umnožavanja ili prikazivanja",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Uvjeti objavljivanja, umnožavanja ili prikazivanja su izraz ili tekst koji označava pravna i druga ograničenja vezana uz objavljivanje, umnožavanje i/ili javno prikazivanje sadržaja jedinice građe.",
+      "sectionNumber": "6",
+      "sectionLabel": "Dostupnost i uporaba jedinice građe",
+      "displayLabel": "Uvjeti objavljivanja, umnožavanja ili prikazivanja",
+      "mappingCandidates": [
+        {
+          "curie": "kami:P30019",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30019",
+          "label": "ima uvjete objavljivanja, umnožavanja ili prikazivanja",
+          "score": 0.98
+        },
+        {
+          "curie": "kamo:P70198",
+          "iri": "http://www.registar.kam.hr/Elements/o/#P70198",
+          "label": "ima vrijeme obnašanja dužnosti ili položaja",
+          "score": 0.5393
+        },
+        {
+          "curie": "kamvr:P12020",
+          "iri": "http://www.registar.kam.hr/Elements/vr/#P12020",
+          "label": "je vrijeme obnašanja dužnosti ili položaja osobe",
+          "score": 0.5053
+        },
+        {
+          "curie": "kampo:P40024",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40024",
+          "label": "ima usporedno ime nakladnika, proizvođača ili raspačavatelja",
+          "score": 0.4673
+        },
+        {
+          "curie": "kamd:P20015",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20015",
+          "label": "ima učestalost izlaženja ili osuvremenjivanja",
+          "score": 0.4632
+        }
+      ],
+      "mappingScore": 0.98,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/i/#P30019",
+      "mappingCurie": "kami:P30019",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "6.6",
+      "label": "Tehnički uvjeti pristupa",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Tehnički uvjeti pristupa su izraz ili tekst koji sadržava informacije o opremi, uređaju i/ili sustavu potrebnom za pristup sadržaju jedinice građe.",
+      "sectionNumber": "6",
+      "sectionLabel": "Dostupnost i uporaba jedinice građe",
+      "displayLabel": "Tehnički uvjeti pristupa",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40078",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40078",
+          "label": "ima tehničke uvjete pristupa",
+          "score": 0.9167
+        },
+        {
+          "curie": "kama:P60119",
+          "iri": "http://www.registar.kam.hr/Elements/a/#P60119",
+          "label": "je tehnički crtač",
+          "score": 0.5789
+        },
+        {
+          "curie": "kamo:P70129",
+          "iri": "http://www.registar.kam.hr/Elements/o/#P70129",
+          "label": "je tehnički crtač",
+          "score": 0.5789
+        },
+        {
+          "curie": "kamka:P80122",
+          "iri": "http://www.registar.kam.hr/Elements/ka/#P80122",
+          "label": "je tehnički crtač",
+          "score": 0.5789
+        },
+        {
+          "curie": "kamkt:P90121",
+          "iri": "http://www.registar.kam.hr/Elements/kt/#P90121",
+          "label": "je tehnički crtač",
+          "score": 0.5789
+        }
+      ],
+      "mappingScore": 0.9167,
+      "mappingConfidence": "medium",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40078",
+      "mappingCurie": "kampo:P40078",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "6.10",
+      "label": "Dostupnost primjerka",
+      "obligation": "Obvezno kad je primjenjivo",
+      "required": true,
+      "repeatable": true,
+      "definition": "Dostupnost primjerka je izraz, tekst ili druga oznaka koja označava uvjete pod kojima ustanova omogućuje korisnicima pristup primjerku jedinice građe.",
+      "sectionNumber": "6",
+      "sectionLabel": "Dostupnost i uporaba jedinice građe",
+      "displayLabel": "Dostupnost primjerka",
+      "mappingCandidates": [
+        {
+          "curie": "kamp:P50004",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50004",
+          "label": "ima dostupnost primjerka",
+          "score": 1.0
+        },
+        {
+          "curie": "kamp:P50011",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50011",
+          "label": "ima stanje primjerka",
+          "score": 0.7222
+        },
+        {
+          "curie": "kamp:P50013",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50013",
+          "label": "ima povijest primjerka",
+          "score": 0.6842
+        },
+        {
+          "curie": "kampo:P40081",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40081",
+          "label": "ima dostupnost pojavnog oblika",
+          "score": 0.6522
+        },
+        {
+          "curie": "kamm:P11022",
+          "iri": "http://www.registar.kam.hr/Elements/m/#P11022",
+          "label": "je mjesto korištenja primjerka",
+          "score": 0.6383
+        }
+      ],
+      "mappingScore": 1.0,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50004",
+      "mappingCurie": "kamp:P50004",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.1",
+      "label": "Odnos djela i djela",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 10.1.2 Uvjeti navođenja odnosa djela i djela)",
+      "required": true,
+      "repeatable": true,
+      "definition": "Odnos djela i djela (djelo je povezano s djelom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između dvaju djela.",
+      "sectionNumber": "10",
+      "sectionLabel": "Odnosi i napomene o odnosima među jedinicama opisa",
+      "displayLabel": "Odnos djela i djela",
+      "mappingCandidates": [
+        {
+          "curie": "kamn:P13035",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13035",
+          "label": "ima napomenu o odnosu nomena i djela",
+          "score": 0.6275
+        },
+        {
+          "curie": "kamd:P20313",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20313",
+          "label": "ima napomenu o odnosu djela i drugih jedinica opisa",
+          "score": 0.5455
+        },
+        {
+          "curie": "kamn:P13151",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13151",
+          "label": "ima napomenu o odnosu nomena i mjesta",
+          "score": 0.5385
+        },
+        {
+          "curie": "kamn:P13069",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13069",
+          "label": "ima napomenu o odnosu nomena i primjerka",
+          "score": 0.5091
+        },
+        {
+          "curie": "kamd:P20020",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20020",
+          "label": "je dio djela",
+          "score": 0.5
+        }
+      ],
+      "mappingScore": 0.6275,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.2",
+      "label": "Odnos djela i izraza",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 10.2.2 Uvjeti navođenja odnosa djela i izraza)",
+      "required": true,
+      "repeatable": true,
+      "definition": "Odnos djela i izraza (djelo je povezano s izrazom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između djela i izraza.",
+      "sectionNumber": "10",
+      "sectionLabel": "Odnosi i napomene o odnosima među jedinicama opisa",
+      "displayLabel": "Odnos djela i izraza",
+      "mappingCandidates": [
+        {
+          "curie": "kamn:P13045",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13045",
+          "label": "ima napomenu o odnosu nomena i izraza",
+          "score": 0.6415
+        },
+        {
+          "curie": "kami:P30242",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30242",
+          "label": "ima dodatno obilježje izraza",
+          "score": 0.6364
+        },
+        {
+          "curie": "kamn:P13041",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13041",
+          "label": "je dodatno obilježje izraza",
+          "score": 0.6364
+        },
+        {
+          "curie": "kami:P30027",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30027",
+          "label": "je dio izraza",
+          "score": 0.6061
+        },
+        {
+          "curie": "kami:P30028",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30028",
+          "label": "je izveden iz izraza",
+          "score": 0.5946
+        }
+      ],
+      "mappingScore": 0.6415,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.3",
+      "label": "Odnos izraza i izraza",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Odnos izraza i izraza (izraz je povezan s izrazom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između dvaju izraza.",
+      "sectionNumber": "10",
+      "sectionLabel": "Odnosi i napomene o odnosima među jedinicama opisa",
+      "displayLabel": "Odnos izraza i izraza",
+      "mappingCandidates": [
+        {
+          "curie": "kamn:P13045",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13045",
+          "label": "ima napomenu o odnosu nomena i izraza",
+          "score": 0.5926
+        },
+        {
+          "curie": "kama:P60098",
+          "iri": "http://www.registar.kam.hr/Elements/a/#P60098",
+          "label": "je suradnik u realizaciji izraza",
+          "score": 0.56
+        },
+        {
+          "curie": "kamo:P70107",
+          "iri": "http://www.registar.kam.hr/Elements/o/#P70107",
+          "label": "je suradnik u realizaciji izraza",
+          "score": 0.56
+        },
+        {
+          "curie": "kamka:P80101",
+          "iri": "http://www.registar.kam.hr/Elements/ka/#P80101",
+          "label": "je suradnik u realizaciji izraza",
+          "score": 0.56
+        },
+        {
+          "curie": "kamkt:P90100",
+          "iri": "http://www.registar.kam.hr/Elements/kt/#P90100",
+          "label": "je suradnik u realizaciji izraza",
+          "score": 0.56
+        }
+      ],
+      "mappingScore": 0.5926,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.4",
+      "label": "Odnos izraza i pojavnog oblika",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 10.4.2 Uvjeti navođenja odnosa izraza i pojavnog oblika)",
+      "required": true,
+      "repeatable": true,
+      "definition": "Odnos izraza i pojavnog oblika (izraz je povezan s pojavnim oblikom) je je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između izraza i pojavnog oblika.",
+      "sectionNumber": "10",
+      "sectionLabel": "Odnosi i napomene o odnosima među jedinicama opisa",
+      "displayLabel": "Odnos izraza i pojavnog oblika",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40077",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40077",
+          "label": "ima dostupnost i uporabu pojavnog oblika",
+          "score": 0.7273
+        },
+        {
+          "curie": "kampo:P40081",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40081",
+          "label": "ima dostupnost pojavnog oblika",
+          "score": 0.7143
+        },
+        {
+          "curie": "kamm:P11012",
+          "iri": "http://www.registar.kam.hr/Elements/m/#P11012",
+          "label": "je mjesto izdavanja pojavnog oblika",
+          "score": 0.7097
+        },
+        {
+          "curie": "kampo:P40001",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40001",
+          "label": "ima stvarni prikaz pojavnog oblika",
+          "score": 0.7
+        },
+        {
+          "curie": "kamn:P13059",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13059",
+          "label": "ima napomenu o odnosu nomena i pojavnog oblika",
+          "score": 0.6944
+        }
+      ],
+      "mappingScore": 0.7273,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.6",
+      "label": "Odnos pojavnog oblika i primjerka",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 10.6.2 Uvjeti navođenja odnosa pojavnog oblika i primjerka)",
+      "required": true,
+      "repeatable": true,
+      "definition": "Odnos pojavnog oblika i primjerka (pojavni oblik je povezan s primjerkom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između pojavnog oblika i primjerka.",
+      "sectionNumber": "10",
+      "sectionLabel": "Odnosi i napomene o odnosima među jedinicama opisa",
+      "displayLabel": "Odnos pojavnog oblika i primjerka",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40081",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40081",
+          "label": "ima dostupnost pojavnog oblika",
+          "score": 0.678
+        },
+        {
+          "curie": "kampo:P40089",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40089",
+          "label": "je dio pojavnog oblika",
+          "score": 0.6538
+        },
+        {
+          "curie": "kampo:P40322",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40322",
+          "label": "ima napomenu o odnosu pojavnog oblika i drugih jedinica opisa",
+          "score": 0.6444
+        },
+        {
+          "curie": "kampo:P40314",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40314",
+          "label": "ima naslov pojavnog oblika",
+          "score": 0.6182
+        },
+        {
+          "curie": "kamn:P13051",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13051",
+          "label": "je naslov pojavnog oblika",
+          "score": 0.6182
+        }
+      ],
+      "mappingScore": 0.678,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.7",
+      "label": "Odnos primjerka i primjerka",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Odnos primjerka i primjerka (primjerak je povezan s primjerkom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između dvaju primjeraka.",
+      "sectionNumber": "10",
+      "sectionLabel": "Odnosi i napomene o odnosima među jedinicama opisa",
+      "displayLabel": "Odnos primjerka i primjerka",
+      "mappingCandidates": [
+        {
+          "curie": "kamn:P13069",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13069",
+          "label": "ima napomenu o odnosu nomena i primjerka",
+          "score": 0.6667
+        },
+        {
+          "curie": "kamp:P50004",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50004",
+          "label": "ima dostupnost primjerka",
+          "score": 0.5957
+        },
+        {
+          "curie": "kamp:P50123",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50123",
+          "label": "ima napomenu o odnosu primjerka i drugih jedinica opisa",
+          "score": 0.5897
+        },
+        {
+          "curie": "kamp:P50003",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50003",
+          "label": "ima napomenu o identifikaciji primjerka",
+          "score": 0.5484
+        },
+        {
+          "curie": "kamp:P50013",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50013",
+          "label": "ima povijest primjerka",
+          "score": 0.5333
+        }
+      ],
+      "mappingScore": 0.6667,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.8",
+      "label": "Odnos djela i agenta",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 10.8.2 Uvjeti navođenja odnosa djela i agenta)",
+      "required": true,
+      "repeatable": true,
+      "definition": "Odnos djela i agenta (djelo je povezano s agentom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između djela i agenta.",
+      "sectionNumber": "10",
+      "sectionLabel": "Odnosi i napomene o odnosima među jedinicama opisa",
+      "displayLabel": "Odnos djela i agenta",
+      "mappingCandidates": [
+        {
+          "curie": "kamn:P13161",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13161",
+          "label": "je ime agenta",
+          "score": 0.6667
+        },
+        {
+          "curie": "kamn:P13079",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13079",
+          "label": "ima napomenu o odnosu nomena i agenta",
+          "score": 0.6415
+        },
+        {
+          "curie": "kama:P60187",
+          "iri": "http://www.registar.kam.hr/Elements/a/#P60187",
+          "label": "ima dodatno obilježje agenta",
+          "score": 0.6364
+        },
+        {
+          "curie": "kamn:P13075",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13075",
+          "label": "je dodatno obilježje agenta",
+          "score": 0.6364
+        },
+        {
+          "curie": "kama:P60192",
+          "iri": "http://www.registar.kam.hr/Elements/a/#P60192",
+          "label": "ima usvojeno ime agenta",
+          "score": 0.6154
+        }
+      ],
+      "mappingScore": 0.6667,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.9",
+      "label": "Odnos djela i stvaratelja",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 10.9.2 Uvjeti navođenja odnosa djela i stvaratelja)",
+      "required": true,
+      "repeatable": true,
+      "definition": "Odnos djela i stvaratelja (djelo je stvorio stvaratelj) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između djela i agenta koji ga je stvorio svojim djelovanjem.",
+      "sectionNumber": "10",
+      "sectionLabel": "Odnosi i napomene o odnosima među jedinicama opisa",
+      "displayLabel": "Odnos djela i stvaratelja",
+      "mappingCandidates": [
+        {
+          "curie": "kamd:P20064",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20064",
+          "label": "ima obitelj stvaratelja",
+          "score": 0.6818
+        },
+        {
+          "curie": "kamd:P20063",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20063",
+          "label": "ima korporativno tijelo stvaratelja",
+          "score": 0.6786
+        },
+        {
+          "curie": "kamd:P20061",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20061",
+          "label": "ima osobu stvaratelja",
+          "score": 0.6667
+        },
+        {
+          "curie": "kamd:P20062",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20062",
+          "label": "ima kolektivnog agenta stvaratelja",
+          "score": 0.6545
+        },
+        {
+          "curie": "kamd:P20060",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20060",
+          "label": "ima agenta stvaratelja",
+          "score": 0.6512
+        }
+      ],
+      "mappingScore": 0.6818,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.11",
+      "label": "Odnos pojavnog oblika i agenta",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Odnos pojavnog oblika i agenta (pojavni oblik je povezan s agentom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između pojavnog oblika jedinice građe i agenta koji je sudjelovao u njegovoj pripremi, izradi, objavljivanju, raspačavanju, oglašavanju i/ili prodaji.",
+      "sectionNumber": "10",
+      "sectionLabel": "Odnosi i napomene o odnosima među jedinicama opisa",
+      "displayLabel": "Odnos pojavnog oblika i agenta",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40081",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40081",
+          "label": "ima dostupnost pojavnog oblika",
+          "score": 0.7143
+        },
+        {
+          "curie": "kampo:P40089",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40089",
+          "label": "je dio pojavnog oblika",
+          "score": 0.6939
+        },
+        {
+          "curie": "kampo:P40314",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40314",
+          "label": "ima naslov pojavnog oblika",
+          "score": 0.6538
+        },
+        {
+          "curie": "kamn:P13051",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13051",
+          "label": "je naslov pojavnog oblika",
+          "score": 0.6538
+        },
+        {
+          "curie": "kampo:P40315",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40315",
+          "label": "ima usvojeni naslov pojavnog oblika",
+          "score": 0.623
+        }
+      ],
+      "mappingScore": 0.7143,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.12",
+      "label": "Odnos primjerka i agenta",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Odnos primjerka i agenta (primjerak je povezan s agentom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između primjerka i agenta koji ga je nabavio, posjedovao, obradio i/ili izmijenio.",
+      "sectionNumber": "10",
+      "sectionLabel": "Odnosi i napomene o odnosima među jedinicama opisa",
+      "displayLabel": "Odnos primjerka i agenta",
+      "mappingCandidates": [
+        {
+          "curie": "kama:P60192",
+          "iri": "http://www.registar.kam.hr/Elements/a/#P60192",
+          "label": "ima usvojeno ime agenta",
+          "score": 0.6512
+        },
+        {
+          "curie": "kamn:P13162",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13162",
+          "label": "je usvojeno ime agenta",
+          "score": 0.6512
+        },
+        {
+          "curie": "kamp:P50004",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50004",
+          "label": "ima dostupnost primjerka",
+          "score": 0.6364
+        },
+        {
+          "curie": "kama:P60191",
+          "iri": "http://www.registar.kam.hr/Elements/a/#P60191",
+          "label": "ima ime agenta",
+          "score": 0.6316
+        },
+        {
+          "curie": "kamn:P13079",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13079",
+          "label": "ima napomenu o odnosu nomena i agenta",
+          "score": 0.6316
+        }
+      ],
+      "mappingScore": 0.6512,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.13",
+      "label": "Odnos djela i mjesta",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Odnos djela i mjesta (djelo je povezano s mjestom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između djela i mjesta.",
+      "sectionNumber": "10",
+      "sectionLabel": "Odnosi i napomene o odnosima među jedinicama opisa",
+      "displayLabel": "Odnos djela i mjesta",
+      "mappingCandidates": [
+        {
+          "curie": "kamn:P13143",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13143",
+          "label": "je ime mjesta",
+          "score": 0.6667
+        },
+        {
+          "curie": "kamn:P13151",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13151",
+          "label": "ima napomenu o odnosu nomena i mjesta",
+          "score": 0.6415
+        },
+        {
+          "curie": "kamm:P11050",
+          "iri": "http://www.registar.kam.hr/Elements/m/#P11050",
+          "label": "ima dodatno obilježje mjesta",
+          "score": 0.6364
+        },
+        {
+          "curie": "kamn:P13148",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13148",
+          "label": "je dodatno obilježje mjesta",
+          "score": 0.6364
+        },
+        {
+          "curie": "kamm:P11048",
+          "iri": "http://www.registar.kam.hr/Elements/m/#P11048",
+          "label": "ima usvojeno ime mjesta",
+          "score": 0.6154
+        }
+      ],
+      "mappingScore": 0.6667,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.14",
+      "label": "Odnos izraza i mjesta",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Odnos izraza i mjesta (izraz je povezan s mjestom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između izraza i mjesta.",
+      "sectionNumber": "10",
+      "sectionLabel": "Odnosi i napomene o odnosima među jedinicama opisa",
+      "displayLabel": "Odnos izraza i mjesta",
+      "mappingCandidates": [
+        {
+          "curie": "kamm:P11047",
+          "iri": "http://www.registar.kam.hr/Elements/m/#P11047",
+          "label": "ima ime mjesta",
+          "score": 0.6286
+        },
+        {
+          "curie": "kamm:P11050",
+          "iri": "http://www.registar.kam.hr/Elements/m/#P11050",
+          "label": "ima dodatno obilježje mjesta",
+          "score": 0.6222
+        },
+        {
+          "curie": "kamn:P13148",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13148",
+          "label": "je dodatno obilježje mjesta",
+          "score": 0.6222
+        },
+        {
+          "curie": "kamm:P11048",
+          "iri": "http://www.registar.kam.hr/Elements/m/#P11048",
+          "label": "ima usvojeno ime mjesta",
+          "score": 0.6
+        },
+        {
+          "curie": "kamn:P13144",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13144",
+          "label": "je usvojeno ime mjesta",
+          "score": 0.6
+        }
+      ],
+      "mappingScore": 0.6286,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.15",
+      "label": "Odnos pojavnog oblika i mjesta",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Odnos pojavnog oblika i mjesta (pojavni oblik je povezan s mjestom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između pojavnog oblika i mjesta.",
+      "sectionNumber": "10",
+      "sectionLabel": "Odnosi i napomene o odnosima među jedinicama opisa",
+      "displayLabel": "Odnos pojavnog oblika i mjesta",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40081",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40081",
+          "label": "ima dostupnost pojavnog oblika",
+          "score": 0.7143
+        },
+        {
+          "curie": "kampo:P40089",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40089",
+          "label": "je dio pojavnog oblika",
+          "score": 0.6939
+        },
+        {
+          "curie": "kampo:P40314",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40314",
+          "label": "ima naslov pojavnog oblika",
+          "score": 0.6538
+        },
+        {
+          "curie": "kamn:P13051",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13051",
+          "label": "je naslov pojavnog oblika",
+          "score": 0.6538
+        },
+        {
+          "curie": "kampo:P40322",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40322",
+          "label": "ima napomenu o odnosu pojavnog oblika i drugih jedinica opisa",
+          "score": 0.6437
+        }
+      ],
+      "mappingScore": 0.7143,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.16",
+      "label": "Odnos primjerka i mjesta",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Odnos primjerka i mjesta (primjerak je povezan s mjestom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između primjerka i mjesta.",
+      "sectionNumber": "10",
+      "sectionLabel": "Odnosi i napomene o odnosima među jedinicama opisa",
+      "displayLabel": "Odnos primjerka i mjesta",
+      "mappingCandidates": [
+        {
+          "curie": "kamm:P11048",
+          "iri": "http://www.registar.kam.hr/Elements/m/#P11048",
+          "label": "ima usvojeno ime mjesta",
+          "score": 0.6512
+        },
+        {
+          "curie": "kamn:P13144",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13144",
+          "label": "je usvojeno ime mjesta",
+          "score": 0.6512
+        },
+        {
+          "curie": "kamp:P50004",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50004",
+          "label": "ima dostupnost primjerka",
+          "score": 0.6364
+        },
+        {
+          "curie": "kamm:P11047",
+          "iri": "http://www.registar.kam.hr/Elements/m/#P11047",
+          "label": "ima ime mjesta",
+          "score": 0.6316
+        },
+        {
+          "curie": "kamn:P13151",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13151",
+          "label": "ima napomenu o odnosu nomena i mjesta",
+          "score": 0.6316
+        }
+      ],
+      "mappingScore": 0.6512,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.19",
+      "label": "Odnos djela i vremenskog raspona",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Odnos djela i vremenskog raspona (djelo je povezano s vremenskim rasponom) je naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između djela i vremenskog raspona.",
+      "sectionNumber": "10",
+      "sectionLabel": "Odnosi i napomene o odnosima među jedinicama opisa",
+      "displayLabel": "Odnos djela i vremenskog raspona",
+      "mappingCandidates": [
+        {
+          "curie": "kamvr:P12031",
+          "iri": "http://www.registar.kam.hr/Elements/vr/#P12031",
+          "label": "je vremenska cjelina vremenskog raspona",
+          "score": 0.7647
+        },
+        {
+          "curie": "kamn:P13160",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13160",
+          "label": "ima napomenu o odnosu nomena i vremenskog raspona",
+          "score": 0.7532
+        },
+        {
+          "curie": "kamvr:P12032",
+          "iri": "http://www.registar.kam.hr/Elements/vr/#P12032",
+          "label": "je vremenski dio vremenskog raspona",
+          "score": 0.75
+        },
+        {
+          "curie": "kamvr:P12001",
+          "iri": "http://www.registar.kam.hr/Elements/vr/#P12001",
+          "label": "ima vrstu vremenskog raspona",
+          "score": 0.7143
+        },
+        {
+          "curie": "kamn:P13158",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13158",
+          "label": "ima napomenu o nomenu vremenskog raspona",
+          "score": 0.6765
+        }
+      ],
+      "mappingScore": 0.7647,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.20",
+      "label": "Odnos izraza i vremenskog raspona",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Odnos izraza i vremenskog raspona (izraz je povezan s vremenskim rasponom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između izraza i vremenskog raspona.",
+      "sectionNumber": "10",
+      "sectionLabel": "Odnosi i napomene o odnosima među jedinicama opisa",
+      "displayLabel": "Odnos izraza i vremenskog raspona",
+      "mappingCandidates": [
+        {
+          "curie": "kamvr:P12001",
+          "iri": "http://www.registar.kam.hr/Elements/vr/#P12001",
+          "label": "ima vrstu vremenskog raspona",
+          "score": 0.7213
+        },
+        {
+          "curie": "kamn:P13160",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13160",
+          "label": "ima napomenu o odnosu nomena i vremenskog raspona",
+          "score": 0.7179
+        },
+        {
+          "curie": "kamvr:P12031",
+          "iri": "http://www.registar.kam.hr/Elements/vr/#P12031",
+          "label": "je vremenska cjelina vremenskog raspona",
+          "score": 0.6957
+        },
+        {
+          "curie": "kamn:P13159",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13159",
+          "label": "ima napomenu o identifikaciji vremenskog raspona",
+          "score": 0.6753
+        },
+        {
+          "curie": "kamn:P13158",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13158",
+          "label": "ima napomenu o nomenu vremenskog raspona",
+          "score": 0.6377
+        }
+      ],
+      "mappingScore": 0.7213,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.22",
+      "label": "Odnos primjerka i vremenskog raspona",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Odnos primjerka i vremenskog raspona (primjerak je povezan s vremenskim rasponom) je nadzirani naziv, kôd, identifikator ili druga nadzirana oznaka ili niz oznaka koji označava da postoji odnos između primjerka i vremenskog raspona.",
+      "sectionNumber": "10",
+      "sectionLabel": "Odnosi i napomene o odnosima među jedinicama opisa",
+      "displayLabel": "Odnos primjerka i vremenskog raspona",
+      "mappingCandidates": [
+        {
+          "curie": "kamn:P13160",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13160",
+          "label": "ima napomenu o odnosu nomena i vremenskog raspona",
+          "score": 0.7407
+        },
+        {
+          "curie": "kamvr:P12001",
+          "iri": "http://www.registar.kam.hr/Elements/vr/#P12001",
+          "label": "ima vrstu vremenskog raspona",
+          "score": 0.7188
+        },
+        {
+          "curie": "kamvr:P12032",
+          "iri": "http://www.registar.kam.hr/Elements/vr/#P12032",
+          "label": "je vremenski dio vremenskog raspona",
+          "score": 0.7042
+        },
+        {
+          "curie": "kamvr:P12031",
+          "iri": "http://www.registar.kam.hr/Elements/vr/#P12031",
+          "label": "je vremenska cjelina vremenskog raspona",
+          "score": 0.6944
+        },
+        {
+          "curie": "kamn:P13158",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13158",
+          "label": "ima napomenu o nomenu vremenskog raspona",
+          "score": 0.6667
+        }
+      ],
+      "mappingScore": 0.7407,
+      "mappingConfidence": "low",
+      "property": null
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.26",
+      "label": "Napomena o odnosu djela i drugih jedinica opisa",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 10.26.2 Uvjeti navođenja napomene o odnosu djela i drugih jedinica opisa)",
+      "required": true,
+      "repeatable": true,
+      "definition": "Napomena o odnosu djela i drugih jedinica opisa je kratak nestrukturirani tekst koji sadržava pojedinosti o odnosu između djela i drugog djela ili više drugih djela, odnosno djela i druge ili više drugih jedinica opisa.",
+      "sectionNumber": "10",
+      "sectionLabel": "Odnosi i napomene o odnosima među jedinicama opisa",
+      "displayLabel": "Napomena o odnosu djela i drugih jedinica opisa",
+      "mappingCandidates": [
+        {
+          "curie": "kamd:P20313",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20313",
+          "label": "ima napomenu o odnosu djela i drugih jedinica opisa",
+          "score": 0.9787
+        },
+        {
+          "curie": "kamm:P11052",
+          "iri": "http://www.registar.kam.hr/Elements/m/#P11052",
+          "label": "ima napomenu o odnosu mjesta i drugih jedinica opisa",
+          "score": 0.9263
+        },
+        {
+          "curie": "kama:P60181",
+          "iri": "http://www.registar.kam.hr/Elements/a/#P60181",
+          "label": "ima napomenu o odnosu agenta i drugih jedinica opisa",
+          "score": 0.9053
+        },
+        {
+          "curie": "kamn:P13018",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13018",
+          "label": "ima napomenu o odnosu nomena i drugih jedinica opisa",
+          "score": 0.9053
+        },
+        {
+          "curie": "kamp:P50123",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50123",
+          "label": "ima napomenu o odnosu primjerka i drugih jedinica opisa",
+          "score": 0.898
+        }
+      ],
+      "mappingScore": 0.9787,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/d/#P20313",
+      "mappingCurie": "kamd:P20313",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.27",
+      "label": "Napomena o odnosu izraza i drugih jedinica opisa",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Napomena o odnosu izraza i drugih jedinica opisa je kratak nestrukturirani tekst koji sadržava pojedinosti o odnosu između izraza i drugog izraza ili više drugih izraza, odnosno izraza i druge ili više drugih jedinica opisa.",
+      "sectionNumber": "10",
+      "sectionLabel": "Odnosi i napomene o odnosima među jedinicama opisa",
+      "displayLabel": "Napomena o odnosu izraza i drugih jedinica opisa",
+      "mappingCandidates": [
+        {
+          "curie": "kami:P30246",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30246",
+          "label": "ima napomenu o odnosu izraza i drugih jedinica opisa",
+          "score": 0.9792
+        },
+        {
+          "curie": "kama:P60181",
+          "iri": "http://www.registar.kam.hr/Elements/a/#P60181",
+          "label": "ima napomenu o odnosu agenta i drugih jedinica opisa",
+          "score": 0.8958
+        },
+        {
+          "curie": "kamp:P50123",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50123",
+          "label": "ima napomenu o odnosu primjerka i drugih jedinica opisa",
+          "score": 0.8889
+        },
+        {
+          "curie": "kamd:P20313",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20313",
+          "label": "ima napomenu o odnosu djela i drugih jedinica opisa",
+          "score": 0.8842
+        },
+        {
+          "curie": "kamm:P11052",
+          "iri": "http://www.registar.kam.hr/Elements/m/#P11052",
+          "label": "ima napomenu o odnosu mjesta i drugih jedinica opisa",
+          "score": 0.875
+        }
+      ],
+      "mappingScore": 0.9792,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/i/#P30246",
+      "mappingCurie": "kami:P30246",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.28",
+      "label": "Napomena o odnosu pojavnog oblika i drugih jedinica opisa",
+      "obligation": "Obvezno kad je primjenjivo, pod određenim uvjetima (vidi 10.28.2 Uvjeti navođenja napomene o odnosu pojavnog oblika i drugih jedinica opisa)",
+      "required": true,
+      "repeatable": true,
+      "definition": "Napomena o odnosu pojavnog oblika i drugih jedinica opisa je kratak nestrukturirani tekst koji sadržava pojedinosti o odnosu između pojavnog oblika i drugog pojavnog oblika ili više drugih pojavnih oblika, odnosno pojavnog oblika i druge ili više drugih jedinica opisa.",
+      "sectionNumber": "10",
+      "sectionLabel": "Odnosi i napomene o odnosima među jedinicama opisa",
+      "displayLabel": "Napomena o odnosu pojavnog oblika i drugih jedinica opisa",
+      "mappingCandidates": [
+        {
+          "curie": "kampo:P40322",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P40322",
+          "label": "ima napomenu o odnosu pojavnog oblika i drugih jedinica opisa",
+          "score": 0.9825
+        },
+        {
+          "curie": "kamkt:P90222",
+          "iri": "http://www.registar.kam.hr/Elements/kt/#P90222",
+          "label": "ima napomenu o odnosu korporativnog tijela i drugih jedinica opisa",
+          "score": 0.8571
+        },
+        {
+          "curie": "kamd:P20313",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20313",
+          "label": "ima napomenu o odnosu djela i drugih jedinica opisa",
+          "score": 0.8462
+        },
+        {
+          "curie": "kamo:P70245",
+          "iri": "http://www.registar.kam.hr/Elements/o/#P70245",
+          "label": "ima napomenu o odnosu osobe i drugih jedinica opisa",
+          "score": 0.8462
+        },
+        {
+          "curie": "kamob:P10207",
+          "iri": "http://www.registar.kam.hr/Elements/ob/#P10207",
+          "label": "ima napomenu o odnosu obitelji i drugih jedinica opisa",
+          "score": 0.8411
+        }
+      ],
+      "mappingScore": 0.9825,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P40322",
+      "mappingCurie": "kampo:P40322",
+      "mappingBasis": "auto_label_definition_domain"
+    },
+    {
+      "@type": "ap:ElementUsage",
+      "elementNumber": "10.29",
+      "label": "Napomena o odnosu primjerka i drugih jedinica opisa",
+      "obligation": "Nije obvezno",
+      "required": false,
+      "repeatable": true,
+      "definition": "Napomena o odnosu primjerka i drugih jedinica opisa je kratak nestrukturirani tekst koji sadržava pojedinosti o odnosu između primjerka i drugog primjerka ili više drugih primjeraka, odnosno primjerka i druge ili više drugih jedinica opisa.",
+      "sectionNumber": "10",
+      "sectionLabel": "Odnosi i napomene o odnosima među jedinicama opisa",
+      "displayLabel": "Napomena o odnosu primjerka i drugih jedinica opisa",
+      "mappingCandidates": [
+        {
+          "curie": "kamp:P50123",
+          "iri": "http://www.registar.kam.hr/Elements/po/#P50123",
+          "label": "ima napomenu o odnosu primjerka i drugih jedinica opisa",
+          "score": 0.9804
+        },
+        {
+          "curie": "kamm:P11052",
+          "iri": "http://www.registar.kam.hr/Elements/m/#P11052",
+          "label": "ima napomenu o odnosu mjesta i drugih jedinica opisa",
+          "score": 0.9091
+        },
+        {
+          "curie": "kamd:P20313",
+          "iri": "http://www.registar.kam.hr/Elements/d/#P20313",
+          "label": "ima napomenu o odnosu djela i drugih jedinica opisa",
+          "score": 0.898
+        },
+        {
+          "curie": "kamn:P13018",
+          "iri": "http://www.registar.kam.hr/Elements/n/#P13018",
+          "label": "ima napomenu o odnosu nomena i drugih jedinica opisa",
+          "score": 0.8889
+        },
+        {
+          "curie": "kami:P30246",
+          "iri": "http://www.registar.kam.hr/Elements/i/#P30246",
+          "label": "ima napomenu o odnosu izraza i drugih jedinica opisa",
+          "score": 0.8687
+        }
+      ],
+      "mappingScore": 0.9804,
+      "mappingConfidence": "high",
+      "property": "http://www.registar.kam.hr/Elements/po/#P50123",
+      "mappingCurie": "kamp:P50123",
+      "mappingBasis": "auto_label_definition_domain"
+    }
+  ]
+}
