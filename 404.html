@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profil još nije izgrađen</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', 'Rubik', Arial, sans-serif;
+      background: #f9fafb;
+      color: #1f2937;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #menu-bar {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 24px;
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .logo {
+      height: 48px;
+      width: auto;
+    }
+
+    #menu-bar h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    #menu-bar a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .main-wrapper {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .error-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+      max-width: 720px;
+      width: 100%;
+      padding: 48px 36px;
+      text-align: center;
+    }
+
+    .error-code {
+      font-size: 72px;
+      font-weight: 600;
+      line-height: 1;
+      color: #173E7E;
+      margin-bottom: 16px;
+    }
+
+    .error-title {
+      font-size: 28px;
+      font-weight: 600;
+      margin: 0 0 14px 0;
+      color: #111827;
+    }
+
+    .error-text {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #4b5563;
+      margin: 0 auto 30px auto;
+      max-width: 560px;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 12px 22px;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      min-width: 190px;
+    }
+
+    .btn-primary {
+      background: #173E7E;
+      color: #ffffff;
+      border: 1px solid #173E7E;
+    }
+
+    .btn-primary:hover {
+      background: #0f2f63;
+      border-color: #0f2f63;
+    }
+
+    .btn-secondary {
+      background: #e1d3f2;
+      color: #000000;
+      border: 1px solid #d4c2ea;
+    }
+
+    .btn-secondary:hover {
+      opacity: 0.92;
+    }
+
+    .footer-note {
+      margin-top: 24px;
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    #footer {
+      background: #ffffff;
+      border-top: 1px solid #e5e7eb;
+      padding: 16px 24px;
+      text-align: center;
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    @media (max-width: 640px) {
+      .error-card {
+        padding: 36px 22px;
+      }
+
+      .error-code {
+        font-size: 56px;
+      }
+
+      .error-title {
+        font-size: 24px;
+      }
+
+      .btn {
+        width: 100%;
+        min-width: unset;
+      }
+
+      .button-group {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="menu-bar">
+    <img src="../kam.png" alt="KAM Logo" class="logo">
+    <h1>
+      <a href="../index.html">Registar</a>
+    </h1>
+  </div>
+
+  <main class="main-wrapper">
+    <section class="error-card">
+      <div class="error-code">404</div>
+      <h2 class="error-title">Profil još nije izgrađen</h2>
+      <p class="error-text">
+        Stranica koju pokušavate otvoriti trenutno nije dostupna jer odabrani
+        aplikacijski profil još nije izrađen ili objavljen.
+      </p>
+
+      <div class="button-group">
+        <a href="../index.html" class="btn btn-primary">Povratak na naslovnicu</a>
+        <a href="https://www.registar.kam.hr/Profili/Profili.html" class="btn btn-secondary">
+          Aplikacijski profili
+        </a>
+      </div>
+
+      <div class="footer-note">
+        Molimo odaberite drugi dostupni profil iz registra.
+      </div>
+    </section>
+  </main>
+
+  <div id="footer">
+    © 2026 Nacionalna i sveučilišna knjižnica u Zagrebu. Sva prava pridržana.
+  </div>
+
+</body>
+</html>
