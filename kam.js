@@ -1062,4 +1062,21 @@ if (profiliBtn) {
   });
 
 })();
+// Poveznica POMOĆ u glavnom izborniku
+document.addEventListener("DOMContentLoaded", function () {
+    const menuItems = document.querySelectorAll("#menu-bar > div");
 
+    menuItems.forEach(function (item) {
+        const menuText = Array.from(item.childNodes)
+            .filter(node => node.nodeType === Node.TEXT_NODE)
+            .map(node => node.textContent)
+            .join("")
+            .trim()
+            .toUpperCase();
+
+        if (menuText === "POMOĆ") {
+            item.innerHTML =
+                '<a href="/pomoc.html" class="menu-link">POMOĆ</a>';
+        }
+    });
+});
