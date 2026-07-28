@@ -9,46 +9,28 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <style>
-        /* Stilizacija menija */
-        #menu-bar {
-            display: flex;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #fff;
-            border-bottom: 1px solid #ddd;
-        }
-        .logo {
-            height: 50px;
-            margin-right: 20px; /* Dodaje razmak između logotipa i menija */
-        }
-        #menu-bar h1 {
-            margin: 0;
-            font-size: 24px;
-            flex-grow: 1; /* Osigurava da naslov ostane lijevo */
-        }
-        #menu-bar div {
-            display: flex;
-            gap: 15px; /* Razmak između stavki menija */
-        }
-        #menu-bar a {
-            text-decoration: none;
-            color: inherit;
-            font-weight: bold;
-        }
-    </style>
 </head>
 <body>
 
 <div id="menu-bar">
     <img src="kam.png" alt="KAM Logo" class="logo">
-    <h1><a href="index.html">Registar</a></h1>
+    <h1><a href="index.html" style="text-decoration:none; color:inherit;">Registar</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </h1>
+
     <div>
-        <a href="index.html" onclick="redirectToIndex('klase'); return false;">KLASE</a>
-        <a href="index.html" onclick="redirectToIndex('svojstva'); return false;">SVOJSTVA</a>
-        <a href="index.html" onclick="redirectToIndex('prefiksi'); return false;">PREFIKSI</a>
-        <a href="index.html" onclick="redirectToIndex('pomoc'); return false;">POMOĆ</a>
+        KLASE
+        <div class="dropdown" id="klase-dropdown"></div>
     </div>
+
+    <div>
+        SVOJSTVA
+        <div class="dropdown" id="svojstva-dropdown"></div>
+    </div>
+    <div id="profili">APLIKACIJSKI PROFILI</div>
+	<div id="rječnici">RJEČNICI</div>
+    <div id="prefiksi">PREFIKSI</div>
+    <div>Pomoć</div>
 </div>
 
 <div id="content">
@@ -409,18 +391,15 @@
     © 2026 Nacionalna i sveučilišna knjižnica u Zagrebu. Sva prava pridržana. | Hrvatske bratske zajednice 4, 10000 Zagreb, Hrvatska | Tel. +385 1 616 4021
 </div>
 
+
+<!-- KONFIGURACIJA ZA zajednički kam.js -->
 <script>
-// Funkcija za preusmjeravanje na odabranu sekciju
-function redirectToIndex(section) {
-    const urlParams = new URLSearchParams(window.location.search);
-    const curie = urlParams.get('curie');
-    if (section) {
-        window.location.href = `index.html?section=${section}&curie=${curie}`;
-    } else {
-        window.location.href = `index.html?curie=${curie}`;
-    }
-}
+  window.KAM_CONFIG = {
+    pageType: "root",
+    jsonPath: "https://www.registar.kam.hr/KAMOntologija_v12.jsonld"
+  };
 </script>
+<script src="kam.js"></script>
 
 </body>
 </html>
