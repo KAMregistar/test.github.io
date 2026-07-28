@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorijal za korištenje ontologije KAM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /* Stilizacija menija */
+        #menu-bar {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .logo {
+            height: 50px;
+            margin-right: 20px; /* Dodaje razmak između logotipa i menija */
+        }
+        #menu-bar h1 {
+            margin: 0;
+            font-size: 24px;
+            flex-grow: 1; /* Osigurava da naslov ostane lijevo */
+        }
+        #menu-bar div {
+            display: flex;
+            gap: 15px; /* Razmak između stavki menija */
+        }
+        #menu-bar a {
+            text-decoration: none;
+            color: inherit;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div id="menu-bar">
+    <img src="kam.png" alt="KAM Logo" class="logo">
+    <h1><a href="index.html">Registar</a></h1>
+    <div>
+        <a href="index.html" onclick="redirectToIndex('klase'); return false;">KLASE</a>
+        <a href="index.html" onclick="redirectToIndex('svojstva'); return false;">SVOJSTVA</a>
+        <a href="index.html" onclick="redirectToIndex('prefiksi'); return false;">PREFIKSI</a>
+        <a href="index.html" onclick="redirectToIndex('pomoc'); return false;">POMOĆ</a>
+    </div>
+</div>
+
+<div id="content">
+    <h2>Tutorijal za korištenje ontologije KAM</h2>
+
+    <h3>Što je ontologija KAM?</h3>
+    <p>
+        Ontologija KAM formalni je i strojno čitljiv prikaz pojmova koji se koriste za opis
+        knjižnične, arhivske i muzejske građe. Razvijena je na temelju elemenata KAM Pravilnika
+        te omogućuje njihovu primjenu u mrežnim, katalogizacijskim i drugim informacijskim
+        sustavima.
+    </p>
+
+    <p>Ontologija obuhvaća:</p>
+    <ul>
+        <li><strong>klase</strong>, odnosno vrste entiteta koji se opisuju;</li>
+        <li><strong>svojstva</strong>, kojima se bilježe atributi entiteta i odnosi među njima;</li>
+        <li><strong>identifikatore i URI-je</strong>, koji omogućuju jednoznačno identificiranje elemenata;</li>
+        <li><strong>imenske prostore</strong>, koji omogućuju korištenje elemenata KAM-a u RDF zapisima i okruženjima povezanih podataka.</li>
+    </ul>
+
+    <p>
+        Klase predstavljaju vrste entiteta, primjerice jedinicu građe, osobu, korporativno tijelo,
+        mjesto ili događaj. Svojstvima se opisuju obilježja tih entiteta ili odnosi među njima,
+        primjerice naslov, datum, ime, odnos između jedinice građe i njezina stvaratelja ili odnos
+        između jedinice građe i primjerka.
+    </p>
+
+    <p>
+        Svaka klasa i svojstvo imaju stabilan identifikator. Klase su označene oznakama oblika
+        <strong>Cxxxx</strong>, a svojstva oznakama oblika <strong>Pxxxx</strong>.
+    </p>
+
+    <h3>Čemu služi ontologija KAM?</h3>
+
+    <h4>Standardizacija opisa</h4>
+    <p>
+        Ontologija omogućuje da se isti pojmovi i odnosi u različitim sustavima opisuju na jednak
+        ili usporediv način. Time se smanjuje neujednačenost zapisa i olakšava njihova obrada.
+    </p>
+
+    <h4>Interoperabilnost</h4>
+    <p>
+        Uporabom stabilnih URI-ja i RDF standarda podaci se mogu razmjenjivati između knjižničnih,
+        arhivskih, muzejskih i drugih informacijskih sustava.
+    </p>
+
+    <h4>Povezivanje podataka</h4>
+    <p>
+        Entiteti se mogu povezivati međusobno i s vanjskim izvorima podataka. Umjesto da se svi
+        podaci zapisuju samo kao tekst, moguće je navesti IRI koji jednoznačno identificira osobu,
+        mjesto, djelo, organizaciju ili drugi entitet.
+    </p>
+
+    <h4>Strojna obrada</h4>
+    <p>
+        Podaci oblikovani prema ontologiji mogu se pretraživati, povezivati, pretvarati u druge
+        RDF formate i obrađivati programskim alatima.
+    </p>
+
+    <h4>Automatsko zaključivanje</h4>
+    <p>
+        Sustavi koji podržavaju semantičke tehnologije mogu na temelju definiranih klasa,
+        svojstava i odnosa izvoditi dodatne veze među podacima. Mogućnosti zaključivanja ovise
+        o pravilima i funkcionalnostima sustava u kojem se ontologija koristi.
+    </p>
+
+    <h3>Kako pregledavati ontologiju KAM?</h3>
+
+    <h4>1. Pregled klasa</h4>
+    <p>
+        Odabirom izbornika <strong>KLASE</strong> prikazuje se popis klasa definiranih u ontologiji.
+        Klikom na pojedinu klasu otvara se stranica s detaljnim podacima o toj klasi.
+    </p>
+
+    <p>Za svaku klasu mogu biti prikazani:</p>
+    <ul>
+        <li>identifikator klase;</li>
+        <li>naziv klase;</li>
+        <li>definicija ili opis;</li>
+        <li>nadređena i podređena klasa;</li>
+        <li>URI klase;</li>
+        <li>povezana svojstva;</li>
+        <li>dodatne napomene i primjeri.</li>
+    </ul>
+
+    <p>
+        Hijerarhija klasa pokazuje odnos između općenitijih i specifičnijih pojmova. Podređena
+        klasa preuzima osnovna obilježja nadređene klase, ali može imati i dodatna, specifična
+        obilježja.
+    </p>
+
+    <h4>2. Pregled svojstava</h4>
+    <p>
+        Odabirom izbornika <strong>SVOJSTVA</strong> prikazuje se popis svojstava KAM ontologije.
+        Svojstva mogu opisivati atribut entiteta, odnos između dvaju entiteta ili vezu s
+        kontroliranom vrijednošću odnosno vanjskim izvorom podataka.
+    </p>
+
+    <p>Za svako svojstvo mogu biti navedeni:</p>
+    <ul>
+        <li>identifikator svojstva;</li>
+        <li>naziv i definicija;</li>
+        <li>domena;</li>
+        <li>doseg;</li>
+        <li>URI svojstva;</li>
+        <li>vrsta očekivane vrijednosti;</li>
+        <li>povezana ili srodna svojstva;</li>
+        <li>primjeri uporabe.</li>
+    </ul>
+
+    <p>
+        <strong>Domena</strong> određuje na koju se klasu svojstvo primjenjuje, a
+        <strong>doseg</strong> određuje kakva se vrijednost očekuje. Vrijednost može biti literal
+        ili IRI.
+    </p>
+
+    <h3>Razlikovanje literala i IRI-ja</h3>
+
+    <h4>Literal</h4>
+    <p>
+        Literal je neposredno zapisana vrijednost, primjerice tekst, broj, datum, oznaka jezika
+        ili logička vrijednost.
+    </p>
+
+    <p>Primjer zapisa tekstualne vrijednosti u formatu Turtle:</p>
+    <pre><code>&lt;https://primjer.hr/jedinica/1&gt;
+    &lt;http://www.registar.kam.hr/Elements/po/#P40003&gt;
+    "Naslov jedinice građe"@hr .</code></pre>
+
+    <p>
+        U primjeru je naslov zapisan kao tekstualna vrijednost na hrvatskom jeziku.
+    </p>
+
+    <h4>IRI</h4>
+    <p>
+        IRI se koristi kada vrijednost predstavlja drugi identificirani entitet.
+    </p>
+
+    <p>Primjer:</p>
+    <pre><code>&lt;https://primjer.hr/jedinica/1&gt;
+    &lt;https://primjer.hr/svojstvo/stvorio&gt;
+    &lt;https://primjer.hr/osoba/25&gt; .</code></pre>
+
+    <p>
+        U ovom slučaju vrijednost nije samo tekst s imenom osobe, nego poveznica na zapis koji
+        identificira određenu osobu. Uporaba IRI-ja omogućuje stvaranje mreže povezanih podataka
+        i smanjuje dvosmislenost.
+    </p>
+
+    <h3>Pretraživanje i filtriranje</h3>
+    <p>
+        Interaktivne tablice u Registru omogućuju pretraživanje klasa i svojstava prema različitim
+        podacima, primjerice prema identifikatoru, nazivu, dijelu naziva ili definicije, pripadnosti
+        određenoj skupini te domeni ili dosegu svojstva.
+    </p>
+
+    <p>
+        Za pronalaženje određenoga elementa može se upisati njegov identifikator, primjerice
+        <strong>Cxxxx</strong> ili <strong>Pxxxx</strong>, ili dio njegova naziva. Pojedinim
+        elementima može se pristupiti i izravno putem URI-ja ili poveznice koja sadržava njihov
+        identifikator.
+    </p>
+
+    <h3>URI-ji, CURIE oznake i imenski prostori</h3>
+    <p>
+        Svaki element ontologije treba imati stabilan URI. URI omogućuje jednoznačno
+        identificiranje klase, svojstva ili vrijednosti neovisno o nazivu koji se prikazuje
+        korisniku.
+    </p>
+
+    <p>
+        U RDF zapisima puni URI može se zamijeniti kraćom oznakom, odnosno prefiksom. Popis
+        prefiksa i pripadajućih imenskih prostora dostupan je odabirom izbornika
+        <strong>PREFIKSI</strong>.
+    </p>
+
+    <p>Primjer definiranja prefiksa u formatu Turtle:</p>
+    <pre><code>@prefix kam: &lt;http://www.registar.kam.hr/ontologies/ont.owl#&gt; .
+@prefix kampo: &lt;http://www.registar.kam.hr/Elements/po/#&gt; .</code></pre>
+
+    <p>
+        Nakon definiranja prefiksa umjesto punog URI-ja može se koristiti kraći zapis, primjerice:
+    </p>
+
+    <pre><code>kampo:P40003</code></pre>
+
+    <p>
+        Takav zapis naziva se <strong>CURIE oznakom</strong>. CURIE olakšava čitanje i pisanje
+        RDF podataka, ali se pri obradi uvijek razrješava u puni URI.
+    </p>
+
+    <h3>Preuzimanje ontologije</h3>
+    <p>
+        Ontologija i podaci Registra dostupni su u više formata. Odgovarajući format odabire se
+        prema namjeni i mogućnostima sustava u kojem će se podaci koristiti.
+    </p>
+
+    <h4>JSON-LD</h4>
+    <p>
+        JSON-LD prikladan je za mrežne aplikacije i sustave koji već koriste JSON. Omogućuje
+        istodobni prikaz strukture podataka i njihovih semantičkih veza.
+    </p>
+
+    <h4>Turtle (TTL)</h4>
+    <p>
+        Turtle je čitljiv RDF format koji se često koristi za pregledavanje, uređivanje i razmjenu
+        povezanih podataka.
+    </p>
+
+    <h4>RDF/XML</h4>
+    <p>
+        RDF/XML predstavlja RDF podatke u XML sintaksi. Koristi se u sustavima koji podržavaju
+        XML obradu ili zahtijevaju ovaj oblik razmjene.
+    </p>
+
+    <h4>CSV</h4>
+    <p>
+        CSV je tablični format prikladan za pregled podataka u programima za rad s proračunskim
+        tablicama. Budući da ne može u potpunosti prikazati sve RDF odnose i hijerarhijske
+        strukture, prvenstveno se koristi za jednostavniji pregled i analizu podataka.
+    </p>
+
+    <h3>Kako koristiti ontologiju u vlastitom sustavu?</h3>
+
+    <h4>1. Referenciranje pojedinačnih elemenata</h4>
+    <p>
+        Informacijski sustav može u vlastitim zapisima navoditi URI-je KAM klasa i svojstava.
+        Time se lokalna polja povezuju sa standardiziranim semantičkim elementima.
+    </p>
+
+    <h4>2. Uvoz ontologije</h4>
+    <p>Ontologija se može preuzeti u jednom od RDF formata i učitati u:</p>
+    <ul>
+        <li>katalogizacijski sustav;</li>
+        <li>sustav za upravljanje zbirkama;</li>
+        <li>RDF bazu podataka;</li>
+        <li>alat za uređivanje ontologija;</li>
+        <li>sustav povezanih otvorenih podataka;</li>
+        <li>istraživačko ili analitičko programsko okruženje.</li>
+    </ul>
+
+    <h4>3. Mapiranje postojećih polja</h4>
+    <p>
+        Postojeća polja lokalnog sustava mogu se povezati s odgovarajućim svojstvima KAM
+        ontologije. Prije uspostavljanja mapiranja potrebno je provjeriti odgovaraju li značenje,
+        domena i doseg lokalnog polja značenju KAM svojstva.
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Lokalno polje</th>
+                <th>Način povezivanja s KAM-om</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Naslov</td>
+                <td>Odgovarajuće svojstvo KAM-a za naslov</td>
+            </tr>
+            <tr>
+                <td>Datum nastanka</td>
+                <td>Odgovarajuće svojstvo KAM-a za datum</td>
+            </tr>
+            <tr>
+                <td>Stvaratelj</td>
+                <td>Odnos prema entitetu osobe ili korporativnog tijela</td>
+            </tr>
+            <tr>
+                <td>Vrsta sadržaja</td>
+                <td>Odgovarajući element ili vrijednost rječnika KAM-a</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4>4. Izrada aplikacijskih profila</h4>
+    <p>
+        Aplikacijski profil određuje koji se elementi ontologije koriste za opis određene vrste
+        građe ili u određenom informacijskom sustavu.
+    </p>
+
+    <p>Profil može odrediti:</p>
+    <ul>
+        <li>koje se klase i svojstva koriste;</li>
+        <li>koja su polja obvezna ili neobvezna;</li>
+        <li>koja se polja mogu ponavljati;</li>
+        <li>kakva se vrijednost očekuje;</li>
+        <li>redoslijed i organizaciju polja;</li>
+        <li>poveznice na upute i primjere iz KAM Pravilnika.</li>
+    </ul>
+
+    <p>
+        Aplikacijski profil ne mijenja ontologiju, nego odabire i organizira njezine elemente za
+        određenu svrhu.
+    </p>
+
+    <h3>Primjena u baštinskim ustanovama</h3>
+
+    <h4>Knjižnice</h4>
+    <p>
+        Knjižnice mogu koristiti ontologiju KAM za semantičko povezivanje bibliografskih podataka,
+        podataka o primjercima, osobama, djelima i drugim entitetima.
+    </p>
+
+    <h4>Arhivi</h4>
+    <p>
+        Arhivi mogu koristiti KAM elemente za opis arhivskoga gradiva, arhivskih skupova,
+        stvaratelja, odnosa među jedinicama gradiva te različitih oblika sadržaja.
+    </p>
+
+    <h4>Muzeji i galerije</h4>
+    <p>
+        Muzeji i galerije mogu koristiti ontologiju za opis predmeta, umjetničkih djela, autora,
+        materijala, tehnika, događaja i drugih povezanih entiteta.
+    </p>
+
+    <h4>Razvojni i istraživački sustavi</h4>
+    <p>Razvojni timovi i istraživači mogu koristiti KAM ontologiju za:</p>
+    <ul>
+        <li>integraciju podataka iz različitih izvora;</li>
+        <li>razvoj semantičkih pretraživača;</li>
+        <li>izradu grafova znanja;</li>
+        <li>pretvorbu postojećih zapisa u RDF;</li>
+        <li>povezivanje s vanjskim ontologijama i kontroliranim rječnicima;</li>
+        <li>računalnu analizu i ponovnu uporabu podataka.</li>
+    </ul>
+
+    <h3>Primjer jednostavnoga JSON-LD zapisa</h3>
+    <p>
+        Sljedeći primjer pokazuje pojednostavljenu uporabu KAM svojstva u JSON-LD zapisu:
+    </p>
+
+    <pre><code>{
+  "@context": {
+    "kampo": "http://www.registar.kam.hr/Elements/po/#"
+  },
+  "@id": "https://primjer.hr/jedinica/1",
+  "kampo:P40003": {
+    "@value": "Primjer naslova",
+    "@language": "hr"
+  }
+}</code></pre>
+
+    <p>U zapisu:</p>
+    <ul>
+        <li><code>@id</code> identificira opisivani entitet;</li>
+        <li><code>kampo:P40003</code> predstavlja svojstvo KAM-a;</li>
+        <li><code>@value</code> sadržava vrijednost svojstva;</li>
+        <li><code>@language</code> označava jezik tekstualne vrijednosti.</li>
+    </ul>
+
+    <p>
+        Točan izbor klase i svojstva uvijek treba temeljiti na njihovoj definiciji, domeni,
+        dosegu i uputama KAM Pravilnika.
+    </p>
+
+    <h3>Preporučeni postupak korištenja ontologije</h3>
+    <ol>
+        <li>Odredite vrstu entiteta koji želite opisati.</li>
+        <li>U Registru pronađite odgovarajuću klasu.</li>
+        <li>Pregledajte svojstva koja se mogu primijeniti na tu klasu.</li>
+        <li>Provjerite definiciju, domenu i doseg svakog svojstva.</li>
+        <li>Odredite treba li vrijednost biti literal ili IRI.</li>
+        <li>U zapisu koristite stabilni URI odabranog elementa.</li>
+        <li>Provjerite zapis u odgovarajućem RDF alatu ili sustavu za validaciju.</li>
+        <li>Zabilježite verziju ontologije koja je korištena pri izradi zapisa.</li>
+    </ol>
+
+    <h3>Važne napomene</h3>
+    <ul>
+        <li>
+            Svojstvo ne treba birati samo prema sličnosti njegova naziva s lokalnim poljem.
+            Potrebno je provjeriti njegovu definiciju, domenu i doseg.
+        </li>
+        <li>
+            Stabilne URI-je treba koristiti kao identifikatore, dok se nazivi i oznake mogu
+            mijenjati ili prikazivati na različitim jezicima.
+        </li>
+        <li>
+            Ako je vrijednost zaseban entitet koji se može identificirati, preporučuje se
+            korištenje IRI-ja umjesto običnog tekstualnog zapisa.
+        </li>
+        <li>
+            Aplikacijski profil predstavlja odabir elemenata za određenu svrhu i ne treba ga
+            poistovjećivati s cjelovitom KAM ontologijom.
+        </li>
+        <li>
+            Pri implementaciji treba evidentirati korištenu verziju ontologije i pratiti
+            objavljene promjene.
+        </li>
+    </ul>
+
+    <h3>Zaključak</h3>
+    <p>
+        Ontologija KAM omogućuje da se elementi KAM Pravilnika koriste u formalnom, strojno
+        čitljivom i interoperabilnom obliku. Povezivanjem klasa, svojstava, URI-ja, imenskih
+        prostora i aplikacijskih profila stvaraju se preduvjeti za dosljedan opis knjižnične,
+        arhivske i muzejske građe, razmjenu podataka među sustavima te razvoj semantičkih i
+        povezanih podatkovnih usluga.
+    </p>
+</div>
+
+<div id="footer">
+    © 2024 Nacionalna i sveučilišna knjižnica u Zagrebu. Sva prava pridržana. | Hrvatske bratske zajednice 4, 10000 Zagreb, Hrvatska | Tel. +385 1 616 4021
+</div>
+
+<script>
+// Funkcija za preusmjeravanje na odabranu sekciju
+function redirectToIndex(section) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const curie = urlParams.get('curie');
+    if (section) {
+        window.location.href = `index.html?section=${section}&curie=${curie}`;
+    } else {
+        window.location.href = `index.html?curie=${curie}`;
+    }
+}
+</script>
+
+</body>
+</html>
