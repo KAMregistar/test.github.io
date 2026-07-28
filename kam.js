@@ -1062,21 +1062,29 @@ if (profiliBtn) {
   });
 
 })();
-// Poveznica POMOĆ u glavnom izborniku
 document.addEventListener("DOMContentLoaded", function () {
     const menuItems = document.querySelectorAll("#menu-bar > div");
 
     menuItems.forEach(function (item) {
-        const menuText = Array.from(item.childNodes)
+        const directText = Array.from(item.childNodes)
             .filter(node => node.nodeType === Node.TEXT_NODE)
             .map(node => node.textContent)
             .join("")
             .trim()
             .toUpperCase();
 
-        if (menuText === "POMOĆ") {
-            item.innerHTML =
-                '<a href="/pomoc.html" class="menu-link">POMOĆ</a>';
+        if (directText === "POMOĆ") {
+            const link = document.createElement("a");
+
+            link.href = "/pomoc.html";
+            link.textContent = "POMOĆ";
+
+            // Izgled ostaje jednak ostalim stavkama izbornika
+            link.style.color = "inherit";
+            link.style.textDecoration = "none";
+            link.style.font = "inherit";
+
+            item.replaceChildren(link);
         }
     });
 });
